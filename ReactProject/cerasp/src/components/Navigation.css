@@ -1,30 +1,39 @@
+/* Navigation styles */
 .nav {
-  background-color: #0c062b;
-  padding: 1px;
-  position: relative;
+  display: flex;
+  flex-grow: 1; /* Take up remaining space after the logo */
+  justify-content: center; /* Center nav items */
 }
 
 .nav-list {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0; /* Ensure there's no default margin */
 }
 
 .nav-list li {
-  margin: 0 20px;
+  margin: 0 40px; /* Re-added the margin for spacing between items */
 }
 
 .nav-list a {
   color: white;
   text-decoration: none;
+  font-weight: normal;
+  font-size: 24px; /* Re-added font size */
 }
 
+.nav-list a:hover {
+  color: #becbe6;
+}
+
+/* Media Query for mobile */
 @media (max-width: 768px) {
   .hamburger {
     background: none;
     border: none;
     font-size: 24px;
-    color: #0c062b;
+    color: #ffffff;
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -33,7 +42,7 @@
 
   .nav-list {
     flex-direction: column;
-    background-color: #0c062b;
+    background-color: #939393;
     border-radius: 5px;
     position: absolute;
     top: 50px;
@@ -52,9 +61,8 @@
     padding: 10px 0 10px 0;
   }
 
-  /* Animation for fade-in (for testing) */
   .nav-list li {
-    margin: 10px 0;
+    margin: 6px 0;
     text-align: center;
     opacity: 0;
     transform: translateY(-10px);
@@ -64,5 +72,10 @@
   .nav-list.show li {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .nav-list a {
+    font-size: 18px;
+    margin: 0;
   }
 }

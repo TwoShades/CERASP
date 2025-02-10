@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%; /* Full height of the document */
+  margin: 0; /* Remove default margin */
+  overflow: hidden; /* Hide scrollbar on the body */
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory; /* Enable scroll snap */
+  overflow-y: auto; /* Enable scrolling inside the container */
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width of the viewport */
+}
+
+.full-screen {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #18212c;
+  color: white;
+}
+
+.full-screen:nth-child(2) {
+  background-color: #0f2d53;
+  color: white;
+}
+
+.scrollable {
+  scroll-snap-align: start;
+  min-height: 100vh; /* Ensure this section takes at least full height */
+  padding: 50px;
+  background-color: white;
+  color: black;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}

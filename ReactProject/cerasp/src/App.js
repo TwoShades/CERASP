@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import LandingPage from "./pages/LandingPage";
 import About from "./pages/About";
 import Expertises from "./pages/Expertises";
 import Solutions from "./pages/Solutions";
@@ -13,7 +14,7 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route path="/" element={<h2>Welcome to CERASP</h2>} />
+        <Route path="/" element={<LandingPage />} />{" "}
         <Route path="/about" element={<About />} />
         <Route path="/expertises" element={<Expertises />} />
         <Route path="/solutions" element={<Solutions />} />

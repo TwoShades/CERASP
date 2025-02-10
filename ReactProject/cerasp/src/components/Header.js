@@ -2,8 +2,8 @@ import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <header>
-      <h1>CERASP</h1>
+    <header className="header">
+      <img src="/logos/cerasplogo.png" alt="CERASP Logo" />
       <Navigation />
     </header>
   );
