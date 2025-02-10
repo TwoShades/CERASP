@@ -7,14 +7,23 @@ body {
 }
 
 header {
-  background-color: #939393;
-  color: white;
-  padding: 2rem;
+  position: fixed;
   display: flex;
-  justify-content: space-between; /* Space between logo and nav */
-  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #7a7a7a;
 }
 
 header img {
-  max-height: 90px; /* Adjust logo size if needed */
+  max-height: 90px;
+}
+
+.main-content {
+  padding-top: 140px;
 }

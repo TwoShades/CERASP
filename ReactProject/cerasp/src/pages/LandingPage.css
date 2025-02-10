@@ -1,44 +1,95 @@
-html,
 body {
-  height: 100%; /* Full height of the document */
-  margin: 0; /* Remove default margin */
-  overflow: hidden; /* Hide scrollbar on the body */
+  margin: 0;
+  background-color: #2e3537;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 .landing-container {
-  display: flex;
-  flex-direction: column;
-  scroll-snap-type: y mandatory; /* Enable scroll snap */
-  overflow-y: auto; /* Enable scrolling inside the container */
-  height: 100vh; /* Full height of the viewport */
-  width: 100%; /* Full width of the viewport */
+  position: relative;
+  width: 100%;
 }
 
-.full-screen {
-  scroll-snap-align: start;
-  height: 100vh;
+.container {
+  position: relative;
+  height: 200vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.panel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 2rem;
   text-align: center;
-  background-color: #18212c;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.panel1 {
+  background-color: #00274d;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.panel2 {
+  background-color: #0084ff;
+  position: relative;
+  padding-top: 500px;
+  /* min-height: 100vh; */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 150px;
+  z-index: 2;
+  scrollbar-width: none;
+}
+
+.panel2-content {
+  position: relative;
+  z-index: 2;
+}
+
+.filler-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filler-box {
+  height: 300px;
+  width: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding: 30px;
+  margin: 30px;
   color: white;
+  border-radius: 10px;
+  z-index: 3;
 }
 
-.full-screen:nth-child(2) {
-  background-color: #0f2d53;
+.panel1-faded {
+  top: 0;
+}
+
+.panel2 h2 {
+  font-size: 2rem;
   color: white;
+  z-index: 2;
 }
 
-.scrollable {
-  scroll-snap-align: start;
-  min-height: 100vh; /* Ensure this section takes at least full height */
-  padding: 50px;
-  background-color: white;
-  color: black;
-}
-
-html {
-  scroll-behavior: smooth; /* Smooth scrolling */
+.panel2::-webkit-scrollbar {
+  display: none;
 }

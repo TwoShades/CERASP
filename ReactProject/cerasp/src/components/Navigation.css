@@ -1,26 +1,25 @@
-/* Navigation styles */
 .nav {
   display: flex;
-  flex-grow: 1; /* Take up remaining space after the logo */
-  justify-content: center; /* Center nav items */
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0; /* Ensure there's no default margin */
+  margin: 0;
 }
 
 .nav-list li {
-  margin: 0 40px; /* Re-added the margin for spacing between items */
+  margin: 0 40px;
 }
 
 .nav-list a {
   color: white;
   text-decoration: none;
   font-weight: normal;
-  font-size: 24px; /* Re-added font size */
+  font-size: 24px;
 }
 
 .nav-list a:hover {
@@ -35,9 +34,10 @@
     font-size: 24px;
     color: #ffffff;
     cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 15px;
+    position: fixed;
+    top: 160px;
+    right: 10px;
+    z-index: 1;
   }
 
   .nav-list {
@@ -45,8 +45,9 @@
     background-color: #939393;
     border-radius: 5px;
     position: absolute;
-    top: 50px;
-    right: 0;
+    padding: 10px 0 10px 0;
+    top: 160px;
+    right: 120px;
     width: 30%;
     overflow: hidden;
 
@@ -59,6 +60,8 @@
     max-height: 320px;
     opacity: 1;
     padding: 10px 0 10px 0;
+    top: 160px;
+    right: 120px;
   }
 
   .nav-list li {
