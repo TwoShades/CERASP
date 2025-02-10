@@ -1,0 +1,29 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #7a7a7a;
+}
+
+header img {
+  max-height: 90px;
+}
+
+.main-content {
+  padding-top: 140px;
+}
