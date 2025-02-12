@@ -1,9 +1,12 @@
-/* General styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
 }
 
 header {
@@ -12,7 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-
+  height: 50px;
   top: 0;
   left: 0;
   width: 100%;
@@ -25,5 +28,11 @@ header img {
 }
 
 .main-content {
-  padding-top: 140px;
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
 }

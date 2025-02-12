@@ -1,0 +1,16 @@
+.team-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.team-container > * {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
