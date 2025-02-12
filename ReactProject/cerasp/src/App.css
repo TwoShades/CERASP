@@ -11,24 +11,6 @@ body {
   justify-content: flex-start;
 }
 
-header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  height: 50px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #7a7a7a;
-}
-
-header img {
-  max-height: 90px;
-}
-
 .main-content {
   margin-top: 50px;
   height: calc(100vh - 50px);

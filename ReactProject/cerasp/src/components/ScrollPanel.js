@@ -1,17 +1,8 @@
 import React from "react";
-import "./ScrollPanel.css";
+import "./css/ScrollPanel.css";
 
-const ScrollPanel = ({ children, bgColor, txtColor }) => {
-  const panelStyle = {
-    backgroundColor: bgColor,
-    color: txtColor,
-  };
-
-  return (
-    <div className="scroll-panel" style={panelStyle}>
-      {children}
-    </div>
-  );
+const ScrollPanel = ({ children, className }) => {
+  return <div className={`scroll-panel ${className}`}>{children}</div>;
 };
 
 export default ScrollPanel;

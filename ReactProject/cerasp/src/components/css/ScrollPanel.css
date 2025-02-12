@@ -1,0 +1,24 @@
+/* SCROLL PANEL COMPONENT */
+
+.scroll-panel {
+  scroll-snap-align: end;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* Dark Grey Blue with White Text */
+.scroll-panel.dark-blue {
+  background-color: #70aff3; /* Dark grey-blue */
+  color: #fff; /* White text */
+}
+
+/* Light Grey Blue with Black Text */
+.scroll-panel.light-blue {
+  background-color: #d0e1e9; /* Light grey-blue */
+  color: #333; /* Black text */
+}

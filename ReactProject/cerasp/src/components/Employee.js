@@ -1,4 +1,4 @@
-import "./Employee.css";
+import "./css/Employee.css";
 
 const Employee = ({ member }) => {
   return (

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Employee from "../components/Employee.js";
+import Footer from "../components/Footer.js";
 import ScrollPanel from "../components/ScrollPanel";
 import "./About.css";
 
@@ -27,15 +28,15 @@ const About = () => {
   return (
     <div>
       <div className="scroll-container">
-        <ScrollPanel bgColor="#444" txtColor="#fff">
+        <ScrollPanel className="scroll-panel dark-blue">
           <h2>History</h2>
         </ScrollPanel>
 
-        <ScrollPanel bgColor="#222" txtColor="#fff">
+        <ScrollPanel className="scroll-panel light-blue">
           <h2>Mission/Vision/Values</h2>
         </ScrollPanel>
 
-        <ScrollPanel bgColor="#333" txtColor="#fff">
+        <ScrollPanel className="scroll-panel dark-blue">
           <div className="team-section">
             <h2>Team</h2>
             <div className="team-container">
@@ -48,25 +49,27 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        <ScrollPanel bgColor="#444" txtColor="#fff">
+        <ScrollPanel className="scroll-panel light-blue">
           <h2>Facilities</h2>
         </ScrollPanel>
 
-        <ScrollPanel bgColor="#222" txtColor="#fff">
+        <ScrollPanel className="scroll-panel dark-blue">
           <h2>Board</h2>
         </ScrollPanel>
 
-        <ScrollPanel bgColor="#333" txtColor="#fff">
+        <ScrollPanel className="scroll-panel light-blue">
           <h2>Partners</h2>
         </ScrollPanel>
 
-        <ScrollPanel bgColor="#444" txtColor="#fff">
+        <ScrollPanel className="scroll-panel dark-blue">
           <h2>Video about CERASP</h2>
         </ScrollPanel>
 
-        <ScrollPanel bgColor="#222" txtColor="#fff">
+        <ScrollPanel className="scroll-panel light-blue">
           <h2>Privacy policy</h2>
         </ScrollPanel>
+
+        <Footer />
       </div>
     </div>
   );
