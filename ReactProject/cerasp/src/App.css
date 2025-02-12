@@ -35,4 +35,5 @@ header img {
   flex-direction: column;
   overscroll-behavior-y: contain;
   scroll-snap-type: y mandatory;
+  scrollbar-width: none;
 }
