@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./Navigation.css";
+import "./css/Navigation.css";
 
 const Navigation = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

@@ -11,14 +11,12 @@
   margin: 0;
 }
 
-/* Dark Grey Blue with White Text */
 .scroll-panel.dark-blue {
-  background-color: #70aff3; /* Dark grey-blue */
-  color: #fff; /* White text */
+  background-color: #70aff3;
+  color: #fff;
 }
 
-/* Light Grey Blue with Black Text */
 .scroll-panel.light-blue {
-  background-color: #d0e1e9; /* Light grey-blue */
-  color: #333; /* Black text */
+  background-color: #d0e1e9;
+  color: #333;
 }
