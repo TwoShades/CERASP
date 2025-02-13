@@ -4,7 +4,7 @@ import Employee from "../components/Employee.js";
 import Footer from "../components/Footer.js";
 import ScrollPanel from "../components/ScrollPanel";
 import EmblaCarousel from "../components/EmblaCarousel.js";
-import "./About.css";
+import "./css/About.css";
 
 const About = () => {
   const [team, setTeam] = useState([]);

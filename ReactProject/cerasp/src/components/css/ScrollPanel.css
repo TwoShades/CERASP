@@ -20,3 +20,8 @@
   background-color: #d0e1e9;
   color: #333;
 }
+
+.scroll-panel p {
+  padding: 10px;
+  text-align: justify;
+}
