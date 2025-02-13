@@ -3,12 +3,16 @@ import axios from "axios";
 import Employee from "../components/Employee.js";
 import Footer from "../components/Footer.js";
 import ScrollPanel from "../components/ScrollPanel";
+import EmblaCarousel from "../components/EmblaCarousel.js";
 import "./About.css";
 
 const About = () => {
   const [team, setTeam] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const slides = [0, 1, 2, 3, 4];
+  const options = { loop: true };
 
   useEffect(() => {
     axios
@@ -50,7 +54,10 @@ const About = () => {
         </ScrollPanel>
 
         <ScrollPanel className="scroll-panel light-blue">
-          <h2>Facilities</h2>
+          <div className="facilities-section">
+            <h2>Facilities</h2>
+            <EmblaCarousel slides={slides} options={options} />
+          </div>
         </ScrollPanel>
 
         <ScrollPanel className="scroll-panel dark-blue">
