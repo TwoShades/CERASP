@@ -1,0 +1,175 @@
+/* ========================= */
+/* ABOUT PAGE */
+/* ========================= */
+
+/* General layout for the about page */
+.scroll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Team Section */
+.team-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* ========================= */
+/* FACILITIES SECTION */
+/* ========================= */
+
+.facilities-section {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  gap: 20px;
+}
+
+.facilities-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ========================= */
+/* CONTENT LAYOUTS */
+/* ========================= */
+
+/* General styles for content inside scroll panels */
+.content-container,
+.three-column-container,
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Two-column layout (image + text) */
+.content-container {
+  gap: 20px;
+}
+
+/* Three-column layout */
+.three-column-container {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+.column {
+  flex: 1;
+}
+
+/* ========================= */
+/* IMAGE STYLES */
+/* ========================= */
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Text section next to image */
+.text-container {
+  flex: 1;
+  text-align: left;
+}
+
+/* ========================= */
+/* CTA BUTTON */
+/* ========================= */
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #70aff3;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e0f0ff;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+@media (max-width: 768px) {
+  /* Stack image and text on top of each other */
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 300px;
+  }
+
+  /* Stack three columns into a single column */
+  .three-column-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ========================= */
+/* WELCOME SECTION */
+/* ========================= */
+
+.welcome-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Left-side banner */
+.banner-panel {
+  width: 30vw; /* 30% of the viewport width */
+  height: 100%; /* Fills the full height of the parent container */
+  background-color: #4a90e2; /* Placeholder color */
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Right-side text panel */
+.text-panel {
+  width: 70vw; /* Remaining space */
+  margin-left: 0; /* No need to offset since flex handles it */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  text-align: left;
+}
+
+/* Responsive behavior for the Welcome section */
+@media (max-width: 768px) {
+  .banner-panel {
+    display: none; /* Hide banner on smaller screens */
+  }
+
+  .text-panel {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
