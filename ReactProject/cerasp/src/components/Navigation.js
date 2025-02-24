@@ -33,7 +33,7 @@ const Navigation = () => {
         </li>
         <li>
           <Link to="/about" onClick={() => setMenuOpen(false)}>
-            About CERASP
+            About
           </Link>
         </li>
         <li>

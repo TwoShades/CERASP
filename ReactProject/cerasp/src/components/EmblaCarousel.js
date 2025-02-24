@@ -7,10 +7,8 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 
-const EmblaCarousel = (props) => {
-  const { slides, options } = props;
+const EmblaCarousel = ({ slides, options, renderSlide }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -22,11 +20,9 @@ const EmblaCarousel = (props) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">
-                <div className="embla__slide__number">{index + 1}</div>
-              </div>
+              {renderSlide ? renderSlide(slide) : <div>{slide}</div>}
             </div>
           ))}
         </div>
