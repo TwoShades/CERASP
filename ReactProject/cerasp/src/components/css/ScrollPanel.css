@@ -1,0 +1,32 @@
+/* ========================= */
+/* SCROLL PANEL */
+/* ========================= */
+
+.scroll-panel {
+  scroll-snap-align: end;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Theme Schemes */
+.themeA {
+  --bg-color: #70aff3;
+  --text-color: #fff;
+}
+
+.themeB {
+  --bg-color: #d0e1e9;
+  --text-color: #333;
+}
+
+.scroll-panel p {
+  padding: 10px;
+  text-align: justify;
+}

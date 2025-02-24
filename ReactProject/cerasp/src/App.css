@@ -1,29 +1,23 @@
-/* General styles */
+/* GLOBAL CSS */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
-}
-
-header {
-  position: fixed;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  background-color: #7a7a7a;
-}
-
-header img {
-  max-height: 90px;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
 }
 
 .main-content {
-  padding-top: 140px;
+  margin-top: 50px;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
 }
