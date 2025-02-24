@@ -1,4 +1,6 @@
-/* SCROLL PANEL COMPONENT */
+/* ========================= */
+/* SCROLL PANEL */
+/* ========================= */
 
 .scroll-panel {
   scroll-snap-align: end;
@@ -9,16 +11,19 @@
   text-align: center;
   width: 100%;
   margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-.scroll-panel.dark-blue {
-  background-color: #70aff3;
-  color: #fff;
+/* Theme Schemes */
+.themeA {
+  --bg-color: #70aff3;
+  --text-color: #fff;
 }
 
-.scroll-panel.light-blue {
-  background-color: #d0e1e9;
-  color: #333;
+.themeB {
+  --bg-color: #d0e1e9;
+  --text-color: #333;
 }
 
 .scroll-panel p {

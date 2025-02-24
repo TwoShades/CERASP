@@ -1,10 +1,10 @@
 .embla {
-  width: 100%; /* Make the carousel fill the width of the viewport */
+  width: 100%;
   margin: auto;
   --slide-height: 19rem;
   --slide-spacing: 1rem;
-  --slide-size: calc(100% / 3); /* Adjust slide width to fit 3 slides */
-  padding: 0 2rem; /* Add padding to the sides of the carousel to give space */
+  --slide-size: calc(100% / 3);
+  padding: 0 2rem;
 }
 
 .embla__viewport {
@@ -19,19 +19,19 @@
 
 .embla__slide {
   transform: translate3d(0, 0, 0);
-  flex: 0 0 var(--slide-size); /* Keep the width as a percentage of the container */
+  flex: 0 0 var(--slide-size);
   min-width: 0;
-  padding-left: var(--slide-spacing); /* Add left padding for spacing */
-  padding-right: var(--slide-spacing); /* Add right padding for spacing */
+  padding-left: var(--slide-spacing);
+  padding-right: var(--slide-spacing);
 }
 
 .embla__slide__inner {
-  border: 2px solid #a0b0c0; /* Grey/blue border color */
-  border-radius: 5px; /* Border radius applied to child */
-  height: 100%; /* Make sure it fills the entire slide height */
+  border: 2px solid #a0b0c0;
+  border-radius: 5px;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center content inside the slide */
+  align-items: center;
 }
 
 .embla__slide__number {
@@ -91,4 +91,20 @@
 .embla__button__svg {
   width: 35%;
   height: 35%;
+}
+
+@media (max-width: 768px) {
+  .embla {
+    width: 90%;
+    padding: 0 1rem;
+  }
+
+  .embla__container {
+    margin: 10px;
+  }
+
+  .embla__slide {
+    --slide-size: 100%;
+    padding: 1px;
+  }
 }
