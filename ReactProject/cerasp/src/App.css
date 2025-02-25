@@ -18,7 +18,16 @@ body {
   display: flex;
   flex-direction: column;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   scrollbar-width: none;
+  scroll-snap-stop: always; /* Prevents skipping snaps when scrolling manually */
+  background-color: blue;
 }
 
 /* color info */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-top: 0px;
+    height: 100vh;
+  }
+}

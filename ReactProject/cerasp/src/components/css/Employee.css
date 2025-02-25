@@ -1,10 +1,8 @@
 .employee-card {
-  background-color: #dff5ff;
-  color: #525455;
+  background-color: #1b62a5;
+  color: #e0e0e0;
   padding: 20px;
   border-radius: 6px;
-  border: 2px solid rgb(184, 237, 247);
-  box-shadow: 0px 4px 8px 3px rgba(32, 49, 84, 0.2);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -23,14 +21,14 @@
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 3px solid #212e3a;
+  border: 1px solid #ffffff;
   flex-shrink: 0; /* Prevents image from shrinking */
 }
 
 .employee-card h3 {
   margin: 10px 0;
   font-size: 1.2rem;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .employee-card p {
@@ -46,7 +44,7 @@
   margin-bottom: 10px; /* Ensures spacing from the bottom */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .employee-card {
     width: 80%;
     margin: auto;

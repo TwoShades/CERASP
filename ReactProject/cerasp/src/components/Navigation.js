@@ -3,15 +3,15 @@ import { Link } from "react-router-dom";
 import "./css/Navigation.css";
 
 const Navigation = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setMenuOpen(false);
       }
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1024);
     };
 
     window.addEventListener("resize", handleResize);

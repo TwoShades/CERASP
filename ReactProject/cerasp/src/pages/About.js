@@ -5,6 +5,7 @@ import Footer from "../components/Footer.js";
 import ScrollPanel from "../components/ScrollPanel";
 import EmblaCarousel from "../components/EmblaCarousel.js";
 import SideBySidePanel from "../components/SideBySidePanel";
+import StockImageFetch from "../components/StockImageFetch";
 import "./css/About.css";
 
 const About = () => {
@@ -35,14 +36,35 @@ const About = () => {
       <div className="scroll-container">
         <ScrollPanel colorTheme="themeA">
           <SideBySidePanel
-            leftContent={<h3>Banner</h3>}
+            leftContent={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
             rightContent={
               <>
                 <h2>Welcome to CERASP</h2>
                 <p>
-                  CERASP is dedicated to innovation and collaboration. Our
-                  mission is to foster cutting-edge research and provide a hub
-                  for creative problem-solving.
+                  CERASP is a Technology Transfer Center (TTCC) in the
+                  pharmaceutical sciences and related industries. We are an
+                  applied research center specialized in supporting SMEs in
+                  their product formulations, prototypes, troubleshooting and
+                  regulatory affairs (Health Canada partner), as well as in the
+                  development of production processes and protocols. We support
+                  you in preparing for audits and verifications carried out by
+                  Health Canada and the FDA. We are also an academic grant
+                  partner, with many grants reserved for TCCs through government
+                  agencies. Our mandate is to help SMEs commercialize their
+                  products and ensure that the intellectual property remains
+                  entirely in their hands. We are an experienced team with
+                  expertise in natural products, pharmaceuticals, animal health,
+                  biologics with over 100 different equipment at our disposal,
+                  from formulation to packaging. For any questions or
+                  uncertainties, contact our customer service at info@cerasp.ca
                 </p>
               </>
             }
@@ -88,7 +110,7 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        <ScrollPanel colorTheme="themeB">
+        <ScrollPanel colorTheme="themeA">
           <div className="team-section">
             <h2>Team</h2>
             <EmblaCarousel
@@ -101,32 +123,15 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        <ScrollPanel className="scroll-panel" colorTheme="themeB">
-          <div className="temp">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              nec tortor convallis, malesuada nibh sed, consequat mauris. Ut
-              congue gravida varius. Cras consequat, orci ac dictum venenatis,
-              sem mauris aliquet risus, a maximus libero turpis sit amet sapien.
-              Quisque consequat cursus purus sed finibus. Maecenas magna nisl,
-              mattis at varius quis, gravida id sem. Nullam scelerisque leo
-              pulvinar interdum pretium. Vestibulum ante ipsum primis in
-              faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum
-              rhoncus leo nec ultrices faucibus. Nullam gravida ex augue, ac
-              eleifend quam ultrices blandit. Duis ut elit quis sem placerat
-              venenatis et nec lectus. Phasellus in placerat mi. Mauris finibus
-              felis a turpis elementum, nec auctor orci volutpat. In ut mauris
-              dolor. Nullam laoreet, mi id dapibus consequat, est purus maximus
-              massa, a euismod elit felis ac ex. Ut viverra lorem libero, id
-              elementum dolor varius ut. Etiam et dolor et nibh faucibus
-              sollicitudin a vitae nisi. Orci varius natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </div>
-        </ScrollPanel>
         <ScrollPanel colorTheme="themeA">
           <div className="facilities-section">
             <h2>Facilities</h2>
+            <StockImageFetch
+              searchTerm="microscope"
+              orientation="landscape"
+              page={1}
+              perPage={4}
+            />
           </div>
         </ScrollPanel>
 
@@ -146,9 +151,17 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        <ScrollPanel colorTheme="themeA">
+        <ScrollPanel colorTheme="themeC">
           <SideBySidePanel
-            leftContent={<h3>Banner</h3>}
+            leftContent={
+              <StockImageFetch
+                searchTerm="laboratory"
+                imgSource="large"
+                orientation="portrait"
+                page={5}
+                perPage={1}
+              />
+            }
             rightContent={
               <>
                 <h2>Video about CERASP</h2>
@@ -159,30 +172,6 @@ const About = () => {
 
         <ScrollPanel colorTheme="themeA">
           <h2>Privacy policy</h2>
-        </ScrollPanel>
-
-        <ScrollPanel className="scroll-panel" colorTheme="themeA">
-          <div className="temp">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              nec tortor convallis, malesuada nibh sed, consequat mauris. Ut
-              congue gravida varius. Cras consequat, orci ac dictum venenatis,
-              sem mauris aliquet risus, a maximus libero turpis sit amet sapien.
-              Quisque consequat cursus purus sed finibus. Maecenas magna nisl,
-              mattis at varius quis, gravida id sem. Nullam scelerisque leo
-              pulvinar interdum pretium. Vestibulum ante ipsum primis in
-              faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum
-              rhoncus leo nec ultrices faucibus. Nullam gravida ex augue, ac
-              eleifend quam ultrices blandit. Duis ut elit quis sem placerat
-              venenatis et nec lectus. Phasellus in placerat mi. Mauris finibus
-              felis a turpis elementum, nec auctor orci volutpat. In ut mauris
-              dolor. Nullam laoreet, mi id dapibus consequat, est purus maximus
-              massa, a euismod elit felis ac ex. Ut viverra lorem libero, id
-              elementum dolor varius ut. Etiam et dolor et nibh faucibus
-              sollicitudin a vitae nisi. Orci varius natoque penatibus et magnis
-              dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </div>
         </ScrollPanel>
 
         <Footer />

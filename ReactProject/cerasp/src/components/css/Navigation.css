@@ -1,25 +1,22 @@
 .nav {
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-list li {
-  margin: 0 40px;
+  margin: 0 10px;
 }
 
 .nav-list a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-weight: normal;
-  font-size: 24px;
+  font-weight: 300;
+  font-size: 20px;
+  margin-inline-start: 50px;
 }
 
 .nav-list a:hover {
@@ -27,7 +24,7 @@
 }
 
 /* Media Query for mobile */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hamburger {
     background: none;
     border: none;
@@ -35,21 +32,20 @@
     color: #000000;
     cursor: pointer;
     position: fixed;
-    top: 160px;
+    top: 10px;
     right: 10px;
     z-index: 1;
   }
 
   .nav-list {
     flex-direction: column;
-    background-color: #d8e5e9;
-    border: 1px solid rgb(149, 208, 248);
+    background-color: #ffffff;
     border-radius: 5px;
     position: absolute;
     padding: 10px 0 10px 0;
-    top: 160px;
-    right: 120px;
-    width: 20%;
+    top: 20px;
+    right: 40px;
+    width: 15%;
     overflow: hidden;
 
     max-height: 0;
@@ -61,8 +57,8 @@
     max-height: 320px;
     opacity: 1;
     padding: 10px 0 10px 0;
-    top: 160px;
-    right: 120px;
+    top: 20px;
+    right: 40px;
   }
 
   .nav-list li {
