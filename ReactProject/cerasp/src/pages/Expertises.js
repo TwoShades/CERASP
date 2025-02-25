@@ -2,15 +2,26 @@ import EmblaCarousel from "../components/EmblaCarousel";
 import ScrollPanel from "../components/ScrollPanel";
 import Footer from "../components/Footer";
 import "./css/Expertises.css";
+import TextPanelOneImage from "../components/TextPanelOneImage";
+import CenteredFeaturePanel from "../components/CenteredFeaturePanel.js";
+import ContactUsForm from "../components/ContactUsForm.js";
 
 const Expertises = () => {
+
+  // Temporary values for carousel
   const slides = [0, 1, 2, 3, 4];
   const options = { loop: true };
+
   return (
     <div className="expertises scroll-container">
+
       <ScrollPanel className="scroll-panel">
-        <EmblaCarousel slides={slides} options={options} />
+        <div className="overview-panel">
+        <h1>OVERVIEW</h1>
+        <EmblaCarousel className="carousel" slides={slides} options={options} />
+        </div>
       </ScrollPanel>
+      
       <ScrollPanel className="scroll-panel">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec
@@ -20,17 +31,42 @@ const Expertises = () => {
           consequat cursus purus sed finibus. Maecenas magna nisl, mattis at
           varius quis, gravida id sem. Nullam scelerisque leo pulvinar interdum
           pretium. Vestibulum ante ipsum primis in faucibus orci luctus et
-          ultrices posuere cubilia curae; Vestibulum rhoncus leo nec ultrices
-          faucibus. Nullam gravida ex augue, ac eleifend quam ultrices blandit.
-          Duis ut elit quis sem placerat venenatis et nec lectus. Phasellus in
-          placerat mi. Mauris finibus felis a turpis elementum, nec auctor orci
-          volutpat. In ut mauris dolor. Nullam laoreet, mi id dapibus consequat,
-          est purus maximus massa, a euismod elit felis ac ex. Ut viverra lorem
-          libero, id elementum dolor varius ut. Etiam et dolor et nibh faucibus
-          sollicitudin a vitae nisi. Orci varius natoque penatibus et magnis dis
-          parturient montes, nascetur ridiculus mus.
+          ultrices posuere cubilia curae;
         </p>
       </ScrollPanel>
+
+      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+        <TextPanelOneImage 
+          leftContent={ 
+            <>
+              <a href="#">Lorem ipsum</a>
+              <h1>Lorem ipsum dolor sit amet consectetur. Etiam diam nisi eget mauris massa aliquam.</h1>
+              <p>Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam diam purus euismod tincidunt morbi. 
+                Gravida ut nulla tincidunt mi eu velit pharetra. In consectetur sed aliquam placerat donec convallis 
+                feugiat pellentesque. Viverra quis etiam ut nulla senectus neque nulla mi non.</p>
+            </>
+          } 
+          rightContent={<div className="image-section"></div>} 
+        />
+      </ScrollPanel>
+
+      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+        <CenteredFeaturePanel 
+          title="Lorem Ipsum Dolor" 
+          image={<div className="image-placeholder"></div>} 
+          features={[
+            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
+            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
+            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." }
+          ]}
+        />
+      </ScrollPanel>
+
+      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+        <ContactUsForm />
+      </ScrollPanel>
+
+
       <Footer />
     </div>
   );

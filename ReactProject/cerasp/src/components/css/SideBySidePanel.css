@@ -29,6 +29,7 @@
   text-align: left;
 }
 
+/* 768 should be for mobile */
 @media (max-width: 768px) {
   .banner-panel {
     display: none;
