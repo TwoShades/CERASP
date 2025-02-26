@@ -5,7 +5,8 @@ const SideBySidePanel = ({ leftContent, rightContent, className = "" }) => {
   return (
     <div className={`side-by-side-panel ${className}`}>
       <div className="banner-panel">{leftContent}</div>
-      <div className="text-panel">{rightContent}</div>
+      <div className="middle-panel">{rightContent}</div>
+      <div className="right-panel"></div>
     </div>
   );
 };

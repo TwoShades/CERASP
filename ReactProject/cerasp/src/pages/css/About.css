@@ -140,41 +140,6 @@
   position: relative;
 }
 
-/* Left-side banner */
-.banner-panel {
-  width: 30vw; /* 30% of the viewport width */
-  height: 100%; /* Fills the full height of the parent container */
-  background-color: #4a90e2; /* Placeholder color */
-  position: relative;
-  left: 0;
-  bottom: 0;
-  z-index: 1;
-}
-
-/* Right-side text panel */
-.text-panel {
-  width: 70vw; /* Remaining space */
-  margin-left: 0; /* No need to offset since flex handles it */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px;
-  text-align: left;
-}
-
-/* Responsive behavior for the Welcome section */
-@media (max-width: 1024px) {
-  .banner-panel {
-    display: none; /* Hide banner on smaller screens */
-  }
-
-  .text-panel {
-    width: 100%;
-    margin-left: 0;
-    text-align: center;
-  }
-}
-
 /* TEMP */
 .temp {
   padding: 30px;

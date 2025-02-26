@@ -21,7 +21,7 @@ body {
   scroll-behavior: smooth;
   scrollbar-width: none;
   scroll-snap-stop: always; /* Prevents skipping snaps when scrolling manually */
-  background-color: blue;
+  background-color: none;
 }
 
 /* color info */

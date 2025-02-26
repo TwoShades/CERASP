@@ -1,1 +1,6 @@
-
+.stock-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  object-position: center;
+}

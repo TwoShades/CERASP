@@ -7,6 +7,7 @@ import EmblaCarousel from "../components/EmblaCarousel.js";
 import SideBySidePanel from "../components/SideBySidePanel";
 import StockImageFetch from "../components/StockImageFetch";
 import "./css/About.css";
+import TestGrid from "../components/TestGrid.js";
 
 const About = () => {
   const [team, setTeam] = useState([]);
@@ -46,7 +47,7 @@ const About = () => {
               />
             }
             rightContent={
-              <>
+              <div>
                 <h2>Welcome to CERASP</h2>
                 <p>
                   CERASP is a Technology Transfer Center (TTCC) in the
@@ -66,7 +67,7 @@ const About = () => {
                   from formulation to packaging. For any questions or
                   uncertainties, contact our customer service at info@cerasp.ca
                 </p>
-              </>
+              </div>
             }
           />
         </ScrollPanel>
@@ -136,7 +137,7 @@ const About = () => {
         </ScrollPanel>
 
         <ScrollPanel colorTheme="themeB">
-          <h2>Board</h2>
+          <TestGrid />
         </ScrollPanel>
 
         <ScrollPanel colorTheme="themeA">
