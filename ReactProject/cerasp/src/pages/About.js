@@ -6,6 +6,7 @@ import ScrollPanel from "../components/ScrollPanel";
 import EmblaCarousel from "../components/EmblaCarousel.js";
 import SideBySidePanel from "../components/SideBySidePanel";
 import StockImageFetch from "../components/StockImageFetch";
+import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
 import "./css/About.css";
 import TestGrid from "../components/TestGrid.js";
 
@@ -13,8 +14,6 @@ const About = () => {
   const [team, setTeam] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  const slides = [0, 1, 2, 3, 4];
   const options = { loop: true };
 
   useEffect(() => {
@@ -35,6 +34,10 @@ const About = () => {
   return (
     <div>
       <div className="scroll-container">
+        {/*   ===================
+              ===WELCOME PANEL===
+              ===================
+        */}
         <ScrollPanel colorTheme="themeA">
           <SideBySidePanel
             leftContent={
@@ -68,6 +71,10 @@ const About = () => {
           />
         </ScrollPanel>
 
+        {/*   ===================
+              =====OUR STORY=====
+              ===================
+        */}
         <ScrollPanel colorTheme="themeB">
           <div className="content-container">
             <div className="image-container">
@@ -84,29 +91,55 @@ const About = () => {
           </div>
         </ScrollPanel>
 
+        {/*   ====================
+              ====THREE COLUMN====
+              ====================
+        */}
         <ScrollPanel colorTheme="themeA">
-          <div className="three-column-container">
-            <div className="column">
-              <h3>Column 1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div className="column">
-              <h3>Column 2</h3>
-              <p>
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                posuere.
-              </p>
-            </div>
-            <div className="column">
-              <h3>Column 3</h3>
-              <p>
-                Cras suscipit, velit eget posuere mattis, metus lacus convallis
-                est.
-              </p>
-            </div>
-          </div>
+          <ThreeColumnPanel
+            topRowContent={
+              <>
+                <h1>Expertise & Solution</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
+                  vitae enim ut.
+                </p>
+              </>
+            }
+            col1Content={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            col2Content={
+              <StockImageFetch
+                searchTerm="petri"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            col3Content={
+              <StockImageFetch
+                searchTerm="bubble"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+          />
         </ScrollPanel>
 
+        {/*   ====================
+              =====TEAM PANEL=====
+              ====================
+        */}
         <ScrollPanel colorTheme="themeA">
           <div className="team-section">
             <h2>Team</h2>
@@ -120,6 +153,10 @@ const About = () => {
           </div>
         </ScrollPanel>
 
+        {/*   ==================
+              ====FACILITIES====
+              ==================
+        */}
         <ScrollPanel colorTheme="themeA">
           <div className="facilities-section">
             <h2>Facilities</h2>
@@ -132,22 +169,10 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        <ScrollPanel colorTheme="themeB">
-          <TestGrid />
-        </ScrollPanel>
-
-        <ScrollPanel colorTheme="themeA">
-          <div className="text-container">
-            <h2>Join Our Team</h2>
-            <p>
-              We’re always looking for passionate individuals to join us. If
-              you’re excited about innovation and teamwork, we’d love to hear
-              from you.
-            </p>
-            <button className="cta-button">Learn More</button>
-          </div>
-        </ScrollPanel>
-
+        {/*   ===================
+              ====VIDEO PANEL====
+              ===================
+        */}
         <ScrollPanel colorTheme="themeC">
           <SideBySidePanel
             leftContent={
@@ -167,6 +192,10 @@ const About = () => {
           />
         </ScrollPanel>
 
+        {/*   ====================
+              ===PRIVACY POLICY===
+              ====================
+        */}
         <ScrollPanel colorTheme="themeA">
           <h2>Privacy policy</h2>
         </ScrollPanel>
