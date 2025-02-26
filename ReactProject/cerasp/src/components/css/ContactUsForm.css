@@ -1,0 +1,98 @@
+.parent {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 16px; /* Increased gap for better spacing */
+    /* padding: 20px; */
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+/* Card Style */
+.card {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for card effect */
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.cerasp-info {
+    margin-top: 50%;
+}
+
+/* Individual Cards */
+.cerasp-info, .sponsors, .contact-form-container {
+    border-top: 20px;
+    grid-column: span 3 / span 3;
+    grid-row: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: auto;
+}
+
+
+/* Assigning the card class */
+.cerasp-info, .sponsors, .contact-form-container {
+    @extend .card;
+}
+
+/* Contact Form Specific Styling */
+.contact-form-container {
+    grid-column: span 6 / span 6;
+    grid-row: span 8 / span 8;
+    grid-column-start: 6;
+    grid-row-start: 2;
+}
+
+.contact-form-container .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.contact-form-container .form-content {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form-container .form-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container .form-fields label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form-container .form-fields input,
+.contact-form-container .form-fields textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.contact-form-container .form-fields textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.contact-form-container .form-image img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+
+.contact-form-container .form-fields select {
+    width: 10%;
+    height: 5%;
+}
