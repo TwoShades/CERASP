@@ -44,6 +44,7 @@
   justify-content: center;
   height: var(--slide-height);
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .embla__controls {

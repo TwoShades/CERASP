@@ -1,38 +1,82 @@
-import EmblaCarousel from "../components/EmblaCarousel";
+import "./css/Expertises.css";
+import StockImageFetch from "../components/StockImageFetch";
 import ScrollPanel from "../components/ScrollPanel";
 import Footer from "../components/Footer";
-import "./css/Expertises.css";
 import TextPanelOneImage from "../components/TextPanelOneImage";
 import CenteredFeaturePanel from "../components/CenteredFeaturePanel.js";
 import ContactUsForm from "../components/ContactUsForm.js";
+import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
+import TwoColumnThreeText from "../components/TwoColumnThreeText.js";
 
 const Expertises = () => {
-
-  // Temporary values for carousel
-  const slides = [0, 1, 2, 3, 4];
-  const options = { loop: true };
 
   return (
     <div className="expertises scroll-container">
 
-      <ScrollPanel className="scroll-panel">
-        <div className="overview-panel">
-        <h1>OVERVIEW</h1>
-        <EmblaCarousel className="carousel" slides={slides} options={options} />
-        </div>
-      </ScrollPanel>
+        <ScrollPanel colorTheme="themeA">
+          <ThreeColumnPanel
+            topRowContent={
+              <>
+                <h1>Expertise & Solution</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
+                  vitae enim ut.
+                </p>
+              </>
+            }
+            col1Content={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            col2Content={
+              <StockImageFetch
+                searchTerm="petri"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            col3Content={
+              <StockImageFetch
+                searchTerm="bubble"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+          />
+        </ScrollPanel>
       
-      <ScrollPanel className="scroll-panel">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec
-          tortor convallis, malesuada nibh sed, consequat mauris. Ut congue
-          gravida varius. Cras consequat, orci ac dictum venenatis, sem mauris
-          aliquet risus, a maximus libero turpis sit amet sapien. Quisque
-          consequat cursus purus sed finibus. Maecenas magna nisl, mattis at
-          varius quis, gravida id sem. Nullam scelerisque leo pulvinar interdum
-          pretium. Vestibulum ante ipsum primis in faucibus orci luctus et
-          ultrices posuere cubilia curae;
-        </p>
+      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+        <CenteredFeaturePanel 
+          title="Lorem Ipsum Dolor" 
+          image={<div className="image-placeholder"></div>} 
+          features={[
+            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
+            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
+            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." }
+          ]}
+        />
+      </ScrollPanel>
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <TwoColumnThreeText
+          circleImage={<div className="circle"></div>}
+          textUnderImage={<p>Circle Image</p>}
+          titleTextOne={<h2>Title One</h2>}
+          titleTextTwo={<h2>Title Two</h2>}
+          titleTextThree={<h2>Title Three</h2>}
+          descTextOne={<p>Description One</p>}
+          descTextTwo={<p>Description Two</p>}
+          descTextThree={<p>Description Three</p>}>
+        </TwoColumnThreeText>
       </ScrollPanel>
 
       <ScrollPanel colorTheme="themeB" className="scroll-panel">
@@ -50,19 +94,8 @@ const Expertises = () => {
         />
       </ScrollPanel>
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
-        <CenteredFeaturePanel 
-          title="Lorem Ipsum Dolor" 
-          image={<div className="image-placeholder"></div>} 
-          features={[
-            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
-            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
-            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." }
-          ]}
-        />
-      </ScrollPanel>
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
         <ContactUsForm />
       </ScrollPanel>
 

@@ -1,0 +1,95 @@
+.three-component-panel {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 16px;
+    padding: 24px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ccc; /* Border around the panel */
+}
+
+.circleImage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    width: 150px; /* Increased width */
+    height: 150px; /* Increased height */
+    margin: 0 auto;
+    margin-top: 20%;
+    border: 1px solid #ccc; /* Border around the circle image */
+}
+
+.textUnderImage {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    margin-top: 10%;
+    border: 1px solid #ccc; /* Border around the text under image */
+}
+
+.titleTextOne, .titleTextTwo, .titleTextThree {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px; /* Reduced margin */
+    border: 1px solid #ccc; /* Border around the title texts */
+}
+
+.titleTextOne {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.titleTextTwo {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.titleTextThree {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.descTextOne, .descTextTwo, .descTextThree {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 0; /* Removed top margin */
+    border: 1px solid #ccc; /* Border around the description texts */
+}
+
+.descTextOne {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.descTextTwo {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.descTextThree {
+    grid-column: 2 / 3;
+    grid-row: 6 / 7;
+}
+
+.circleImage:hover {
+    background-color: #d0d0d0;
+    cursor: pointer;
+}
+
+.titleTextOne:hover, .titleTextTwo:hover, .titleTextThree:hover {
+    color: #007BFF;
+    cursor: pointer;
+}

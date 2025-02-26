@@ -1,19 +1,23 @@
 import React from "react";
 import "./css/ContactUsForm.css";
+import { Phone } from "lucide-react";
 
 const ContactUsForm = () => {
 
   return (
-
-
       <div className="parent">
-        {/* Adding the 'card' class for styling */}
+
         <div className="cerasp-info card">
-          <p>Just some text</p>
+          <h4>Contact Details</h4>
+          <p>7171 Frederick Banting, Centre d'innovation adMare/adMare Bioinnovations <br></br>
+            Montreal, Quebec, Canada <br></br>
+            H4S 1Z9 <br></br>
+            <Phone className="info-card-icons"/>Phone: 438-923-9257 <br></br>
+            Email: info@cerasp.ca</p>
         </div>
 
         <div className="sponsors card">
-          <p>Just some text</p>
+          <h2>Sponsors images</h2>
         </div>
 
         <div className="contact-form-container card">
