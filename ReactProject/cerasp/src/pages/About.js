@@ -7,6 +7,7 @@ import EmblaCarousel from "../components/EmblaCarousel.js";
 import SideBySidePanel from "../components/SideBySidePanel";
 import StockImageFetch from "../components/StockImageFetch";
 import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
+import PanelGridAndText from "../components/PanelGridAndText.js";
 import "./css/About.css";
 import TestGrid from "../components/TestGrid.js";
 
@@ -151,6 +152,69 @@ const About = () => {
               )}
             />
           </div>
+        </ScrollPanel>
+
+        {/*   =================
+              ====EQUIPMENT====
+              =================
+           */}
+        <ScrollPanel colorTheme="themeA">
+          <PanelGridAndText
+            p1Content={
+              <StockImageFetch
+                searchTerm="table"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
+            p2Content={
+              <StockImageFetch
+                searchTerm="chair"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
+            p3Content={
+              <StockImageFetch
+                searchTerm="machine"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
+            p4Content={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
+            p5Content={
+              <StockImageFetch
+                searchTerm="office"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            p6Content={
+              <StockImageFetch
+                searchTerm="person"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+          />
         </ScrollPanel>
 
         {/*   ==================
