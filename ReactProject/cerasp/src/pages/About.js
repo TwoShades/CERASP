@@ -56,7 +56,7 @@ const About = () => {
                   CERASP is a Technology Transfer Center (TTCC) in the
                   pharmaceutical sciences and related industries. We are an
                   applied research center specialized in supporting SMEs in
-                  their product formulations, prototypes, troubleshooting and
+                  their product formulations, prototypes, troubleshooting, and
                   regulatory affairs (Health Canada partner), as well as in the
                   development of production processes and protocols. We support
                   you in preparing for audits and verifications carried out by
@@ -173,7 +173,7 @@ const About = () => {
               ====VIDEO PANEL====
               ===================
         */}
-        <ScrollPanel colorTheme="themeC">
+        <ScrollPanel colorTheme="themeA">
           <SideBySidePanel
             leftContent={
               <StockImageFetch
@@ -186,7 +186,7 @@ const About = () => {
             }
             rightContent={
               <>
-                <h2>Video about CERASP</h2>
+                <h1>Video about CERASP</h1>
               </>
             }
           />

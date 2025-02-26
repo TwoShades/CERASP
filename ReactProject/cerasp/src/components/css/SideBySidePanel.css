@@ -5,7 +5,7 @@
 .side-by-side-panel {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   gap: 0px;
   height: 100%;
   width: 100%;
@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   grid-row-start: 1;
-  grid-row: span 5;
+  grid-row: span 12;
   grid-column-start: 1;
   grid-column: span 2;
 }
@@ -28,6 +28,7 @@
 .middle-panel {
   h2 {
     font-size: 36px;
+    margin-bottom: 50px;
   }
   p {
     font-size: 24px;
@@ -36,10 +37,9 @@
 
   padding-left: 100px;
   display: flex;
-  justify-content: center;
   align-items: center;
   grid-row-start: 1;
-  grid-row: span 5;
+  grid-row: span 12;
   grid-column-start: 3;
   grid-column: span 6;
 }
@@ -52,57 +52,58 @@
 
 @media (max-width: 1024px) {
   .banner-panel {
-    grid-row: 1 / span 5;
-    grid-column: 1 / span 9;
+    grid-row: 1 / span 12;
+    grid-column: 1 / span 12;
   }
 
   .middle-panel {
     h2 {
-      font-size: 30px;
+      font-size: 36px;
     }
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.6;
     }
 
+    padding: 35px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    grid-column: 1 / span 8;
-    grid-row: 2 / span 3;
-    width: 100%;
+    grid-column: 2 / span 7;
+    grid-row: 2 / span 10;
     text-align: center;
-    margin: 40px;
-    padding: 30px; /* Add padding */
-    box-sizing: border-box;
+    text-align: center;
   }
 
   .empty-space {
     display: none;
-    grid-column: 1 / span 9; /* Span full width */
-    grid-row: auto; /* Let it flow naturally */
-    height: 200px; /* Adjust height as needed */
-    background-color: black; /* Keeps it black */
+    grid-row: auto;
+    height: 200px;
   }
 }
 
 @media (max-width: 768px) {
   .middle-panel {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    grid-column: 2 / span 7;
+    grid-row: 2 / span 10;
+  }
+}
+
+@media (max-width: 481px) {
+  .middle-panel {
     h2 {
-      font-size: 30px;
+      font-size: 28px;
     }
     p {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 1.6;
     }
 
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    grid-column: 1 / span 8;
-    grid-row: 1 / span 5;
-    width: 100%;
-    text-align: center;
-    margin: 40px;
-    padding: 30px; /* Add padding */
-    box-sizing: border-box;
+    grid-column: 2 / span 7;
+    grid-row: 2 / span 10;
   }
 }
