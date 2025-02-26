@@ -59,19 +59,18 @@
       font-size: 30px;
     }
     p {
-      font-size: 20px;
-      line-height: 1.8;
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
-    font-size: 24px;
     grid-column: 1 / span 8;
     grid-row: 1 / span 5;
     width: 100%;
     text-align: center;
     margin: 40px;
-    padding: 50px; /* Add padding */
+    padding: 30px; /* Add padding */
     box-sizing: border-box;
   }
 

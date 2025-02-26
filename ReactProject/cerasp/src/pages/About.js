@@ -61,11 +61,7 @@ const About = () => {
                   partner, with many grants reserved for TCCs through government
                   agencies. Our mandate is to help SMEs commercialize their
                   products and ensure that the intellectual property remains
-                  entirely in their hands. We are an experienced team with
-                  expertise in natural products, pharmaceuticals, animal health,
-                  biologics with over 100 different equipment at our disposal,
-                  from formulation to packaging. For any questions or
-                  uncertainties, contact our customer service at info@cerasp.ca
+                  entirely in their hands.
                 </p>
               </div>
             }
