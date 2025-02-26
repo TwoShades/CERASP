@@ -8,11 +8,11 @@ const ThreeColumnPanel = ({
   col3Content,
 }) => {
   return (
-    <div class="three-column-panel">
-      <div class="top-row">{topRowContent}</div>
-      <div class="col1">{col1Content}</div>
-      <div class="col2">{col2Content}</div>
-      <div class="col3">{col3Content}</div>
+    <div className="three-column-panel">
+      <div className="top-row">{topRowContent}</div>
+      <div className="col1">{col1Content}</div>
+      <div className="col2">{col2Content}</div>
+      <div className="col3">{col3Content}</div>
     </div>
   );
 };

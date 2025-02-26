@@ -16,7 +16,6 @@
   color: white;
   font-size: 1.5rem;
   text-align: center;
-
   justify-content: center;
   align-items: center;
   grid-row-start: 1;
@@ -25,16 +24,17 @@
   grid-column: span 2;
 }
 
-.middle-panel {
-  h2 {
-    font-size: 36px;
-    margin-bottom: 50px;
-  }
-  p {
-    font-size: 24px;
-    line-height: 1.6;
-  }
+.middle-panel h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
 
+.middle-panel p {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.middle-panel {
   padding-left: 100px;
   display: flex;
   align-items: center;
@@ -56,21 +56,21 @@
     grid-column: 1 / span 12;
   }
 
-  .middle-panel {
-    h2 {
-      font-size: 36px;
-    }
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+  .middle-panel h2 {
+    font-size: 36px;
+  }
 
+  .middle-panel p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .middle-panel {
     padding: 35px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     grid-column: 2 / span 7;
     grid-row: 2 / span 10;
-    text-align: center;
     text-align: center;
   }
 
@@ -92,15 +92,16 @@
 }
 
 @media (max-width: 481px) {
-  .middle-panel {
-    h2 {
-      font-size: 28px;
-    }
-    p {
-      font-size: 14px;
-      line-height: 1.6;
-    }
+  .middle-panel h2 {
+    font-size: 28px;
+  }
 
+  .middle-panel p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .middle-panel {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     grid-column: 2 / span 7;
