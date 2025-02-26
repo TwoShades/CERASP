@@ -1,4 +1,4 @@
-import "./LandingPage.css";
+import "./css/LandingPage.css";
 
 const LandingPage = () => {};
 

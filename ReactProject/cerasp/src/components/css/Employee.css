@@ -1,35 +1,66 @@
 .employee-card {
-  background-color: #dff5ff;
-  color: #525455;
+  background-color: rgba(173, 222, 255, 0.8);
+  color: #7e7e7e;
   padding: 20px;
-  margin: 20px;
-  border-radius: 15px;
-  border: 2px solid rgb(184, 237, 247);
-  box-shadow: 0px 4px 8px 3px rgba(32, 49, 84, 0.2);
+  border-radius: 16px;
   text-align: center;
-  width: 500px;
-  height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 50vh;
+  overflow-y: auto; /* Enables vertical scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
-.employee-card img {
-  width: 150px;
-  height: 150px;
+.employee-card-img {
+  width: 40%;
+  max-width: 150px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 3px solid #212e3a;
+  border: 1px solid #ffffff;
+  flex-shrink: 0; /* Prevents image from shrinking */
 }
 
 .employee-card h3 {
   margin: 10px 0;
-  font-size: 1.4rem;
-  color: black;
+  font-size: 1.2rem;
+  color: rgb(56, 56, 56);
 }
 
 .employee-card p {
   font-size: 1rem;
   line-height: 1.5;
+  overflow-wrap: break-word; /* Ensures long words wrap properly */
+  text-align: center;
+  flex-grow: 1; /* Expands text area, pushing LinkedIn down */
+}
+
+.linkedin {
+  margin-top: auto; /* Pushes LinkedIn icon to the bottom */
+  margin-bottom: 10px; /* Ensures spacing from the bottom */
+}
+
+@media screen and (max-width: 1024px) {
+  .employee-card {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .employee-card {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .employee-card {
+    width: 60%;
+    margin: auto;
+  }
 }

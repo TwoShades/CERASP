@@ -5,14 +5,15 @@ import Footer from "../components/Footer.js";
 import ScrollPanel from "../components/ScrollPanel";
 import EmblaCarousel from "../components/EmblaCarousel.js";
 import SideBySidePanel from "../components/SideBySidePanel";
+import StockImageFetch from "../components/StockImageFetch";
+import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
 import "./css/About.css";
+import TestGrid from "../components/TestGrid.js";
 
 const About = () => {
   const [team, setTeam] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  const slides = [0, 1, 2, 3, 4];
   const options = { loop: true };
 
   useEffect(() => {
@@ -33,22 +34,47 @@ const About = () => {
   return (
     <div>
       <div className="scroll-container">
+        {/*   ===================
+              ===WELCOME PANEL===
+              ===================
+        */}
         <ScrollPanel colorTheme="themeA">
           <SideBySidePanel
-            leftContent={<h3>Banner</h3>}
+            leftContent={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
             rightContent={
-              <>
+              <div>
                 <h2>Welcome to CERASP</h2>
                 <p>
-                  CERASP is dedicated to innovation and collaboration. Our
-                  mission is to foster cutting-edge research and provide a hub
-                  for creative problem-solving.
+                  CERASP is a Technology Transfer Center (TTCC) in the
+                  pharmaceutical sciences and related industries. We are an
+                  applied research center specialized in supporting SMEs in
+                  their product formulations, prototypes, troubleshooting, and
+                  regulatory affairs (Health Canada partner), as well as in the
+                  development of production processes and protocols. We support
+                  you in preparing for audits and verifications carried out by
+                  Health Canada and the FDA. We are also an academic grant
+                  partner, with many grants reserved for TCCs through government
+                  agencies. Our mandate is to help SMEs commercialize their
+                  products and ensure that the intellectual property remains
+                  entirely in their hands.
                 </p>
-              </>
+              </div>
             }
           />
         </ScrollPanel>
 
+        {/*   ===================
+              =====OUR STORY=====
+              ===================
+        */}
         <ScrollPanel colorTheme="themeB">
           <div className="content-container">
             <div className="image-container">
@@ -65,69 +91,111 @@ const About = () => {
           </div>
         </ScrollPanel>
 
+        {/*   ====================
+              ====THREE COLUMN====
+              ====================
+        */}
         <ScrollPanel colorTheme="themeA">
-          <div className="three-column-container">
-            <div className="column">
-              <h3>Column 1</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div className="column">
-              <h3>Column 2</h3>
-              <p>
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-                posuere.
-              </p>
-            </div>
-            <div className="column">
-              <h3>Column 3</h3>
-              <p>
-                Cras suscipit, velit eget posuere mattis, metus lacus convallis
-                est.
-              </p>
-            </div>
-          </div>
+          <ThreeColumnPanel
+            topRowContent={
+              <>
+                <h1>Expertise & Solution</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
+                  vitae enim ut.
+                </p>
+              </>
+            }
+            col1Content={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            col2Content={
+              <StockImageFetch
+                searchTerm="petri"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            col3Content={
+              <StockImageFetch
+                searchTerm="bubble"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+          />
         </ScrollPanel>
 
-        <ScrollPanel colorTheme="themeB">
+        {/*   ====================
+              =====TEAM PANEL=====
+              ====================
+        */}
+        <ScrollPanel colorTheme="themeA">
           <div className="team-section">
             <h2>Team</h2>
-            <div className="team-container">
-              {loading && <p>Loading...</p>}
-              {error && <p>Error: {error}</p>}
-              {team.map((member) => (
+            <EmblaCarousel
+              slides={team}
+              options={options}
+              renderSlide={(member) => (
                 <Employee key={member.id} member={member} />
-              ))}
-            </div>
+              )}
+            />
           </div>
         </ScrollPanel>
 
+        {/*   ==================
+              ====FACILITIES====
+              ==================
+        */}
         <ScrollPanel colorTheme="themeA">
           <div className="facilities-section">
             <h2>Facilities</h2>
-            <EmblaCarousel slides={slides} options={options} />
+            <StockImageFetch
+              searchTerm="microscope"
+              orientation="landscape"
+              page={1}
+              perPage={4}
+            />
           </div>
         </ScrollPanel>
 
-        <ScrollPanel colorTheme="themeB">
-          <h2>Board</h2>
-        </ScrollPanel>
-
+        {/*   ===================
+              ====VIDEO PANEL====
+              ===================
+        */}
         <ScrollPanel colorTheme="themeA">
-          <div className="text-container">
-            <h2>Join Our Team</h2>
-            <p>
-              We’re always looking for passionate individuals to join us. If
-              you’re excited about innovation and teamwork, we’d love to hear
-              from you.
-            </p>
-            <button className="cta-button">Learn More</button>
-          </div>
+          <SideBySidePanel
+            leftContent={
+              <StockImageFetch
+                searchTerm="laboratory"
+                imgSource="large"
+                orientation="portrait"
+                page={5}
+                perPage={1}
+              />
+            }
+            rightContent={
+              <>
+                <h1>Video about CERASP</h1>
+              </>
+            }
+          />
         </ScrollPanel>
 
-        <ScrollPanel colorTheme="themeB">
-          <h2>Video about CERASP</h2>
-        </ScrollPanel>
-
+        {/*   ====================
+              ===PRIVACY POLICY===
+              ====================
+        */}
         <ScrollPanel colorTheme="themeA">
           <h2>Privacy policy</h2>
         </ScrollPanel>

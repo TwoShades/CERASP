@@ -6,6 +6,7 @@ const Employee = ({ member }) => {
       <h3>{member.name}</h3>
       {member.image && (
         <img
+          className="employee-card-img"
           src={member.image.formats?.small?.url || member.image.url}
           alt={member.name}
         />
@@ -28,6 +29,17 @@ const Employee = ({ member }) => {
           </span>
         ))}
       </p>
+      <a
+        href="https://ca.linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          className="linkedin"
+          src="/logos/linkedinlogo.png"
+          alt="CERASP Logo"
+        />
+      </a>
     </div>
   );
 };

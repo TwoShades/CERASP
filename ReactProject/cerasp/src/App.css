@@ -1,7 +1,6 @@
 /* GLOBAL CSS */
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f8f8f8;
@@ -15,9 +14,20 @@ body {
   margin-top: 50px;
   height: calc(100vh - 50px);
   overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  overscroll-behavior-y: contain;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   scrollbar-width: none;
+  scroll-snap-stop: always; /* Prevents skipping snaps when scrolling manually */
+  background-color: none;
+}
+
+/* color info */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-top: 0px;
+    height: 100vh;
+  }
 }
