@@ -32,7 +32,7 @@
 }
 
 .employee-card p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   overflow-wrap: break-word; /* Ensures long words wrap properly */
   text-align: center;
