@@ -1,8 +1,12 @@
 import React from "react";
 import "./css/ContactUsForm.css";
-import { Phone } from "lucide-react";
+import { Phone, AtSign } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactUsForm = () => {
+  const handleCaptchaChange = (value) => {
+    console.log("Captcha value:", value);
+  };
 
   return (
       <div className="parent">
@@ -13,7 +17,7 @@ const ContactUsForm = () => {
             Montreal, Quebec, Canada <br></br>
             H4S 1Z9 <br></br>
             <Phone className="info-card-icons"/>Phone: 438-923-9257 <br></br>
-            Email: info@cerasp.ca</p>
+            <AtSign className="info-card-icons"/>Email: info@cerasp.ca</p>
         </div>
 
         <div className="sponsors card">
@@ -55,20 +59,21 @@ const ContactUsForm = () => {
               <textarea placeholder="Your Message"></textarea>
             </div>
 
-            <div className="form-image">
-              <img src="/path-to-your-image.jpg" alt="Contact" />
-            </div>
-
             <div className="form-policy">
-
+              <input type="checkbox" id="policy" />
+              <label for="policy">I have read and agree to the Privacy Policy</label>
             </div>
 
             <div className="form-newsletter">
-
+              <input type="checkbox" id="newsletter" />
+              <label for="newsletter">I would like to receive news from CERASP via email</label>
             </div>
 
             <div className="not-a-robot">
-
+              <ReCAPTCHA
+                sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                onChange={handleCaptchaChange}
+              />
             </div>
           </div>
         </div>
