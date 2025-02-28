@@ -1,9 +1,11 @@
 .parent {
     width: 100%;
-    height: 95%;
+    height: 90%;
+    margin-left: 20px;
+    margin-right: 20px;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 20px; /* Increased gap for better spacing */
     padding: 20px;
     background-color: #f8f9fa; /* Light background for contrast */
@@ -23,26 +25,22 @@
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Individual Cards */
-.cerasp-info, .sponsors, .contact-form-container {
-    border-top: 10px;
-    grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
-    grid-column-start: 2;
-    grid-row-start: auto;
+
+/* Left panel */
+.left-panel {
+    grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
 }
 
 .cerasp-info {
-    margin-top: 50%;
-    width: 100%;
-    height: 50%;
+    margin-bottom: 20%;
 }
-
 .sponsors {
-    margin-top: 10%;
-    margin-bottom: 50%;
-    width: 100%;
-    height: 80%;
+    height: 300px;
+    background-color: #555;
+    color: white;
 }
 
 /* Assigning the card class */
@@ -52,14 +50,12 @@
 
 /* Contact Form Specific Styling */
 .contact-form-container {
-    grid-column: span 6 / span 6;
-    grid-row: span 8 / span 8;
-    grid-column-start: 6;
-    grid-row-start: 2;
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    grid-column: 3 / span 3;
 }
 
 .contact-form-container .form-title {
@@ -117,10 +113,14 @@
 .contact-form-container .form-fields textarea {
     resize: vertical;
     height: 120px;
+    resize: none;
 }
 
 .contact-form-container .form-policy,
-.contact-form-container .form-newsletter,
+.contact-form-container .form-newsletter {
+    display: flex;
+    /* flex-direction: column; */
+}
 .contact-form-container .not-a-robot {
     display: flex;
     align-items: center;
@@ -136,15 +136,24 @@
     justify-content: center;
 }
 
+.captcha-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.checkboxes-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .contact-form-container {
-        grid-column: span 12 / span 12;
-        grid-row: span 10 / span 10;
-        grid-column-start: 1;
-        grid-row-start: 1;
+        
     }
-
+    
     .contact-form-container .form-content {
         flex-direction: column;
     }

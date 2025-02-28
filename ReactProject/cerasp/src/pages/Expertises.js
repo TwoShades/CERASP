@@ -81,7 +81,7 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel colorTheme="themeC" className="scroll-panel">
         <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}

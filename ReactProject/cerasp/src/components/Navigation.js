@@ -39,7 +39,7 @@ const Navigation = () => {
           </Link>
         </li>
         <li>
-          <Link to="/solutions" onClick={() => setMenuOpen(false)}>
+          <Link to="/sectors" onClick={() => setMenuOpen(false)}>
             <span>❒</span>
             Sector of Activities
           </Link>

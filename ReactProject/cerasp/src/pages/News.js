@@ -78,7 +78,7 @@ const News = () => {
               =======================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
         <ContactUsForm />
         
       </ScrollPanel>
