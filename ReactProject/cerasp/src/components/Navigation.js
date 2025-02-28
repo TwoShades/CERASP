@@ -44,12 +44,12 @@ const Navigation = () => {
             Sector of Activities
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/equipment" onClick={() => setMenuOpen(false)}>
             <span>❒</span>
             Exquipment
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/projects" onClick={() => setMenuOpen(false)}>
             <span>❒</span>

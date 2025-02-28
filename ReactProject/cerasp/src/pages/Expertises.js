@@ -94,6 +94,38 @@ const Expertises = () => {
         </TwoColumnThreeText>
       </ScrollPanel>
 
+        {/*   =====================================
+              =Animal health, NHP & Nutraceuticals=
+              =====================================
+        */}
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <p>Animal health, NHP & Nutraceuticals</p>
+        
+      </ScrollPanel>
+
+
+        {/*   =================================
+              ========Applied Research=========
+              =================================
+        */}
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <p>Applied Research</p>
+        
+      </ScrollPanel>
+
+        {/*   =================================
+              =======Troubleshooting===========
+              =================================
+        */}
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <p>Troubleshooting</p>
+        
+      </ScrollPanel>
+        
+
         {/*   ===============================
               =====HEALTH CANADA PARTNER=====
               ===============================
@@ -112,6 +144,46 @@ const Expertises = () => {
           } 
           rightContent={<div className="image-section"></div>} 
         />
+      </ScrollPanel>
+
+        {/*   =================================
+              ======Technical Training=========
+              =================================
+        */}
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <p>Technical Training</p>
+        
+      </ScrollPanel>
+
+        {/*   =================================
+              ========Bioinformatics===========
+              =================================
+        */}
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <p>Bioinformatics</p>
+        
+      </ScrollPanel>
+
+        {/*   =================================
+              =======Numeric Health============
+              =================================
+        */}
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <p>Numeric Health</p>
+        
+      </ScrollPanel>
+
+        {/*   =================================
+              ======Help Access Funding========
+              =================================
+        */}
+
+      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+        <p>Help Access Funding</p>
+       
       </ScrollPanel>
 
         {/*   ======================
