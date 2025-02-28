@@ -27,29 +27,29 @@ const Navigation = () => {
       )}
       <ul className={`nav-list ${isMobile && menuOpen ? "show" : ""}`}>
         <li>
-          <Link to="/" onClick={() => setMenuOpen(false)}>
-            <span>❒</span>
-            Home
-          </Link>
-        </li>
-        <li>
           <Link to="/about" onClick={() => setMenuOpen(false)}>
             <span>❒</span>
-            About
+            About CERASP
           </Link>
         </li>
         <li>
           <Link to="/expertises" onClick={() => setMenuOpen(false)}>
             <span>❒</span>
-            Expertises
+            Expertises & Solutions
           </Link>
         </li>
         <li>
-          <Link to="/solutions" onClick={() => setMenuOpen(false)}>
+          <Link to="/sectors" onClick={() => setMenuOpen(false)}>
             <span>❒</span>
-            Solutions
+            Sector of Activities
           </Link>
         </li>
+        {/* <li>
+          <Link to="/equipment" onClick={() => setMenuOpen(false)}>
+            <span>❒</span>
+            Exquipment
+          </Link>
+        </li> */}
         <li>
           <Link to="/projects" onClick={() => setMenuOpen(false)}>
             <span>❒</span>

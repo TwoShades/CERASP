@@ -2,11 +2,6 @@
   background-color: rgb(36, 133, 197);
 }
 
-.overview-panel {
-  flex-direction: column;
-  width: 80%;
-}
-
 .carousel {
   width: 100%;
 }

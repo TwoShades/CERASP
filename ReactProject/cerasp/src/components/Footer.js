@@ -6,23 +6,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="address">
-          <p>CERASP</p>
-          <p>7171 Frederick Banting,</p>
-          <p>Centre d’innovation adMare / adMare Bioinnovations</p>
-          <p>Montréal, QC H4S 1Z9</p>
+          <p>Copyrights © 2019 - 2025 CERASP All Rights Reserved</p>
         </div>
-        <div className="contact-info">
-          <p>
-            <strong>Email:</strong>{" "}
-            <a href="mailto:info@cerasp.ca">info@cerasp.ca</a>
-          </p>
-          <p>
-            <strong>Phone:</strong>{" "}
-            <a href="tel:+14389239257">(438) 923-9257</a>
-          </p>
-          <p>
-            <strong>Business hours:</strong> 9h – 17h
-          </p>
+        <div className="privacy">
+          <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
     </footer>
