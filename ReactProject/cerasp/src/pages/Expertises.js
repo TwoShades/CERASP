@@ -13,6 +13,11 @@ const Expertises = () => {
   return (
     <div className="expertises scroll-container">
 
+        {/*   ===================
+              =====OVERVIEW======
+              ===================
+        */}
+
         <ScrollPanel colorTheme="themeA">
           <ThreeColumnPanel
             topRowContent={
@@ -53,10 +58,15 @@ const Expertises = () => {
             }
           />
         </ScrollPanel>
+
+        {/*   ===================
+              ===GMP EXPERTISE===
+              ===================
+        */}
       
       <ScrollPanel colorTheme="themeB" className="scroll-panel">
         <CenteredFeaturePanel 
-          title="Lorem Ipsum Dolor" 
+          title="GMP EXPERTISE & BIOMANUFACTURING" 
           image={<div className="image-placeholder"></div>} 
           features={[
             { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
@@ -66,10 +76,15 @@ const Expertises = () => {
         />
       </ScrollPanel>
 
+        {/*   =================================
+              =FORMULATIONS OF PHARMACEUTICALS=
+              =================================
+        */}
+
       <ScrollPanel colorTheme="themeA" className="scroll-panel">
         <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
-          textUnderImage={<p>Circle Image</p>}
+          textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
           titleTextOne={<h2>Title One</h2>}
           titleTextTwo={<h2>Title Two</h2>}
           titleTextThree={<h2>Title Three</h2>}
@@ -79,11 +94,16 @@ const Expertises = () => {
         </TwoColumnThreeText>
       </ScrollPanel>
 
+        {/*   ===============================
+              =====HEALTH CANADA PARTNER=====
+              ===============================
+        */}
+
       <ScrollPanel colorTheme="themeB" className="scroll-panel">
         <TextPanelOneImage 
           leftContent={ 
             <>
-              <a href="#">Lorem ipsum</a>
+              <a href="#">HEALTH CANADA</a>
               <h1>Lorem ipsum dolor sit amet consectetur. Etiam diam nisi eget mauris massa aliquam.</h1>
               <p>Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam diam purus euismod tincidunt morbi. 
                 Gravida ut nulla tincidunt mi eu velit pharetra. In consectetur sed aliquam placerat donec convallis 
@@ -93,6 +113,11 @@ const Expertises = () => {
           rightContent={<div className="image-section"></div>} 
         />
       </ScrollPanel>
+
+        {/*   ======================
+              =====CONTACT FORM=====
+              ======================
+        */}
 
 
       <ScrollPanel colorTheme="themeA" className="scroll-panel">
