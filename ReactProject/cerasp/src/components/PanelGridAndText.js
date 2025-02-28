@@ -1,35 +1,24 @@
 import React from "react";
 import "./css/PanelGridAndText.css";
 
-const PanelGridAndText = () => {
+const PanelGridAndText = ({
+  p1Content,
+  p2Content,
+  p3Content,
+  p4Content,
+  p5Content,
+  p6Content,
+  pTextContent,
+}) => {
   return (
     <div className="panel-grid-and-text">
-      <div className="panel-grid">
-        <div className="panel-row">
-          <div className="panel-cell">1</div>
-          <div className="panel-cell">2</div>
-          <div className="panel-cell">3</div>
-        </div>
-        <div className="panel-row">
-          <div className="panel-cell">4</div>
-          <div className="panel-cell">5</div>
-          <div className="panel-cell">6</div>
-        </div>
-        <div className="panel-row">
-          <div className="panel-cell">7</div>
-          <div className="panel-cell">8</div>
-          <div className="panel-cell">9</div>
-        </div>
-      </div>
-      <div className="panel-text">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          euismod, erat at sollicitudin ultricies, odio tortor scelerisque
-          purus, eget lacinia nunc odio ac elit. Nullam nec ante in mi
-          scelerisque ultricies. Nullam nec ante in mi scelerisque ultricies.
-          Nullam nec ante in mi scelerisque ultricies.
-        </p>
-      </div>
+      <div className="panel-cell-1">{p1Content}</div>
+      <div className="panel-cell-2">{p2Content}</div>
+      <div className="panel-cell-3">{p3Content}</div>
+      <div className="panel-cell-4">{p4Content}</div>
+      <div className="panel-cell-5">{p5Content}</div>
+      <div className="panel-cell-6">{p6Content}</div>
+      <div className="panel-text">{pTextContent}</div>
     </div>
   );
 };

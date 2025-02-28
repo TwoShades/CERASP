@@ -7,6 +7,7 @@ import EmblaCarousel from "../components/EmblaCarousel.js";
 import SideBySidePanel from "../components/SideBySidePanel";
 import StockImageFetch from "../components/StockImageFetch";
 import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
+import PanelGridAndText from "../components/PanelGridAndText.js";
 import "./css/About.css";
 import TestGrid from "../components/TestGrid.js";
 
@@ -18,9 +19,7 @@ const About = () => {
 
   useEffect(() => {
     axios
-      .get(
-        "https://victorious-luck-26690475b0.strapiapp.com/api/employees?populate=image"
-      )
+      .get("http://localhost:1337/api/staffs?populate=image")
       .then((response) => {
         setTeam(response.data.data);
         setLoading(false);
@@ -78,7 +77,7 @@ const About = () => {
         <ScrollPanel colorTheme="themeB">
           <div className="content-container">
             <div className="image-container">
-              <img src="https://via.placeholder.com/400" alt="Placeholder" />
+              {/* <img src="https://via.placeholder.com/400" alt="Placeholder" /> */}
             </div>
             <div className="text-container">
               <h2>Our Story</h2>
@@ -151,6 +150,79 @@ const About = () => {
               )}
             />
           </div>
+        </ScrollPanel>
+
+        {/*   =================
+              ====EQUIPMENT====
+              =================
+           */}
+        <ScrollPanel colorTheme="themeA">
+          <PanelGridAndText
+            p1Content={
+              <StockImageFetch
+                searchTerm="table"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
+            p2Content={
+              <StockImageFetch
+                searchTerm="chemical"
+                imgSource="large"
+                orientation="portrait"
+                page={5}
+                perPage={4}
+              />
+            }
+            p3Content={
+              <StockImageFetch
+                searchTerm="machine"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
+            p4Content={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={4}
+              />
+            }
+            p5Content={
+              <StockImageFetch
+                searchTerm="chemical"
+                imgSource="large"
+                orientation="portrait"
+                page={3}
+                perPage={1}
+              />
+            }
+            p6Content={
+              <StockImageFetch
+                searchTerm="machine"
+                imgSource="large"
+                orientation="portrait"
+                page={2}
+                perPage={1}
+              />
+            }
+            pTextContent={
+              <>
+                <h2>Equipment</h2>
+                <p>
+                  Our equipment is state-of-the-art and ready to help you with
+                  your research and development needs.
+                </p>
+                <h4 className="clickHere">Learn More</h4>
+              </>
+            }
+          />
         </ScrollPanel>
 
         {/*   ==================
