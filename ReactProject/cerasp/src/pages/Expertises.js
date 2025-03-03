@@ -103,9 +103,13 @@ const Expertises = () => {
       <ScrollPanel colorTheme="themeA" className="scroll-panel">
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
-          leftText={<p>Lorem Ipsum</p>}
+          leftText={<p>Lorem Ipsum<br/>Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam diam purus euismod tincidunt morbi.
+            Gravida ut nulla tincidunt mi eu velit pharetra. In consectetur sed aliquam placerat donec convallis
+            feugiat pellentesque. Viverra quis etiam ut nulla senectus neque nulla mi non.</p>}
           rightImage={<div className="image-placeholder">Right Image</div>}
-          rightText={<p>Lorem Ipsum Dorem</p>}
+          rightText={<p>Lorem Ipsum Dorem<br/>Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam diam purus euismod tincidunt morbi.
+            Gravida ut nulla tincidunt mi eu velit pharetra. In consectetur sed aliquam placerat donec convallis
+            feugiat pellentesque. Viverra quis etiam ut nulla senectus neque nulla mi non.</p>}
         />
       </ScrollPanel>
 
@@ -116,7 +120,71 @@ const Expertises = () => {
         */}
 
       <ScrollPanel colorTheme="themeA" className="scroll-panel">
-        <p>Applied Research</p>
+        <ThreeColumnPanel
+            topRowContent={
+              <>
+                <h1>Applied Research</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
+                  vitae enim ut.
+                </p>
+              </>
+            }
+            row1con1={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            row1con2={
+              <StockImageFetch
+                searchTerm="petri"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            row1con3={
+              <StockImageFetch
+                searchTerm="bubble"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            row2con1={
+              <StockImageFetch
+                searchTerm="microscope"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            row2con2={
+              <StockImageFetch
+                searchTerm="petri"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+            row2con3={
+              <StockImageFetch
+                searchTerm="bubble"
+                imgSource="large"
+                orientation="portrait"
+                page={1}
+                perPage={1}
+              />
+            }
+        />
 
       </ScrollPanel>
 
