@@ -1,8 +1,8 @@
 .embla {
-  width: 90%;
+  width: 100%;
   margin: auto;
   --slide-height: 22rem;
-  --slide-spacing: 1rem;
+  --slide-spacing: 2rem;
   --slide-size: calc(100% / 3);
   padding: 0 2rem;
 }

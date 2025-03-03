@@ -19,7 +19,9 @@ const About = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/staffs?populate=image")
+      .get(
+        "https://celebrated-approval-6e3b18d4f7.strapiapp.com/api/staffs?populate=image"
+      )
       .then((response) => {
         setTeam(response.data.data);
         setLoading(false);

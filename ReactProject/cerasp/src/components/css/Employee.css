@@ -1,6 +1,6 @@
 .employee-card {
-  background-color: rgba(173, 222, 255, 0.8);
   color: #7e7e7e;
+  border: 2px solid grey;
   padding: 20px;
   border-radius: 16px;
   text-align: center;
@@ -8,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   height: 50vh;
+  width: 100%;
   overflow-y: auto; /* Enables vertical scrolling */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -21,7 +22,7 @@
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 1px solid #ffffff;
+  box-shadow: 1px 3px 5px 2px rgb(189, 189, 189);
   flex-shrink: 0; /* Prevents image from shrinking */
 }
 
