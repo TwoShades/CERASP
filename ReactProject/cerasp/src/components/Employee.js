@@ -1,4 +1,5 @@
 import "./css/Employee.css";
+import ReactMarkdown from "react-markdown";
 
 const Employee = ({ member }) => {
   // Extract image URL properly
@@ -6,7 +7,7 @@ const Employee = ({ member }) => {
     Array.isArray(member.image) && member.image.length > 0
       ? member.image[0]?.formats?.small?.url || member.image[0]?.url
       : member.image?.formats?.small?.url || member.image?.url;
-
+  console.log({ imageUrl });
   return (
     <div className="employee-card">
       <h3>{member.name}</h3>
@@ -14,12 +15,14 @@ const Employee = ({ member }) => {
       {imageUrl && (
         <img
           className="employee-card-img"
-          src={`http://localhost:1337${imageUrl}`}
+          src={`${imageUrl}`}
           alt={member.name}
         />
       )}
 
-      <p>{member.about ? member.about : "No about information available"}</p>
+      <ReactMarkdown>
+        {member.about ? member.about : "No about information available"}
+      </ReactMarkdown>
 
       <a
         href="https://ca.linkedin.com"

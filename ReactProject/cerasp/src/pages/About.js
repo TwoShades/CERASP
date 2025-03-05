@@ -9,7 +9,6 @@ import StockImageFetch from "../components/StockImageFetch";
 import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
 import PanelGridAndText from "../components/PanelGridAndText.js";
 import "./css/About.css";
-import TestGrid from "../components/TestGrid.js";
 
 const About = () => {
   const [team, setTeam] = useState([]);
@@ -19,7 +18,9 @@ const About = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/staffs?populate=image")
+      .get(
+        "https://celebrated-approval-6e3b18d4f7.strapiapp.com/api/staffs?populate=image"
+      )
       .then((response) => {
         setTeam(response.data.data);
         setLoading(false);
