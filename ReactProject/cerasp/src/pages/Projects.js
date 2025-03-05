@@ -1,12 +1,7 @@
 import "./css/Sectors.css";
-import StockImageFetch from "../components/StockImageFetch.js";
-import ScrollPanel from "../components/ScrollPanel.js";
-import Footer from "../components/Footer.js";
-import TextPanelOneImage from "../components/TextPanelOneImage.js";
-import CenteredFeaturePanel from "../components/CenteredFeaturePanel.js";
-import ContactUsForm from "../components/ContactUsForm.js";
-import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
-import TwoColumnThreeText from "../components/TwoColumnThreeText.js";
+import ScrollPanel from "../components/layouts/ScrollPanel.js";
+import Footer from "../components/layouts/Footer.js";
+import ContactUsForm from "../components/panels/ContactUsForm.js";
 
 const Projects = () => {
 
