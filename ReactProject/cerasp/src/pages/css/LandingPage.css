@@ -1,0 +1,30 @@
+.landing-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.fade-in-out {
+  animation: fadeInOut 1s forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.main-content {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
