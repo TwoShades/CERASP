@@ -9,7 +9,6 @@ import StockImageFetch from "../components/StockImageFetch";
 import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
 import PanelGridAndText from "../components/PanelGridAndText.js";
 import "./css/About.css";
-import TestGrid from "../components/TestGrid.js";
 
 const About = () => {
   const [team, setTeam] = useState([]);

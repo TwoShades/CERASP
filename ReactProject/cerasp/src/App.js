@@ -6,16 +6,19 @@ import Expertises from "./pages/Expertises";
 import Solutions from "./pages/Solutions";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
+import useSmoothScroll from "./hooks/useSmoothScroll";
 
 import "./App.css";
 
 function App() {
+  const mainRef = useSmoothScroll();
+
   return (
     <Router>
       <Header />
-      <main className="main-content">
+      <main className="main-content" ref={mainRef}>
         <Routes>
-          <Route path="/" element={<LandingPage />} />{" "}
+          <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/expertises" element={<Expertises />} />
           <Route path="/solutions" element={<Solutions />} />

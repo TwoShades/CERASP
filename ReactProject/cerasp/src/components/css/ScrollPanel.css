@@ -3,7 +3,7 @@
 /* ========================= */
 
 .scroll-panel {
-  scroll-snap-align: end;
+  scroll-snap-align: center;
   height: calc(100vh - 50px);
   display: flex;
   justify-content: center;

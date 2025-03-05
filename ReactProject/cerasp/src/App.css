@@ -12,14 +12,16 @@ body {
 
 .main-content {
   margin-top: 50px;
-  height: calc(100vh - 50px);
-  overflow-y: scroll;
-  overflow-x: hidden;
+  height: calc(
+    100vh - 50px
+  ); /* Adjusts the content height to account for the header */
+  overflow-y: scroll; /* Allows vertical scrolling */
+  overflow-x: hidden; /* Hides horizontal scrolling */
   display: flex;
   flex-direction: column;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
+  scroll-snap-type: y mandatory; /* Enables scroll snapping */
+  scroll-behavior: smooth; /* Smooth scrolling when scrolling */
+  scrollbar-width: none; /* Hides the scrollbar */
   scroll-snap-stop: always; /* Prevents skipping snaps when scrolling manually */
   background-color: none;
 }
