@@ -1,0 +1,67 @@
+.employee-card {
+  color: #7e7e7e;
+  border: 2px solid grey;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+  overflow-y: auto; /* Enables vertical scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.employee-card-img {
+  width: 40%;
+  max-width: 150px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 1px 3px 5px 2px rgb(189, 189, 189);
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.employee-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: rgb(56, 56, 56);
+}
+
+.employee-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  overflow-wrap: break-word; /* Ensures long words wrap properly */
+  text-align: center;
+  flex-grow: 1; /* Expands text area, pushing LinkedIn down */
+}
+
+.linkedin {
+  margin-top: auto; /* Pushes LinkedIn icon to the bottom */
+  margin-bottom: 10px; /* Ensures spacing from the bottom */
+}
+
+@media screen and (max-width: 1024px) {
+  .employee-card {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .employee-card {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .employee-card {
+    width: 60%;
+    margin: auto;
+  }
+}

@@ -1,13 +1,13 @@
 import "./css/Expertises.css";
-import StockImageFetch from "../components/StockImageFetch";
-import ScrollPanel from "../components/ScrollPanel";
-import Footer from "../components/Footer";
-import TextPanelOneImage from "../components/TextPanelOneImage";
-import CenteredFeaturePanel from "../components/CenteredFeaturePanel.js";
-import ContactUsForm from "../components/ContactUsForm.js";
-import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
-import TwoColumnThreeText from "../components/TwoColumnThreeText.js";
-import TwoImageTwoText from "../components/TwoImageTwoText.js";
+import StockImageFetch from "../components/placeholders/StockImageFetch.js";
+import ScrollPanel from "../components/layouts/ScrollPanel.js";
+import Footer from "../components/layouts/Footer.js";
+import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
+import CenteredFeaturePanel from "../components/panels/CenteredFeaturePanel.js";
+import ContactUsForm from "../components/panels/ContactUsForm.js";
+import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
+import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
+import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
 
 const Expertises = () => {
 
