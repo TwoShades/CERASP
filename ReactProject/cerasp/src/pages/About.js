@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Employee from "../components/Employee.js";
-import Footer from "../components/Footer.js";
-import ScrollPanel from "../components/ScrollPanel";
-import EmblaCarousel from "../components/EmblaCarousel.js";
-import SideBySidePanel from "../components/SideBySidePanel";
-import StockImageFetch from "../components/StockImageFetch";
-import ThreeColumnPanel from "../components/ThreeColumnPanel.js";
-import PanelGridAndText from "../components/PanelGridAndText.js";
+import Employee from "../components/uicomponents/Employee.js";
+import Footer from "../components/layouts/Footer.js";
+import ScrollPanel from "../components/layouts/ScrollPanel.js";
+import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
+import SideBySidePanel from "../components/panels/SideBySidePanel.js";
+import StockImageFetch from "../components/placeholders/StockImageFetch.js";
+import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
+import PanelGridAndText from "../components/panels/PanelGridAndText.js";
 import "./css/About.css";
 
 const About = () => {
