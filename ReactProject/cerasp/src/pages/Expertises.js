@@ -8,6 +8,7 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
+import EightSteps from "../components/panels/EightSteps.js";
 
 const Expertises = () => {
 
@@ -120,72 +121,17 @@ const Expertises = () => {
         */}
 
       <ScrollPanel colorTheme="themeA" className="scroll-panel">
-        <ThreeColumnPanel
-            topRowContent={
-              <>
-                <h1>Applied Research</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
-                  vitae enim ut.
-                </p>
-              </>
-            }
-            row1con1={
-              <StockImageFetch
-                searchTerm="microscope"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row1con2={
-              <StockImageFetch
-                searchTerm="petri"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row1con3={
-              <StockImageFetch
-                searchTerm="bubble"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row2con1={
-              <StockImageFetch
-                searchTerm="microscope"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row2con2={
-              <StockImageFetch
-                searchTerm="petri"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row2con3={
-              <StockImageFetch
-                searchTerm="bubble"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
+        <EightSteps 
+          topRowContent={<h2>Applied Research</h2>}
+          row1Content1={<div className="step-content">Step 1: Research Topic</div>}
+          row1Content2={<div className="step-content">Step 2: Literature Review</div>}
+          row1Content3={<div className="step-content">Step 3: Hypothesis</div>}
+          row1Content4={<div className="step-content">Step 4: Experiment Design</div>}
+          row2Content5={<div className="step-content">Step 5: Data Collection</div>}
+          row2Content6={<div className="step-content">Step 6: Data Analysis</div>}
+          row2Content7={<div className="step-content">Step 7: Conclusion</div>}
+          row2Content8={<div className="step-content">Step 8: Publication</div>}
         />
-
       </ScrollPanel>
 
       {/*   =================================

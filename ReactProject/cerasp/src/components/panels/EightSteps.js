@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/SixSteps.css";
+import "./css/EightSteps.css";
 
-const SixSteps = ({
+const EightSteps = ({
   topRowContent,
   row1Content1,
   row1Content2,
@@ -27,4 +27,4 @@ const SixSteps = ({
   );
 };
 
-export default SixSteps;
+export default EightSteps;
