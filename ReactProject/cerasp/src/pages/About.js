@@ -7,7 +7,6 @@ import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
 import SideBySidePanel from "../components/panels/SideBySidePanel";
 import StockImageFetch from "../components/placeholders/StockImageFetch";
 import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
-import PanelGridAndText from "../components/panels/PanelGridAndText.js";
 import "./css/About.css";
 
 const About = () => {
@@ -33,12 +32,9 @@ const About = () => {
 
   return (
     <div>
-      <div className="scroll-container">
-        {/*   ===================
-              ===WELCOME PANEL===
-              ===================
-        */}
-        <ScrollPanel colorTheme="themeA">
+      <div className="about scroll-container">
+        {/* OVERVIEW */}
+        <ScrollPanel colorTheme="themeA" title="about" id="overview">
           <SideBySidePanel
             leftContent={
               <StockImageFetch
@@ -71,31 +67,8 @@ const About = () => {
           />
         </ScrollPanel>
 
-        {/*   ===================
-              =====OUR STORY=====
-              ===================
-        */}
-        <ScrollPanel colorTheme="themeB">
-          <div className="content-container">
-            <div className="image-container">
-              {/* <img src="https://via.placeholder.com/400" alt="Placeholder" /> */}
-            </div>
-            <div className="text-container">
-              <h2>Our Story</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-                lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod
-                malesuada. Donec in tortor id lacus fringilla tempor nec non ex.
-              </p>
-            </div>
-          </div>
-        </ScrollPanel>
-
-        {/*   ====================
-              ====THREE COLUMN====
-              ====================
-        */}
-        <ScrollPanel colorTheme="themeA">
+        {/* FACILITIES */}
+        <ScrollPanel colorTheme="themeA" title="about" id="facilities">
           <ThreeColumnPanel
             topRowContent={
               <>
@@ -136,11 +109,8 @@ const About = () => {
           />
         </ScrollPanel>
 
-        {/*   ====================
-              =====TEAM PANEL=====
-              ====================
-        */}
-        <ScrollPanel colorTheme="themeA">
+        {/* OUR TEAM */}
+        <ScrollPanel colorTheme="themeA" title="about" id="our-team">
           <div className="team-section">
             <h2>Team</h2>
             <EmblaCarousel
@@ -153,84 +123,8 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        {/*   =================
-              ====EQUIPMENT====
-              =================
-           */}
-        <ScrollPanel colorTheme="themeA">
-          <PanelGridAndText
-            p1Content={
-              <StockImageFetch
-                searchTerm="table"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={4}
-              />
-            }
-            p2Content={
-              <StockImageFetch
-                searchTerm="chemical"
-                imgSource="large"
-                orientation="portrait"
-                page={5}
-                perPage={4}
-              />
-            }
-            p3Content={
-              <StockImageFetch
-                searchTerm="machine"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={4}
-              />
-            }
-            p4Content={
-              <StockImageFetch
-                searchTerm="microscope"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={4}
-              />
-            }
-            p5Content={
-              <StockImageFetch
-                searchTerm="chemical"
-                imgSource="large"
-                orientation="portrait"
-                page={3}
-                perPage={1}
-              />
-            }
-            p6Content={
-              <StockImageFetch
-                searchTerm="machine"
-                imgSource="large"
-                orientation="portrait"
-                page={2}
-                perPage={1}
-              />
-            }
-            pTextContent={
-              <>
-                <h2>Equipment</h2>
-                <p>
-                  Our equipment is state-of-the-art and ready to help you with
-                  your research and development needs.
-                </p>
-                <h4 className="clickHere">Learn More</h4>
-              </>
-            }
-          />
-        </ScrollPanel>
-
-        {/*   ==================
-              ====FACILITIES====
-              ==================
-        */}
-        <ScrollPanel colorTheme="themeA">
+        {/* FACILITIES */}
+        <ScrollPanel colorTheme="themeA" title="about" id="facilities">
           <div className="facilities-section">
             <h2>Facilities</h2>
             <StockImageFetch
@@ -242,11 +136,15 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        {/*   ===================
-              ====VIDEO PANEL====
-              ===================
-        */}
-        <ScrollPanel colorTheme="themeA">
+        {/* PARTNERS */}
+        <ScrollPanel colorTheme="themeB" title="about" id="partners">
+          <div>
+            <h1>hello</h1>
+          </div>
+        </ScrollPanel>
+
+        {/* CERASP VIDEOS */}
+        <ScrollPanel colorTheme="themeA" title="about" id="cerasp-videos">
           <SideBySidePanel
             leftContent={
               <StockImageFetch
@@ -265,11 +163,8 @@ const About = () => {
           />
         </ScrollPanel>
 
-        {/*   ====================
-              ===PRIVACY POLICY===
-              ====================
-        */}
-        <ScrollPanel colorTheme="themeA">
+        {/* PRIVACY POLICY */}
+        <ScrollPanel colorTheme="themeA" title="about" id="">
           <h2>Privacy policy</h2>
         </ScrollPanel>
 

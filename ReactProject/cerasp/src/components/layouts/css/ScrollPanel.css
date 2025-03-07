@@ -42,3 +42,19 @@
     height: 100vh;
   }
 }
+
+.scroll-panel-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.scroll-panel-error h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.scroll-panel-error p {
+  font-size: 14px;
+}

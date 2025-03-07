@@ -1,10 +1,17 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./css/Navigation.css";
+import useScrollToTop from "../../hooks/useScrollToTop";
 
 const Navigation = () => {
+  const { pathname } = useLocation(); // Get the current pathname
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Use the custom hook to handle scroll to top behavior and link clicks
+  const { handleLinkClick } = useScrollToTop(pathname, () =>
+    setMenuOpen(false)
+  ); // Close menu when clicking
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,37 +34,31 @@ const Navigation = () => {
       )}
       <ul className={`nav-list ${isMobile && menuOpen ? "show" : ""}`}>
         <li>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>
+          <Link to="/about" onClick={() => handleLinkClick("/about")}>
             <span>❒</span>
             About CERASP
           </Link>
         </li>
         <li>
-          <Link to="/expertises" onClick={() => setMenuOpen(false)}>
+          <Link to="/expertises" onClick={() => handleLinkClick("/expertises")}>
             <span>❒</span>
             Expertises & Solutions
           </Link>
         </li>
         <li>
-          <Link to="/sectors" onClick={() => setMenuOpen(false)}>
+          <Link to="/sectors" onClick={() => handleLinkClick("/sectors")}>
             <span>❒</span>
             Sector of Activities
           </Link>
         </li>
-        {/* <li>
-          <Link to="/equipment" onClick={() => setMenuOpen(false)}>
-            <span>❒</span>
-            Exquipment
-          </Link>
-        </li> */}
         <li>
-          <Link to="/projects" onClick={() => setMenuOpen(false)}>
+          <Link to="/projects" onClick={() => handleLinkClick("/projects")}>
             <span>❒</span>
             Projects
           </Link>
         </li>
         <li>
-          <Link to="/news" onClick={() => setMenuOpen(false)}>
+          <Link to="/news" onClick={() => handleLinkClick("/news")}>
             <span>❒</span>
             News
           </Link>
