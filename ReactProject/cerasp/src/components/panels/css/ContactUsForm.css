@@ -6,9 +6,11 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 20px; /* Increased gap for better spacing */
+    gap: 20px;
+    /* Increased gap for better spacing */
     padding: 20px;
-    background-color: #f8f9fa; /* Light background for contrast */
+    background-color: #f8f9fa;
+    /* Light background for contrast */
 }
 
 .info-card-icons {
@@ -19,7 +21,8 @@
 /* Card Style */
 .card {
     background: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for card effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for card effect */
     border-radius: 12px;
     padding: 20px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -37,6 +40,7 @@
 .cerasp-info {
     margin-bottom: 20%;
 }
+
 .sponsors {
     height: 300px;
     background-color: #555;
@@ -44,7 +48,9 @@
 }
 
 /* Assigning the card class */
-.cerasp-info, .sponsors, .contact-form-container {
+.cerasp-info,
+.sponsors,
+.contact-form-container {
     @extend .card;
 }
 
@@ -121,6 +127,7 @@
     display: flex;
     /* flex-direction: column; */
 }
+
 .contact-form-container .not-a-robot {
     display: flex;
     align-items: center;
@@ -149,12 +156,14 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .contact-form-container {
-        
-    }
-    
-    .contact-form-container .form-content {
-        flex-direction: column;
-    }
-}
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}

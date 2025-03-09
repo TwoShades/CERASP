@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
-  gap: 30px; /* Increased gap */
+  gap: 30px;
+  /* Increased gap */
   width: 90%;
   margin: 0 auto;
 }
@@ -19,29 +20,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px; /* Increased padding */
+  padding: 40px;
+  /* Increased padding */
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
   text-align: center;
-  min-height: 150px; /* Ensures a minimum height for the cards */
+  min-height: 150px;
+  /* Ensures a minimum height for the cards */
 }
 
-.row1con1, .row1con2, .row1con3, .row1con4,
-.row2con5, .row2con6, .row2con7, .row2con8 {
+.row1con1,
+.row1con2,
+.row1con3,
+.row1con4,
+.row2con5,
+.row2con6,
+.row2con7,
+.row2con8 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@media (max-width: 1024px) {
-  .three-column-panel {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+@media (max-width: 1536px) {}
 
-@media (max-width: 768px) {
-  .three-column-panel {
-    grid-template-columns: 1fr;
-  }
-}
+@media (max-width: 1280px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}

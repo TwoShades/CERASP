@@ -27,7 +27,10 @@ span {
   display: none;
 }
 
-/* Media Query for mobile */
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
 @media (max-width: 1024px) {
   .hamburger {
     background: none;
@@ -81,7 +84,8 @@ span {
     color: rgb(59, 73, 104);
     display: block;
     width: 100%;
-    text-align: left; /* Ensure text is centered */
+    text-align: left;
+    /* Ensure text is centered */
     padding: 10px 0;
   }
 
@@ -90,3 +94,12 @@ span {
     margin-right: 30px;
   }
 }
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}
+
+/* Media Query for mobile */
+@media (max-width: 1024px) {}

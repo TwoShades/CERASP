@@ -1,7 +1,19 @@
 .sectors {
-    background-color: rgb(36, 133, 197);
-  }
-  
-  .carousel {
-    width: 100%;
-  }
+  background-color: rgb(36, 133, 197);
+}
+
+.carousel {
+  width: 100%;
+}
+
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}
