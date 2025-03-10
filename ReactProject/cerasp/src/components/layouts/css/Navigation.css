@@ -1,49 +1,72 @@
+/* General Navbar Styling */
 .nav {
-  display: flex;
+  position: relative;
+}
+
+.nav-item {
+  position: relative;
 }
 
 .nav-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
 }
 
-.nav-item {
-  position: relative; /* Important for the dropdown to be positioned absolutely within the <li> */
+.nav-list li {
+  display: inline-block;
   margin-right: 20px;
 }
 
-.nav-item .dropdown {
-  position: absolute;
-  top: 100%; /* Position below the list item */
-  left: 0;
-  background-color: #f1f1f1;
-  padding: 10px;
+.nav-item a {
+  font-weight: 300;
+  font-size: 20px; /* Ensure consistent font size */
+  color: #000; /* Ensure color stays black */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Reset visited link behavior */
+.nav-item a:visited {
+  color: #000; /* Ensure the visited link doesn't turn purple */
+}
+
+/* Remove underline and style on hover */
+.nav-item a:hover {
+  /* Optional: underline on hover */
+  color: #4e4e4e; /* Optional: Keep the same color on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
   display: none; /* Hide by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 1000;
 }
 
 .nav-item:hover .dropdown {
-  display: block; /* Show the dropdown when hovering over the <li> */
+  display: block; /* Show on hover */
 }
 
-.nav-list a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 20px;
-  margin-inline-start: 40px;
+.dropdown li {
+  list-style-type: none;
+  padding: 5px 0;
 }
 
-.nav-list a:hover {
-  color: #437897;
+.dropdown li:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
 }
 
-span {
-  display: none;
+.nav-item:hover a {
+  text-decoration: bold; /* Optional: underline text on hover */
 }
 
-/* Media Query for mobile */
+/* Mobile Styling */
 @media (max-width: 1024px) {
   .hamburger {
     background: none;
@@ -75,7 +98,6 @@ span {
 
   .nav-list.show {
     right: 0;
-    padding: 0;
   }
 
   .nav-list li {
@@ -85,11 +107,6 @@ span {
     border-bottom: 1px solid rgb(201, 201, 201);
   }
 
-  /* First <li> gets a border at the top */
-  .nav-list li:first-child {
-    border-top: 1px solid rgb(201, 201, 201);
-  }
-
   .nav-list a {
     font-size: 24px;
     font-weight: bold;
@@ -97,7 +114,7 @@ span {
     color: rgb(59, 73, 104);
     display: block;
     width: 100%;
-    text-align: left; /* Ensure text is centered */
+    text-align: left;
     padding: 10px 0;
   }
 
@@ -105,29 +122,4 @@ span {
     display: inline-block;
     margin-right: 30px;
   }
-}
-
-.nav-list li {
-  position: relative; /* Ensures the dropdown is positioned relative to the parent */
-}
-
-.nav-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 200px;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  opacity: 0;
-  transform: translateY(5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none; /* Prevents accidental interaction when hidden */
-}
-
-li:hover .nav-dropdown {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
 }

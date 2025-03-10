@@ -8,8 +8,10 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
+import useScrollToPanel from "../hooks/useScrollToPanel.js";
 
 const Expertises = () => {
+  useScrollToPanel();
   return (
     <div className="expertises scroll-container">
       {/*   ===================
@@ -17,7 +19,7 @@ const Expertises = () => {
               ===================
         */}
 
-      <ScrollPanel colorTheme="themeA" title="expertise" id="overview">
+      <ScrollPanel colorTheme="themeA" title="expertises" id="overview">
         <ThreeColumnPanel
           topRowContent={
             <>
@@ -65,8 +67,7 @@ const Expertises = () => {
 
       <ScrollPanel
         colorTheme="themeB"
-        className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="gmp-expertise-&-biomanufacturing"
       >
         <CenteredFeaturePanel
@@ -96,8 +97,7 @@ const Expertises = () => {
 
       <ScrollPanel
         colorTheme="themeC"
-        className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="formulation-of-pharmaceuticals"
       >
         <TwoColumnThreeText
@@ -120,7 +120,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="animal-health"
       >
         <TwoImageTwoText
@@ -159,7 +159,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="applied-research"
       >
         <ThreeColumnPanel
@@ -237,7 +237,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="troubleshooting"
       >
         <p>Troubleshooting</p>
@@ -251,7 +251,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeB"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="health-canada-partner"
       >
         <TextPanelOneImage
@@ -283,7 +283,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="technical-training"
       >
         <p>Technical Training</p>
@@ -297,7 +297,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="bioinformatics"
       >
         <p>Bioinformatics</p>
@@ -311,7 +311,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="numeric-health"
       >
         <p>Numeric Health</p>
@@ -325,7 +325,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="help-access-funding"
       >
         <p>Help Access Funding</p>
@@ -339,7 +339,7 @@ const Expertises = () => {
       <ScrollPanel
         colorTheme="themeA"
         className="scroll-panel"
-        title="expertise"
+        title="expertises"
         id="overview"
       >
         <ContactUsForm />

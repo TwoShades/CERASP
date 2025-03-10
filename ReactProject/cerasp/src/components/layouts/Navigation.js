@@ -1,18 +1,41 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./css/Navigation.css";
 import useScrollToTop from "../../hooks/useScrollToTop";
 
 const Navigation = () => {
-  const { pathname } = useLocation(); // Get the current pathname
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [expertiseHovered, setExpertiseHovered] = useState(false);
 
-  // Use the custom hook to handle scroll to top behavior and link clicks
   const { handleLinkClick } = useScrollToTop(pathname, () =>
     setMenuOpen(false)
-  ); // Close menu when clicking
+  );
+
+  const sections = [
+    "overview",
+    "our-team",
+    "facilities",
+    "partners",
+    "cerasp-videos",
+  ];
+
+  const expertiseSections = [
+    "overview",
+    "gmp-expertise-&-biomanufacturing",
+    "formulation-of-pharmaceuticals",
+    "animal-health",
+    "applied-research",
+    "troubleshooting",
+    "health-canada-partner",
+    "technical-training",
+    "bioinformatics",
+    "numeric-health",
+    "help-access-funding",
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +49,10 @@ const Navigation = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleNavigateToSection = (section, path) => {
+    navigate(path, { state: { scrollTo: section } });
+  };
+
   return (
     <nav className="nav">
       {isMobile && (
@@ -34,44 +61,83 @@ const Navigation = () => {
         </button>
       )}
       <ul className={`nav-list ${isMobile && menuOpen ? "show" : ""}`}>
-        <li>
-          <Link
-            to="/about"
-            onClick={() => handleLinkClick("/about")}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <span>❒</span>
+        {/* About Dropdown */}
+        <li
+          className="nav-item"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <Link to="/about" onClick={() => handleLinkClick("/about")}>
             About CERASP
           </Link>
+
+          {isHovered && !isMobile && (
+            <div className="dropdown">
+              {sections.map((section) => (
+                <li
+                  key={section}
+                  onClick={() => handleNavigateToSection(section, "/about")}
+                  style={{
+                    cursor: "pointer",
+                    margin: "5px 0",
+                  }}
+                >
+                  {section.replace("-", " ")}
+                </li>
+              ))}
+            </div>
+          )}
         </li>
-        <li>
+
+        {/* Expertise Dropdown */}
+        <li
+          className="nav-item"
+          onMouseEnter={() => setExpertiseHovered(true)}
+          onMouseLeave={() => setExpertiseHovered(false)}
+        >
           <Link to="/expertises" onClick={() => handleLinkClick("/expertises")}>
-            <span>❒</span>
             Expertises & Solutions
           </Link>
+
+          {expertiseHovered && !isMobile && (
+            <div className="dropdown">
+              {expertiseSections.map((section) => (
+                <li
+                  key={section}
+                  onClick={() => {
+                    handleNavigateToSection(section, "/expertises");
+                    console.log(section);
+                  }}
+                  style={{
+                    cursor: "pointer",
+                    margin: "5px 0",
+                  }}
+                >
+                  {section.replace("-", " ")}
+                </li>
+              ))}
+            </div>
+          )}
         </li>
-        <li>
+
+        {/* Other Navbar Links */}
+        <li className="nav-item">
           <Link to="/sectors" onClick={() => handleLinkClick("/sectors")}>
-            <span>❒</span>
             Sector of Activities
           </Link>
         </li>
-        <li>
+        <li className="nav-item">
           <Link to="/projects" onClick={() => handleLinkClick("/projects")}>
-            <span>❒</span>
             Projects
           </Link>
         </li>
-        <li>
+        <li className="nav-item">
           <Link to="/news" onClick={() => handleLinkClick("/news")}>
-            <span>❒</span>
             News
           </Link>
         </li>
-        <li>
+        <li className="nav-item">
           <Link to="/solutions" onClick={() => handleLinkClick("/solutions")}>
-            <span>❒</span>
             Solutions
           </Link>
         </li>

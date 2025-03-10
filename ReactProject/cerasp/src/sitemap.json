@@ -4,14 +4,14 @@
       "title": "about",
       "sub-pages": [
         "overview",
-        "our-team",
         "facilities",
+        "our-team",
         "partners",
         "cerasp-videos"
       ]
     },
     {
-      "title": "expertise",
+      "title": "expertises",
       "sub-pages": [
         "overview",
         "gmp-expertise-&-biomanufacturing",
