@@ -9,7 +9,6 @@ import Expertises from "./pages/Expertises";
 import Sectors from "./pages/Sectors";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
-import Solutions from "./pages/Solutions";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 import "./App.css";
 
@@ -28,7 +27,6 @@ function App() {
           <Route path="/sectors" element={<Sectors />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/news" element={<News />} />
-          <Route path="/solutions" element={<Solutions />} />
         </Routes>
       </main>
     </>

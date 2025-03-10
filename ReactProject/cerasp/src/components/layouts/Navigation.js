@@ -136,11 +136,7 @@ const Navigation = () => {
             News
           </Link>
         </li>
-        <li className="nav-item">
-          <Link to="/solutions" onClick={() => handleLinkClick("/solutions")}>
-            Solutions
-          </Link>
-        </li>
+        
       </ul>
     </nav>
   );
