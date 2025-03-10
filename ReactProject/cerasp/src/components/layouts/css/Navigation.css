@@ -3,12 +3,28 @@
 }
 
 .nav-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  list-style: none;
 }
 
-.nav-list li {
-  margin: 0 8px;
+.nav-item {
+  position: relative; /* Important for the dropdown to be positioned absolutely within the <li> */
+  margin-right: 20px;
+}
+
+.nav-item .dropdown {
+  position: absolute;
+  top: 100%; /* Position below the list item */
+  left: 0;
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: none; /* Hide by default */
+}
+
+.nav-item:hover .dropdown {
+  display: block; /* Show the dropdown when hovering over the <li> */
 }
 
 .nav-list a {

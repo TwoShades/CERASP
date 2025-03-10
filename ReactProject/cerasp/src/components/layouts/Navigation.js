@@ -7,6 +7,7 @@ const Navigation = () => {
   const { pathname } = useLocation(); // Get the current pathname
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Use the custom hook to handle scroll to top behavior and link clicks
   const { handleLinkClick } = useScrollToTop(pathname, () =>
@@ -34,7 +35,12 @@ const Navigation = () => {
       )}
       <ul className={`nav-list ${isMobile && menuOpen ? "show" : ""}`}>
         <li>
-          <Link to="/about" onClick={() => handleLinkClick("/about")}>
+          <Link
+            to="/about"
+            onClick={() => handleLinkClick("/about")}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             <span>❒</span>
             About CERASP
           </Link>
@@ -61,6 +67,12 @@ const Navigation = () => {
           <Link to="/news" onClick={() => handleLinkClick("/news")}>
             <span>❒</span>
             News
+          </Link>
+        </li>
+        <li>
+          <Link to="/solutions" onClick={() => handleLinkClick("/solutions")}>
+            <span>❒</span>
+            Solutions
           </Link>
         </li>
       </ul>

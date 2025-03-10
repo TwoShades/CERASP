@@ -7,6 +7,7 @@ import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
 import SideBySidePanel from "../components/panels/SideBySidePanel";
 import StockImageFetch from "../components/placeholders/StockImageFetch";
 import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
+import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 
 const About = () => {
@@ -29,6 +30,7 @@ const About = () => {
         setLoading(false);
       });
   }, []);
+  useScrollToPanel();
 
   return (
     <div>
