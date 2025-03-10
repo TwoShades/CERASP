@@ -13,7 +13,7 @@ const EightSteps = ({
   row2Content8
 }) => {
   return (
-    <div className="three-column-panel">
+    <div className="eight-steps-panel">
       <div className="top-row">{topRowContent}</div>
       <div className="row1con1">{row1Content1}</div>
       <div className="row1con2">{row1Content2}</div>

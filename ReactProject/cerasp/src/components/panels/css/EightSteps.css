@@ -1,4 +1,4 @@
-.three-column-panel {
+.eight-steps-panel {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
