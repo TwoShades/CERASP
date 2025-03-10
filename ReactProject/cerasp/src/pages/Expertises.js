@@ -8,18 +8,18 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
+import useScrollToPanel from "../hooks/useScrollToPanel.js";
 
 const Expertises = () => {
-
+  useScrollToPanel();
   return (
     <div className="expertises scroll-container">
-
       {/*   ===================
               =====OVERVIEW======
               ===================
         */}
 
-      <ScrollPanel colorTheme="themeA">
+      <ScrollPanel colorTheme="themeA" title="expertises" id="overview">
         <ThreeColumnPanel
           topRowContent={
             <>
@@ -65,14 +65,27 @@ const Expertises = () => {
               ===================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeB"
+        title="expertises"
+        id="gmp-expertise-&-biomanufacturing"
+      >
         <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
           features={[
-            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
-            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." },
-            { title: "Lorem Ipsum", text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair." }
+            {
+              title: "Lorem Ipsum",
+              text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair.",
+            },
+            {
+              title: "Lorem Ipsum",
+              text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair.",
+            },
+            {
+              title: "Lorem Ipsum",
+              text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair.",
+            },
           ]}
         />
       </ScrollPanel>
@@ -82,7 +95,11 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeC" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeC"
+        title="expertises"
+        id="formulation-of-pharmaceuticals"
+      >
         <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
@@ -91,8 +108,8 @@ const Expertises = () => {
           titleTextThree={<h2>Title Three</h2>}
           descTextOne={<p>Description One</p>}
           descTextTwo={<p>Description Two</p>}
-          descTextThree={<p>Description Three</p>}>
-        </TwoColumnThreeText>
+          descTextThree={<p>Description Three</p>}
+        ></TwoColumnThreeText>
       </ScrollPanel>
 
       {/*   =====================================
@@ -100,92 +117,116 @@ const Expertises = () => {
               =====================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="animal-health"
+      >
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
-          leftText={<p>Lorem Ipsum<br/>Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam diam purus euismod tincidunt morbi.
-            Gravida ut nulla tincidunt mi eu velit pharetra. In consectetur sed aliquam placerat donec convallis
-            feugiat pellentesque. Viverra quis etiam ut nulla senectus neque nulla mi non.</p>}
+          leftText={
+            <p>
+              Lorem Ipsum
+              <br />
+              Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam
+              diam purus euismod tincidunt morbi. Gravida ut nulla tincidunt mi
+              eu velit pharetra. In consectetur sed aliquam placerat donec
+              convallis feugiat pellentesque. Viverra quis etiam ut nulla
+              senectus neque nulla mi non.
+            </p>
+          }
           rightImage={<div className="image-placeholder">Right Image</div>}
-          rightText={<p>Lorem Ipsum Dorem<br/>Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam diam purus euismod tincidunt morbi.
-            Gravida ut nulla tincidunt mi eu velit pharetra. In consectetur sed aliquam placerat donec convallis
-            feugiat pellentesque. Viverra quis etiam ut nulla senectus neque nulla mi non.</p>}
+          rightText={
+            <p>
+              Lorem Ipsum Dorem
+              <br />
+              Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam
+              diam purus euismod tincidunt morbi. Gravida ut nulla tincidunt mi
+              eu velit pharetra. In consectetur sed aliquam placerat donec
+              convallis feugiat pellentesque. Viverra quis etiam ut nulla
+              senectus neque nulla mi non.
+            </p>
+          }
         />
       </ScrollPanel>
-
 
       {/*   =================================
               ========Applied Research=========
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="applied-research"
+      >
         <ThreeColumnPanel
-            topRowContent={
-              <>
-                <h1>Applied Research</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
-                  vitae enim ut.
-                </p>
-              </>
-            }
-            row1con1={
-              <StockImageFetch
-                searchTerm="microscope"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row1con2={
-              <StockImageFetch
-                searchTerm="petri"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row1con3={
-              <StockImageFetch
-                searchTerm="bubble"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row2con1={
-              <StockImageFetch
-                searchTerm="microscope"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row2con2={
-              <StockImageFetch
-                searchTerm="petri"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            row2con3={
-              <StockImageFetch
-                searchTerm="bubble"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
+          topRowContent={
+            <>
+              <h1>Applied Research</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
+                vitae enim ut.
+              </p>
+            </>
+          }
+          row1con1={
+            <StockImageFetch
+              searchTerm="microscope"
+              imgSource="large"
+              orientation="portrait"
+              page={1}
+              perPage={1}
+            />
+          }
+          row1con2={
+            <StockImageFetch
+              searchTerm="petri"
+              imgSource="large"
+              orientation="portrait"
+              page={1}
+              perPage={1}
+            />
+          }
+          row1con3={
+            <StockImageFetch
+              searchTerm="bubble"
+              imgSource="large"
+              orientation="portrait"
+              page={1}
+              perPage={1}
+            />
+          }
+          row2con1={
+            <StockImageFetch
+              searchTerm="microscope"
+              imgSource="large"
+              orientation="portrait"
+              page={1}
+              perPage={1}
+            />
+          }
+          row2con2={
+            <StockImageFetch
+              searchTerm="petri"
+              imgSource="large"
+              orientation="portrait"
+              page={1}
+              perPage={1}
+            />
+          }
+          row2con3={
+            <StockImageFetch
+              searchTerm="bubble"
+              imgSource="large"
+              orientation="portrait"
+              page={1}
+              perPage={1}
+            />
+          }
         />
-
       </ScrollPanel>
 
       {/*   =================================
@@ -193,26 +234,41 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="troubleshooting"
+      >
         <p>Troubleshooting</p>
-
       </ScrollPanel>
-
 
       {/*   ===============================
               =====HEALTH CANADA PARTNER=====
               ===============================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeB"
+        className="scroll-panel"
+        title="expertises"
+        id="health-canada-partner"
+      >
         <TextPanelOneImage
           leftContent={
             <>
               <a href="#">HEALTH CANADA</a>
-              <h1>Lorem ipsum dolor sit amet consectetur. Etiam diam nisi eget mauris massa aliquam.</h1>
-              <p>Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam diam purus euismod tincidunt morbi.
-                Gravida ut nulla tincidunt mi eu velit pharetra. In consectetur sed aliquam placerat donec convallis
-                feugiat pellentesque. Viverra quis etiam ut nulla senectus neque nulla mi non.</p>
+              <h1>
+                Lorem ipsum dolor sit amet consectetur. Etiam diam nisi eget
+                mauris massa aliquam.
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam
+                diam purus euismod tincidunt morbi. Gravida ut nulla tincidunt
+                mi eu velit pharetra. In consectetur sed aliquam placerat donec
+                convallis feugiat pellentesque. Viverra quis etiam ut nulla
+                senectus neque nulla mi non.
+              </p>
             </>
           }
           rightContent={<div className="image-section"></div>}
@@ -224,9 +280,13 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="technical-training"
+      >
         <p>Technical Training</p>
-
       </ScrollPanel>
 
       {/*   =================================
@@ -234,9 +294,13 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="bioinformatics"
+      >
         <p>Bioinformatics</p>
-
       </ScrollPanel>
 
       {/*   =================================
@@ -244,9 +308,13 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="numeric-health"
+      >
         <p>Numeric Health</p>
-
       </ScrollPanel>
 
       {/*   =================================
@@ -254,9 +322,13 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="help-access-funding"
+      >
         <p>Help Access Funding</p>
-
       </ScrollPanel>
 
       {/*   ======================
@@ -264,11 +336,14 @@ const Expertises = () => {
               ======================
         */}
 
-
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="overview"
+      >
         <ContactUsForm />
       </ScrollPanel>
-
 
       <Footer />
     </div>

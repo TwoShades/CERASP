@@ -7,7 +7,6 @@ const Employee = ({ member }) => {
     Array.isArray(member.image) && member.image.length > 0
       ? member.image[0]?.formats?.small?.url || member.image[0]?.url
       : member.image?.formats?.small?.url || member.image?.url;
-  console.log({ imageUrl });
   return (
     <div className="employee-card">
       <h3>{member.name}</h3>

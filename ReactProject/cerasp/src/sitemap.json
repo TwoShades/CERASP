@@ -1,0 +1,30 @@
+{
+  "pages": [
+    {
+      "title": "about",
+      "sub-pages": [
+        "overview",
+        "facilities",
+        "our-team",
+        "partners",
+        "cerasp-videos"
+      ]
+    },
+    {
+      "title": "expertises",
+      "sub-pages": [
+        "overview",
+        "gmp-expertise-&-biomanufacturing",
+        "formulation-of-pharmaceuticals",
+        "animal-health",
+        "applied-research",
+        "troubleshooting",
+        "health-canada-partner",
+        "technical-training",
+        "bioinformatics",
+        "numeric-health",
+        "help-access-funding"
+      ]
+    }
+  ]
+}

@@ -1,14 +1,37 @@
+import { useNavigate } from "react-router-dom";
+
 const Solutions = () => {
+  const navigate = useNavigate();
+
+  const sections = [
+    "overview",
+    "our-team",
+    "facilities",
+    "partners",
+    "cerasp-videos",
+  ];
+
+  const handleNavigateToSection = (section) => {
+    navigate("/about", { state: { scrollTo: section } });
+  };
+
   return (
     <div>
       <h1>Solutions</h1>
       <ul>
-        <li>Preformulation</li>
-        <li>Formulation</li>
-        <li>Research & tech support</li>
-        <li>Regulatory Affairs activities</li>
-        <li>Prototyping</li>
-        <li>Pharmaceutical Chemistry & Extraction</li>
+        {sections.map((section) => (
+          <li
+            key={section}
+            onClick={() => handleNavigateToSection(section)}
+            style={{
+              cursor: "pointer",
+              margin: "5px 0",
+              textDecoration: "underline",
+            }}
+          >
+            {section.replace("-", " ")} {/* Display human-readable text */}
+          </li>
+        ))}
       </ul>
     </div>
   );
