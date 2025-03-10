@@ -7,14 +7,15 @@
   width: 90%;
 }
 
-.panel-grid-and-text > * {
+.panel-grid-and-text>* {
   box-shadow: 1px 3px 3px 1px rgb(175, 226, 255);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .panel-cell-1 {
-  background-color: rgb(212, 242, 252); /* Light Blue */
+  background-color: rgb(212, 242, 252);
+  /* Light Blue */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +24,8 @@
 }
 
 .panel-cell-2 {
-  background-color: rgb(204, 247, 255); /* Light Grey */
+  background-color: rgb(204, 247, 255);
+  /* Light Grey */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +34,8 @@
 }
 
 .panel-cell-3 {
-  background-color: rgb(221, 242, 255); /* Sky Blue */
+  background-color: rgb(221, 242, 255);
+  /* Sky Blue */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +44,8 @@
 }
 
 .panel-cell-4 {
-  background-color: rgb(238, 251, 255); /* Silver */
+  background-color: rgb(238, 251, 255);
+  /* Silver */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +54,8 @@
 }
 
 .panel-cell-5 {
-  background-color: rgb(223, 246, 255); /* Light Sky Blue */
+  background-color: rgb(223, 246, 255);
+  /* Light Sky Blue */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,7 +64,8 @@
 }
 
 .panel-cell-6 {
-  background-color: rgb(225, 246, 255); /* Gainsboro */
+  background-color: rgb(225, 246, 255);
+  /* Gainsboro */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,6 +95,10 @@
   background-color: rgb(100, 173, 255);
   color: rgb(255, 255, 255);
 }
+
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
 
 @media (max-width: 1024px) {
   .panel-grid-and-text {
@@ -145,4 +155,11 @@
     padding: 3px;
     margin: 0;
   }
+
 }
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}

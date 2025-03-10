@@ -19,6 +19,10 @@
   text-align: justify;
 }
 
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
 @media (max-width: 1024px) {
   .scroll-panel {
     height: 100vh;

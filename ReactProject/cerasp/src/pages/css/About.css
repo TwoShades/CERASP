@@ -112,8 +112,12 @@
 /* ========================= */
 /* RESPONSIVE DESIGN */
 /* ========================= */
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
 
 @media (max-width: 1024px) {
+
   /* Stack image and text on top of each other */
   .content-container {
     flex-direction: column;
@@ -130,6 +134,12 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}
 
 /* ========================= */
 /* WELCOME SECTION */

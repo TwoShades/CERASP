@@ -19,7 +19,7 @@
     align-items: center;
 }
 
-.circleImage { 
+.circleImage {
     /* display: flex;
     align-items: center;
     justify-content: center; */
@@ -70,7 +70,9 @@
     grid-row: 5 / span 2;
 }
 
-.fieldOneBox, .fieldTwoBox, .fieldThreeBox {
+.fieldOneBox,
+.fieldTwoBox,
+.fieldThreeBox {
     background-color: #ffffff10;
     border-radius: 8px;
     padding: 8px;
@@ -80,9 +82,23 @@
     margin-right: 10%;
 }
 
-.titleTextOne:hover, .titleTextTwo:hover, .titleTextThree:hover {
+.titleTextOne:hover,
+.titleTextTwo:hover,
+.titleTextThree:hover {
     color: #007BFF;
     background-color: #e0f7fa00;
     cursor: pointer;
-    
+
 }
+
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 640px) {}
+
+@media (max-width: 475px) {}

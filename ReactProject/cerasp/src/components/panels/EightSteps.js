@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/SixSteps.css";
+import "./css/EightSteps.css";
 
-const SixSteps = ({
+const EightSteps = ({
   topRowContent,
   row1Content1,
   row1Content2,
@@ -13,7 +13,7 @@ const SixSteps = ({
   row2Content8
 }) => {
   return (
-    <div className="three-column-panel">
+    <div className="eight-steps-panel">
       <div className="top-row">{topRowContent}</div>
       <div className="row1con1">{row1Content1}</div>
       <div className="row1con2">{row1Content2}</div>
@@ -27,4 +27,4 @@ const SixSteps = ({
   );
 };
 
-export default SixSteps;
+export default EightSteps;
