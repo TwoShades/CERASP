@@ -64,7 +64,7 @@ const Navigation = () => {
                       }
                       style={{ cursor: "pointer", margin: "5px 0" }}
                     >
-                      {subPage.replace("-", " ")}
+                      {subPage.replaceAll("-", " ")}
                     </li>
                   ))}
                 </div>
