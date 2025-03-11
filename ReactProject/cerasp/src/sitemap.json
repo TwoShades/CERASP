@@ -2,6 +2,7 @@
   "pages": [
     {
       "title": "about",
+      "nav-title": "About Us",
       "sub-pages": [
         "overview",
         "facilities",
@@ -12,6 +13,7 @@
     },
     {
       "title": "expertises",
+      "nav-title": "Expertises & Solutions",
       "sub-pages": [
         "overview",
         "gmp-expertise-&-biomanufacturing",
@@ -24,6 +26,50 @@
         "bioinformatics",
         "numeric-health",
         "help-access-funding"
+      ]
+    },
+    {
+      "title": "sector-of-activities",
+      "nav-title": "Sector of Activities",
+      "sub-pages": [
+        "overview",
+        "preformulation",
+        "formulation",
+        "research-&-tech-support",
+        "ref-aff-activities",
+        "prototyping",
+        "pharmaceutical",
+        "chemistry-&-extraction",
+        "r&d-scale-up",
+        "protein-synthesis",
+        "feasibility-&-tech-trans",
+        "training-program",
+        "support"
+      ]
+    },
+    {
+      "title": "projects",
+      "nav-title": "Our Projects",
+      "sub-pages": [
+        "project-1",
+        "project-2",
+        "project-3",
+        "project-4",
+        "project-5",
+        "project-6",
+        "project-7"
+      ]
+    },
+    {
+      "title": "news",
+      "nav-title": "News",
+      "sub-pages": [
+        "overview",
+        "equipment-updates",
+        "new-grants",
+        "blogs-&-white-papers",
+        "webinars",
+        "events"
       ]
     }
   ]
