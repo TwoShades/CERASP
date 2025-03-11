@@ -1,28 +1,29 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const useScrollToPanel = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if we have a 'scrollTo' state in location
     if (location.state?.scrollTo) {
       scrollToPanel(location.state.scrollTo);
+
+      // Uncomment so that "back" just returns to 'top' of previous page.
+      // navigate(location.pathname, { replace: true });
     }
-  }, [location]); // Only re-run the effect when location changes
+  }, [location, navigate]); // Runs only when location changes
 
   const scrollToPanel = (id) => {
-    // Wait for 200ms before scrolling to allow page rendering
     setTimeout(() => {
       const panel = document.getElementById(id);
       if (panel) {
-        // Smoothly scroll to the panel
         panel.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }, 200);
   };
 
-  return scrollToPanel; // Return scrollToPanel to allow external usage if needed
+  return scrollToPanel;
 };
 
 export default useScrollToPanel;
