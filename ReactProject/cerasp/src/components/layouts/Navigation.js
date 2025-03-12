@@ -62,7 +62,7 @@ const Navigation = () => {
                       onClick={() =>
                         handleNavigateToSection(subPage, `/${title}`)
                       }
-                      style={{ cursor: "pointer", margin: "5px 0" }}
+                      style={{ cursor: "pointer" }}
                     >
                       {subPage.replaceAll("-", " ")}
                     </li>

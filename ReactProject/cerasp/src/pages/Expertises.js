@@ -157,15 +157,30 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
-      <EightSteps 
+      <ScrollPanel
+        colorTheme="themeA"
+        className="scroll-panel"
+        title="expertises"
+        id="applied-research"
+      >
+        <EightSteps
           topRowContent={<h2>Applied Research</h2>}
-          row1Content1={<div className="step-content">Step 1: Research Topic</div>}
-          row1Content2={<div className="step-content">Step 2: Literature Review</div>}
+          row1Content1={
+            <div className="step-content">Step 1: Research Topic</div>
+          }
+          row1Content2={
+            <div className="step-content">Step 2: Literature Review</div>
+          }
           row1Content3={<div className="step-content">Step 3: Hypothesis</div>}
-          row1Content4={<div className="step-content">Step 4: Experiment Design</div>}
-          row2Content5={<div className="step-content">Step 5: Data Collection</div>}
-          row2Content6={<div className="step-content">Step 6: Data Analysis</div>}
+          row1Content4={
+            <div className="step-content">Step 4: Experiment Design</div>
+          }
+          row2Content5={
+            <div className="step-content">Step 5: Data Collection</div>
+          }
+          row2Content6={
+            <div className="step-content">Step 6: Data Analysis</div>
+          }
           row2Content7={<div className="step-content">Step 7: Conclusion</div>}
           row2Content8={<div className="step-content">Step 8: Publication</div>}
         />
