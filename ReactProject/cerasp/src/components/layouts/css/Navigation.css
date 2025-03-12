@@ -84,6 +84,8 @@
 
 .dropdown li:last-child {
   border: none;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
 }
 
 .dropdown li:hover {
