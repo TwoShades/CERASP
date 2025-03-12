@@ -2,105 +2,97 @@ import "./css/Sectors.css";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
+import useScrollToPanel from "../hooks/useScrollToPanel.js";
 
 const Projects = () => {
+  useScrollToPanel();
 
   return (
-    <div className="sectors scroll-container">
-
-        {/*   ===================
+    <div className="scroll-container">
+      {/*   ===================
               =====OVERVIEW======
               ===================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project">
         <p>OVERVIEW</p>
-
       </ScrollPanel>
 
-        {/*   ====================
+      {/*   ====================
               =====PROJECT 1======
               ====================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project-1">
         <p>PROJECT 1</p>
-        
       </ScrollPanel>
 
-        {/*   ====================
+      {/*   ====================
               =====PROJECT 2======
               ====================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project-2">
         <p>PROJECT 2</p>
-        
       </ScrollPanel>
 
-        {/*   ==========================
+      {/*   ==========================
               =======PROJECT 3==========
               ==========================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project-3">
         <p>PROJECT 3</p>
-        
       </ScrollPanel>
 
-        {/*   ======================
+      {/*   ======================
               ======PROJECT 4=======
               ======================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project-4">
         <p>PROJECT 4</p>
-        
       </ScrollPanel>
 
-        {/*   ======================
+      {/*   ======================
               ======PROJECT 5=======
               ======================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project-5">
         <p>PROJECT 5</p>
-        
       </ScrollPanel>
 
-        {/*   =========================
+      {/*   =========================
               ========PROJECT 6========
               =========================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project-6">
         <p>PROJECT 6</p>
-        
       </ScrollPanel>
 
-        {/*   =================================
+      {/*   =================================
               =============PROJECT 7===========
               =================================
         */}
 
-      <ScrollPanel colorTheme="themeB" className="scroll-panel">
+      <ScrollPanel title="projects" id="project-7">
         <p>PROJECT 7</p>
-        
       </ScrollPanel>
 
-        {/*   =======================
+      {/*   =======================
               =====CONTACT FORM======
               =======================
         */}
 
-      <ScrollPanel colorTheme="themeA" className="scroll-panel">
+      <ScrollPanel title="projects" id="">
         <ContactUsForm />
-        
       </ScrollPanel>
 
       <Footer />
     </div>
-    );
+  );
 };
 
 export default Projects;

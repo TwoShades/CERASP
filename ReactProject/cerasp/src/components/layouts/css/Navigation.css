@@ -1,69 +1,94 @@
-/* General Navbar Styling */
 .nav {
-  position: relative;
-}
-
-.nav-item {
-  position: relative;
+  display: flex;
+  height: 100%;
 }
 
 .nav-list {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  margin-right: 0;
+  min-width: 200px;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+
+.nav-item a {
+  font-weight: 350;
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(62, 75, 102);
 }
 
 .nav-list li {
   display: inline-block;
-  margin-right: 20px;
+  padding-top: 35px;
 }
 
-.nav-item a {
-  font-weight: 300;
-  font-size: 20px; /* Ensure consistent font size */
-  color: #000; /* Ensure color stays black */
-  text-decoration: none; /* Remove default underline */
-}
-
-/* Reset visited link behavior */
-.nav-item a:visited {
-  color: #000; /* Ensure the visited link doesn't turn purple */
-}
-
-/* Remove underline and style on hover */
-.nav-item a:hover {
-  /* Optional: underline on hover */
-  color: #4e4e4e; /* Optional: Keep the same color on hover */
-}
-
-/* Dropdown Styles */
-.dropdown {
-  display: none; /* Hide by default */
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  z-index: 1000;
-}
-
-.nav-item:hover .dropdown {
-  display: block; /* Show on hover */
-}
-
-.dropdown li {
-  list-style-type: none;
-  padding: 5px 0;
-}
-
-.dropdown li:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
+.nav-item:hover {
+  z-index: 10;
+  background-color: rgba(163, 207, 248, 0.349);
+  box-shadow: -1px 0px 3px 0px rgb(112, 140, 177),
+    1px 0px 3px 0px rgb(112, 140, 177);
 }
 
 .nav-item:hover a {
-  text-decoration: bold; /* Optional: underline text on hover */
+  color: #498cca;
+}
+
+.dropdown {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 0px 3px 0px rgb(112, 140, 177),
+    1px 0px 3px 0px rgb(112, 140, 177), 0px 1px 3px 0px rgb(78, 99, 126);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.dropdown ul {
+  padding: 0;
+}
+
+.dropdown li {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  color: rgb(21, 47, 82);
+  border-bottom: 1px solid rgb(112, 140, 177);
+  box-shadow: 0 3px 4px 0px rgba(52, 181, 255, 0.226);
+  line-height: 1.5; /* Remove extra line height between items */
+  text-align: left;
+}
+
+.dropdown li:first-child {
+  border-top: 1px solid rgb(112, 140, 177);
+}
+
+.dropdown li:last-child {
+  border: none;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+
+.dropdown li:hover {
+  /* background-color: #f1ff85; */
+  /* background-color: #a7ffba; */
+  /* background-color: #ebb7ff; */
+  background-color: #afd2ff;
+  cursor: pointer;
 }
 
 /* Mobile Styling */
@@ -124,11 +149,14 @@
   }
 }
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+}
 
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+}
 
-@media (max-width: 475px) {}
+@media (max-width: 475px) {
+}
 
-/* Media Query for mobile */
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+}
