@@ -4,11 +4,12 @@ import Employee from "../components/uicomponents/Employee.js";
 import Footer from "../components/layouts/Footer.js";
 import ScrollPanel from "../components/layouts/ScrollPanel";
 import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
+import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
 import SideBySidePanel from "../components/panels/SideBySidePanel";
 import StockImageFetch from "../components/placeholders/StockImageFetch";
-import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
+import ThreeColumnWithHeaderPanel from "../components/panels/ThreeColumnWithHeaderPanel.js";
 
 const About = () => {
   const [team, setTeam] = useState([]);
@@ -37,77 +38,8 @@ const About = () => {
       <div className="about scroll-container">
         {/* OVERVIEW */}
         <ScrollPanel colorTheme="themeA" title="about" id="overview">
-          <SideBySidePanel
-            leftContent={
-              <StockImageFetch
-                searchTerm="microscope"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={4}
-              />
-            }
-            rightContent={
-              <div>
-                <h2>Welcome to CERASP</h2>
-                <p>
-                  CERASP is a Technology Transfer Center (TTCC) in the
-                  pharmaceutical sciences and related industries. We are an
-                  applied research center specialized in supporting SMEs in
-                  their product formulations, prototypes, troubleshooting, and
-                  regulatory affairs (Health Canada partner), as well as in the
-                  development of production processes and protocols. We support
-                  you in preparing for audits and verifications carried out by
-                  Health Canada and the FDA. We are also an academic grant
-                  partner, with many grants reserved for TCCs through government
-                  agencies. Our mandate is to help SMEs commercialize their
-                  products and ensure that the intellectual property remains
-                  entirely in their hands.
-                </p>
-              </div>
-            }
-          />
-        </ScrollPanel>
-
-        {/* FACILITIES */}
-        <ScrollPanel colorTheme="themeA" title="about" id="facilities">
-          <ThreeColumnPanel
-            topRowContent={
-              <>
-                <h1>Facilities</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
-                  vitae enim ut.
-                </p>
-              </>
-            }
-            col1Content={
-              <StockImageFetch
-                searchTerm="microscope"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            col2Content={
-              <StockImageFetch
-                searchTerm="petri"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
-            col3Content={
-              <StockImageFetch
-                searchTerm="bubble"
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            }
+          <ThreeColumnWithHeaderPanel
+            headerContent={<h1>History of Cerasp</h1>}
           />
         </ScrollPanel>
 
@@ -116,7 +48,7 @@ const About = () => {
           <div className="team-section">
             <h2>Team</h2>
             <EmblaCarousel
-              slides={team}
+              slides={[...team, ...team]}
               options={options}
               renderSlide={(member) => (
                 <Employee key={member.id} member={member} />
@@ -126,14 +58,14 @@ const About = () => {
         </ScrollPanel>
 
         {/* FACILITIES */}
-        <ScrollPanel colorTheme="themeA" title="about" id="facilities">
+        <ScrollPanel title="about" id="facilities">
           <div className="facilities-section">
-            <h2>Facilities</h2>
-            <StockImageFetch
-              searchTerm="microscope"
-              orientation="landscape"
-              page={1}
-              perPage={4}
+            <EmblaSinglePanel
+              slides={team}
+              options={options}
+              renderSlide={(member) => (
+                <Employee key={member.id} member={member} />
+              )}
             />
           </div>
         </ScrollPanel>
