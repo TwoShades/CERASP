@@ -8,7 +8,7 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
-import EightSteps from "../components/panels/EightSteps.js";
+import FiveSteps from "../components/panels/FiveSteps.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 
 const Expertises = () => {
@@ -163,26 +163,17 @@ const Expertises = () => {
         title="expertises"
         id="applied-research"
       >
-        <EightSteps
+        <FiveSteps
           topRowContent={<h2>Applied Research</h2>}
-          row1Content1={
-            <div className="step-content">Step 1: Research Topic</div>
+          step1={<div className="step1">Step 1: Formulate</div>
           }
-          row1Content2={
-            <div className="step-content">Step 2: Literature Review</div>
+          step2={<div className="step2">Step 2: Support</div>
           }
-          row1Content3={<div className="step-content">Step 3: Hypothesis</div>}
-          row1Content4={
-            <div className="step-content">Step 4: Experiment Design</div>
+          step3={<div className="step3">Step 3: Transfer</div>}
+          step4={<div className="step4">Step 4: Select</div>
           }
-          row2Content5={
-            <div className="step-content">Step 5: Data Collection</div>
+          step5={<div className="step5">Step 5: Develop</div>
           }
-          row2Content6={
-            <div className="step-content">Step 6: Data Analysis</div>
-          }
-          row2Content7={<div className="step-content">Step 7: Conclusion</div>}
-          row2Content8={<div className="step-content">Step 8: Publication</div>}
         />
       </ScrollPanel>
 

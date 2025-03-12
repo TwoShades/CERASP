@@ -1,0 +1,95 @@
+.grid-layout {
+  height: 92%;
+  width: 95%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px; /* Added gap between steps */
+  margin: 0 auto;
+}
+
+.top-row {
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 1;
+  background-color: #975555;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.step {
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.step1 {
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 3;
+  background-color: #ff7f7f;
+}
+
+.step2 {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 3;
+  background-color: #ffbf7f;
+}
+
+.step3 {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 3;
+  background-color: #ffff7f;
+}
+
+.step4 {
+  grid-column: 4 / span 1;
+  grid-row: 2 / span 3;
+  background-color: #bfff7f;
+}
+
+.step5 {
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 3;
+  background-color: #7fff7f;
+}
+
+@media (max-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .step {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  .step {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 1536px) {}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 475px) {}
