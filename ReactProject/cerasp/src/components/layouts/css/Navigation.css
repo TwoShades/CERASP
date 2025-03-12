@@ -84,10 +84,11 @@
 }
 
 .dropdown li:hover {
+  background-color: #ffb300a9;
   /* background-color: #f1ff85; */
   /* background-color: #a7ffba; */
   /* background-color: #ebb7ff; */
-  background-color: #afd2ff;
+  /* background-color: #afd2ff; */
   cursor: pointer;
 }
 
