@@ -57,6 +57,7 @@ const About = () => {
           </div>
         </ScrollPanel>
 
+
         {/* FACILITIES */}
         <ScrollPanel title="about" id="facilities">
           <div className="facilities-section">
@@ -68,6 +69,13 @@ const About = () => {
               )}
             />
           </div>
+
+        {/* EQUIPMENTS */}
+        <ScrollPanel colorTheme="themeB" title="about" id="equipments">
+              <div className="equipments-section">
+                <p>Equipments</p>
+              </div>
+
         </ScrollPanel>
 
         {/* PARTNERS */}
