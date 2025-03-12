@@ -7,7 +7,7 @@ import sitemap from "../../sitemap.json";
 const Navigation = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(false);
 
@@ -17,10 +17,10 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+      if (window.innerWidth > 1024) {
         setMenuOpen(false);
       }
-      setIsMobile(window.innerWidth < 1024);
+      setIsMobile(window.innerWidth < 1025);
     };
 
     window.addEventListener("resize", handleResize);
@@ -56,17 +56,19 @@ const Navigation = () => {
 
               {hoveredMenu === title && !isMobile && (
                 <div className="dropdown">
-                  {subPages.map((subPage) => (
-                    <li
-                      key={subPage}
-                      onClick={() =>
-                        handleNavigateToSection(subPage, `/${title}`)
-                      }
-                      style={{ cursor: "pointer" }}
-                    >
-                      {subPage.replaceAll("-", " ")}
-                    </li>
-                  ))}
+                  <ul>
+                    {subPages.map((subPage) => (
+                      <li
+                        key={subPage}
+                        onClick={() =>
+                          handleNavigateToSection(subPage, `/${title}`)
+                        }
+                        style={{ cursor: "pointer" }}
+                      >
+                        {subPage.replaceAll("-", " ").toUpperCase()}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               )}
             </li>

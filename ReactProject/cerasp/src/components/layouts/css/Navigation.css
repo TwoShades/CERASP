@@ -8,24 +8,23 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
 }
 
 .nav-item {
   background-color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  padding: 20px;
   margin-right: 0;
   width: 200px;
   text-align: center;
   display: flex;
-  position: relative; /* Ensure dropdown is positioned correctly */
+  position: relative;
 }
 
 .nav-item a {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 20px;
   text-decoration: none;
-  color: rgb(61, 61, 61);
+  color: rgb(62, 75, 102);
   display: block;
 }
 
@@ -36,49 +35,62 @@
 }
 
 .nav-item:hover {
-  background-color: rgba(129, 194, 255, 0.349);
+  z-index: 10;
+  background-color: rgba(163, 207, 248, 0.349);
+  box-shadow: -1px 0px 3px 0px rgb(112, 140, 177),
+    1px 0px 3px 0px rgb(112, 140, 177);
 }
 
 .nav-item:hover a {
-  color: #105fa8;
+  color: #498cca;
 }
 
-.nav-item:hover .dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
 .dropdown {
   position: absolute;
   width: 100%;
   top: 100%;
   left: 0;
   background-color: rgb(255, 255, 255);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 0.3s ease-in;
-  transform: translateY(-10px);
+  box-shadow: -1px 0px 3px 0px rgb(112, 140, 177),
+    1px 0px 3px 0px rgb(112, 140, 177), 0px 1px 3px 0px rgb(78, 99, 126);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
   box-sizing: border-box;
-  padding: 0; /* Ensure no padding around the div */
+  padding: 0;
+}
+
+.dropdown ul {
+  padding: 0;
 }
 
 .dropdown li {
   margin: 0;
   padding-top: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 16px;
   width: 100%;
   box-sizing: border-box;
-  border-bottom: 1px solid rgba(82, 200, 255, 0.637);
-  box-shadow: 0 3px 4px 0px rgba(0, 162, 255, 0.226);
+  color: rgb(21, 47, 82);
+  border-bottom: 1px solid rgb(112, 140, 177);
+  box-shadow: 0 3px 4px 0px rgba(52, 181, 255, 0.226);
   line-height: 1; /* Remove extra line height between items */
+  text-align: left;
 }
 
 .dropdown li:first-child {
-  border-top: 1px solid rgb(37, 37, 37);
+  border-top: 1px solid rgb(112, 140, 177);
+}
+
+.dropdown li:last-child {
+  border: none;
 }
 
 .dropdown li:hover {
-  background-color: #c4f0ff;
+  /* background-color: #f1ff85; */
+  /* background-color: #a7ffba; */
+  /* background-color: #ebb7ff; */
+  background-color: #afd2ff;
   cursor: pointer;
 }
 

@@ -74,7 +74,7 @@ const About = () => {
           <ThreeColumnPanel
             topRowContent={
               <>
-                <h1>Expertise & Solution</h1>
+                <h1>Facilities</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
                   vitae enim ut.
