@@ -12,26 +12,24 @@
 
 .nav-item {
   background-color: rgb(255, 255, 255);
-  padding: 20px;
+  padding: 30px;
   margin-right: 0;
-  width: 200px;
+  min-width: 200px;
   text-align: center;
   display: flex;
   position: relative;
 }
 
 .nav-item a {
-  font-weight: 400;
+  font-weight: 350;
   font-size: 20px;
   text-decoration: none;
   color: rgb(62, 75, 102);
-  display: block;
 }
 
 .nav-list li {
   display: inline-block;
   padding-top: 35px;
-  position: relative;
 }
 
 .nav-item:hover {
@@ -65,16 +63,13 @@
 
 .dropdown li {
   margin: 0;
-  padding-top: 16px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 16px;
+  padding: 15px;
   width: 100%;
   box-sizing: border-box;
   color: rgb(21, 47, 82);
   border-bottom: 1px solid rgb(112, 140, 177);
   box-shadow: 0 3px 4px 0px rgba(52, 181, 255, 0.226);
-  line-height: 1; /* Remove extra line height between items */
+  line-height: 1.5; /* Remove extra line height between items */
   text-align: left;
 }
 
