@@ -8,7 +8,7 @@ const ThreeColumnWithHeaderPanel = ({
   col3Content,
 }) => {
   return (
-    <div className="grid-layout">
+    <div className="three-col-header-grid-layout">
       <div className="header-row">{headerContent}</div>
       <div className="left-column">{col1Content}</div>
       <div className="center-column">{col2Content}</div>

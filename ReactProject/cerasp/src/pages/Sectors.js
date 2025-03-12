@@ -15,12 +15,7 @@ const Sectors = () => {
               ===================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="overview"
-      >
+      <ScrollPanel title="sector-of-activities" id="overview">
         <TextPanelOneImage
           leftContent={
             <>
@@ -47,12 +42,7 @@ const Sectors = () => {
               =========================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="preformulation"
-      >
+      <ScrollPanel title="sector-of-activities" id="preformulation">
         <p>PREFORMULATION</p>
       </ScrollPanel>
 
@@ -61,12 +51,7 @@ const Sectors = () => {
               ======================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="formulation"
-      >
+      <ScrollPanel title="sector-of-activities" id="formulation">
         <p>FORMULATION</p>
       </ScrollPanel>
 
@@ -75,12 +60,7 @@ const Sectors = () => {
               ==========================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="research-&-tech-support"
-      >
+      <ScrollPanel title="sector-of-activities" id="research-&-tech-support">
         <p>RESEARCH & TECH SUPPORT</p>
       </ScrollPanel>
 
@@ -89,12 +69,7 @@ const Sectors = () => {
               ======================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="ref-aff-activities"
-      >
+      <ScrollPanel title="sector-of-activities" id="ref-aff-activities">
         <p>REF AFF ACTIVITIES</p>
       </ScrollPanel>
 
@@ -103,12 +78,7 @@ const Sectors = () => {
               ======================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="prototyping"
-      >
+      <ScrollPanel title="sector-of-activities" id="prototyping">
         <p>PROTOTYPING</p>
       </ScrollPanel>
 
@@ -117,12 +87,7 @@ const Sectors = () => {
               =========================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="pharmaceutical"
-      >
+      <ScrollPanel title="sector-of-activities" id="pharmaceutical">
         <p>PHARMACEUTICAL</p>
       </ScrollPanel>
 
@@ -131,12 +96,7 @@ const Sectors = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="chemistry-&-extraction"
-      >
+      <ScrollPanel title="sector-of-activities" id="chemistry-&-extraction">
         <p>CHEMISTRY & EXTRACTION</p>
       </ScrollPanel>
 
@@ -145,12 +105,7 @@ const Sectors = () => {
               =======================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="r&d-scale-up"
-      >
+      <ScrollPanel title="sector-of-activities" id="r&d-scale-up">
         <p>R&D SCALE UP</p>
       </ScrollPanel>
 
@@ -159,12 +114,7 @@ const Sectors = () => {
               ============================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="protein-synthesis"
-      >
+      <ScrollPanel title="sector-of-activities" id="protein-synthesis">
         <p>PROTEIN SYNTHESIS</p>
       </ScrollPanel>
 
@@ -173,12 +123,7 @@ const Sectors = () => {
               ===================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="feasibility-&-tech-trans"
-      >
+      <ScrollPanel title="sector-of-activities" id="feasibility-&-tech-trans">
         <p>FEASIBILITY & TECH TRAN</p>
       </ScrollPanel>
 
@@ -187,12 +132,7 @@ const Sectors = () => {
               ===========================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="training-program"
-      >
+      <ScrollPanel title="sector-of-activities" id="training-program">
         <p>TRAINING PROGRAM</p>
       </ScrollPanel>
 
@@ -201,12 +141,7 @@ const Sectors = () => {
               ===================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id="support"
-      >
+      <ScrollPanel title="sector-of-activities" id="support">
         <p>SUPPORT</p>
       </ScrollPanel>
 
@@ -215,12 +150,7 @@ const Sectors = () => {
               =======================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="sector-of-activities"
-        id=""
-      >
+      <ScrollPanel title="sector-of-activities" id="">
         <ContactUsForm />
       </ScrollPanel>
 

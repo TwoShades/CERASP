@@ -43,8 +43,28 @@ const About = () => {
           />
         </ScrollPanel>
 
+        {/* FACILITIES */}
+        <ScrollPanel title="about" id="facilities">
+          <div className="facilities-section">
+            <EmblaSinglePanel
+              slides={team}
+              options={options}
+              renderSlide={(member) => (
+                <Employee key={member.id} member={member} />
+              )}
+            />
+          </div>
+        </ScrollPanel>
+
+        {/* EQUIPMENTS */}
+        <ScrollPanel title="about" id="equipments">
+          <div className="equipments-section">
+            <p>Equipments</p>
+          </div>
+        </ScrollPanel>
+
         {/* OUR TEAM */}
-        <ScrollPanel colorTheme="themeA" title="about" id="our-team">
+        <ScrollPanel title="about" id="our-team">
           <div className="team-section">
             <h2>Team</h2>
             <EmblaCarousel
@@ -57,36 +77,22 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-
-        {/* FACILITIES */}
-        <ScrollPanel title="about" id="facilities">
-          <div className="facilities-section">
-            <EmblaSinglePanel
-              slides={team}
-              options={options}
-              renderSlide={(member) => (
-                <Employee key={member.id} member={member} />
-              )}
-            />
+        {/* BOARD */}
+        <ScrollPanel title="about" id="board">
+          <div>
+            <h1>hello board..</h1>
           </div>
-
-        {/* EQUIPMENTS */}
-        <ScrollPanel colorTheme="themeB" title="about" id="equipments">
-              <div className="equipments-section">
-                <p>Equipments</p>
-              </div>
-
         </ScrollPanel>
 
         {/* PARTNERS */}
-        <ScrollPanel colorTheme="themeB" title="about" id="partners">
+        <ScrollPanel title="about" id="partners">
           <div>
             <h1>hello</h1>
           </div>
         </ScrollPanel>
 
         {/* CERASP VIDEOS */}
-        <ScrollPanel colorTheme="themeA" title="about" id="cerasp-videos">
+        <ScrollPanel title="about" id="cerasp-videos">
           <SideBySidePanel
             leftContent={
               <StockImageFetch
@@ -106,7 +112,7 @@ const About = () => {
         </ScrollPanel>
 
         {/* PRIVACY POLICY */}
-        <ScrollPanel colorTheme="themeA" title="about" id="">
+        <ScrollPanel title="about" id="">
           <h2>Privacy policy</h2>
         </ScrollPanel>
 

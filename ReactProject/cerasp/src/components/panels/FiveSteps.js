@@ -1,16 +1,9 @@
 import React from "react";
 import "./css/FiveSteps.css";
 
-const FiveSteps = ({
-  topRowContent,
-  step1,
-  step2,
-  step3,
-  step4,
-  step5,
-}) => {
+const FiveSteps = ({ topRowContent, step1, step2, step3, step4, step5 }) => {
   return (
-    <div className="grid-layout">
+    <div className="five-steps-grid-layout">
       <div className="top-row">{topRowContent}</div>
       <div className="step1">{step1}</div>
       <div className="step2">{step2}</div>

@@ -20,7 +20,7 @@ const Expertises = () => {
               ===================
         */}
 
-      <ScrollPanel colorTheme="themeA" title="expertises" id="overview">
+      <ScrollPanel title="expertises" id="overview">
         <ThreeColumnPanel
           topRowContent={
             <>
@@ -66,11 +66,7 @@ const Expertises = () => {
               ===================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        title="expertises"
-        id="gmp-expertise-&-biomanufacturing"
-      >
+      <ScrollPanel title="expertises" id="gmp-expertise-&-biomanufacturing">
         <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
@@ -96,11 +92,7 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeC"
-        title="expertises"
-        id="formulation-of-pharmaceuticals"
-      >
+      <ScrollPanel title="expertises" id="formulation-of-pharmaceuticals">
         <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
@@ -118,12 +110,7 @@ const Expertises = () => {
               =====================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="animal-health"
-      >
+      <ScrollPanel title="expertises" id="animal-health">
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
           leftText={
@@ -157,23 +144,14 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="applied-research"
-      >
+      <ScrollPanel title="expertises" id="applied-research">
         <FiveSteps
           topRowContent={<h2>Applied Research</h2>}
-          step1={<div className="step1">Step 1: Formulate</div>
-          }
-          step2={<div className="step2">Step 2: Support</div>
-          }
+          step1={<div className="step1">Step 1: Formulate</div>}
+          step2={<div className="step2">Step 2: Support</div>}
           step3={<div className="step3">Step 3: Transfer</div>}
-          step4={<div className="step4">Step 4: Select</div>
-          }
-          step5={<div className="step5">Step 5: Develop</div>
-          }
+          step4={<div className="step4">Step 4: Select</div>}
+          step5={<div className="step5">Step 5: Develop</div>}
         />
       </ScrollPanel>
 
@@ -182,12 +160,7 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="troubleshooting"
-      >
+      <ScrollPanel title="expertises" id="troubleshooting">
         <p>Troubleshooting</p>
       </ScrollPanel>
 
@@ -196,12 +169,7 @@ const Expertises = () => {
               ===============================
         */}
 
-      <ScrollPanel
-        colorTheme="themeB"
-        className="scroll-panel"
-        title="expertises"
-        id="health-canada-partner"
-      >
+      <ScrollPanel title="expertises" id="health-canada-partner">
         <TextPanelOneImage
           leftContent={
             <>
@@ -228,12 +196,7 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="technical-training"
-      >
+      <ScrollPanel title="expertises" id="technical-training">
         <p>Technical Training</p>
       </ScrollPanel>
 
@@ -242,12 +205,7 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="bioinformatics"
-      >
+      <ScrollPanel title="expertises" id="bioinformatics">
         <p>Bioinformatics</p>
       </ScrollPanel>
 
@@ -256,12 +214,7 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="numeric-health"
-      >
+      <ScrollPanel title="expertises" id="numeric-health">
         <p>Numeric Health</p>
       </ScrollPanel>
 
@@ -270,12 +223,7 @@ const Expertises = () => {
               =================================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="help-access-funding"
-      >
+      <ScrollPanel title="expertises" id="help-access-funding">
         <p>Help Access Funding</p>
       </ScrollPanel>
 
@@ -284,12 +232,7 @@ const Expertises = () => {
               ======================
         */}
 
-      <ScrollPanel
-        colorTheme="themeA"
-        className="scroll-panel"
-        title="expertises"
-        id="overview"
-      >
+      <ScrollPanel title="expertises" id="overview">
         <ContactUsForm />
       </ScrollPanel>
 

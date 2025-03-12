@@ -20,6 +20,7 @@ function App() {
     <>
       <Header />
       <main className={`main-content app ${theme}`} ref={mainRef}>
+        {/* <div className="test-button">HELLO</div> */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
