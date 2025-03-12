@@ -125,17 +125,11 @@ const About = () => {
           </div>
         </ScrollPanel>
 
-        {/* FACILITIES */}
-        <ScrollPanel colorTheme="themeA" title="about" id="facilities">
-          <div className="facilities-section">
-            <h2>Facilities</h2>
-            <StockImageFetch
-              searchTerm="microscope"
-              orientation="landscape"
-              page={1}
-              perPage={4}
-            />
-          </div>
+        {/* EQUIPMENTS */}
+        <ScrollPanel colorTheme="themeB" title="about" id="equipments">
+              <div className="equipments-section">
+                <p>Equipments</p>
+              </div>
         </ScrollPanel>
 
         {/* PARTNERS */}
