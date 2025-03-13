@@ -10,6 +10,7 @@ import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
 import FiveSteps from "../components/panels/FiveSteps.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import OneBigPanel from "../components/panels/OneBigPanel.js";
 
 const Expertises = () => {
   useScrollToPanel();
@@ -161,7 +162,11 @@ const Expertises = () => {
         */}
 
       <ScrollPanel title="expertises" id="troubleshooting">
-        <p>Troubleshooting</p>
+        <OneBigPanel
+          title="Troubleshooting"
+          mainText="Lorem ipsum dolor sit amet consectetur. Molestie ac viverra vitae enim ut."
+          image={<div className="image-placeholder"></div>}
+        />
       </ScrollPanel>
 
       {/*   ===============================
