@@ -3,7 +3,7 @@
   width: 95%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   gap: 20px; /* Added gap between steps */
   margin: 0 auto;
 }
@@ -11,8 +11,7 @@
 .top-row {
   grid-column: 1 / span 5;
   grid-row: 1 / span 1;
-  background-color: #975555;
-  color: white;
+  color: #1A1A1A;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,11 +19,24 @@
   font-weight: bold;
 }
 
+.bottom-row {
+  grid-column: 1 / span 5;
+  grid-row: 2 / span 1;
+  align-items: center;
+  justify-content: center;
+}
+
 .step {
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
   border-radius: 8px;
-  text-align: center;
+  text-align: left; /* Changed text alignment to left */
   transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .step:hover {
@@ -32,38 +44,65 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.step .icon {
+  background-color: #4f4f4f;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.step .content {
+  font-family: "Roboto";
+  font-size: 16px;
+  align-items: flex-start;
+  text-align: left;
+  color: #4f4f4f;
+  margin-top: 50px;
+}
+
 .step1 {
   grid-column: 1 / span 1;
-  grid-row: 2 / span 3;
+  grid-row: 5 / span 5;
   background-color: #ff7f7f;
 }
 
 .step2 {
   grid-column: 2 / span 1;
-  grid-row: 2 / span 3;
+  grid-row: 3 / span 7;
   background-color: #ffbf7f;
 }
 
 .step3 {
   grid-column: 3 / span 1;
-  grid-row: 2 / span 3;
+  grid-row: 4 / span 6;
   background-color: #ffff7f;
 }
 
 .step4 {
   grid-column: 4 / span 1;
-  grid-row: 2 / span 3;
+  grid-row: 3 / span 7;
   background-color: #bfff7f;
 }
 
 .step5 {
   grid-column: 5 / span 1;
-  grid-row: 2 / span 3;
+  grid-row: 5 / span 5;
   background-color: #7fff7f;
 }
 
 @media (max-width: 1024px) {
-  .grid-layout {
+  .five-steps-grid-layout {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
@@ -75,7 +114,7 @@
 }
 
 @media (max-width: 640px) {
-  .grid-layout {
+  .five-steps-grid-layout {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 1fr);
   }

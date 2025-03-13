@@ -179,11 +179,8 @@ const Expertises = () => {
                 mauris massa aliquam.
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam
-                diam purus euismod tincidunt morbi. Gravida ut nulla tincidunt
-                mi eu velit pharetra. In consectetur sed aliquam placerat donec
-                convallis feugiat pellentesque. Viverra quis etiam ut nulla
-                senectus neque nulla mi non.
+              Recognized partner of Health Canada for regulatory affairs and audits. As an official 
+              partner of Health Canada, we deliver solutions that meet the highest industry standards. 
               </p>
             </>
           }
