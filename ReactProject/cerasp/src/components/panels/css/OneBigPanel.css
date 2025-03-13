@@ -1,11 +1,11 @@
 /* ========================= */
-/* TEXT PANEL ONE IMAGE */
+/* ONE BIG PANEL             */
 /* ========================= */
 
 .one-big-panel {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     width: 93%;
     height: 93%;
     align-items: center;
@@ -19,7 +19,7 @@
     flex-direction: column;
     justify-content: center;
     padding-right: 40px;
-    text-align: left;
+    text-align: left; 
   }
   
   .text-section h1 {
@@ -44,14 +44,17 @@
   .image-section {
     width: 500px;
     height: 600px;
+
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 6;
     /* Ensures visibility */
     margin-right: 15px;
     background-color: #1271bb;
     border-radius: 20px;
     display: flex;
-    /* Ensures it takes space */
+    /* Ensures it takes space
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   
   

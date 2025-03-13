@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/OneBigPanel.css";
-import { TicketPlus } from "lucide-react";
 
 const OneBigPanel = ({ title, mainText, image, className = "" }) => {
   return (
@@ -13,3 +12,4 @@ const OneBigPanel = ({ title, mainText, image, className = "" }) => {
 };
 
 export default OneBigPanel;
+ 
