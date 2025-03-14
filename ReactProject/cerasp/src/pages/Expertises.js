@@ -10,6 +10,7 @@ import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
 import FiveSteps from "../components/panels/FiveSteps.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import OneBigPanel from "../components/panels/OneBigPanel.js";
 
 const Expertises = () => {
   useScrollToPanel();
@@ -161,7 +162,11 @@ const Expertises = () => {
         */}
 
       <ScrollPanel title="expertises" id="troubleshooting">
-        <p>Troubleshooting</p>
+        <OneBigPanel
+          title="Troubleshooting"
+          mainText="Lorem ipsum dolor sit amet consectetur. Molestie ac viverra vitae enim ut."
+          image={<div className="image-placeholder"></div>}
+        />
       </ScrollPanel>
 
       {/*   ===============================
@@ -179,11 +184,8 @@ const Expertises = () => {
                 mauris massa aliquam.
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam
-                diam purus euismod tincidunt morbi. Gravida ut nulla tincidunt
-                mi eu velit pharetra. In consectetur sed aliquam placerat donec
-                convallis feugiat pellentesque. Viverra quis etiam ut nulla
-                senectus neque nulla mi non.
+              Recognized partner of Health Canada for regulatory affairs and audits. As an official 
+              partner of Health Canada, we deliver solutions that meet the highest industry standards. 
               </p>
             </>
           }

@@ -14,10 +14,7 @@
   z-index: 2;
 }
 
-.scroll-panel p {
-  padding: 10px;
-  text-align: justify;
-}
+
 
 @media (max-width: 1536px) {}
 
