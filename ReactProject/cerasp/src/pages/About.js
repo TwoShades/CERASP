@@ -46,11 +46,24 @@ const About = () => {
         {/* FACILITIES */}
         <ScrollPanel title="about" id="facilities">
           <div className="facilities-section">
+            <h1>Facilities</h1>
             <EmblaSinglePanel
-              slides={team}
+              slides={[
+                "landsapce",
+                "laboratory",
+                "industrial",
+                "windows",
+                "computers",
+              ]}
               options={options}
-              renderSlide={(member) => (
-                <Employee key={member.id} member={member} />
+              renderSlide={(slide) => (
+                <StockImageFetch
+                  searchTerm={slide}
+                  imgSource="large"
+                  orientation="landscape"
+                  page={5}
+                  perPage={1}
+                />
               )}
             />
           </div>
@@ -59,7 +72,21 @@ const About = () => {
         {/* EQUIPMENTS */}
         <ScrollPanel title="about" id="equipments">
           <div className="equipments-section">
-            <p>Equipments</p>
+            <EmblaSinglePanel
+              slides={[
+                "Equipment 1",
+                "Equipment 2",
+                "Equipment 3",
+                "Equipment 4",
+                "Equipment 5",
+              ]}
+              options={options}
+              renderSlide={(slide) => (
+                <div className="temp-test">
+                  <h2>{slide}</h2>
+                </div>
+              )}
+            ></EmblaSinglePanel>
           </div>
         </ScrollPanel>
 

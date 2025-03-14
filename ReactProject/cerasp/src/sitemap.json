@@ -53,6 +53,7 @@
       "title": "projects",
       "nav-title": "Our Projects",
       "sub-pages": [
+        "overview",
         "project-1",
         "project-2",
         "project-3",

@@ -31,10 +31,10 @@
   gap: 20px;
 }
 
-.facilities-section h2 {
+.facilities-section h1 {
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 /* ========================= */
