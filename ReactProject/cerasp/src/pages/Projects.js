@@ -3,6 +3,7 @@ import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import ProjectOverview from "../components/panels/projectpanels/ProjectOverview.js";
 
 const Projects = () => {
   useScrollToPanel();
@@ -14,8 +15,8 @@ const Projects = () => {
               ===================
         */}
 
-      <ScrollPanel title="projects" id="project">
-        <p>OVERVIEW</p>
+      <ScrollPanel title="projects" id="overview">
+        <ProjectOverview />
       </ScrollPanel>
 
       {/*   ====================

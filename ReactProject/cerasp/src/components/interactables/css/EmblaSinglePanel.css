@@ -23,7 +23,7 @@
   margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide-single {
-  background-color: rgb(240, 252, 207);
+  background-color: rgb(170, 255, 182);
   align-items: center;
   justify-content: center;
   display: flex;
