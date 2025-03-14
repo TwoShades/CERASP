@@ -4,6 +4,8 @@ import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import ProjectOverview from "../components/panels/projectpanels/ProjectOverview.js";
+import ProjectPanelA from "../components/panels/projectpanels/ProjectPanelA.js";
+import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 
 const Projects = () => {
   useScrollToPanel();
@@ -25,7 +27,21 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-1">
-        <p>PROJECT 1</p>
+        <ProjectPanelA
+          image={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={2}
+              perPage={1}
+            />
+          }
+          headline={`About the Project`}
+          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham."`}
+        />
       </ScrollPanel>
 
       {/*   ====================
