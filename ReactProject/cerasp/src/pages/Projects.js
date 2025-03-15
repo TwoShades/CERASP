@@ -5,6 +5,7 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import ProjectOverview from "../components/panels/projectpanels/ProjectOverview.js";
 import ProjectPanelA from "../components/panels/projectpanels/ProjectPanelA.js";
+import ProjectPanelB from "../components/panels/projectpanels/ProjectPanelB.js";
 import ProjectPanelC from "../components/panels/projectpanels/ProjectPanelC.js";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 
@@ -51,7 +52,40 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-2">
-        <p>PROJECT 2</p>
+        <ProjectPanelB
+          topImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={2}
+              perPage={1}
+            />
+          }
+          title={"Project B"}
+          quote={"Lorem Ipsum a quote here"}
+          bottomLeftImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={6}
+              perPage={1}
+            />
+          }
+          bottomCenterImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={5}
+              perPage={1}
+            />
+          }
+          headline={`This is a headline about this upcoming project.  
+            It will give a brief overview of the project. 
+             Visitors can click to read more if there is a PDF provided.`}
+        />
       </ScrollPanel>
 
       {/*   ==========================

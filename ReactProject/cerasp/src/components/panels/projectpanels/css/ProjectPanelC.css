@@ -1,8 +1,8 @@
 .project-panel-c-grid-layout {
   margin-top: 50px;
   display: grid;
-  height: 90%;
-  width: 80%;
+  height: 80%;
+  width: 70%;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
