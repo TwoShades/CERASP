@@ -5,6 +5,7 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import ProjectOverview from "../components/panels/projectpanels/ProjectOverview.js";
 import ProjectPanelA from "../components/panels/projectpanels/ProjectPanelA.js";
+import ProjectPanelC from "../components/panels/projectpanels/ProjectPanelC.js";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 
 const Projects = () => {
@@ -59,7 +60,32 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-3">
-        <p>PROJECT 3</p>
+        <ProjectPanelC
+          middleImage={
+            <StockImageFetch
+              searchTerm={"montreal"}
+              imgSource="original"
+              orientation="landscape"
+              page={3}
+              perPage={1}
+            />
+          }
+          bottomLeftImage={
+            <StockImageFetch
+              searchTerm={"skyline"}
+              imgSource="large"
+              orientation="landscape"
+              page={3}
+              perPage={1}
+            />
+          }
+          headline={`The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"`}
+          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham." "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham."`}
+        />
       </ScrollPanel>
 
       {/*   ======================

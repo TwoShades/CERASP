@@ -1,0 +1,94 @@
+.project-panel-c-grid-layout {
+  margin-top: 50px;
+  display: grid;
+  height: 90%;
+  width: 80%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.top-left-text {
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 4px rgba(200, 200, 200, 0.5);
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+}
+
+.three-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  grid-row: 1 / span 1;
+  grid-column: 2 / span 1;
+}
+
+.circle-left,
+.circle-center,
+.circle-right {
+  width: 33.33%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+.circle-left {
+  background-color: rgb(220, 240, 255);
+  box-shadow: 0px 0px 4px 4px rgba(189, 223, 255, 0.8);
+}
+
+.circle-center {
+  background-color: rgb(140, 190, 250);
+  box-shadow: 0px 0px 4px 4px rgba(100, 170, 255, 0.8);
+}
+
+.circle-right {
+  background-color: rgb(50, 120, 230);
+  box-shadow: 0px 0px 4px 4px rgba(20, 90, 200, 0.8);
+}
+
+.middle-row {
+  border-radius: 20px;
+  background-color: rgb(235, 235, 235);
+  box-shadow: 0px 0px 4px 4px rgba(230, 230, 230, 0.5);
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 2;
+  overflow: hidden;
+}
+
+.middle-row img,
+.bottom-left img {
+  width: 100%; /* Always fill width */
+  height: 100%; /* Stays within .top-panel’s height */
+  object-fit: cover; /* Ensures no stretching */
+}
+
+.bottom-left {
+  border-radius: 20px;
+  background-color: rgb(245, 230, 210);
+  box-shadow: 0px 0px 4px 4px rgba(224, 224, 224, 0.5);
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  overflow: hidden;
+}
+
+.bottom-right-text {
+  box-shadow: 0px 0px 4px 4px rgba(210, 200, 190, 0.5);
+  border-radius: 20px;
+  display: flex;
+  padding: 10%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+  background-color: rgb(255, 245, 235);
+}

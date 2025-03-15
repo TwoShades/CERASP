@@ -1,7 +1,7 @@
 .project-panel-a-grid-layout {
   margin-top: 50px;
   height: 90%;
-  width: 90%;
+  width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
