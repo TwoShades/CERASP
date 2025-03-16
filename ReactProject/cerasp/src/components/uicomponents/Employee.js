@@ -2,7 +2,6 @@ import "./css/Employee.css";
 import ReactMarkdown from "react-markdown";
 
 const Employee = ({ member }) => {
-  // Extract image URL properly
   const imageUrl =
     Array.isArray(member.image) && member.image.length > 0
       ? member.image[0]?.formats?.small?.url || member.image[0]?.url

@@ -68,7 +68,7 @@
 
 .bottom-right-headline {
   border-radius: 20px;
-  background-color: rgb(176, 199, 218);
+  background-color: rgb(234, 248, 255);
   grid-row: 5 / span 3;
   grid-column: 3 / span 1;
   font-size: 20px;

@@ -1,6 +1,6 @@
 .employee-card {
   color: #7e7e7e;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(135deg, rgb(240, 248, 255), rgb(255, 255, 255));
   box-shadow: 3px 3px 4px 2px rgb(179, 202, 216);
   border: 2px solid grey;
   padding: 20px;
@@ -9,14 +9,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50vh;
-  width: 100%;
+  height: 40vh;
+  width: 90%;
   overflow-y: auto;
   /* Enables vertical scrolling */
   scrollbar-width: none;
   /* Firefox */
   -ms-overflow-style: none;
   /* IE and Edge */
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 2px 2px 4px 4px rgb(209, 222, 228);
 }
 
 .employee-card-img {
@@ -64,6 +69,7 @@
 @media (max-width: 1024px) {
   .employee-card {
     width: 90%;
+    height: 500px;
     margin: auto;
   }
 }
