@@ -1,4 +1,3 @@
-// App.js
 import { Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "./contexts/ThemeContext";
@@ -10,17 +9,36 @@ import Sectors from "./pages/Sectors";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
 import useSmoothScroll from "./hooks/useSmoothScroll";
+import useScrollTracker from "./hooks/useScrollTracker";
 import "./App.css";
 
 function App() {
   const mainRef = useSmoothScroll();
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
+  const { scrollRef, scrollProgress } = useScrollTracker();
+
+  // Set the custom property for scroll progress
+  if (scrollRef.current) {
+    scrollRef.current.style.setProperty("--scroll-progress", scrollProgress);
+  }
 
   return (
     <>
       <Header />
-      <main className={`main-content app ${theme}`} ref={mainRef}>
-        {/* <div className="test-button">HELLO</div> */}
+      <main
+        className={`main-content app ${theme} background-gradient`}
+        ref={(el) => {
+          mainRef.current = el;
+          scrollRef.current = el;
+        }}
+      >
+        {/* TEST BLUE SQUARE MOVING BASED ON SCROLL */}
+        {/* <div
+          className="blue-square"
+          style={{
+            transform: `translateX(${scrollProgress * 20}px)`, // Only horizontal movement
+          }}
+        ></div> */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />

@@ -184,8 +184,9 @@ const Expertises = () => {
                 mauris massa aliquam.
               </h1>
               <p>
-              Recognized partner of Health Canada for regulatory affairs and audits. As an official 
-              partner of Health Canada, we deliver solutions that meet the highest industry standards. 
+                Recognized partner of Health Canada for regulatory affairs and
+                audits. As an official partner of Health Canada, we deliver
+                solutions that meet the highest industry standards.
               </p>
             </>
           }

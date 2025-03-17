@@ -6,13 +6,13 @@ import Footer from "../components/layouts/Footer.js";
 import ScrollPanel from "../components/layouts/ScrollPanel";
 import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
 import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
-import SideBySidePanel from "../components/panels/SideBySidePanel";
 import StockImageFetch from "../components/placeholders/StockImageFetch";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import ThreeColumnWithHeaderPanel from "../components/panels/ThreeColumnWithHeaderPanel.js";
 
 const About = () => {
+  useScrollToPanel();
   const [team, setTeam] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -32,10 +32,9 @@ const About = () => {
         setLoading(false);
       });
   }, []);
-  useScrollToPanel();
 
   return (
-    <div>
+    <div className="about scroll-container">
       {/* OVERVIEW */}
       <ScrollPanel colorTheme="themeA" title="about" id="overview">
         <ThreeColumnWithHeaderPanel
