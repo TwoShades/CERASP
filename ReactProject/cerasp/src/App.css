@@ -70,15 +70,15 @@ body {
   transition: background 0.3s ease;
 }
 
-.blue-square {
-  position: fixed; /* Keeps it fixed in the viewport */
-  top: 80px; /* Adjust this value as needed */
+/* .blue-square {
+  position: fixed;
+  top: 80px;
   height: 100%;
   width: 2%;
   z-index: -1;
   background-color: rgba(194, 194, 194, 0.178);
-  transition: transform 0.1s ease-in-out; /* Optional smooth transition */
-}
+  transition: transform 0.1s ease-in-out;
+} */
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {

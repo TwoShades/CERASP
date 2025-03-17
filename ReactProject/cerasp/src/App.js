@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import News from "./pages/News";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 import useScrollTracker from "./hooks/useScrollTracker";
+import BackgroundCircle from "./components/uicomponents/BackgroundCircle";
 import "./App.css";
 
 function App() {
@@ -32,13 +33,11 @@ function App() {
           scrollRef.current = el;
         }}
       >
-        {/* TEST BLUE SQUARE MOVING BASED ON SCROLL */}
-        {/* <div
-          className="blue-square"
-          style={{
-            transform: `translateX(${scrollProgress * 20}px)`, // Only horizontal movement
-          }}
-        ></div> */}
+        <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} />
+        <BackgroundCircle top={10} left={10} scrollProgress={scrollProgress} />
+        <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} />
+        <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} />
+        {/* Move it directly here */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />

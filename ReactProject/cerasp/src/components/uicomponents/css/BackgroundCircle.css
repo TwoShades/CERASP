@@ -1,0 +1,6 @@
+.bg-circle {
+  position: fixed; /* Use absolute so it stays within the flow of the parent container */
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none; /* Prevents interactions */
+}
