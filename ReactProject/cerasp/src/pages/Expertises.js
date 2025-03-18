@@ -73,16 +73,27 @@ const Expertises = () => {
           image={<div className="image-placeholder"></div>}
           features={[
             {
-              title: "Lorem Ipsum",
-              text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair.",
+              title: "Manufacturing",
+              text: "Manufacturing According to GMP (Good Manufacturing Practices) Standards: " +
+                "At CERASP, we are a facility that is not GMP-compliant. However, our laboratories and " +
+                "production areas are GLP (Good Laboratory Practice) compliant, and we work and " +
+                "document according to GMP standards to facilitate technology transfer and the " +
+                "preparation of dossiers that will eventually be submitted to regulatory authorities for our " +
+                "clients.",
             },
             {
-              title: "Lorem Ipsum",
-              text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair.",
+              title: "Develop your Product",
+              text: "CERASP helps you develop products and manufacturing processes that are GMP compliant (GMP ready, thus ready for transfer)." +
+              "Additionally, it is worth noting that we have several partnerships with universities and collaborations with other College Centers for " +
+              "Technology Transfer (CCTTs) for projects aimed at industrial partners.",
             },
             {
-              title: "Lorem Ipsum",
-              text: "Potter ipsum wand elf parchment wingardium. Second half-blood easy holly mrs turns hedwig butter. Nearly-headless fat lily flat hair.",
+              title: "Biomanufacturing",
+              text: `We specialize in the optimization of bioprocesses, focusing on fermentation-based 
+              processes in solid and liquid cultures. Our team has extensive experience in producing 
+              enzymes and bioproducts, conducting bioactivity assessments, and employing microbial 
+              identification and genomics techniques. We also apply analytical chemistry for specialized 
+              applications such as hydrocarbon analysis.`,
             },
           ]}
         />
@@ -97,12 +108,19 @@ const Expertises = () => {
         <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
-          titleTextOne={<h2>Title One</h2>}
-          titleTextTwo={<h2>Title Two</h2>}
-          titleTextThree={<h2>Title Three</h2>}
-          descTextOne={<p>Description One</p>}
-          descTextTwo={<p>Description Two</p>}
-          descTextThree={<p>Description Three</p>}
+          titleTextOne={<h2>We Offer</h2>}
+          titleTextTwo={<h2>We Work</h2>}
+          titleTextThree={<h2>We Help</h2>}
+          descTextOne={<p>Expert formulation services tailored to the needs of pharmaceuticals, animal 
+            health products, natural health products (NHPs), and nutraceuticals. Our services include 
+            the development and optimization of drug formulations, ensuring efficacy, stability, and 
+            safety. </p>}
+          descTextTwo={<p>To create the appropriate dosage forms—such as tablets, capsules, 
+            softgels, gummies, creams, liquids, ointments and injectables—while adhering to 
+            regulatory standards and industry best practices.</p>}
+          descTextThree={<p>With product 
+            improvement, process optimization, and ensure that formulations meet market 
+            requirements for both human and animal health sectors. </p>}
         ></TwoColumnThreeText>
       </ScrollPanel>
 
@@ -208,7 +226,24 @@ const Expertises = () => {
         */}
 
       <ScrollPanel title="expertises" id="bioinformatics">
-        <p>Bioinformatics</p>
+      <TwoColumnThreeText
+          circleImage={<div className="circle"></div>}
+          textUnderImage={<>
+            <p>At the CERASP, we offer cutting-edge Bioinformatics services tailored for both 
+            pharmaceutical and healthcare sectors. Our Bioinformatics team specializes in leveraging 
+            advanced computational methods and data analysis techniques to support drug discovery, 
+            personalized medicine, and biomarker identification. </p>
+            <p>Whether you’re in pharmaceutical development seeking robust data-driven solutions or in 
+            healthcare requiring precision medicine insights, our Bioinformatics services are designed 
+            to meet your most complex research and clinical challenges with innovation and expertise.</p>
+          </>}
+          titleTextOne={<h2>Genomic data analysis</h2>}
+          titleTextTwo={<h2>Comprehensive data insights</h2>}
+          titleTextThree={<h2>Accelerated research</h2>}
+          descTextOne={<p>Transcriptomics, proteomics, and metabolomics services. </p>}
+          descTextTwo={<p>To optimize therapeutic strategies. </p>}
+          descTextThree={<><p>Through advanced computational methods.</p><p> Tailored solutions for precision medicine. </p></>}
+        ></TwoColumnThreeText>
       </ScrollPanel>
 
       {/*   =================================
