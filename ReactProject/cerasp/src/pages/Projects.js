@@ -5,6 +5,8 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import ProjectOverview from "../components/panels/projectpanels/ProjectOverview.js";
 import ProjectPanelA from "../components/panels/projectpanels/ProjectPanelA.js";
+import ProjectPanelB from "../components/panels/projectpanels/ProjectPanelB.js";
+import ProjectPanelC from "../components/panels/projectpanels/ProjectPanelC.js";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 
 const Projects = () => {
@@ -50,7 +52,40 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-2">
-        <p>PROJECT 2</p>
+        <ProjectPanelB
+          topImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={2}
+              perPage={1}
+            />
+          }
+          title={"Project B"}
+          quote={"Lorem Ipsum a quote here"}
+          bottomLeftImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={6}
+              perPage={1}
+            />
+          }
+          bottomCenterImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={5}
+              perPage={1}
+            />
+          }
+          headline={`This is a headline about this upcoming project.  
+            It will give a brief overview of the project. 
+             Visitors can click to read more if there is a PDF provided.`}
+        />
       </ScrollPanel>
 
       {/*   ==========================
@@ -59,7 +94,32 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-3">
-        <p>PROJECT 3</p>
+        <ProjectPanelC
+          middleImage={
+            <StockImageFetch
+              searchTerm={"pattern"}
+              imgSource="original"
+              orientation="landscape"
+              page={1}
+              perPage={1}
+            />
+          }
+          bottomLeftImage={
+            <StockImageFetch
+              searchTerm={"high-tech"}
+              imgSource="large"
+              orientation="landscape"
+              page={3}
+              perPage={1}
+            />
+          }
+          headline={`The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"`}
+          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham." "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham."`}
+        />
       </ScrollPanel>
 
       {/*   ======================
@@ -68,7 +128,40 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-4">
-        <p>PROJECT 4</p>
+        <ProjectPanelB
+          topImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={2}
+              perPage={1}
+            />
+          }
+          title={"Project B"}
+          quote={"Lorem Ipsum a quote here"}
+          bottomLeftImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={6}
+              perPage={1}
+            />
+          }
+          bottomCenterImage={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={5}
+              perPage={1}
+            />
+          }
+          headline={`This is a headline about this upcoming project.  
+            It will give a brief overview of the project. 
+             Visitors can click to read more if there is a PDF provided.`}
+        />
       </ScrollPanel>
 
       {/*   ======================
@@ -77,7 +170,32 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-5">
-        <p>PROJECT 5</p>
+        <ProjectPanelC
+          middleImage={
+            <StockImageFetch
+              searchTerm={"pattern"}
+              imgSource="original"
+              orientation="landscape"
+              page={1}
+              perPage={1}
+            />
+          }
+          bottomLeftImage={
+            <StockImageFetch
+              searchTerm={"high-tech"}
+              imgSource="large"
+              orientation="landscape"
+              page={3}
+              perPage={1}
+            />
+          }
+          headline={`The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"`}
+          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham." "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham."`}
+        />
       </ScrollPanel>
 
       {/*   =========================
@@ -86,7 +204,22 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-6">
-        <p>PROJECT 6</p>
+        <ProjectPanelA
+          image={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={2}
+              perPage={1}
+            />
+          }
+          title={"Project 6"}
+          headline={`About the Project`}
+          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham."`}
+        />
       </ScrollPanel>
 
       {/*   =================================
@@ -95,7 +228,22 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-7">
-        <p>PROJECT 7</p>
+        <ProjectPanelA
+          image={
+            <StockImageFetch
+              searchTerm={"chemistry"}
+              imgSource="large"
+              orientation="landscape"
+              page={2}
+              perPage={1}
+            />
+          }
+          title={"Project 7"}
+          headline={`About the Project`}
+          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            accompanied by English versions from the 1914 translation by H. Rackham."`}
+        />
       </ScrollPanel>
 
       {/*   =======================

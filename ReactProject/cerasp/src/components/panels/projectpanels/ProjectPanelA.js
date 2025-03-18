@@ -1,12 +1,12 @@
 import React from "react";
 import "./css/ProjectPanelA.css";
 
-const ProjectPanelA = ({ image, headline, textContent }) => {
+const ProjectPanelA = ({ title = "Project", image, headline, textContent }) => {
   return (
     <div className="project-panel-a-grid-layout">
       <div className="top-panel">
         {image}
-        <div className="top-panel-title">Project A</div>
+        <div className="top-panel-title">{title}</div>
       </div>
       <div className="bottom-left-panel">
         <h3>{headline}</h3>

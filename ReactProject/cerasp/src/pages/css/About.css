@@ -2,20 +2,10 @@
 /* ABOUT PAGE */
 /* ========================= */
 
-/* General layout for the about page */
 .scroll-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* Team Section */
-.team-section {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
 }
 
 /* ========================= */
@@ -31,83 +21,35 @@
   gap: 20px;
 }
 
-.facilities-section h1 {
-  font-size: 2rem;
-  text-align: center;
+/* ========================= */
+/* TEAM SECTION, PARTNERS SECTION */
+/* ========================= */
+.team-section,
+.partners-section {
+  margin-top: 100px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+h1 {
+  margin-top: 30px;
   margin-bottom: 0px;
 }
 
 /* ========================= */
-/* CONTENT LAYOUTS */
+/* VIDEOS SECTION */
 /* ========================= */
 
-/* General styles for content inside scroll panels */
-.content-container,
-.three-column-container,
-.text-container {
+.videos-section {
+  height: 80%;
   display: flex;
+  flex-direction: column;
+  width: 100vw;
   align-items: center;
-  justify-content: center;
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Two-column layout (image + text) */
-.content-container {
   gap: 20px;
-}
-
-/* Three-column layout */
-.three-column-container {
-  display: flex;
-  gap: 20px;
-  text-align: center;
-}
-
-.column {
-  flex: 1;
-}
-
-/* ========================= */
-/* IMAGE STYLES */
-/* ========================= */
-
-.image-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.image-container img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-/* Text section next to image */
-.text-container {
-  flex: 1;
-  text-align: left;
-}
-
-/* ========================= */
-/* CTA BUTTON */
-/* ========================= */
-
-.cta-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #fff;
-  color: #70aff3;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #e0f0ff;
 }
 
 /* ========================= */
@@ -120,21 +62,32 @@
 }
 
 @media (max-width: 1024px) {
-  /* Stack image and text on top of each other */
-  .content-container {
+  .facilities-section {
+    height: 95%;
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
   }
+}
 
-  .image-container img {
-    max-width: 300px;
-  }
+.facilities-section {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
 
-  /* Stack three columns into a single column */
-  .three-column-container {
-    flex-direction: column;
-    gap: 10px;
-  }
+.facilities-section {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
 }
 
 @media (max-width: 768px) {

@@ -45,7 +45,7 @@
 }
 
 @media (max-width: 768px) {
-  .grid-layout {
+  .three-col-header-grid-layout {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(7, 1fr);
   }

@@ -4,25 +4,6 @@
   --text-color-light: black;
 }
 
-/* .test-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 40px;
-  right: 40px;
-  width: 90px;
-  height: 60px;
-  background-color: rgb(128, 128, 155);
-  border-radius: 15px;
-  color: white;
-  z-index: 2000;
-} */
-
-.test-button:hover {
-  background-color: red;
-}
-
 .app.light {
   background-color: var(--bg-color-light);
   color: var(--text-color-light);
@@ -31,7 +12,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* background-color: #f8f8f8; */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -40,21 +20,67 @@ body {
 
 .main-content {
   margin-top: 50px;
-  height: calc(
-    100vh - 50px
-  ); /* Adjusts the content height to account for the header */
-  overflow-y: scroll; /* Allows vertical scrolling */
-  overflow-x: hidden; /* Hides horizontal scrolling */
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  scroll-snap-type: y mandatory; /* Enables scroll snapping */
-  scroll-behavior: smooth; /* Smooth scrolling when scrolling */
-  scrollbar-width: none; /* Hides the scrollbar */
-  scroll-snap-stop: always; /* Prevents skipping snaps when scrolling manually */
-  background-color: none;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-stop: always;
+  position: relative;
+  /* Initial scroll progress */
+  --scroll-progress: 0; /* This will be dynamically set by React */
 }
 
-/* color info */
+/* Add the shifting color gradient effect */
+.background-gradient {
+  background: 
+    /* First diagonal gradient */ linear-gradient(
+        135deg,
+        rgba(255, 255, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    /* Second diagonal gradient */
+      linear-gradient(
+        225deg,
+        rgba(135, 184, 247, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    /* Third diagonal gradient */
+      linear-gradient(
+        5deg,
+        rgba(1, 100, 248, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    /* Fourth diagonal gradient */
+      linear-gradient(
+        315deg,
+        rgba(0, 162, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0;
+
+  background-size: 2000px 1000px;
+  background-position: center;
+  background-repeat: repeat;
+  transition: background 0.3s ease;
+}
+
+/* .blue-square {
+  position: fixed;
+  top: 80px;
+  height: 100%;
+  width: 2%;
+  z-index: -1;
+  background-color: rgba(194, 194, 194, 0.178);
+  transition: transform 0.1s ease-in-out;
+} */
+
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .main-content {
     margin-top: 0px;
