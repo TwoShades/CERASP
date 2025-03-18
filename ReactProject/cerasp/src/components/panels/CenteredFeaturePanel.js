@@ -10,7 +10,7 @@ const CenteredFeaturePanel = ({ title, imageContent, features }) => {
         {features.map((feature, index) => (
           <div key={index} className="feature-item">
             <h3>{feature.title}</h3>
-            <p>{feature.description}</p>
+            <p>{feature.text}</p> {}
           </div>
         ))}
       </div>
