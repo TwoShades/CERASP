@@ -1,8 +1,7 @@
 .parent {
-    width: 100%;
-    height: 90%;
-    /* margin-left: 10px;
-    margin-right: 10px; */
+    width: 70%;
+    height: 80%;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -34,8 +33,8 @@
     margin-right: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    align-items: left;
+    justify-content: flex-start;
+    align-items: flex-start;
     grid-column: 3 / span 3;
     grid-row: 1 / span 3;
     background: #E3F2FF;
@@ -45,68 +44,127 @@
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+/* General Form Styling */
 .form-title {
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .form-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    gap: 10px;
+}
+
+/* Individual Component Styles */
+.form-group {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 15;
+    margin-bottom: 10px;
 }
 
-.form-fields label {
-    margin-bottom: 5px;
+.form-group label {
+    margin-bottom: 3px;
+    font-weight: bold;
 }
 
-.form-fields input,
-.form-fields select,
-.form-fields textarea {
-    width: 40%;
-    margin-bottom: 15px;
-    padding: 10px;
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #E3F2FF;
-    outline: 2px solid #1A1A1A;
-    border: 1px solid #4F4F4F;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
 }
 
-.form-fields select {
-    width: 10%;
+.form-group textarea {
+    width: 100%;
 }
 
+/* Specific Styles for Each Component */
+.name-group {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.title-group {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.country-group {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.email-group {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.phone-group {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.company-group {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.message-group {
+    grid-column: 1 / span 2; /* Span both columns */
+    grid-row: 4 / span 1;
+    height: 100%; /* Default height for the textarea */
+    width: 100%;
+    resize: none;
+}
+
+#message {
+    width: 100%;
+    height: 100%;
+}
+
+/* Captcha and Checkboxes */
 .captcha-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .checkboxes-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
+    gap: 8px;
 }
 
 .policy-field,
 .newsletter-field {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 .policy-field input,
 .newsletter-field input {
-    margin-right: 10px;
+    margin-right: 8px;
 }
 
 /* Left Panels Specific Styling */
-.left-panel {
+.contact-left-panel {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -136,9 +194,189 @@
 
 @media (max-width: 1280px) {}
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+    .parent {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        display: grid;
+    }
+    .info-card-icons {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Contact Form Specific Styling */
+    .contact-form-container {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        grid-column: 3 / span 3;
+        grid-row: 1 / span 3;
+        background: #E3F2FF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);;
+        border-radius: 12px;
+        padding: 15px;
+        font-size: small;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
 
-@media (max-width: 768px) {}
+    .form-group textarea {
+        width: 100%;
+    }
+
+    /* Left Panels Specific Styling */
+    .contact-left-panel {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 1;
+        font-size: small;
+    }
+
+    .cerasp-info {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 2;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        max-height: 100%;
+    }
+
+    .sponsors {
+        grid-column: 1 / span 5;
+        grid-row: 3 / span 2;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    .contact-form-container {
+        grid-column: 1 / span 5;
+        grid-row: 2 / span 2;
+    }
+    
+    /* Captcha and Checkboxes */
+    .captcha-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .checkboxes-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .policy-field,
+    .newsletter-field {
+        display: flex;
+        align-items: center;
+    }
+
+    .policy-field input,
+    .newsletter-field input {
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        display: grid;
+    }
+    .info-card-icons {
+        width: 10px;
+        height: 10px;
+    }
+    
+    /* Contact Form Specific Styling */
+    .contact-form-container {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        grid-column: 3 / span 3;
+        grid-row: 1 / span 3;
+        background: #E3F2FF;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);;
+        border-radius: 12px;
+        padding: 15px;
+        font-size: 8px;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .form-group textarea {
+        width: 100%;
+    }
+
+    /* Left Panels Specific Styling */
+    .contact-left-panel {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 1;
+        font-size: 8px;
+    }
+
+    .cerasp-info {
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 2;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        max-height: 100%;
+    }
+
+    .sponsors {
+        grid-column: 1 / span 5;
+        grid-row: 3 / span 2;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    .contact-form-container {
+        grid-column: 1 / span 5;
+        grid-row: 2 / span 2;
+    }
+    
+    /* Captcha and Checkboxes */
+    .captcha-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .checkboxes-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .policy-field,
+    .newsletter-field {
+        display: flex;
+        align-items: center;
+    }
+
+    .policy-field input,
+    .newsletter-field input {
+        margin-right: 8px;
+    }
+
+    
+}
 
 @media (max-width: 640px) {}
 

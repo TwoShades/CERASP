@@ -10,7 +10,7 @@ const ContactUsForm = () => {
 
   return (
     <div className="parent">
-      <div className="left-panel">
+      <div className="contact-left-panel">
         <div className="cerasp-info">
           <h4>Contact Details</h4>
           <p>
@@ -31,36 +31,49 @@ const ContactUsForm = () => {
         <h2 className="form-title">Contact Form</h2>
         <div className="form-content">
           <div className="form-fields">
-            <label>Name</label>
-            <input type="text" placeholder="Your Name" />
+            <div className="form-group name-group">
+              <label htmlFor="name">Name</label>
+              <input id="name" type="text" placeholder="Your Name" />
+            </div>
 
-            <label>Title</label>
-            <select>
-              <option>Mr.</option>
-              <option>Ms.</option>
-              <option>Other</option>
-            </select>
-            
-            <label>Country</label>
-            <select>
-              <option>USA</option>
-              <option>Canada</option>
-              <option>UK</option>
-              <option>Other</option>
-            </select>
+            <div className="form-group title-group">
+              <label htmlFor="title">Title</label>
+              <select id="title">
+                <option>Mr.</option>
+                <option>Ms.</option>
+                <option>Other</option>
+              </select>
+            </div>
 
-            <label>Email</label>
-            <input type="email" placeholder="Your Email" />
+            <div className="form-group country-group">
+              <label htmlFor="country">Country</label>
+              <select id="country">
+                <option>USA</option>
+                <option>Canada</option>
+                <option>UK</option>
+                <option>Other</option>
+              </select>
+            </div>
 
-            <label>Phone</label>
-            <input type="tel" placeholder="Your Phone Number" />
+            <div className="form-group email-group">
+              <label htmlFor="email">Email</label>
+              <input id="email" type="email" placeholder="Your Email" />
+            </div>
 
+            <div className="form-group phone-group">
+              <label htmlFor="phone">Phone</label>
+              <input id="phone" type="tel" placeholder="Your Phone Number" />
+            </div>
 
-            <label>Company Name (Optional)</label>
-            <input type="text" placeholder="Your Company Name" />
+            <div className="form-group company-group">
+              <label htmlFor="company">Company Name (Optional)</label>
+              <input id="company" type="text" placeholder="Your Company Name" />
+            </div>
 
-            <label>Message</label>
-            <textarea placeholder="Your Message"></textarea>
+            <div className="form-group message-group">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" placeholder="Your Message"></textarea>
+            </div>
           </div>
 
           <div className="captcha-container">

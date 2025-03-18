@@ -34,7 +34,6 @@ const About = () => {
   }, []);
 
   return (
-    <div>
       <div className="about scroll-container">
         {/* OVERVIEW */}
         <ScrollPanel colorTheme="themeA" title="about" id="overview">
