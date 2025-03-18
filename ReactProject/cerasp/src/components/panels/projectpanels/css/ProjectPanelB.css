@@ -5,7 +5,8 @@
   grid-template-rows: repeat(7, 1fr);
   grid-template-columns: repeat(3, 1fr);
   position: relative;
-  gap: 30px;
+  background-color: white;
+  gap: 20px;
 }
 
 .top-right-title {

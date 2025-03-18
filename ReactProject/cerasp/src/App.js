@@ -33,10 +33,10 @@ function App() {
           scrollRef.current = el;
         }}
       >
-        <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} />
+        {/* <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} />
         <BackgroundCircle top={10} left={10} scrollProgress={scrollProgress} />
         <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} />
-        <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} />
+        <BackgroundCircle top={50} left={50} scrollProgress={scrollProgress} /> */}
         {/* Move it directly here */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
