@@ -68,7 +68,7 @@ const News = () => {
               =======================
         */}
 
-      <ScrollPanel title="news" id="">
+      <ScrollPanel title="news" id="contact-us-form">
         <ContactUsForm />
       </ScrollPanel>
 
