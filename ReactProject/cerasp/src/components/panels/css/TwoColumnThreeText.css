@@ -1,13 +1,12 @@
 /* Parent Container */
 .three-component-panel {
-    width: 100%;
+    width: 70%;
     height: 80%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, 1fr);
     gap: 16px;
     padding: 24px;
-    font-family: 'Arial', sans-serif;
     transition: transform 0.3s ease;
 }
 

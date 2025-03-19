@@ -214,12 +214,11 @@ const Expertises = () => {
             <>
               <a href="#">HEALTH CANADA</a>
               <h1>
-                Lorem ipsum dolor sit amet consectetur. Etiam diam nisi eget
-                mauris massa aliquam.
+                Recognized partner of Health Canada for regulatory affairs and
+                audits.
               </h1>
               <p>
-                Recognized partner of Health Canada for regulatory affairs and
-                audits. As an official partner of Health Canada, we deliver
+                As an official partner of Health Canada, we deliver
                 solutions that meet the highest industry standards.
               </p>
             </>
