@@ -99,20 +99,7 @@ const About = () => {
                 Development: Considering the international context of long term
                 climate change, the CERASP is committed to developing innovative
                 technologies that adhere to the principles of sustainable
-                development and environmental responsibility. The solutions
-                offered to our clients will be designed to reduce emissions and
-                prioritize the prudent use of raw materials, opting for
-                processes with minimal environmental impact. These solutions aim
-                to change the behaviors of users and consumers in the medium
-                term. Collaboration: The CERASP strives to attract and stimulate
-                the creation of new businesses by establishing an environment
-                conducive to creativity, applied research, and technological
-                innovation in Quebec and Canada. The CERASP aspires to be a
-                central hub in its ecosystem, positively contributing to the
-                advancement of a modern and innovative industry in the region.
-                The partnership envisioned between the two colleges serves as a
-                perfect example of solidarity. Openness: Keeping an open mind to
-                international developments and a constantly evolving world.
+                development and environmental responsibility.
               </p>
             </>
           }
