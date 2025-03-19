@@ -1,11 +1,18 @@
+import React, { useState } from "react";
 import "./css/Sectors.css";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import ModalMessage from "../components/uicomponents/ModalMessage"; // Import the Modal
 
 const News = () => {
   useScrollToPanel();
+
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
+
+  const handleOpenModal = () => setIsModalOpen(true); // Open the modal
+  const handleCloseModal = () => setIsModalOpen(false); // Close the modal
 
   return (
     <div className="news scroll-container">
@@ -24,7 +31,9 @@ const News = () => {
         */}
 
       <ScrollPanel title="news" id="equipment-updates">
-        <p>Equipment Updates</p>
+        <p>Equipment Updatesk</p>
+        {/* Button to trigger the modal */}
+        <button onClick={handleOpenModal}>Open Modal</button>
       </ScrollPanel>
 
       {/*   =====================
@@ -46,7 +55,7 @@ const News = () => {
       </ScrollPanel>
 
       {/*   =====================
-              ======Webinars=======
+              =====Webinars=======
               =====================
         */}
 
@@ -55,7 +64,7 @@ const News = () => {
       </ScrollPanel>
 
       {/*   ===================
-              ======Events=======
+              =====Events=======
               ===================
         */}
 
@@ -73,6 +82,13 @@ const News = () => {
       </ScrollPanel>
 
       <Footer />
+
+      {/* Modal Message */}
+      <ModalMessage
+        isOpen={isModalOpen}
+        onRequestClose={handleCloseModal}
+        message="This is a simple modal message!"
+      />
     </div>
   );
 };

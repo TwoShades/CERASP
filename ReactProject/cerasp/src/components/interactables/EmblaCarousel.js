@@ -26,6 +26,8 @@ const EmblaCarousel = ({ slides, options, renderSlide }) => {
             </div>
           ))}
         </div>
+        <div className="embla__viewport-left"></div>
+        <div className="embla__viewport-right"></div>
       </div>
 
       <div className="embla__controls">

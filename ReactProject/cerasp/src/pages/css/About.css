@@ -7,27 +7,13 @@
   flex-direction: column;
   align-items: center;
 }
-
-/* ========================= */
-/* FACILITIES SECTION */
-/* ========================= */
-
-.facilities-section {
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  align-items: center;
-  gap: 20px;
-}
-
 /* ========================= */
 /* TEAM SECTION, PARTNERS SECTION */
 /* ========================= */
 .team-section,
 .partners-section {
-  margin-top: 100px;
-  width: 90%;
+  margin-top: 0px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +29,8 @@ h1 {
 /* VIDEOS SECTION */
 /* ========================= */
 
-.videos-section {
+.videos-section,
+.facilities-section {
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -70,24 +57,6 @@ h1 {
     align-items: center;
     gap: 0px;
   }
-}
-
-.facilities-section {
-  height: 95%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-}
-
-.facilities-section {
-  height: 95%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
 }
 
 @media (max-width: 768px) {

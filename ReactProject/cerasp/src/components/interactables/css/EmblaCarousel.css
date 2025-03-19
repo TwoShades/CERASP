@@ -7,10 +7,37 @@
   padding: 0;
 }
 
+.embla__viewport-left,
+.embla__viewport-right {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 10%;
+  z-index: 5;
+}
+
+.embla__viewport-left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.61) 40%,
+    transparent 100%
+  );
+}
+.embla__viewport-right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.61) 40%,
+    transparent 100%
+  );
+}
+
 .embla__viewport {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: white;
+  background-color: rgba(86, 187, 255, 0.219);
   box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   overflow: hidden;

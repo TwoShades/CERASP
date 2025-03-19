@@ -10,6 +10,7 @@ import StockImageFetch from "../components/placeholders/StockImageFetch";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import ThreeColumnWithHeaderPanel from "../components/panels/ThreeColumnWithHeaderPanel.js";
+import LearnMoreButton from "../components/interactables/LearnMoreButton.js";
 
 const About = () => {
   useScrollToPanel();
@@ -182,7 +183,7 @@ const About = () => {
       {/* BOARD */}
       <ScrollPanel title="about" id="board">
         <div>
-          <h1>hello board..</h1>
+          <LearnMoreButton pdfUrl="/pdfs/Lorem_ipsum.pdf" />
         </div>
       </ScrollPanel>
 
