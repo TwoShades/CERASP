@@ -7,7 +7,6 @@
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
-    background-color: #E3F2FF;
 }
 
 .info-card-icons {
@@ -128,7 +127,7 @@
 .message-group {
     grid-column: 1 / span 2; /* Span both columns */
     grid-row: 4 / span 1;
-    height: 100%; /* Default height for the textarea */
+    height: 200px; /* Default height for the textarea */
     width: 100%;
     resize: none;
 }
