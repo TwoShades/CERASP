@@ -1,5 +1,6 @@
 import sitemap from "../../sitemap.json";
 import "./css/ScrollPanel.css";
+import ContactButton from "../interactables/ContactButton";
 
 const ScrollPanel = ({ children, colorTheme = "themeA", id, title }) => {
   const isValidSection = (id) => {
@@ -11,6 +12,7 @@ const ScrollPanel = ({ children, colorTheme = "themeA", id, title }) => {
     return (
       <div className={`scroll-panel ${colorTheme}`} id={id}>
         {children}
+        {id !== "contact-us-form" && <ContactButton />}
       </div>
     );
   }

@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 16px;
+  border: 2px solid rgb(3, 35, 71);
   color: white;
   font-size: 1.2rem;
   font-weight: bold;

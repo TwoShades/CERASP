@@ -10,7 +10,8 @@
         "our-team",
         "board",
         "partners",
-        "cerasp-videos"
+        "cerasp-videos",
+        "contact-us-form"
       ]
     },
     {
@@ -27,7 +28,8 @@
         "technical-training",
         "bioinformatics",
         "numeric-health",
-        "help-access-funding"
+        "help-access-funding",
+        "contact-us-form"
       ]
     },
     {
@@ -46,7 +48,8 @@
         "protein-synthesis",
         "feasibility-&-tech-trans",
         "training-program",
-        "support"
+        "support",
+        "contact-us-form"
       ]
     },
     {
@@ -60,7 +63,8 @@
         "project-4",
         "project-5",
         "project-6",
-        "project-7"
+        "project-7",
+        "contact-us-form"
       ]
     },
     {
@@ -72,7 +76,8 @@
         "new-grants",
         "blogs-&-white-papers",
         "webinars",
-        "events"
+        "events",
+        "contact-us-form"
       ]
     }
   ]

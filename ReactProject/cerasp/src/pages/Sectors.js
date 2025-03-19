@@ -150,7 +150,7 @@ const Sectors = () => {
               =======================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="">
+      <ScrollPanel title="sector-of-activities" id="contact-us-form">
         <ContactUsForm />
       </ScrollPanel>
 
