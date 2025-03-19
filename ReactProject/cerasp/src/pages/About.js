@@ -57,7 +57,7 @@ const About = () => {
                 member of the CCTT (College Centers in Technological Transfers)
                 network, we are affiliated to John Abbott College and Cégep
                 Gérald-Godin and strives to deliver high-quality services
-                combining innovation and expertise.{" "}
+                combining innovation and expertise.
               </p>
             </>
           }
