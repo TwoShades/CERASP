@@ -10,6 +10,7 @@ const Navigation = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(false);
+  const [openSubMenu, setOpenSubMenu] = useState(null); // Track which sub-menu is open
 
   const { handleLinkClick } = useScrollToTop(pathname, () =>
     setMenuOpen(false)
@@ -19,6 +20,7 @@ const Navigation = () => {
     const handleResize = () => {
       if (window.innerWidth > 1024) {
         setMenuOpen(false);
+        setOpenSubMenu(null); // Close sub-menus on desktop
       }
       setIsMobile(window.innerWidth < 1025);
     };
@@ -29,6 +31,10 @@ const Navigation = () => {
 
   const handleNavigateToSection = (section, path) => {
     navigate(path, { state: { scrollTo: section } });
+  };
+
+  const toggleSubMenu = (menu) => {
+    setOpenSubMenu((prev) => (prev === menu ? null : menu)); // Toggle sub-menu
   };
 
   return (
@@ -44,17 +50,27 @@ const Navigation = () => {
             <li
               key={title}
               className="nav-item"
-              onMouseEnter={() => setHoveredMenu(title)}
-              onMouseLeave={() => setHoveredMenu(null)}
+              onMouseEnter={() => !isMobile && setHoveredMenu(title)}
+              onMouseLeave={() => !isMobile && setHoveredMenu(null)}
             >
-              <Link
-                to={`/${title}`}
-                onClick={() => handleLinkClick(`/${title}`)}
+              <div
+                className="nav-link-wrapper"
+                onClick={() => isMobile && toggleSubMenu(title)} // Toggle sub-menu on click for mobile
               >
-                {navTitle}
-              </Link>
+                <Link
+                  to={`/${title}`}
+                  onClick={() => handleLinkClick(`/${title}`)}
+                >
+                  {navTitle}
+                </Link>
+                {isMobile && subPages && (
+                  <span className="dropdown-toggle">
+                    {openSubMenu === title ? "▲" : "▼"}
+                  </span>
+                )}
+              </div>
 
-              {hoveredMenu === title && !isMobile && (
+              {(hoveredMenu === title || (isMobile && openSubMenu === title)) && (
                 <div className="dropdown">
                   <ul>
                     {subPages.map((subPage) => (

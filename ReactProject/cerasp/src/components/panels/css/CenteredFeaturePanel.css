@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 100%;
+  width: 70%;
+  height: 80%;
   padding: 0;
   margin: 0;
 }
@@ -19,7 +20,6 @@
   width: 50%;
   max-width: 700px;
   height: 300px;
-  background-color: #4aafff;
   /* Bright blue for placeholder */
   border-radius: 12px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
