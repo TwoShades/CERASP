@@ -2,6 +2,29 @@
 :root {
   --bg-color-light: rgb(255, 255, 255);
   --text-color-light: black;
+
+  /* Project Panels */
+  --project-panel-background: rgba(255, 255, 255, 0.5);
+  --project-panel-color: black;
+  --project-panel-border-radius: 10px;
+  --project-panel-padding: 5%;
+  --project-panel-shadow: 1px 1px 2px 2px rgba(129, 129, 129, 0.068);
+  --temp-background-color: rgba(190, 220, 255, 0.062);
+
+  article,
+  header,
+  section,
+  figure,
+  blockquote {
+    margin: 0;
+    padding: 0;
+  }
+
+  figure {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .app.light {
@@ -69,16 +92,6 @@ body {
   background-repeat: repeat;
   transition: background 0.3s ease;
 }
-
-/* .blue-square {
-  position: fixed;
-  top: 80px;
-  height: 100%;
-  width: 2%;
-  z-index: -1;
-  background-color: rgba(194, 194, 194, 0.178);
-  transition: transform 0.1s ease-in-out;
-} */
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
