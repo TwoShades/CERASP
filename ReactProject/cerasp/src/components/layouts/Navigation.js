@@ -54,7 +54,7 @@ const Navigation = () => {
               onMouseLeave={() => !isMobile && setHoveredMenu(null)}
             >
               <div
-                className="nav-link-wrapper"
+                // className="nav-link-wrapper"
                 onClick={() => isMobile && toggleSubMenu(title)} // Toggle sub-menu on click for mobile
               >
                 <Link
@@ -70,7 +70,8 @@ const Navigation = () => {
                 )}
               </div>
 
-              {(hoveredMenu === title || (isMobile && openSubMenu === title)) && (
+              {(hoveredMenu === title ||
+                (isMobile && openSubMenu === title)) && (
                 <div className="dropdown">
                   <ul>
                     {subPages.map((subPage) => (

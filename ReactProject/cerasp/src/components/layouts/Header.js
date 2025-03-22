@@ -3,10 +3,10 @@ import "./css/Header.css";
 
 const Header = () => {
   return (
-    <header className="layout-header">
+    <div className="layout-header">
       <img src="/logos/cerasplogo.png" alt="CERASP Logo" />
       <Navigation />
-    </header>
+    </div>
   );
 };
 

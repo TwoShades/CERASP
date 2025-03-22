@@ -1,6 +1,7 @@
 .nav {
   display: flex;
   height: 100%;
+  width: 100%;
 }
 
 .nav-list {
@@ -8,21 +9,25 @@
   margin: 0;
   padding: 0;
   display: flex;
+  width: 95%;
 }
 
 .nav-item {
   background-color: rgb(255, 255, 255);
-  padding: 30px;
-  margin-right: 0;
-  min-width: 200px;
+  padding: 20px;
   text-align: center;
   display: flex;
   position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-item a {
-  font-weight: 400;
-  font-size: 23px;
+  font-weight: 600;
+  font-size: 18px;
   text-decoration: none;
   color: rgb(62, 75, 102);
 }
@@ -73,10 +78,6 @@
   text-align: left;
 }
 
-/* .dropdown li:first-child {
-  border-top: 1px solid rgb(112, 140, 177);
-} */
-
 .dropdown li:last-child {
   border: none;
   border-bottom-left-radius: 9px;
@@ -85,10 +86,6 @@
 
 .dropdown li:hover {
   background-color: #ffb300a9;
-  /* background-color: #f1ff85; */
-  /* background-color: #a7ffba; */
-  /* background-color: #ebb7ff; */
-  /* background-color: #afd2ff; */
   cursor: pointer;
 }
 
@@ -98,24 +95,6 @@
   align-items: center;
   width: 100%;
 }
-
-/* .dropdown-toggle {
-  font-size: 16px;
-  margin-left: 10px;
-  cursor: pointer;
-} */
-
-/* .dropdown {
-  display: none;
-} */
-
-/* .nav-list .dropdown {
-  display: block;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-} */
 
 .dropdown ul {
   list-style: none;
@@ -128,8 +107,6 @@
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
-
-
 
 .dropdown li:last-child {
   border-bottom: none;
@@ -150,7 +127,7 @@
   }
 
   .nav-list li:first-child {
-  margin-top: 20px; /* Add more space above the first item */
+    margin-top: 20px; /* Add more space above the first item */
   }
 
   .nav-list {
@@ -180,7 +157,7 @@
     border-bottom: 1px solid rgb(201, 201, 201);
   }
 
-  .nav-list a {
+  /* .nav-list a {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
@@ -189,7 +166,7 @@
     width: 100%;
     text-align: center;
     padding: 10px 20px;
-  }
+  } */
 
   span {
     display: inline-block;
@@ -212,7 +189,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
 }
 
@@ -232,7 +208,6 @@
 }
 
 @media (max-width: 475px) {
-
 }
 
 @media (max-width: 1024px) {
