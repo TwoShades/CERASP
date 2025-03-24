@@ -11,6 +11,7 @@ import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import ThreeColumnWithHeaderPanel from "../components/panels/ThreeColumnWithHeaderPanel.js";
 import LearnMoreButton from "../components/interactables/LearnMoreButton.js";
+import AboutOverview from "../components/panels/AboutOverview.js";
 
 const About = () => {
   useScrollToPanel();
@@ -38,7 +39,7 @@ const About = () => {
     <div className="about scroll-container">
       {/* OVERVIEW */}
       <ScrollPanel colorTheme="themeA" title="about" id="overview">
-        <ThreeColumnWithHeaderPanel
+        {/* <ThreeColumnWithHeaderPanel
           headerContent={
             <>
               <h1>History of Cerasp</h1>
@@ -58,6 +59,7 @@ const About = () => {
                 network, we are affiliated to John Abbott College and Cégep
                 Gérald-Godin and strives to deliver high-quality services
                 combining innovation and expertise.
+                
               </p>
             </>
           }
@@ -103,7 +105,8 @@ const About = () => {
               </p>
             </>
           }
-        />
+        /> */}
+        <AboutOverview />
       </ScrollPanel>
 
       {/* FACILITIES */}

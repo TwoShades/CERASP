@@ -7,6 +7,7 @@ import ProjectOverview from "../components/panels/projectpanels/ProjectOverview.
 import ProjectPanelA from "../components/panels/projectpanels/ProjectPanelA.js";
 import ProjectPanelB from "../components/panels/projectpanels/ProjectPanelB.js";
 import ProjectPanelC from "../components/panels/projectpanels/ProjectPanelC.js";
+import ProjectPanelD from "../components/panels/projectpanels/ProjectPanelD.js";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 
 const Projects = () => {
@@ -228,7 +229,8 @@ const Projects = () => {
         */}
 
       <ScrollPanel title="projects" id="project-7">
-        <ProjectPanelA
+        <ProjectPanelD
+          title={"PROJECT 7"}
           image={
             <StockImageFetch
               searchTerm={"chemistry"}
@@ -238,7 +240,6 @@ const Projects = () => {
               perPage={1}
             />
           }
-          title={"Project 7"}
           headline={`About the Project`}
           textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
             Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
