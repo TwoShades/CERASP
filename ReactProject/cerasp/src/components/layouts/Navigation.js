@@ -7,7 +7,8 @@ import sitemap from "../../sitemap.json";
 const Navigation = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
+  // const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1201);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null); // Track which sub-menu is open
@@ -22,7 +23,8 @@ const Navigation = () => {
         setMenuOpen(false);
         setOpenSubMenu(null); // Close sub-menus on desktop
       }
-      setIsMobile(window.innerWidth < 1025);
+      // setIsMobile(window.innerWidth < 1025);
+      setIsMobile(window.innerWidth < 1201);
     };
 
     window.addEventListener("resize", handleResize);
@@ -46,49 +48,54 @@ const Navigation = () => {
       )}
       <ul className={`nav-list ${isMobile && menuOpen ? "show" : ""}`}>
         {sitemap.pages.map(
-          ({ title, "nav-title": navTitle, "sub-pages": subPages }) => (
-            <li
-              key={title}
-              className="nav-item"
-              onMouseEnter={() => !isMobile && setHoveredMenu(title)}
-              onMouseLeave={() => !isMobile && setHoveredMenu(null)}
-            >
-              <div
-                className="nav-link-wrapper"
-                onClick={() => isMobile && toggleSubMenu(title)} // Toggle sub-menu on click for mobile
-              >
-                <Link
-                  to={`/${title}`}
-                  onClick={() => handleLinkClick(`/${title}`)}
-                >
-                  {navTitle}
-                </Link>
-                {isMobile && subPages && (
-                  <span className="dropdown-toggle">
-                    {openSubMenu === title ? "▲" : "▼"}
-                  </span>
-                )}
-              </div>
+          ({ title, "nav-title": navTitle, "sub-pages": subPages }) => {
+            const filteredSubPages = subPages.filter(
+              (subPage) => subPage.toLowerCase() !== "contact-us-form"
+            );
 
-              {(hoveredMenu === title || (isMobile && openSubMenu === title)) && (
-                <div className="dropdown">
-                  <ul>
-                    {subPages.map((subPage) => (
-                      <li
-                        key={subPage}
-                        onClick={() =>
-                          handleNavigateToSection(subPage, `/${title}`)
-                        }
-                        style={{ cursor: "pointer" }}
-                      >
-                        {subPage.replaceAll("-", " ").toUpperCase()}
-                      </li>
-                    ))}
-                  </ul>
+            return (
+              <li
+                key={title}
+                className="nav-item"
+                onMouseEnter={() => !isMobile && setHoveredMenu(title)}
+                onMouseLeave={() => !isMobile && setHoveredMenu(null)}
+              >
+                <div onClick={() => isMobile && toggleSubMenu(title)}>
+                  <Link
+                    to={`/${title}`}
+                    onClick={() => handleLinkClick(`/${title}`)}
+                  >
+                    {navTitle}
+                  </Link>
+                  {isMobile && filteredSubPages.length > 0 && (
+                    <span className="dropdown-toggle">
+                      {openSubMenu === title ? "▲" : "▼"}
+                    </span>
+                  )}
                 </div>
-              )}
-            </li>
-          )
+
+                {(hoveredMenu === title ||
+                  (isMobile && openSubMenu === title)) &&
+                  filteredSubPages.length > 0 && (
+                    <div className="dropdown">
+                      <ul>
+                        {filteredSubPages.map((subPage) => (
+                          <li
+                            key={subPage}
+                            onClick={() =>
+                              handleNavigateToSection(subPage, `/${title}`)
+                            }
+                            style={{ cursor: "pointer" }}
+                          >
+                            {subPage.replaceAll("-", " ")}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+              </li>
+            );
+          }
         )}
       </ul>
     </nav>

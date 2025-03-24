@@ -11,6 +11,7 @@ import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import ThreeColumnWithHeaderPanel from "../components/panels/ThreeColumnWithHeaderPanel.js";
 import LearnMoreButton from "../components/interactables/LearnMoreButton.js";
+import AboutOverview from "../components/panels/AboutOverview.js";
 
 const About = () => {
   useScrollToPanel();
@@ -37,7 +38,7 @@ const About = () => {
   return (
     <div className="about scroll-container">
       {/* OVERVIEW */}
-      <ScrollPanel colorTheme="themeA" title="about" id="overview">
+      {/* <ScrollPanel colorTheme="themeA" title="about" id="overview1">
         <ThreeColumnWithHeaderPanel
           headerContent={
             <>
@@ -93,17 +94,14 @@ const About = () => {
                 service and the implementation of effective solutions to help
                 SMEs thrive. The CERASP prioritizes dedication and integrity,
                 focusing all its efforts on mutual success in an environment of
-                respect, loyalty, rigor, and openness. This will be achieved
-                through trust with our clients, proactivity, and fast service,
-                while ensuring confidentiality. Innovation in Sustainable
-                Development: Considering the international context of long term
-                climate change, the CERASP is committed to developing innovative
-                technologies that adhere to the principles of sustainable
-                development and environmental responsibility.
+                respect, loyalty, rigor, and openness.
               </p>
             </>
           }
         />
+      </ScrollPanel> */}
+      <ScrollPanel colorTheme="themeA" title="about" id="overview">
+        <AboutOverview />
       </ScrollPanel>
 
       {/* FACILITIES */}
@@ -193,16 +191,18 @@ const About = () => {
         <div className="videos-section">
           <h1>Videos</h1>
           <EmblaSinglePanel
-            slides={["blue", "red", "purple", "grey", "black"]}
+            slides={["ShwbF2xodT8", "ShwbF2xodT8", "ShwbF2xodT8"]}
             options={options}
             renderSlide={(slide) => (
-              <StockImageFetch
-                searchTerm={slide}
-                imgSource="large"
-                orientation="landscape"
-                page={1}
-                perPage={1}
-              />
+              <div className="video-container">
+                <iframe
+                  src={`https://www.youtube.com/embed/${slide}`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             )}
           />
         </div>

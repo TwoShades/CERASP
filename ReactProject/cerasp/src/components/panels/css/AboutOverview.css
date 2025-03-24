@@ -1,0 +1,235 @@
+.about-overview-grid {
+  font-family: "Mulish", sans-serif;
+  width: 80%;
+  height: 80%;
+  display: grid;
+  position: relative;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.about-overview-history {
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 8;
+}
+
+.about-overview-background {
+  position: absolute;
+  align-self: left;
+  left: 0;
+  bottom: 10%;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  background: linear-gradient(to right, transparent, rgb(185, 218, 255));
+}
+
+.small-circle {
+  align-self: left;
+  margin-top: 20px;
+  background-color: rgb(49, 87, 156);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.about-overview-mission,
+.about-overview-vision,
+.about-overview-values {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  position: relative;
+}
+
+.about-overview-mission {
+  grid-row: 4 / span 2;
+  grid-column: 1 / span 3;
+}
+
+.about-overview-vision {
+  grid-row: 4 / span 2;
+  grid-column: 4 / span 3;
+}
+
+.about-overview-values {
+  grid-row: 4 / span 2;
+  grid-column: 7 / span 3;
+}
+
+.about-heading {
+  font-weight: bolder;
+  margin-bottom: 10px;
+  color: rgb(49, 49, 49);
+}
+
+.about-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-list-item {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(22, 56, 102);
+}
+
+.about-paragraph {
+  margin-top: 0px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.mission-details,
+.vision-details,
+.values-details {
+  position: absolute;
+  top: 60px;
+  left: 45px;
+  width: 70%;
+  min-height: 100%;
+  padding: 30px;
+  background-color: rgb(172, 222, 255);
+  border-radius: 20px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.1s ease-out;
+}
+
+.mission-details.open,
+.vision-details.open,
+.values-details.open {
+  transform: scaleX(1);
+}
+
+.details-text {
+  font-size: 18px;
+}
+
+.about-toggle-button {
+  background-color: rgb(65, 125, 216);
+  border: 3px dashed rgb(152, 179, 238);
+  position: absolute;
+  bottom: -30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  color: rgb(186, 216, 250);
+}
+
+.about-toggle-button:hover {
+  color: rgb(65, 125, 216);
+  background-color: rgb(186, 216, 250);
+}
+
+.mission-bullet-points.hide,
+.vision-bullet-points.hide,
+.values-bullet-points.hide {
+  display: none;
+}
+
+.mission-bullet-points,
+.vision-bullet-points,
+.values-bullet-points {
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .about-overview-grid {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-toggle-button {
+    bottom: 40%;
+    right: 5%;
+  }
+
+  .mission-details,
+  .vision-details,
+  .values-details {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    min-height: 100px;
+    max-height: 150px;
+    padding: 50px 10px 10px 10px;
+    background: linear-gradient(
+      to bottom,
+      transparent 3%,
+      rgba(227, 242, 255, 1)
+    );
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.1s ease-out;
+  }
+
+  .about-heading {
+    z-index: 5;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+
+  .about-list-item {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .about-overview-background {
+    display: none;
+  }
+
+  .about-paragraph {
+    font-size: 18px;
+    font-weight: 200;
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
+  }
+
+  .about-overview-mission {
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 1;
+  }
+
+  .about-overview-vision {
+    grid-row: 5 / span 2;
+    grid-column: 1 / span 1;
+  }
+
+  .about-overview-values {
+    grid-row: 7 / span 2;
+    grid-column: 1 / span 1;
+  }
+
+  .small-circle {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .details-text {
+    font-size: 14px;
+  }
+
+  .about-list-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-overview-details-text {
+    font-size: 14px;
+  }
+}

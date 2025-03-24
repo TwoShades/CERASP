@@ -8,11 +8,19 @@
   gap: 20px;
 }
 
+/* Generic panel styles */
+.project-panel {
+  background: var(--project-panel-background);
+  color: var(--project-panel-color);
+  border-radius: var(--project-panel-border-radius);
+  padding: var(--project-panel-padding);
+  box-shadow: var(--project-panel-shadow);
+}
+
+/* Top Left Text */
 .top-left-text {
-  border-radius: 20px;
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
-  padding-left: 0%;
   padding-right: 10%;
   display: flex;
   flex-direction: column;
@@ -21,6 +29,7 @@
   text-align: left;
 }
 
+/* Three Circles */
 .three-circles {
   display: flex;
   justify-content: center;
@@ -53,9 +62,8 @@
   box-shadow: 0px 0px 4px 4px rgba(145, 145, 145, 0.8);
 }
 
+/* Middle Row */
 .middle-row {
-  border-radius: 20px;
-  box-shadow: 0px 0px 4px 4px rgba(230, 230, 230, 0.5);
   grid-row: 2 / span 1;
   grid-column: 1 / span 2;
   overflow: hidden;
@@ -63,27 +71,32 @@
 
 .middle-row img,
 .bottom-left img {
-  width: 100%; /* Always fill width */
-  height: 100%; /* Stays within .top-panel’s height */
-  object-fit: cover; /* Ensures no stretching */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+/* Bottom Panels */
 .bottom-left {
-  border-radius: 20px;
-  background-color: rgb(245, 230, 210);
-  box-shadow: 0px 0px 4px 4px rgba(224, 224, 224, 0.5);
   grid-row: 3 / span 1;
   grid-column: 1 / span 1;
-  overflow: hidden;
+  background-color: rgb(245, 230, 210);
 }
 
 .bottom-right-text {
-  border-radius: 20px;
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
   display: flex;
   padding: 10%;
   align-items: center;
   justify-content: center;
   text-align: center;
-  grid-row: 3 / span 1;
-  grid-column: 2 / span 1;
+}
+
+/* Apply shared styles */
+.middle-row,
+.bottom-left,
+.bottom-right-text {
+  border-radius: var(--project-panel-border-radius);
+  box-shadow: var(--project-panel-shadow);
 }

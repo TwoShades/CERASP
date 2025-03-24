@@ -5,8 +5,8 @@ const ProjectPanelA = ({ title = "Project", image, headline, textContent }) => {
   return (
     <div className="project-panel-a-grid-layout">
       <div className="top-panel">
-        {image}
-        <div className="top-panel-title">{title}</div>
+        <figure>{image}</figure>
+        <header className="top-panel-title">{title}</header>
       </div>
       <div className="bottom-left-panel">
         <h3>{headline}</h3>

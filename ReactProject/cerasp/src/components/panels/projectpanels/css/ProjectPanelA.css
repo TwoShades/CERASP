@@ -6,12 +6,21 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
-  border-radius: 10px;
-  /* background-color: rgb(255, 255, 255); */
+  border-radius: var(--project-panel-border-radius);
 }
 
+/* Generic project panel styling */
+.project-panel {
+  background: var(--project-panel-background);
+  color: var(--project-panel-color);
+  border-radius: var(--project-panel-border-radius);
+  padding: var(--project-panel-padding);
+  box-shadow: var(--project-panel-shadow);
+}
+
+/* Top Panel - Override for title panel */
 .top-panel {
-  border-radius: 10px;
+  border-radius: var(--project-panel-border-radius);
   background-color: rgb(182, 182, 182);
   grid-row: 1 / span 1;
   grid-column: 1 / span 3;
@@ -20,12 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.top-panel img {
-  width: 100%; /* Always fill width */
-  height: 100%; /* Stays within .top-panel’s height */
-  object-fit: cover; /* Ensures no stretching */
+  padding: 0%;
 }
 
 .top-panel-title {
@@ -38,27 +42,22 @@
   height: 100px;
   top: 0px;
   right: 0px;
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 68px;
   display: flex;
-  align-self: center;
-  text-align: center;
   align-items: center;
   justify-content: center;
 }
 
+/* Bottom Panels */
 .bottom-left-panel {
   text-align: justify;
   font-size: 1.2rem;
   font-weight: 200;
   line-height: 1.5;
-  padding: 1rem;
-  box-shadow: 1px 1px 2px 2px rgb(163, 211, 214);
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(63, 90, 100);
   grid-row: 2 / span 1;
   grid-column: 1 / span 1;
+  padding: 0;
 }
 
 .bottom-left-panel h3 {
@@ -66,15 +65,24 @@
 }
 
 .bottom-center-panel {
-  border-radius: 10px;
-  background-color: rgb(159, 225, 255);
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
+  background-color: var(--temp-background-color);
 }
 
 .bottom-right-panel {
-  border-radius: 10px;
-  background-color: rgb(130, 250, 250);
   grid-row: 2 / span 1;
   grid-column: 3 / span 1;
+  background-color: var(--temp-background-color);
+}
+
+/* Apply the shared project-panel class to all bottom panels */
+.bottom-left-panel,
+.bottom-center-panel,
+.bottom-right-panel {
+  background: var(--project-panel-background);
+  color: var(--project-panel-color);
+  border-radius: var(--project-panel-border-radius);
+  padding: var(--project-panel-padding);
+  box-shadow: var(--project-panel-shadow);
 }
