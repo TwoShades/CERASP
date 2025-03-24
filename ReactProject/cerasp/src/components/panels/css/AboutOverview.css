@@ -1,5 +1,4 @@
 .about-overview-grid {
-  /* font-family: "Urbanist", sans-serif; */
   font-family: "Mulish", sans-serif;
   width: 80%;
   height: 80%;
@@ -61,27 +60,25 @@
   grid-column: 7 / span 3;
 }
 
-h2 {
+.about-heading {
   font-weight: bolder;
   margin-bottom: 10px;
   color: rgb(49, 49, 49);
 }
 
-ul {
+.about-list {
   list-style-type: none;
   padding: 0;
 }
 
-.about-overview-mission ul li,
-.about-overview-vision ul li,
-.about-overview-values ul li {
+.about-list-item {
   margin-top: 10px;
   font-size: 22px;
   font-weight: 600;
   color: rgb(22, 56, 102);
 }
 
-p {
+.about-paragraph {
   margin-top: 0px;
   font-weight: 400;
   font-size: 20px;
@@ -91,19 +88,14 @@ p {
 .vision-details,
 .values-details {
   position: absolute;
-  top: 60px; /* Starts below the list */
+  top: 60px;
   left: 45px;
   width: 70%;
   min-height: 100%;
   padding: 30px;
   background-color: rgb(172, 222, 255);
-  /* background: linear-gradient(
-    to right,
-    rgba(172, 222, 255, 0.144),
-    rgb(172, 222, 255)
-  ); */
   border-radius: 20px;
-  transform: scaleX(0); /* Hidden initially */
+  transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.1s ease-out;
 }
@@ -111,16 +103,14 @@ p {
 .mission-details.open,
 .vision-details.open,
 .values-details.open {
-  transform: scaleX(1); /* Reveal the content */
+  transform: scaleX(1);
 }
 
-.mission-details p,
-.vision-details p,
-.values-details p {
+.details-text {
   font-size: 18px;
 }
 
-button {
+.about-toggle-button {
   background-color: rgb(65, 125, 216);
   border: 3px dashed rgb(152, 179, 238);
   position: absolute;
@@ -133,7 +123,7 @@ button {
   color: rgb(186, 216, 250);
 }
 
-button:hover {
+.about-toggle-button:hover {
   color: rgb(65, 125, 216);
   background-color: rgb(186, 216, 250);
 }
@@ -144,12 +134,102 @@ button:hover {
   display: none;
 }
 
+.mission-bullet-points,
+.vision-bullet-points,
+.values-bullet-points {
+  margin: 0;
+}
+
 @media (max-width: 1200px) {
-  .about-overview-history p {
+  .about-overview-grid {
+    width: 80%;
+    height: 80%;
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-toggle-button {
+    bottom: 40%;
+    right: 5%;
+  }
+
+  .mission-details,
+  .vision-details,
+  .values-details {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80%;
+    min-height: 100px;
+    max-height: 150px;
+    padding: 50px 10px 10px 10px;
+    background: linear-gradient(
+      to bottom,
+      transparent 3%,
+      rgba(227, 242, 255, 1)
+    );
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.1s ease-out;
+  }
+
+  .about-heading {
+    z-index: 5;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+
+  .about-list-item {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .about-overview-background {
+    display: none;
+  }
+
+  .about-paragraph {
     font-size: 18px;
     font-weight: 200;
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 1;
   }
+
+  .about-overview-mission {
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 1;
+  }
+
+  .about-overview-vision {
+    grid-row: 5 / span 2;
+    grid-column: 1 / span 1;
+  }
+
+  .about-overview-values {
+    grid-row: 7 / span 2;
+    grid-column: 1 / span 1;
+  }
+
   .small-circle {
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .details-text {
+    font-size: 14px;
+  }
+
+  .about-list-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-overview-details-text {
+    font-size: 14px;
   }
 }
