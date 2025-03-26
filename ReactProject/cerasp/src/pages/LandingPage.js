@@ -3,18 +3,18 @@ import ScrollPanel from "../components/layouts/ScrollPanel";
 import "./css/LandingPage.css";
 
 const LandingPage = () => {
-  const [showSquare, setShowSquare] = useState(true);
-  const [showTriangle, setShowTriangle] = useState(false);
+  const [showLogo, setShowLogo] = useState(true);
+  const [showText, setShowText] = useState(false);
   const [showPage, setShowPage] = useState(false);
 
   useEffect(() => {
     const timer1 = setTimeout(() => {
-      setShowSquare(false);
-      setShowTriangle(true);
+      setShowLogo(false);
+      setShowText(true);
     }, 1000);
 
     const timer2 = setTimeout(() => {
-      setShowTriangle(false);
+      setShowText(false);
       setShowPage(true);
     }, 2000);
 
@@ -26,41 +26,33 @@ const LandingPage = () => {
 
   return (
     <div className="landing scroll-container">
-
       <ScrollPanel title="landing" id="landing">
-
         <div className="landing-page">
-          {showSquare && <div className="fade-in-out square"></div>}
-          {showTriangle && <div className="fade-in-out triangle"></div>}
+          {showLogo && (
+            <img
+              src="/logos/cerasplogo.png"
+              alt="CERASP Logo"
+              className="fade-in-out logo"
+            />
+          )}
+          {showText && <h1 className="fade-in-out text">Welcome to CERASP</h1>}
           {showPage && <div className="main-content">Actual Landing Page Content</div>}
         </div>
-
       </ScrollPanel>
 
+      {/* ===================
+          =====OVERVIEW======
+          =================== */}
+      <ScrollPanel title="landing" id="overview">
+        <p>OVERVIEW</p>
+      </ScrollPanel>
 
-      
-          {/*   ===================
-                =====OVERVIEW======
-                ===================
-          */}
-
-
-        <ScrollPanel title="landing" id="overview">
-          <p>OVERVIEW</p>
-        
-        </ScrollPanel>
-
-          {/*   ============================
-                =====Equipment Updates======
-                ============================
-          */}
-
-        <ScrollPanel title="landing" id="welcome">
-          <p>Equipment Updates</p>
-          {/* Button to trigger the modal */}
-          {/* <button onClick={handleOpenModal}>Open Modal</button> */}
-        </ScrollPanel>
-      
+      {/* ============================
+          =====Equipment Updates======
+          ============================ */}
+      <ScrollPanel title="landing" id="welcome">
+        <p>Equipment Updates</p>
+      </ScrollPanel>
     </div>
   );
 };
