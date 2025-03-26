@@ -7,11 +7,10 @@ import sitemap from "../../sitemap.json";
 const Navigation = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  // const [isMobile, setIsMobile] = useState(window.innerWidth < 1025);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1201);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(false);
-  const [openSubMenu, setOpenSubMenu] = useState(null); // Track which sub-menu is open
+  const [openSubMenu, setOpenSubMenu] = useState(null);
 
   const { handleLinkClick } = useScrollToTop(pathname, () =>
     setMenuOpen(false)
@@ -21,9 +20,8 @@ const Navigation = () => {
     const handleResize = () => {
       if (window.innerWidth > 1024) {
         setMenuOpen(false);
-        setOpenSubMenu(null); // Close sub-menus on desktop
+        setOpenSubMenu(null);
       }
-      // setIsMobile(window.innerWidth < 1025);
       setIsMobile(window.innerWidth < 1201);
     };
 
@@ -36,13 +34,23 @@ const Navigation = () => {
   };
 
   const toggleSubMenu = (menu) => {
-    setOpenSubMenu((prev) => (prev === menu ? null : menu)); // Toggle sub-menu
+    setOpenSubMenu((prev) => (prev === menu ? null : menu));
   };
 
   return (
     <nav className="nav">
       {isMobile && (
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="hamburger"
+          onClick={() => {
+            setMenuOpen((prev) => {
+              if (prev) {
+                setOpenSubMenu(null); // Reset the dropdown state when closing the menu
+              }
+              return !prev;
+            });
+          }}
+        >
           {menuOpen ? "✖" : "☰"}
         </button>
       )}
@@ -60,10 +68,17 @@ const Navigation = () => {
                 onMouseEnter={() => !isMobile && setHoveredMenu(title)}
                 onMouseLeave={() => !isMobile && setHoveredMenu(null)}
               >
-                <div onClick={() => isMobile && toggleSubMenu(title)}>
+                <div
+                  className="dropdown-clickable-zone"
+                  onClick={() => isMobile && toggleSubMenu(title)}
+                >
                   <Link
                     to={`/${title}`}
-                    onClick={() => handleLinkClick(`/${title}`)}
+                    onClick={() => {
+                      handleLinkClick(`/${title}`);
+                      setOpenSubMenu(null); // Close the dropdown
+                      setMenuOpen(false); // Close the side menu
+                    }}
                   >
                     {navTitle}
                   </Link>
@@ -82,9 +97,11 @@ const Navigation = () => {
                         {filteredSubPages.map((subPage) => (
                           <li
                             key={subPage}
-                            onClick={() =>
-                              handleNavigateToSection(subPage, `/${title}`)
-                            }
+                            onClick={() => {
+                              handleNavigateToSection(subPage, `/${title}`);
+                              setOpenSubMenu(null); // Close the dropdown
+                              setMenuOpen(false); // Close the side menu
+                            }}
                             style={{ cursor: "pointer" }}
                           >
                             {subPage.replaceAll("-", " ")}
