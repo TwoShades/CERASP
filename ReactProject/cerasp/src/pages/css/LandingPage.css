@@ -1,17 +1,27 @@
 .landing-page {
   text-align: center;
   padding: 20px;
+  width: 70%;
+  height: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .fade-in-out {
-  animation: fadeInOut 1s forwards;
+  animation: fade-in-out 1s ease-in-out;
 }
 
-@keyframes fadeInOut {
+@keyframes fade-in-out {
   0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
@@ -19,6 +29,20 @@
 
 .main-content {
   animation: fadeIn 1s forwards;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
 }
 
 @keyframes fadeIn {
@@ -29,6 +53,17 @@
   100% {
     opacity: 1;
   }
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.text {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
 }
 
 @media (max-width: 1536px) {}

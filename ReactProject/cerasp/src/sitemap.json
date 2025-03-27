@@ -1,6 +1,19 @@
 {
   "pages": [
     {
+      "title": "landing",
+      "nav-title": "",
+      "sub-pages": [
+        "landing",
+        "overview",
+        "welcome",
+        "achievements",
+        "expertises",
+        "sectors",
+        "news"
+      ]
+    },
+    {
       "title": "about",
       "nav-title": "About Us",
       "sub-pages": [
