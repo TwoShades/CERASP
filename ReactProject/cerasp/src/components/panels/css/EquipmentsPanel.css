@@ -1,20 +1,20 @@
 .equipments-panel-grid {
   font-family: "Mulish", sans-serif;
   margin-top: 5%;
-  height: 90%;
+  height: 95%;
   width: 80%;
   display: grid;
   gap: 20px;
   grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .equipments-left-content {
   display: flex;
   flex-flow: row wrap;
   grid-row: 1 / span 1;
-  grid-column: 1 / span 2;
-  gap: 15px;
+  grid-column: 1 / span 3;
+  gap: 20px;
 }
 
 .equipments-right-content {
@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
   grid-row: 1 / span 1;
-  grid-column: 3 / span 1;
+  grid-column: 4 / span 1;
 }
 
 .equipments-right-content-text {
@@ -32,23 +32,75 @@
   font-size: 18px;
   margin-bottom: 2em;
 }
+
 .individual-equipment {
-  background-color: rgb(255, 255, 255);
-  border: 1px dashed grey;
-  border-radius: 10px;
+  position: relative;
   color: rgb(55, 106, 182);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.2em;
   flex: 1 1 calc(50% - 20px);
-  height: 45%;
+  height: 300px;
   max-width: calc(50% - 20px);
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  overflow: hidden; /* Ensures no content overflows */
+}
+
+.individual-equipment-image {
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  position: relative;
+}
+
+.individual-equipment:hover .individual-equipment-image::before {
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Semi-transparent black for darken effect */
+  z-index: 1; /* Overlay stays above the image */
+  object-fit: cover;
+}
+
+.equipment-title {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: rgb(55, 106, 182);
+  text-align: center;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.individual-equipment .learn-more-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.individual-equipment:hover .learn-more-button {
+  opacity: 1;
 }
 
 /* Pagination buttons styles */
 .pagination-controls {
-  grid-column: 1 / span 2; /* Makes the pagination span across the left content area */
+  grid-column: 1 / span 2;
   display: flex;
   justify-content: center;
   align-items: center;

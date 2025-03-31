@@ -2,24 +2,35 @@ import "./css/Employee.css";
 import ReactMarkdown from "react-markdown";
 
 const Employee = ({ member }) => {
+  const defaultMember = {
+    name: "John Doe",
+    about: "This is a default employee profile.",
+    image: { url: "/images/default-profile.png" }, // Update with a valid placeholder image
+  };
+
+  const finalMember = member || defaultMember;
+
   const imageUrl =
-    Array.isArray(member.image) && member.image.length > 0
-      ? member.image[0]?.formats?.small?.url || member.image[0]?.url
-      : member.image?.formats?.small?.url || member.image?.url;
+    Array.isArray(finalMember.image) && finalMember.image.length > 0
+      ? finalMember.image[0]?.formats?.small?.url || finalMember.image[0]?.url
+      : finalMember.image?.formats?.small?.url || finalMember.image?.url;
+
   return (
     <div className="employee-card">
-      <h3>{member.name}</h3>
+      <h3>{finalMember.name}</h3>
 
       {imageUrl && (
         <img
           className="employee-card-img"
           src={`${imageUrl}`}
-          alt={member.name}
+          alt={finalMember.name}
         />
       )}
 
       <ReactMarkdown>
-        {member.about ? member.about : "No about information available"}
+        {finalMember.about
+          ? finalMember.about
+          : "No about information available"}
       </ReactMarkdown>
 
       <a

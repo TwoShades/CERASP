@@ -1,12 +1,12 @@
 /* GLOBAL CSS */
 :root {
-  --bg-color-light: #E3F2FF;
-  --text-color-light: #1A1A1A;
-  --secondary-text-color-light: #4F4F4F;
-  --primary-blue: #005BA1;
-  --primary-hover-blue: #0088E2;
-  --secondary-blue: #3EA7E1;
-  --secondary-hover-blue: #72C5F0;
+  --bg-color-light: #e3f2ff;
+  --text-color-light: #1a1a1a;
+  --secondary-text-color-light: #4f4f4f;
+  --primary-blue: #005ba1;
+  --primary-hover-blue: #0088e2;
+  --secondary-blue: #3ea7e1;
+  --secondary-hover-blue: #72c5f0;
 
   /* Project Panels */
   --project-panel-background: rgba(255, 255, 255, 0.5);

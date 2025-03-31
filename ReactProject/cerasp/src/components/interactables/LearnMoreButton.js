@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ModalMessage from "../uicomponents/ModalMessage";
 import "./css/LearnMoreButton.css"; // Add your custom styling
 
-const LearnMoreButton = ({ pdfUrl }) => {
+const LearnMoreButton = ({ pdfUrl, text = "Learn More" }) => {
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal visibility state
 
   const handleOpenModal = () => setIsModalOpen(true); // Open modal
@@ -12,7 +12,7 @@ const LearnMoreButton = ({ pdfUrl }) => {
     <div>
       {/* Learn More Button */}
       <button onClick={handleOpenModal} className="learn-more-button">
-        Learn More
+        {text}
       </button>
 
       {/* Modal for displaying PDF */}

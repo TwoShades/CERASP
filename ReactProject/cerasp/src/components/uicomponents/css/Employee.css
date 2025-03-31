@@ -1,7 +1,7 @@
 .employee-card {
   color: #7e7e7e;
   background: linear-gradient(135deg, rgb(240, 248, 255), rgb(255, 255, 255));
-  box-shadow: 3px 3px 4px 2px rgb(179, 202, 216);
+  box-shadow: 1px 1px 2px 1px rgb(179, 202, 216);
   border: 2px solid grey;
   padding: 20px;
   border-radius: 16px;
@@ -20,12 +20,12 @@
 }
 
 .employee-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 2px 2px 4px 4px rgb(209, 222, 228);
+  /* transform: translateY(-4px); */
+  box-shadow: 2px 2px 4px 4px rgb(201, 209, 212);
 }
 
 .employee-card-img {
-  width: 40%;
+  width: 60%;
   max-width: 150px;
   height: auto;
   aspect-ratio: 1 / 1;
@@ -38,7 +38,7 @@
 }
 
 .employee-card h3 {
-  margin: 10px 0;
+  margin: 10px 0 25px 0;
   font-size: 1.2rem;
   color: rgb(56, 56, 56);
 }
@@ -56,7 +56,7 @@
 .linkedin {
   margin-top: auto;
   /* Pushes LinkedIn icon to the bottom */
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   /* Ensures spacing from the bottom */
 }
 

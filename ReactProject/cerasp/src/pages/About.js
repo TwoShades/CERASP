@@ -26,12 +26,23 @@ const About = () => {
         "https://celebrated-approval-6e3b18d4f7.strapiapp.com/api/staffs?populate=image"
       )
       .then((response) => {
-        setTeam(response.data.data);
+        const fetchedTeam = response.data.data || [];
+        setTeam(fetchedTeam);
         setLoading(false);
       })
       .catch((error) => {
         setError(error.message);
         setLoading(false);
+        // If API fails, fill with 5 placeholders (for testing)
+        setTeam(
+          Array.from({ length: 5 }, (_, i) => ({
+            id: `employee-${i}`,
+            name: `Employee ${i + 1}`,
+            about:
+              "This is a placeholder employee profile.  Here is some information about them.",
+            image: { url: "/photos/placeholder.jpg" },
+          }))
+        );
       });
   }, []);
 

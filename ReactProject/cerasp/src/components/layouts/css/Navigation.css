@@ -50,9 +50,9 @@
 
 .dropdown {
   position: absolute;
-  width: 270px;
+  width: 230px;
   top: 80%;
-  left: -03%; 
+  left: -03%;
   background-color: rgb(255, 255, 255);
   box-shadow: -1px 0px 3px 0px rgb(112, 140, 177),
     1px 0px 3px 0px rgb(112, 140, 177), 0px 1px 3px 0px rgb(78, 99, 126);
@@ -127,6 +127,16 @@
   background-color: rgba(0, 0, 0, 0.05); /* Optional hover effect */
 }
 
+@media (max-width: 1495px) {
+  .nav-item {
+    padding: 10px;
+    margin-left: 10px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px;
+  }
+}
+
 /* Mobile Styling */
 /* @media (max-width: 1024px) { */
 @media (max-width: 1200px) {
@@ -166,7 +176,7 @@
 
   .dropdown {
     position: absolute;
-    left: -03%; 
+    left: -03%;
     width: 100%;
   }
 

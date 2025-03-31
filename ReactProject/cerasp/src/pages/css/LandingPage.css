@@ -66,14 +66,20 @@
   text-align: center;
 }
 
-@media (max-width: 1536px) {}
+@media (max-width: 1536px) {
+}
 
-@media (max-width: 1280px) {}
+@media (max-width: 1280px) {
+}
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+}
 
-@media (max-width: 640px) {}
+@media (max-width: 640px) {
+}
 
-@media (max-width: 475px) {}
+@media (max-width: 475px) {
+}

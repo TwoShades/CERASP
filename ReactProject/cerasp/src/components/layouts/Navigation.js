@@ -57,6 +57,7 @@ const Navigation = () => {
       <ul className={`nav-list ${isMobile && menuOpen ? "show" : ""}`}>
         {sitemap.pages.map(
           ({ title, "nav-title": navTitle, "sub-pages": subPages }) => {
+            if (title.toLowerCase() === "landing") return null;
             const filteredSubPages = subPages.filter(
               (subPage) => subPage.toLowerCase() !== "contact-us-form"
             );

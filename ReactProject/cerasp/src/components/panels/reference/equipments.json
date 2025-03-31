@@ -1,0 +1,118 @@
+{
+  "equipment": [
+    {
+      "id": "equipment-1",
+      "name": "DLS Digital light Scattering Zetasizer Advance Series Pro (Red)",
+      "photo": "equipment-1.png",
+      "pdf": "equipment-1.pdf"
+    },
+    {
+      "id": "equipment-2",
+      "name": "Motic BA310 Elite Upright Compound Microscope, Motic Instruments",
+      "photo": "equipment-2.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-3",
+      "name": "Agilent 1260 Infinity II HPLC-DAD System",
+      "photo": "equipment-3.png",
+      "pdf": "equipment-3.pdf"
+    },
+    {
+      "id": "equipment-4",
+      "name": "LV-DV2T-Viscometer-BROOKFIELD/AMETEK",
+      "photo": "equipment-4.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-5",
+      "name": "VWR® Double Beam UV-Vis Spectrophotometer-UV-6300PC",
+      "photo": "equipment-5.png",
+      "pdf": "equipment-5.pdf"
+    },
+    {
+      "id": "equipment-6",
+      "name": "C-MAG HS 10 IKAMAG® Hot Plate Stirrer, IKA® Works",
+      "photo": "equipment-6.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-7",
+      "name": "Drying/Heating Ovens with Forced Convection 115 UL",
+      "photo": "equipment-7.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-8",
+      "name": "ECO Air-Cooled Refrigerated Circulators (ECO RE 415S), Lauda-Brinkmann-4L",
+      "photo": "equipment-8.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-9",
+      "name": "LOSS ON DRYING- THERMOBALANCE-MA 30-SATORIUS",
+      "photo": "equipment-9.png",
+      "pdf": "equipment-9.pdf"
+    },
+    {
+      "id": "equipment-10",
+      "name": "MEASUREMENT OF WATER ACTIVITY (aw)-AQUALAB TDL2-METER FOOD",
+      "photo": "equipment-10.png",
+      "pdf": "equipment-10.pdf"
+    },
+    {
+      "id": "equipment-11",
+      "name": "BRIX AND REFRACTIVE INDEX MEASUREMENT -HI96800-HANNA",
+      "photo": "equipment-11.png",
+      "pdf": "equipment-11.pdf"
+    },
+    {
+      "id": "equipment-12",
+      "name": "CONDUCTIVITY MEASUREMENT-PORTABLE CONDUCTIMETER -VWR",
+      "photo": "equipment-12.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-13",
+      "name": "SPECIFIC GRAVITY MEASUREMENT-PYCNOMETER-FISHER SCIENTIFIC",
+      "photo": "equipment-13.png",
+      "pdf": "equipment-13.pdf"
+    },
+    {
+      "id": "equipment-14",
+      "name": "DOUBLE JACKETED GLASS VESSEL (2 OR 4 LITERS)-CHEMGLASS",
+      "photo": "equipment-14.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-15",
+      "name": "MULTI-PARAMETERS PHOTOMETER-HI83399-HANNA",
+      "photo": "equipment-15.png",
+      "pdf": ""
+    },
+    {
+      "id": "equipment-16",
+      "name": "TURBIDITY MEASUREMENT- TURBIDIMETER- HI88713-HANNA",
+      "photo": "equipment-16.png",
+      "pdf": "equipment-16.pdf"
+    },
+    {
+      "id": "equipment-17",
+      "name": "COLOR MEASUREMENT-SPECTROCOLORIMETER-RM200QC-PANTONE",
+      "photo": "equipment-17.png",
+      "pdf": "equipment-17.pdf"
+    },
+    {
+      "id": "equipment-18",
+      "name": "CONSISTENCY MEASUREMENT -CONSISTOMETER BOSTWICK-CSC SCIENTIFIC",
+      "photo": "equipment-18.png",
+      "pdf": "equipment-18.pdf"
+    },
+    {
+      "id": "equipment-19",
+      "name": "THERMOREGULATED SMALL SAMPLER ADAPTER- VISCOSIMETER-BROOKFIELD AMETEK",
+      "photo": "equipment-19.png",
+      "pdf": ""
+    }
+  ]
+}

@@ -1,60 +1,39 @@
 import React, { useState, useEffect } from "react";
 import "./css/EquipmentsPanel.css";
 import LearnMoreButton from "../interactables/LearnMoreButton";
+import equipmentsData from "./reference/equipments.json";
 
 const EquipmentsPanel = () => {
-  const equipmentArray = [
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-    "ten",
-    "eleven",
-    "twelve",
-    "thirteen",
-    "fourteen",
-    "fifteen",
-  ];
-
+  const [equipments, setEquipments] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(4);
 
-  // Handle window resizing to change items per page dynamically
+  useEffect(() => {
+    setEquipments(equipmentsData.equipment || []);
+  }, []);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 577) {
         setItemsPerPage(1);
       } else if (window.innerWidth < 1025) {
-        setItemsPerPage(2); // 2 items per page for screens smaller than 1025px
+        setItemsPerPage(2);
       } else {
-        setItemsPerPage(4); // 4 items per page for larger screens
+        setItemsPerPage(4);
       }
     };
 
-    // Initial check
     handleResize();
-
-    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
-
-    // Clean up event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = equipmentArray.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
 
-  // Handle page change
   const nextPage = () => {
-    if (currentPage < Math.ceil(equipmentArray.length / itemsPerPage)) {
+    if (currentPage < Math.ceil(equipments.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -68,12 +47,29 @@ const EquipmentsPanel = () => {
   return (
     <div className="equipments-panel-grid">
       <div className="equipments-left-content">
-        {currentItems.map((item, index) => (
-          <div key={index} className="individual-equipment">
-            {item}
-          </div>
-        ))}
+        {currentItems.map((equipment) => {
+          console.log(`Equipment: ${equipment.name}, PDF: "${equipment.pdf}"`);
+
+          return (
+            <div key={equipment.id} className="individual-equipment">
+              <div
+                className="individual-equipment-image"
+                style={{
+                  backgroundImage: `url(/equipments/photos/${equipment.photo})`,
+                }}
+              ></div>
+              <h4 className="equipment-title">{equipment.name}</h4>
+              {equipment.pdf && equipment.pdf.trim() !== "" && (
+                <LearnMoreButton
+                  pdfUrl={`/equipments/pdfs/${equipment.pdf}`}
+                  text="View PDF"
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
+
       <div className="equipments-right-content">
         <h2>Our Equipment</h2>
         <p className="equipments-right-content-text">
@@ -84,7 +80,7 @@ const EquipmentsPanel = () => {
         </p>
         <LearnMoreButton pdfUrl="/pdfs/Lorem_ipsum.pdf" />
       </div>
-      {/* Pagination controls below the left panel */}
+
       <div className="pagination-controls">
         <button
           onClick={prevPage}
@@ -95,9 +91,7 @@ const EquipmentsPanel = () => {
         </button>
         <button
           onClick={nextPage}
-          disabled={
-            currentPage === Math.ceil(equipmentArray.length / itemsPerPage)
-          }
+          disabled={currentPage === Math.ceil(equipments.length / itemsPerPage)}
           className="pagination-arrow"
         >
           &gt;
