@@ -10,6 +10,7 @@ import StockImageFetch from "../components/placeholders/StockImageFetch";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import EquipmentsPanel from "../components/panels/EquipmentsPanel.js";
+import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
 import LearnMoreButton from "../components/interactables/LearnMoreButton.js";
 import AboutOverview from "../components/panels/AboutOverview.js";
 
@@ -103,9 +104,7 @@ const About = () => {
 
       {/* BOARD */}
       <ScrollPanel title="about" id="board">
-        <div>
-          <LearnMoreButton pdfUrl="/pdfs/Lorem_ipsum.pdf" />
-        </div>
+        <BoardMembersPanel />
       </ScrollPanel>
 
       {/* PARTNERS */}
