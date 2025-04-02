@@ -10,8 +10,10 @@ import StockImageFetch from "../components/placeholders/StockImageFetch";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import EquipmentsPanel from "../components/panels/EquipmentsPanel.js";
+import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
 import LearnMoreButton from "../components/interactables/LearnMoreButton.js";
 import AboutOverview from "../components/panels/AboutOverview.js";
+import teamData from "./reference/team.json";
 
 const About = () => {
   useScrollToPanel();
@@ -92,7 +94,7 @@ const About = () => {
         <div className="team-section">
           <h1>Team</h1>
           <EmblaCarousel
-            slides={[...team, ...team]}
+            slides={teamData.team}
             options={options}
             renderSlide={(member) => (
               <Employee key={member.id} member={member} />
@@ -103,9 +105,7 @@ const About = () => {
 
       {/* BOARD */}
       <ScrollPanel title="about" id="board">
-        <div>
-          <LearnMoreButton pdfUrl="/pdfs/Lorem_ipsum.pdf" />
-        </div>
+        <BoardMembersPanel />
       </ScrollPanel>
 
       {/* PARTNERS */}
@@ -127,7 +127,7 @@ const About = () => {
         <div className="videos-section">
           <h1>Videos</h1>
           <EmblaSinglePanel
-            slides={["ShwbF2xodT8", "ShwbF2xodT8", "ShwbF2xodT8"]}
+            slides={["ShwbF2xodT8"]}
             options={options}
             renderSlide={(slide) => (
               <div className="video-container">

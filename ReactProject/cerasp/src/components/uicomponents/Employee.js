@@ -4,33 +4,30 @@ import ReactMarkdown from "react-markdown";
 const Employee = ({ member }) => {
   const defaultMember = {
     name: "John Doe",
-    about: "This is a default employee profile.",
-    image: { url: "/images/default-profile.png" }, // Update with a valid placeholder image
+    role: "This is a default employee profile.",
+    photo: "default-profile.png",
   };
 
   const finalMember = member || defaultMember;
 
+  // Check if photo is an empty string, and use placeholder if so
   const imageUrl =
-    Array.isArray(finalMember.image) && finalMember.image.length > 0
-      ? finalMember.image[0]?.formats?.small?.url || finalMember.image[0]?.url
-      : finalMember.image?.formats?.small?.url || finalMember.image?.url;
+    finalMember.photo && finalMember.photo !== ""
+      ? `/team/photos/${finalMember.photo}`
+      : "/photos/placeholder.jpg"; // Use placeholder if photo is empty string
 
   return (
     <div className="employee-card">
       <h3>{finalMember.name}</h3>
 
-      {imageUrl && (
-        <img
-          className="employee-card-img"
-          src={`${imageUrl}`}
-          alt={finalMember.name}
-        />
-      )}
+      <img
+        className="employee-card-img"
+        src={imageUrl}
+        alt={finalMember.name}
+      />
 
       <ReactMarkdown>
-        {finalMember.about
-          ? finalMember.about
-          : "No about information available"}
+        {finalMember.role ? finalMember.role : "No about information available"}
       </ReactMarkdown>
 
       <a
