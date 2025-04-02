@@ -48,7 +48,7 @@ const BoardMembersPanel = () => {
 
   return (
     <div className="board-members-panel-grid">
-      <h2 className="board-members-title">Board Members</h2>
+      <h1 className="board-members-title">Board Members</h1>
       <div className="board-members-content">
         {isMobile
           ? currentMembers.map((member) => (

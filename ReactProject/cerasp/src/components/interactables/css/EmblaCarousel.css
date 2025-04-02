@@ -163,8 +163,8 @@
   }
 
   .embla__slide {
-    --slide-size: 80vw;
-    padding: 1px;
+    --slide-size: 50vw;
+    padding: 8px;
   }
 }
 

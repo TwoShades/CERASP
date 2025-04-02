@@ -12,7 +12,7 @@
     to bottom,
     var(--primary-blue),
     var(--secondary-blue)
-  ); /* Vertical gradient from white to light blue */
+  );
   border: 1px solid rgb(68, 155, 255);
   box-shadow: 2px 2px 4px 1px rgba(105, 105, 105, 0.616);
   border-radius: 15px;
