@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./css/Navigation.css";
 import useScrollToTop from "../../hooks/useScrollToTop";
@@ -11,6 +11,8 @@ const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+
+  const navRef = useRef(null); // Ref for the navigation menu
 
   const { handleLinkClick } = useScrollToTop(pathname, () =>
     setMenuOpen(false)
@@ -26,7 +28,21 @@ const Navigation = () => {
     };
 
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    // Close the menu if clicked outside
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setMenuOpen(false);
+        setOpenSubMenu(null);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("click", handleClickOutside);
+    };
   }, []);
 
   const handleNavigateToSection = (section, path) => {
@@ -38,7 +54,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="nav">
+    <nav className="nav" ref={navRef}>
       {isMobile && (
         <button
           className="hamburger"
@@ -69,10 +85,7 @@ const Navigation = () => {
                 onMouseEnter={() => !isMobile && setHoveredMenu(title)}
                 onMouseLeave={() => !isMobile && setHoveredMenu(null)}
               >
-                <div
-                  className="dropdown-clickable-zone"
-                  onClick={() => isMobile && toggleSubMenu(title)}
-                >
+                <div className="dropdown-clickable-zone">
                   <Link
                     to={`/${title}`}
                     onClick={() => {
@@ -84,7 +97,14 @@ const Navigation = () => {
                     {navTitle}
                   </Link>
                   {isMobile && filteredSubPages.length > 0 && (
-                    <span className="dropdown-toggle">
+                    <span
+                      className="dropdown-toggle"
+                      onClick={(e) => {
+                        // Prevent triggering parent click
+                        e.stopPropagation();
+                        toggleSubMenu(title);
+                      }}
+                    >
                       {openSubMenu === title ? "▲" : "▼"}
                     </span>
                   )}
