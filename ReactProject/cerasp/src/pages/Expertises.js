@@ -15,7 +15,7 @@ import OneBigPanel from "../components/panels/OneBigPanel.js";
 const Expertises = () => {
   useScrollToPanel();
   return (
-    <div className="expertises scroll-container">
+    <div className="expertises scroll-container"> 
       {/*   ===================
               =====OVERVIEW======
               ===================
