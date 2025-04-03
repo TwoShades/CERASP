@@ -96,7 +96,7 @@ const BoardMembersPanel = () => {
       </div>
 
       {isMobile && (
-        <div className="pagination-controls">
+        <div className="board-pagination-controls">
           <button
             onClick={prevPage}
             disabled={currentPage === 1}
