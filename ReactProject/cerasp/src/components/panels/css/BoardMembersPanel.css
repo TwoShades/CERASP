@@ -53,7 +53,7 @@
 }
 
 .board-pagination-controls {
-  position: fixed;
+  position: absolute;
   bottom: 100px;
 }
 
