@@ -1,15 +1,21 @@
 import React from "react";
 import "./css/OneBigPanel.css";
 
-const OneBigPanel = ({ title, mainText, image, className = "" }) => {
+const OneBigPanel = ({ title, mainText }) => {
   return (
-    <div className={`one-big-panel ${className}`}>
-      <div className="title">{title}</div>
-      <div className="main-text">{mainText}</div>
-      <div className="image-panel">{image}</div>
+    <div className="one-big-panel">
+      {/* Text Section */}
+      <div className="text-section">
+        <h1>{title}</h1>
+        <p>{mainText}</p>
+      </div>
+
+      {/* Image Section */}
+      <div className="image-section">
+        Lorem Ipsum
+      </div>
     </div>
   );
 };
 
 export default OneBigPanel;
- 
