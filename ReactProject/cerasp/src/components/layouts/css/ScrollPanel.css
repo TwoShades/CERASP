@@ -4,7 +4,7 @@
 
 .scroll-panel {
   scroll-snap-align: center;
-  height: calc(100vh - 50px);
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,12 @@
 @media (max-width: 1024px) {
   .scroll-panel {
     height: 100vh;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    background-color: red; /* Temporary styling to check */
   }
 }
 

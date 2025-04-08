@@ -300,7 +300,7 @@
   .about-overview-grid {
     width: 90%;
     grid-template-rows: repeat(12, 1fr);
-    height: 85%;
+    height: 100%;
   }
 
   .about-toggle-button {
@@ -331,7 +331,7 @@
 
 @media (max-width: 440px) {
   .about-overview-grid {
-    margin-bottom: 25%;
+    /* margin-bottom: 25%; */
     grid-template-rows: repeat(9, 1fr);
   }
   .about-overview-history {
