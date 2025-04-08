@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   padding: 16px;
+  position: relative;
 }
 
 .board-members-title {
@@ -53,18 +54,35 @@
 }
 
 .board-pagination-controls {
+  font-size: 1.4em;
+  font-weight: bold;
   position: absolute;
-  bottom: 100px;
+  top: 50%; /* Vertically center the controls */
+  left: 50%; /* Horizontally center the controls */
+  transform: translate(-50%, -50%); /* Fine-tune to exactly center */
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure controls span the full width */
+}
+
+.pagination-arrow-left {
+  position: relative;
+  left: -2%; /* Move the left arrow 2% from the left */
+}
+
+.pagination-arrow-right {
+  position: relative;
+  right: -2%; /* Move the right arrow 2% from the right */
 }
 
 @media (max-width: 768px) {
   .board-members-panel-grid {
-    height: 100%;
+    height: 95%;
   }
 
   .board-members-content {
     height: 85%;
-    gap: 10px;
+    gap: 5px;
   }
 
   .board-members-panel-grid {
@@ -97,40 +115,51 @@
 }
 
 @media (max-width: 650px) {
-  .board-members-content {
-    height: 85%;
-    gap: 8px;
-    flex-direction: column;
-    justify-content: start;
-    width: 100%;
-  }
-
   .board-members-panel-grid {
-    padding: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
+    padding: 8px;
   }
 
-  .board-members-title {
-    margin-bottom: 40px;
+  .board-members-content {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    gap: 5px;
   }
 
   .individual-board-member {
-    margin-top: 0px;
-    /width: 100%;
+    margin-top: 0;
+    width: 100%;
     max-width: 300px;
     height: 180px;
+    padding: 0;
   }
 
   .individual-board-member-image {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 
   .individual-board-member-position,
   .individual-board-member-affiliation {
     font-size: 0.8em;
-    color: #000000;
+    color: #000;
+  }
+
+  .board-pagination-controls {
+    top: 50%; /* Adjust pagination position lower */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Fine-tune */
+  }
+
+  .pagination-arrow-left {
+    left: -2%; /* Offset left arrow more */
+  }
+
+  .pagination-arrow-right {
+    right: -2%; /* Offset right arrow more */
   }
 }

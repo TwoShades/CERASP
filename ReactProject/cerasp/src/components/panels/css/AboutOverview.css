@@ -300,6 +300,7 @@
   .about-overview-grid {
     width: 90%;
     grid-template-rows: repeat(12, 1fr);
+    height: 85%;
   }
 
   .about-toggle-button {
