@@ -57,22 +57,12 @@
   font-size: 1.4em;
   font-weight: bold;
   position: absolute;
-  top: 50%; /* Vertically center the controls */
-  left: 50%; /* Horizontally center the controls */
-  transform: translate(-50%, -50%); /* Fine-tune to exactly center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Ensure controls span the full width */
-}
-
-.pagination-arrow-left {
-  position: relative;
-  left: -2%; /* Move the left arrow 2% from the left */
-}
-
-.pagination-arrow-right {
-  position: relative;
-  right: -2%; /* Move the right arrow 2% from the right */
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -150,16 +140,16 @@
   }
 
   .board-pagination-controls {
-    top: 50%; /* Adjust pagination position lower */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Fine-tune */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .pagination-arrow-left {
-    left: -2%; /* Offset left arrow more */
+    left: -2%;
   }
 
   .pagination-arrow-right {
-    right: -2%; /* Offset right arrow more */
+    right: -2%;
   }
 }

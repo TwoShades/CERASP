@@ -39,11 +39,7 @@
   flex: 1 1 calc(50% - 20px);
   height: 300px;
   max-width: calc(50% - 20px);
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  overflow: hidden; /* Ensures no content overflows */
+  overflow: hidden;
 }
 
 .individual-equipment-image {
@@ -64,13 +60,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.4
-  ); /* Semi-transparent black for darken effect */
-  z-index: 1; /* Overlay stays above the image */
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
   object-fit: cover;
 }
 
@@ -97,7 +88,6 @@
   opacity: 1;
 }
 
-/* Pagination buttons styles */
 .pagination-controls {
   grid-column: 1 / span 2;
   display: flex;
@@ -135,7 +125,6 @@
   .equipments-right-content-text {
     text-align: center;
     font-size: 16px;
-    /* margin-bottom: 1em; */
   }
 
   .equipments-right-content {
@@ -155,15 +144,49 @@
 
 @media (max-width: 576px) {
   .equipments-panel-grid {
-    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 16px;
   }
 
   .equipments-right-content-text {
     display: none;
   }
 
+  .equipments-right-content {
+    width: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+    order: -1;
+  }
+
+  .equipments-left-content {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
   .individual-equipment {
-    align-self: center;
+    width: 100%;
     min-width: 100%;
+
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .board-pagination-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .pagination-arrow-left,
+  .pagination-arrow-right {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 8px;
+    cursor: pointer;
   }
 }

@@ -78,6 +78,9 @@ iframe {
 }
 
 @media (max-width: 640px) {
+  .equipments-section {
+    height: 90%;
+  }
 }
 
 @media (max-width: 475px) {

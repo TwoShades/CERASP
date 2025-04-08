@@ -48,8 +48,6 @@ const EquipmentsPanel = () => {
     <div className="equipments-panel-grid">
       <div className="equipments-left-content">
         {currentItems.map((equipment) => {
-          // console.log(`Equipment: ${equipment.name}, PDF: "${equipment.pdf}"`);
-
           return (
             <div key={equipment.id} className="individual-equipment">
               <div
