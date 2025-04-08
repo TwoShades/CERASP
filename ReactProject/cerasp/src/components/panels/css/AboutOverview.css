@@ -308,8 +308,8 @@
     right: 0%;
   }
 
-  .about-list-item {
-    font-size: 18px;
+  .about-heading {
+    font-size: 16px;
   }
 
   .about-overview-history {
@@ -331,8 +331,13 @@
 
 @media (max-width: 440px) {
   .about-overview-grid {
+<<<<<<< Updated upstream
     /* margin-bottom: 25%; */
     grid-template-rows: repeat(9, 1fr);
+=======
+    margin-bottom: 25%;
+    grid-template-rows: repeat(10, 1fr);
+>>>>>>> Stashed changes
   }
   .about-overview-history {
     grid-row: 1 / span 2;
@@ -355,7 +360,7 @@
   }
 
   .about-overview-history-text-mobile {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

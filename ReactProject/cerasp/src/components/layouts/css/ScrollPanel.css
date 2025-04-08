@@ -48,3 +48,9 @@
 .scroll-panel-error p {
   font-size: 14px;
 }
+
+@media (max-width: 576px) {
+  body {
+    background-color: red; /* Temporary styling to check */
+  }
+}
