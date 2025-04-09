@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { ScreenSizeContext } from "../../hooks/ScreenSizeContext";
 import "./css/EquipmentsPanel.css";
 import LearnMoreButton from "../interactables/LearnMoreButton";
 import equipmentsData from "./reference/equipments.json";
@@ -6,28 +7,14 @@ import equipmentsData from "./reference/equipments.json";
 const EquipmentsPanel = () => {
   const [equipments, setEquipments] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(4);
+
+  const { isMobile, isTablet } = useContext(ScreenSizeContext);
 
   useEffect(() => {
     setEquipments(equipmentsData.equipment || []);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 577) {
-        setItemsPerPage(1);
-      } else if (window.innerWidth < 1025) {
-        setItemsPerPage(2);
-      } else {
-        setItemsPerPage(4);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+  const itemsPerPage = isMobile ? 1 : isTablet ? 2 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
@@ -48,8 +35,6 @@ const EquipmentsPanel = () => {
     <div className="equipments-panel-grid">
       <div className="equipments-left-content">
         {currentItems.map((equipment) => {
-          // console.log(`Equipment: ${equipment.name}, PDF: "${equipment.pdf}"`);
-
           return (
             <div key={equipment.id} className="individual-equipment">
               <div

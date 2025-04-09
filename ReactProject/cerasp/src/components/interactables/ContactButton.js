@@ -1,32 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { ScreenSizeContext } from "../../hooks/ScreenSizeContext"; // Import the context
 import "./css/ContactButton.css";
 
 const ContactButton = () => {
-  const navigate = useNavigate(); // Get the navigate function
-  const location = useLocation(); // Get the current location/path
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { isMobile } = useContext(ScreenSizeContext); // Access the isMobile context value
 
   useEffect(() => {
     if (location.state?.scrollTo) {
-      // Scroll to the element defined by `scrollTo`
       const element = document.getElementById(location.state.scrollTo);
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
-  }, [location]); // Runs when the location changes (such as after navigation)
+  }, [location]);
 
   const handleNavigateToSection = (section) => {
-    // Use the current path and pass the scrollTo section in state
     navigate(location.pathname, { state: { scrollTo: section } });
   };
 
   return (
     <div
-      className="contact-button"
-      onClick={() => handleNavigateToSection("contact-us-form")} // Scroll to the "contact-us-form" section on the current page
+      className={`${isMobile ? "contact-button-mobile" : "contact-button"}`}
+      onClick={() => handleNavigateToSection("contact-us-form")}
     >
-      Contact Us
+      {isMobile ? (
+        <span role="img" aria-label="phone">
+          📱
+        </span>
+      ) : (
+        "Contact Us"
+      )}
     </div>
   );
 };

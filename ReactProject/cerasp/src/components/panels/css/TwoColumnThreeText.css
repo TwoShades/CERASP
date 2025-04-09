@@ -10,7 +10,7 @@
     transition: transform 0.3s ease;
 }
 
-.leftContent {
+.leftContent { 
     grid-column: 1 / span 1;
     grid-row: 1 / span 6;
     display: flex;
@@ -94,10 +94,113 @@
 
 @media (max-width: 1280px) {}
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+    .three-component-panel {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        padding: 16px;
+    }
 
-@media (max-width: 768px) {}
+    .leftContent {
+        grid-row: 1 / span 3;
+    }
 
-@media (max-width: 640px) {}
+    .circleImage {
+        width: 250px;
+        height: 250px;
+        margin-top: 10%;
+    }
 
-@media (max-width: 475px) {}
+    .textUnderImage {
+        font-size: 14px;
+        margin-top: 5%;
+    }
+
+    .fieldOneBox,
+    .fieldTwoBox,
+    .fieldThreeBox {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .circleImage {
+        width: 200px;
+        height: 200px;
+    }
+
+    .textUnderImage {
+        font-size: 13px;
+    }
+
+    .fieldOneBox,
+    .fieldTwoBox,
+    .fieldThreeBox {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 640px) {
+    .three-component-panel {
+        gap: 12px;
+    }
+
+    .circleImage {
+        width: 180px;
+        height: 180px;
+    }
+
+    .textUnderImage {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 475px) {
+    .three-component-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        gap: 0px;
+    }
+
+    .circleImage {
+        width: 50px;
+        height: 50px;
+        margin-top: 0;
+    }
+
+    .textUnderImage {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    .fieldOneBox,
+    .fieldTwoBox,
+    .fieldThreeBox {
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .fieldOneBox {
+        order: 1;
+    }
+
+    .fieldTwoBox {
+        order: 2;
+    }
+
+    .fieldThreeBox {
+        order: 3;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+}

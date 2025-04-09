@@ -100,7 +100,7 @@ const BoardMembersPanel = () => {
           <button
             onClick={prevPage}
             disabled={currentPage === 1}
-            className="pagination-arrow"
+            className="pagination-arrow pagination-arrow-left"
           >
             &lt;
           </button>
@@ -109,7 +109,7 @@ const BoardMembersPanel = () => {
             disabled={
               currentPage === Math.ceil(boardMembers.length / itemsPerPage)
             }
-            className="pagination-arrow"
+            className="pagination-arrow pagination-arrow-right"
           >
             &gt;
           </button>
