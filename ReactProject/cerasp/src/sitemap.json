@@ -79,6 +79,19 @@
         "project-7",
         "contact-us-form"
       ]
+    },
+    {
+      "title": "news",
+      "nav-title": "News",
+      "sub-pages": [
+        "overview",
+        "equipment-updates",
+        "new-grants",
+        "blogs-&-white-papers",
+        "webinars",
+        "events",
+        "contact-us-form"
+      ]
     }
   ]
 }
