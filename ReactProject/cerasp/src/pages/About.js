@@ -105,7 +105,9 @@ const About = () => {
 
       {/* BOARD */}
       <ScrollPanel title="about" id="board">
-        <BoardMembersPanel />
+        <div className="board-section">
+          <BoardMembersPanel />
+        </div>
       </ScrollPanel>
 
       {/* PARTNERS */}
