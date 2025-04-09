@@ -96,7 +96,7 @@
 
 @media (max-width: 1024px) {
     .three-component-panel {
-        width: 90%;
+        width: 70%;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(8, auto);
         padding: 16px;
