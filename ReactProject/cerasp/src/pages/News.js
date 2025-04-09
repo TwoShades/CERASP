@@ -5,6 +5,7 @@ import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import ModalMessage from "../components/uicomponents/ModalMessage"; // Import the Modal
+import TestPanel from "../components/panels/TestPanel"; // Import the TestPanel component
 
 const News = () => {
   useScrollToPanel();
@@ -22,7 +23,7 @@ const News = () => {
         */}
 
       <ScrollPanel title="news" id="overview">
-        <p>OVERVIEW</p>
+        <TestPanel />
       </ScrollPanel>
 
       {/*   ============================

@@ -23,18 +23,8 @@
 
 @media (max-width: 1024px) {
   .scroll-panel {
-    height: 100vh;
-    margin-bottom: 30%;
-  }
-  
-  #our-team {
-    height: 70vh;
-  }
-}
-
-@media (max-width: 576px) {
-  body {
-    background-color: red; /* Temporary styling to check */
+    height: 90vh;
+    margin-bottom: 10vh;
   }
 }
 
@@ -52,10 +42,4 @@
 
 .scroll-panel-error p {
   font-size: 14px;
-}
-
-@media (max-width: 576px) {
-  body {
-    background-color: red; /* Temporary styling to check */
-  }
 }
