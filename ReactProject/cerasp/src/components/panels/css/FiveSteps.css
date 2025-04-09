@@ -68,7 +68,7 @@
   font-family: "Roboto";
   align-items: flex-start;
   text-align: center;
-  color: #4f4f4f;
+  color: #4f4f4f; 
   margin-top: 50px;
 }
 
@@ -127,13 +127,82 @@
 }
 
 @media (max-width: 1536px) {
+  .five-steps-grid-layout {
+    width: 80%;
+    font-size: medium;
+  }
 }
 
 @media (max-width: 1280px) {
+  .five-steps-grid-layout {
+    width: 90%;
+    font-size: small;
+  }
+
+  .step {
+    padding: 15px;
+  }
 }
 
 @media (max-width: 768px) {
+  .five-steps-grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 15px;
+  }
+
+  .step {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .step .icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .step .content {
+    font-size: 14px;
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 475px) {
+  .five-steps-grid-layout {
+    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-rows: repeat(5, auto); /* Align steps top to bottom */
+    gap: 5px; /* Adjust gap for smaller screens */
+  }
+
+  .top-row {
+    margin-top: 0px;
+  }
+
+  .five-steps-grid-layout h2 {
+    font-size: 24px;
+  }
+
+  .step {
+    grid-column: 1 / span 1; /* Ensure each step occupies full width */
+    grid-row: auto; /* Automatically adjust row placement */
+    text-align: center; /* Center-align content for better readability */
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .step .icon {
+    margin: 0 auto; /* Center the icon */
+  }
+
+  .step .content {
+    text-align: center; /* Center-align content text */
+    margin-top: 15px; /* Adjust spacing for smaller screens */
+  }
 }
