@@ -4,7 +4,7 @@
 
 .scroll-panel {
   scroll-snap-align: center;
-  height: 100%;
+  height: calc(100vh - 50px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,4 +52,10 @@
 
 .scroll-panel-error p {
   font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-color: red; /* Temporary styling to check */
+  }
 }
