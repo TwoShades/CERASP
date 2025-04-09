@@ -23,8 +23,8 @@
 
 @media (max-width: 1024px) {
   .scroll-panel {
-    height: 90vh;
-    margin-bottom: 10vh;
+    height: 85vh;
+    margin-bottom: 15vh;
   }
 }
 
