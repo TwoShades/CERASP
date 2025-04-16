@@ -12,7 +12,7 @@ const ScrollPanel = ({ children, colorTheme = "themeA", id, title }) => {
     return (
       <div className={`scroll-panel ${colorTheme}`} id={id}>
         {children}
-        {id !== "contact-us-form" && <ContactButton />}
+        {/* {id !== "contact-us-form" && <ContactButton />} */}
       </div>
     );
   }
