@@ -12,6 +12,7 @@ import useSmoothScroll from "./hooks/useSmoothScroll";
 import useScrollTracker from "./hooks/useScrollTracker";
 import { ScreenSizeProvider } from "./hooks/ScreenSizeContext";
 import HeightTest from "./components/layouts/HeightTest";
+import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
       {" "}
       {/* Wrap everything in ScreenSizeProvider */}
       <Header />
-      <HeightTest />
+      <ContactButton />
       <main
         className={`main-content app ${theme} background-gradient`}
         ref={(el) => {
