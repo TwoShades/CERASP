@@ -10,7 +10,8 @@ import Projects from "./pages/Projects";
 import News from "./pages/News";
 import useSmoothScroll from "./hooks/useSmoothScroll";
 import useScrollTracker from "./hooks/useScrollTracker";
-import { ScreenSizeProvider } from "./hooks/ScreenSizeContext"; // Import the provider
+import { ScreenSizeProvider } from "./hooks/ScreenSizeContext";
+import HeightTest from "./components/layouts/HeightTest";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       {" "}
       {/* Wrap everything in ScreenSizeProvider */}
       <Header />
+      <HeightTest />
       <main
         className={`main-content app ${theme} background-gradient`}
         ref={(el) => {
