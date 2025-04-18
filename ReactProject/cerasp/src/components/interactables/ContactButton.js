@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { ScreenSizeContext } from "../../hooks/ScreenSizeContext"; // Import the context
 import "./css/ContactButton.css";
+import { Mail } from "lucide-react";
 
 const ContactButton = () => {
   const navigate = useNavigate();
@@ -26,13 +27,7 @@ const ContactButton = () => {
       className={`${isMobile ? "contact-button-mobile" : "contact-button"}`}
       onClick={() => handleNavigateToSection("contact-us-form")}
     >
-      {isMobile ? (
-        <span role="img" aria-label="phone">
-          📱
-        </span>
-      ) : (
-        "Contact Us"
-      )}
+      {isMobile ? <Mail></Mail> : "Contact Us"}
     </div>
   );
 };

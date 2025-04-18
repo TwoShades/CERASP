@@ -1,18 +1,14 @@
 .contact-button,
 .contact-button-mobile {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.contact-button {
-  font-size: 16px;
+  z-index: 200;
   font-weight: 500;
-  bottom: 40px;
-  right: 40px;
-  width: 120px;
-  height: 45px;
+  bottom: 20px;
+  right: 25px;
+
   color: rgba(0, 136, 226, 1);
   background: linear-gradient(
     to bottom,
@@ -25,11 +21,13 @@
   z-index: 20;
 }
 
+.contact-button {
+  width: 120px;
+  height: 45px;
+}
+
 .contact-button-mobile {
-  font-size: 30px;
-  bottom: 14%;
-  right: -50px;
-  width: 120px; 
+  width: 50px;
   height: 45px;
 }
 
