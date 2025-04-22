@@ -89,7 +89,7 @@
 }
 
 .pagination-controls {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,51 +118,42 @@
 @media (max-width: 1024px) {
   .equipments-panel-grid {
     margin-top: 0%;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .equipments-right-content-text {
-    text-align: center;
-    font-size: 16px;
-  }
-
-  .equipments-right-content {
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
-  }
-
-  .equipments-left-content {
-    grid-row: 2 / span 2;
-    grid-column: 1 / span 1;
-  }
-
-  .individual-equipment {
-    height: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .equipments-panel-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 80%;
-    padding: 16px;
-  }
-
-  .equipments-right-content-text {
-    display: none;
-  }
-
-  .individual-equipment-image {
+    /* grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr); */
   }
 
   .equipments-right-content {
     width: 100%;
     margin-bottom: 16px;
+    margin-top: 0px;
     text-align: center;
     order: -1;
+  }
+
+  .equipments-right-content {
+    /* grid-row: 1 / span 1;
+    grid-column: 1 / span 1; */
+  }
+
+  .equipments-left-content {
+    /* grid-row: 2 / span 2;
+    grid-column: 1 / span 1; */
+  }
+
+  .individual-equipment {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .equipments-right-content-text {
+    display: none;
+  }
+
+  .individual-equipment-image {
+    height: 200px;
   }
 
   .equipments-left-content {
@@ -173,23 +164,9 @@
   .individual-equipment {
     width: 100%;
     min-width: 100%;
+    min-height: 250px;
 
     justify-content: center;
-    margin-bottom: 16px;
-  }
-
-  .board-pagination-controls {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 24px;
-  }
-
-  .pagination-arrow-left,
-  .pagination-arrow-right {
-    font-size: 1.4em;
-    font-weight: bold;
-    padding: 8px;
-    cursor: pointer;
+    margin-bottom: 0px;
   }
 }

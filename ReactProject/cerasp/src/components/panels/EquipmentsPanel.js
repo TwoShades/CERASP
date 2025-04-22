@@ -14,7 +14,7 @@ const EquipmentsPanel = () => {
     setEquipments(equipmentsData.equipment || []);
   }, []);
 
-  const itemsPerPage = isMobile ? 1 : isTablet ? 2 : 4;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);

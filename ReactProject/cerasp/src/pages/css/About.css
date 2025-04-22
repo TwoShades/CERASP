@@ -74,7 +74,7 @@ iframe {
   .facilities-section,
   .team-section,
   .board-section {
-    height: 100%;
+    /* height: 100%; */
     justify-content: start;
   }
 }
