@@ -7,7 +7,7 @@
     justify-content: space-between; /* Space between text and image sections */
     align-items: center; /* Center content vertically */
     width: 70%; /* Full width */
-    height: 80%; /* Full viewport height */
+    height: 100%; /* Full viewport height */
     box-sizing: border-box;
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin */

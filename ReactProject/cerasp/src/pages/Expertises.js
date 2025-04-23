@@ -252,7 +252,7 @@ const Expertises = () => {
                 Bioinformatics team specializes in leveraging advanced
                 computational methods and data analysis techniques to support
                 drug discovery, personalized medicine, and biomarker
-                identification.{" "}
+                identification.
               </p>
               <p>
                 Whether you’re in pharmaceutical development seeking robust
@@ -283,7 +283,7 @@ const Expertises = () => {
               =======Numeric Health============
               =================================
         */}
-
+  
       <ScrollPanel title="expertises" id="numeric-health">
         <p>Numeric Health</p>
       </ScrollPanel>

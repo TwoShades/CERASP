@@ -96,34 +96,34 @@
 }
 
 @media (max-width: 1024px) {
-  .three-component-panel {
-    width: 90%;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, auto);
-    padding: 16px;
-  }
+    .three-component-panel {
+        width: 70%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        padding: 16px;
+    }
 
-  .leftContent {
-    grid-row: 1 / span 3;
-  }
+    .leftContent {
+        grid-row: 1 / span 3;
+    }
 
-  .circleImage {
-    width: 250px;
-    height: 250px;
-    margin-top: 10%;
-  }
+    .circleImage {
+        width: 250px;
+        height: 250px;
+        margin-top: 10%;
+    }
 
-  .textUnderImage {
-    font-size: 14px;
-    margin-top: 5%;
-  }
+    .textUnderImage {
+        font-size: 14px;
+        margin-top: 5%;
+    }
 
-  .fieldOneBox,
-  .fieldTwoBox,
-  .fieldThreeBox {
-    width: 100%;
-    margin-right: 0;
-  }
+    .fieldOneBox,
+    .fieldTwoBox,
+    .fieldThreeBox {
+        width: 100%;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 768px) {
