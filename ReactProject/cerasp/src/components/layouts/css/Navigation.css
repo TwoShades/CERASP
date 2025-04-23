@@ -131,6 +131,7 @@
 .dropdown-toggle {
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: 5px;
 }
 
 @media (max-width: 1495px) {
