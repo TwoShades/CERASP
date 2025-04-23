@@ -27,7 +27,8 @@
 @media (max-width: 1024px) {
   .partner-card {
     width: 90%;
-    height: 500px;
+    min-height: 400px;
+    height: 90%;
     margin: auto;
   }
 }

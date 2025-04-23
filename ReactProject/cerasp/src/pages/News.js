@@ -4,92 +4,56 @@ import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
-import ModalMessage from "../components/uicomponents/ModalMessage"; // Import the Modal
+import ModalMessage from "../components/uicomponents/ModalMessage.js"; // Import the Modal
+import TestPanel from "../components/panels/TestPanel.js"; // Import the TestPanel component
+import { Scroll } from "lucide-react";
 
 const News = () => {
-  useScrollToPanel();
-
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
-
-  const handleOpenModal = () => setIsModalOpen(true); // Open the modal
-  const handleCloseModal = () => setIsModalOpen(false); // Close the modal
-
   return (
-    <div className="news scroll-container">
-      {/*   ===================
-              =====OVERVIEW======
-              ===================
-        */}
-
-      <ScrollPanel title="news" id="overview">
-        <p>OVERVIEW</p>
-      </ScrollPanel>
-
-      {/*   ============================
-              =====Equipment Updates======
-              ============================
-        */}
-
-      <ScrollPanel title="news" id="equipment-updates">
-        <p>Equipment Updatesk</p>
-        {/* Button to trigger the modal */}
-        <button onClick={handleOpenModal}>Open Modal</button>
-      </ScrollPanel>
-
-      {/*   =====================
-              =====New Grants======
-              =====================
-        */}
-
-      <ScrollPanel title="news" id="new-grants">
-        <p>New Grants</p>
-      </ScrollPanel>
-
-      {/*   =====================================
-              =======Blogs & white papers==========
-              =====================================
-        */}
-
-      <ScrollPanel title="news" id="blogs-&-white-papers">
-        <p>Blogs & white papers</p>
-      </ScrollPanel>
-
-      {/*   =====================
-              =====Webinars=======
-              =====================
-        */}
-
-      <ScrollPanel title="news" id="webinars">
-        <p>Webinars</p>
-      </ScrollPanel>
-
-      {/*   ===================
-              =====Events=======
-              ===================
-        */}
-
-      <ScrollPanel title="news" id="events">
-        <p>Events</p>
-      </ScrollPanel>
-
-      {/*   =======================
-              =====CONTACT FORM======
-              =======================
-        */}
-
-      <ScrollPanel title="news" id="contact-us-form">
-        <ContactUsForm />
-      </ScrollPanel>
-
-      <Footer />
-
-      {/* Modal Message */}
-      <ModalMessage
-        isOpen={isModalOpen}
-        onRequestClose={handleCloseModal}
-        message="This is a simple modal message!"
-      />
-    </div>
+    <ScrollPanel title="news" id="overview">
+      <div className="news-panel">
+        <div className="test-panel-1">
+          <h1>PANEL 1</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div className="test-panel-2">
+          <h1>PANEL 2</h1>
+          <p>
+            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
+            nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+            ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+          </p>
+        </div>
+        <div className="test-panel-3">
+          <h1>PANEL 3</h1>
+          <p>
+            Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
+            varius, turpis et commodo pharetra, est eros bibendum elit, nec
+            luctus magna felis sollicitudin mauris.
+          </p>
+        </div>
+        <div className="test-panel-1">
+          <h1>PANEL 1</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div className="test-panel-2">
+          <h1>PANEL 2</h1>
+          <p>
+            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
+            nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis
+            ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+          </p>
+        </div>
+        <div className="test-panel-3">
+          <h1>PANEL 3</h1>
+          <p>
+            Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
+            varius, turpis et commodo pharetra, est eros bibendum elit, nec
+            luctus magna felis sollicitudin mauris.
+          </p>
+        </div>
+      </div>
+    </ScrollPanel>
   );
 };
 

@@ -1,6 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react";
 import "./css/EmblaSinglePanel.css";
-
 import {
   PrevButton,
   NextButton,

@@ -63,7 +63,7 @@
 @media (max-width: 1024px) {
   .employee-card {
     width: 90%;
-    height: 500px;
+    height: 90%;
     margin: auto;
   }
 }
