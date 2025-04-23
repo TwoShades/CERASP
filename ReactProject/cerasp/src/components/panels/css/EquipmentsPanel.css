@@ -1,5 +1,4 @@
 .equipments-panel-grid {
-  margin-top: 5%;
   height: 95%;
   width: 80%;
   display: grid;
@@ -163,8 +162,6 @@
 
   .individual-equipment {
     width: 100%;
-    min-width: 100%;
-    min-height: 250px;
 
     justify-content: center;
     margin-bottom: 0px;
