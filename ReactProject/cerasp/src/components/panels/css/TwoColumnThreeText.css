@@ -1,98 +1,99 @@
 /* Parent Container */
 .three-component-panel {
-    width: 70%;
-    height: 80%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 16px;
-    padding: 24px;
-    transition: transform 0.3s ease;
+  width: 70%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 16px;
+  padding: 24px;
+  transition: transform 0.3s ease;
 }
 
-.leftContent { 
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.leftContent {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .circleImage {
-    /* display: flex;
+  /* display: flex;
     align-items: center;
     justify-content: center; */
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    margin-top: 20%;
-    border: 2px solid #ff6f61;
-    transition: transform 0.3s ease, background 0.3s ease;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: 20%;
+  border: 2px solid #ff6f61;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .circleImage:hover {
-    background: linear-gradient(135deg, #ff6f61, #ff9a9e);
-    transform: rotate(360deg);
-    cursor: pointer;
+  background: linear-gradient(135deg, #ff6f61, #ff9a9e);
+  transform: rotate(360deg);
+  cursor: pointer;
 }
 
 .textUnderImage {
-    /* grid-column: 1 / span 1;
+  /* grid-column: 1 / span 1;
     grid-row: 5 / span 1; */
-    justify-content: center;
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-    margin-top: 10%;
-    border: 1px solid #cccccc05;
-    padding: 8px;
-    background-color: #ffffff10;
-    border-radius: 8px;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  margin-top: 10%;
+  border: 1px solid #cccccc05;
+  padding: 8px;
+  background-color: #ffffff10;
+  border-radius: 8px;
 }
 
 .fieldOneBox {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 2;
-    width: 90%;
-    margin-right: 10%;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 2;
+  width: 90%;
+  margin-right: 10%;
 }
 
 .fieldTwoBox {
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 2;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 2;
 }
 
 .fieldThreeBox {
-    grid-column: 2 / span 1;
-    grid-row: 5 / span 2;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 2;
 }
 
 .fieldOneBox,
 .fieldTwoBox,
 .fieldThreeBox {
-    background-color: #ffffff10;
-    border-radius: 8px;
-    padding: 8px;
-    border: 1px solid #cccccc05;
-    transition: transform 0.3s ease, background 0.3s ease;
-    width: 90%;
-    margin-right: 10%;
+  background-color: #ffffff10;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid #cccccc05;
+  transition: transform 0.3s ease, background 0.3s ease;
+  width: 90%;
+  margin-right: 10%;
 }
 
 .titleTextOne:hover,
 .titleTextTwo:hover,
 .titleTextThree:hover {
-    color: #007BFF;
-    background-color: #e0f7fa00;
-    cursor: pointer;
-
+  color: #007bff;
+  background-color: #e0f7fa00;
+  cursor: pointer;
 }
 
-@media (max-width: 1536px) {}
+@media (max-width: 1536px) {
+}
 
-@media (max-width: 1280px) {}
+@media (max-width: 1280px) {
+}
 
 @media (max-width: 1024px) {
     .three-component-panel {
@@ -126,81 +127,81 @@
 }
 
 @media (max-width: 768px) {
-    .circleImage {
-        width: 200px;
-        height: 200px;
-    }
+  .circleImage {
+    width: 200px;
+    height: 200px;
+  }
 
-    .textUnderImage {
-        font-size: 13px;
-    }
+  .textUnderImage {
+    font-size: 13px;
+  }
 
-    .fieldOneBox,
-    .fieldTwoBox,
-    .fieldThreeBox {
-        padding: 6px;
-    }
+  .fieldOneBox,
+  .fieldTwoBox,
+  .fieldThreeBox {
+    padding: 6px;
+  }
 }
 
 @media (max-width: 640px) {
-    .three-component-panel {
-        gap: 12px;
-    }
+  .three-component-panel {
+    gap: 12px;
+  }
 
-    .circleImage {
-        width: 180px;
-        height: 180px;
-    }
+  .circleImage {
+    width: 180px;
+    height: 180px;
+  }
 
-    .textUnderImage {
-        font-size: 12px;
-    }
+  .textUnderImage {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 475px) {
-    .three-component-panel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 12px;
-        gap: 0px;
-    }
+  .three-component-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 0px;
+  }
 
-    .circleImage {
-        width: 50px;
-        height: 50px;
-        margin-top: 0;
-    }
+  .circleImage {
+    width: 50px;
+    height: 50px;
+    margin-top: 0;
+  }
 
-    .textUnderImage {
-        font-size: 10px;
-        text-align: center;
-        margin-top: 0px;
-    }
+  .textUnderImage {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 0px;
+  }
 
-    .fieldOneBox,
-    .fieldTwoBox,
-    .fieldThreeBox {
-        width: 100%;
-        padding: 8px;
-        text-align: center;
-        font-size: 12px;
-    }
+  .fieldOneBox,
+  .fieldTwoBox,
+  .fieldThreeBox {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+  }
 
-    .fieldOneBox {
-        order: 1;
-    }
+  .fieldOneBox {
+    order: 1;
+  }
 
-    .fieldTwoBox {
-        order: 2;
-    }
+  .fieldTwoBox {
+    order: 2;
+  }
 
-    .fieldThreeBox {
-        order: 3;
-    }
+  .fieldThreeBox {
+    order: 3;
+  }
 
-    p {
-        font-size: 12px;
-        margin: 0;
-    }
+  p {
+    /* font-size: 12px; */
+    margin: 0;
+  }
 }
