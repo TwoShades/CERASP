@@ -36,7 +36,7 @@ const LandingPage = () => {
             />
           )}
           {showText && <h1 className="fade-in-out text">Welcome to CERASP</h1>}
-          {showPage && <div className="main-content">Actual Landing Page Content</div>}
+          {showPage && <div className="landing-content">Actual Landing Page Content</div>}
         </div>
       </ScrollPanel>
 
