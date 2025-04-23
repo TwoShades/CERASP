@@ -29,7 +29,7 @@ function App() {
       {" "}
       {/* Wrap everything in ScreenSizeProvider */}
       <Header />
-      <ContactButton />
+      {scrollProgress < 0.95 && <ContactButton />}
       <main
         className={`main-content app ${theme} background-gradient`}
         ref={(el) => {

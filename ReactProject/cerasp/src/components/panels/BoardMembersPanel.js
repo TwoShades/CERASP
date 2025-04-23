@@ -5,7 +5,7 @@ import boardMembersData from "./reference/boardmembers.json";
 const BoardMembersPanel = () => {
   const [boardMembers, setBoardMembers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [itemsPerPage, setItemsPerPage] = useState(2);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const BoardMembersPanel = () => {
     const handleResize = () => {
       if (window.innerWidth < 651) {
         setIsMobile(true);
-        setItemsPerPage(3);
+        setItemsPerPage(2);
       } else {
         setIsMobile(false);
       }
@@ -100,7 +100,7 @@ const BoardMembersPanel = () => {
           <button
             onClick={prevPage}
             disabled={currentPage === 1}
-            className="pagination-arrow pagination-arrow-left"
+            className="board-pagination-arrow board-pagination-arrow-left"
           >
             &lt;
           </button>
@@ -109,7 +109,7 @@ const BoardMembersPanel = () => {
             disabled={
               currentPage === Math.ceil(boardMembers.length / itemsPerPage)
             }
-            className="pagination-arrow pagination-arrow-right"
+            className="board-pagination-arrow board-pagination-arrow-right"
           >
             &gt;
           </button>
