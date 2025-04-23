@@ -14,6 +14,7 @@ import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
 import LearnMoreButton from "../components/interactables/LearnMoreButton.js";
 import AboutOverview from "../components/panels/AboutOverview.js";
 import teamData from "./reference/team.json";
+import ContactUsForm from "../components/panels/ContactUsForm.js";
 
 const About = () => {
   useScrollToPanel();
@@ -147,9 +148,9 @@ const About = () => {
       </ScrollPanel>
 
       {/* PRIVACY POLICY */}
-      <ScrollPanel title="about" id="contact-us-form">
-        <h2>Privacy policy</h2>
-      </ScrollPanel>
+      {/* <ScrollPanel title="about" id="contact-us-form">
+        <ContactUsForm />
+      </ScrollPanel> */}
 
       <Footer />
     </div>
