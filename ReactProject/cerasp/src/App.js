@@ -16,7 +16,7 @@ import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
 
 function App() {
-  const mainRef = useSmoothScroll();
+  // const mainRef = useSmoothScroll();
   const { theme } = useContext(ThemeContext);
   const { scrollRef, scrollProgress } = useScrollTracker();
 
@@ -33,7 +33,7 @@ function App() {
       <main
         className={`main-content app ${theme} background-gradient`}
         ref={(el) => {
-          mainRef.current = el;
+          // mainRef.current = el;
           scrollRef.current = el;
         }}
       >
