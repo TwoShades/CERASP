@@ -1,6 +1,6 @@
 /* GLOBAL CSS */
 :root {
-  --bg-color-light: #e3f2ff;
+  --bg-color-light: #f4faff;
   --text-color-light: #1a1a1a;
   --secondary-text-color-light: #4f4f4f;
   --primary-blue: #005ba1;
@@ -63,18 +63,30 @@ body {
 }
 
 .background-gradient {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
-      transparent 25%) 0 0,
-    linear-gradient(225deg,
-      rgba(135, 184, 247, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
-      transparent 25%) 0 0,
-    linear-gradient(5deg,
-      rgba(1, 100, 248, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
-      transparent 25%) 0 0,
-    linear-gradient(315deg,
-      rgba(0, 162, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
-      transparent 25%) 0 0;
+  background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    linear-gradient(
+        225deg,
+        rgba(135, 184, 247, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    linear-gradient(
+        5deg,
+        rgba(1, 100, 248, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    linear-gradient(
+        315deg,
+        rgba(0, 162, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0;
 
   background-size: 2000px 1000px;
   background-position: center;
@@ -88,7 +100,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom left, transparent 50%, #3498db 50%) center/200% 200%;
+  background: linear-gradient(to bottom left, transparent 50%, #3498db 50%)
+    center/200% 200%;
   z-index: -1;
   /* Ensure it's behind your content */
 }
