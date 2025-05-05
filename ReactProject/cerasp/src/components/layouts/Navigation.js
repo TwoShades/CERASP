@@ -12,7 +12,7 @@ const Navigation = () => {
   const [hoveredMenu, setHoveredMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
 
-  const navRef = useRef(null); // Ref for the navigation menu
+  const navRef = useRef(null);
 
   const { handleLinkClick } = useScrollToTop(pathname, () =>
     setMenuOpen(false)
@@ -60,10 +60,11 @@ const Navigation = () => {
           className="hamburger"
           onClick={() => {
             setMenuOpen((prev) => {
-              if (prev) {
-                setOpenSubMenu(null); // Reset the dropdown state when closing the menu
+              const newState = !prev;
+              if (!newState) {
+                setOpenSubMenu(null);
               }
-              return !prev;
+              return newState;
             });
           }}
         >
@@ -91,7 +92,6 @@ const Navigation = () => {
                     onClick={() => {
                       handleLinkClick(`/${title}`);
                       setOpenSubMenu(null); // Close the dropdown
-                      setMenuOpen(false); // Close the side menu
                     }}
                   >
                     {navTitle}
@@ -102,7 +102,7 @@ const Navigation = () => {
                       onClick={(e) => {
                         // Prevent triggering parent click
                         e.stopPropagation();
-                        toggleSubMenu(title);
+                        toggleSubMenu(title); // Toggle this dropdown
                       }}
                     >
                       {openSubMenu === title ? "▲" : "▼"}
@@ -110,6 +110,7 @@ const Navigation = () => {
                   )}
                 </div>
 
+                {/* Only show dropdown if this item is hovered or its submenu is open */}
                 {(hoveredMenu === title ||
                   (isMobile && openSubMenu === title)) &&
                   filteredSubPages.length > 0 && (
@@ -121,7 +122,6 @@ const Navigation = () => {
                             onClick={() => {
                               handleNavigateToSection(subPage, `/${title}`);
                               setOpenSubMenu(null); // Close the dropdown
-                              setMenuOpen(false); // Close the side menu
                             }}
                             style={{ cursor: "pointer" }}
                           >
