@@ -1,6 +1,5 @@
 import "./css/Expertises.css";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
-import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
 import CenteredFeaturePanel from "../components/panels/CenteredFeaturePanel.js";
@@ -21,7 +20,7 @@ const Expertises = () => {
               ===================
         */}
 
-      <ScrollPanel title="expertises" id="overview">
+      <div title="expertises" id="overview">
         <ThreeColumnPanel
           topRowContent={
             <>
@@ -60,14 +59,14 @@ const Expertises = () => {
             />
           }
         />
-      </ScrollPanel>
+      </div>
 
       {/*   ===================
               ===GMP EXPERTISE===
               ===================
         */}
 
-      <ScrollPanel title="expertises" id="gmp-expertise-&-biomanufacturing">
+      <div title="expertises" id="gmp-expertise-&-biomanufacturing">
         <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
@@ -99,14 +98,14 @@ const Expertises = () => {
             },
           ]}
         />
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               =FORMULATIONS OF PHARMACEUTICALS=
               =================================
         */}
 
-      <ScrollPanel title="expertises" id="formulation-of-pharmaceuticals">
+      <div title="expertises" id="formulation-of-pharmaceuticals">
         <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
@@ -138,14 +137,14 @@ const Expertises = () => {
             </p>
           }
         ></TwoColumnThreeText>
-      </ScrollPanel>
+      </div>
 
       {/*   =====================================
               =Animal health, NHP & Nutraceuticals=
               =====================================
         */}
 
-      <ScrollPanel title="expertises" id="animal-health">
+      <div title="expertises" id="animal-health">
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
           leftText={
@@ -172,14 +171,14 @@ const Expertises = () => {
             </p>
           }
         />
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               ========Applied Research=========
               =================================
         */}
 
-      <ScrollPanel title="expertises" id="applied-research">
+      <div title="expertises" id="applied-research">
         <FiveSteps
           topRowContent={<h2>Applied Research</h2>}
           step1={<div className="step1">Step 1: Formulate</div>}
@@ -188,27 +187,27 @@ const Expertises = () => {
           step4={<div className="step4">Step 4: Select</div>}
           step5={<div className="step5">Step 5: Develop</div>}
         />
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               =======Troubleshooting===========
               =================================
         */}
 
-      <ScrollPanel title="expertises" id="troubleshooting">
+      <div title="expertises" id="troubleshooting">
         <OneBigPanel
           title="Troubleshooting"
           mainText="Lorem ipsum dolor sit amet consectetur. Molestie ac viverra vitae enim ut."
           image={<div className="image-placeholder"></div>}
         />
-      </ScrollPanel>
+      </div>
 
       {/*   ===============================
               =====HEALTH CANADA PARTNER=====
               ===============================
         */}
 
-      <ScrollPanel title="expertises" id="health-canada-partner">
+      <div title="expertises" id="health-canada-partner">
         <TextPanelOneImage
           leftContent={
             <>
@@ -225,23 +224,23 @@ const Expertises = () => {
           }
           rightContent={<div className="image-section"></div>}
         />
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               ======Technical Training=========
               =================================
         */}
 
-      <ScrollPanel title="expertises" id="technical-training">
+      <div title="expertises" id="technical-training">
         <p>Technical Training</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               ========Bioinformatics===========
               =================================
         */}
 
-      <ScrollPanel title="expertises" id="bioinformatics">
+      <div title="expertises" id="bioinformatics">
         <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={
@@ -277,34 +276,34 @@ const Expertises = () => {
             </>
           }
         ></TwoColumnThreeText>
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               =======Numeric Health============
               =================================
         */}
 
-      <ScrollPanel title="expertises" id="numeric-health">
+      <div title="expertises" id="numeric-health">
         <p>Numeric Health</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               ======Help Access Funding========
               =================================
         */}
 
-      <ScrollPanel title="expertises" id="help-access-funding">
+      <div title="expertises" id="help-access-funding">
         <p>Help Access Funding</p>
-      </ScrollPanel>
+      </div>
 
       {/*   ======================
               =====CONTACT FORM=====
               ======================
         */}
 
-      <ScrollPanel title="expertises" id="contact-us-form">
+      <div title="expertises" id="contact-us-form">
         <ContactUsForm />
-      </ScrollPanel>
+      </div>
 
       <Footer />
     </div>
