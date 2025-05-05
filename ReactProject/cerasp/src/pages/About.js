@@ -11,7 +11,6 @@ import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import EquipmentsPanel from "../components/panels/EquipmentsPanel.js";
 import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
-import LearnMoreButton from "../components/interactables/LearnMoreButton.js";
 import AboutOverview from "../components/panels/AboutOverview.js";
 import teamData from "./reference/team.json";
 

@@ -14,18 +14,6 @@
   position: relative;
 }
 
-@media (max-width: 1536px) {
-}
-
-@media (max-width: 1280px) {
-}
-
-@media (max-width: 1024px) {
-  .scroll-panel {
-    /* height: 100vh; */
-  }
-}
-
 .scroll-panel-error {
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;

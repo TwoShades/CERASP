@@ -31,7 +31,7 @@ function App() {
       <Header />
       {scrollProgress < 0.95 && <ContactButton />}
       <main
-        className={`main-content app ${theme} background-gradient`}
+        className={`main-content app ${theme}`}
         ref={(el) => {
           // mainRef.current = el;
           scrollRef.current = el;
