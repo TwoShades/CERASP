@@ -1,12 +1,12 @@
 .about-overview-grid {
   width: 90%;
   height: 80%;
-  margin-top: 100px;
   display: grid;
   position: relative;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(9, 1fr);
   gap: 20px;
+  padding-top: 90px;
 }
 
 .about-overview-history {
