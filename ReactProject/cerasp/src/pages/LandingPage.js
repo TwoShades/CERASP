@@ -18,7 +18,7 @@ const LandingPage = () => {
 
   return (
     <div
-      className="landing scroll-container"
+      className="landing page-content"
       style={{
         backgroundImage: "url('/backgrounds/blueBacteriaBackground.jpg')",
         backgroundSize: "cover",

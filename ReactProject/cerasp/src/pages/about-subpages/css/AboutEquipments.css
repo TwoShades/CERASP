@@ -1,0 +1,81 @@
+.about-equipments {
+  padding: 4em 8em 0em 8em;
+  background-color: rgb(25, 25, 36);
+  color: rgb(243, 243, 243);
+}
+
+.about-equipments-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-equipments-header {
+  margin-bottom: 40px;
+}
+
+.about-equipments-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 40px;
+}
+
+.equipment-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background-color: #313131;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  height: 400px;
+  width: 15%;
+}
+
+.equipment-card img {
+  width: 90%;
+  height: 50%;
+  align-self: center;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.pagination-arrow {
+  background-color: #4677ac;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-arrow:disabled {
+  background-color: #363636;
+  cursor: not-allowed;
+}
+
+.pagination-arrow:hover:not(:disabled) {
+  background-color: #84bfff;
+}
+
+.equipment-card .learn-more-button {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  z-index: 0;
+  transform: translate(-50%, -25%);
+}

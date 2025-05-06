@@ -5,17 +5,15 @@ import Partners, { partnersData } from "../components/uicomponents/Partners";
 import Footer from "../components/layouts/Footer.js";
 import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
 import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
-import StockImageFetch from "../components/placeholders/StockImageFetch";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
-import EquipmentsPanel from "../components/panels/EquipmentsPanel.js";
 import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
-// import AboutOverview from "../components/panels/AboutOverview.js";
 import teamData from "./reference/team.json";
 
 // Updated Panels //
 import AboutOverview from "./about-subpages/AboutOverview.js";
 import AboutFacilities from "./about-subpages/AboutFacilities.js";
+import AboutEquipments from "./about-subpages/AboutEquipments.js";
 
 const About = () => {
   useScrollToPanel();
@@ -51,7 +49,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about-page">
+    <div className="about-page page-content">
       {/* OVERVIEW */}
       <div title="about" id="overview">
         <AboutOverview />
@@ -64,9 +62,7 @@ const About = () => {
 
       {/* EQUIPMENTS */}
       <div title="about" id="equipments">
-        <div className="equipments-section">
-          <EquipmentsPanel />
-        </div>
+        <AboutEquipments />
       </div>
 
       {/* OUR TEAM */}
