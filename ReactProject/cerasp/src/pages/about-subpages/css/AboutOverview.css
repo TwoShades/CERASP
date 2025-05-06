@@ -1,0 +1,41 @@
+.about-overview {
+  background-color: rgb(25, 25, 36);
+  color: rgb(243, 243, 243);
+}
+
+.about-overview-grid {
+  padding: 2em;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+}
+
+.about-overview-grid > * {
+  padding: 1em 5em 1em 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-overview-history {
+  grid-area: 1 / 1 / span 1 / span 2;
+}
+
+.about-overview p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.about-overview-mission {
+  grid-area: 2 / 1 / span 1 / span 1;
+  border: 8px solid rgb(27, 91, 151);
+}
+
+.about-overview-vision {
+  grid-area: 3 / 2 / span 1 / span 1;
+  border: 8px solid rgb(81, 81, 95);
+}
+
+.about-overview-values {
+  grid-area: 4 / 1 / span 1 / span 1;
+  border: 8px solid rgb(46, 106, 196);
+}
