@@ -1,4 +1,4 @@
-import "./css/Expertises.css";
+import "./Pages-css/Expertises.css";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 import Footer from "../components/layouts/Footer.js";
 import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";

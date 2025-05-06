@@ -1,4 +1,4 @@
-import "./css/Sectors.css";
+import "./Pages-css/Sectors.css";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
