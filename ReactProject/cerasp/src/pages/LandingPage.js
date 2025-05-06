@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ScrollPanel from "../components/layouts/ScrollPanel";
 import "./css/LandingPage.css";
+import ContactUsForm from "../components/panels/ContactUsForm";
 
 const LandingPage = () => {
   const [stage, setStage] = useState("logo");
@@ -25,9 +26,9 @@ const LandingPage = () => {
         backgroundRepeat: "no-repeat",
         minHeight: "100vh",
         filter: "blur(0px)",
-      }}>
-
-        {/* ===================
+      }}
+    >
+      {/* ===================
           =====LANDING ZONE=====
           =================== */}
 
@@ -40,9 +41,7 @@ const LandingPage = () => {
               className="fade logo"
             />
           )}
-          {stage === "text" && (
-            <h1 className="fade text">Welcome to CERASP</h1>
-          )}
+          {stage === "text" && <h1 className="fade text">Welcome to CERASP</h1>}
           {stage === "page" && (
             <div className="main-content-landing">
               <h2>Empowering the Future of BioManufacturing</h2>
@@ -78,9 +77,15 @@ const LandingPage = () => {
       <ScrollPanel title="landing" id="welcome">
         <div className="landing-welcome">
           <h2>Equipment Updates</h2>
-          <p>Stay up to date with the latest tools and features in our platform.</p>
+          <p>
+            Stay up to date with the latest tools and features in our platform.
+          </p>
         </div>
       </ScrollPanel>
+
+      <div title="landing" id="contact-us-form">
+        <ContactUsForm />
+      </div>
     </div>
   );
 };

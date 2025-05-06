@@ -3,7 +3,6 @@ import axios from "axios";
 import Employee from "../components/uicomponents/Employee.js";
 import Partners, { partnersData } from "../components/uicomponents/Partners";
 import Footer from "../components/layouts/Footer.js";
-import ScrollPanel from "../components/layouts/ScrollPanel";
 import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
 import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
 import StockImageFetch from "../components/placeholders/StockImageFetch";
@@ -11,8 +10,12 @@ import useScrollToPanel from "../hooks/useScrollToPanel";
 import "./css/About.css";
 import EquipmentsPanel from "../components/panels/EquipmentsPanel.js";
 import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
-import AboutOverview from "../components/panels/AboutOverview.js";
+// import AboutOverview from "../components/panels/AboutOverview.js";
 import teamData from "./reference/team.json";
+
+// Updated Panels //
+import AboutOverview from "./about-subpages/AboutOverview.js";
+import AboutFacilities from "./about-subpages/AboutFacilities.js";
 
 const About = () => {
   useScrollToPanel();
@@ -48,48 +51,26 @@ const About = () => {
   }, []);
 
   return (
-    <div className="about scroll-container">
+    <div className="about-page">
       {/* OVERVIEW */}
-
-      <ScrollPanel colorTheme="themeA" title="about" id="overview">
+      <div title="about" id="overview">
         <AboutOverview />
-      </ScrollPanel>
+      </div>
 
       {/* FACILITIES */}
-      <ScrollPanel title="about" id="facilities">
-        <div className="facilities-section">
-          <h1>Facilities</h1>
-          <EmblaSinglePanel
-            slides={[
-              "landsapce",
-              "laboratory",
-              "industrial",
-              "windows",
-              "computers",
-            ]}
-            options={options}
-            renderSlide={(slide) => (
-              <StockImageFetch
-                searchTerm={slide}
-                imgSource="large"
-                orientation="landscape"
-                page={5}
-                perPage={1}
-              />
-            )}
-          />
-        </div>
-      </ScrollPanel>
+      <div title="about" id="facilities">
+        <AboutFacilities />
+      </div>
 
       {/* EQUIPMENTS */}
-      <ScrollPanel title="about" id="equipments">
+      <div title="about" id="equipments">
         <div className="equipments-section">
           <EquipmentsPanel />
         </div>
-      </ScrollPanel>
+      </div>
 
       {/* OUR TEAM */}
-      <ScrollPanel title="about" id="our-team">
+      <div title="about" id="our-team">
         <div className="team-section">
           <h1>Team</h1>
           <EmblaCarousel
@@ -100,17 +81,17 @@ const About = () => {
             )}
           />
         </div>
-      </ScrollPanel>
+      </div>
 
       {/* BOARD */}
-      <ScrollPanel title="about" id="board">
+      <div title="about" id="board">
         <div className="board-section">
           <BoardMembersPanel />
         </div>
-      </ScrollPanel>
+      </div>
 
       {/* PARTNERS */}
-      <ScrollPanel title="about" id="partners">
+      <div title="about" id="partners">
         <div className="team-section">
           <h1>Partners</h1>
           <EmblaCarousel
@@ -121,10 +102,10 @@ const About = () => {
             )}
           />
         </div>
-      </ScrollPanel>
+      </div>
 
       {/* CERASP VIDEOS */}
-      <ScrollPanel title="about" id="cerasp-videos">
+      <div title="about" id="cerasp-videos">
         <div className="videos-section">
           <h1>Videos</h1>
           <EmblaSinglePanel
@@ -143,12 +124,12 @@ const About = () => {
             )}
           />
         </div>
-      </ScrollPanel>
+      </div>
 
       {/* PRIVACY POLICY */}
-      <ScrollPanel title="about" id="contact-us-form">
+      <div title="about" id="contact-us-form">
         <h2>Privacy policy</h2>
-      </ScrollPanel>
+      </div>
 
       <Footer />
     </div>
