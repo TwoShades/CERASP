@@ -14,7 +14,7 @@ const Projects = () => {
   useScrollToPanel();
 
   return (
-    <div className="scroll-container">
+    <div className="page-content">
       {/*   ===================
               =====OVERVIEW======
               ===================

@@ -1,31 +1,49 @@
 .about-facilities {
+  padding: 4em 8em 0em 8em;
   background-color: rgb(25, 25, 36);
   color: rgb(243, 243, 243);
 }
 
-.about-facilities-grid {
-  gap: 2em;
-  padding: 2em 5em 2em 5em;
-  display: flex;
-}
-
 .about-facilities-layout {
-  padding: 2em 5em 2em 5em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
 }
 
-.about-facilities-header {
-  padding: 2em 5em 2em 5em;
-}
-
-.about-facilities img {
-  width: 30%;
-  border-radius: 8px;
+.facility-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 32%;
+  flex: 1;
 }
 
 .about-facilities-images {
   display: flex;
-  gap: 2em;
+  justify-content: space-between;
+  /* gap: 3em; */
+}
+
+.facility-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.facility-card h2 {
+  margin-bottom: 0;
+}
+
+.about-facilities-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin-top: 3em;
+  padding: 2em 5em 2em 5em;
+}
+
+.about-facilities-map img {
+  width: 75%;
 }

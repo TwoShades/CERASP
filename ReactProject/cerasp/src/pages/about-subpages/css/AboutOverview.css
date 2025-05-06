@@ -1,11 +1,12 @@
 .about-overview {
+  padding: 8em 8em 0em 8em;
+  padding-top: 90px;
   background-color: rgb(25, 25, 36);
   color: rgb(243, 243, 243);
 }
 
 .about-overview-layout {
-  margin-top: 90px;
-  padding: 1em 5em;
+  padding: 1em;
 }
 
 .about-overview-header {

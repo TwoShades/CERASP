@@ -2,49 +2,49 @@
   "equipment": [
     {
       "id": "equipment-1",
-      "name": "DLS Digital light Scattering Zetasizer Advance Series Pro (Red)",
+      "name": "DLS DIGITAL LIGHT SCATTERING ZETASIZER ADVANCE SERIES PRO (RED)",
       "photo": "equipment-1.png",
       "pdf": "equipment-1.pdf"
     },
     {
       "id": "equipment-2",
-      "name": "Motic BA310 Elite Upright Compound Microscope, Motic Instruments",
+      "name": "MOTIC BA310 ELITE UPRIGHT COMPOUND MICROSCOPE, MOTIC INSTRUMENTS",
       "photo": "equipment-2.png",
       "pdf": ""
     },
     {
       "id": "equipment-3",
-      "name": "Agilent 1260 Infinity II HPLC-DAD System",
+      "name": "AGILENT 1260 INFINITY II HPLC-DAD SYSTEM",
       "photo": "equipment-3.png",
       "pdf": "equipment-3.pdf"
     },
     {
       "id": "equipment-4",
-      "name": "LV-DV2T-Viscometer-BROOKFIELD/AMETEK",
+      "name": "LV-DV2T-VISCOMETER-BROOKFIELD/AMETEK",
       "photo": "equipment-4.png",
       "pdf": ""
     },
     {
       "id": "equipment-5",
-      "name": "VWR® Double Beam UV-Vis Spectrophotometer-UV-6300PC",
+      "name": "VWR® DOUBLE BEAM UV-VIS SPECTROPHOTOMETER-UV-6300PC",
       "photo": "equipment-5.png",
       "pdf": "equipment-5.pdf"
     },
     {
       "id": "equipment-6",
-      "name": "C-MAG HS 10 IKAMAG® Hot Plate Stirrer, IKA® Works",
+      "name": "C-MAG HS 10 IKAMAG® HOT PLATE STIRRER, IKA® WORKS",
       "photo": "equipment-6.png",
       "pdf": ""
     },
     {
       "id": "equipment-7",
-      "name": "Drying/Heating Ovens with Forced Convection 115 UL",
+      "name": "DRYING/HEATING OVENS WITH FORCED CONVECTION 115 UL",
       "photo": "equipment-7.png",
       "pdf": ""
     },
     {
       "id": "equipment-8",
-      "name": "ECO Air-Cooled Refrigerated Circulators (ECO RE 415S), Lauda-Brinkmann-4L",
+      "name": "ECO AIR-COOLED REFRIGERATED CIRCULATORS (ECO RE 415S), LAUDA-BRINKMANN-4L",
       "photo": "equipment-8.png",
       "pdf": ""
     },
@@ -56,7 +56,7 @@
     },
     {
       "id": "equipment-10",
-      "name": "MEASUREMENT OF WATER ACTIVITY (aw)-AQUALAB TDL2-METER FOOD",
+      "name": "MEASUREMENT OF WATER ACTIVITY (AW)-AQUALAB TDL2-METER FOOD",
       "photo": "equipment-10.png",
       "pdf": "equipment-10.pdf"
     },
