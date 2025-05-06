@@ -14,7 +14,7 @@ import OneBigPanel from "../components/panels/OneBigPanel.js";
 const Expertises = () => {
   useScrollToPanel();
   return (
-    <div className="expertises scroll-container"> 
+    <div className="expertises page-content">
       {/*   ===================
               =====OVERVIEW======
               ===================
@@ -217,8 +217,8 @@ const Expertises = () => {
                 audits.
               </h1>
               <p>
-                As an official partner of Health Canada, we deliver
-                solutions that meet the highest industry standards.
+                As an official partner of Health Canada, we deliver solutions
+                that meet the highest industry standards.
               </p>
             </>
           }

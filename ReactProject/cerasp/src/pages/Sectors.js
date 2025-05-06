@@ -12,12 +12,11 @@ import FiveSteps from "../components/panels/FiveSteps.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import OneBigPanel from "../components/panels/OneBigPanel.js";
 
-
-const Sectors = () => { 
+const Sectors = () => {
   useScrollToPanel();
 
   return (
-    <div className="sectors scroll-container">
+    <div className="sectors page-content">
       {/*   ===================
               =====OVERVIEW======
               ===================
@@ -33,8 +32,8 @@ const Sectors = () => {
                 audits.
               </h1>
               <p>
-                As an official partner of Health Canada, we deliver
-                solutions that meet the highest industry standards.
+                As an official partner of Health Canada, we deliver solutions
+                that meet the highest industry standards.
               </p>
             </>
           }
@@ -82,27 +81,27 @@ product approval and marketing, ensuring compliance with market requirements."
           leftText={
             <p>
               Lorem Ipsum
-              <br />
-              • Formulation Development: Assisting in creating and improving drug formulations to 
-ensure efficacy, safety, and stability. 
-• Process optimization: We optimize manufacturing processes to ensure consistency, 
-scalability and efficiency while minimizing risk and costs. 
-• Regulatory Guidance: Ensuring that all products meet the necessary regulatory 
-standards through documentation, audits, and compliance assistance. 
+              <br />• Formulation Development: Assisting in creating and
+              improving drug formulations to ensure efficacy, safety, and
+              stability. • Process optimization: We optimize manufacturing
+              processes to ensure consistency, scalability and efficiency while
+              minimizing risk and costs. • Regulatory Guidance: Ensuring that
+              all products meet the necessary regulatory standards through
+              documentation, audits, and compliance assistance.
             </p>
           }
           rightImage={<div className="image-placeholder">Right Image</div>}
           rightText={
             <p>
               Lorem Ipsum Dorem
-              <br />
-              • Troubleshooting and Problem-Solving: Identifying and resolving technical 
-challenges in both research and production settings to ensure continuous 
-improvement. 
-• Preclinical and Preclinical Support: Providing research support for the development 
-of new therapies, from laboratory studies to clinical trials. 
-• Strategic Decisions: Our expertise supports strategic decisions on whether or not to 
-pursue product development, thanks to robust data and in-depth analysis. 
+              <br />• Troubleshooting and Problem-Solving: Identifying and
+              resolving technical challenges in both research and production
+              settings to ensure continuous improvement. • Preclinical and
+              Preclinical Support: Providing research support for the
+              development of new therapies, from laboratory studies to clinical
+              trials. • Strategic Decisions: Our expertise supports strategic
+              decisions on whether or not to pursue product development, thanks
+              to robust data and in-depth analysis.
             </p>
           }
         />
@@ -114,7 +113,7 @@ pursue product development, thanks to robust data and in-depth analysis.
         */}
 
       <ScrollPanel title="sector-of-activities" id="ref-aff-activities">
-      <TwoColumnThreeText
+        <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={<p>Regulatory Affairs Activities</p>}
           titleTextOne={<h2>We Offer</h2>}
@@ -122,23 +121,26 @@ pursue product development, thanks to robust data and in-depth analysis.
           titleTextThree={<h2>We Help</h2>}
           descTextOne={
             <p>
-              As a Health Canada Partner, we have a privileged access when depositing regulatory 
-dossiers, gaining clarity around a regulatory pathway and preparing for or responding to 
-audits and observations. 
+              As a Health Canada Partner, we have a privileged access when
+              depositing regulatory dossiers, gaining clarity around a
+              regulatory pathway and preparing for or responding to audits and
+              observations.
             </p>
           }
           descTextTwo={
             <p>
-              We can guide you on the regulatory process with our in-depth knowledge of Canadian, US 
-and EU policies, and niche experiences to tackle any complex issues associated with new 
-therapies, and support productive interactions with Health Canada, the FDA and the 
-European authorities. 
+              We can guide you on the regulatory process with our in-depth
+              knowledge of Canadian, US and EU policies, and niche experiences
+              to tackle any complex issues associated with new therapies, and
+              support productive interactions with Health Canada, the FDA and
+              the European authorities.
             </p>
           }
           descTextThree={
             <p>
-              While your intellectual property remains fully under your control, we can guide you to 
-              patent experts as well as assisting your organization in registering IP in Canada. 
+              While your intellectual property remains fully under your control,
+              we can guide you to patent experts as well as assisting your
+              organization in registering IP in Canada.
             </p>
           }
         ></TwoColumnThreeText>
@@ -150,7 +152,7 @@ European authorities.
         */}
 
       <ScrollPanel title="sector-of-activities" id="prototyping">
-      <CenteredFeaturePanel
+        <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
           features={[
@@ -189,20 +191,21 @@ European authorities.
         */}
 
       <ScrollPanel title="sector-of-activities" id="pharmaceutical">
-      <TextPanelOneImage
+        <TextPanelOneImage
           leftContent={
             <>
               <a href="#">pharmaceutical</a>
               <h1>
-              At CERASP, we offer comprehensive support throughout the drug development process, 
-              from formulation to commercialization.
+                At CERASP, we offer comprehensive support throughout the drug
+                development process, from formulation to commercialization.
               </h1>
               <p>
-              Our services include formulation development, 
-process development and optimization, regulatory guidance, and GMP-ready compliance. 
-We assist during technological transfers and support. Our expertise helps you navigate 
-complex regulatory requirements and bring innovative pharmaceutical solutions to market 
-efficiently and effectively.
+                Our services include formulation development, process
+                development and optimization, regulatory guidance, and GMP-ready
+                compliance. We assist during technological transfers and
+                support. Our expertise helps you navigate complex regulatory
+                requirements and bring innovative pharmaceutical solutions to
+                market efficiently and effectively.
               </p>
             </>
           }
@@ -242,35 +245,34 @@ efficiently and effectively."
         */}
 
       <ScrollPanel title="sector-of-activities" id="protein-synthesis">
-      <TwoImageTwoText
+        <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
           leftText={
             <p>
-              Many proteins of interest can be produced by fermentation from microorganisms such as 
-bacteria, fungi, or from plants. Overexpression of these proteins can be induced by genetic 
-transformation using plasmids (bacteria), protoplasts (fungi) or agrobacterium (plants). 
+              Many proteins of interest can be produced by fermentation from
+              microorganisms such as bacteria, fungi, or from plants.
+              Overexpression of these proteins can be induced by genetic
+              transformation using plasmids (bacteria), protoplasts (fungi) or
+              agrobacterium (plants).
               <br />
-              Examples of types of proteins: 
-• Enzymes 
-• Membrane markers 
-• Growth hormones 
-• Peptides 
-• Monoclonal antibodies 
+              Examples of types of proteins: • Enzymes • Membrane markers •
+              Growth hormones • Peptides • Monoclonal antibodies
             </p>
           }
           rightImage={<div className="image-placeholder">Right Image</div>}
           rightText={
             <p>
-              The optimum conditions for extraction and purification can be achieved by integrating cost
-effective and environmentally friendly solutions, while preserving the structure and 
-functionality of these proteins. Finally, their structure and functionality can be characterized 
-using our extensive range of equipment. 
+              The optimum conditions for extraction and purification can be
+              achieved by integrating cost effective and environmentally
+              friendly solutions, while preserving the structure and
+              functionality of these proteins. Finally, their structure and
+              functionality can be characterized using our extensive range of
+              equipment.
               <br />
-              Examples of applications: 
-• Antimicrobial formulations and coatings 
-• Enzymatic biosensors 
-• Functionalization of nanoparticles with specific ligands (antibodies, peptides, 
-proteins) for cell line-specific targeting 
+              Examples of applications: • Antimicrobial formulations and
+              coatings • Enzymatic biosensors • Functionalization of
+              nanoparticles with specific ligands (antibodies, peptides,
+              proteins) for cell line-specific targeting
             </p>
           }
         />
@@ -282,36 +284,41 @@ proteins) for cell line-specific targeting
         */}
 
       <ScrollPanel title="sector-of-activities" id="feasibility-&-tech-trans">
-      <TwoColumnThreeText
+        <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
-          textUnderImage={<p>Our Feasibility studies and pilot trials will ensure your project is possible, or save you time 
-and money! </p>}
+          textUnderImage={
+            <p>
+              Our Feasibility studies and pilot trials will ensure your project
+              is possible, or save you time and money!{" "}
+            </p>
+          }
           titleTextOne={<h2>We Offer</h2>}
           titleTextTwo={<h2>We Work</h2>}
           titleTextThree={<h2>We Help</h2>}
           descTextOne={
             <p>
-              Our Services include: 
-•  Studies on manufacturing, process or formulation methods (preformulation). 
-•  Conducting pilot and prototype studies. 
-•  Running studies on designing new facilities and equipment purchases. 
-•  Conduct digital health integration studies and incorporate digital transformation. 
+              Our Services include: • Studies on manufacturing, process or
+              formulation methods (preformulation). • Conducting pilot and
+              prototype studies. • Running studies on designing new facilities
+              and equipment purchases. • Conduct digital health integration
+              studies and incorporate digital transformation.
             </p>
           }
           descTextTwo={
             <p>
-              Our technical transfer services include process optimization for protocols and parameters: 
-•  Improving existing products in the case of a flawed or outdated procedure. 
-•  Improve existing products, processes or processes for business, pharmacological 
-or regulatory reasons. 
+              Our technical transfer services include process optimization for
+              protocols and parameters: • Improving existing products in the
+              case of a flawed or outdated procedure. • Improve existing
+              products, processes or processes for business, pharmacological or
+              regulatory reasons.
             </p>
           }
           descTextThree={
             <p>
-              •  Improving an existing product for aesthetic reasons such as changing colour or 
-taste. 
-•  Enable the integration of technological tools for digital health and for the corporate 
-digital shift. 
+              • Improving an existing product for aesthetic reasons such as
+              changing colour or taste. • Enable the integration of
+              technological tools for digital health and for the corporate
+              digital shift.
             </p>
           }
         ></TwoColumnThreeText>
@@ -323,7 +330,7 @@ digital shift.
         */}
 
       <ScrollPanel title="sector-of-activities" id="training-program">
-      <CenteredFeaturePanel
+        <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
           features={[
@@ -362,7 +369,7 @@ digital shift.
         */}
 
       <ScrollPanel title="sector-of-activities" id="support">
-      <TwoColumnThreeText
+        <TwoColumnThreeText
           circleImage={<div className="circle"></div>}
           textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
           titleTextOne={<h2>We Offer</h2>}

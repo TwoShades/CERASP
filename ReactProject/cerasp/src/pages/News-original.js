@@ -16,7 +16,7 @@ const NewsOriginal = () => {
   const handleCloseModal = () => setIsModalOpen(false); // Close the modal
 
   return (
-    <div className="news scroll-container">
+    <div className="news page-content">
       {/*   ===================
               =====OVERVIEW======
               ===================

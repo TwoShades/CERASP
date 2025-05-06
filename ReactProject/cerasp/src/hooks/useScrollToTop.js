@@ -4,20 +4,18 @@ const useScrollToTop = (pathname, handleClick) => {
   useEffect(() => {
     if (!pathname) return;
 
-    const scrollContainer = document.querySelector(".scroll-container");
+    const scrollContainer = document.querySelector(".page-content");
     if (scrollContainer) {
       const firstChild = scrollContainer.firstElementChild;
       if (firstChild) {
-        // Instant scroll to the first child
         firstChild.scrollIntoView({ behavior: "instant", block: "start" });
       }
     }
-  }, [pathname]); // Trigger on pathname change
+  }, [pathname]);
 
   const handleLinkClick = (linkPath) => {
     if (pathname === linkPath) {
-      // If the user clicks the same page, scroll to the topmost child
-      const scrollContainer = document.querySelector(".scroll-container");
+      const scrollContainer = document.querySelector(".page-content");
       if (scrollContainer) {
         const firstChild = scrollContainer.firstElementChild;
         if (firstChild) {
@@ -26,11 +24,11 @@ const useScrollToTop = (pathname, handleClick) => {
       }
     }
     if (handleClick) {
-      handleClick(linkPath); // Call the passed in `handleClick` function to handle menu state
+      handleClick(linkPath);
     }
   };
 
-  return { handleLinkClick }; // Return the new click handler to be used in the component
+  return { handleLinkClick };
 };
 
 export default useScrollToTop;

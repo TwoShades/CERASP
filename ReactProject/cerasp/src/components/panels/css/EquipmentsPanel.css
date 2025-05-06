@@ -83,11 +83,7 @@
   transition: opacity 0.3s ease;
 }
 
-.individual-equipment:hover .learn-more-button {
-  opacity: 1;
-}
-
-.pagination-controls {
+c .pagination-controls {
   grid-column: 1 / span 4;
   display: flex;
   justify-content: center;
