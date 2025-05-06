@@ -1,4 +1,4 @@
-import "./css/Sectors.css";
+import "./Pages-css/Sectors.css";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";

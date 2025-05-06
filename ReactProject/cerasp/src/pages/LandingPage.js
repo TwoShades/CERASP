@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
-import ScrollPanel from "../components/layouts/ScrollPanel";
-import "./css/LandingPage.css";
+import "./Pages-css/LandingPage.css";
 import ContactUsForm from "../components/panels/ContactUsForm";
 
 const LandingPage = () => {
   const [stage, setStage] = useState("logo");
 
   useEffect(() => {
+    // set header to false
     const timer1 = setTimeout(() => setStage("text"), 1000);
     const timer2 = setTimeout(() => setStage("page"), 2000);
 
     return () => {
+      // set header to true
       clearTimeout(timer1);
       clearTimeout(timer2);
     };
@@ -32,7 +33,7 @@ const LandingPage = () => {
           =====LANDING ZONE=====
           =================== */}
 
-      <ScrollPanel title="landing" id="landing">
+      <div title="landing" id="landing">
         <div className="landing-bloc">
           {stage === "logo" && (
             <img
@@ -54,13 +55,13 @@ const LandingPage = () => {
             </div>
           )}
         </div>
-      </ScrollPanel>
+      </div>
 
       {/* ===================
           =====OVERVIEW======
           =================== */}
 
-      <ScrollPanel title="landing" id="overview">
+      <div title="landing" id="overview">
         <div className="landing-overview">
           <h2>Overview</h2>
           <p>
@@ -68,20 +69,20 @@ const LandingPage = () => {
             revolutionizing education through immersive technologies.
           </p>
         </div>
-      </ScrollPanel>
+      </div>
 
       {/* ============================
           =====Equipment Updates======
           ============================ */}
 
-      <ScrollPanel title="landing" id="welcome">
+      <div title="landing" id="welcome">
         <div className="landing-welcome">
           <h2>Equipment Updates</h2>
           <p>
             Stay up to date with the latest tools and features in our platform.
           </p>
         </div>
-      </ScrollPanel>
+      </div>
 
       <div title="landing" id="contact-us-form">
         <ContactUsForm />

@@ -7,7 +7,7 @@ import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
 import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
 import StockImageFetch from "../components/placeholders/StockImageFetch";
 import useScrollToPanel from "../hooks/useScrollToPanel";
-import "./css/About.css";
+import "./Pages-css/About.css";
 import EquipmentsPanel from "../components/panels/EquipmentsPanel.js";
 import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
 // import AboutOverview from "../components/panels/AboutOverview.js";
