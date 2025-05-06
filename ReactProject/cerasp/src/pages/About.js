@@ -15,6 +15,7 @@ import teamData from "./reference/team.json";
 
 // Updated Panels //
 import AboutOverview from "./about-subpages/AboutOverview.js";
+import AboutFacilities from "./about-subpages/AboutFacilities.js";
 
 const About = () => {
   useScrollToPanel();
@@ -52,35 +53,13 @@ const About = () => {
   return (
     <div className="about-page">
       {/* OVERVIEW */}
-
-      <div colorTheme="themeA" title="about" id="overview">
+      <div title="about" id="overview">
         <AboutOverview />
       </div>
 
       {/* FACILITIES */}
       <div title="about" id="facilities">
-        <div className="facilities-section">
-          <h1>Facilities</h1>
-          <EmblaSinglePanel
-            slides={[
-              "landsapce",
-              "laboratory",
-              "industrial",
-              "windows",
-              "computers",
-            ]}
-            options={options}
-            renderSlide={(slide) => (
-              <StockImageFetch
-                searchTerm={slide}
-                imgSource="large"
-                orientation="landscape"
-                page={5}
-                perPage={1}
-              />
-            )}
-          />
-        </div>
+        <AboutFacilities />
       </div>
 
       {/* EQUIPMENTS */}

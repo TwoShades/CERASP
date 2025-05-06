@@ -3,39 +3,55 @@
   color: rgb(243, 243, 243);
 }
 
-.about-overview-grid {
-  padding: 2em;
-  display: grid;
-  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+.about-overview-layout {
+  margin-top: 90px;
+  padding: 1em 5em;
 }
 
-.about-overview-grid > * {
-  padding: 1em 5em 1em 5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.about-overview-header {
+  padding: 2em 0;
 }
 
-.about-overview-history {
-  grid-area: 1 / 1 / span 1 / span 2;
+.about-overview-header h1 {
+  margin-bottom: 1em;
 }
 
-.about-overview p {
+.about-overview-header p {
   font-size: 1.2em;
   line-height: 1.5em;
 }
 
+.about-overview-sections {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 3em;
+}
+
+.about-overview-sections > div {
+  flex: 1 1 20%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.about-overview-sections p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+/* Individual section borders */
 .about-overview-mission {
-  grid-area: 2 / 1 / span 1 / span 1;
-  border: 8px solid rgb(27, 91, 151);
+  border: 4px solid rgb(27, 91, 151);
 }
 
 .about-overview-vision {
-  grid-area: 3 / 2 / span 1 / span 1;
-  border: 8px solid rgb(81, 81, 95);
+  border: 4px solid rgb(81, 81, 95);
 }
 
 .about-overview-values {
-  grid-area: 4 / 1 / span 1 / span 1;
-  border: 8px solid rgb(46, 106, 196);
+  border: 4px solid rgb(46, 106, 196);
 }
