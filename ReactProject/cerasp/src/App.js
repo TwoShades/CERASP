@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "./contexts/ThemeContext";
+import { LanguageContext } from "./contexts/LanguageContext";
 import Header from "./components/layouts/Header";
 import LandingPage from "./pages/LandingPage";
 import About from "./pages/About";
@@ -16,8 +17,8 @@ import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
 
 function App() {
-  // const mainRef = useSmoothScroll();
   const { theme } = useContext(ThemeContext);
+  const { language } = useContext(LanguageContext);
   const { scrollRef, scrollProgress } = useScrollTracker();
 
   if (scrollRef.current) {
@@ -27,13 +28,11 @@ function App() {
   return (
     <ScreenSizeProvider>
       {" "}
-      {/* Wrap everything in ScreenSizeProvider */}
       <Header />
       {scrollProgress < 0.95 && <ContactButton />}
       <main
         className={`main-content app ${theme}`}
         ref={(el) => {
-          // mainRef.current = el;
           scrollRef.current = el;
         }}
       >
