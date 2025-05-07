@@ -4,24 +4,24 @@ import Footer from "../components/layouts/Footer.js";
 import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
 import CenteredFeaturePanel from "../components/panels/CenteredFeaturePanel.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
-import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
 import FiveSteps from "../components/panels/FiveSteps.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import OneBigPanel from "../components/panels/OneBigPanel.js";
+import ExpertiseOverview from "../pages/expertise-subpages/ExpertiseOverview.js";
 
 const Expertises = () => {
   useScrollToPanel();
   return (
-    <div className="expertises page-content">
+    <div className="expertises-page page-content">
       {/*   ===================
               =====OVERVIEW======
               ===================
         */}
 
       <div title="expertises" id="overview">
-        <ThreeColumnPanel
+        <ExpertiseOverview
           topRowContent={
             <>
               <h1>Expertise & Solution</h1>
@@ -30,33 +30,6 @@ const Expertises = () => {
                 vitae enim ut.
               </p>
             </>
-          }
-          col1Content={
-            <StockImageFetch
-              searchTerm="microscope"
-              imgSource="large"
-              orientation="portrait"
-              page={1}
-              perPage={1}
-            />
-          }
-          col2Content={
-            <StockImageFetch
-              searchTerm="petri"
-              imgSource="large"
-              orientation="portrait"
-              page={1}
-              perPage={1}
-            />
-          }
-          col3Content={
-            <StockImageFetch
-              searchTerm="bubble"
-              imgSource="large"
-              orientation="portrait"
-              page={1}
-              perPage={1}
-            />
           }
         />
       </div>

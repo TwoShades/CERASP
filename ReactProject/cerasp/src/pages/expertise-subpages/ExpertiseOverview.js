@@ -1,18 +1,51 @@
-import React from "react";
-import "./css/ThreeColumnPanel.css";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import "./css/ExpertiseOverview.css";
+import StockImageFetch from "../../components/placeholders/StockImageFetch";
+import expertiseTranslations from "./expertise-translations.json";
 
-const ExpertiseOverview = ({
-  topRowContent,
-  col1Content,
-  col2Content,
-  col3Content,
-}) => {
+const ExpertiseOverview = () => {
+  const { language } = useContext(LanguageContext);
+  const overview = expertiseTranslations.overview;
+
   return (
-    <div className="three-column-panel">
-      <div className="top-row">{topRowContent}</div>
-      <div className="col1">{col1Content}</div>
-      <div className="col2">{col2Content}</div>
-      <div className="col3">{col3Content}</div>
+    <div className="expertise-overview">
+      <div className="expertise-overview-title">
+        <h1>{overview.title[language]}</h1>
+        <p>{overview.content[language]}</p>
+      </div>
+
+      <div className="expertise-overview-content">
+        <div className="expertise-overview-card">
+          <StockImageFetch
+            searchTerm="microscope"
+            imgSource="large"
+            orientation="portrait"
+            page={1}
+            perPage={1}
+          />
+        </div>
+
+        <div className="expertise-overview-card">
+          <StockImageFetch
+            searchTerm="microscope"
+            imgSource="large"
+            orientation="portrait"
+            page={1}
+            perPage={1}
+          />
+        </div>
+
+        <div className="expertise-overview-card">
+          <StockImageFetch
+            searchTerm="microscope"
+            imgSource="large"
+            orientation="portrait"
+            page={1}
+            perPage={1}
+          />
+        </div>
+      </div>
     </div>
   );
 };
