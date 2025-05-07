@@ -1,16 +1,6 @@
 .about-overview {
-  padding: 8em 8em 0em 8em;
-  padding-top: 90px;
-  background-color: rgb(25, 25, 36);
-  color: rgb(243, 243, 243);
-}
-
-.about-overview-layout {
-  padding: 1em;
-}
-
-.about-overview-header {
-  padding: 2em 0;
+  padding: 0 8em 0em 8em;
+  padding-top: 120px;
 }
 
 .about-overview-header h1 {
@@ -22,15 +12,15 @@
   line-height: 1.5em;
 }
 
-.about-overview-sections {
+.about-overview-primary-sections {
   display: flex;
   gap: 2em;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 3em;
+  padding: 3em 0 3em 0;
 }
 
-.about-overview-sections > div {
+.about-overview-primary-sections > div {
   flex: 1 1 20%;
   padding: 2em;
   display: flex;
@@ -39,20 +29,66 @@
   border-radius: 8px;
 }
 
-.about-overview-sections p {
+.about-overview-primary,
+.about-overview-secondary {
   font-size: 1.1em;
   line-height: 1.6em;
 }
 
 /* Individual section borders */
-.about-overview-mission {
+.about-overview-primary {
   border: 4px solid rgb(27, 91, 151);
 }
 
-.about-overview-vision {
-  border: 4px solid rgb(81, 81, 95);
+.about-overview-primary:hover {
+  transform: translateY(-0.2em);
+  background-color: rgb(13, 31, 46);
+  transition: all 0.3s ease;
 }
 
-.about-overview-values {
-  border: 4px solid rgb(46, 106, 196);
+.about-overview-secondary-sections {
+  padding: 2em;
+  /* color: rgb(243, 243, 243); */
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.about-overview-secondary {
+  border: 3px solid rgb(27, 91, 151);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.about-overview-secondary summary {
+  cursor: pointer;
+  padding: 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  border: 1px solid rgb(27, 91, 151);
+  position: relative;
+  list-style: none;
+}
+
+.about-overview-secondary summary::marker {
+  display: none;
+}
+
+.about-overview-secondary summary::after {
+  content: "▶";
+  position: absolute;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.about-overview-secondary[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.about-overview-secondary p {
+  padding: 2em;
+  margin: 0;
+  border-top: 3px solid rgb(27, 91, 151);
+  color: #f3f3f3;
 }

@@ -1,7 +1,5 @@
 .nav {
   height: 100%;
-  width: 80%;
-  margin-left: 50px;
   display: flex;
   justify-content: center;
 }
@@ -10,13 +8,12 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 95%;
 }
 
 .nav-item {
   background-color: rgb(255, 255, 255);
   padding: 20px;
-  margin-left: 20px;
+  margin-left: 15px;
   text-align: center;
   position: relative;
   padding-bottom: 30px;
@@ -116,16 +113,6 @@
 .dropdown-toggle {
   padding-left: 20px;
   padding-right: 20px;
-}
-
-@media (max-width: 1495px) {
-  .nav-item {
-    padding: 10px;
-    margin-left: 10px;
-    text-align: center;
-    position: relative;
-    padding-bottom: 30px;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -243,8 +230,5 @@
 
   .nav-list > li:first-child {
     border-top: none;
-  }
-
-  @media (max-width: 576px) {
   }
 }

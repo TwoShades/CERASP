@@ -29,7 +29,6 @@ const Navigation = () => {
 
     window.addEventListener("resize", handleResize);
 
-    // Close the menu if clicked outside
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setMenuOpen(false);
@@ -91,7 +90,7 @@ const Navigation = () => {
                     to={`/${title}`}
                     onClick={() => {
                       handleLinkClick(`/${title}`);
-                      setOpenSubMenu(null); // Close the dropdown
+                      setOpenSubMenu(null);
                     }}
                   >
                     {navTitle}
@@ -100,9 +99,8 @@ const Navigation = () => {
                     <span
                       className="dropdown-toggle"
                       onClick={(e) => {
-                        // Prevent triggering parent click
                         e.stopPropagation();
-                        toggleSubMenu(title); // Toggle this dropdown
+                        toggleSubMenu(title);
                       }}
                     >
                       {openSubMenu === title ? "▲" : "▼"}
@@ -121,7 +119,7 @@ const Navigation = () => {
                             key={subPage}
                             onClick={() => {
                               handleNavigateToSection(subPage, `/${title}`);
-                              setOpenSubMenu(null); // Close the dropdown
+                              setOpenSubMenu(null);
                             }}
                             style={{ cursor: "pointer" }}
                           >

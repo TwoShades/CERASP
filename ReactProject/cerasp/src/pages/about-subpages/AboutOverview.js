@@ -1,58 +1,55 @@
 import "./css/AboutOverview.css";
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import aboutTranslations from "./about-translations.json";
 
 export default function AboutOverview() {
+  const { language } = useContext(LanguageContext);
+  const content = aboutTranslations.aboutOverview;
+
   return (
     <div className="about-overview">
       <div className="about-overview-layout">
         <div className="about-overview-header">
-          <h1>ABOUT US</h1>
-          <p>
-            Founded in 2019, the Centre for Expertise and Applied Research in
-            Pharmaceutical Sciences (CERASP) supports applied research,
-            technology transfer, and technical training in biopharmaceuticals,
-            pharmaceutical technology, production, and Regulatory Affairs. As a
-            trusted life sciences partner, we provide turnkey solutions to
-            streamline product development and reduce commercialization risks.
-            We also offer industry-focused training and internships. A member of
-            the CCTT network, CERASP is affiliated with John Abbott College and
-            Cégep Gérald-Godin, delivering high-quality services through
-            innovation and expertise.
-          </p>
+          <h1>{content.overview.title[language]}</h1>
+          <p>{content.overview[language]}</p>
         </div>
 
-        <div className="about-overview-sections">
-          <div className="about-overview-mission">
-            <h2>MISSION</h2>
-            <p>
-              Advance research and training in pharmaceutical innovation to
-              drive cutting-edge solutions. Develop and evaluate new solutions
-              in biopharmaceutics and technology to enhance product quality.
-              Support production and digital health advancements to ensure the
-              industry's growth and transformation.
-            </p>
+        <div className="about-overview-primary-sections">
+          <div className="about-overview-primary">
+            <h2>{content.mission.title[language]}</h2>
+            <p>{content.mission[language]}</p>
           </div>
-          <div className="about-overview-vision">
-            <h2>VISION</h2>
-            <p>
-              Be a leading partner in applied pharmaceutical research in Quebec
-              and Canada by providing transformative solutions. Deliver
-              innovative solutions to clients while ensuring their success.
-              Foster strong ties with educational and research communities
-              worldwide to collaborate and advance pharmaceutical technologies.
-            </p>
+          <div className="about-overview-primary">
+            <h2>{content.vision.title[language]}</h2>
+            <p>{content.vision[language]}</p>
           </div>
-          <div className="about-overview-values">
-            <h2>VALUES</h2>
-            <p>
-              Excellence & Integrity: We aim to provide high-quality service
-              with dedication, trust, and confidentiality. Client-Focused
-              Solutions: We focus on delivering fast, proactive, and mutually
-              successful solutions. Sustainable Innovation: We are committed to
-              developing eco-friendly technologies with long-term environmental
-              responsibility.
-            </p>
+          <div className="about-overview-primary">
+            <h2>{content.values.title[language]}</h2>
+            <p>{content.values[language]}</p>
           </div>
+        </div>
+
+        <div className="about-overview-secondary-sections">
+          <details className="about-overview-secondary">
+            <summary>{content.values.excellence.title[language]}</summary>
+            <p>{content.values.excellence[language]}</p>
+          </details>
+
+          <details className="about-overview-secondary">
+            <summary>{content.values.innovation.title[language]}</summary>
+            <p>{content.values.innovation[language]}</p>
+          </details>
+
+          <details className="about-overview-secondary">
+            <summary>{content.values.collaboration.title[language]}</summary>
+            <p>{content.values.collaboration[language]}</p>
+          </details>
+
+          <details className="about-overview-secondary">
+            <summary>{content.values.openness.title[language]}</summary>
+            <p>{content.values.openness[language]}</p>
+          </details>
         </div>
       </div>
     </div>

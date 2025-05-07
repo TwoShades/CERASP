@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./Pages-css/About.css";
 import Employee from "../components/uicomponents/Employee.js";
 import Partners, { partnersData } from "../components/uicomponents/Partners";
 import Footer from "../components/layouts/Footer.js";
 import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
 import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
 import useScrollToPanel from "../hooks/useScrollToPanel";
-import "./Pages-css/About.css";
-import EquipmentsPanel from "../components/panels/EquipmentsPanel.js";
 import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
 import teamData from "./reference/team.json";
 
