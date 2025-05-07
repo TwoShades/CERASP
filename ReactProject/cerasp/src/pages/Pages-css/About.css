@@ -1,4 +1,5 @@
 .about-page {
-  background: linear-gradient(to right, black, rgb(26, 34, 54));
+  background-color: black;
+  background-image: linear-gradient(to right, rgb(18, 25, 31), rgb(13, 24, 44));
   color: rgb(243, 243, 243);
 }
