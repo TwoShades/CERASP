@@ -17,10 +17,10 @@ const ContactUsForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!captchaValue) {
-      setError("Please complete the reCAPTCHA.");
-      return;
-    }
+    // if (!captchaValue) {
+    //   setError("Please complete the reCAPTCHA.");
+    //   return;
+    // }
 
     const policyChecked = formRef.current.policy.checked;
     if (!policyChecked) {
@@ -132,9 +132,9 @@ const ContactUsForm = () => {
               </div>
             </div>
 
-            <div className="not-a-robot">
+            {/* <div className="not-a-robot">
               <ReCAPTCHA sitekey="6LfyXTArAAAAAAF7C0SGMVqeHblcdxPZ_hKaLSQD" onChange={handleCaptchaChange} />
-            </div>
+            </div> */}
 
             {error && <p className="error-message">{error}</p>}
             {submitted && <p className="success-message">Message sent successfully!</p>}
