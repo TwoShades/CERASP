@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { ScreenSizeContext } from "../../hooks/ScreenSizeContext";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import LearnMoreButton from "../../components/interactables/LearnMoreButton";
 import equipmentsData from "../../components/panels/reference/equipments.json";
 import "./css/AboutEquipments.css";
@@ -8,6 +9,7 @@ const AboutEquipments = () => {
   const [equipments, setEquipments] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
+  const { language } = useContext(LanguageContext);
   const { isMobile, isTablet } = useContext(ScreenSizeContext);
 
   useEffect(() => {
@@ -35,8 +37,12 @@ const AboutEquipments = () => {
     <div className="about-equipments">
       <div className="about-equipments-layout">
         <div className="about-equipments-header">
-          <h1>EQUIPMENTS</h1>
-          <h3>Discover our state-of-the-art equipment!</h3>
+          <h1> {language === "fr" ? "ÉQUIPEMENTS" : "EQUIPMENTS"}</h1>
+          <h3>
+            {language === "fr"
+              ? "Découvrez notre équipement à la fine pointe de la technologie!"
+              : "Discover our state-of-the-art equipment!"}
+          </h3>
         </div>
 
         <div className="about-equipments-images">

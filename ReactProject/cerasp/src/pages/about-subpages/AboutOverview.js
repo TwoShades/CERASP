@@ -14,6 +14,18 @@ export default function AboutOverview() {
         <p>{content.overview[language]}</p>
       </div>
 
+      <div className="about-overview-video">
+        <div className="about-overview-video-icon">ICON</div>
+        <iframe
+          src={`https://www.youtube.com/embed/ShwbF2xodT8`}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        <div className="about-overview-video-icon">ICON</div>
+      </div>
+
       <div className="about-overview-primary-sections">
         <div className="about-overview-primary">
           <h2>{content.mission.title[language]}</h2>
