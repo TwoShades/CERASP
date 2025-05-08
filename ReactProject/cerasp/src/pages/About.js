@@ -9,6 +9,7 @@ import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
 import teamData from "./reference/team.json";
+import ContactUsForm from "../components/panels/ContactUsForm.js";
 
 // Updated Panels //
 import AboutOverview from "./about-subpages/AboutOverview.js";
@@ -100,31 +101,9 @@ const About = () => {
         </div>
       </div>
 
-      {/* CERASP VIDEOS */}
-      <div title="about" id="cerasp-videos">
-        <div className="videos-section">
-          <h1>Videos</h1>
-          <EmblaSinglePanel
-            slides={["ShwbF2xodT8"]}
-            options={options}
-            renderSlide={(slide) => (
-              <div className="video-container">
-                <iframe
-                  src={`https://www.youtube.com/embed/${slide}`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            )}
-          />
-        </div>
-      </div>
-
       {/* PRIVACY POLICY */}
       <div title="about" id="contact-us-form">
-        <h2>Privacy policy</h2>
+        {/* <ContactUsForm /> */}
       </div>
 
       <Footer />
