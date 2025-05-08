@@ -19,10 +19,10 @@
 .about-facilities-images {
   display: flex;
   justify-content: space-between;
-  /* gap: 3em; */
 }
 
 .facility-card img {
+  border: 2px solid rgb(121, 188, 250);
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -31,6 +31,10 @@
 
 .facility-card h2 {
   margin-bottom: 0;
+}
+
+.facility-card p {
+  text-align: center;
 }
 
 .about-facilities-map {

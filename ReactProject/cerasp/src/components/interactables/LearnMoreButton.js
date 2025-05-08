@@ -11,9 +11,9 @@ const LearnMoreButton = ({ pdfUrl, text = "Learn More" }) => {
   return (
     <div>
       {/* Learn More Button */}
-      <button onClick={handleOpenModal} className="learn-more-button">
+      <div onClick={handleOpenModal} className="learn-more-button">
         {text}
-      </button>
+      </div>
 
       {/* Modal for displaying PDF */}
       <ModalMessage
