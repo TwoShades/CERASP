@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Pages-css/About.css";
-import Employee from "../components/uicomponents/Employee.js";
-import Partners, { partnersData } from "../components/uicomponents/Partners";
 import Footer from "../components/layouts/Footer.js";
-import EmblaCarousel from "../components/interactables/EmblaCarousel.js";
-import EmblaSinglePanel from "../components/interactables/EmblaSinglePanel.js";
 import useScrollToPanel from "../hooks/useScrollToPanel";
 import BoardMembersPanel from "../components/panels/BoardMembersPanel.js";
-import teamData from "./reference/team.json";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 
 // Updated Panels //
@@ -16,6 +11,7 @@ import AboutOverview from "./about-subpages/AboutOverview.js";
 import AboutFacilities from "./about-subpages/AboutFacilities.js";
 import AboutEquipments from "./about-subpages/AboutEquipments.js";
 import AboutTeam from "./about-subpages/AboutTeam.js";
+import AboutPartners from "./about-subpages/AboutPartners.js";
 
 const About = () => {
   useScrollToPanel();
@@ -81,16 +77,7 @@ const About = () => {
 
       {/* PARTNERS */}
       <div title="about" id="partners">
-        <div className="team-section">
-          <h1>Partners</h1>
-          <EmblaCarousel
-            slides={partnersData}
-            options={options}
-            renderSlide={(partner) => (
-              <Partners key={partner.name} partner={partner} />
-            )}
-          />
-        </div>
+        <AboutPartners />
       </div>
 
       {/* PRIVACY POLICY */}
