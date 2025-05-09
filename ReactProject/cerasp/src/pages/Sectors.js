@@ -3,12 +3,9 @@ import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
-import CenteredFeaturePanel from "../components/panels/CenteredFeaturePanel.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
-import ThreeColumnPanel from "../components/panels/ThreeColumnPanel.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
-import FiveSteps from "../components/panels/FiveSteps.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import OneBigPanel from "../components/panels/OneBigPanel.js";
 
@@ -152,7 +149,7 @@ product approval and marketing, ensuring compliance with market requirements."
         */}
 
       <ScrollPanel title="sector-of-activities" id="prototyping">
-        <CenteredFeaturePanel
+        {/* <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
           features={[
@@ -182,7 +179,7 @@ product approval and marketing, ensuring compliance with market requirements."
               applications such as hydrocarbon analysis.`,
             },
           ]}
-        />
+        /> */}
       </ScrollPanel>
 
       {/*   =========================
@@ -330,7 +327,7 @@ efficiently and effectively."
         */}
 
       <ScrollPanel title="sector-of-activities" id="training-program">
-        <CenteredFeaturePanel
+        {/* <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
           features={[
@@ -360,7 +357,7 @@ efficiently and effectively."
               applications such as hydrocarbon analysis.`,
             },
           ]}
-        />
+        /> */}
       </ScrollPanel>
 
       {/*   ===================

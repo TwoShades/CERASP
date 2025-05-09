@@ -28,7 +28,7 @@ const ExpertiseOverview = () => {
 
         <div className="expertise-overview-card">
           <StockImageFetch
-            searchTerm="microscope"
+            searchTerm="chemistry"
             imgSource="large"
             orientation="portrait"
             page={1}
@@ -38,7 +38,7 @@ const ExpertiseOverview = () => {
 
         <div className="expertise-overview-card">
           <StockImageFetch
-            searchTerm="microscope"
+            searchTerm="microbe"
             imgSource="large"
             orientation="portrait"
             page={1}

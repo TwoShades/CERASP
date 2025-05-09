@@ -2,7 +2,6 @@ import "./Pages-css/Expertises.css";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 import Footer from "../components/layouts/Footer.js";
 import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
-import CenteredFeaturePanel from "../components/panels/CenteredFeaturePanel.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
@@ -10,15 +9,15 @@ import FiveSteps from "../components/panels/FiveSteps.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import OneBigPanel from "../components/panels/OneBigPanel.js";
 import ExpertiseOverview from "../pages/expertise-subpages/ExpertiseOverview.js";
+import ExpertiseGMP from "./expertise-subpages/ExpertiseGMP.js";
+import ExpertiseFormulation from "./expertise-subpages/ExpertiseFormulation.js";
 
 const Expertises = () => {
   useScrollToPanel();
   return (
     <div className="expertises-page page-content">
-      {/*   ===================
-              =====OVERVIEW======
-              ===================
-        */}
+
+      {/* ====OVERVIEW==== */}
 
       <div title="expertises" id="overview">
         <ExpertiseOverview
@@ -34,82 +33,16 @@ const Expertises = () => {
         />
       </div>
 
-      {/*   ===================
-              ===GMP EXPERTISE===
-              ===================
-        */}
+      {/* ===GMP EXPERTISE=== */}
 
       <div title="expertises" id="gmp-expertise-&-biomanufacturing">
-        <CenteredFeaturePanel
-          title="GMP EXPERTISE & BIOMANUFACTURING"
-          image={<div className="image-placeholder"></div>}
-          features={[
-            {
-              title: "Manufacturing",
-              text:
-                "Manufacturing According to GMP (Good Manufacturing Practices) Standards: " +
-                "At CERASP, we are a facility that is not GMP-compliant. However, our laboratories and " +
-                "production areas are GLP (Good Laboratory Practice) compliant, and we work and " +
-                "document according to GMP standards to facilitate technology transfer and the " +
-                "preparation of dossiers that will eventually be submitted to regulatory authorities for our " +
-                "clients.",
-            },
-            {
-              title: "Develop your Product",
-              text:
-                "CERASP helps you develop products and manufacturing processes that are GMP compliant (GMP ready, thus ready for transfer)." +
-                "Additionally, it is worth noting that we have several partnerships with universities and collaborations with other College Centers for " +
-                "Technology Transfer (CCTTs) for projects aimed at industrial partners.",
-            },
-            {
-              title: "Biomanufacturing",
-              text: `We specialize in the optimization of bioprocesses, focusing on fermentation-based 
-              processes in solid and liquid cultures. Our team has extensive experience in producing 
-              enzymes and bioproducts, conducting bioactivity assessments, and employing microbial 
-              identification and genomics techniques. We also apply analytical chemistry for specialized 
-              applications such as hydrocarbon analysis.`,
-            },
-          ]}
-        />
+        <ExpertiseGMP />
       </div>
 
-      {/*   =================================
-              =FORMULATIONS OF PHARMACEUTICALS=
-              =================================
-        */}
+      {/* =FORMULATIONS OF PHARMACEUTICALS= */}
 
       <div title="expertises" id="formulation-of-pharmaceuticals">
-        <TwoColumnThreeText
-          circleImage={<div className="circle"></div>}
-          textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
-          titleTextOne={<h2>We Offer</h2>}
-          titleTextTwo={<h2>We Work</h2>}
-          titleTextThree={<h2>We Help</h2>}
-          descTextOne={
-            <p>
-              Expert formulation services tailored to the needs of
-              pharmaceuticals, animal health products, natural health products
-              (NHPs), and nutraceuticals. Our services include the development
-              and optimization of drug formulations, ensuring efficacy,
-              stability, and safety.{" "}
-            </p>
-          }
-          descTextTwo={
-            <p>
-              To create the appropriate dosage forms—such as tablets, capsules,
-              softgels, gummies, creams, liquids, ointments and
-              injectables—while adhering to regulatory standards and industry
-              best practices.
-            </p>
-          }
-          descTextThree={
-            <p>
-              With product improvement, process optimization, and ensure that
-              formulations meet market requirements for both human and animal
-              health sectors.{" "}
-            </p>
-          }
-        ></TwoColumnThreeText>
+        <ExpertiseFormulation />
       </div>
 
       {/*   =====================================
