@@ -67,6 +67,7 @@
   height: 12em;
   background: linear-gradient(45deg, rgb(62, 98, 131) 0%, rgb(7, 23, 39) 100%);
   border-radius: 50%;
+  border: 2px dashed lightblue;
   display: flex;
   justify-content: center;
   align-items: center;

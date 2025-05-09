@@ -15,6 +15,7 @@ import ContactUsForm from "../components/panels/ContactUsForm.js";
 import AboutOverview from "./about-subpages/AboutOverview.js";
 import AboutFacilities from "./about-subpages/AboutFacilities.js";
 import AboutEquipments from "./about-subpages/AboutEquipments.js";
+import AboutTeam from "./about-subpages/AboutTeam.js";
 
 const About = () => {
   useScrollToPanel();
@@ -68,16 +69,7 @@ const About = () => {
 
       {/* OUR TEAM */}
       <div title="about" id="our-team">
-        <div className="team-section">
-          <h1>Team</h1>
-          <EmblaCarousel
-            slides={teamData.team}
-            options={options}
-            renderSlide={(member) => (
-              <Employee key={member.id} member={member} />
-            )}
-          />
-        </div>
+        <AboutTeam />
       </div>
 
       {/* BOARD */}

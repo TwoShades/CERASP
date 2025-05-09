@@ -1,0 +1,13 @@
+.about-team {
+  padding: 0 8em 8em 8em;
+  padding-top: 90px;
+}
+
+.team-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1 1 20%;
+  gap: 4em;
+}
