@@ -1,0 +1,82 @@
+{
+  "team": [
+    {
+      "id": "team-1",
+      "name": "Christina Aon, LSS, IEMBA",
+      "role": "Director General",
+      "photo": "team-1.png"
+    },
+    {
+      "id": "team-2",
+      "name": "Christophe Brun-Baronnat, MSc",
+      "role": "Scientific Director",
+      "photo": "team-2.png"
+    },
+    {
+      "id": "team-3",
+      "name": "Fatma Gassara, PhD",
+      "role": "Director of Innovation",
+      "photo": "team-3.png"
+    },
+    {
+      "id": "team-4",
+      "name": "Franck Bonnardel, PhD",
+      "role": "Regulatory Affairs Expert",
+      "photo": "team-4.png"
+    },
+    {
+      "id": "team-5",
+      "name": "Claude Sara",
+      "role": "Regulatory Affairs Expert",
+      "photo": "team-5.png"
+    },
+    {
+      "id": "team-6",
+      "name": "Bobby Boursiquot",
+      "role": "Business Development and Partnerships",
+      "photo": "team-6.png"
+    },
+    {
+      "id": "team-7",
+      "name": "Rosanne Séguin, PhD",
+      "role": "Researcher and Lecturer",
+      "photo": "team-7.png"
+    },
+    {
+      "id": "team-8",
+      "name": "Amélie Auge",
+      "role": "Research Officer",
+      "photo": "team-8.png"
+    },
+    {
+      "id": "team-9",
+      "name": "Ali Nehme, PhD",
+      "role": "Bioinformatics Expert",
+      "photo": ""
+    },
+    {
+      "id": "team-10",
+      "name": "Alexandre Dicaire",
+      "role": "Virtual Reality Developer",
+      "photo": "team-10.png"
+    },
+    {
+      "id": "team-11",
+      "name": "Anupam Poudel, BSc. IT in Computing, IT Support",
+      "role": "Software Developer",
+      "photo": "team-11.png"
+    },
+    {
+      "id": "team-12",
+      "name": "Amina Cekic",
+      "role": "Research and Development Technician",
+      "photo": "team-12.png"
+    },
+    {
+      "id": "team-13",
+      "name": "Anakin Benssoussen",
+      "role": "Research and Development Technician",
+      "photo": "team-13.png"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ export default function AboutFacilities() {
     <div className="about-facilities">
       <div className="about-facilities-layout">
         <div className="about-facilities-header">
-          <h1>{language === "fr" ? "INSTALLATIONS" : "FACILITIES"}</h1>
+          <h1>{language === "fr" ? "LOCATIONS" : "FACILITIES"}</h1>
           <h3>
             {language === "fr"
               ? "Le CERASP dispose de 3 sites à la fine pointe de la technologie!"

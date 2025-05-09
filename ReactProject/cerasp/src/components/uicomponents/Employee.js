@@ -17,30 +17,25 @@ const Employee = ({ member }) => {
       : "/photos/placeholder.jpg"; // Use placeholder if photo is empty string
 
   return (
-    <div className="employee-card">
-      <h3>{finalMember.name}</h3>
-
-      <img
-        className="employee-card-img"
-        src={imageUrl}
-        alt={finalMember.name}
-      />
-
-      <ReactMarkdown>
-        {finalMember.role ? finalMember.role : "No about information available"}
-      </ReactMarkdown>
-
-      <a
-        href="https://ca.linkedin.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          className="linkedin"
-          src="/logos/linkedinlogo.png"
-          alt="LinkedIn Logo"
-        />
-      </a>
+    <div
+      className="employee-card"
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    >
+      <h3>{member.name}</h3>
+      <div>
+        <p>{member.role}</p>
+        <a
+          href="https://ca.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="linkedin"
+            src="/logos/linkedinlogo.png"
+            alt="LinkedIn Logo"
+          />
+        </a>
+      </div>
     </div>
   );
 };

@@ -32,6 +32,7 @@ const Header = () => {
           EN
         </button>
       </div>
+      <div className="bg-test"></div>
     </div>
   );
 };

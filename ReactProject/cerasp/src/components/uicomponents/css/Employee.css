@@ -1,83 +1,58 @@
 .employee-card {
-  color: #7e7e7e;
-  background: white;
-  box-shadow: 1px 1px 2px 1px rgb(179, 202, 216);
-  border: 2px solid var(--secondary-blue);
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  box-shadow: 1px 1px 2px 1px rgb(44, 52, 57);
+  border-radius: 4px;
   padding: 20px;
-  border-radius: 16px;
   text-align: center;
-  display: grid;
-  grid-template-rows: 1fr auto 1fr; /* Three rows: name, image, role */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
-  height: 40vh;
-  width: 90%;
-  overflow-y: auto; /* Enables vertical scrolling */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+
+  width: 280px;
+  height: 310px;
+
+  overflow: hidden;
 }
 
-.employee-card:hover {
-  box-shadow: 1px 1px 1px 1px var(--secondary-hover-blue);
+.employee-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  z-index: 0;
+}
+
+.employee-card:hover::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+}
+
+.employee-card h3,
+.employee-card p,
+.linkedin {
+  position: relative;
+  z-index: 1;
+  margin: 0.5em 0;
 }
 
 .employee-card h3 {
-  font-size: 1.2rem;
-  color: var(--primary-blue);
-  text-align: center;
-  min-height: 50px; /* Ensures uniform name spacing */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-
-.employee-card-img {
-  width: 80%;
-  border: 2px solid var(--primary-blue);
-  /* max-width: 150px; */
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
-  flex-shrink: 0;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .employee-card p {
-  color: var(--secondary-blue);
+  color: white;
   font-size: 1rem;
-  line-height: 1.5;
-  text-align: center;
-  overflow-wrap: break-word;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10px 0;
+  line-height: 1.4;
 }
 
-/* Keep LinkedIn icon at bottom */
 .linkedin {
   margin-top: auto;
-  margin-bottom: 0px;
-}
-
-@media (max-width: 1024px) {
-  .employee-card {
-    width: 90%;
-    height: 90%;
-    margin: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .employee-card {
-    width: 80%;
-    margin: auto;
-  }
-}
-
-@media (max-width: 475px) {
-  .employee-card {
-    width: 60%;
-    margin: auto;
-  }
+  margin-bottom: 0;
 }

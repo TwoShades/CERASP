@@ -3,6 +3,12 @@
   padding-top: 90px;
 }
 
+.about-facilities-header h1 {
+  /* padding: 1em;
+  border: 1px solid rgba(141, 141, 141, 0.114);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45); */
+}
+
 .about-facilities-layout {
   display: flex;
   flex-direction: column;
@@ -19,10 +25,10 @@
 .about-facilities-images {
   display: flex;
   justify-content: space-between;
-  /* gap: 3em; */
 }
 
 .facility-card img {
+  border: 2px solid rgb(121, 188, 250);
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -31,6 +37,10 @@
 
 .facility-card h2 {
   margin-bottom: 0;
+}
+
+.facility-card p {
+  text-align: center;
 }
 
 .about-facilities-map {

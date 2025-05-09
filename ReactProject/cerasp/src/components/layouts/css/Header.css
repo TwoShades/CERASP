@@ -14,11 +14,13 @@
   width: 100px;
   height: 100px;
   margin-left: 20px;
+  z-index: 6;
 }
 
 .language-switcher {
   display: flex;
   margin-right: 20px;
+  z-index: 6;
 }
 
 .language-button {
@@ -36,10 +38,27 @@
   font-weight: bold;
 }
 
+.bg-test {
+  display: none;
+}
+
 @media (max-width: 1495px) {
 }
 
 @media (max-width: 1200px) {
+  .bg-test {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    backdrop-filter: blur(4px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(4px); /* Safari support */
+    z-index: 5;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
+
   .layout-header {
     background: none;
     box-shadow: none;

@@ -81,5 +81,5 @@
 }
 
 img {
-  border-radius: var(--project-panel-border-radius);
+  /* border-radius: var(--project-panel-border-radius); */
 }
