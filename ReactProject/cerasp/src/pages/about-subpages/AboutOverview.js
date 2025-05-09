@@ -15,7 +15,13 @@ export default function AboutOverview() {
       </div>
 
       <div className="about-overview-video">
-        <div className="about-overview-video-icon">ICON</div>
+        <div className="about-overview-video-icon">
+          <img
+            src="/svg/flask-gear.svg"
+            alt="Flask Gear"
+            className="about-icon-img"
+          />
+        </div>
         <iframe
           src={`https://www.youtube.com/embed/ShwbF2xodT8`}
           title="YouTube video player"
@@ -23,7 +29,13 @@ export default function AboutOverview() {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-        <div className="about-overview-video-icon">ICON</div>
+        <div className="about-overview-video-icon">
+          <img
+            src="/svg/microscope-bacteria.svg"
+            alt="Microscope Bacteria"
+            className="about-icon-img"
+          />
+        </div>
       </div>
 
       <div className="about-overview-primary-sections">

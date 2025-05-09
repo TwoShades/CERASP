@@ -65,12 +65,21 @@
 .about-overview-video-icon {
   width: 12em;
   height: 12em;
-  background: linear-gradient(45deg, rgb(62, 98, 131) 0%, rgb(7, 23, 39) 100%);
   border-radius: 50%;
-  border: 2px dashed lightblue;
+  background-color: rgb(44, 73, 133);
+
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2.5em; /* Adds breathing room inside the circle */
+  box-sizing: border-box; /* Ensures padding doesn't break the circle shape */
+}
+
+.about-icon-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(0) saturate(0%) invert(80%);
 }
 
 .about-overview-secondary-sections {
