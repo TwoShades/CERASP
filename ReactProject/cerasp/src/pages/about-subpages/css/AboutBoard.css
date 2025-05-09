@@ -1,0 +1,86 @@
+.about-board {
+  padding: 90px 8em 0 8em;
+}
+
+.about-board-header {
+  /* text-align: center; */
+  margin-bottom: 40px;
+}
+
+.about-board-images {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-bottom: 40px;
+}
+
+.board-member-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  width: 15%;
+  min-width: 180px;
+  max-width: 220px;
+  height: 340px;
+
+  text-align: center;
+}
+
+.board-member-position {
+  font-weight: bold;
+  margin: 0.3em 0;
+  color: #ccc;
+}
+
+.board-member-affiliation {
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.board-member-card img {
+  width: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #ccc;
+}
+
+.board-member-card h4 {
+  font-size: 1.1rem;
+  margin-top: 0.5em;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.pagination-buttons button {
+  background-color: #4677ac;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-buttons button:disabled {
+  background-color: #363636;
+  cursor: not-allowed;
+}
+
+.pagination-buttons button:hover:not(:disabled) {
+  background-color: #84bfff;
+}

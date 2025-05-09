@@ -71,8 +71,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.5em; /* Adds breathing room inside the circle */
-  box-sizing: border-box; /* Ensures padding doesn't break the circle shape */
+  padding: 2.5em;
+  box-sizing: border-box;
 }
 
 .about-icon-img {
@@ -84,7 +84,6 @@
 
 .about-overview-secondary-sections {
   padding: 2em;
-  /* color: rgb(243, 243, 243); */
   max-width: 70%;
   margin: 0 auto;
 }

@@ -1,0 +1,67 @@
+{
+  "boardMembers": [
+    {
+      "id": "boardmember-1",
+      "name": "Julie Pelletier",
+      "position": "President",
+      "affiliation": "Director General of Cégep Gérald-Godin",
+      "photo": "boardmember-1.png"
+    },
+    {
+      "id": "boardmember-2",
+      "name": "Teresa Berghello",
+      "position": "Vice President",
+      "affiliation": "Director General John Abbott College",
+      "photo": "boardmember-2.png"
+    },
+    {
+      "id": "boardmember-3",
+      "name": "Richard Harnois",
+      "position": "Treasurer",
+      "affiliation": "Director of Studies at Cégep Gérald-Godin",
+      "photo": "boardmember-3.png"
+    },
+    {
+      "id": "boardmember-4",
+      "name": "Gordon Brown",
+      "position": "Secretary",
+      "affiliation": "Director of Studies at John Abbott College",
+      "photo": "boardmember-4.png"
+    },
+    {
+      "id": "boardmember-5",
+      "name": "Annie Charland",
+      "position": "Vice President of Production",
+      "affiliation": "Riva Pharmaceuticals",
+      "photo": "boardmember-5.png"
+    },
+    {
+      "id": "boardmember-6",
+      "name": "Guy LeHouillier",
+      "position": "General Manager",
+      "affiliation": "Therapeutic Area",
+      "photo": "boardmember-6.png"
+    },
+    {
+      "id": "boardmember-7",
+      "name": "Benjamin Tanguay",
+      "position": "Pharmacist",
+      "affiliation": "Development & Hospital Affairs",
+      "photo": "boardmember-7.png"
+    },
+    {
+      "id": "boardmember-8",
+      "name": "Phil Roche",
+      "position": "Scientific Advisor CERASP",
+      "affiliation": "CEO and Co-Founder, Jenthera Inc.",
+      "photo": "boardmember-8.png"
+    },
+    {
+      "id": "boardmember-9",
+      "name": "Marc Purcell",
+      "position": "President",
+      "affiliation": "Bio A3P",
+      "photo": "boardmember-9.png"
+    }
+  ]
+}

@@ -3,11 +3,15 @@
   padding-top: 90px;
 }
 
+.about-team h1 {
+  margin-bottom: 2em;
+}
+
 .team-cards {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   flex: 1 1 20%;
-  gap: 4em;
+  gap: 3em;
 }
