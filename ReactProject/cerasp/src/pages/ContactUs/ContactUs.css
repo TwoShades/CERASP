@@ -41,10 +41,17 @@
 
 /* Contact Section Styling */
 .contact-left-side,
-.contact-sponsors,
-.contact-google-maps {
+.contact-sponsors {
   padding: 15px;
   border-radius: 8px;
+}
+
+.contact-google-maps {
+    padding: 0px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 /* Form Styling */
@@ -73,7 +80,6 @@
 
 .contact-sponsors,
 .contact-google-maps {
-    width: 100%;
     background: white;
 }
 

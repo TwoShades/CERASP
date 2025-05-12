@@ -1,40 +1,40 @@
-.expertise-panel {
+.expertise-bioinformatics {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 2em;
 
     padding: 0 8em 0em 8em;
-    padding-top: 90px;
+    padding-top: 120px;
     padding-bottom: 8em;
 
     border: solid 1px #8585851d;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
   }
   
-  .left {
-    flex: 1 1 300px;
+  .bioinfo-left {
+    /* flex: 1 1 300px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50%;
   }
-  
-  .circle-bio {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 16px;
+
+  .bioinfo-image {
+    width: 60%;
   }
   
   .caption {
     text-align: center;
-    font-size: 16px;
-    color: #555;
+    font-size: 18px;
+    color: var(--bg-color-light);
     background-color: #ffffff10;
     border: 1px solid #cccccc05;
     padding: 8px;
     border-radius: 8px;
   }
   
-  .right {
-    flex: 2 1 600px;
+  .bioinfo-right {
+    /* flex: 2 1 600px; */
     display: flex;
     flex-direction: column;
     gap: 16px;

@@ -1,12 +1,12 @@
 import React from "react";
-import "./css/ExpertiseFormulation.css";
+import "./css/ExpertiseBioinformatics.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 
-const ExpertiseFormulation = () => {
+const ExpertiseBioinformatics = () => {
   return (
-    <div className="expertise-panel">
-      <div className="left">
-        <div className="circle-bio">
+    <div className="expertise-bioinformatics">
+      <div className="bioinfo-left">
+        <div className="bioinfo-image">
             <StockImageFetch
               searchTerm="microscope"
               imgSource="large"
@@ -14,14 +14,14 @@ const ExpertiseFormulation = () => {
               page={1}
               perPage={1}
             />
-            </div>
+        </div>
 
         <p className="caption">At the CERASP, we offer cutting-edge Bioinformatics services
                 tailored for both pharmaceutical and healthcare sectors. Our
                 Bioinformatics team specializes in leveraging advanced
                 computational methods and data analysis techniques to support
                 drug discovery, personalized medicine, and biomarker
-                identification.
+                identification.<br/> <br/>
                 
                  Whether you’re in pharmaceutical development seeking robust
                 data-driven solutions or in healthcare requiring precision
@@ -30,7 +30,7 @@ const ExpertiseFormulation = () => {
                 innovation and expertise.</p>
       </div>
 
-      <div className="right">
+      <div className="bioinfo-right">
         <div className="fieldBox">
           <h2 className="title">Genomic data analysis</h2>
           <p className="desc">
@@ -56,4 +56,4 @@ const ExpertiseFormulation = () => {
   );
 };
 
-export default ExpertiseFormulation;
+export default ExpertiseBioinformatics;

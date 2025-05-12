@@ -48,15 +48,17 @@ const ContactUs = () => {
         </div>
 
         <div className="contact-google-maps">
-          <iframe
-            src="https://maps.google.com/maps?q=7171%20Frederick%20Banting%2C%20Montreal&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            width="100%"
-            height="300"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            title="Google Maps"
+          <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.355649417134!2d-73.76856082306308!3d45.48278247107427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc93d8bef0bf3dd%3A0x861d8d2c0f4117f3!2sCERASP!5e0!3m2!1sen!2sus!4v1747083278539!5m2!1sen!2sus" 
+          width="100%" 
+          height="300" 
+          style={{ border: 0 }} 
+          allowFullScreen="" 
+          loading="lazy" 
+          referrerPolicy="no-referrer-when-downgrade"
+          title="CERASP Location Map"
           ></iframe>
+          
         </div>
       </div>
     </div>
