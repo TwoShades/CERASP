@@ -12,7 +12,7 @@ import ExpertiseFormulation from "./expertise-subpages/ExpertiseFormulation.js";
 import ExpertiseAnimal from "./expertise-subpages/ExpertiseAnimal.js";
 import ExpertiseApplied from "./expertise-subpages/ExpertiseApplied.js";
 import ExpertiseBioinformatics from "./expertise-subpages/ExpertiseBioinformatics.js";
-import ContactUs from "./ContactUs/ContactUs.js";
+import ContactUs from "./ContactUs/ContactUs.js"; 
 
 const Expertises = () => {
   useScrollToPanel();
