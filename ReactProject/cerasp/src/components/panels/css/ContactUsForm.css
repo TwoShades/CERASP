@@ -1,12 +1,15 @@
 .parent {
-    width: 70%;
-    height: 80%;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 8em 0em 8em;
+    padding-top: 90px;
+    padding-bottom: 8em;
+
+    border: solid 1px #8585851d;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+
+    color: black;
 }
 
 .info-card-icons {
@@ -23,27 +26,23 @@
     border-radius: 12px;
     padding: 20px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-sizing: border-box;
 }
 
 /* Contact Form Specific Styling */
 .contact-form-container {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-right: 50px;
+    margin: 25px 50px 25px 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    grid-column: 3 / span 3;
-    grid-row: 1 / span 3;
+    flex: 3 1 0;
+    min-width: 0;
     background: #E3F2FF;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding: 20px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* General Form Styling */
 .form-title {
     text-align: center;
     font-size: 24px;
@@ -59,16 +58,17 @@
 }
 
 .form-fields {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-/* Individual Component Styles */
 .form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    flex: 1 1 45%;
+    min-width: 0;
 }
 
 .form-group label {
@@ -90,46 +90,13 @@
 }
 
 .form-group textarea {
+    min-height: 120px;
     width: 100%;
-}
-
-/* Specific Styles for Each Component */
-.name-group {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.title-group {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-}
-
-.country-group {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-}
-
-.email-group {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-}
-
-.phone-group {
-    grid-column: 1 / span 1;
-    grid-row: 3 / span 1;
-}
-
-.company-group {
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
 }
 
 .message-group {
-    grid-column: 1 / span 2; /* Span both columns */
-    grid-row: 4 / span 1;
-    height: 200px; /* Default height for the textarea */
-    width: 100%;
-    resize: none;
+    flex-basis: 100%;
+    min-width: 0;
 }
 
 #message {
@@ -162,221 +129,89 @@
     margin-right: 8px;
 }
 
-/* Left Panels Specific Styling */
-.contact-left-panel {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 3;
+/* Add this block for the top row */
+.contact-top-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 32px;
 }
 
-.cerasp-info {
-    grid-column: 1 / span 5;
-    grid-row: 1 / span 2;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    margin-left: 50px;
-    max-height: 50%;
-}
-
+.cerasp-info,
 .sponsors {
-    grid-column: 1 / span 5;
-    grid-row: 3 / span 2;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    margin-left: 50px;
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
 }
 
 /* Responsive Design */
-@media (max-width: 1536px) {}
-
-@media (max-width: 1280px) {}
-
 @media (max-width: 1024px) {
     .parent {
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        display: grid;
-    }
-    .info-card-icons {
-        width: 10px;
-        height: 10px;
-    }
-    
-    /* Contact Form Specific Styling */
-    .contact-form-container {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-right: 5px;
-        display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        grid-column: 3 / span 3;
-        grid-row: 1 / span 3;
-        background: #E3F2FF;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);;
-        border-radius: 12px;
+        gap: 10px;
+    }
+    .contact-left-panel {
+        flex-direction: row;
+        gap: 10px;
+        margin: 0;
+    }
+    .cerasp-info,
+    .sponsors {
+        max-width: 100%;
+    }
+    .contact-form-container {
+        margin: 5px 5px 5px 0;
         padding: 15px;
         font-size: small;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
-
     .form-group textarea {
         width: 100%;
     }
-
-    /* Left Panels Specific Styling */
-    .contact-left-panel {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 1;
-        font-size: small;
-    }
-
-    .cerasp-info {
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 2;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-top: 0px;
-        max-height: 100%;
-    }
-
-    .sponsors {
-        grid-column: 1 / span 5;
-        grid-row: 3 / span 2;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-
-    .contact-form-container {
-        grid-column: 1 / span 5;
-        grid-row: 2 / span 2;
-    }
-    
-    /* Captcha and Checkboxes */
-    .captcha-container {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .checkboxes-container {
-        display: flex;
+    .contact-top-row {
         flex-direction: column;
-        gap: 8px;
-    }
-
-    .policy-field,
-    .newsletter-field {
-        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
         align-items: center;
-    }
-
-    .policy-field input,
-    .newsletter-field input {
-        margin-right: 8px;
     }
 }
 
 @media (max-width: 768px) {
     .parent {
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        display: grid;
-    }
-    .info-card-icons {
-        width: 10px;
-        height: 10px;
-    }
-    
-    /* Contact Form Specific Styling */
-    .contact-form-container {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-right: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        grid-column: 3 / span 3;
-        grid-row: 1 / span 3;
-        background: #E3F2FF;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);;
-        border-radius: 12px;
-        padding: 15px;
-        font-size: 8px;
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    }
-
-    .form-group textarea {
-        width: 100%;
-    }
-
-    /* Left Panels Specific Styling */
-    .contact-left-panel {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 1;
-        font-size: 8px;
-    }
-
-    .cerasp-info {
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 2;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-top: 0px;
-        max-height: 100%;
-    }
-
-    .sponsors {
-        grid-column: 1 / span 5;
-        grid-row: 3 / span 2;
-        margin-bottom: 0px;
-        margin-left: 0px;
-    }
-
-    .contact-form-container {
-        grid-column: 1 / span 5;
-        grid-row: 2 / span 2;
-    }
-    
-    /* Captcha and Checkboxes */
-    .captcha-container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .checkboxes-container {
-        display: flex;
         flex-direction: column;
         gap: 8px;
     }
-
-    .policy-field,
-    .newsletter-field {
-        display: flex;
+    .contact-left-panel {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .cerasp-info,
+    .sponsors {
+        max-width: 100%;
+    }
+    .contact-form-container {
+        margin: 5px 5px 5px 0;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .form-group textarea {
+        width: 100%;
+    }
+    .contact-top-row {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 8px;
         align-items: center;
     }
-
-    .policy-field input,
-    .newsletter-field input {
-        margin-right: 8px;
-    }
-
-    
 }
 
-@media (max-width: 640px) {}
-
-@media (max-width: 475px) {}
+@media (max-width: 475px) {
+    .parent {
+        padding: 5px;
+    }
+    .contact-form-container {
+        padding: 5px;
+    }
+}

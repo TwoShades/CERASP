@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Pages-css/Sectors.css";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
-import ContactUsForm from "../components/panels/ContactUsForm.js";
+import ContactUs from "./ContactUs/ContactUs.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import ModalMessage from "../components/uicomponents/ModalMessage.js"; // Import the Modal
 import TestPanel from "../components/panels/TestPanel.js"; // Import the TestPanel component
@@ -79,7 +79,7 @@ const NewsOriginal = () => {
         */}
 
       <ScrollPanel title="news" id="contact-us-form">
-        <ContactUsForm />
+        <ContactUs />
       </ScrollPanel>
 
       <Footer />

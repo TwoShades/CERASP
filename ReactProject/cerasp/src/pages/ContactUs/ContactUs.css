@@ -1,0 +1,99 @@
+.contact-us {
+    display: flex;
+    gap: 2em;
+
+    padding: 0 8em 0em 8em;
+    padding-top: 90px;
+    padding-bottom: 8em;
+
+    border: solid 1px #8585851d;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+    color: black;
+}
+
+/* Left + Right Columns */
+.contact-left-side,
+.contact-right-side {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+}
+
+.contact-left-side {
+    background: #F0F4F8;
+}
+
+.contact-right-side {
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-details {
+    padding: 1em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* Contact Section Styling */
+.contact-left-side,
+.contact-sponsors,
+.contact-google-maps {
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Form Styling */
+.contact-form input,
+.contact-form textarea { 
+  /* width: 90%; */
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form textarea {
+    min-height: 200px;
+    resize: none;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-sponsors,
+.contact-google-maps {
+    width: 100%;
+    background: white;
+}
+
+/* Sponsor Logos */
+.contact-sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.contact-sponsor-logos img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .contact-left-side,
+  .contact-right-side {
+    flex: 1 1 100%;
+  }
+}

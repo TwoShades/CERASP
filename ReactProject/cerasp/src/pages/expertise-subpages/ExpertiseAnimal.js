@@ -8,7 +8,7 @@ const ExpertiseAnimal = ({ className = "" }) => {
             <div className="image-left-panel">
                 <div className="image-placeholder">
                     <StockImageFetch
-                    searchTerm="dog"
+                    searchTerm="kitten"
                     imgSource="large"
                     orientation="landscape"
                     page={1}

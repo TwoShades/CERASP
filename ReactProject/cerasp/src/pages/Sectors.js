@@ -3,7 +3,7 @@ import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
-import ContactUsForm from "../components/panels/ContactUsForm.js";
+import ContactUs from "./ContactUs/ContactUs.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import OneBigPanel from "../components/panels/OneBigPanel.js";
@@ -404,7 +404,7 @@ efficiently and effectively."
         */}
 
       <ScrollPanel title="sector-of-activities" id="contact-us-form">
-        <ContactUsForm />
+        <ContactUs />
       </ScrollPanel>
 
       <Footer />
