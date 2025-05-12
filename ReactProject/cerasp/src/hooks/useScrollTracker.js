@@ -1,34 +1,27 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 export default function useScrollTracker() {
   const [scrollProgress, setScrollProgress] = useState(0);
-  const scrollRef = useRef(null);
 
   useEffect(() => {
     const updateScrollProgress = () => {
-      if (!scrollRef.current) return;
-      const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
       const progress = scrollTop / (scrollHeight - clientHeight);
-      setScrollProgress(progress);
 
-      // Set the --scroll-progress CSS variable
+      setScrollProgress(progress);
       document.documentElement.style.setProperty("--scroll-progress", progress);
     };
 
-    const element = scrollRef.current;
-    if (element) {
-      element.addEventListener("scroll", updateScrollProgress);
-    }
-
-    // Run once when the component mounts to set initial progress value
+    window.addEventListener("scroll", updateScrollProgress);
     updateScrollProgress();
 
+    console.log("Scroll progress updated:", scrollProgress);
     return () => {
-      if (element) {
-        element.removeEventListener("scroll", updateScrollProgress);
-      }
+      window.removeEventListener("scroll", updateScrollProgress);
     };
   }, []);
 
-  return { scrollRef, scrollProgress };
+  return scrollProgress;
 }

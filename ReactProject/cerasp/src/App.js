@@ -9,7 +9,6 @@ import Expertises from "./pages/Expertises";
 import Sectors from "./pages/Sectors";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
-import useSmoothScroll from "./hooks/useSmoothScroll";
 import useScrollTracker from "./hooks/useScrollTracker";
 import { ScreenSizeProvider } from "./hooks/ScreenSizeContext";
 import HeightTest from "./components/layouts/HeightTest";
@@ -19,23 +18,14 @@ import "./App.css";
 function App() {
   const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
-  const { scrollRef, scrollProgress } = useScrollTracker();
-
-  if (scrollRef.current) {
-    scrollRef.current.style.setProperty("--scroll-progress", scrollProgress);
-  }
+  const scrollProgress = useScrollTracker();
 
   return (
     <ScreenSizeProvider>
       {" "}
       <Header />
       {scrollProgress < 0.95 && <ContactButton />}
-      <main
-        className={`main-content app ${theme}`}
-        ref={(el) => {
-          scrollRef.current = el;
-        }}
-      >
+      <main className={`main-content app ${theme}`}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
