@@ -1,4 +1,7 @@
-.expertises {
+.expertises-page {
+  background-color: black;
+  background-image: linear-gradient(to right, rgb(14, 18, 22), rgb(23, 40, 71));
+  color: rgb(243, 243, 243);
 }
 
 .carousel {

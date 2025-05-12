@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/FiveSteps.css";
+import "./css/ExpertiseApplied.css";
 
-const FiveSteps = ({ topRowContent, step1, step2, step3, step4, step5 }) => {
+const ExpertiseApplied = ({ topRowContent, step1, step2, step3, step4, step5 }) => {
   return (
     <div class="five-steps-grid-layout">
       <div class="top-row">{topRowContent}</div>
@@ -52,4 +52,4 @@ const FiveSteps = ({ topRowContent, step1, step2, step3, step4, step5 }) => {
   );
 };
 
-export default FiveSteps;
+export default ExpertiseApplied;

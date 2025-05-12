@@ -11,7 +11,6 @@ import Projects from "./pages/Projects";
 import News from "./pages/News";
 import useScrollTracker from "./hooks/useScrollTracker";
 import { ScreenSizeProvider } from "./hooks/ScreenSizeContext";
-import HeightTest from "./components/layouts/HeightTest";
 import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
 
@@ -19,6 +18,8 @@ function App() {
   const { theme } = useContext(ThemeContext);
   const { language } = useContext(LanguageContext);
   const scrollProgress = useScrollTracker();
+
+  console.log("Scroll Progress:", scrollProgress);
 
   return (
     <ScreenSizeProvider>
