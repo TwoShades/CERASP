@@ -16,11 +16,7 @@ import "./App.css";
 
 function App() {
   const { theme } = useContext(ThemeContext);
-  const { language } = useContext(LanguageContext);
   const scrollProgress = useScrollTracker();
-
-  console.log("Scroll Progress:", scrollProgress);
-
   return (
     <ScreenSizeProvider>
       {" "}

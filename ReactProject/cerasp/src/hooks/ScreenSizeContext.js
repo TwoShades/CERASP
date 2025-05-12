@@ -9,7 +9,7 @@ export const ScreenSizeProvider = ({ children }) => {
   const checkScreenSize = () => {
     const width = window.innerWidth;
     setIsMobile(width <= 576);
-    setIsTablet(width <= 1024 && width > 576);
+    setIsTablet(width <= 1200 && width > 576);
   };
 
   useEffect(() => {
