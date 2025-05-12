@@ -9,10 +9,8 @@ import Expertises from "./pages/Expertises";
 import Sectors from "./pages/Sectors";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
-import useSmoothScroll from "./hooks/useSmoothScroll";
 import useScrollTracker from "./hooks/useScrollTracker";
 import { ScreenSizeProvider } from "./hooks/ScreenSizeContext";
-import HeightTest from "./components/layouts/HeightTest";
 import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
 
@@ -24,6 +22,8 @@ function App() {
   if (scrollRef.current) {
     scrollRef.current.style.setProperty("--scroll-progress", scrollProgress);
   }
+
+  console.log("Scroll Progress:", scrollProgress);
 
   return (
     <ScreenSizeProvider>

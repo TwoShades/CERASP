@@ -5,7 +5,6 @@ import Footer from "../components/layouts/Footer.js";
 import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
-import TwoImageTwoText from "../components/panels/TwoImageTwoText.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import OneBigPanel from "../components/panels/OneBigPanel.js";
 
@@ -72,7 +71,7 @@ product approval and marketing, ensuring compliance with market requirements."
               ==========================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="research-&-tech-support">
+      {/* <ScrollPanel title="sector-of-activities" id="research-&-tech-support">
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
           leftText={
@@ -102,7 +101,7 @@ product approval and marketing, ensuring compliance with market requirements."
             </p>
           }
         />
-      </ScrollPanel>
+      </ScrollPanel> */}
 
       {/*   ======================
               ==REF AFF ACTIVITIES==
@@ -241,7 +240,7 @@ efficiently and effectively."
               ============================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="protein-synthesis">
+      {/* <ScrollPanel title="sector-of-activities" id="protein-synthesis">
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
           leftText={
@@ -273,7 +272,7 @@ efficiently and effectively."
             </p>
           }
         />
-      </ScrollPanel>
+      </ScrollPanel> */}
 
       {/*   ===================================
               =====FEASIBILITY & TECH TRANS======

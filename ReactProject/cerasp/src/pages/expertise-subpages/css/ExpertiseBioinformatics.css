@@ -1,10 +1,11 @@
 .expertise-panel {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+
     padding: 0 8em 0em 8em;
-    padding-top: 120px;
+    padding-top: 90px;
     padding-bottom: 8em;
+
     border: solid 1px #8585851d;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
   }
@@ -16,20 +17,10 @@
     align-items: center;
   }
   
-  .circle {
+  .circle-bio {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #FFB400, #fad0c4);
-    border: 2px solid #FFB400;
-    transition: transform 0.3s ease, background 0.3s ease;
     margin-bottom: 16px;
-  }
-  
-  .circle:hover {
-    background: linear-gradient(135deg, #FFB400, #ebba53);
-    transform: rotate(360deg);
-    cursor: pointer;
   }
   
   .caption {
