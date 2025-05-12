@@ -53,7 +53,7 @@ const ContactUsForm = () => {
 
   return (
     <div className="parent">
-      <div className="contact-left-panel">
+      <div className="contact-top-row">
         <div className="cerasp-info">
           <h4>Contact Details</h4>
           <p>
@@ -66,7 +66,16 @@ const ContactUsForm = () => {
           </p>
         </div>
         <div className="sponsors">
-          <h2>Sponsors images</h2>
+          <img
+            className="partner-card-img"
+            src="/logos/partners/cerasp-partners.jpg"
+            alt="Partners"
+          />
+          <img
+            className="partner-card-img"
+            src="/logos/partners/cerasp-member.jpg"
+            alt="Members"
+          />
         </div>
       </div>
 

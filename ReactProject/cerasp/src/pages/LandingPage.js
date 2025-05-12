@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Pages-css/LandingPage.css";
-import ContactUsForm from "../components/panels/ContactUsForm";
+import ContactUs from "./ContactUs/ContactUs.js";
 
 const LandingPage = () => {
   const [stage, setStage] = useState("logo");
@@ -79,7 +79,7 @@ const LandingPage = () => {
         </div>
 
         <div title="landing" id="contact-us-form">
-          <ContactUsForm />
+          <ContactUs />
         </div>
       </div>
     </div>
