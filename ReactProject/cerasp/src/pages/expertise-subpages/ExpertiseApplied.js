@@ -7,7 +7,7 @@ const ExpertiseApplied = ({ topRowContent, step1, step2, step3, step4, step5 }) 
       <div class="top-row">{topRowContent}</div>
       <div class="step step1">
         <div class="icon">1</div>
-        <div class="title">FORMULATE</div>
+        <div class="expertise-applied-title">FORMULATE</div>
         <div class="content">
           <p>Formulate, validate and prepare new products after the results of basic research or 
           to find the right molecules.</p>
@@ -15,7 +15,7 @@ const ExpertiseApplied = ({ topRowContent, step1, step2, step3, step4, step5 }) 
       </div>
       <div class="step step2">
         <div class="icon">2</div>
-        <div class="title">SUPPORT</div>
+        <div class="expertise-applied-title">SUPPORT</div>
         <div class="content">
           <p>Support the development of production processes through new processes, 
           including standard operating procedures.</p>
@@ -23,7 +23,7 @@ const ExpertiseApplied = ({ topRowContent, step1, step2, step3, step4, step5 }) 
       </div>
       <div class="step step3">
         <div class="icon">3</div>
-        <div class="title">TRANSFER</div>
+        <div class="expertise-applied-title">TRANSFER</div>
         <div class="content">
           <p>Transfer and adapt technological innovations for the development of scale-up pilot 
           scale production. </p>
@@ -31,7 +31,7 @@ const ExpertiseApplied = ({ topRowContent, step1, step2, step3, step4, step5 }) 
       </div>
       <div class="step step4">
         <div class="icon">4</div>
-        <div class="title">SELECT</div>
+        <div class="expertise-applied-title">SELECT</div>
         <div class="content">
           <p>Select and configure equipment for research and production from an Industry 
           perspective. </p>
@@ -39,7 +39,7 @@ const ExpertiseApplied = ({ topRowContent, step1, step2, step3, step4, step5 }) 
       </div>
       <div class="step step5">
         <div class="icon">5</div>
-        <div class="title">DEVELOP</div>
+        <div class="expertise-applied-title">DEVELOP</div>
         <div class="content">
           <p>Formulate and develop pilot processes, prototypes and batches. </p>
         </div>

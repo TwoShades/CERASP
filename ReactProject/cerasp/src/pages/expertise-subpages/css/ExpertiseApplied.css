@@ -24,10 +24,15 @@
 
 .bottom-row {
   grid-column: 1 / span 5;
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 2;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.bottom-row p {
+  font-size: 2em;
+  padding-bottom: 1em;
 }
 
 .step {
@@ -61,9 +66,10 @@
   margin-bottom: 10px;
 }
 
-.title {
+.expertise-applied-title {
   font-size: 24px;
   font-weight: bold;
+  color: #4f4f4f;
 }
 
 .step .content {

@@ -1,15 +1,18 @@
 import "./Pages-css/Expertises.css";
-import Footer from "../components/layouts/Footer.js";
-import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
+
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
-import OneBigPanel from "../components/panels/OneBigPanel.js";
+
 import ExpertiseOverview from "../pages/expertise-subpages/ExpertiseOverview.js";
 import ExpertiseGMP from "./expertise-subpages/ExpertiseGMP.js";
 import ExpertiseFormulation from "./expertise-subpages/ExpertiseFormulation.js";
 import ExpertiseAnimal from "./expertise-subpages/ExpertiseAnimal.js";
 import ExpertiseApplied from "./expertise-subpages/ExpertiseApplied.js";
 import ExpertiseBioinformatics from "./expertise-subpages/ExpertiseBioinformatics.js";
+import ExpertiseTroubleshooting from "./expertise-subpages/ExpertiseTroubleshooting.js";
+import ExpertiseHealthCanada from "./expertise-subpages/ExpertiseHealthCanada.js";
+
 import ContactUs from "./ContactUs/ContactUs.js"; 
+import Footer from "../components/layouts/Footer.js";
 
 const Expertises = () => {
   useScrollToPanel();
@@ -56,17 +59,10 @@ const Expertises = () => {
         <ExpertiseApplied />
       </div>
 
-      {/*   =================================
-              =======Troubleshooting===========
-              =================================
-        */}
+      {/* =====Troubleshooting===== */}
 
       <div title="expertises" id="troubleshooting">
-        <OneBigPanel
-          title="Troubleshooting"
-          mainText="Lorem ipsum dolor sit amet consectetur. Molestie ac viverra vitae enim ut."
-          image={<div className="image-placeholder"></div>}
-        />
+        <ExpertiseTroubleshooting />
       </div>
 
       {/*   ===============================
@@ -75,22 +71,7 @@ const Expertises = () => {
         */}
 
       <div title="expertises" id="health-canada-partner">
-        <TextPanelOneImage
-          leftContent={
-            <>
-              <a href="#">HEALTH CANADA</a>
-              <h1>
-                Recognized partner of Health Canada for regulatory affairs and
-                audits.
-              </h1>
-              <p>
-                As an official partner of Health Canada, we deliver solutions
-                that meet the highest industry standards.
-              </p>
-            </>
-          }
-          rightContent={<div className="image-section"></div>}
-        />
+        <ExpertiseHealthCanada />
       </div>
 
       {/*   =================================

@@ -96,6 +96,21 @@
   object-fit: contain;
 }
 
+@media (max-width: 1200px) {
+  .contact-us {
+    flex-direction: column-reverse;
+
+    margin-bottom: 2em;
+    padding: 0 2em 0em 2em;
+  }
+
+  
+  .contact-form textarea {
+    min-height: 100px;
+    resize: none;
+}
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
   .contact-left-side,
