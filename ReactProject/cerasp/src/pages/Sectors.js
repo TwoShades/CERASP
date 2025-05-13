@@ -2,11 +2,9 @@ import "./Pages-css/Sectors.css";
 import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
-import TextPanelOneImage from "../components/panels/TextPanelOneImage.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
-import OneBigPanel from "../components/panels/OneBigPanel.js";
 
 const Sectors = () => {
   useScrollToPanel();
@@ -19,22 +17,7 @@ const Sectors = () => {
         */}
 
       <ScrollPanel title="sector-of-activities" id="overview">
-        <TextPanelOneImage
-          leftContent={
-            <>
-              <a href="#">HEALTH CANADA</a>
-              <h1>
-                Recognized partner of Health Canada for regulatory affairs and
-                audits.
-              </h1>
-              <p>
-                As an official partner of Health Canada, we deliver solutions
-                that meet the highest industry standards.
-              </p>
-            </>
-          }
-          rightContent={<div className="image-section"></div>}
-        />
+        <p>same as health canada = overview</p>
       </ScrollPanel>
 
       {/*   =========================
@@ -52,18 +35,7 @@ const Sectors = () => {
         */}
 
       <ScrollPanel title="sector-of-activities" id="formulation">
-        <OneBigPanel
-          title="Formulation"
-          mainText="• Development of new products and/or improvement of existing products. 
-• Dosage Forms: Develop appropriate dosage forms, such as tablets, capsules, 
-creams, gels, injectables, etc., tailored to the needs of patients. 
-• Product Optimization/Line Extension: Ensure that the formulation remains stable 
-under different conditions and maintains its effectiveness over time, in compliance 
-with pharmaceutical regulations. 
-• Regulatory Compliance: Understand and comply with regulatory guidelines for 
-product approval and marketing, ensuring compliance with market requirements."
-          image={<div className="image-placeholder"></div>}
-        />
+        <p>one big panel = formulation</p>
       </ScrollPanel>
 
       {/*   ==========================
@@ -187,26 +159,7 @@ product approval and marketing, ensuring compliance with market requirements."
         */}
 
       <ScrollPanel title="sector-of-activities" id="pharmaceutical">
-        <TextPanelOneImage
-          leftContent={
-            <>
-              <a href="#">pharmaceutical</a>
-              <h1>
-                At CERASP, we offer comprehensive support throughout the drug
-                development process, from formulation to commercialization.
-              </h1>
-              <p>
-                Our services include formulation development, process
-                development and optimization, regulatory guidance, and GMP-ready
-                compliance. We assist during technological transfers and
-                support. Our expertise helps you navigate complex regulatory
-                requirements and bring innovative pharmaceutical solutions to
-                market efficiently and effectively.
-              </p>
-            </>
-          }
-          rightContent={<div className="image-section"></div>}
-        />
+        <p>same as health canada = pharmaceuticals</p>
       </ScrollPanel>
 
       {/*   =================================
@@ -224,15 +177,7 @@ product approval and marketing, ensuring compliance with market requirements."
         */}
 
       <ScrollPanel title="sector-of-activities" id="r&d-scale-up">
-        <OneBigPanel
-          title="R&D SCALE UP"
-          mainText=" Our services include formulation development, 
-process development and optimization, regulatory guidance, and GMP-ready compliance. 
-We assist during technological transfers and support. Our expertise helps you navigate 
-complex regulatory requirements and bring innovative pharmaceutical solutions to market 
-efficiently and effectively."
-          image={<div className="image-placeholder"></div>}
-        />
+        <p>one big panel = r&d scale up</p>
       </ScrollPanel>
 
       {/*   ============================

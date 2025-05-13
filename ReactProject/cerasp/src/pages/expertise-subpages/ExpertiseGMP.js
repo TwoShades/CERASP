@@ -39,7 +39,7 @@ const ExpertiseGMP = () => {
         <div className="expertise-gmp-image">
           <div className="expertise-gmp-image-content">
             <StockImageFetch
-              searchTerm="microscope"
+              searchTerm="biologist"
               imgSource="large"
               orientation="landscape"
               page={1}

@@ -41,10 +41,17 @@
 
 /* Contact Section Styling */
 .contact-left-side,
-.contact-sponsors,
-.contact-google-maps {
+.contact-sponsors {
   padding: 15px;
   border-radius: 8px;
+}
+
+.contact-google-maps {
+    padding: 0px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 /* Form Styling */
@@ -73,7 +80,6 @@
 
 .contact-sponsors,
 .contact-google-maps {
-    width: 100%;
     background: white;
 }
 
@@ -88,6 +94,21 @@
 .contact-sponsor-logos img {
   width: 100%;
   object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+  .contact-us {
+    flex-direction: column-reverse;
+
+    margin-bottom: 2em;
+    padding: 0 2em 0em 2em;
+  }
+
+  
+  .contact-form textarea {
+    min-height: 100px;
+    resize: none;
+}
 }
 
 /* Responsive Layout */
