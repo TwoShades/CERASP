@@ -1,34 +1,25 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./css/Navigation.css";
 import useScrollToTop from "../../hooks/useScrollToTop";
 import sitemap from "../../sitemap.json";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 
 const Navigation = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1201);
+  const navRef = useRef(null);
+
+  const { isMobile, isTablet } = useContext(ScreenSizeContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
-
-  const navRef = useRef(null);
 
   const { handleLinkClick } = useScrollToTop(pathname, () =>
     setMenuOpen(false)
   );
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 1201) {
-        setMenuOpen(false);
-        setOpenSubMenu(null);
-      }
-      setIsMobile(window.innerWidth < 1201);
-    };
-
-    window.addEventListener("resize", handleResize);
-
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setMenuOpen(false);
@@ -37,11 +28,7 @@ const Navigation = () => {
     };
 
     document.addEventListener("click", handleClickOutside);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      document.removeEventListener("click", handleClickOutside);
-    };
+    return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   const handleNavigateToSection = (section, path) => {
@@ -53,88 +40,108 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="nav" ref={navRef}>
-      {isMobile && (
-        <button
-          className="hamburger"
-          onClick={() => {
-            setMenuOpen((prev) => {
-              const newState = !prev;
-              if (!newState) {
-                setOpenSubMenu(null);
-              }
-              return newState;
-            });
-          }}
-        >
-          {menuOpen ? "✖" : "☰"}
-        </button>
-      )}
-      <ul className={`nav-list ${isMobile && menuOpen ? "show" : ""}`}>
-        {sitemap.pages.map(
-          ({ title, "nav-title": navTitle, "sub-pages": subPages }) => {
-            if (title.toLowerCase() === "landing") return null;
-            const filteredSubPages = subPages.filter(
-              (subPage) => subPage.toLowerCase() !== "contact-us-form"
-            );
+    <>
+      <Link to="/">
+        <div className="nav-logo-wrapper">
+          <img
+            src="/logos/ceraspicon.png"
+            alt="CERASP Logo"
+            className={`nav-logo ${isMobile || isTablet ? "mobile" : "hidden"}`}
+          />
+        </div>
+      </Link>
+      <nav className="nav" ref={navRef}>
+        {(isMobile || isTablet) && (
+          <button
+            className="hamburger"
+            onClick={() => {
+              setMenuOpen((prev) => {
+                const newState = !prev;
+                if (!newState) setOpenSubMenu(null);
+                return newState;
+              });
+            }}
+          >
+            {menuOpen ? "✖" : "☰"}
+          </button>
+        )}
 
-            return (
-              <li
-                key={title}
-                className="nav-item"
-                onMouseEnter={() => !isMobile && setHoveredMenu(title)}
-                onMouseLeave={() => !isMobile && setHoveredMenu(null)}
-              >
-                <div className="dropdown-clickable-zone">
-                  <Link
-                    to={`/${title}`}
-                    onClick={() => {
-                      handleLinkClick(`/${title}`);
-                      setOpenSubMenu(null);
-                    }}
-                  >
-                    {navTitle}
-                  </Link>
-                  {isMobile && filteredSubPages.length > 0 && (
-                    <span
-                      className="dropdown-toggle"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleSubMenu(title);
+        <ul
+          className={`nav-list ${
+            (isMobile || isTablet) && menuOpen ? "show" : ""
+          }`}
+        >
+          {sitemap.pages.map(
+            ({ title, "nav-title": navTitle, "sub-pages": subPages }) => {
+              if (title.toLowerCase() === "landing") return null;
+
+              const filteredSubPages = subPages.filter(
+                (subPage) => subPage.toLowerCase() !== "contact-us-form"
+              );
+
+              return (
+                <li
+                  key={title}
+                  className="nav-item"
+                  // Hover only when not on mobile or tablet
+                  onMouseEnter={() =>
+                    !isMobile && !isTablet && setHoveredMenu(title)
+                  }
+                  onMouseLeave={() =>
+                    !isMobile && !isTablet && setHoveredMenu(null)
+                  }
+                >
+                  <div className="dropdown-clickable-zone">
+                    <Link
+                      to={`/${title}`}
+                      onClick={() => {
+                        handleLinkClick(`/${title}`);
+                        setOpenSubMenu(null);
                       }}
                     >
-                      {openSubMenu === title ? "▲" : "▼"}
-                    </span>
-                  )}
-                </div>
+                      {navTitle}
+                    </Link>
 
-                {/* Only show dropdown if this item is hovered or its submenu is open */}
-                {(hoveredMenu === title ||
-                  (isMobile && openSubMenu === title)) &&
-                  filteredSubPages.length > 0 && (
-                    <div className="dropdown">
-                      <ul>
-                        {filteredSubPages.map((subPage) => (
-                          <li
-                            key={subPage}
-                            onClick={() => {
-                              handleNavigateToSection(subPage, `/${title}`);
-                              setOpenSubMenu(null);
-                            }}
-                            style={{ cursor: "pointer" }}
-                          >
-                            {subPage.replaceAll("-", " ")}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-              </li>
-            );
-          }
-        )}
-      </ul>
-    </nav>
+                    {(isMobile || isTablet) && filteredSubPages.length > 0 && (
+                      <span
+                        className="dropdown-toggle"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleSubMenu(title);
+                        }}
+                      >
+                        {openSubMenu === title ? "▲" : "▼"}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Show dropdown on hover (fullscreen only) or on click (mobile/tablet) */}
+                  {(hoveredMenu === title ||
+                    ((isMobile || isTablet) && openSubMenu === title)) &&
+                    filteredSubPages.length > 0 && (
+                      <div className="dropdown">
+                        <ul>
+                          {filteredSubPages.map((subPage) => (
+                            <li
+                              key={subPage}
+                              onClick={() => {
+                                handleNavigateToSection(subPage, `/${title}`);
+                                setOpenSubMenu(null);
+                              }}
+                            >
+                              {subPage.replaceAll("-", " ")}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                </li>
+              );
+            }
+          )}
+        </ul>
+      </nav>
+    </>
   );
 };
 

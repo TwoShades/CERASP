@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { ScreenSizeContext } from "../../hooks/ScreenSizeContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import "./css/ContactButton.css";
 import { Mail } from "lucide-react";
 

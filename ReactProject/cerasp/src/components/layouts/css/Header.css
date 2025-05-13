@@ -10,23 +10,28 @@
   box-shadow: 0px 0px 4px 1px rgb(2, 32, 88);
 }
 
-.layout-header img {
-  width: 100px;
-  height: 100px;
-  margin-left: 20px;
-  z-index: 6;
-}
-
 .language-switcher {
   display: flex;
   margin-right: 20px;
   z-index: 6;
 }
 
+.header-logo {
+  width: 150px;
+  height: auto;
+  margin-left: 20px;
+  z-index: 6;
+}
+
+.header-logo-centered {
+  z-index: 100;
+}
+
 .language-button {
   color: grey;
   background: none;
   border: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .language-button:hover {
@@ -62,6 +67,7 @@
   .layout-header {
     background: none;
     box-shadow: none;
+    justify-content: center;
   }
 
   .language-switcher {
@@ -72,13 +78,11 @@
 
   .language-switcher-spacer {
     color: grey;
+    text-shadow: 1px 1px 2px rgba(2, 32, 88, 0.8);
   }
 
   .language-button.active {
     color: white;
-  }
-
-  .layout-header img {
-    display: none;
+    text-shadow: 1px 1px 2px rgba(2, 32, 88, 0.8);
   }
 }
