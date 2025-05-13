@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./css/AboutBoard.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { ScreenSizeContext } from "../../hooks/ScreenSizeContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import boardMembersData from "./boardmembers.json";
 
 export default function AboutBoard() {

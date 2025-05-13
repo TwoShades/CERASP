@@ -1,21 +1,27 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import Navigation from "./Navigation";
 import "./css/Header.css";
 
 const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
+  const { isMobile, isTablet } = useContext(ScreenSizeContext);
 
   return (
     <div className="layout-header">
-      <Link to="/">
-        <img
-          src="/logos/cerasplogo.png"
-          style={{ width: "150px", height: "auto" }}
-          alt="CERASP Logo"
-        />
-      </Link>
+      <div className="bg-test"></div>
+      {!(isTablet || isMobile) && (
+        <Link to="/">
+          <img
+            src="/logos/cerasplogo.png"
+            alt="CERASP Logo"
+            className="header-logo"
+          />
+        </Link>
+      )}
+
       <Navigation />
       <div className="language-switcher">
         <button
@@ -32,7 +38,6 @@ const Header = () => {
           EN
         </button>
       </div>
-      <div className="bg-test"></div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { ScreenSizeContext } from "../../hooks/ScreenSizeContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import LearnMoreButton from "../../components/interactables/LearnMoreButton";
 import equipmentsData from "../../components/panels/reference/equipments.json";

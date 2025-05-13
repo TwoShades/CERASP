@@ -10,7 +10,7 @@ import Sectors from "./pages/Sectors";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
 import useScrollTracker from "./hooks/useScrollTracker";
-import { ScreenSizeProvider } from "./hooks/ScreenSizeContext";
+import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
 

@@ -9,7 +9,7 @@ import AboutEquipments from "./about-subpages/AboutEquipments.js";
 import AboutTeam from "./about-subpages/AboutTeam.js";
 import AboutPartners from "./about-subpages/AboutPartners.js";
 import AboutBoard from "./about-subpages/AboutBoard.js";
-import ContactUsForm from "../components/panels/ContactUsForm.js";
+import ContactUs from "./ContactUs/ContactUs.js";
 
 const About = () => {
   useScrollToPanel();
@@ -48,7 +48,7 @@ const About = () => {
 
       {/* PRIVACY POLICY */}
       <div title="about" id="contact-us-form">
-        <ContactUsForm />
+        <ContactUs />
       </div>
 
       <Footer />
