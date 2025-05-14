@@ -1,4 +1,5 @@
 import "./Pages-css/Sectors.css";
+import { useEffect } from "react";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
@@ -13,21 +14,31 @@ import StockImageFetch from "../components/placeholders/StockImageFetch.js";
 const Projects = () => {
   useScrollToPanel();
 
+  useEffect(() => {
+    async function fetchProjects() {
+      try {
+        const res = await fetch(
+          "https://loving-bird-9ef3b0470a.strapiapp.com/api/projects"
+        );
+        const json = await res.json();
+
+        json.data.forEach((project) => {
+          console.log("Title:", project.Title);
+          console.log("Content:", project.Content);
+        });
+      } catch (err) {
+        console.error("Failed to fetch projects:", err);
+      }
+    }
+
+    fetchProjects();
+  }, []);
+
   return (
     <div className="page-content">
-      {/*   ===================
-              =====OVERVIEW======
-              ===================
-        */}
-
       <ScrollPanel title="projects" id="overview">
         <ProjectOverview />
       </ScrollPanel>
-
-      {/*   ====================
-              =====PROJECT 1======
-              ====================
-        */}
 
       <ScrollPanel title="projects" id="project-1">
         <ProjectPanelA
@@ -42,15 +53,10 @@ const Projects = () => {
           }
           headline={`About the Project`}
           textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
             accompanied by English versions from the 1914 translation by H. Rackham."`}
         />
       </ScrollPanel>
-
-      {/*   ====================
-              =====PROJECT 2======
-              ====================
-        */}
 
       <ScrollPanel title="projects" id="project-2">
         <ProjectPanelB
@@ -85,14 +91,9 @@ const Projects = () => {
           }
           headline={`This is a headline about this upcoming project.  
             It will give a brief overview of the project. 
-             Visitors can click to read more if there is a PDF provided.`}
+            Visitors can click to read more if there is a PDF provided.`}
         />
       </ScrollPanel>
-
-      {/*   ==========================
-              =======PROJECT 3==========
-              ==========================
-        */}
 
       <ScrollPanel title="projects" id="project-3">
         <ProjectPanelC
@@ -117,16 +118,10 @@ const Projects = () => {
           headline={`The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
             Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"`}
           textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
-            accompanied by English versions from the 1914 translation by H. Rackham." "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
             accompanied by English versions from the 1914 translation by H. Rackham."`}
         />
       </ScrollPanel>
-
-      {/*   ======================
-              ======PROJECT 4=======
-              ======================
-        */}
 
       <ScrollPanel title="projects" id="project-4">
         <ProjectPanelB
@@ -161,14 +156,9 @@ const Projects = () => {
           }
           headline={`This is a headline about this upcoming project.  
             It will give a brief overview of the project. 
-             Visitors can click to read more if there is a PDF provided.`}
+            Visitors can click to read more if there is a PDF provided.`}
         />
       </ScrollPanel>
-
-      {/*   ======================
-              ======PROJECT 5=======
-              ======================
-        */}
 
       <ScrollPanel title="projects" id="project-5">
         <ProjectPanelC
@@ -191,18 +181,12 @@ const Projects = () => {
             />
           }
           headline={`The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"`}
+            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum'`}
           textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
-            accompanied by English versions from the 1914 translation by H. Rackham." "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
             accompanied by English versions from the 1914 translation by H. Rackham."`}
         />
       </ScrollPanel>
-
-      {/*   =========================
-              ========PROJECT 6========
-              =========================
-        */}
 
       <ScrollPanel title="projects" id="project-6">
         <ProjectPanelA
@@ -218,15 +202,10 @@ const Projects = () => {
           title={"Project 6"}
           headline={`About the Project`}
           textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
             accompanied by English versions from the 1914 translation by H. Rackham."`}
         />
       </ScrollPanel>
-
-      {/*   =================================
-              =============PROJECT 7===========
-              =================================
-        */}
 
       <ScrollPanel title="projects" id="project-7">
         <ProjectPanelD
@@ -242,15 +221,10 @@ const Projects = () => {
           }
           headline={`About the Project`}
           textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, 
+            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
             accompanied by English versions from the 1914 translation by H. Rackham."`}
         />
       </ScrollPanel>
-
-      {/*   =======================
-              =====CONTACT FORM======
-              =======================
-        */}
 
       <ScrollPanel title="projects" id="contact-us-form">
         <ContactUsForm />
