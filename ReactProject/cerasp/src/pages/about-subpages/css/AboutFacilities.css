@@ -17,15 +17,14 @@
 }
 
 .about-facilities-images {
+  gap: 2em;
   display: flex;
   justify-content: space-between;
 }
 
 .facility-card img {
-  border: 2px solid rgb(121, 188, 250);
   width: 100%;
-  max-width: 100%;
-  height: auto;
+  border: 2px solid rgb(121, 188, 250);
   border-radius: 8px;
 }
 
@@ -33,7 +32,10 @@
   margin-bottom: 0;
 }
 
-.facility-card p {
+.facility-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   text-align: center;
 }
 
@@ -47,5 +49,82 @@
 }
 
 .about-facilities-map img {
+  border-radius: 8px;
   width: 75%;
+}
+
+@media screen and (max-width: 1200px) {
+  .about-facilities-images {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .facility-card {
+    flex-direction: row;
+    gap: 2em;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .facility-card-info {
+    text-align: left;
+  }
+
+  .facility-card-info h2 {
+    font-size: 1.2em;
+  }
+
+  .facility-card-info p {
+    font-size: 0.9em;
+  }
+
+  .facility-card img {
+    border: 2px solid rgb(121, 188, 250);
+
+    max-width: 75%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .about-facilities-map {
+    padding: 0 3em 0 3em;
+  }
+
+  .about-facilities-map img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .facility-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-facilities-images {
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .facility-card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .facility-card-info {
+    text-align: center;
+  }
+
+  .facility-images h2 p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-facilities-map {
+    padding: 0;
+  }
 }
