@@ -88,7 +88,7 @@
   }
 
   .about-facilities-map {
-    padding: 0 3em 0 3em;
+    padding: 0;
   }
 
   .about-facilities-map img {
@@ -97,6 +97,10 @@
 }
 
 @media screen and (max-width: 576px) {
+  .about-facilities {
+    padding-top: 40px;
+  }
+
   .facility-card img {
     max-width: 100%;
     height: auto;

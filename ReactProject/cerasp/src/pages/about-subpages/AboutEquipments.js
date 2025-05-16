@@ -16,7 +16,7 @@ const AboutEquipments = () => {
     setEquipments(equipmentsData.equipment || []);
   }, []);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 5;
+  const itemsPerPage = isMobile ? 3 : isTablet ? 3 : 5;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
@@ -37,7 +37,7 @@ const AboutEquipments = () => {
     <div className="about-equipments">
       <div className="about-equipments-layout">
         <div className="about-equipments-header">
-          <h1> {language === "fr" ? "ÉQUIPEMENTS" : "EQUIPMENTS"}</h1>
+          <h1> {language === "fr" ? "ÉQUIPEMENTS" : "EQUIPMENT"}</h1>
           <h3>
             {language === "fr"
               ? "Découvrez notre équipement à la fine pointe de la technologie!"
