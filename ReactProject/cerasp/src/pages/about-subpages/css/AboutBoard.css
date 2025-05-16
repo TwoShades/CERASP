@@ -1,5 +1,6 @@
 .about-board {
-  padding: 90px 8em 0 8em;
+  padding: var(--global-page-padding);
+  padding-top: 90px;
 }
 
 .about-board-header {

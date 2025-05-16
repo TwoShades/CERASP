@@ -1,5 +1,5 @@
 .about-equipments {
-  padding: 0 8em 0em 8em;
+  padding: var(--global-page-padding);
   padding-top: 90px;
 }
 
@@ -77,4 +77,71 @@
   bottom: 0%;
   z-index: 0;
   transform: translate(-50%, -25%);
+}
+
+@media screen and (max-width: 1200px) {
+  .equipment-card {
+    width: 30%;
+    height: 380px;
+  }
+
+  .equipment-card img {
+    width: 100%;
+    height: 50%;
+    align-self: center;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  .about-equipments {
+    padding-top: 40px;
+  }
+
+  .about-equipments-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .equipment-card {
+    width: 80%;
+    height: 160px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .equipment-card h4 {
+    padding: 0 2em 0 2em;
+  }
+
+  .equipment-card img {
+    width: 40%;
+    align-self: center;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .equipment-card .learn-more-button {
+    height: 20%;
+    font-size: 0.9em;
+    width: 25%;
+    position: absolute;
+    left: 68%;
+    bottom: 2%;
+    z-index: 0;
+    transform: translate(-50%, -25%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .equipment-card {
+    width: 100%;
+  }
+  .equipment-card h4 {
+    font-size: 0.9em;
+    padding: 0 1em 0 1em;
+  }
 }

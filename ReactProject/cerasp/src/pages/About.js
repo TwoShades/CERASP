@@ -17,37 +17,37 @@ const About = () => {
   return (
     <div className="about-page page-content">
       {/* OVERVIEW */}
-      <div title="about" id="overview">
+      <div id="overview">
         <AboutOverview />
       </div>
 
       {/* FACILITIES */}
-      <div title="about" id="facilities">
+      <div id="facilities">
         <AboutFacilities />
       </div>
 
       {/* EQUIPMENTS */}
-      <div title="about" id="equipments">
+      <div id="equipments">
         <AboutEquipments />
       </div>
 
       {/* OUR TEAM */}
-      <div title="about" id="our-team">
+      <div id="our-team">
         <AboutTeam />
       </div>
 
       {/* BOARD */}
-      <div title="about" id="board">
+      <div id="board">
         <AboutBoard />
       </div>
 
       {/* PARTNERS */}
-      <div title="about" id="partners">
+      <div id="partners">
         <AboutPartners />
       </div>
 
       {/* PRIVACY POLICY */}
-      <div title="about" id="contact-us-form">
+      <div id="contact-us-form">
         <ContactUs />
       </div>
 

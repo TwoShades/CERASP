@@ -16,6 +16,9 @@
   --project-panel-shadow: 1px 1px 2px 2px rgba(129, 129, 129, 0.068);
   --temp-background-color: rgba(190, 220, 255, 0.062);
 
+  /* GLOBAL PADDING FULLSCREEN */
+  --global-page-padding: 0 8em 0 8em;
+
   article,
   header,
   section,
@@ -35,6 +38,20 @@
 .app.light {
   background-color: var(--bg-color-light);
   color: var(--text-color-light);
+}
+
+/* GLOBAL PADDING TABLET/MOBILE */
+
+@media (max-width: 1200px) {
+  :root {
+    --global-page-padding: 0 4em 0 4em;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --global-page-padding: 0 2em 0 2em;
+  }
 }
 
 body {
