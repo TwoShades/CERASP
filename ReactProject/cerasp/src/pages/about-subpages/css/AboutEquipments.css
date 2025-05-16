@@ -1,5 +1,5 @@
 .about-equipments {
-  padding: 0 8em 0em 8em;
+  padding: var(--global-page-padding);
   padding-top: 90px;
 }
 

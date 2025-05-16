@@ -16,7 +16,6 @@ export default function AboutTeam() {
 
         const json = await res.json();
         const cleaned = json.data.map((entry) => {
-          console.log(entry.Name); // Log the Name here
           return {
             id: entry.id,
             Name: entry.Name,

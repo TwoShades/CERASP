@@ -1,5 +1,5 @@
 .about-partners {
-  padding: 0 8em 0em 8em;
+  padding: var(--global-page-padding);
   padding-top: 90px;
   background-color: white;
   color: rgb(31, 31, 31);

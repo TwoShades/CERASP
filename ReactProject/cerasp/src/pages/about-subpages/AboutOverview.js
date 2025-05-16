@@ -2,9 +2,11 @@ import "./css/AboutOverview.css";
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import aboutTranslations from "./about-translations.json";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
+  const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
   const content = aboutTranslations.aboutOverview;
 
   return (
@@ -13,12 +15,11 @@ export default function AboutOverview() {
         <h1>{content.overview.title[language]}</h1>
         <p>{content.overview[language]}</p>
       </div>
-
       <div className="about-overview-video">
         <div className="about-overview-video-icon">
           <img
-            src="/svg/flask-gear.svg"
-            alt="Flask Gear"
+            src="/svg/microscope-bacteria.svg"
+            alt="Microscope Bacteria"
             className="about-icon-img"
           />
         </div>
@@ -29,13 +30,15 @@ export default function AboutOverview() {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
-        <div className="about-overview-video-icon">
-          <img
-            src="/svg/microscope-bacteria.svg"
-            alt="Microscope Bacteria"
-            className="about-icon-img"
-          />
-        </div>
+        {isFullScreen && (
+          <div className="about-overview-video-icon">
+            <img
+              src="/svg/flask-gear.svg"
+              alt="Flask Gear"
+              className="about-icon-img"
+            />
+          </div>
+        )}
       </div>
 
       <div className="about-overview-primary-sections">
