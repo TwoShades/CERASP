@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./css/ExpertiseHealthCanada.css";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import expertiseTranslations from "./expertise-translations.json";
 
 const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) => {
+  const { language } = useContext(LanguageContext);
+  const healthCanada = expertiseTranslations.health_canada;
+
   return (
     <div className="expertise-health-canada-parent">
         <div className= "expertise-health-canada-panel">
@@ -14,12 +19,11 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
             </div>
 
             <div className="expertise-health-canada-title">
-            <h3>Health Canada Partner</h3>
+            <h3>{healthCanada.title[language]}</h3>
             </div>
 
             <div className="expertise-health-canada-text-under-title">
-                <p>Recognized partner of Health Canada for regulatory affairs and audits. As an official 
-                    partner of Health Canada, we deliver solutions that meet the highest industry standards.</p>
+                <p>{healthCanada.content[language]}</p>
             </div>
         </div>
 

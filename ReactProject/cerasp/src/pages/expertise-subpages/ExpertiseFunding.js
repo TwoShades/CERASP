@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
-import "./css/ExpertiseGMP.css";
+import "./css/ExpertiseFunding.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 
-const ExpertiseGMP = () => {
+const ExpertiseFunding = () => {
   const { language } = useContext(LanguageContext);
-  const gmp = expertiseTranslations.gmp_biomanufacturing;
+  const funding = expertiseTranslations.funding;
 
   return (
-    <div className="expertise-gmp">
-      <h2 className="feature-title">{gmp.title[language]}</h2>
-      <div className="expertise-gmp-content">
-        <div className="expertise-gmp-image">
-          <div className="expertise-gmp-image-content">
+    <div className="expertise-Funding">
+      <h2 className="feature-title">{funding.title[language]}</h2>
+      <div className="expertise-Funding-content">
+        <div className="expertise-Funding-image">
+          <div className="expertise-Funding-image-content">
             <StockImageFetch
               searchTerm="biologist"
               imgSource="large"
@@ -25,7 +25,7 @@ const ExpertiseGMP = () => {
         </div>
         <div className="feature-card">
           <div className="feature-text">
-            <p>{gmp.content[language]}</p>
+            <p>{funding.content[language]}</p>
           </div>
         </div>
       </div>
@@ -33,4 +33,4 @@ const ExpertiseGMP = () => {
   );
 };
 
-export default ExpertiseGMP;
+export default ExpertiseFunding;

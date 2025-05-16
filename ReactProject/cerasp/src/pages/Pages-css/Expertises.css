@@ -31,3 +31,8 @@
 
 @media (max-width: 475px) {
 }
+
+#numeric-health {
+  background: #fff;
+  color: #181818;
+}

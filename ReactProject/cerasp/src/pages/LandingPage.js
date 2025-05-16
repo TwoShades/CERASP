@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Pages-css/LandingPage.css";
 import ContactUs from "./ContactUs/ContactUs.js";
+import Footer from "../components/layouts/Footer.js";
 
 const LandingPage = () => {
   const [stage, setStage] = useState("logo");
@@ -82,6 +83,7 @@ const LandingPage = () => {
           <ContactUs />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
