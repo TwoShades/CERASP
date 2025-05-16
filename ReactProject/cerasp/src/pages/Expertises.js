@@ -10,9 +10,13 @@ import ExpertiseApplied from "./expertise-subpages/ExpertiseApplied.js";
 import ExpertiseBioinformatics from "./expertise-subpages/ExpertiseBioinformatics.js";
 import ExpertiseTroubleshooting from "./expertise-subpages/ExpertiseTroubleshooting.js";
 import ExpertiseHealthCanada from "./expertise-subpages/ExpertiseHealthCanada.js";
+import ExpertiseTraining from "./expertise-subpages/ExpertiseTraining.js";
+import ExpertiseFunding from "./expertise-subpages/ExpertiseFunding.js";
+import ExpertiseNumeric from "./expertise-subpages/ExpertiseNumeric.js";
 
 import ContactUs from "./ContactUs/ContactUs.js"; 
 import Footer from "../components/layouts/Footer.js";
+
 
 const Expertises = () => {
   useScrollToPanel();
@@ -65,22 +69,16 @@ const Expertises = () => {
         <ExpertiseTroubleshooting />
       </div>
 
-      {/*   ===============================
-              =====HEALTH CANADA PARTNER=====
-              ===============================
-        */}
+      {/* ====HEALTH CANADA PARTNER==== */}
 
       <div title="expertises" id="health-canada-partner">
         <ExpertiseHealthCanada />
       </div>
 
-      {/*   =================================
-              ======Technical Training=========
-              =================================
-        */}
+      {/* ====Technical Training==== */}
 
       <div title="expertises" id="technical-training">
-        <p>Technical Training</p>
+        <ExpertiseTraining />
       </div>
 
       {/* =====Bioinformatics===== */}
@@ -95,22 +93,16 @@ const Expertises = () => {
         */}
 
       <div title="expertises" id="numeric-health">
-        <p>Numeric Health</p>
+        <ExpertiseNumeric />
       </div>
 
-      {/*   =================================
-              ======Help Access Funding========
-              =================================
-        */}
+      {/* ====Help Access Funding==== */}
 
       <div title="expertises" id="help-access-funding">
-        <p>Help Access Funding</p>
+        <ExpertiseFunding />
       </div>
 
-      {/*   ======================
-              =====CONTACT FORM=====
-              ======================
-        */}
+      {/* ===CONTACT FORM=== */}
 
       <div title="expertises" id="contact-us-form">
         <ContactUs />

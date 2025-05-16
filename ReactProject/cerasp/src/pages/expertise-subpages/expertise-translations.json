@@ -57,7 +57,138 @@
       "content": {
         "en": "CERASP provides specialized training programs tailored to the biomanufacturing industry. Topics include GMP practices, bioprocessing techniques, and quality control. These programs are designed to upskill the workforce and meet industry demands.",
         "fr": "Le CERASP propose des programmes de formation spécialisés adaptés à l’industrie de la biofabrication. Les sujets abordés incluent les pratiques BPF, les techniques de bioprocédés et le contrôle de la qualité. Ces programmes visent à perfectionner la main-d’œuvre et à répondre aux besoins du secteur."
+      },
+      "card1": {
+        "title": {
+          "en": "Foundation & Skills",
+          "fr": "Fondations et compétences"
+        },
+        "content": {
+          "en": "At CERASP, we begin by laying a strong foundation. Our technical training programs are designed to introduce core principles in pharmaceutical and biomanufacturing environments. Participants gain hands-on knowledge in production workflows, safety protocols, and quality assurance fundamentals — all essential for navigating regulated industry spaces with confidence.",
+          "fr": "Au CERASP, nous commençons par établir des bases solides. Nos programmes de formation technique sont conçus pour introduire les principes fondamentaux dans les environnements pharmaceutiques et de biofabrication. Les participants acquièrent des connaissances pratiques sur les flux de production, les protocoles de sécurité et les bases de l’assurance qualité — essentiels pour évoluer avec confiance dans des secteurs réglementés."
+        }
+      },
+      "card2": {
+        "title": {
+          "en": "Advanced Compliance",
+          "fr": "Conformité avancée"
+        },
+        "content": {
+          "en": "Moving beyond the basics, our intermediate and advanced sessions focus on Good Manufacturing Practices (GMP), documentation standards, and regulatory compliance. These training modules help participants understand inspection readiness, data integrity, and how to adapt processes to meet evolving health authority requirements both locally and globally.",
+          "fr": "Au-delà des bases, nos sessions intermédiaires et avancées portent sur les Bonnes Pratiques de Fabrication (BPF), les normes de documentation et la conformité réglementaire. Ces modules aident les participants à comprendre la préparation aux inspections, l’intégrité des données et l’adaptation des processus aux exigences changeantes des autorités sanitaires, localement et mondialement."
+        }
+      },
+      "card3": {
+        "title": {
+          "en": "Customization & Delivery",
+          "fr": "Personnalisation et diffusion"
+        },
+        "content": {
+          "en": "We offer flexible delivery models — online, hybrid, or in-person — tailored to your team's schedule. Our custom training is designed in partnership with clients and academic institutions, ensuring interns and professionals alike are equipped to solve real-world challenges. Every program emphasizes operational excellence, innovation, and continuous improvement in technical performance.",
+          "fr": "Nous proposons des modèles de formation flexibles — en ligne, hybrides ou en présentiel — adaptés à l’horaire de votre équipe. Nos formations sur mesure sont conçues en partenariat avec les clients et les institutions académiques, garantissant que stagiaires et professionnels sont prêts à relever les défis concrets. Chaque programme met l’accent sur l’excellence opérationnelle, l’innovation et l’amélioration continue des performances techniques."
+        }
+      }
+    },
+    "animal_health": {
+      "title": {
+        "en": "Animal Health",
+        "fr": "Santé animale"
+      },
+      "content": {
+        "en": "We offer expertise in animal health, supporting the development and optimization of products for veterinary use. Our services include formulation, safety, and efficacy studies for animal health products.",
+        "fr": "Nous offrons une expertise en santé animale, soutenant le développement et l’optimisation de produits à usage vétérinaire. Nos services incluent la formulation, les études de sécurité et d’efficacité pour les produits de santé animale."
+      }
+    },
+    "nhp_nutraceuticals": {
+      "title": {
+        "en": "NHP & Nutraceuticals",
+        "fr": "PSN & Nutraceutiques"
+      },
+      "content": {
+        "en": "Our team assists in the development of natural health products (NHPs) and nutraceuticals, ensuring compliance with regulatory standards and market requirements. We provide support from concept to commercialization.",
+        "fr": "Notre équipe accompagne le développement de produits de santé naturels (PSN) et de nutraceutiques, en assurant la conformité réglementaire et les exigences du marché. Nous offrons un soutien de la conception à la commercialisation."
+      }
+    },
+    "bioinformatics": {
+      "title": {
+        "en": "Bioinformatics",
+        "fr": "Bio-informatique"
+      },
+      "content": {
+        "en": "We provide advanced bioinformatics services for pharmaceutical and healthcare sectors, including genomic data analysis, transcriptomics, proteomics, and metabolomics. Our solutions accelerate research and enable precision medicine.",
+        "fr": "Nous offrons des services avancés de bio-informatique pour les secteurs pharmaceutique et de la santé, incluant l’analyse de données génomiques, la transcriptomique, la protéomique et la métabolomique. Nos solutions accélèrent la recherche et permettent la médecine de précision."
+      },
+      "fields": {
+        "genomicDataAnalysis": {
+          "title": {
+            "en": "Genomic data analysis",
+            "fr": "Analyse de données génomiques"
+          },
+          "desc": {
+            "en": "Transcriptomics, proteomics, and metabolomics services.",
+            "fr": "Services de transcriptomique, protéomique et métabolomique."
+          }
+        },
+        "comprehensiveDataInsights": {
+          "title": {
+            "en": "Comprehensive data insights",
+            "fr": "Analyses de données complètes"
+          },
+          "desc": {
+            "en": "To optimize therapeutic strategies.",
+            "fr": "Pour optimiser les stratégies thérapeutiques."
+          }
+        },
+        "acceleratedResearch": {
+          "title": {
+            "en": "Accelerated research",
+            "fr": "Recherche accélérée"
+          },
+          "desc": {
+            "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
+            "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+          }
+        }
+      }
+    },
+    "numeric_healthcare": {
+      "title": {
+        "en": "Data-Driven Healthcare Solutions",
+        "fr": "Solutions de santé axées sur les données"
+      },
+      "content": {
+        "en": "We deliver data-driven solutions for healthcare, leveraging analytics and digital tools to improve patient outcomes, operational efficiency, and compliance. Our services include health data analysis, real-time monitoring, predictive analytics, and digital integration.",
+        "fr": "Nous proposons des solutions de santé axées sur les données, utilisant l’analytique et les outils numériques pour améliorer les résultats des patients, l’efficacité opérationnelle et la conformité. Nos services incluent l’analyse de données de santé, la surveillance en temps réel, l’analytique prédictive et l’intégration numérique."
+      }
+    },
+    "health_canada": {
+      "title": {
+        "en": "Health Canada Partner",
+        "fr": "Partenaire de Santé Canada"
+      },
+      "content": {
+        "en": "Recognized partner of Health Canada for regulatory affairs and audits. As an official partner, we deliver solutions that meet the highest industry standards.",
+        "fr": "Partenaire reconnu de Santé Canada pour les affaires réglementaires et les audits. En tant que partenaire officiel, nous proposons des solutions répondant aux normes les plus élevées de l’industrie."
+      }
+    },
+    "funding": {
+      "title": {
+        "en": "Help Access Funding",
+        "fr": "Aide à l’accès au financement"
+      },
+      "content": {
+        "en": "We support every stage of the grant process, from team coordination and writing to budget planning and submission. Our expertise covers non-dilutive funding, innovation grants, and strategic positioning to maximize your success.",
+        "fr": "Nous accompagnons chaque étape du processus de subvention, de la coordination d’équipe à la rédaction, la planification budgétaire et la soumission. Notre expertise couvre le financement non dilutif, les subventions à l’innovation et le positionnement stratégique pour maximiser votre succès."
+      }
+    },
+    "troubleshooting": {
+      "title": {
+        "en": "Troubleshooting",
+        "fr": "Dépannage"
+      },
+      "content": {
+        "en": "We help you identify and resolve technical issues in research or production, including product-related problems, equipment malfunctions, and process issues. CERASP assists in implementing solutions to improve your operations.",
+        "fr": "Nous vous aidons à identifier et à résoudre les problèmes techniques en recherche ou en production, y compris les problèmes liés aux produits, les pannes d’équipement et les problèmes de processus. Le CERASP vous accompagne dans la mise en œuvre de solutions pour améliorer vos opérations."
       }
     }
   }
-  

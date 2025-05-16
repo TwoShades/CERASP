@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./css/ExpertiseAnimal.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import expertiseTranslations from "./expertise-translations.json";
 
 const ExpertiseAnimal = ({ className = "" }) => {
+    const { language } = useContext(LanguageContext);
+    const animal = expertiseTranslations.animal_health;
+    const nhp = expertiseTranslations.nhp_nutraceuticals;
+
     return (
         <div className={`two-image-two-text ${className}`}>
             <div className="image-left-panel">
@@ -18,14 +24,10 @@ const ExpertiseAnimal = ({ className = "" }) => {
             </div>
             <div className="text-left-panel">
                 <p>
-                    ANIMAL HEALTH,
+                    {animal.title[language].toUpperCase()},
                     <br />
                     <br />
-                    Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam
-                    diam purus euismod tincidunt morbi. Gravida ut nulla tincidunt mi
-                    eu velit pharetra. In consectetur sed aliquam placerat donec
-                    convallis feugiat pellentesque. Viverra quis etiam ut nulla
-                    senectus neque nulla mi non.
+                    {animal.content[language]}
                 </p>
             </div>
             <div className="image-right-panel">
@@ -41,14 +43,10 @@ const ExpertiseAnimal = ({ className = "" }) => {
             </div>
             <div className="text-right-panel">
                 <p>
-                    NHP & NUTRACEUTICALS,
+                    {nhp.title[language].toUpperCase()},
                     <br />
                     <br />
-                    Lorem ipsum dolor sit amet consectetur. Pharetra id sapien quam
-                    diam purus euismod tincidunt morbi. Gravida ut nulla tincidunt mi
-                    eu velit pharetra. In consectetur sed aliquam placerat donec
-                    convallis feugiat pellentesque. Viverra quis etiam ut nulla
-                    senectus neque nulla mi non.
+                    {nhp.content[language]}
                 </p>
             </div>
         </div>

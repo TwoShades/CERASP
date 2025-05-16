@@ -13,6 +13,7 @@ import useScrollTracker from "./hooks/useScrollTracker";
 import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -30,6 +31,7 @@ function App() {
           <Route path="/sector-of-activities" element={<Sectors />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/news" element={<News />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </main>
     </ScreenSizeProvider>

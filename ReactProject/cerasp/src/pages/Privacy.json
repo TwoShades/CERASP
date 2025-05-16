@@ -1,0 +1,82 @@
+{
+  "introduction": {
+    "title": {
+      "en": "Introduction",
+      "fr": "Introduction"
+    },
+    "content": {
+      "en": "This Privacy Policy complements the Policy on Information Security and Integrated Document Management, adopted by the Board of Directors on June 20, 2022. Information that concerns a physical person and allows that person to be identified is considered personal information.",
+      "fr": "La présente politique de confidentialité complète la Politique sur la sécurité de l'information et la gestion documentaire intégrée, adoptée par le conseil d'administration le 20 juin 2022. Toute information concernant une personne physique et permettant de l'identifier est considérée comme une information personnelle."
+    }
+  },
+  "regulatory_framework": {
+    "title": {
+      "en": "Regulatory framework",
+      "fr": "Cadre réglementaire"
+    },
+    "content": {
+      "en": "CERASP manages the use of personal information in accordance with the standards set out in the Act respecting access to documents held by public bodies and the protection of personal information (R.S.Q., c. A-2.1).",
+      "fr": "Le CERASP gère l'utilisation des renseignements personnels conformément aux normes prévues par la Loi sur l'accès aux documents des organismes publics et sur la protection des renseignements personnels (RLRQ, c. A-2.1)."
+    }
+  },
+  "collection": {
+    "title": {
+      "en": "Collection of personal information",
+      "fr": "Collecte des renseignements personnels"
+    },
+    "content": {
+      "en": "The information required to create a user account is kept by CERASP (7171 Frederick Banting, Centre d’Innovation adMare, Montréal (Québec) Canada H4S 1Z9). Email marketing (if applicable): With your permission, we may send you emails about our training and event offerings.",
+      "fr": "Les informations nécessaires à la création d'un compte utilisateur sont conservées par le CERASP (7171 Frederick Banting, Centre d’Innovation adMare, Montréal (Québec) Canada H4S 1Z9). Marketing par courriel (le cas échéant) : Avec votre permission, nous pouvons vous envoyer des courriels concernant nos offres de formation et d'événements."
+    }
+  },
+  "consent": {
+    "title": {
+      "en": "Consent",
+      "fr": "Consentement"
+    },
+    "content": {
+      "en": "When you provide us with your personal information to complete a transaction, verify your credit card or place an order, we will assume that you consent to our collection and use of your information for this purpose only. If we ask you to provide us with your personal information for any other reason, such as marketing purposes, we will ask you directly for your express consent, or give you the opportunity to decline. If, after having given us your consent, you change your mind and no longer consent to us contacting you, collecting your information or disclosing it, you may notify CERASP by contacting us at info@cerasp.ca or by mail at: CERASP 7171 Frederick-Banting, Centre d’Innovation adMare, Montréal, Québec, H4S 1Z9, Canada.",
+      "fr": "Lorsque vous nous fournissez vos renseignements personnels pour compléter une transaction, vérifier votre carte de crédit ou passer une commande, nous présumons que vous consentez à la collecte et à l'utilisation de vos renseignements à cette fin uniquement. Si nous vous demandons vos renseignements personnels pour toute autre raison, comme à des fins de marketing, nous vous demanderons directement votre consentement exprès ou vous donnerons la possibilité de refuser. Si, après nous avoir donné votre consentement, vous changez d'avis et ne souhaitez plus que nous vous contactions, collections ou divulguions vos renseignements, vous pouvez en aviser le CERASP à info@cerasp.ca ou par courrier à : CERASP 7171 Frederick-Banting, Centre d’Innovation adMare, Montréal, Québec, H4S 1Z9, Canada."
+    }
+  },
+  "non_disclosure": {
+    "title": {
+      "en": "Non-disclosure to third parties",
+      "fr": "Non-divulgation à des tiers"
+    },
+    "content": {
+      "en": "CERASP does not rent, sell or trade personally identifiable information (e.g. name, address, telephone number, e-mail address, etc.) or financial information (e.g. credit card numbers) that could be used to identify you. CERASP will not disclose such personal information unless required to do so by a legal obligation or court order, or in the performance of a contract with a third party. When CERASP retains the services of an external company, it uses all appropriate means to ensure that your personal information is protected.",
+      "fr": "Le CERASP ne loue, ne vend ni n'échange des renseignements personnels identifiables (par exemple, nom, adresse, numéro de téléphone, adresse courriel, etc.) ou des informations financières (par exemple, numéros de carte de crédit) qui pourraient permettre de vous identifier. Le CERASP ne divulguera ces renseignements personnels que si la loi ou une ordonnance du tribunal l'exige, ou dans le cadre de l'exécution d'un contrat avec un tiers. Lorsque le CERASP retient les services d'une entreprise externe, il utilise tous les moyens appropriés pour assurer la protection de vos renseignements personnels."
+    }
+  },
+  "data_security": {
+    "title": {
+      "en": "Data security",
+      "fr": "Sécurité des données"
+    },
+    "content": {
+      "en": "CERASP takes necessary measures to ensure that your personal data is not accessible to third parties other than authorized CERASP managers and employees. Your data may be stored outside the country. In this case, CERASP will do its utmost to guarantee a level of protection equivalent to that offered CERASP data stored on Canadian territory and will in particular ensure that all applicable legal requirements are complied with, including those relating to data protection.\n\nWhat are your rights regarding your data?\n- If you have an account or if you have left comments on this site, you can ask to receive a file containing all the personal data we hold about you, including that which you have provided to us.\n- You may also request the deletion of your personal data. This does not include data held for administrative, legal or security purposes.",
+      "fr": "Le CERASP prend les mesures nécessaires pour que vos données personnelles ne soient accessibles qu'aux gestionnaires et employés autorisés du CERASP. Vos données peuvent être stockées à l'extérieur du pays. Dans ce cas, le CERASP fera tout son possible pour garantir un niveau de protection équivalent à celui offert aux données stockées sur le territoire canadien et veillera notamment à ce que toutes les exigences légales applicables soient respectées, y compris celles relatives à la protection des données.\n\nQuels sont vos droits concernant vos données ?\n- Si vous avez un compte ou si vous avez laissé des commentaires sur ce site, vous pouvez demander à recevoir un fichier contenant toutes les données personnelles que nous détenons à votre sujet, y compris celles que vous nous avez fournies.\n- Vous pouvez également demander la suppression de vos données personnelles. Cela n'inclut pas les données conservées à des fins administratives, légales ou de sécurité."
+    }
+  },
+  "cookies": {
+    "title": {
+      "en": "Cookies",
+      "fr": "Témoins (Cookies)"
+    },
+    "content": {
+      "en": "Cookies are used to facilitate and optimize your browsing on the Platforms. Cookies are small text files that are downloaded and stored in the memory of the device you use to view web pages. CERASP does not use cookies to collect personal information about you.\n- Most browsers used to access the Internet accept cookies by default.\n- You can change your browser’s privacy settings at any time to block cookies or delete existing ones. This will not prevent you from accessing the Platforms.",
+      "fr": "Les témoins (cookies) sont utilisés pour faciliter et optimiser votre navigation sur les plateformes. Les cookies sont de petits fichiers texte téléchargés et stockés dans la mémoire de l'appareil que vous utilisez pour consulter des pages Web. Le CERASP n'utilise pas les cookies pour recueillir des renseignements personnels à votre sujet.\n- La plupart des navigateurs utilisés pour accéder à Internet acceptent les cookies par défaut.\n- Vous pouvez modifier à tout moment les paramètres de confidentialité de votre navigateur pour bloquer les cookies ou supprimer ceux existants. Cela ne vous empêchera pas d'accéder aux plateformes."
+    }
+  },
+  "statistics": {
+    "title": {
+      "en": "Statistics",
+      "fr": "Statistiques"
+    },
+    "content": {
+      "en": "CERASP uses analysis tools (Google Analytics) on its Platforms. These tools enable the collection, analysis, measurement and presentation of data on visits made, with the aim of understanding and optimizing the use of our website.\nCERASP keeps this type of information in order to count, among other things:\n- Number of visitors\n- The most frequently visited pages\n- The technology used by customers of our Platforms\n- Referring sites\n- Users’ country of origin\nThe data collected by Google Analytics is transmitted outside Canada to Google servers and may be processed in any country where Google operates servers. The data may be subject to the laws of that country. For further information on this analysis tool, please consult the Google Analytics website.",
+      "fr": "Le CERASP utilise des outils d'analyse (Google Analytics) sur ses plateformes. Ces outils permettent la collecte, l'analyse, la mesure et la présentation de données sur les visites effectuées, dans le but de comprendre et d'optimiser l'utilisation de notre site Web.\nLe CERASP conserve ce type d'informations afin de comptabiliser, entre autres :\n- Le nombre de visiteurs\n- Les pages les plus consultées\n- La technologie utilisée par les clients de nos plateformes\n- Les sites référents\n- Le pays d'origine des utilisateurs\nLes données recueillies par Google Analytics sont transmises à l'extérieur du Canada vers les serveurs de Google et peuvent être traitées dans tout pays où Google exploite des serveurs. Les données peuvent être soumises aux lois de ce pays. Pour plus d'informations sur cet outil d'analyse, veuillez consulter le site Web de Google Analytics."
+    }
+  }
+}
