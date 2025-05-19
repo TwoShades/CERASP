@@ -1,4 +1,4 @@
-import "./css/AboutOverview.css";
+import "./css/AboutOverviewAlt.css";
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import aboutTranslations from "./about-translations.json";
