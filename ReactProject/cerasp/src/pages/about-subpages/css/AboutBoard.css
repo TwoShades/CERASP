@@ -1,11 +1,12 @@
 .about-board {
   padding: var(--global-page-padding);
   padding-top: 90px;
+  background-color: #1a1a1a; /* dark background */
 }
 
 .about-board-header {
-  /* text-align: center; */
   margin-bottom: 40px;
+  background-color: transparent; /* keep header clean */
 }
 
 .about-board-images {
@@ -32,6 +33,7 @@
   max-width: 220px;
   height: 340px;
 
+  background-color: #222; /* card background */
   text-align: center;
 }
 
@@ -64,6 +66,7 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 40px;
+  background-color: #1a1a1a; /* match page background */
 }
 
 .pagination-buttons button {
