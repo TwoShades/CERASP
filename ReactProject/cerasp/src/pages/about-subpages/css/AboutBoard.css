@@ -1,12 +1,12 @@
 .about-board {
   padding: var(--global-page-padding);
   padding-top: 90px;
-  background-color: #1a1a1a; /* dark background */
+  background-color: #1a1a1a;
 }
 
 .about-board-header {
   margin-bottom: 40px;
-  background-color: transparent; /* keep header clean */
+  background-color: transparent;
 }
 
 .about-board-images {
@@ -33,7 +33,7 @@
   max-width: 220px;
   height: 340px;
 
-  background-color: #222; /* card background */
+  background-color: #222;
   text-align: center;
 }
 
@@ -66,7 +66,7 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 40px;
-  background-color: #1a1a1a; /* match page background */
+  background-color: #1a1a1a;
 }
 
 .pagination-buttons button {
@@ -87,4 +87,17 @@
 
 .pagination-buttons button:hover:not(:disabled) {
   background-color: #84bfff;
+}
+
+@media screen and (max-width: 768px) {
+  .board-member-card {
+    width: 100%;
+    max-width: 90%;
+    /* height: auto; */
+  }
+
+  .about-board-images {
+    flex-direction: column;
+    align-items: center;
+  }
 }

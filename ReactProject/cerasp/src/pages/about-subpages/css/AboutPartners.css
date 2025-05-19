@@ -1,8 +1,12 @@
 .about-partners {
   padding: var(--global-page-padding);
   padding-top: 90px;
-  background-color: white;
-  color: rgb(31, 31, 31);
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+.about-partners h1 {
+  font-size: 1.4rem;
 }
 
 .about-partners hr {
@@ -27,5 +31,11 @@
 }
 
 .partner-card-img {
-  width: 50%;
+  width: 65%;
+}
+
+@media screen and (max-width: 1200px) {
+  .partner-card-img {
+    width: 100%;
+  }
 }

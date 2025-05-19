@@ -100,7 +100,7 @@
 }
 
 .about-overview-primary p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   color: #b8b8b8;
   margin: 0;
@@ -167,7 +167,7 @@
   padding: 24px;
   margin: 0;
   color: #b8b8b8;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   background-color: #333333;
 }
@@ -228,6 +228,10 @@
     padding: 24px;
   }
 
+  .about-overview-primary p {
+    font-size: 14px;
+  }
+
   .about-overview-secondary summary {
     padding: 16px 20px;
     font-size: 15px;
@@ -235,7 +239,7 @@
 
   .about-overview-secondary p {
     padding: 20px;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 

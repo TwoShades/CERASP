@@ -21,7 +21,6 @@ export default function AboutPartners() {
             alt="Partners"
           />
         </div>
-        <hr></hr>
         <h1>
           {language === "en"
             ? "CERASP IS A PROUD MEMBER OF"
@@ -34,7 +33,6 @@ export default function AboutPartners() {
             alt="Members"
           />
         </div>
-        <hr></hr>
         <br></br>
       </div>
     </div>

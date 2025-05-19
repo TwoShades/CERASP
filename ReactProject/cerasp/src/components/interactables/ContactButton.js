@@ -10,7 +10,7 @@ const ContactButton = () => {
   const location = useLocation();
   const languageContext = useContext(LanguageContext);
   const { language } = languageContext;
-  const { isTablet } = useContext(ScreenSizeContext);
+  const { isFullScreen } = useContext(ScreenSizeContext);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -29,10 +29,12 @@ const ContactButton = () => {
 
   return (
     <div
-      className={`${isTablet ? "contact-button-mobile" : "contact-button"}`}
+      className={`${
+        !isFullScreen ? "contact-button-mobile" : "contact-button"
+      }`}
       onClick={() => handleNavigateToSection("contact-us-form")}
     >
-      {isTablet ? (
+      {!isFullScreen ? (
         <Mail></Mail>
       ) : language === "fr" ? (
         "Contactez-nous"

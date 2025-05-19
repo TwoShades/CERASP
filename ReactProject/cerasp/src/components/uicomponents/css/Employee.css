@@ -55,7 +55,7 @@
 .employee-card h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #5bc0eb;
+  color: #f2fbff;
   letter-spacing: -0.5px;
   line-height: 1.1;
 }
@@ -63,7 +63,7 @@
 .employee-card p {
   font-size: 1rem;
   line-height: 1.4;
-  color: #b8b8b8;
+  color: #eeeeee;
 }
 
 .linkedin {

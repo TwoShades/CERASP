@@ -14,7 +14,7 @@ export default function AboutBoard() {
     setBoardMembers(boardMembersData.boardMembers || []);
   }, []);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 5;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 3 : 5;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = boardMembers.slice(indexOfFirstItem, indexOfLastItem);
