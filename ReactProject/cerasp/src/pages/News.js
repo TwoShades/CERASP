@@ -16,7 +16,7 @@ const News = () => {
           <h1>PANEL 1</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <div className="test-panel-2">
+        {/* <div className="test-panel-2">
           <h1>PANEL 2</h1>
           <p>
             Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
@@ -51,7 +51,7 @@ const News = () => {
             varius, turpis et commodo pharetra, est eros bibendum elit, nec
             luctus magna felis sollicitudin mauris.
           </p>
-        </div>
+        </div> */}
       </div>
     </ScrollPanel>
   );
