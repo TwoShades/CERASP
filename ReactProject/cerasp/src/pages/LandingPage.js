@@ -30,7 +30,7 @@ const LandingPage = () => {
         {/* ===================
             =====LANDING ZONE=====
             =================== */}
-        <div title="landing" id="landing">
+        <div id="landing">
           <div className="landing-bloc">
             {stage === "logo" && (
               <img
@@ -57,7 +57,7 @@ const LandingPage = () => {
         {/* ===================
             =====OVERVIEW======
             =================== */}
-        <div title="landing" id="overview">
+        <div id="overview">
           <div className="landing-overview">
             <h2>Overview</h2>
             <p>
@@ -70,7 +70,7 @@ const LandingPage = () => {
         {/* ============================
             =====Equipment Updates======
             ============================ */}
-        <div title="landing" id="welcome">
+        <div id="welcome">
           <div className="landing-welcome">
             <h2>Equipment Updates</h2>
             <p>
@@ -79,7 +79,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div title="landing" id="contact-us-form">
+        <div id="contact-us-form">
           <ContactUs />
         </div>
       </div>

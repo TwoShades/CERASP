@@ -1,5 +1,7 @@
 import React from 'react';
 import './ContactUs.css';
+import { Link } from "react-router-dom";
+
 
 const ContactUs = () => {
   return (
@@ -20,7 +22,7 @@ const ContactUs = () => {
           <input type="text" placeholder="Phone" />
           <textarea placeholder="Message" />
           <label>
-            <input type="checkbox" /> I agree to the Privacy Policy
+            <input type="checkbox" /> I agree to the <Link to="/privacy">Privacy Policy</Link>
           </label>
           <label>
             <input type="checkbox" /> Be part of the Newsletter

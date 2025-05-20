@@ -25,7 +25,7 @@ const Expertises = () => {
 
       {/* ====OVERVIEW==== */}
 
-      <div title="expertises" id="overview">
+      <div id="overview">
         <ExpertiseOverview
           topRowContent={
             <>
@@ -41,70 +41,67 @@ const Expertises = () => {
 
       {/* ===GMP EXPERTISE=== */}
 
-      <div title="expertises" id="gmp-expertise-&-biomanufacturing">
+      <div id="gmp-expertise-&-biomanufacturing">
         <ExpertiseGMP />
       </div>
 
       {/* =FORMULATIONS OF PHARMACEUTICALS= */}
 
-      <div title="expertises" id="formulation-of-pharmaceuticals">
+      <div id="formulation-of-pharmaceuticals">
         <ExpertiseFormulation />
       </div>
 
       {/* =====Animal health, NHP & Nutraceuticals==== */}
 
-      <div title="expertises" id="animal-health">
+      <div id="animal-health">
         <ExpertiseAnimal />
       </div>
 
       {/* ===Applied Research==== */}
 
-      <div title="expertises" id="applied-research">
+      <div id="applied-research">
         <ExpertiseApplied />
       </div>
 
       {/* =====Troubleshooting===== */}
 
-      <div title="expertises" id="troubleshooting">
+      <div id="troubleshooting">
         <ExpertiseTroubleshooting />
       </div>
 
       {/* ====HEALTH CANADA PARTNER==== */}
 
-      <div title="expertises" id="health-canada-partner">
+      <div id="health-canada-partner">
         <ExpertiseHealthCanada />
       </div>
 
       {/* ====Technical Training==== */}
 
-      <div title="expertises" id="technical-training">
+      <div id="technical-training">
         <ExpertiseTraining />
       </div>
 
       {/* =====Bioinformatics===== */}
 
-      <div title="expertises" id="bioinformatics">
+      <div id="bioinformatics">
         <ExpertiseBioinformatics />
       </div>
 
-      {/*   =================================
-              =======Numeric Health============
-              =================================
-        */}
+      {/* =====Numeric Health=====  */}
 
-      <div title="expertises" id="numeric-health">
+      <div id="numeric-health">
         <ExpertiseNumeric />
       </div>
 
       {/* ====Help Access Funding==== */}
 
-      <div title="expertises" id="help-access-funding">
+      <div id="help-access-funding">
         <ExpertiseFunding />
       </div>
 
       {/* ===CONTACT FORM=== */}
 
-      <div title="expertises" id="contact-us-form">
+      <div id="contact-us-form">
         <ContactUs />
       </div>
 
