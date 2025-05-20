@@ -1,236 +1,74 @@
-import "./Pages-css/Sectors.css";
-import { useEffect } from "react";
+import "./Pages-css/Projects.css";
+import { useEffect, useContext } from "react";
 import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUsForm from "../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
-import ProjectOverview from "../components/panels/projectpanels/ProjectOverview.js";
-import ProjectPanelA from "../components/panels/projectpanels/ProjectPanelA.js";
-import ProjectPanelB from "../components/panels/projectpanels/ProjectPanelB.js";
-import ProjectPanelC from "../components/panels/projectpanels/ProjectPanelC.js";
-import ProjectPanelD from "../components/panels/projectpanels/ProjectPanelD.js";
-import StockImageFetch from "../components/placeholders/StockImageFetch.js";
+import { LanguageContext } from "../contexts/LanguageContext";
+
+const projects = [
+  {
+    title: "Nanoparticle-Based Drug Delivery",
+    frTitle:
+      "Système de distribution de médicaments basé sur des nanoparticules",
+    desc: "Lipid nanoparticles for co-encapsulation of drugs and RNA targeting glioblastoma and retinoblastoma.",
+    frDesc:
+      "Nanoparticules lipidiques pour la co-encapsulation de médicaments et d'ARN ciblant le glioblastome et le rétinoblastome.",
+  },
+  {
+    title: "Advanced Wound Healing",
+    frTitle: "Cicatrisation avancée des plaies",
+    desc: "Thermosensitive and antimicrobial peptide-based polymers for advanced wound dressings.",
+    frDesc:
+      "Polymères thermosensibles et antimicrobiens à base de peptides pour des pansements de plaies avancés.",
+  },
+  {
+    title: "Theranostic Nanoparticles",
+    frTitle: "Nanoparticules théranostiques",
+    desc: "Yolk-shell and hybrid thermosensitive nanoparticles for simultaneous diagnosis and treatment.",
+    frDesc:
+      "Nanoparticules thermosensibles à coquille d'œuf et hybrides pour le diagnostic et le traitement simultanés.",
+  },
+  {
+    title: "Technical Support",
+    frTitle: "Support technique",
+    desc: "Biolocalize fluorinated medical compounds by confirming their mechanism of action, using proprietary MRI technologies, formulate the fluorinated compound in a solution to make it injectable for rat testing, and produce micro-batches for use.",
+    frDesc:
+      "Biolocaliser les composés médicaux fluorés en confirmant leur mode d'action, en utilisant des technologies IRM propriétaires, formuler le composé fluoré dans une solution pour le rendre injectable pour des tests sur des rats, et produire des micro-lots pour utilisation.",
+  },
+  {
+    title: "Active Pharmaceutical Ingredient Manufacturing",
+    frTitle: "Fabrication d'Ingrédients Actifs Pharmaceutiques",
+    desc: "Local supply of APIs from plants for the pharmaceutical industry. Using plant cells and a bioreactor production platform, biomass, metabolites, and enzymes will be produced + biotransformation of exogenous metabolites to create specific metabolites and recombinant proteins (enzymes, hormones, and monoclonal antibodies) or secondary metabolites for therapeutic use. The working group includes 1 private company, a researcher from the University of Montreal, and our CCTT.",
+    frDesc:
+      "Fourniture locale d'APIs à partir de plantes pour l'industrie pharmaceutique. En utilisant des cellules végétales et une plateforme de production en bioréacteur, de la biomasse, des métabolites et des enzymes seront produits, ainsi que la biotransformation de métabolites exogènes pour créer des métabolites spécifiques et des protéines recombinantes (enzymes, hormones et anticorps monoclonaux) ou des métabolites secondaires à usage thérapeutique. Le groupe de travail comprend une entreprise privée, un chercheur de l'Université de Montréal et notre CCTT.",
+  },
+];
 
 const Projects = () => {
   useScrollToPanel();
-
-  useEffect(() => {
-    async function fetchProjects() {
-      try {
-        const res = await fetch(
-          "https://loving-bird-9ef3b0470a.strapiapp.com/api/projects"
-        );
-        const json = await res.json();
-
-        json.data.forEach((project) => {
-          console.log("Title:", project.Title);
-          console.log("Content:", project.Content);
-        });
-      } catch (err) {
-        console.error("Failed to fetch projects:", err);
-      }
-    }
-
-    fetchProjects();
-  }, []);
+  const { language } = useContext(LanguageContext);
 
   return (
-    <div className="page-content">
-      <ScrollPanel title="projects" id="overview">
-        <ProjectOverview />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="project-1">
-        <ProjectPanelA
-          image={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={2}
-              perPage={1}
-            />
-          }
-          headline={`About the Project`}
-          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
-            accompanied by English versions from the 1914 translation by H. Rackham."`}
-        />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="project-2">
-        <ProjectPanelB
-          topImage={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={2}
-              perPage={1}
-            />
-          }
-          title={"Project B"}
-          quote={"Lorem Ipsum a quote here"}
-          bottomLeftImage={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={6}
-              perPage={1}
-            />
-          }
-          bottomCenterImage={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={5}
-              perPage={1}
-            />
-          }
-          headline={`This is a headline about this upcoming project.  
-            It will give a brief overview of the project. 
-            Visitors can click to read more if there is a PDF provided.`}
-        />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="project-3">
-        <ProjectPanelC
-          middleImage={
-            <StockImageFetch
-              searchTerm={"pattern"}
-              imgSource="original"
-              orientation="landscape"
-              page={1}
-              perPage={1}
-            />
-          }
-          bottomLeftImage={
-            <StockImageFetch
-              searchTerm={"high-tech"}
-              imgSource="large"
-              orientation="landscape"
-              page={3}
-              perPage={1}
-            />
-          }
-          headline={`The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"`}
-          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
-            accompanied by English versions from the 1914 translation by H. Rackham."`}
-        />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="project-4">
-        <ProjectPanelB
-          topImage={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={2}
-              perPage={1}
-            />
-          }
-          title={"Project B"}
-          quote={"Lorem Ipsum a quote here"}
-          bottomLeftImage={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={6}
-              perPage={1}
-            />
-          }
-          bottomCenterImage={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={5}
-              perPage={1}
-            />
-          }
-          headline={`This is a headline about this upcoming project.  
-            It will give a brief overview of the project. 
-            Visitors can click to read more if there is a PDF provided.`}
-        />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="project-5">
-        <ProjectPanelC
-          middleImage={
-            <StockImageFetch
-              searchTerm={"pattern"}
-              imgSource="original"
-              orientation="landscape"
-              page={1}
-              perPage={1}
-            />
-          }
-          bottomLeftImage={
-            <StockImageFetch
-              searchTerm={"high-tech"}
-              imgSource="large"
-              orientation="landscape"
-              page={3}
-              perPage={1}
-            />
-          }
-          headline={`The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum'`}
-          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
-            accompanied by English versions from the 1914 translation by H. Rackham."`}
-        />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="project-6">
-        <ProjectPanelA
-          image={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={2}
-              perPage={1}
-            />
-          }
-          title={"Project 6"}
-          headline={`About the Project`}
-          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
-            accompanied by English versions from the 1914 translation by H. Rackham."`}
-        />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="project-7">
-        <ProjectPanelD
-          title={"PROJECT 7"}
-          image={
-            <StockImageFetch
-              searchTerm={"chemistry"}
-              imgSource="large"
-              orientation="landscape"
-              page={2}
-              perPage={1}
-            />
-          }
-          headline={`About the Project`}
-          textContent={`"The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. 
-            Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, 
-            accompanied by English versions from the 1914 translation by H. Rackham."`}
-        />
-      </ScrollPanel>
-
-      <ScrollPanel title="projects" id="contact-us-form">
-        <ContactUsForm />
-      </ScrollPanel>
-
-      <Footer />
+    <div className="project-container">
+      <div className="project-left">
+        <h2>{language === "fr" ? "Recherche en santé" : "Healthcare R&D"}</h2>
+        <p className="project-intro">
+          {language === "fr"
+            ? "Projets innovants et bilingues axés sur la recherche pharmaceutique et biomédicale."
+            : "Innovative bilingual projects focused on pharmaceutical and biomedical research."}
+        </p>
+      </div>
+      <div className="project-right">
+        {projects.map((proj, index) => (
+          <div key={index} className="project-card">
+            <h3>{language === "fr" ? proj.frTitle : proj.title}</h3>
+            <p className="desc">
+              {language === "fr" ? proj.frDesc : proj.desc}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

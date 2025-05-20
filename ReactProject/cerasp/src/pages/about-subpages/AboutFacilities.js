@@ -84,7 +84,11 @@ export default function AboutFacilities() {
               alt="CERASP Map"
             />
           ) : (
-            <img src="/photos/facilities/cerasp-map.jpg" alt="CERASP Map" />
+            <img
+              className="map-quick-adjust"
+              src="/photos/facilities/cerasp-map-portrait.jpg"
+              alt="CERASP Map"
+            />
           )}
         </div>
       </div>

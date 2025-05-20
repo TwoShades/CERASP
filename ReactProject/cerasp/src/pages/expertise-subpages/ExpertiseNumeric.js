@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { Database, Activity, BarChart2, Zap } from 'lucide-react';
-import './css/ExpertiseNumeric.css';
+import React, { useContext } from "react";
+import { Database, Activity, BarChart2, Zap } from "lucide-react";
+import "./css/ExpertiseNumeric.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 
@@ -8,10 +8,10 @@ const ExpertiseNumeric = () => {
   const { language } = useContext(LanguageContext);
   const numeric = expertiseTranslations.numeric_healthcare;
   const performanceData = [
-    { name: 'Patient Outcomes', value: 87 },
-    { name: 'Cost Efficiency', value: 92 },
-    { name: 'Data Security', value: 95 },
-    { name: 'User Satisfaction', value: 89 },
+    { name: "Patient Outcomes", value: 87 },
+    { name: "Cost Efficiency", value: 92 },
+    { name: "Data Security", value: 95 },
+    { name: "User Satisfaction", value: 89 },
   ];
 
   return (
@@ -33,7 +33,7 @@ const ExpertiseNumeric = () => {
               <span className="stat-label">Cost Reduction</span>
             </div>
           </div>
-          
+
           <div className="custom-chart-container">
             <div className="chart-label">Performance Metrics</div>
             <div className="custom-chart">
@@ -41,9 +41,9 @@ const ExpertiseNumeric = () => {
                 <div key={index} className="chart-item">
                   <div className="chart-item-label">{item.name}</div>
                   <div className="chart-bar-container">
-                    <div 
-                      className="chart-bar" 
-                      style={{width: `${item.value}%`}}
+                    <div
+                      className="chart-bar"
+                      style={{ width: `${item.value}%` }}
                     ></div>
                     <span className="chart-value">{item.value}%</span>
                   </div>
@@ -53,14 +53,12 @@ const ExpertiseNumeric = () => {
           </div>
         </div>
       </div>
-      
+
       <div className="expertise-numeric-right">
         <div className="content-block">
           <h1 className="main-title">{numeric.title[language]}</h1>
-          <p className="main-description">
-            {numeric.content[language]}
-          </p>
-          
+          <p className="main-description">{numeric.content[language]}</p>
+
           <div className="feature-grid">
             <div className="feature-item">
               <div className="feature-icon">
@@ -71,17 +69,19 @@ const ExpertiseNumeric = () => {
                 <p>Transform raw healthcare data into actionable insights</p>
               </div>
             </div>
-            
+
             <div className="feature-item">
               <div className="feature-icon">
                 <Activity size={24} />
               </div>
               <div className="feature-content">
                 <h3>Real-Time Monitoring</h3>
-                <p>Continuous patient monitoring systems for timely interventions</p>
+                <p>
+                  Continuous patient monitoring systems for timely interventions
+                </p>
               </div>
             </div>
-            
+
             <div className="feature-item">
               <div className="feature-icon">
                 <BarChart2 size={24} />
@@ -91,7 +91,7 @@ const ExpertiseNumeric = () => {
                 <p>Anticipate healthcare needs through pattern recognition</p>
               </div>
             </div>
-            
+
             <div className="feature-item">
               <div className="feature-icon">
                 <Zap size={24} />
@@ -102,8 +102,10 @@ const ExpertiseNumeric = () => {
               </div>
             </div>
           </div>
-          
-          <button className="learn-more-btn">Learn More About Our Solutions</button>
+
+          <button className="learn-more-btn">
+            Learn More About Our Solutions
+          </button>
         </div>
       </div>
     </div>

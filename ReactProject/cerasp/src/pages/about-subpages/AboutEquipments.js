@@ -16,7 +16,7 @@ const AboutEquipments = () => {
     setEquipments(equipmentsData.equipment || []);
   }, []);
 
-  const itemsPerPage = isMobile ? 3 : isTablet ? 3 : 5;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 3 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
@@ -52,16 +52,21 @@ const AboutEquipments = () => {
                 src={`/equipments/photos/${equipment.photo}`}
                 alt={equipment.name}
               />
-              <h4>{equipment.name}</h4>
-              {equipment.pdf && equipment.pdf.trim() !== "" && (
-                <LearnMoreButton
-                  pdfUrl={`/equipments/pdfs/${equipment.pdf}`}
-                  text="View PDF"
-                />
-              )}
+              <div className="equipment-card-info">
+                <h4>{equipment.name}</h4>
+                {equipment.pdf && equipment.pdf.trim() !== "" && (
+                  <LearnMoreButton
+                    pdfUrl={`/equipments/pdfs/${equipment.pdf}`}
+                    text="View PDF"
+                  />
+                )}
+              </div>
             </div>
           ))}
         </div>
+        {isMobile && currentItems.length === 1 && (
+          <div className="about-equipments placeholder" aria-hidden="true" />
+        )}
 
         <div className="pagination-controls">
           <button
