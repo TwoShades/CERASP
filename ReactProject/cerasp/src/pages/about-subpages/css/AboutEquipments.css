@@ -219,4 +219,8 @@
 
 /* Phones: 576px down */
 @media screen and (max-width: 576px) {
+  .about-equipments.placeholder {
+    height: 180px;
+    border: none;
+  }
 }

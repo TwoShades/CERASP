@@ -64,6 +64,9 @@ const AboutEquipments = () => {
             </div>
           ))}
         </div>
+        {isMobile && currentItems.length === 1 && (
+          <div className="about-equipments placeholder" aria-hidden="true" />
+        )}
 
         <div className="pagination-controls">
           <button

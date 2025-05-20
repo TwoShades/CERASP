@@ -1,6 +1,12 @@
+/* TEMP */
+.map-quick-adjust {
+  height: 400px;
+}
+
 .about-facilities {
   padding: var(--global-page-padding);
   padding-top: 90px;
+  padding-bottom: 90px;
   background-color: #1a1a1a;
   border: 1px solid #2d2d2d;
   color: #ffffff;
@@ -84,7 +90,7 @@
 
 .about-facilities-map img {
   border-radius: 8px;
-  width: 75%;
+  /* width: 75%; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease;
 }
@@ -138,7 +144,8 @@
   }
 
   .about-facilities-map img {
-    width: 100%;
+    max-width: 75%;
+    height: auto;
   }
 }
 

@@ -68,17 +68,7 @@
     {
       "title": "projects",
       "nav-title": "Our Projects",
-      "sub-pages": [
-        "overview",
-        "project-1",
-        "project-2",
-        "project-3",
-        "project-4",
-        "project-5",
-        "project-6",
-        "project-7",
-        "contact-us-form"
-      ]
+      "sub-pages": ["overview"]
     },
     {
       "title": "news",

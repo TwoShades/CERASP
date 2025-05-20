@@ -14,7 +14,7 @@ export default function AboutBoard() {
     setBoardMembers(boardMembersData.boardMembers || []);
   }, []);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 3 : 5;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = boardMembers.slice(indexOfFirstItem, indexOfLastItem);
@@ -49,6 +49,11 @@ export default function AboutBoard() {
             <p className="board-member-affiliation">{member.affiliation}</p>
           </div>
         ))}
+
+        {/* Add a hidden placeholder to keep vertical space consistent */}
+        {isMobile && currentItems.length === 1 && (
+          <div className="board-member-card placeholder" aria-hidden="true" />
+        )}
       </div>
 
       <div className="pagination-buttons">

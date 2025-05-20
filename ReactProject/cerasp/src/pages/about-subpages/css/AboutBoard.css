@@ -32,7 +32,6 @@
   min-width: 180px;
   max-width: 220px;
   height: 340px;
-
   background-color: #222;
   text-align: center;
 }
@@ -89,15 +88,35 @@
   background-color: #84bfff;
 }
 
+/* Placeholder card to keep layout stable */
+.board-member-card.placeholder {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Mobile-specific layout tweaks */
 @media screen and (max-width: 768px) {
   .board-member-card {
-    width: 100%;
     max-width: 90%;
-    /* height: auto; */
+    height: 220px;
+  }
+
+  .board-member-card h4 {
+    margin: 0;
+  }
+
+  .board-member-card img {
+    width: 60%;
   }
 
   .about-board-images {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Match placeholder style for mobile */
+  .board-member-card.placeholder {
+    max-width: 90%;
+    height: 220px;
   }
 }
