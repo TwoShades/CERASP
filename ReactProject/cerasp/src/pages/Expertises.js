@@ -14,7 +14,7 @@ import ExpertiseTraining from "./expertise-subpages/ExpertiseTraining.js";
 import ExpertiseFunding from "./expertise-subpages/ExpertiseFunding.js";
 import ExpertiseNumeric from "./expertise-subpages/ExpertiseNumeric.js";
 
-import ContactUs from "./ContactUs/ContactUs.js"; 
+import ContactUs from "./ContactUs/ContactUs.js";
 import Footer from "../components/layouts/Footer.js";
 
 
@@ -32,7 +32,7 @@ const Expertises = () => {
               <h1>Expertise & Solution</h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
-                vitae enim ut.
+                vitae enim ut tu.
               </p>
             </>
           }
