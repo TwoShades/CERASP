@@ -2,6 +2,7 @@
   "name": "cerasp",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://loving-bird-9ef3b0470a.strapiapp.com",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "axios": "^1.7.9",
