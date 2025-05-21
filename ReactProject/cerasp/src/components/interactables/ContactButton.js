@@ -8,23 +8,31 @@ import { Mail } from "lucide-react";
 const ContactButton = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const languageContext = useContext(LanguageContext);
-  const { language } = languageContext;
+  const { language } = useContext(LanguageContext);
   const { isFullScreen } = useContext(ScreenSizeContext);
 
   useEffect(() => {
     if (location.state?.scrollTo) {
-      const element = document.getElementById(location.state.scrollTo);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-
-        navigate(location.pathname, { replace: true, state: {} });
+      if (isFullScreen) {
+        // Scroll to the section on fullscreen
+        const element = document.getElementById(location.state.scrollTo);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       }
+      // Clear the navigation state after scrolling
+      navigate(location.pathname, { replace: true, state: {} });
     }
-  }, [location, navigate]);
+  }, [location, navigate, isFullScreen]);
 
-  const handleNavigateToSection = (section) => {
-    navigate(location.pathname, { state: { scrollTo: section } });
+  const handleClick = () => {
+    if (isFullScreen) {
+      // Navigate to contact-us-form section (triggers scrolling in useEffect)
+      navigate(location.pathname, { state: { scrollTo: "contact-us-form" } });
+    } else {
+      // Scroll immediately to bottom, no navigation
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
   };
 
   return (
@@ -32,10 +40,10 @@ const ContactButton = () => {
       className={`${
         !isFullScreen ? "contact-button-mobile" : "contact-button"
       }`}
-      onClick={() => handleNavigateToSection("contact-us-form")}
+      onClick={handleClick}
     >
       {!isFullScreen ? (
-        <Mail></Mail>
+        <Mail />
       ) : language === "fr" ? (
         "Contactez-nous"
       ) : (

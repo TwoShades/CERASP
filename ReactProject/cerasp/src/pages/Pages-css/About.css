@@ -1,4 +1,10 @@
 .about-page {
-  background-color: #1a1a1a;
-  color: rgb(243, 243, 243);
+  background-color: #ffffff;
+  color: #555;
+}
+
+.about-page h1 {
+  background-color: #ffffff;
+  padding: 0.5em;
+  text-align: left;
 }
