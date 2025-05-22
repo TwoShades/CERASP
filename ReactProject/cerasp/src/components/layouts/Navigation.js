@@ -2,15 +2,17 @@ import { useState, useRef, useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./css/Navigation.css";
 import useScrollToTop from "../../hooks/useScrollToTop";
-import sitemap from "../../sitemap.json";
+import sitemap from "../../sitemap.json"; // Make sure this is the updated version
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 const Navigation = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const navRef = useRef(null);
-
+  const { language } = useContext(LanguageContext); // 'en' or 'fr'
   const { isMobile, isTablet } = useContext(ScreenSizeContext);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
@@ -31,8 +33,8 @@ const Navigation = () => {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  const handleNavigateToSection = (section, path) => {
-    navigate(path, { state: { scrollTo: section } });
+  const handleNavigateToSection = (sectionId, path) => {
+    navigate(path, { state: { scrollTo: sectionId } });
   };
 
   const toggleSubMenu = (menu) => {
@@ -72,20 +74,20 @@ const Navigation = () => {
           }`}
         >
           {sitemap.pages.map(
-            ({ title, "nav-title": navTitle, "sub-pages": subPages }) => {
-              if (title.toLowerCase() === "landing") return null;
+            ({ "page-id": pageId, nav, "sub-pages": subPages }) => {
+              if (pageId.toLowerCase() === "landing") return null;
 
+              const displayTitle = nav[language] || nav["en"];
               const filteredSubPages = subPages.filter(
-                (subPage) => subPage.toLowerCase() !== "contact-us-form"
+                (subPage) => subPage.id !== "contact-us-form"
               );
-
+              console.log({ pageId, displayTitle, nav });
               return (
                 <li
-                  key={title}
+                  key={pageId}
                   className="nav-item"
-                  // Hover only when not on mobile or tablet
                   onMouseEnter={() =>
-                    !isMobile && !isTablet && setHoveredMenu(title)
+                    !isMobile && !isTablet && setHoveredMenu(pageId)
                   }
                   onMouseLeave={() =>
                     !isMobile && !isTablet && setHoveredMenu(null)
@@ -93,13 +95,13 @@ const Navigation = () => {
                 >
                   <div className="dropdown-clickable-zone">
                     <Link
-                      to={`/${title}`}
+                      to={`/${pageId}`}
                       onClick={() => {
-                        handleLinkClick(`/${title}`);
+                        handleLinkClick(`/${pageId}`);
                         setOpenSubMenu(null);
                       }}
                     >
-                      {navTitle}
+                      {displayTitle}
                     </Link>
 
                     {(isMobile || isTablet) && filteredSubPages.length > 0 && (
@@ -107,29 +109,31 @@ const Navigation = () => {
                         className="dropdown-toggle"
                         onClick={(e) => {
                           e.stopPropagation();
-                          toggleSubMenu(title);
+                          toggleSubMenu(pageId);
                         }}
                       >
-                        {openSubMenu === title ? "▲" : "▼"}
+                        {openSubMenu === pageId ? "▲" : "▼"}
                       </span>
                     )}
                   </div>
 
-                  {/* Show dropdown on hover (fullscreen only) or on click (mobile/tablet) */}
-                  {(hoveredMenu === title ||
-                    ((isMobile || isTablet) && openSubMenu === title)) &&
+                  {(hoveredMenu === pageId ||
+                    ((isMobile || isTablet) && openSubMenu === pageId)) &&
                     filteredSubPages.length > 0 && (
                       <div className="dropdown">
                         <ul>
                           {filteredSubPages.map((subPage) => (
                             <li
-                              key={subPage}
+                              key={subPage.id}
                               onClick={() => {
-                                handleNavigateToSection(subPage, `/${title}`);
+                                handleNavigateToSection(
+                                  subPage.id,
+                                  `/${pageId}`
+                                );
                                 setOpenSubMenu(null);
                               }}
                             >
-                              {subPage.replaceAll("-", " ")}
+                              {subPage[language]}
                             </li>
                           ))}
                         </ul>

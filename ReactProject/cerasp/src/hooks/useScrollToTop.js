@@ -4,9 +4,9 @@ const useScrollToTop = (pathname, handleClick) => {
   useEffect(() => {
     if (!pathname) return;
 
-    const scrollContainer = document.querySelector(".page-content");
-    if (scrollContainer) {
-      const firstChild = scrollContainer.firstElementChild;
+    const pageContent = document.querySelector(".page-content");
+    if (pageContent) {
+      const firstChild = pageContent.firstElementChild;
       if (firstChild) {
         firstChild.scrollIntoView({ behavior: "instant", block: "start" });
       }
@@ -15,9 +15,9 @@ const useScrollToTop = (pathname, handleClick) => {
 
   const handleLinkClick = (linkPath) => {
     if (pathname === linkPath) {
-      const scrollContainer = document.querySelector(".page-content");
-      if (scrollContainer) {
-        const firstChild = scrollContainer.firstElementChild;
+      const pageContent = document.querySelector(".page-content");
+      if (pageContent) {
+        const firstChild = pageContent.firstElementChild;
         if (firstChild) {
           firstChild.scrollIntoView({ behavior: "instant", block: "start" });
         }
