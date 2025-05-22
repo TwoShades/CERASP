@@ -1,0 +1,17 @@
+.news-page-content {
+    background-color: black;
+    background-image: linear-gradient(to right, rgb(14, 18, 22), rgb(23, 40, 71));
+    color: rgb(243, 243, 243);
+}
+
+.news-page-content > div {
+  display: flex;
+  flex: 1; /* This makes each panel inside the test-panel fill available space */
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+#overview {
+    padding-top: 120px;
+}

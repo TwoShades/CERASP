@@ -69,6 +69,15 @@
     resize: none;
 }
 
+textarea::placeholder,
+textarea::-webkit-input-placeholder,
+textarea:-moz-placeholder,
+textarea::-moz-placeholder,
+textarea:-ms-input-placeholder {
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
+}
+
 .contact-form button {
   padding: 10px 20px;
   background-color: #2e8b57;

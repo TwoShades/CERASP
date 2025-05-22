@@ -1,9 +1,6 @@
 import "./Pages-css/Sectors.css";
-import StockImageFetch from "../components/placeholders/StockImageFetch.js";
-import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUs from "./ContactUs/ContactUs.js";
-import TwoColumnThreeText from "../components/panels/TwoColumnThreeText.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 
 const Sectors = () => {
@@ -16,34 +13,34 @@ const Sectors = () => {
               ===================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="overview">
+      <div title="sector-of-activities" id="overview">
         <p>same as health canada = overview</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =========================
               =====PREFORMULATION======
               =========================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="preformulation">
+      <div title="sector-of-activities" id="preformulation">
         <p>PREFORMULATION</p>
-      </ScrollPanel>
+      </div>
 
       {/*   ======================
               =====FORMULATION======
               ======================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="formulation">
+      <div title="sector-of-activities" id="formulation">
         <p>one big panel = formulation</p>
-      </ScrollPanel>
+      </div>
 
       {/*   ==========================
               ==RESEARCH & TECH SUPPORT=
               ==========================
         */}
 
-      {/* <ScrollPanel title="sector-of-activities" id="research-&-tech-support">
+      {/* <div title="sector-of-activities" id="research-&-tech-support">
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
           leftText={
@@ -73,53 +70,23 @@ const Sectors = () => {
             </p>
           }
         />
-      </ScrollPanel> */}
+      </div> */}
 
       {/*   ======================
               ==REF AFF ACTIVITIES==
               ======================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="ref-aff-activities">
-        <TwoColumnThreeText
-          circleImage={<div className="circle"></div>}
-          textUnderImage={<p>Regulatory Affairs Activities</p>}
-          titleTextOne={<h2>We Offer</h2>}
-          titleTextTwo={<h2>We Work</h2>}
-          titleTextThree={<h2>We Help</h2>}
-          descTextOne={
-            <p>
-              As a Health Canada Partner, we have a privileged access when
-              depositing regulatory dossiers, gaining clarity around a
-              regulatory pathway and preparing for or responding to audits and
-              observations.
-            </p>
-          }
-          descTextTwo={
-            <p>
-              We can guide you on the regulatory process with our in-depth
-              knowledge of Canadian, US and EU policies, and niche experiences
-              to tackle any complex issues associated with new therapies, and
-              support productive interactions with Health Canada, the FDA and
-              the European authorities.
-            </p>
-          }
-          descTextThree={
-            <p>
-              While your intellectual property remains fully under your control,
-              we can guide you to patent experts as well as assisting your
-              organization in registering IP in Canada.
-            </p>
-          }
-        ></TwoColumnThreeText>
-      </ScrollPanel>
+      <div title="sector-of-activities" id="ref-aff-activities">
+        <p>reff aff activities</p>
+      </div>
 
       {/*   ======================
               =====PROTOTYPING======
               ======================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="prototyping">
+      <div title="sector-of-activities" id="prototyping">
         {/* <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
@@ -151,41 +118,41 @@ const Sectors = () => {
             },
           ]}
         /> */}
-      </ScrollPanel>
+      </div>
 
       {/*   =========================
               =====PHARMACEUTICAL======
               =========================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="pharmaceutical">
+      <div title="sector-of-activities" id="pharmaceutical">
         <p>same as health canada = pharmaceuticals</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =================================
               =====CHEMISTRY & EXTRACTION======
               =================================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="chemistry-&-extraction">
+      <div title="sector-of-activities" id="chemistry-&-extraction">
         <p>CHEMISTRY & EXTRACTION</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =======================
               =====R&D SCALE UP======
               =======================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="r&d-scale-up">
+      <div title="sector-of-activities" id="r&d-scale-up">
         <p>one big panel = r&d scale up</p>
-      </ScrollPanel>
+      </div>
 
       {/*   ============================
               =====PROTEIN SYNTHESIS======
               ============================
         */}
 
-      {/* <ScrollPanel title="sector-of-activities" id="protein-synthesis">
+      {/* <div title="sector-of-activities" id="protein-synthesis">
         <TwoImageTwoText
           leftImage={<div className="image-placeholder">Left Image</div>}
           leftText={
@@ -217,60 +184,23 @@ const Sectors = () => {
             </p>
           }
         />
-      </ScrollPanel> */}
+      </div> */}
 
       {/*   ===================================
               =====FEASIBILITY & TECH TRANS======
               ===================================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="feasibility-&-tech-trans">
-        <TwoColumnThreeText
-          circleImage={<div className="circle"></div>}
-          textUnderImage={
-            <p>
-              Our Feasibility studies and pilot trials will ensure your project
-              is possible, or save you time and money!{" "}
-            </p>
-          }
-          titleTextOne={<h2>We Offer</h2>}
-          titleTextTwo={<h2>We Work</h2>}
-          titleTextThree={<h2>We Help</h2>}
-          descTextOne={
-            <p>
-              Our Services include: • Studies on manufacturing, process or
-              formulation methods (preformulation). • Conducting pilot and
-              prototype studies. • Running studies on designing new facilities
-              and equipment purchases. • Conduct digital health integration
-              studies and incorporate digital transformation.
-            </p>
-          }
-          descTextTwo={
-            <p>
-              Our technical transfer services include process optimization for
-              protocols and parameters: • Improving existing products in the
-              case of a flawed or outdated procedure. • Improve existing
-              products, processes or processes for business, pharmacological or
-              regulatory reasons.
-            </p>
-          }
-          descTextThree={
-            <p>
-              • Improving an existing product for aesthetic reasons such as
-              changing colour or taste. • Enable the integration of
-              technological tools for digital health and for the corporate
-              digital shift.
-            </p>
-          }
-        ></TwoColumnThreeText>
-      </ScrollPanel>
+      <div title="sector-of-activities" id="feasibility-&-tech-trans">
+        <p>feasibility</p>
+      </div>
 
       {/*   ===========================
               =====TRAINING PROGRAM======
               ===========================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="training-program">
+      <div title="sector-of-activities" id="training-program">
         {/* <CenteredFeaturePanel
           title="GMP EXPERTISE & BIOMANUFACTURING"
           image={<div className="image-placeholder"></div>}
@@ -302,55 +232,25 @@ const Sectors = () => {
             },
           ]}
         /> */}
-      </ScrollPanel>
+      </div>
 
       {/*   ===================
               =====SUPPORT=======
               ===================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="support">
-        <TwoColumnThreeText
-          circleImage={<div className="circle"></div>}
-          textUnderImage={<p>FORMULATIONS OF PHARMACEUTICALS</p>}
-          titleTextOne={<h2>We Offer</h2>}
-          titleTextTwo={<h2>We Work</h2>}
-          titleTextThree={<h2>We Help</h2>}
-          descTextOne={
-            <p>
-              Expert formulation services tailored to the needs of
-              pharmaceuticals, animal health products, natural health products
-              (NHPs), and nutraceuticals. Our services include the development
-              and optimization of drug formulations, ensuring efficacy,
-              stability, and safety.{" "}
-            </p>
-          }
-          descTextTwo={
-            <p>
-              To create the appropriate dosage forms—such as tablets, capsules,
-              softgels, gummies, creams, liquids, ointments and
-              injectables—while adhering to regulatory standards and industry
-              best practices.
-            </p>
-          }
-          descTextThree={
-            <p>
-              With product improvement, process optimization, and ensure that
-              formulations meet market requirements for both human and animal
-              health sectors.{" "}
-            </p>
-          }
-        ></TwoColumnThreeText>
-      </ScrollPanel>
+      <div title="sector-of-activities" id="support">
+        <p>support</p>
+      </div>
 
       {/*   =======================
               =====CONTACT FORM======
               =======================
         */}
 
-      <ScrollPanel title="sector-of-activities" id="contact-us-form">
+      <div title="sector-of-activities" id="contact-us-form">
         <ContactUs />
-      </ScrollPanel>
+      </div>
 
       <Footer />
     </div>

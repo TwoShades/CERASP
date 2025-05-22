@@ -1,95 +1,78 @@
 import React, { useState } from "react";
 import "./Pages-css/Sectors.css";
-import ScrollPanel from "../components/layouts/ScrollPanel.js";
 import Footer from "../components/layouts/Footer.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
-import ModalMessage from "../components/uicomponents/ModalMessage.js"; // Import the Modal
-import TestPanel from "../components/panels/TestPanel.js"; // Import the TestPanel component
 
 const NewsOriginal = () => {
   useScrollToPanel();
 
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
-
-  const handleOpenModal = () => setIsModalOpen(true); // Open the modal
-  const handleCloseModal = () => setIsModalOpen(false); // Close the modal
-
   return (
-    <div className="news page-content">
+    <div className="news-page-content">
       {/*   ===================
               =====OVERVIEW======
               ===================
         */}
 
-      <ScrollPanel title="news" id="overview">
-        <TestPanel />
-      </ScrollPanel>
+      <div id="overview">
+        <p>Overview</p>
+      </div>
 
       {/*   ============================
               =====Equipment Updates======
               ============================
         */}
 
-      <ScrollPanel title="news" id="equipment-updates">
-        <p>Equipment Updatesk</p>
-        {/* Button to trigger the modal */}
-        <button onClick={handleOpenModal}>Open Modal</button>
-      </ScrollPanel>
+      <div id="equipment-updates">
+        <p>Equipment Updates</p>
+      </div>
 
       {/*   =====================
               =====New Grants======
               =====================
         */}
 
-      <ScrollPanel title="news" id="new-grants">
+      <div id="new-grants">
         <p>New Grants</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =====================================
               =======Blogs & white papers==========
               =====================================
         */}
 
-      <ScrollPanel title="news" id="blogs-&-white-papers">
+      <div id="blogs-&-white-papers">
         <p>Blogs & white papers</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =====================
               =====Webinars=======
               =====================
         */}
 
-      <ScrollPanel title="news" id="webinars">
+      <div id="webinars">
         <p>Webinars</p>
-      </ScrollPanel>
+      </div>
 
       {/*   ===================
               =====Events=======
               ===================
         */}
 
-      <ScrollPanel title="news" id="events">
+      <div id="events">
         <p>Events</p>
-      </ScrollPanel>
+      </div>
 
       {/*   =======================
               =====CONTACT FORM======
               =======================
         */}
 
-      <ScrollPanel title="news" id="contact-us-form">
+      <div id="contact-us-form">
         <ContactUs />
-      </ScrollPanel>
+      </div>
 
       <Footer />
-
-      {/* Modal Message */}
-      <ModalMessage
-        isOpen={isModalOpen}
-        onRequestClose={handleCloseModal}
-        message="This is a simple modal message!"
-      />
     </div>
   );
 };
