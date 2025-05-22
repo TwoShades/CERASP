@@ -1,21 +1,22 @@
 /* AboutOverview.css - Light Version */
+.about-overview-header {
+  text-align: center;
+}
 .about-overview {
   padding: 0 8em 0em 8em;
-  padding-top: 120px;
   padding-bottom: 8em;
-  border: solid 1px #e6e6e6;
   background-color: #ffffff;
 }
 
-.about-overview-header {
-  text-align: center;
-  /* margin-bottom: 3em; */
-}
-
-.about-overview-header h1 {
+.about-overview-title {
+  background-color: #0056b3;
+  /* background: linear-gradient(to right, #0056b3, #ffffff); */
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+  padding: 1em;
+  padding-top: 120px;
   font-size: 32px;
   font-weight: 700;
-  color: #333333;
+  color: #ffffff;
   margin: 0 0 24px 0;
   letter-spacing: -0.5px;
   line-height: 1.1;
@@ -175,6 +176,9 @@
 
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
+  .about-overview-title {
+    padding-top: 90px;
+  }
   .about-overview {
     padding: 0 4em 4em 4em;
     padding-top: 100px;

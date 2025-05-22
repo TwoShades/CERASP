@@ -2,7 +2,7 @@ import { useState, useRef, useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./css/Navigation.css";
 import useScrollToTop from "../../hooks/useScrollToTop";
-import sitemap from "../../sitemap.json"; // Make sure this is the updated version
+import sitemap from "../../sitemap.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
@@ -10,7 +10,7 @@ const Navigation = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const navRef = useRef(null);
-  const { language } = useContext(LanguageContext); // 'en' or 'fr'
+  const { language } = useContext(LanguageContext);
   const { isMobile, isTablet } = useContext(ScreenSizeContext);
 
   const [menuOpen, setMenuOpen] = useState(false);
