@@ -10,17 +10,23 @@ const Employee = ({ member }) => {
 
   const finalMember = member || defaultMember;
 
-  // Use placeholder if Picture is empty
   const imageUrl =
     finalMember.Picture && finalMember.Picture !== ""
       ? finalMember.Picture
       : "/photos/placeholder.jpg";
 
   return (
-    <div
-      className="employee-card"
-      style={{ backgroundImage: `url(${imageUrl})` }}
-    >
+    <div className="employee-card">
+      {/* Background image div */}
+      <div
+        className="employee-background"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
+
+      {/* Blue paper background div */}
+      <div className="employee-blue-paper-background" />
+
+      {/* Content */}
       <h3>{finalMember.Name}</h3>
       <div>
         <p>{finalMember.Title}</p>

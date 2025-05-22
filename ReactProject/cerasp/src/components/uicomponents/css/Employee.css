@@ -3,78 +3,144 @@
   width: 280px;
   height: 310px;
   padding: 24px;
-  border-radius: 12px;
-  background-color: #2d2d2d;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  border: 1px solid #404040;
-  color: #ffffff;
+  background-color: white;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e6e6e6;
+  color: #555555;
   text-align: center;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
 
-  transition: all 0.3s ease;
   cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 0; /* base layer */
 }
 
-.employee-card::before {
-  content: "";
+/* Background image container */
+.employee-background {
   position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.15));
-  z-index: 0;
-  transition: background 0.3s ease;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  filter: brightness(0.7); /* slightly darken for contrast */
+  transition: filter 0.3s ease;
 }
 
+/* Blue paper background container */
+.employee-blue-paper-background {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #0057b35d;
+  z-index: 0;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* On hover, move card up and lighten bg */
 .employee-card:hover {
   transform: translateY(-3px);
   border-color: #0056b3;
-  background-color: #333333;
-  box-shadow: 0 8px 16px rgba(0, 86, 179, 0.6);
+  box-shadow: 0 4px 8px rgba(0, 86, 179, 0.1);
+  z-index: 10;
 }
 
-.employee-card:hover::before {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+.employee-card:hover .employee-blue-paper-background {
+  top: 8px;
+  left: 8px;
+  background-color: #0077b5;
+  box-shadow: 0 4px 8px rgba(0, 118, 181, 0.2);
+}
+
+.employee-card:hover .employee-background {
+  filter: brightness(0.9);
 }
 
 .employee-card h3,
 .employee-card p,
 .linkedin {
   position: relative;
-  z-index: 1;
+  z-index: 5; /* on top of backgrounds */
   margin: 0.5em 0;
+  color: #fff;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6);
 }
 
 .employee-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #f2fbff;
+  font-size: 1.4em;
+  font-weight: 600;
   letter-spacing: -0.5px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .employee-card p {
   font-size: 1rem;
   line-height: 1.4;
-  color: #eeeeee;
 }
 
 .linkedin {
   margin-top: auto;
   margin-bottom: 0;
   font-size: 0.9rem;
-  color: #4677ac;
+  color: #0056b3;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .linkedin:hover {
-  color: #84bfff;
+  color: #0077b5;
+}
+
+@media screen and (max-width: 836px) {
+  .employee-card {
+    max-width: 40%;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 576px) {
+  .employee-card {
+    max-width: 100%;
+    width: 75%;
+    height: auto;
+    min-height: 280px;
+    padding: 16px;
+  }
+
+  .employee-background,
+  .employee-blue-paper-background {
+    border-radius: 3px;
+  }
+
+  .employee-card h3 {
+    font-size: 1.2em;
+  }
+
+  .employee-card p {
+    font-size: 0.9em;
+  }
+
+  .employee-blue-paper-background {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  .employee-card:hover .employee-blue-paper-background {
+    top: 4px;
+    left: 4px;
+  }
 }
