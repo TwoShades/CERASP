@@ -146,7 +146,7 @@ const subscribeToNewsletter = async (name, email) => {
         <div className="contact-details">
           <h3>Contact Details</h3>
           <p>7171 Frederick Banting, Montreal, Quebec, Canada H4S 1Z9</p>
-          <p>📞 +438 923 9257</p>
+          <p>📞 +1 (263) 362-2760</p>
           <p>📧 info@croasp.ca</p>
         </div>
         <form className="contact-form" ref={form} onSubmit={handleSubmit}>
