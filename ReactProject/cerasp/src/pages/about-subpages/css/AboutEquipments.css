@@ -1,29 +1,31 @@
 .about-equipments {
   padding: var(--global-page-padding);
-  padding-top: 90px;
   background-color: #ffffff;
-  border: 1px solid #e6e6e6;
+}
+
+.about-equipments-title {
+  background-color: #0056b3;
+  /* background: linear-gradient(to right, #0056b3, #ffffff); */
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+  padding: 1em;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
 
 .about-equipments-layout {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 90px;
 }
 
 .about-equipments-header {
   text-align: center;
   margin-bottom: 3em;
-}
-
-.about-equipments-header h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #333333;
-  margin: 0 0 24px 0;
-  text-align: left;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
 }
 
 .about-equipments-header h3 {

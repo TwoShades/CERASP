@@ -5,33 +5,42 @@
 
 .about-facilities {
   padding: var(--global-page-padding);
-  padding-top: 90px;
-  padding-bottom: 90px;
   background-color: #ffffff;
-  border: 1px solid #e6e6e6;
   color: #333333;
 }
 
 .about-facilities-layout {
+  padding-top: 90px;
   display: flex;
   flex-direction: column;
 }
 
 .about-facilities-header {
+  margin-top: 2em;
   margin-bottom: 2em;
 }
 
-.about-facilities-header h1 {
+.about-facilities-title {
+  padding: 1em;
   font-size: 32px;
-  font-weight: 700;
-  color: #333333;
-  margin: 0 0 16px 0;
+  background: linear-gradient(
+    145deg,
+    #003d82 0%,
+    #005eb8 35%,
+    #0074d9 70%,
+    #005eb8 100%
+  );
+  color: white;
+  box-shadow: 0 8px 32px rgba(0, 94, 184, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 0 24px 0;
   letter-spacing: -0.5px;
-  line-height: 1.1;
 }
 
 .about-facilities-header h3 {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   color: #555555;
   margin: 0;

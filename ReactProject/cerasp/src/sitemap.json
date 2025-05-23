@@ -1,86 +1,166 @@
 {
   "pages": [
     {
-      "title": "landing",
-      "nav-title": "",
+      "page-id": "about",
+      "nav": {
+        "en": "About Us",
+        "fr": "À propos"
+      },
       "sub-pages": [
-        "landing",
-        "overview",
-        "welcome",
-        "achievements",
-        "expertises",
-        "sectors",
-        "news",
-        "contact-us-form"
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
+        { "id": "facilities", "en": "Facilities", "fr": "Installations" },
+        { "id": "equipments", "en": "Equipments", "fr": "Équipements" },
+        { "id": "our-team", "en": "Our Team", "fr": "Notre équipe" },
+        { "id": "board", "en": "Board", "fr": "Conseil d'administration" },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },
     {
-      "title": "about",
-      "nav-title": "About Us",
+      "page-id": "expertises",
+      "nav": {
+        "en": "Expertises & Solutions",
+        "fr": "Expertises et solutions"
+      },
       "sub-pages": [
-        "overview",
-        "facilities",
-        "equipments",
-        "our-team",
-        "board",
-        "partners",
-        "contact-us-form"
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
+        {
+          "id": "gmp-expertise-&-biomanufacturing",
+          "en": "GMP Expertise & Biomanufacturing",
+          "fr": "Expertise BPF et bioproduction"
+        },
+        {
+          "id": "formulation-of-pharmaceuticals",
+          "en": "Formulation of Pharmaceuticals",
+          "fr": "Formulation pharmaceutique"
+        },
+        { "id": "animal-health", "en": "Animal Health", "fr": "Santé animale" },
+        {
+          "id": "applied-research",
+          "en": "Applied Research",
+          "fr": "Recherche appliquée"
+        },
+        { "id": "troubleshooting", "en": "Troubleshooting", "fr": "Dépannage" },
+        {
+          "id": "health-canada-partner",
+          "en": "Health Canada Partner",
+          "fr": "Partenaire de Santé Canada"
+        },
+        {
+          "id": "technical-training",
+          "en": "Technical Training",
+          "fr": "Formation technique"
+        },
+        {
+          "id": "bioinformatics",
+          "en": "Bioinformatics",
+          "fr": "Bio-informatique"
+        },
+        {
+          "id": "numeric-health",
+          "en": "Numeric Health",
+          "fr": "Santé numérique"
+        },
+        {
+          "id": "help-access-funding",
+          "en": "Help Access Funding",
+          "fr": "Aide au financement"
+        },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },
     {
-      "title": "expertises",
-      "nav-title": "Expertises & Solutions",
+      "page-id": "sector-of-activities",
+      "nav": {
+        "en": "Sector of Activities",
+        "fr": "Secteurs d’activités"
+      },
       "sub-pages": [
-        "overview",
-        "gmp-expertise-&-biomanufacturing",
-        "formulation-of-pharmaceuticals",
-        "animal-health",
-        "applied-research",
-        "troubleshooting",
-        "health-canada-partner",
-        "technical-training",
-        "bioinformatics",
-        "numeric-health",
-        "help-access-funding",
-        "contact-us-form"
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
+        {
+          "id": "preformulation",
+          "en": "Preformulation",
+          "fr": "Préformulation"
+        },
+        { "id": "formulation", "en": "Formulation", "fr": "Formulation" },
+        {
+          "id": "research-&-tech-support",
+          "en": "Research & Tech Support",
+          "fr": "Soutien technique & recherche"
+        },
+        {
+          "id": "ref-aff-activities",
+          "en": "Ref Aff Activities",
+          "fr": "Activités réglementaires"
+        },
+        { "id": "prototyping", "en": "Prototyping", "fr": "Prototypage" },
+        {
+          "id": "pharmaceutical",
+          "en": "Pharmaceutical",
+          "fr": "Pharmaceutique"
+        },
+        {
+          "id": "chemistry-&-extraction",
+          "en": "Chemistry & Extraction",
+          "fr": "Chimie et extraction"
+        },
+        {
+          "id": "r&d-scale-up",
+          "en": "R&D Scale-Up",
+          "fr": "Montée à l’échelle R&D"
+        },
+        {
+          "id": "protein-synthesis",
+          "en": "Protein Synthesis",
+          "fr": "Synthèse de protéines"
+        },
+        {
+          "id": "feasibility-&-tech-trans",
+          "en": "Feasibility & Tech Transfer",
+          "fr": "Faisabilité et transfert technologique"
+        },
+        {
+          "id": "training-program",
+          "en": "Training Program",
+          "fr": "Programme de formation"
+        },
+        { "id": "support", "en": "Support", "fr": "Support" },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },
     {
-      "title": "sector-of-activities",
-      "nav-title": "Sector of Activities",
-      "sub-pages": [
-        "overview",
-        "preformulation",
-        "formulation",
-        "research-&-tech-support",
-        "ref-aff-activities",
-        "prototyping",
-        "pharmaceutical",
-        "chemistry-&-extraction",
-        "r&d-scale-up",
-        "protein-synthesis",
-        "feasibility-&-tech-trans",
-        "training-program",
-        "support",
-        "contact-us-form"
-      ]
+      "page-id": "projects",
+      "nav": {
+        "en": "Our Projects",
+        "fr": "Nos projets"
+      },
+      "sub-pages": [{ "id": "overview", "en": "Overview", "fr": "Aperçu" }]
     },
     {
-      "title": "projects",
-      "nav-title": "Our Projects",
-      "sub-pages": ["overview"]
-    },
-    {
-      "title": "news",
-      "nav-title": "News",
+      "page-id": "news",
+      "nav": {
+        "en": "News",
+        "fr": "Nouvelles"
+      },
       "sub-pages": [
-        "overview",
-        "equipment-updates",
-        "new-grants",
-        "blogs-&-white-papers",
-        "webinars",
-        "events",
-        "contact-us-form"
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
+        {
+          "id": "equipment-updates",
+          "en": "Equipment Updates",
+          "fr": "Mises à jour des équipements"
+        },
+        {
+          "id": "new-grants",
+          "en": "New Grants",
+          "fr": "Nouvelles subventions"
+        },
+        {
+          "id": "blogs-&-white-papers",
+          "en": "Blogs & White Papers",
+          "fr": "Blogues & articles"
+        },
+        { "id": "webinars", "en": "Webinars", "fr": "Webinaires" },
+        { "id": "events", "en": "Events", "fr": "Événements" },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     }
   ]

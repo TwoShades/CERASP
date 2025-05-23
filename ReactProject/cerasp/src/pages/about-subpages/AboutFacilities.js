@@ -8,10 +8,12 @@ export default function AboutFacilities() {
   const { language } = useContext(LanguageContext);
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
   return (
-    <div className="about-facilities">
-      <div className="about-facilities-layout">
+    <div className="about-facilities-layout">
+      <h1 className="about-facilities-title">
+        {language === "fr" ? "LOCATIONS" : "FACILITIES"}
+      </h1>
+      <div className="about-facilities">
         <div className="about-facilities-header">
-          <h1>{language === "fr" ? "LOCATIONS" : "FACILITIES"}</h1>
           <h3>
             {language === "fr"
               ? "Le CERASP dispose de 3 sites à la fine pointe de la technologie!"

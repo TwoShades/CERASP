@@ -17,7 +17,6 @@ export default function AboutTeam() {
         const json = await res.json();
         const cleaned = json.data.map((entry) => {
           return {
-            id: entry.id,
             Name: entry.Name,
             Title: entry.Title,
             Picture:
@@ -41,14 +40,22 @@ export default function AboutTeam() {
   }, []);
 
   return (
-    <div className="about-team">
-      <h1>{language === "en" ? "MEET THE TEAM" : "RENCONTREZ L'ÉQUIPE"}</h1>
-      <div className="team-cards">
-        {teamData.map((member) => {
-          return (
-            <Employee key={member.id} member={member} className="team-member" />
-          );
-        })}
+    <div className="about-team-layout">
+      <h1 className="about-team-title">
+        {language === "en" ? "MEET THE TEAM" : "RENCONTREZ L'ÉQUIPE"}
+      </h1>
+      <div className="about-team">
+        <div className="team-cards">
+          {teamData.map((member) => {
+            return (
+              <Employee
+                key={member.id}
+                member={member}
+                className="team-member"
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );
