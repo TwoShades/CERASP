@@ -1,12 +1,14 @@
 .expertises-page {
-  background-color: black;
-  background-image: linear-gradient(to right, rgb(14, 18, 22), rgb(23, 40, 71));
-  color: rgb(243, 243, 243);
+  background-color: #ffffff;
+  color: #555;
 }
 
-.carousel {
-  width: 100%;
+.expertises-page h1 {
+  background-color: #ffffff;
+  padding: 0.5em;
+  text-align: left;
 }
+
 
 /* #overview {
   margin-top: 50px;
