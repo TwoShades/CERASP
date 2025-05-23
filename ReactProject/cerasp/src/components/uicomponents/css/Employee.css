@@ -1,7 +1,7 @@
 .employee-card {
   position: relative;
-  width: 280px;
-  height: 310px;
+  width: 22%;
+  height: 280px;
   padding: 24px;
   background-color: white;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
@@ -104,14 +104,14 @@
   color: #0077b5;
 }
 
-@media screen and (max-width: 836px) {
+@media screen and (max-width: 1200px) {
   .employee-card {
-    max-width: 40%;
+    width: 220px;
   }
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 715px) {
   .employee-card {
     max-width: 100%;
     width: 75%;

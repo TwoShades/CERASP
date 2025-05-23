@@ -7,7 +7,6 @@ import AboutOverview from "./about-subpages/AboutOverview.js";
 import AboutFacilities from "./about-subpages/AboutFacilities.js";
 import AboutEquipments from "./about-subpages/AboutEquipments.js";
 import AboutTeam from "./about-subpages/AboutTeam.js";
-import AboutPartners from "./about-subpages/AboutPartners.js";
 import AboutBoard from "./about-subpages/AboutBoard.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 
@@ -39,11 +38,6 @@ const About = () => {
       {/* BOARD */}
       <div id="board">
         <AboutBoard />
-      </div>
-
-      {/* PARTNERS */}
-      <div id="partners">
-        <AboutPartners />
       </div>
 
       {/* PRIVACY POLICY */}

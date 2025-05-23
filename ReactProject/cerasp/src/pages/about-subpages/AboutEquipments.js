@@ -34,10 +34,13 @@ const AboutEquipments = () => {
   };
 
   return (
-    <div className="about-equipments">
-      <div className="about-equipments-layout">
+    <div className="about-equipments-layout">
+      <h1 className="about-equipments-title">
+        {" "}
+        {language === "fr" ? "ÉQUIPEMENTS" : "EQUIPMENT"}
+      </h1>
+      <div className="about-equipments">
         <div className="about-equipments-header">
-          <h1> {language === "fr" ? "ÉQUIPEMENTS" : "EQUIPMENT"}</h1>
           <h3>
             {language === "fr"
               ? "Découvrez notre équipement à la fine pointe de la technologie!"

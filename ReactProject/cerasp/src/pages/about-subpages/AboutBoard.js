@@ -32,42 +32,45 @@ export default function AboutBoard() {
   };
 
   return (
-    <div className="about-board">
-      <div className="about-board-header">
-        <h1>{language === "fr" ? "MEMBRES DU CONSEIL" : "BOARD MEMBERS"}</h1>
-      </div>
+    <div className="about-board-layout">
+      <h1 className="about-board-title">
+        {language === "fr" ? "MEMBRES DU CONSEIL" : "BOARD MEMBERS"}
+      </h1>
+      <div className="about-board">
+        <div className="about-board-header"></div>
 
-      <div className="about-board-images">
-        {currentItems.map((member) => (
-          <div key={member.id} className="board-member-card">
-            <img
-              src={`/boardmembers/photos/${member.photo}`}
-              alt={member.name}
-            />
-            <h4>{member.name}</h4>
-            <p className="board-member-position">{member.position}</p>
-            <p className="board-member-affiliation">{member.affiliation}</p>
-          </div>
-        ))}
+        <div className="about-board-images">
+          {currentItems.map((member) => (
+            <div key={member.id} className="board-member-card">
+              <img
+                src={`/boardmembers/photos/${member.photo}`}
+                alt={member.name}
+              />
+              <h4>{member.name}</h4>
+              <p className="board-member-position">{member.position}</p>
+              <p className="board-member-affiliation">{member.affiliation}</p>
+            </div>
+          ))}
 
-        {/* Add a hidden placeholder to keep vertical space consistent */}
-        {isMobile && currentItems.length === 1 && (
-          <div className="board-member-card placeholder" aria-hidden="true" />
-        )}
-      </div>
+          {/* Add a hidden placeholder to keep vertical space consistent */}
+          {isMobile && currentItems.length === 1 && (
+            <div className="board-member-card placeholder" aria-hidden="true" />
+          )}
+        </div>
 
-      <div className="pagination-buttons">
-        <button onClick={prevPage} disabled={currentPage === 1}>
-          &lt;
-        </button>
-        <button
-          onClick={nextPage}
-          disabled={
-            currentPage >= Math.ceil(boardMembers.length / itemsPerPage)
-          }
-        >
-          &gt;
-        </button>
+        <div className="pagination-buttons">
+          <button onClick={prevPage} disabled={currentPage === 1}>
+            &lt;
+          </button>
+          <button
+            onClick={nextPage}
+            disabled={
+              currentPage >= Math.ceil(boardMembers.length / itemsPerPage)
+            }
+          >
+            &gt;
+          </button>
+        </div>
       </div>
     </div>
   );
