@@ -4,6 +4,7 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import LearnMoreButton from "../../components/interactables/LearnMoreButton";
 import equipmentsData from "../../components/panels/reference/equipments.json";
 import "./css/AboutEquipments.css";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 const AboutEquipments = () => {
   const [equipments, setEquipments] = useState([]);
@@ -35,10 +36,7 @@ const AboutEquipments = () => {
 
   return (
     <div className="about-equipments-layout">
-      <h1 className="about-equipments-title">
-        {" "}
-        {language === "fr" ? "ÉQUIPEMENTS" : "EQUIPMENT"}
-      </h1>
+      <SubPageHeader name={language === "fr" ? "ÉQUIPEMENT" : "EQUIPMENT"} />
       <div className="about-equipments">
         <div className="about-equipments-header">
           <h3>

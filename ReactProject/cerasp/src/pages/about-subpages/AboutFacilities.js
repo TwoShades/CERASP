@@ -3,15 +3,14 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { useContext } from "react";
 import React from "react";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutFacilities() {
   const { language } = useContext(LanguageContext);
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
   return (
     <div className="about-facilities-layout">
-      <h1 className="about-facilities-title">
-        {language === "fr" ? "LOCATIONS" : "FACILITIES"}
-      </h1>
+      <SubPageHeader name={language === "fr" ? "LOCATIONS" : "FACILITIES"} />
       <div className="about-facilities">
         <div className="about-facilities-header">
           <h3>
