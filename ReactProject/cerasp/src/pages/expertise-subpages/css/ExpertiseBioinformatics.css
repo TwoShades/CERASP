@@ -1,89 +1,353 @@
 .expertise-bioinformatics {
-    display: flex;
-    flex-direction: row;
-    gap: 2em;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  padding: 80px 60px;
+  margin: 90px 50px 90px 50px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
 
-    padding: 0 8em 0em 8em;
-    padding-top: 120px;
-    padding-bottom: 8em;
+.expertise-bioinformatics::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(217, 232, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(231, 250, 244, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
 
-    border: solid 1px #8585851d;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+.bioinfo-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.bioinfo-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.bioinfo-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bioinfo-content {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  gap: 60px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+.bioinfo-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.bioinfo-image {
+  width: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    0 20px 48px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.bioinfo-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+.bioinfo-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.bioinfo-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 24px 32px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.caption:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.bioinfo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fieldBox {
+  background: #f4faff;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+
+.fieldBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.fieldBox:nth-child(1) {
+  --accent-color: #3b82f6;
+}
+
+.fieldBox:nth-child(2) {
+  --accent-color: #10b981;
+}
+
+.fieldBox:nth-child(3) {
+  --accent-color: #f59e0b;
+}
+
+.fieldBox:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 12px 32px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.fieldBox:hover::before {
+  height: 6px;
+  box-shadow: 0 0 20px var(--accent-color);
+}
+
+.field-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.fieldBox:hover .field-number {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.fieldBox:hover .desc {
+  color: #475569;
+}
+
+/* Dark mode support
+@media (prefers-color-scheme: dark) {
+  .expertise-bioinformatics {
+    background: linear-gradient(135deg, #f4faff 0%, #e1ecf6 100%);
   }
-  
-  .bioinfo-left {
-    /* flex: 1 1 300px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+
+  .bioinfo-title {
+    color: #f8fafc;
+  }
+
+  .bioinfo-subtitle {
+    color: #94a3b8;
+  }
+
+  .fieldBox {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(148, 163, 184, 0.1);
+  }
+
+  .fieldBox:hover {
+    background: rgba(30, 41, 59, 0.95);
+  }
+
+  .caption {
+    background: rgba(30, 41, 59, 0.9);
+    color: #e2e8f0;
+  }
+
+  .caption:hover {
+    background: rgba(30, 41, 59, 0.95);
+  }
+
+  .title {
+    color: #f8fafc;
+  }
+
+  .desc {
+    color: #94a3b8;
+  }
+
+  .fieldBox:hover .desc {
+    color: #cbd5e1;
+  }
+} */
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .expertise-bioinformatics {
+    padding: 60px 40px;
+  }
+
+  .bioinfo-content {
+    gap: 40px;
+  }
+
+  .bioinfo-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise-bioinformatics {
+    padding: 40px 24px;
+  }
+
+  .bioinfo-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bioinfo-title {
+    font-size: 32px;
+  }
+
+  .bioinfo-subtitle {
+    font-size: 16px;
   }
 
   .bioinfo-image {
-    width: 60%;
+    max-width: 280px;
   }
-  
-  .caption {
-    text-align: center;
-    font-size: 18px;
-    color: var(--bg-color-light);
-    background-color: #ffffff10;
-    border: 1px solid #cccccc05;
-    padding: 8px;
-    border-radius: 8px;
-  }
-  
-  .bioinfo-right {
-    /* flex: 2 1 600px; */
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
+
   .fieldBox {
-    background-color: #ffffff10;
-    border-radius: 8px;
-    padding: 16px;
-    border: 1px solid #cccccc05;
-    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 24px;
   }
-  
-  .title:hover {
-    color: #007bff;
-    cursor: pointer;
+
+  .title {
+    font-size: 20px;
   }
-  
-  @media (max-width: 1024px) {
-    .expertise-panel {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .circle {
-      width: 200px;
-      height: 200px;
-    }
-  
-    .caption {
-      font-size: 14px;
-    }
+
+  .desc {
+    font-size: 15px;
   }
-  
-  @media (max-width: 475px) {
-    .circle {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 8px;
-    }
-  
-    .caption {
-      font-size: 12px;
-      padding: 6px;
-    }
-  
-    .fieldBox {
-      padding: 12px;
-      font-size: 13px;
-    }
+}
+
+@media (max-width: 480px) {
+  .expertise-bioinformatics {
+    padding: 0 1em 1em 1em;
+    margin: 2em 1em 1em 1em;
   }
-  
+
+  .bioinfo-header {
+    margin-bottom: 40px;
+  }
+
+  .bioinfo-title {
+    font-size: 28px;
+  }
+
+  .bioinfo-image {
+    max-width: 240px;
+  }
+
+  .caption {
+    padding: 20px 24px;
+    font-size: 14px;
+  }
+
+  .fieldBox {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+}

@@ -10,44 +10,37 @@ const ExpertiseAnimal = ({ className = "" }) => {
     const nhp = expertiseTranslations.nhp_nutraceuticals;
 
     return (
-        <div className={`two-image-two-text ${className}`}>
-            <div className="image-left-panel">
-                <div className="image-placeholder">
+        <div className={`expertise-container ${className}`}>
+            <div className="expertise-section">
+                <div className="expertise-image">
                     <StockImageFetch
-                    searchTerm="kitten"
-                    imgSource="large"
-                    orientation="landscape"
-                    page={1}
-                    perPage={1}
-                    />
-            </div>
-            </div>
-            <div className="text-left-panel">
-                <p>
-                    {animal.title[language].toUpperCase()},
-                    <br />
-                    <br />
-                    {animal.content[language]}
-                </p>
-            </div>
-            <div className="image-right-panel">
-                <div className="image-placeholder">
-                    <StockImageFetch
-                    searchTerm="rabbit"
-                    imgSource="large"
-                    orientation="landscape"
-                    page={1}
-                    perPage={1}
+                        searchTerm="kitten"
+                        imgSource="large"
+                        orientation="landscape"
+                        page={1}
+                        perPage={1}
                     />
                 </div>
+                <div className="expertise-text">
+                    <h2>{animal.title[language].toUpperCase()}</h2>
+                    <p>{animal.content[language]}</p>
+                </div>
             </div>
-            <div className="text-right-panel">
-                <p>
-                    {nhp.title[language].toUpperCase()},
-                    <br />
-                    <br />
-                    {nhp.content[language]}
-                </p>
+
+            <div className="expertise-section">
+                <div className="expertise-image">
+                    <StockImageFetch
+                        searchTerm="pills"
+                        imgSource="large"
+                        orientation="landscape"
+                        page={1}
+                        perPage={1}
+                    />
+                </div>
+                <div className="expertise-text">
+                    <h2>{nhp.title[language].toUpperCase()}</h2>
+                    <p>{nhp.content[language]}</p>
+                </div>
             </div>
         </div>
     );
