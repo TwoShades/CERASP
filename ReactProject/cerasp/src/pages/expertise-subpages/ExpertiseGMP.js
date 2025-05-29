@@ -3,6 +3,7 @@ import "./css/ExpertiseGMP.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 const ExpertiseGMP = () => {
   const { language } = useContext(LanguageContext);
@@ -10,7 +11,9 @@ const ExpertiseGMP = () => {
 
   return (
     <div className="expertise-gmp">
-      <h2 className="feature-title">{gmp.title[language]}</h2>
+      <SubPageHeader
+              name={language === "fr" ? "BIOFABRICATION PRêTE POUR LES BPF ET PARTENARIATS STRATéGIQUES" : "GMP-READY BIOMANUFACTURING AND STRATEGIC PARTNERSHIPS"}
+            />
       <div className="expertise-gmp-content">
         <div className="expertise-gmp-image">
           <div className="expertise-gmp-image-content">

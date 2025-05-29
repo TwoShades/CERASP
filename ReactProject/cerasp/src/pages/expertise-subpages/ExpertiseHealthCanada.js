@@ -1,38 +1,162 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import "./css/ExpertiseHealthCanada.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
+import { ExternalLink, Shield, Award, Users } from "lucide-react";
 
 const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) => {
   const { language } = useContext(LanguageContext);
   const healthCanada = expertiseTranslations.health_canada;
+  const [isVisible, setIsVisible] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const panelRef = useRef(null);
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (panelRef.current) {
+      observer.observe(panelRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const handleLogoClick = (e) => {
+    e.preventDefault();
+    // Add smooth scroll or navigation logic here
+    console.log('Health Canada logo clicked');
+  };
 
   return (
-    <div className="expertise-health-canada-parent">
-        <div className= "expertise-health-canada-panel">
+    <section className="expertise-health-canada-parent">
+      <div 
+        ref={panelRef}
+        className={`expertise-health-canada-panel ${isVisible ? 'animate-in' : ''} ${className}`}
+      >
         <div className="expertise-health-canada-left">
-            <div className="expertise-health-canada-link">
-                <a href="#expertise-canada-gov-logo">
-                    <img src=".\svg\canadagovlogo.svg" 
-                        alt="Health Canada" />
-                </a>
+          {/* Enhanced Logo Section */}
+          <div className="expertise-health-canada-link">
+            <button 
+              onClick={handleLogoClick}
+              className="logo-button"
+              aria-label="Health Canada Official Site"
+            >
+              <img 
+                src="./svg/canadagovlogo.svg"
+                alt="Government of Canada Logo" 
+                loading="lazy"
+              />
+              <ExternalLink size={16} className="external-icon" />
+            </button>
+          </div>
+
+          {/* Enhanced Title Section */}
+          <div className="expertise-health-canada-title">
+            <div className="title-decorator"></div>
+            <h2>{healthCanada.title[language]}</h2>
+            <div className="title-badge">
+              <Shield size={16} />
+              <span>Certified Partner</span>
+            </div>
+          </div>
+
+          {/* Enhanced Content Section */}
+          <div className="expertise-health-canada-content">
+            <p className="main-text">{healthCanada.content[language]}</p>
+            
+            {/* New Features Grid */}
+            <div className="features-grid">
+              <div className="feature-item">
+                <div className="feature-icon">
+                  <Shield size={20} />
+                </div>
+                <div className="feature-text">
+                  <span className="feature-title">Regulatory Compliance</span>
+                  <span className="feature-desc">Full Health Canada compliance</span>
+                </div>
+              </div>
+              
+              <div className="feature-item">
+                <div className="feature-icon">
+                  <Award size={20} />
+                </div>
+                <div className="feature-text">
+                  <span className="feature-title">Quality Assured</span>
+                  <span className="feature-desc">Certified processes</span>
+                </div>
+              </div>
+              
+              <div className="feature-item">
+                <div className="feature-icon">
+                  <Users size={20} />
+                </div>
+                <div className="feature-text">
+                  <span className="feature-title">Expert Team</span>
+                  <span className="feature-desc">Healthcare specialists</span>
+                </div>
+              </div>
             </div>
 
-            <div className="expertise-health-canada-title">
-            <h3>{healthCanada.title[language]}</h3>
+            {/* Call to Action */}
+            <div className="cta-section">
+              <button className="primary-cta">
+                Learn More About Our Services
+              </button>
+              <button className="secondary-cta">
+                View Certifications
+              </button>
             </div>
-
-            <div className="expertise-health-canada-text-under-title">
-                <p>{healthCanada.content[language]}</p>
-            </div>
+          </div>
         </div>
 
+        {/* Enhanced Image Section */}
         <div className="expertise-health-canada-image">
-            <img src=".\photos\cerasp-image1-scaled-450x450.jpg" 
-                alt="Health Canada Logo" />
+          <div className="image-container">
+            <div className={`image-placeholder ${imageLoaded ? 'loaded' : ''}`}>
+              <div className="placeholder-shimmer"></div>
+            </div>
+            <img 
+              src="./photos/cerasp-image1-scaled-450x450.jpg"
+              alt="Healthcare Technology Solutions"
+              loading="lazy"
+              onLoad={handleImageLoad}
+              className={`main-image ${imageLoaded ? 'loaded' : ''}`}
+            />
+            <div className="image-overlay">
+              <div className="overlay-content">
+                <div className="overlay-badge">
+                  <span>Health Canada Approved</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Floating Statistics */}
+          <div className="floating-stats">
+            <div className="stat-card">
+              <span className="stat-number">100%</span>
+              <span className="stat-label">Compliant</span>
+            </div>
+            <div className="stat-card">
+              <span className="stat-number">5+</span>
+              <span className="stat-label">Years</span>
+            </div>
+          </div>
         </div>
-        </div>
-    </div>
+      </div>
+    </section>
   );
 };
 

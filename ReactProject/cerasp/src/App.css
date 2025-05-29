@@ -19,14 +19,14 @@
   /* GLOBAL PADDING FULLSCREEN */
   --global-page-padding: 0 8em 0 8em;
 
-  article,
+  /* article,
   header,
   section,
   figure,
   blockquote {
     margin: 0;
     padding: 0;
-  }
+  } */
 
   figure {
     width: 100%;

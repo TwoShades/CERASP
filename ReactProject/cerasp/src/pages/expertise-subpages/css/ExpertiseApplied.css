@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.five-steps-grid-layout::before {
+.five-steps-grid-layout::before { 
   content: '';
   position: absolute;
   top: 0;
