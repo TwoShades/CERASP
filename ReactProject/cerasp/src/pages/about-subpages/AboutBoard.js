@@ -3,6 +3,7 @@ import "./css/AboutBoard.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import boardMembersData from "./boardmembers.json";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutBoard() {
   const [boardMembers, setBoardMembers] = useState([]);
@@ -33,9 +34,9 @@ export default function AboutBoard() {
 
   return (
     <div className="about-board-layout">
-      <h1 className="about-board-title">
-        {language === "fr" ? "MEMBRES DU CONSEIL" : "BOARD MEMBERS"}
-      </h1>
+      <SubPageHeader
+        name={language === "fr" ? "MEMBRES DU CONSEIL" : "BOARD MEMBERS"}
+      />
       <div className="about-board">
         <div className="about-board-header"></div>
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import "./css/AboutTeam.css";
 import Employee from "../../components/uicomponents/Employee.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutTeam() {
   const { language } = useContext(LanguageContext);
@@ -41,9 +42,9 @@ export default function AboutTeam() {
 
   return (
     <div className="about-team-layout">
-      <h1 className="about-team-title">
-        {language === "en" ? "MEET THE TEAM" : "RENCONTREZ L'ÉQUIPE"}
-      </h1>
+      <SubPageHeader
+        name={language === "fr" ? "RENCONTREZ L'ÉQUIPE" : "MEET THE TEAM"}
+      />
       <div className="about-team">
         <div className="team-cards">
           {teamData.map((member) => {
