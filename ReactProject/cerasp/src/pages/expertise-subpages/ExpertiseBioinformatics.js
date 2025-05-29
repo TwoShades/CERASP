@@ -7,11 +7,16 @@ import expertiseTranslations from "./expertise-translations.json";
 const ExpertiseBioinformatics = () => {
   const { language } = useContext(LanguageContext);
   const bioinfo = expertiseTranslations.bioinformatics;
-
+  
   return (
     <div className="expertise-bioinformatics">
-      <div className="bioinfo-left">
-        <div className="bioinfo-image">
+      <div className="bioinfo-header">
+        <h1 className="bioinfo-title">Bioinformatics Excellence</h1>
+      </div>
+      
+      <div className="bioinfo-content">
+        <div className="bioinfo-left">
+          <div className="bioinfo-image">
             <StockImageFetch
               searchTerm="microscope"
               imgSource="large"
@@ -19,31 +24,32 @@ const ExpertiseBioinformatics = () => {
               page={1}
               perPage={1}
             />
+          </div>
+          <div className="caption">
+            {bioinfo.content[language]}
+          </div>
+          
         </div>
-
-        <p className="caption">{bioinfo.content[language]}</p>
-      </div>
-
-      <div className="bioinfo-right">
-        <div className="fieldBox">
-          <h2 className="title">{bioinfo.fields.genomicDataAnalysis.title[language]}</h2>
-          <p className="desc">
-           {bioinfo.fields.genomicDataAnalysis.desc[language]}
-          </p>
-        </div>
-
-        <div className="fieldBox">
-          <h2 className="title">{bioinfo.fields.comprehensiveDataInsights.title[language]}</h2>
-          <p className="desc">
-           {bioinfo.fields.comprehensiveDataInsights.desc[language]}
-          </p>
-        </div>
-
-        <div className="fieldBox">
-          <h2 className="title">{bioinfo.fields.acceleratedResearch.title[language]}</h2>
-          <p className="desc">
-           {bioinfo.fields.acceleratedResearch.desc[language]}
-          </p>
+        
+        <div className="bioinfo-right">
+          <div className="fieldBox">
+            <h2 className="title">{bioinfo.fields.genomicDataAnalysis.title[language]}</h2>
+            <p className="desc">
+              {bioinfo.fields.genomicDataAnalysis.desc[language]}
+            </p>
+          </div>
+          <div className="fieldBox">
+            <h2 className="title">{bioinfo.fields.comprehensiveDataInsights.title[language]}</h2>
+            <p className="desc">
+              {bioinfo.fields.comprehensiveDataInsights.desc[language]}
+            </p>
+          </div>
+          <div className="fieldBox">
+            <h2 className="title">{bioinfo.fields.acceleratedResearch.title[language]}</h2>
+            <p className="desc">
+              {bioinfo.fields.acceleratedResearch.desc[language]}
+            </p>
+          </div>
         </div>
       </div>
     </div>

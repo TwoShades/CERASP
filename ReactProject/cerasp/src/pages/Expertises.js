@@ -22,6 +22,7 @@ const Expertises = () => {
   useScrollToPanel();
   return (
     <div className="expertises-page page-content">
+      
 
       {/* ====OVERVIEW==== */}
 
