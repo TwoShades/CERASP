@@ -68,10 +68,7 @@ const ExpertiseAnimal = ({ className = "" }) => {
     return (
         <div className={`expertise-container-enhanced ${className}`}>
             <div className="expertise-header">
-                <div className="header-icon">
-                    <Shield size={32} />
-                </div>
-                <h1>Our Expertise Areas</h1>
+                <h1> Animal Health, NHP & Nutraceuticals</h1>
                 <p>Leading innovation in health, research, and natural solutions</p>
             </div>
 
@@ -104,12 +101,12 @@ const ExpertiseAnimal = ({ className = "" }) => {
                                     page={1}
                                     perPage={1}
                                 />
-                                <div className="image-overlay">
+                                {/* <div className="image-overlay">
                                     <div className="overlay-content">
                                         <TrendingUp size={24} />
                                         <span>View Details</span>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="expertise-content">
@@ -119,31 +116,29 @@ const ExpertiseAnimal = ({ className = "" }) => {
                                 <div className="features-list">
                                     {section.features.map((feature, idx) => (
                                         <div key={idx} className="feature-item">
-                                            <ChevronRight size={14} />
                                             <span>{feature}</span>
                                         </div>
                                     ))}
                                 </div>
 
-                                <div className="stats-grid">
-                                    <div className="stat-item">
-                                        <div className="stat-number">{section.stats.projects}</div>
-                                        <div className="stat-label">Projects</div>
+                                <div className="animal-stats-grid">
+                                    <div className="animal-stat-item">
+                                        <div className="animal-stat-number">{section.stats.projects}</div>
+                                        <div className="animal-stat-label">Projects</div>
                                     </div>
-                                    <div className="stat-item">
-                                        <div className="stat-number">{section.stats.success}</div>
-                                        <div className="stat-label">Success Rate</div>
+                                    <div className="animal-stat-item">
+                                        <div className="animal-stat-number">{section.stats.success}</div>
+                                        <div className="animal-stat-label">Success Rate</div>
                                     </div>
-                                    <div className="stat-item">
-                                        <div className="stat-number">{section.stats.years}</div>
-                                        <div className="stat-label">Experience</div>
+                                    <div className="animal-stat-item">
+                                        <div className="animal-stat-number">{section.stats.years}</div>
+                                        <div className="animal-stat-label">Experience</div>
                                     </div>
                                 </div>
 
-                                <button className="cta-button">
+                                {/* <button className="cta-button">
                                     <span>Learn More</span>
-                                    <ChevronRight size={16} />
-                                </button>
+                                </button> */}
                             </div>
 
                             {/* <div className="expertise-footer">
@@ -164,7 +159,6 @@ const ExpertiseAnimal = ({ className = "" }) => {
 
             <div className="expertise-summary">
                 <div className="summary-content">
-                    <Stethoscope size={24} />
                     <h3>Comprehensive Solutions</h3>
                     <p>Our integrated approach combines cutting-edge research, natural innovation, and proven methodologies to deliver exceptional results across all domains.</p>
                 </div>

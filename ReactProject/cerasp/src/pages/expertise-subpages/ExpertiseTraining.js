@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './css/ExpertiseTraining.css';
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
@@ -6,34 +6,64 @@ import expertiseTranslations from "./expertise-translations.json";
 const ExpertiseTraining = () => {
   const { language } = useContext(LanguageContext);
   const training = expertiseTranslations.training;
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="expertise-container">
-      {/* Card 1 */}
-      <div className="expertise-card">
-        <div className="expertise-top">
-          <h3>{training.card1.title[language]}</h3>
-          <p>{training.card1.content[language]}</p>
+    <div className="training-container">
+      {/* Subtle background elements */}
+      <div className="background-accent"></div>
+      
+      <div className="training-content">
+        {/* Header */}
+        <div className={`training-header ${isVisible ? 'visible' : ''}`}>
+          <h2 className="training-title">
+            {training.title[language]}
+          </h2>
+          <div className="title-accent"></div>
         </div>
-        <div className="expertise-bottom"></div>
-      </div>
 
-      {/* Card 2 - Inverted */}
-      <div className="expertise-card inverted">
-        <div className="expertise-light"></div>
-        <div className="expertise-dark">
-          <h3>{training.card2.title[language]}</h3>
-          <p>{training.card2.content[language]}</p>
+        {/* Main content card */}
+        <div className={`training-card ${isVisible ? 'visible' : ''}`}>
+          <div className="card-inner">
+            <div className="content-section">
+              <div className="icon-container">
+                <div className="training-icon">🎓</div>
+              </div>
+              <p className="training-description">
+                {training.content[language]}
+              </p>
+            </div>
+            
+            <div className="decorative-section">
+              <div className="accent-line"></div>
+              <div className="feature-highlights">
+                <div className="highlight-item">
+                  <span className="highlight-icon">✓</span>
+                  <span className="highlight-text">
+                    {language === 'en' ? 'GMP Practices' : 'Pratiques BPF'}
+                  </span>
+                </div>
+                <div className="highlight-item">
+                  <span className="highlight-icon">✓</span>
+                  <span className="highlight-text">
+                    {language === 'en' ? 'Bioprocessing' : 'Bioprocédés'}
+                  </span>
+                </div>
+                <div className="highlight-item">
+                  <span className="highlight-icon">✓</span>
+                  <span className="highlight-text">
+                    {language === 'en' ? 'Quality Control' : 'Contrôle Qualité'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Card 3 */}
-      <div className="expertise-card">
-        <div className="expertise-top">
-          <h3>{training.card3.title[language]}</h3>
-          <p>{training.card3.content[language]}</p>
-        </div>
-        <div className="expertise-bottom"></div>
       </div>
     </div>
   );

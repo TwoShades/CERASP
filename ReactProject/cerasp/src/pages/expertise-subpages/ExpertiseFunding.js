@@ -3,6 +3,7 @@ import "./css/ExpertiseFunding.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 const ExpertiseFunding = () => {
   const { language } = useContext(LanguageContext);
@@ -10,7 +11,9 @@ const ExpertiseFunding = () => {
 
   return (
     <div className="expertise-Funding">
-      <h2 className="feature-title">{funding.title[language]}</h2>
+        <SubPageHeader
+              name={language === "fr" ? "AIDE AU FINANCEMENT" : "HELP WITH FUNDING"}
+            />
       <div className="expertise-Funding-content">
         <div className="expertise-Funding-image">
           <div className="expertise-Funding-image-content">

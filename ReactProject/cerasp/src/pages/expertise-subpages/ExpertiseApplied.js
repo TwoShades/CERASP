@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./css/ExpertiseApplied.css"; 
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 import { 
   FlaskConical, 
   Headphones, 
@@ -50,7 +51,9 @@ const ExpertiseApplied = () => {
   return (
     <div className="five-steps-grid-layout">
       <div className="top-row">
-        <h2>{applied.title[language]}</h2>
+        <SubPageHeader
+                name={language === "fr" ? "RECHERCHE APPLIQUÉ" : "APPLIED RESEARCH"}
+              />
         <p>{applied.content[language]}</p>
       </div>
       

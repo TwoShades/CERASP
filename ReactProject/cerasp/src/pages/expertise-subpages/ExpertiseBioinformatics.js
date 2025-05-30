@@ -3,6 +3,7 @@ import "./css/ExpertiseBioinformatics.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 const ExpertiseBioinformatics = () => {
   const { language } = useContext(LanguageContext);
@@ -11,7 +12,9 @@ const ExpertiseBioinformatics = () => {
   return (
     <div className="expertise-bioinformatics">
       <div className="bioinfo-header">
-        <h1 className="bioinfo-title">Bioinformatics Excellence</h1>
+        <SubPageHeader
+                name={language === "fr" ? "EXCELLENCE EN BIOINFORMATIQUE" : "BIOINFORMATICS EXCELLENCE"}
+              />
       </div>
       
       <div className="bioinfo-content">

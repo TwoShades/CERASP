@@ -60,12 +60,14 @@
 }
 
 .stat-number {
+  color: white;
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .stat-label {
+  color: white;
   font-size: 14px;
   font-weight: 500;
   opacity: 0.9;
