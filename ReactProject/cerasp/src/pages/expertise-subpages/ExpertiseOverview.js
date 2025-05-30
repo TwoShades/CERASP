@@ -3,6 +3,7 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import "./css/ExpertiseOverview.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import expertiseTranslations from "./expertise-translations.json";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 const ExpertiseOverview = () => {
   const { language } = useContext(LanguageContext);
@@ -29,7 +30,9 @@ const ExpertiseOverview = () => {
   return (
     <div className="expertise-overview">
       <div className="expertise-overview-title">
-        <h1>{overview.title[language]}</h1>
+        <SubPageHeader
+                name={language === "fr" ? "ACCEUIL" : "OVERVIEW"}
+              />
         <p>{overview.content[language]}</p>
       </div>
       
