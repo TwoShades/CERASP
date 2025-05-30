@@ -144,7 +144,7 @@
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.95);
   border-color: rgba(0, 94, 184, 0.25);
   box-shadow: 0 12px 40px rgba(0, 94, 184, 0.12),
@@ -172,7 +172,7 @@
 
 .project-card:hover h3 {
   color: #005eb8;
-  transform: translateX(3px);
+  transform: translateX(1px);
 }
 
 .project-card h4 {
