@@ -8,24 +8,8 @@ import SubPageHeader from "../../components/layouts/SubPageHeader";
 const ExpertiseOverview = () => {
   const { language } = useContext(LanguageContext);
   const overview = expertiseTranslations.overview;
+  const expertiseCards = overview.expertise;
 
-  const expertiseCards = [
-    {
-      searchTerm: "microscope",
-      title: "Microscopy & Analysis",
-      description: "Advanced microscopic techniques for detailed molecular and cellular analysis."
-    },
-    {
-      searchTerm: "chemistry",
-      title: "Chemical Research",
-      description: "Innovative chemical processes and formulation development for cutting-edge solutions."
-    },
-    {
-      searchTerm: "microbe",
-      title: "Microbial Studies",
-      description: "Comprehensive microbial research and biotechnology applications."
-    }
-  ];
 
   return (
     <div className="expertise-overview">
@@ -50,8 +34,9 @@ const ExpertiseOverview = () => {
             </div>
             
             <div className="card-overlay">
-              <div className="card-title">{card.title}</div>
-              <div className="card-description">{card.description}</div>
+              <div className="card-title">{card.title[language]}</div>
+              <div className="card-description">{card.description[language]}</div>
+
             </div>
           </div>
         ))}

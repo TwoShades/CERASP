@@ -7,7 +7,42 @@
       "content": {
         "en": "CERASP is a Technology Access Centre (TAC) dedicated to advancing biomanufacturing, focusing on cosmetic, nutraceutical, and pharmaceutical applications. We provide industry partners with technical support, research collaboration, and access to pilot-scale production. Located within Collège Lionel-Groulx in Quebec, CERASP connects academic expertise with industry needs, accelerating the development and commercialization of innovative bioproducts.",
         "fr": "Le CERASP est un Centre d’accès à la technologie (CAT) dédié à l’avancement de la biofabrication, axé sur les applications cosmétiques, nutraceutiques et pharmaceutiques. Nous offrons à nos partenaires industriels un soutien technique, une collaboration en recherche et un accès à la production à l’échelle pilote. Situé au Collège Lionel-Groulx au Québec, le CERASP relie l’expertise académique aux besoins de l’industrie, accélérant le développement et la commercialisation de bioproduits innovants."
-      }
+      },
+      "expertise": [
+        {
+          "searchTerm": "microscope",
+          "title": {
+            "en": "Microscopy & Analysis",
+            "fr": "Microscopie et Analyse"
+          },
+          "description": {
+            "en": "Advanced microscopic techniques for detailed molecular and cellular analysis.",
+            "fr": "Techniques de microscopie avancées pour une analyse moléculaire et cellulaire approfondie."
+          }
+        },
+        {
+          "searchTerm": "chemistry",
+          "title": {
+            "en": "Chemical Research",
+            "fr": "Recherche Chimique"
+          },
+          "description": {
+            "en": "Innovative chemical processes and formulation development for cutting-edge solutions.",
+            "fr": "Processus chimiques innovants et développement de formulations pour des solutions de pointe."
+          }
+        },
+        {
+          "searchTerm": "microbe",
+          "title": {
+            "en": "Microbial Studies",
+            "fr": "Études Microbiennes"
+          },
+          "description": {
+            "en": "Comprehensive microbial research and biotechnology applications.",
+            "fr": "Recherche microbienne approfondie et applications en biotechnologie."
+          }
+        }
+      ]
     },
     "gmp_biomanufacturing": {
       "title": {
