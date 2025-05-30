@@ -1,4 +1,8 @@
 /* AboutOverview.css - Light Version */
+.about-overview-layout {
+  padding-top: 90px;
+}
+
 .about-overview-header {
   text-align: center;
 }
@@ -8,38 +12,22 @@
   background-color: #ffffff;
 }
 
-.about-overview-title {
-  background-color: #0056b3;
-  /* background: linear-gradient(to right, #0056b3, #ffffff); */
-  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
-  padding: 1em;
-  padding-top: 120px;
-  font-size: 32px;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 24px 0;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-}
-
-.about-overview-header p {
-  font-size: 16px;
+.about-overview-header-text {
+  padding: 0 2em 0 2em;
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
   line-height: 1.6;
-  color: #555555;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .about-overview-video {
-  /* background-color: #0056b3; */
-  /* border-radius: 12px; */
   padding: 32px;
   margin-bottom: 3em;
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: #333333;
-  /* box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3); */
 }
 
 .about-overview-video iframe {
@@ -215,10 +203,9 @@
     font-size: 28px;
   }
 
-  .about-overview-header p {
+  .about-overview-header-text {
+    /* text-align: justify; */
     font-size: 14px;
-    padding: 1.4em;
-    text-align: justify;
   }
 
   .about-overview-video {

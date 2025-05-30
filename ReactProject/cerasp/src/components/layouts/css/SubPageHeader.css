@@ -2,7 +2,6 @@
   padding: 0;
   position: relative;
   padding: 1em;
-  font-size: 32px;
   color: white;
   background: linear-gradient(
     145deg,
@@ -18,13 +17,17 @@
   overflow: hidden;
 }
 
+.subpage-header h1 {
+  padding: 1em;
+}
+
 .subpage-header::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: 120%;
+  left: -40%;
+  width: 140%;
   background: linear-gradient(
     145deg,
     #4086d600 0%,
@@ -37,19 +40,15 @@
   animation: bgPulseSlide 6s ease-in-out infinite;
 }
 
-.subpage-header h3 {
-  margin: 0;
-}
-
 @keyframes bgPulseSlide {
   0%,
   100% {
     opacity: 0.2;
-    transform: translateX(0);
+    transform: translateX(-10%);
   }
   50% {
-    opacity: 0.4;
-    transform: translateX(20%);
+    opacity: 1;
+    transform: translateX(0%);
   }
 }
 
