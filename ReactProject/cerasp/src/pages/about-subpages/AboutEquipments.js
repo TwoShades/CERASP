@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import LearnMoreButton from "../../components/interactables/LearnMoreButton";
-import equipmentsData from "../../components/panels/reference/equipments.json";
 import "./css/AboutEquipments.css";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 
@@ -14,8 +13,29 @@ const AboutEquipments = () => {
   const { isMobile, isTablet } = useContext(ScreenSizeContext);
 
   useEffect(() => {
-    setEquipments(equipmentsData.equipment || []);
-  }, []);
+    const fetchEquipments = async () => {
+      try {
+        const res = await fetch(
+          `https://loving-bird-9ef3b0470a.strapiapp.com/api/equipments?&populate=PDF&populate=Image`
+        );
+        const json = await res.json();
+
+        // Map API data into usable structure
+        const cleaned = json.data.map((item) => ({
+          id: item.id,
+          name: item.Name || "",
+          photoUrl: item.Image?.url || "",
+          pdfUrl: item.PDF?.url || "",
+        }));
+
+        setEquipments(cleaned);
+      } catch (err) {
+        console.error("Failed to fetch equipments:", err);
+      }
+    };
+
+    fetchEquipments();
+  }, [language]);
 
   const itemsPerPage = isMobile ? 2 : isTablet ? 3 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -49,17 +69,15 @@ const AboutEquipments = () => {
         <div className="about-equipments-images">
           {currentItems.map((equipment) => (
             <div key={equipment.id} className="equipment-card">
-              <img
-                src={`/equipments/photos/${equipment.photo}`}
-                alt={equipment.name}
-              />
+              {equipment.photoUrl ? (
+                <img src={equipment.photoUrl} alt={equipment.name} />
+              ) : (
+                <div className="no-image-placeholder">No image available</div>
+              )}
               <div className="equipment-card-info">
                 <h4>{equipment.name}</h4>
-                {equipment.pdf && equipment.pdf.trim() !== "" && (
-                  <LearnMoreButton
-                    pdfUrl={`/equipments/pdfs/${equipment.pdf}`}
-                    text="View PDF"
-                  />
+                {equipment.pdfUrl && (
+                  <LearnMoreButton pdfUrl={equipment.pdfUrl} text="View PDF" />
                 )}
               </div>
             </div>
@@ -80,7 +98,7 @@ const AboutEquipments = () => {
           <button
             onClick={nextPage}
             disabled={
-              currentPage === Math.ceil(equipments.length / itemsPerPage)
+              currentPage >= Math.ceil(equipments.length / itemsPerPage)
             }
             className="pagination-arrow"
           >

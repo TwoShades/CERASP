@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import "./css/AboutBoard.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
-import boardMembersData from "./boardmembers.json";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutBoard() {
@@ -12,8 +11,29 @@ export default function AboutBoard() {
   const { isMobile, isTablet } = useContext(ScreenSizeContext);
 
   useEffect(() => {
-    setBoardMembers(boardMembersData.boardMembers || []);
-  }, []);
+    const fetchBoardMembers = async () => {
+      try {
+        const res = await fetch(
+          `https://loving-bird-9ef3b0470a.strapiapp.com/api/board-members?locale=${language}&populate=Picture`
+        );
+        const json = await res.json();
+        console.log("Fetched board data:", json.data);
+        const cleaned = json.data.map((entry) => ({
+          id: entry.id,
+          name: entry.Name || "",
+          position: entry.Title || "",
+          affiliation: entry.Affiliation || "",
+          photo: entry.Picture?.url || "",
+        }));
+
+        setBoardMembers(cleaned);
+      } catch (err) {
+        console.error("Failed to fetch board members:", err);
+      }
+    };
+
+    fetchBoardMembers();
+  }, [language]);
 
   const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -43,17 +63,13 @@ export default function AboutBoard() {
         <div className="about-board-images">
           {currentItems.map((member) => (
             <div key={member.id} className="board-member-card">
-              <img
-                src={`/boardmembers/photos/${member.photo}`}
-                alt={member.name}
-              />
+              <img src={member.photo} alt={member.name} />
               <h4>{member.name}</h4>
               <p className="board-member-position">{member.position}</p>
               <p className="board-member-affiliation">{member.affiliation}</p>
             </div>
           ))}
 
-          {/* Add a hidden placeholder to keep vertical space consistent */}
           {isMobile && currentItems.length === 1 && (
             <div className="board-member-card placeholder" aria-hidden="true" />
           )}

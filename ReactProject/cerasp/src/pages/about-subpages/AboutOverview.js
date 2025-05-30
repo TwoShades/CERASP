@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
@@ -10,14 +11,17 @@ export default function AboutOverview() {
   const content = aboutTranslations.aboutOverview;
 
   return (
-    <>
-      <h1 className="about-overview-title">
-        {content.overview.title[language]}
-      </h1>
+    <div className="about-overview-layout">
+      <SubPageHeader
+        className="test-class"
+        name={content.overview.title[language]}
+        extraContent={
+          <div className="about-overview-header-text">
+            <p>{content.overview[language]}</p>
+          </div>
+        }
+      />
       <div className="about-overview">
-        <div className="about-overview-header">
-          <p>{content.overview[language]}</p>
-        </div>
         <div className="about-overview-video">
           <div className="about-overview-video-icon">
             <img
@@ -81,6 +85,6 @@ export default function AboutOverview() {
           </details>
         </div>
       </div>
-    </>
+    </div>
   );
 }
