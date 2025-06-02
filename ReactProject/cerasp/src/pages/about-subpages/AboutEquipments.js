@@ -37,7 +37,7 @@ const AboutEquipments = () => {
     fetchEquipments();
   }, [language]);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 3 : 4;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 4 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
@@ -77,7 +77,10 @@ const AboutEquipments = () => {
               <div className="equipment-card-info">
                 <h4>{equipment.name}</h4>
                 {equipment.pdfUrl && (
-                  <LearnMoreButton pdfUrl={equipment.pdfUrl} text="View PDF" />
+                  <LearnMoreButton
+                    pdfUrl={equipment.pdfUrl}
+                    text={language === "fr" ? "Voir PDF" : "View PDF"}
+                  />
                 )}
               </div>
             </div>

@@ -13,7 +13,6 @@ export default function AboutOverview() {
   return (
     <div className="about-overview-layout">
       <SubPageHeader
-        className="test-class"
         name={content.overview.title[language]}
         extraContent={
           <div className="about-overview-header-text">

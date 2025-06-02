@@ -12,7 +12,7 @@ export default function AboutTeam() {
     async function fetchTeam() {
       try {
         const res = await fetch(
-          "https://loving-bird-9ef3b0470a.strapiapp.com/api/employees?populate=Picture"
+          `https://loving-bird-9ef3b0470a.strapiapp.com/api/employees?locale=${language}&populate=Picture`
         );
 
         const json = await res.json();
@@ -38,7 +38,7 @@ export default function AboutTeam() {
     }
 
     fetchTeam();
-  }, []);
+  }, [language]);
 
   return (
     <div className="about-team-layout">
