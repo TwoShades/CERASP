@@ -1,98 +1,165 @@
-.expertise-panel {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 8em 0em 8em;
-    padding-top: 120px;
+.expertise-formulation-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 8em 0em 8em;
+    padding-top: 90px;
     padding-bottom: 8em;
-    border: solid 1px #8585851d;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+    margin: 4em 8em 8em 8em;;
+  gap: 2rem;
+  background: linear-gradient(to right, #e0f7ff, #d0eaff);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.visual-section {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.visual-section:hover {
+  transform: scale(1.05);
+}
+
+.expertise-formulation-badge {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(145deg, #007bff, #3399ff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.expertise-badge:hover {
+  transform: rotate(1turn);
+}
+
+.emoji {
+  font-size: 3rem;
+}
+
+.badge-caption {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #ffffff40;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  color: #333;
+}
+
+.formulation-content-section {
+  flex: 2 1 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertise-formulation-card {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  color: #333;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.expertise-formulation-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.expertise-formulation-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.expertise-formulation-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .expertise-formulation-container {
+    padding: 3rem 1.5rem;
   }
-  
-  .left {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .expertise-formulation-badge {
+    width: 140px;
+    height: 140px;
   }
-  
-  .circle {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #FFB400, #fad0c4);
-    border: 2px solid #FFB400;
-    transition: transform 0.3s ease, background 0.3s ease;
-    margin-bottom: 16px;
+
+  .emoji {
+    font-size: 2.5rem;
   }
-  
-  .circle:hover {
-    background: linear-gradient(135deg, #FFB400, #ebba53);
-    transform: rotate(360deg);
-    cursor: pointer;
+
+  .expertise-formulation-card h2 {
+    font-size: 1.5rem;
   }
-  
-  .caption {
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-    background-color: #ffffff10;
-    border: 1px solid #cccccc05;
-    padding: 8px;
-    border-radius: 8px;
+
+  .expertise-formulation-card p {
+    font-size: 0.95rem;
   }
-  
-  .right {
-    flex: 2 1 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+}
+
+@media (max-width: 475px) {
+  .expertise-formulation-container {
+    padding: 2rem 1rem;
+    margin: 2em 1em;
+    gap: 1.5rem;
   }
-  
-  .fieldBox {
-    background-color: #ffffff10;
-    border-radius: 8px;
-    padding: 16px;
-    border: 1px solid #cccccc05;
-    transition: transform 0.3s ease, background 0.3s ease;
+
+  .visual-section {
+    padding: 1.2rem;
   }
-  
-  .title:hover {
-    color: #007bff;
-    cursor: pointer;
+
+  .expertise-formulation-badge {
+    width: 100px;
+    height: 100px;
   }
-  
-  @media (max-width: 1024px) {
-    .expertise-panel {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .circle {
-      width: 200px;
-      height: 200px;
-    }
-  
-    .caption {
-      font-size: 14px;
-    }
+
+  .emoji {
+    font-size: 2rem;
   }
-  
-  @media (max-width: 475px) {
-    .circle {
-      width: 120px;
-      height: 120px;
-      margin-bottom: 8px;
-    }
-  
-    .caption {
-      font-size: 12px;
-      padding: 6px;
-    }
-  
-    .fieldBox {
-      padding: 12px;
-      font-size: 13px;
-    }
+
+  .badge-caption {
+    font-size: 0.75rem;
+    padding: 0.3em 0.7em;
   }
-  
+
+  .expertise-formulation-card h2 {
+    font-size: 1.25rem;
+  }
+
+  .expertise-formulation-card p {
+    font-size: 0.9rem;
+  }
+}
+
+

@@ -8,19 +8,23 @@ const ExpertiseFormulation = () => {
   const formulation = expertiseTranslations.formulation;
 
   return (
-    <div className="expertise-panel">
-      <div className="left">
-        <div className="circle" />
-        <p className="caption">{formulation.title[language].toUpperCase()}</p>
+    <section className="expertise-formulation-container">
+      <div className="visual-section" role="img" aria-label="Expertise Visual Element">
+        <div className="expertise-formulation-badge">
+          <span className="emoji" role="img" aria-label="science emoji">🧪</span>
+        </div>
+        <h3 className="badge-caption">{formulation.title[language].toUpperCase()}</h3>
       </div>
 
-      <div className="right">
-        <div className="fieldBox">
-          <h2 className="title">{formulation.title[language]}</h2>
-          <p className="desc">{formulation.content[language]}</p>
-        </div>
+      <div className="formulation-content-section">
+        <article className="expertise-formulation-card">
+          <header>
+            <h2>{formulation.title[language]}</h2>
+          </header>
+          <p>{formulation.content[language]}</p>
+        </article>
       </div>
-    </div>
+    </section>
   );
 };
 

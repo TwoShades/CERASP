@@ -2,6 +2,7 @@ import "./Pages-css/Sectors.css";
 import Footer from "../components/layouts/Footer.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
 
 const Sectors = () => {
   useScrollToPanel();
@@ -14,7 +15,7 @@ const Sectors = () => {
         */}
 
       <div title="sector-of-activities" id="overview">
-        <p>same as health canada = overview</p>
+        <SectorsOverview />
       </div>
 
       {/*   =========================

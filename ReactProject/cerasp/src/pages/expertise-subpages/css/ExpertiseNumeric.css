@@ -160,19 +160,19 @@
   margin-bottom: 36px;
 }
 
-.feature-grid {
+.numeric-feature-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 36px;
 }
 
-.feature-item {
+.numeric-feature-item {
   display: flex;
   align-items: flex-start;
 }
 
-.feature-icon {
+.numeric-feature-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,14 +185,14 @@
   flex-shrink: 0;
 }
 
-.feature-content h3 {
+.numeric-feature-content h3 {
   font-size: 16px;
   font-weight: 600;
   color: #1d1d1f;
   margin: 0 0 6px 0;
 }
 
-.feature-content p {
+.numeric-feature-content p {
   font-size: 14px;
   line-height: 1.4;
   color: #6e6e73;
@@ -236,7 +236,7 @@
     min-height: 400px;
   }
 
-  .feature-grid {
+  .numeric-feature-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -262,3 +262,86 @@
     padding: 24px;
   }
 }
+
+@media (max-width: 475px) {
+  .expertise-numeric-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .expertise-numeric-left,
+  .expertise-numeric-right {
+    /* width: 100%; */
+    padding: 1rem;
+  }
+
+  .deep-blue-panel {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .expertise-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .numeric-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .stat-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .custom-chart-container {
+    margin-top: 2rem;
+  }
+
+  .main-title {
+    font-size: 1.5rem;
+  }
+
+  .main-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .numeric-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .numeric-feature-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+    margin-right: 12px;
+  }
+
+  .numeric-feature-content h3 {
+    font-size: 1rem;
+  }
+
+  .numeric-feature-content p {
+    font-size: 0.9rem;
+  }
+
+  .learn-more-btn {
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
+}
+

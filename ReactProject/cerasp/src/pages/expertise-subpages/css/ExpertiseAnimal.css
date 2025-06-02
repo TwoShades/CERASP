@@ -429,6 +429,7 @@
 @media (max-width: 480px) {
     .expertise-container-enhanced {
         padding: 30px 1.5em;
+        margin: 1em;
     }
     
     .expertise-section-enhanced {
