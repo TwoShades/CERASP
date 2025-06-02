@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Expertises from "./pages/Expertises";
 import Sectors from "./pages/Sectors";
 import Projects from "./pages/Projects";
-import NewsOriginal from "./pages/News-original";
+import News from "./pages/News";
 import useScrollTracker from "./hooks/useScrollTracker";
 import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import ContactButton from "./components/interactables/ContactButton";
@@ -30,7 +30,7 @@ function App() {
           <Route path="/expertises" element={<Expertises />} />
           <Route path="/sector-of-activities" element={<Sectors />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/news" element={<NewsOriginal />} />
+          <Route path="/news" element={<News />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </main>

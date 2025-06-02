@@ -1,8 +1,7 @@
 .about-board {
   padding: var(--global-page-padding);
-
-  background-color: #ffffff; /* light background */
-  color: #333333; /* dark text for readability */
+  background-color: #ffffff;
+  color: #333333;
 }
 
 .about-board-layout {
@@ -30,133 +29,214 @@
   color: #333333;
 }
 
+/* Modern grid layout */
 .about-board-images {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
   margin-bottom: 3em;
+  padding: 0 16px;
 }
 
+/* High-tech card design */
 .board-member-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 86, 179, 0.1);
+  border-radius: 16px;
   overflow: hidden;
   text-align: center;
-  padding: 24px;
-  width: 15%;
-  min-width: 180px;
-  max-width: 220px;
-  height: 360px;
-  background-color: #f8f9fa; /* light card bg */
-  color: #333333;
-  transition: all 0.2s ease;
+  padding: 32px 24px 24px;
+  height: auto;
+  min-height: 320px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 86, 179, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
+/* High-tech glow effect */
+.board-member-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 86, 179, 0.02) 0%,
+    transparent 50%,
+    rgba(0, 86, 179, 0.02) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+.board-member-card:hover::before {
+  opacity: 1;
+}
+
+/* Hover effects */
 .board-member-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-color: #0056b3;
-  background-color: #f0f7ff; /* subtle blue highlight on hover */
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 86, 179, 0.15),
+    0 0 0 1px rgba(0, 86, 179, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 86, 179, 0.2);
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #f0f7ff 100%);
+}
+
+/* Modern profile image styling */
+.board-member-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid rgba(0, 86, 179, 0.1);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  padding: 2px;
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.board-member-card:hover img {
+  border-color: rgba(0, 86, 179, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 86, 179, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* Typography enhancements */
+.board-member-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #333333;
+  transition: color 0.3s ease;
+  letter-spacing: -0.3px;
+}
+
+.board-member-card:hover h4 {
   color: #0056b3;
 }
 
 .board-member-position {
   font-weight: 600;
-  margin: 0.5em 0 0.3em 0;
-  color: #0056b3; /* blue accent */
+  font-size: 0.95rem;
+  margin: 0 0 8px 0;
+  color: #0056b3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.board-member-card:hover .board-member-position {
+  color: #003d80;
+  transform: translateY(-1px);
 }
 
 .board-member-affiliation {
-  font-size: 0.9em;
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.4;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.board-member-card:hover .board-member-affiliation {
   color: #555555;
 }
 
-.board-member-card img {
-  width: 90%;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 16px;
-  border: 3px solid #e6e6e6;
-  transition: border-color 0.3s ease;
+/* Add subtle tech pattern overlay */
+.board-member-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 86, 179, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.board-member-card:hover img {
-  border-color: #0056b3;
+.board-member-card:hover::after {
+  opacity: 1;
 }
 
-.board-member-card h4 {
-  font-size: 1.1rem;
-  margin-top: 0.5em;
-  color: inherit;
-}
-
-/* Pagination controls */
+/* Remove pagination completely */
 .pagination-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 3em;
-  background-color: transparent;
+  display: none;
 }
 
-.pagination-buttons button {
-  background-color: #0056b3; /* blue base */
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.pagination-buttons button:disabled {
-  background-color: #e0e0e0;
-  color: #a0a0a0;
-  cursor: not-allowed;
-}
-
-.pagination-buttons button:hover:not(:disabled) {
-  background-color: #003d80;
-}
-
-/* Placeholder card to keep layout stable */
-.board-member-card.placeholder {
-  visibility: hidden;
-  pointer-events: none;
-}
-
-/* Responsive tweaks */
-@media screen and (max-width: 768px) {
-  .board-member-card {
-    max-width: 90%;
-    height: 220px;
-    padding: 16px;
+/* Enhanced responsive design */
+@media screen and (max-width: 1200px) {
+  .about-board-images {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
   }
 
-  .board-member-card h4 {
-    margin: 0;
+  .board-member-card {
+    min-height: 300px;
+    padding: 28px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-board-images {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    padding: 0 8px;
+    justify-items: center;
+  }
+
+  .board-member-card {
+    width: 60%;
+    min-height: 280px;
+    padding: 24px 16px 16px;
+    border-radius: 12px;
   }
 
   .board-member-card img {
-    width: 60%;
-    margin-bottom: 12px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 16px;
   }
 
+  .board-member-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .board-member-position {
+    font-size: 0.9rem;
+  }
+
+  .board-member-affiliation {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .about-board-images {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 
-  .board-member-card.placeholder {
-    max-width: 90%;
-    height: 220px;
+  .board-member-card {
+    min-height: 260px;
+    padding: 20px 12px 12px;
   }
 }

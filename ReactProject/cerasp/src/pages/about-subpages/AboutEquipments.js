@@ -37,7 +37,7 @@ const AboutEquipments = () => {
     fetchEquipments();
   }, [language]);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 3 : 4;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 4 : 4;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
