@@ -1,0 +1,28 @@
+/* AboutOverview.css - Light Version */
+.news-overview-layout {
+  padding-top: 90px;
+}
+
+.news-overview-layout h2 {
+  font-weight: 200;
+}
+
+.news-linkedin-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .news-overview-layout {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.news-overview-layout iframe {
+  width: 40%;
+  box-shadow: 0 8px 20px rgba(53, 53, 53, 0.6);
+}

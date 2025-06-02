@@ -5,7 +5,6 @@
 
 .about-equipments-title {
   background-color: #0056b3;
-  /* background: linear-gradient(to right, #0056b3, #ffffff); */
   box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
   padding: 1em;
   font-size: 32px;
@@ -20,7 +19,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Important - all subpages need the 90px padding-top (overview needs more) */
   padding-top: 90px;
 }
 
@@ -46,33 +44,104 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
   margin-bottom: 3em;
   flex-wrap: wrap;
 }
 
+/* Updated high-tech card style */
 .equipment-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background-color: #f8f9fa;
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 86, 179, 0.1);
+  border-radius: 16px;
   overflow: hidden;
   text-align: center;
-  padding: 24px;
-  height: 360px;
+  padding: 32px 24px 24px;
+  height: 400px;
   width: 15%;
   color: #333333;
-  transition: all 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 86, 179, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.equipment-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 86, 179, 0.02) 0%,
+    transparent 50%,
+    rgba(0, 86, 179, 0.02) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 16px;
+}
+
+.equipment-card:hover::before {
+  opacity: 1;
 }
 
 .equipment-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-color: #0056b3;
-  background-color: #f0f7ff;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 86, 179, 0.15),
+    0 0 0 1px rgba(0, 86, 179, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 86, 179, 0.2);
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #f0f7ff 100%);
+}
+
+.equipment-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 86, 179, 0.3),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.equipment-card:hover::after {
+  opacity: 1;
+}
+
+.equipment-card img {
+  width: 90%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid rgba(0, 86, 179, 0.1);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+  padding: 2px;
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.equipment-card:hover img {
+  border-color: rgba(0, 86, 179, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 86, 179, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .equipment-card-info {
@@ -85,44 +154,47 @@
 }
 
 .equipment-card h4 {
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #333333;
+  transition: color 0.3s ease;
+  letter-spacing: -0.3px;
+}
+
+.equipment-card:hover h4 {
   color: #0056b3;
-  margin-bottom: auto;
 }
 
 .equipment-card p {
-  font-size: 14px;
+  font-size: 0.95rem;
   line-height: 1.5;
-  color: #555555;
+  color: #666666;
   margin: 0;
+  transition: color 0.3s ease;
 }
 
-.equipment-card img {
-  width: 90%;
-  align-self: center;
-  border-radius: 4px;
-  object-fit: cover;
+.equipment-card:hover p {
+  color: #555555;
 }
 
 .equipment-card .learn-more-button {
   background-color: #0056b3;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-  height: 24px;
-  width: fit-content;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s ease;
   margin-top: auto;
 }
 
 .equipment-card .learn-more-button:hover {
   background-color: #003d80;
+  transform: scale(1.05);
 }
 
+/* Pagination */
 .pagination-controls {
   display: flex;
   justify-content: center;
@@ -136,7 +208,7 @@
   border: none;
   padding: 10px 20px;
   font-size: 1.25rem;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -151,86 +223,54 @@
   background-color: #003d80;
 }
 
-/* ---------- Responsive ---------- */
-
-/* Tablet-ish: 1200px down */
+/* Responsive adjustments */
 @media screen and (max-width: 1200px) {
-  .about-equipments-images {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  .equipment-card {
+    width: 36%;
+    height: 250px;
+    padding: 24px;
   }
 
-  .equipment-card {
-    width: 28%;
-    /* height: auto; */
-    padding: 16px;
+  .equipment-card h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
   }
 
   .equipment-card img {
-    width: 80%;
-    /* max-height: 140px; */
-    object-fit: cover;
-  }
-
-  .equipment-card-info {
-    text-align: center;
-    align-items: center;
+    width: 40%;
   }
 }
 
-/* Small tablets: 776px down */
 @media screen and (max-width: 776px) {
   .about-equipments {
     padding-top: 60px;
   }
 
   .about-equipments-images {
-    flex-direction: column;
+    flex-flow: row wrap;
     align-items: center;
   }
 
   .equipment-card {
-    width: 90%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1em;
-    padding: 16px;
-    height: 180px;
+    width: 40%;
+    flex-direction: column;
+    padding: 20px 16px;
+    height: 260px;
   }
 
   .equipment-card img {
-    width: 40%;
-    max-height: 160px;
-    object-fit: cover;
-    margin: 0;
-    border-radius: 4px;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
   }
 
-  .equipment-card-info {
-    width: 60%;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .equipment-card h4 {
-    font-size: 1em;
-    padding: 0;
-  }
-
-  .equipment-card .learn-more-button {
-    margin-top: 1em;
-    position: static;
-    transform: none;
-    font-size: 0.85em;
+  .equipment-card p {
+    font-size: 0.9rem;
   }
 }
 
-/* Phones: 576px down */
-@media screen and (max-width: 576px) {
-  .about-equipments.placeholder {
-    height: 180px;
-    border: none;
+@media screen and (max-width: 480px) {
+  .equipment-card {
+    padding: 16px 12px;
   }
 }
