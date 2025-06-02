@@ -224,7 +224,6 @@
   .step {
     padding: 25px 20px;
     flex: none;
-    width: 100%;
     max-width: 400px;
   }
   
@@ -258,7 +257,6 @@
   .step {
     padding: 20px 15px;
     flex: none;
-    width: 100%;
     max-width: none;
   }
   

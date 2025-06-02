@@ -59,22 +59,22 @@ const ExpertiseNumeric = () => {
           <h1 className="main-title">{numeric.title[language]}</h1>
           <p className="main-description">{numeric.content[language]}</p>
 
-          <div className="feature-grid">
-            <div className="feature-item">
-              <div className="feature-icon">
+          <div className="numeric-feature-grid">
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
                 <Database size={24} />
               </div>
-              <div className="feature-content">
+              <div className="numeric-feature-content">
                 <h3>Health Data Analysis</h3>
                 <p>Transform raw healthcare data into actionable insights</p>
               </div>
             </div>
 
-            <div className="feature-item">
-              <div className="feature-icon">
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
                 <Activity size={24} />
               </div>
-              <div className="feature-content">
+              <div className="numeric-feature-content">
                 <h3>Real-Time Monitoring</h3>
                 <p>
                   Continuous patient monitoring systems for timely interventions
@@ -82,21 +82,21 @@ const ExpertiseNumeric = () => {
               </div>
             </div>
 
-            <div className="feature-item">
-              <div className="feature-icon">
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
                 <BarChart2 size={24} />
               </div>
-              <div className="feature-content">
+              <div className="numeric-feature-content">
                 <h3>Predictive Analytics</h3>
                 <p>Anticipate healthcare needs through pattern recognition</p>
               </div>
             </div>
 
-            <div className="feature-item">
-              <div className="feature-icon">
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
                 <Zap size={24} />
               </div>
-              <div className="feature-content">
+              <div className="numeric-feature-content">
                 <h3>Digital Integration</h3>
                 <p>Seamless connection of existing healthcare systems</p>
               </div>
