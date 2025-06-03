@@ -15,8 +15,8 @@ export default function AboutFacilities() {
         <div className="about-facilities-header">
           <h3>
             {language === "fr"
-              ? "Le CERASP dispose de 3 sites à la fine pointe de la technologie!"
-              : "The CERASP has 3 state-of-the-art sites available!"}
+              ? "Le CERASP compte trois sites répartis à travers Montréal."
+              : "The CERASP has three platforms available across Montreal."}
           </h3>
         </div>
 
@@ -34,8 +34,8 @@ export default function AboutFacilities() {
               <h2>John Abbott College</h2>
               <p>
                 {language === "fr"
-                  ? "Fabrication et tests à petite échelle"
-                  : "Small-scale manufacturing and testing"}
+                  ? "Prototypage, fabrication à petit échelle et tests"
+                  : "Prototyping, small-scale manufacturing and testing"}
               </p>
             </div>
           </div>
@@ -53,8 +53,8 @@ export default function AboutFacilities() {
               <h2>Cégep Gérald-Godin</h2>
               <p>
                 {language === "fr"
-                  ? "Fabrication et tests à petite échelle"
-                  : "Small-scale manufacturing and testing"}
+                  ? "Prototypage, fabrication à petit échelle et tests"
+                  : "Prototyping, small-scale manufacturing and testing"}
               </p>
             </div>
           </div>
