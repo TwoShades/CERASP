@@ -26,9 +26,9 @@ export default function AboutBoard() {
         // Define the 4 priority members by their exact names
         const priorityNames = [
           "Julie Pelletier",
-          "Richard Harnois",
           "Teresa Berghello",
-          "Gordon Brown",
+          "Simon Fortin",
+          "Roberta Silerova",
         ];
 
         // Extract priority members in order
