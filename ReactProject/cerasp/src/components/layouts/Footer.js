@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/Footer.css";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
           <p>Copyrights © 2019 - 2025 CERASP All Rights Reserved</p>
         </div>
         <div className="privacy">
-          <Link to="/privacy">Privacy Policy</Link>
+          <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
         </div>
       </div>
     </footer>

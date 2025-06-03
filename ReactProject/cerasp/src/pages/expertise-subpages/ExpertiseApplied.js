@@ -54,7 +54,7 @@ const ExpertiseApplied = () => {
         <SubPageHeader
                 name={language === "fr" ? "RECHERCHE APPLIQUÉ" : "APPLIED RESEARCH"}
               />
-        <p>{applied.content[language]}</p>
+        {/* <p>{applied.content[language]}</p> */}
       </div>
       
       <div className="steps-container">

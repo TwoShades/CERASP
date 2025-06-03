@@ -5,55 +5,90 @@
         "fr": "Aperçu"
       },
       "content": {
-        "en": "CERASP is a Technology Access Centre (TAC) dedicated to advancing biomanufacturing, focusing on cosmetic, nutraceutical, and pharmaceutical applications. We provide industry partners with technical support, research collaboration, and access to pilot-scale production. Located within Collège Lionel-Groulx in Quebec, CERASP connects academic expertise with industry needs, accelerating the development and commercialization of innovative bioproducts.",
-        "fr": "Le CERASP est un Centre d’accès à la technologie (CAT) dédié à l’avancement de la biofabrication, axé sur les applications cosmétiques, nutraceutiques et pharmaceutiques. Nous offrons à nos partenaires industriels un soutien technique, une collaboration en recherche et un accès à la production à l’échelle pilote. Situé au Collège Lionel-Groulx au Québec, le CERASP relie l’expertise académique aux besoins de l’industrie, accélérant le développement et la commercialisation de bioproduits innovants."
+        "en": "CERASP is a leading innovation hub offering biomanufacturing, formulation, applied research, and pilot-scale production services. Operating in GLP-compliant labs with GMP standards, CERASP supports partners through strategic collaborations, regulatory expertise, bioinformatics, and training. From product development to funding and troubleshooting, CERASP accelerates innovation across pharma, biotech, and healthcare.",
+        "fr": "CERASP est un centre d’innovation offrant des services en biofabrication, formulation, recherche appliquée et production à l’échelle pilote. Travaillant dans des laboratoires conformes aux BPL et aux normes BPF, CERASP soutient ses partenaires grâce à des collaborations stratégiques, une expertise réglementaire, de la bio-informatique et de la formation. Du développement de produits au financement et au dépannage, CERASP accélère l’innovation en pharma, biotechnologie et santé."
       },
       "expertise": [
         {
           "searchTerm": "microscope",
           "title": {
-            "en": "Microscopy & Analysis",
-            "fr": "Microscopie et Analyse"
+            "en": "Bioprocess Development",
+            "fr": "Développement de Bioprocédés"
           },
           "description": {
-            "en": "Advanced microscopic techniques for detailed molecular and cellular analysis.",
-            "fr": "Techniques de microscopie avancées pour une analyse moléculaire et cellulaire approfondie."
+            "en": "Design and optimization of fermentation-based bioprocesses for pilot and commercial scale.",
+            "fr": "Conception et optimisation de bioprocédés à base de fermentation à l’échelle pilote et commerciale."
           }
         },
         {
-          "searchTerm": "chemistry",
+          "searchTerm": "formulation",
           "title": {
-            "en": "Chemical Research",
-            "fr": "Recherche Chimique"
+            "en": "Advanced Formulation",
+            "fr": "Formulation Avancée"
           },
           "description": {
-            "en": "Innovative chemical processes and formulation development for cutting-edge solutions.",
-            "fr": "Processus chimiques innovants et développement de formulations pour des solutions de pointe."
+            "en": "Custom formulation solutions including microencapsulation, emulsions, and liposomes.",
+            "fr": "Solutions de formulation sur mesure incluant la microencapsulation, les émulsions et les liposomes."
           }
         },
         {
           "searchTerm": "microbe",
           "title": {
-            "en": "Microbial Studies",
-            "fr": "Études Microbiennes"
+            "en": "GMP Training & Compliance",
+            "fr": "Formation et Conformité BPF"
           },
           "description": {
-            "en": "Comprehensive microbial research and biotechnology applications.",
-            "fr": "Recherche microbienne approfondie et applications en biotechnologie."
+            "en": "Specialized training programs in GMP, regulatory affairs, and technical operations.",
+            "fr": "Programmes de formation spécialisés en BPF, affaires réglementaires et opérations techniques."
           }
         }
       ]
+
     },
     "gmp_biomanufacturing": {
-      "title": {
-        "en": "GMP-Ready Biomanufacturing and Strategic Partnerships",
-        "fr": "Biofabrication prête pour les BPF et partenariats stratégiques"
+        "title": {
+          "en": "GMP-Ready Biopharmaceutical Production at CERASP",
+          "fr": "Production biopharmaceutique prête pour les Bonnes Pratiques de Fabrication (BPF) chez CERASP"
+        },
+        "content": {
+          "en": {
+            "overview": [
+              "CERASP is a GLP-compliant facility operating under GMP-aligned procedures to support regulatory readiness.",
+              "We develop GMP-ready biopharmaceutical processes to facilitate seamless technology transfer to licensed manufacturers.",
+              "Expertise includes upstream and downstream process development for biologics and advanced therapies."
+            ],
+            "capabilities": [
+              "Bioprocess optimization (fermentation and cell culture)",
+              "Purification of biomolecules",
+              "Bioactivity and stability testing",
+              "Genomic and microbial characterization",
+              "Analytical method development for biologics"
+            ],
+            "collaboration": [
+              "We collaborate with universities and CCTTs to support industrial innovation and scale-up for advanced therapies.",
+              "Specialized in microbial and mammalian cell culture for the production of therapeutic proteins and other biologics."
+            ]
+          },
+          "fr": {
+            "overview": [
+              "Le CERASP est une installation conforme aux BPL qui opère selon des procédures alignées sur les BPF pour soutenir la préparation réglementaire.",
+              "Nous développons des procédés biopharmaceutiques prêts pour les BPF afin de faciliter un transfert technologique fluide vers les fabricants agréés.",
+              "Notre expertise couvre le développement des procédés en amont et en aval pour les produits biologiques et les thérapies avancées."
+            ],
+            "capabilities": [
+              "Optimisation des bioprocédés (fermentation et culture cellulaire)",
+              "Purification des biomolécules",
+              "Tests de bioactivité et de stabilité",
+              "Caractérisation génomique et microbienne",
+              "Développement de méthodes analytiques pour les produits biologiques"
+            ],
+            "collaboration": [
+              "Nous collaborons avec des universités et des CCTT pour soutenir l'innovation industrielle et le passage à l'échelle des thérapies avancées.",
+              "Spécialisé dans la culture de cellules microbiennes et de mammifères pour la production de protéines thérapeutiques et d'autres biologiques."
+            ]
+          }
+        }
       },
-      "content": {
-        "en": "While not a GMP-certified facility, CERASP operates in GLP-compliant labs and follows GMP standards to ensure smooth technology transfer and dossier preparation. We specialize in fermentation-based bioprocesses and partner with academic and industrial organizations to advance innovation.",
-        "fr": "Bien que non certifié BPF, le CERASP fonctionne dans des laboratoires conformes aux BPL et applique les normes BPF pour faciliter les transferts technologiques et la préparation des dossiers. Nous sommes spécialisés dans les bioprocédés à base de fermentation et collaborons avec des partenaires académiques et industriels pour faire progresser l'innovation."
-      }
-    },
     "formulation": {
       "title": {
         "en": "Formulation",
@@ -68,10 +103,6 @@
       "title": {
         "en": "Applied Research",
         "fr": "Recherche appliquée"
-      },
-      "content": {
-        "en": "CERASP conducts applied research focused on the optimization of bioprocesses, development of novel bio-based ingredients, and enhancement of product stability. Our interdisciplinary team collaborates with clients to solve real-world problems and improve product performance.",
-        "fr": "Le CERASP mène des recherches appliquées axées sur l’optimisation des bioprocédés, le développement de nouveaux ingrédients biosourcés et l’amélioration de la stabilité des produits. Notre équipe interdisciplinaire collabore avec les clients pour résoudre des problèmes concrets et améliorer les performances des produits."
       }
     },
     "pilot_scale_production": {
@@ -90,8 +121,8 @@
         "fr": "Formation"
       },
       "content": {
-        "en": "CERASP provides specialized training programs tailored to the biomanufacturing industry. Topics include GMP practices, bioprocessing techniques, and quality control. These programs are designed to upskill the workforce and meet industry demands.",
-        "fr": "Le CERASP propose des programmes de formation spécialisés adaptés à l’industrie de la biofabrication. Les sujets abordés incluent les pratiques BPF, les techniques de bioprocédés et le contrôle de la qualité. Ces programmes visent à perfectionner la main-d’œuvre et à répondre aux besoins du secteur."
+        "en": "At CERASP, we offer specialized technical training designed to enhance the skills and knowledge of your team. Our services cover a range of topics, including pharmaceutical manufacturing, biomanufacturing, GMP compliance, and regulatory requirements. We provide both customized training sessions and industry-standard programs, available in-person or virtually. Our training ensures that your staff or interns from affiliated colleges are well-equipped to handle technical challenges, optimize processes, and maintain high standards of quality and compliance in your operations.",
+        "fr": "Au CERASP, nous offrons une formation technique spécialisée conçue pour améliorer les compétences et les connaissances de votre équipe. Nos services couvrent un éventail de sujets, notamment la fabrication pharmaceutique, la biofabrication, la conformité aux BPF et les exigences réglementaires. Nous proposons des sessions de formation personnalisées ainsi que des programmes conformes aux normes de l'industrie, disponibles en présentiel ou virtuellement. Notre formation garantit que votre personnel ou des stagiaires provenant du milieu collégial seront bien préparés pour relever les défis techniques, optimiser les processus et maintenir des normes élevées de qualité et de conformité dans vos opérations."
       },
       "card1": {
         "title": {
@@ -150,8 +181,8 @@
         "fr": "Bio-informatique"
       },
       "content": {
-        "en": "We provide advanced bioinformatics services for pharmaceutical and healthcare sectors, including genomic data analysis, transcriptomics, proteomics, and metabolomics. Our solutions accelerate research and enable precision medicine.",
-        "fr": "Nous offrons des services avancés de bio-informatique pour les secteurs pharmaceutique et de la santé, incluant l’analyse de données génomiques, la transcriptomique, la protéomique et la métabolomique. Nos solutions accélèrent la recherche et permettent la médecine de précision."
+        "en": "At the CERASP, we offer cutting-edge Bioinformatics services tailored for both pharmaceutical and healthcare sectors. Our Bioinformatics team specializes in leveraging advanced computational methods and data analysis techniques to support drug discovery, personalized medicine, and biomarker identification.",
+        "fr": "Au CERASP, nous offrons des services de bioinformatique de pointe adaptés aux secteurs pharmaceutique et de la santé. Notre équipe de bioinformatique se spécialise dans l'utilisation de méthodes computationnelles avancées et de techniques d'analyse de données pour soutenir la découverte de médicaments, la médecine personnalisée et l'identification de biomarqueurs."
       },
       "fields": {
         "genomicDataAnalysis": {
@@ -192,8 +223,8 @@
         "fr": "Solutions de santé axées sur les données"
       },
       "content": {
-        "en": "We deliver data-driven solutions for healthcare, leveraging analytics and digital tools to improve patient outcomes, operational efficiency, and compliance. Our services include health data analysis, real-time monitoring, predictive analytics, and digital integration.",
-        "fr": "Nous proposons des solutions de santé axées sur les données, utilisant l’analytique et les outils numériques pour améliorer les résultats des patients, l’efficacité opérationnelle et la conformité. Nos services incluent l’analyse de données de santé, la surveillance en temps réel, l’analytique prédictive et l’intégration numérique."
+        "en": "We provide data-driven solutions for the healthcare sector, utilizing advanced digital tools and analytics to enhance patient care and optimize health outcomes. Our services include health data analysis, digital health integration, and the development of systems for real-time monitoring and decision support. We help healthcare organizations leverage technology to improve operational efficiency, ensure compliance, and drive innovation in patient care.",
+        "fr": "Nous proposons des solutions basées sur les données pour le secteur de la santé, en utilisant des outils numériques avancés et des analyses pour améliorer les soins aux patients et optimiser les résultats de santé. Nos services incluent l'analyse des données de santé, l'intégration de la santé numérique et le développement de systèmes pour la surveillance en temps réel et le support à la décision. Nous aidons les organisations de santé à tirer parti de la technologie pour améliorer l'efficacité opérationnelle, assurer la conformité et stimuler l'innovation dans les soins aux patients."
       }
     },
     "health_canada": {
@@ -203,7 +234,7 @@
       },
       "content": {
         "en": "Recognized partner of Health Canada for regulatory affairs and audits. As an official partner, we deliver solutions that meet the highest industry standards.",
-        "fr": "Partenaire reconnu de Santé Canada pour les affaires réglementaires et les audits. En tant que partenaire officiel, nous proposons des solutions répondant aux normes les plus élevées de l’industrie."
+        "fr": "Partenaire accrédité de Santé Canada pour les affaires réglementaires et les audits. En tant que partenaire officiel de Santé Canada, nous offrons des solutions qui respectent les normes les plus strictes de l’industrie."
       }
     },
     "funding": {
@@ -212,8 +243,8 @@
         "fr": "Aide à l’accès au financement"
       },
       "content": {
-        "en": "We support every stage of the grant process, from team coordination and writing to budget planning and submission. Our expertise covers non-dilutive funding, innovation grants, and strategic positioning to maximize your success.",
-        "fr": "Nous accompagnons chaque étape du processus de subvention, de la coordination d’équipe à la rédaction, la planification budgétaire et la soumission. Notre expertise couvre le financement non dilutif, les subventions à l’innovation et le positionnement stratégique pour maximiser votre succès."
+        "en": "We can handle any part of the grant application process, from team and content coordination to writing, budget development, and collaborator development, through to submission. We are equipped to land non-dilutive grants for projects running between $4K to $10M or more. These include innovation grants for research, development, prototyping, and pilot projects, along with commercialization grants, and expansion grants for new hires, equipment, markets, products, and services. Our industry expertise allows us to precisely communicate your brilliant and innovative ideas, and we do everything possible to find the perfect grants to position you for success. We can also help you with finding funding through government loans, venture capital and angel investors. Our research experts also know how to keep costs low and we can provide you world class results, at a very reasonable price.",
+        "fr": "Nous pouvons prendre en charge toutes les étapes du processus de demande de subvention, de la coordination de l’équipe et du contenu à la rédaction, au développement du budget, au développement des collaborateurs, jusqu’à la soumission. Nous sommes équipés pour obtenir des subventions non dilutives pour des projets allant de 4 $ à 10 millions de dollars ou plus. Cela inclut des subventions pour l'innovation en recherche, développement, prototypage et projets pilotes, ainsi que des subventions pour la commercialisation et l'expansion, pour de nouvelles embauches, des équipements, des marchés, des produits et des services. Notre expertise industrielle nous permet de communiquer précisément vos idées brillantes et innovantes, et nous faisons tout notre possible pour trouver les subventions parfaites afin de vous positionner pour le succès. Nous pouvons également vous aider à trouver des financements par le biais de prêts gouvernementaux, de capital-risque et d'anges investisseurs. Nos experts en recherche savent également comment garder les coûts bas, tout en vous fournissant des résultats de classe mondiale à un prix très raisonnable."
       }
     },
     "troubleshooting": {
@@ -222,8 +253,8 @@
         "fr": "Dépannage"
       },
       "content": {
-        "en": "We help you identify and resolve technical issues in research or production, including product-related problems, equipment malfunctions, and process issues. CERASP assists in implementing solutions to improve your operations.",
-        "fr": "Nous vous aidons à identifier et à résoudre les problèmes techniques en recherche ou en production, y compris les problèmes liés aux produits, les pannes d’équipement et les problèmes de processus. Le CERASP vous accompagne dans la mise en œuvre de solutions pour améliorer vos opérations."
+        "en": "At CERASP, we can help you identify and resolve technical issues that may arise in research or production. Whether it is product-related technical problems, equipment malfunctions, or manufacturing process issues, CERASP can assist you in implementing solutions to correct them and improve your operations.",
+        "fr": "Au CERASP, nous pouvons vous aider à identifier et résoudre les problèmes techniques qui peuvent survenir en recherche ou en production. Qu'il s'agisse de problèmes techniques liés au produit, au mauvais fonctionnement d’équipements ou de procédés de fabrication, ou de mettre en place des solutions pour les corriger, le CERASP peut vous aider à améliorer vos opérations."
       }
     }
   }

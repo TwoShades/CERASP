@@ -1,11 +1,15 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import './ContactUs.css';
-import { Link } from "react-router-dom";
+import { LanguageContext } from '../../contexts/LanguageContext';
+import contactTranslations from './contact-translations.json';
 import emailjs from '@emailjs/browser';
-import axios from 'axios'; // Make sure axios is imported in this file
+import axios from 'axios';
 
 const ContactUs = () => {
+  const { language } = useContext(LanguageContext);
+  const t = contactTranslations.contact_form;
   const form = useRef();
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -15,6 +19,7 @@ const ContactUs = () => {
     privacyPolicy: false,
     newsletter: false
   });
+
   const [formStatus, setFormStatus] = useState({
     submitting: false,
     success: null,
@@ -24,101 +29,79 @@ const ContactUs = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prevData => ({
-      ...prevData,
+    setFormData(prev => ({
+      ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
 
-  // Separate function to handle newsletter subscription
-  // Update this function in your ContactUs.js
-const subscribeToNewsletter = async (name, email) => {
-  try {
-    console.log('Attempting to subscribe to newsletter with:', { name, email });
-    
-    // Direct call to Strapi instead of going through your API route
-    const response = await axios.post(
-      'https://loving-bird-9ef3b0470a.strapiapp.com/api/subscribers',
-      {
-        data: {
-          Name: name,
-          Email: email
-        }
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      }
-    );
-    
-    console.log('Newsletter subscription response:', response.data);
-    
-    return {
-      success: true,
-      message: 'Successfully subscribed to newsletter'
-    };
-  } catch (error) {
-    console.error('Newsletter subscription error details:', error);
-    
-    // Handle duplicate email
-    if (error.response?.data?.error?.message?.includes('duplicate') ||
-        error.response?.data?.error?.details?.errors?.some(e => e.message.includes('already taken'))) {
+  const subscribeToNewsletter = async (name, email) => {
+    try {
+      const response = await axios.post(
+        'https://loving-bird-9ef3b0470a.strapiapp.com/api/subscribers',
+        {
+          data: { Name: name, Email: email }
+        },
+        { headers: { 'Content-Type': 'application/json' } }
+      );
+
       return {
-        success: true, 
-        message: 'You\'re already subscribed to our newsletter!'
+        success: true,
+        message: t.messages[language].newsletterSubscribed
+      };
+    } catch (error) {
+      if (
+        error.response?.data?.error?.message?.includes('duplicate') ||
+        error.response?.data?.error?.details?.errors?.some(e => e.message.includes('already taken'))
+      ) {
+        return {
+          success: true,
+          message: t.messages[language].newsletterAlreadySubscribed
+        };
+      }
+
+      return {
+        success: false,
+        message: t.messages[language].newsletterError
       };
     }
-    
-    return {
-      success: false,
-      message: 'Error subscribing to newsletter. Please try again later.'
-    };
-  }
-};
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Form validation
+
     if (!formData.name || !formData.email || !formData.message || !formData.privacyPolicy) {
       setFormStatus({
         ...formStatus,
         submitting: false,
         success: false,
-        error: 'Please fill in all required fields and accept the privacy policy.'
+        error: t.messages[language].validationError
       });
       return;
     }
-    
+
     setFormStatus({ ...formStatus, submitting: true, success: null, error: null });
-    
+
     try {
-      // Send the contact form email
       await emailjs.sendForm(
-        'service_qahust4',  // Your EmailJS service ID
-        'template_jnlaadq', // Your EmailJS template ID
+        'service_qahust4',
+        'template_jnlaadq',
         form.current,
-        'qqVYpUXwpvqGKOkgx'   // Your EmailJS public key
+        'qqVYpUXwpvqGKOkgx'
       );
 
       let newsletterResult = null;
-      
-      // If newsletter checkbox is checked, add to mailing list
       if (formData.newsletter) {
-        console.log('Newsletter checkbox checked, attempting to subscribe');
         newsletterResult = await subscribeToNewsletter(formData.name, formData.email);
-        console.log('Newsletter subscription result:', newsletterResult);
       }
-      
+
       setFormStatus({
         submitting: false,
-        success: 'Your message has been sent successfully!',
+        success: t.messages[language].success,
         error: null,
         newsletterStatus: newsletterResult?.message
       });
-      
-      // Reset form after successful submission
+
       setFormData({
         name: '',
         company: '',
@@ -129,115 +112,113 @@ const subscribeToNewsletter = async (name, email) => {
         newsletter: false
       });
     } catch (error) {
-      console.error('Form submission error:', error);
       setFormStatus({
         ...formStatus,
         submitting: false,
         success: null,
-        error: 'There was an error sending your message. Please try again later.'
+        error: t.messages[language].error
       });
     }
   };
 
   return (
     <div className="contact-us">
-      {/* Left Side */}
       <div className="contact-left-side">
         <div className="contact-details">
-          <h3>Contact Details</h3>
+          <h3>{t.sectionTitles[language].detailsTitle}</h3>
           <p>7171 Frederick Banting, Montreal, Quebec, Canada H4S 1Z9</p>
           <p>📞 +1 (263) 362-2760</p>
-          <p>📧 info@croasp.ca</p>
+          <p>📧 info@cerasp.ca</p>
         </div>
+
         <form className="contact-form" ref={form} onSubmit={handleSubmit}>
-          <h3>Contact Form</h3>
-          
+          <h3>{t.sectionTitles[language].formTitle}</h3>
+
           {formStatus.success && (
             <div className="form-success-message">{formStatus.success}</div>
           )}
-          
+
           {formStatus.newsletterStatus && (
             <div className="form-success-message">{formStatus.newsletterStatus}</div>
           )}
-          
+
           {formStatus.error && (
             <div className="form-error-message">{formStatus.error}</div>
           )}
-          
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Name *" 
+
+          <input
+            type="text"
+            name="name"
+            placeholder={t.placeholders[language].name}
             value={formData.name}
             onChange={handleChange}
             required
           />
-          
-          <input 
-            type="text" 
-            name="company" 
-            placeholder="Company" 
+
+          <input
+            type="text"
+            name="company"
+            placeholder={t.placeholders[language].company}
             value={formData.company}
             onChange={handleChange}
           />
-          
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Email *" 
+
+          <input
+            type="email"
+            name="email"
+            placeholder={t.placeholders[language].email}
             value={formData.email}
             onChange={handleChange}
             required
           />
-          
-          <input 
-            type="tel" 
-            name="phone" 
-            placeholder="Phone" 
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder={t.placeholders[language].phone}
             value={formData.phone}
             onChange={handleChange}
           />
-          
-          <textarea 
-            name="message" 
-            placeholder="Message *" 
+
+          <textarea
+            name="message"
+            placeholder={t.placeholders[language].message}
             value={formData.message}
             onChange={handleChange}
             required
           />
-          
+
           <label className="checkbox-label">
-            <input 
-              type="checkbox" 
+            <input
+              type="checkbox"
               name="privacyPolicy"
               checked={formData.privacyPolicy}
               onChange={handleChange}
               required
-            /> 
-            I agree to the <Link to="/privacy">Privacy Policy</Link> *
+            />
+            {t.checkboxes[language].privacy} <a href="/privacy" target="_blank" rel="noopener noreferrer">🔗</a>
           </label>
-          
+
           <label className="checkbox-label">
-            <input 
-              type="checkbox" 
+            <input
+              type="checkbox"
               name="newsletter"
               checked={formData.newsletter}
               onChange={handleChange}
-            /> 
-            Be part of the Newsletter
+            />
+            {t.checkboxes[language].newsletter}
           </label>
-          
-          <button 
-            type="submit" 
+
+          <button
+            type="submit"
             disabled={formStatus.submitting}
             className={formStatus.submitting ? 'submitting' : ''}
           >
-            {formStatus.submitting ? 'Sending...' : 'Send'}
+            {formStatus.submitting ? t.buttons[language].submitting : t.buttons[language].submit}
           </button>
         </form>
       </div>
-      
-      {/* Right Side */}
+
       <div className="contact-right-side">
         <div className="contact-sponsors">
           <div className="contact-sponsor-logos">
@@ -251,7 +232,6 @@ const subscribeToNewsletter = async (name, email) => {
               src="/logos/partners/cerasp-member.jpg"
               alt="Members"
             />
-            {/* Add more sponsor logos here */}
           </div>
         </div>
         <div className="contact-google-maps">
