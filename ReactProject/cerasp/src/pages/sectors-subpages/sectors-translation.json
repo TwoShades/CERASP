@@ -1,0 +1,105 @@
+{
+    "preformulation": {
+        "title": {
+            "en": "Preformulation",
+            "fr": "Préformulation"
+        },
+        "content": {
+            "en": "Selection and Configuration of Equipment/Processes Destined to cGMP Environment:",
+            "fr": "Sélection et configuration des équipements/processus destinés à un environnement cGMP : "
+        },
+        "fields": {
+            "ingredientSelection": {
+            "title": {
+                "en": "Selection of ingredients",
+                "fr": "Sélection des ingrédients"
+            },
+            "desc": {
+                "en": "Choosing the right APIs and excipients with attention to quality and safety.",
+                "fr": "Choisir les bons principes actifs et excipients en tenant compte de la qualité et de la sécurité."
+            }
+            },
+            "processOptimization": {
+            "title": {
+                "en": "Process optimization",
+                "fr": "Optimisation des processus"
+            },
+            "desc": {
+                "en": "Maximizing production efficiency through strategic equipment choices.",
+                "fr": "Maximiser l'efficacité de la production grâce à des choix d'équipements stratégiques."
+            }
+            },
+            "dataIntegration": {
+            "title": {
+                "en": "Data integration",
+                "fr": "Intégration des données"
+            },
+            "desc": {
+                "en": "Guidance for real-time data collection and analysis systems.",
+                "fr": "Orientation pour les systèmes de collecte et d’analyse de données en temps réel."
+            }
+            },
+            "rdSupport": {
+            "title": {
+                "en": "Support for R&D",
+                "fr": "Soutien à la R&D"
+            },
+            "desc": {
+                "en": "Helping select optimal equipment for your research and development projects.",
+                "fr": "Aider à choisir les équipements optimaux pour vos projets de recherche et développement."
+            }
+            }
+        }
+    },
+    "formulation": {
+      "title": {
+        "en": "Formulation",
+        "fr": "Formulation"
+      },
+      "content": {
+          "en": "The process of combining various ingredients to create a final product in a specific form, such as tablets, capsules, liquid, or injectables, for the intended therapeutic effect: ",
+          "fr": "Le processus de combinaison de divers ingrédients pour créer un produit final sous une forme spécifique, telle que des comprimés, des capsules, des liquides ou des injectables, pour l'effet thérapeutique prévu : "
+      },
+      "card1": {
+        "title": {
+          "en": "Foundation & Skills",
+          "fr": "Fondations et compétences"
+        },
+        "content": {
+          "en": "Development of new products and/or improvement of existing products.",
+          "fr": "Développement de nouveaux produits et/ou amélioration des produits existants."
+        }
+      },
+      "card2": {
+        "title": {
+          "en": "Advanced Compliance",
+          "fr": "Conformité avancée"
+        },
+        "content": {
+          "en": "Dosage Forms: Develop appropriate dosage forms, such as tablets, capsules, creams, gels, injectables, etc., tailored to the needs of patients. ",
+          "fr": "Formes posologiques : Développer des formes posologiques appropriées, telles que des comprimés, des capsules, des crèmes, des gels, des injectables, etc., adaptées aux besoins des patients. "
+        }
+      },
+      "card3": {
+        "title": {
+          "en": "Customization & Delivery",
+          "fr": "Personnalisation et diffusion"
+        },
+        "content": {
+            "en": "Product Optimization/Line Extension: Ensure that the formulation remains stable under different conditions and maintains its effectiveness over time, in compliance with pharmaceutical regulations. ",
+            "fr": "Optimisation du produit/Extension de ligne : S'assurer que la formulation reste stable dans différentes conditions et conserve son efficacité au fil du temps, en conformité avec les réglementations pharmaceutiques."
+        }
+      },
+      "card4": {
+        "title": {
+          "en": "Customization & Delivery",
+          "fr": "Personnalisation et diffusion"
+        },
+        "content": {
+            "en": "Regulatory Compliance: Understand and comply with regulatory guidelines for product approval and marketing, ensuring compliance with market requirements.",
+            "fr": "Conformité réglementaire : Comprendre et se conformer aux directives réglementaires pour l'approbation et la commercialisation des produits, en garantissant la conformité avec les exigences du marché."
+        }
+      }
+    }
+
+}
