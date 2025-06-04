@@ -57,20 +57,18 @@ export default function ProjectsGrants() {
       <SubPageHeader
         name={language === "fr" ? "SUBVENTIONS" : "GRANTS"}
         extraContent={
-          <div className="grants-header-text">
-            {language === "fr" ? (
-              <p>
-                Nous sommes fiers d'avoir reçu plus de 2 millions de dollars en
-                subventions au cours des deux dernières années pour soutenir nos
-                clients et l'écosystème.
-              </p>
-            ) : (
-              <p>
-                We are proud to have received over $2 million in grants over the
-                past two years to support our clients and the ecosystem.
-              </p>
-            )}
-          </div>
+          language === "fr" ? (
+            <h4>
+              Nous sommes fiers d'avoir reçu plus de 2 millions de dollars en
+              subventions au cours des deux dernières années pour soutenir nos
+              clients et l'écosystème.
+            </h4>
+          ) : (
+            <h4>
+              We are proud to have received over $2 million in grants over the
+              past two years to support our clients and the ecosystem.
+            </h4>
+          )
         }
       />
       <ul className="grants-list">

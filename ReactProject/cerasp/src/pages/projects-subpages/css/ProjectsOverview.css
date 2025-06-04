@@ -24,11 +24,6 @@
   padding-top: 90px;
 }
 
-.projects-overview-layout p {
-  padding-top: 0;
-  padding-left: 1em;
-}
-
 .projects-overview-header {
   color: white;
   position: relative;
@@ -39,7 +34,6 @@
 }
 
 .projects-overview-header-text {
-  padding: 0 1em 0 1em;
   margin-top: 0;
   font-size: 18px;
   font-weight: 200;

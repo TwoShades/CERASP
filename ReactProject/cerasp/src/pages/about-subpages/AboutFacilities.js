@@ -10,16 +10,17 @@ export default function AboutFacilities() {
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
   return (
     <div className="about-facilities-layout">
-      <SubPageHeader name={language === "fr" ? "LOCATIONS" : "FACILITIES"} />
-      <div className="about-facilities">
-        <div className="about-facilities-header">
-          <h3>
+      <SubPageHeader
+        name={language === "fr" ? "LOCATIONS" : "FACILITIES"}
+        extraContent={
+          <p>
             {language === "fr"
               ? "Le CERASP dispose de 3 sites à la fine pointe de la technologie!"
               : "The CERASP has 3 state-of-the-art sites available!"}
-          </h3>
-        </div>
-
+          </p>
+        }
+      />
+      <div className="about-facilities">
         <div className="about-facilities-images">
           <div className="facility-card">
             <img

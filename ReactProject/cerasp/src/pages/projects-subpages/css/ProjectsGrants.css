@@ -1,13 +1,6 @@
 .grants-section {
   padding-top: 90px;
-  border-radius: 18px;
-  border: 1px solid #e6e6e6;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   margin-bottom: 60px;
-}
-
-.grants-header-text p {
-  font-size: 18px;
 }
 
 .grants-list {

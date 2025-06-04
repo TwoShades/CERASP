@@ -40,13 +40,11 @@ const ProjectsOverview = () => {
       <SubPageHeader
         name={language === "fr" ? "NOS PROJETS" : "OUR PROJECTS"}
         extraContent={
-          <div className="projects-overview-header-text">
-            <p>
-              {language === "fr"
-                ? "Projets innovants et bilingues axés sur la recherche pharmaceutique et biomédicale."
-                : "Innovative bilingual projects focused on pharmaceutical and biomedical research."}
-            </p>
-          </div>
+          <h4>
+            {language === "fr"
+              ? "Projets innovants et bilingues axés sur la recherche pharmaceutique et biomédicale."
+              : "Innovative bilingual projects focused on pharmaceutical and biomedical research."}
+          </h4>
         }
       />
       <div className="project-container">
