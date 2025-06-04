@@ -10,38 +10,43 @@ const ExpertiseOverview = () => {
   const overview = expertiseTranslations.overview;
   const expertiseCards = overview.expertise;
 
-
   return (
     // expertise-overview-layout
-    
-    <div className="expertise-overview">
-      <div className="expertise-overview-title">
-        <SubPageHeader
-                name={language === "fr" ? "ACCEUIL" : "OVERVIEW"}
-              />
-        <p>{overview.content[language]}</p>
-      </div>
-      
-      <div className="expertise-overview-content">
-        {expertiseCards.map((card, index) => (
-          <div key={index} className="expertise-overview-card">
-            <div className="stock-image-container">
-              <StockImageFetch
-                searchTerm={card.searchTerm}
-                imgSource="large"
-                orientation="portrait"
-                page={1}
-                perPage={1}
-              />
-            </div>
-            
-            <div className="card-overlay">
-              <div className="card-title">{card.title[language]}</div>
-              <div className="card-description">{card.description[language]}</div>
+    <div className="expertise-overview-layout">
+      <div className="expertise-overview">
+        <div className="expertise-overview-title">
+          <SubPageHeader
+            name={
+              language === "fr"
+                ? "EXPERTISES & SOLUTIONS"
+                : "EXPERTISES & SOLUTIONS"
+            }
+          />
+          <p>{overview.content[language]}</p>
+        </div>
 
+        <div className="expertise-overview-content">
+          {expertiseCards.map((card, index) => (
+            <div key={index} className="expertise-overview-card">
+              <div className="stock-image-container">
+                <StockImageFetch
+                  searchTerm={card.searchTerm}
+                  imgSource="large"
+                  orientation="portrait"
+                  page={1}
+                  perPage={1}
+                />
+              </div>
+
+              <div className="card-overlay">
+                <div className="card-title">{card.title[language]}</div>
+                <div className="card-description">
+                  {card.description[language]}
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

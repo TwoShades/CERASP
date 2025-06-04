@@ -12,9 +12,8 @@ const ExpertiseGMP = () => {
 
   return (
     <div className="expertise-gmp">
-      <SubPageHeader name={gmp.title[language]} />
-
       <div className="expertise-gmp-content">
+        <SubPageHeader name={gmp.title[language]} />
         {/* Hero Section with Image */}
         <div className="gmp-hero-section">
           <div className="gmp-hero-image">
@@ -36,7 +35,9 @@ const ExpertiseGMP = () => {
             </div>
             <div className="card-content">
               {overview.map((point, idx) => (
-                <div key={`overview-${idx}`} className="bullet-point">• {point}</div>
+                <div key={`overview-${idx}`} className="bullet-point">
+                  • {point}
+                </div>
               ))}
             </div>
           </div>
@@ -47,10 +48,14 @@ const ExpertiseGMP = () => {
               <div className="card-icon">🧬</div>
             </div>
             <div className="card-content">
-              <div className="bullet-point">• {language === "fr" ? "Capacités :" : "Capabilities include:"}</div>
+              <div className="bullet-point">
+                • {language === "fr" ? "Capacités :" : "Capabilities include:"}
+              </div>
               <div className="sub-bullet-points">
                 {capabilities.map((item, idx) => (
-                  <div key={`capability-${idx}`} className="sub-bullet">o {item}</div>
+                  <div key={`capability-${idx}`} className="sub-bullet">
+                    o {item}
+                  </div>
                 ))}
               </div>
             </div>
@@ -63,7 +68,9 @@ const ExpertiseGMP = () => {
             </div>
             <div className="card-content">
               {collaboration.map((item, idx) => (
-                <div key={`collab-${idx}`} className="bullet-point">• {item}</div>
+                <div key={`collab-${idx}`} className="bullet-point">
+                  • {item}
+                </div>
               ))}
             </div>
           </div>

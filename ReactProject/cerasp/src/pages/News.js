@@ -7,6 +7,26 @@ import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import NewsOverview from "./news-subpages/NewsOverview.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 
+// PUT BACK IN SITEMAP WHEN READY
+// {
+//           "id": "equipment-updates",
+//           "en": "Equipment Updates",
+//           "fr": "Mises à jour des équipements"
+//         },
+//         {
+//           "id": "new-grants",
+//           "en": "New Grants",
+//           "fr": "Nouvelles subventions"
+//         },
+//         {
+//           "id": "blogs-&-white-papers",
+//           "en": "Blogs & White Papers",
+//           "fr": "Blogues & articles"
+//         },
+//         { "id": "webinars", "en": "Webinars", "fr": "Webinaires" },
+//         { "id": "events", "en": "Events", "fr": "Événements" },
+//         { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
+
 const News = () => {
   useScrollToPanel();
 

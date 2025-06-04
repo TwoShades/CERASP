@@ -150,25 +150,7 @@
         "fr": "Nouvelles"
       },
       "sub-pages": [
-        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
-        {
-          "id": "equipment-updates",
-          "en": "Equipment Updates",
-          "fr": "Mises à jour des équipements"
-        },
-        {
-          "id": "new-grants",
-          "en": "New Grants",
-          "fr": "Nouvelles subventions"
-        },
-        {
-          "id": "blogs-&-white-papers",
-          "en": "Blogs & White Papers",
-          "fr": "Blogues & articles"
-        },
-        { "id": "webinars", "en": "Webinars", "fr": "Webinaires" },
-        { "id": "events", "en": "Events", "fr": "Événements" },
-        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
+        { "id": "overview", "en": "Latest news", "fr": "Dernières nouvelles" }
       ]
     }
   ]
