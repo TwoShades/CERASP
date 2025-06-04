@@ -71,20 +71,6 @@ const UnderConstruction = ({ className = "" }) => {
             }
           </p>
 
-          {/* Progress Bar */}
-          <div className="progress-container">
-            <div className="progress-label">
-              <span>{language === "fr" ? "Progression" : "Progress"}</span>
-              <span className="progress-percentage">{progress}%</span>
-            </div>
-            <div className="progress-bar">
-              <div 
-                className="progress-fill"
-                style={{ width: `${progress}%` }}
-              ></div>
-            </div>
-          </div>
-
           {/* Status Items */}
           <div className="status-grid">
             <div className="status-item">
@@ -114,14 +100,6 @@ const UnderConstruction = ({ className = "" }) => {
                 </span>
               </div>
             </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="construction-cta">
-            {/* <button className="notify-btn">
-              <AlertCircle size={18} />
-              {language === "fr" ? "Nous Contacter" : "Contact Us"}
-            </button> */}
           </div>
         </div>
 

@@ -4,6 +4,7 @@ import ContactUs from "./ContactUs/ContactUs.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
 import SectorsPrototyping from "./sectors-subpages/SectorsPrototyping.js";
+import UnderConstruction from "../components/layouts/UnderConstruction.js";
 
 const Sectors = () => {
   useScrollToPanel();
@@ -16,7 +17,8 @@ const Sectors = () => {
         */}
 
       <div title="sector-of-activities" id="overview">
-        <SectorsOverview />
+        {/* <SectorsOverview /> */}
+        <UnderConstruction />
       </div>
 
       {/*   =========================
