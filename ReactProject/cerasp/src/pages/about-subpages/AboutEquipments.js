@@ -16,7 +16,7 @@ const AboutEquipments = () => {
     const fetchEquipments = async () => {
       try {
         const res = await fetch(
-          `https://loving-bird-9ef3b0470a.strapiapp.com/api/equipments?&populate=PDF&populate=Image`
+          `https://loving-bird-9ef3b0470a.strapiapp.com/api/equipments?&populate=PDF&populate=Image&pagination[page]=1&pagination[pageSize]=100`
         );
         const json = await res.json();
 
@@ -110,6 +110,21 @@ const AboutEquipments = () => {
           >
             &gt;
           </button>
+        </div>
+        <div className="equipment-master-list">
+          {language === "fr" ? (
+            <h4 className="equipment-master-list-title">
+              Liste complète de l'équipement
+            </h4>
+          ) : (
+            <h4 className="equipment-master-list-title">
+              Comprehensive List of Equipment
+            </h4>
+          )}
+          <LearnMoreButton
+            pdfUrl={`equipments/pdfs/cerasp-equipment-master-list.pdf`}
+            text={language === "fr" ? "Cliquez Ici" : "Click Here"}
+          />
         </div>
       </div>
     </div>

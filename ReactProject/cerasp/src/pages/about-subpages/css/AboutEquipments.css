@@ -223,6 +223,20 @@
   background-color: #003d80;
 }
 
+/* Master List */
+.equipment-master-list {
+  width: 240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 86, 179, 0.1);
+  border-radius: 16px;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 1200px) {
   .equipment-card {

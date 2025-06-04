@@ -32,7 +32,12 @@ export default function AboutFacilities() {
               alt="John Abbott College"
             />
             <div className="facility-card-info">
-              <h2>John Abbott College</h2>
+              {language === "fr" ? (
+                <h2>Cégep John Abbott</h2>
+              ) : (
+                <h2>John Abbott College</h2>
+              )}
+
               <p>
                 {language === "fr"
                   ? "Fabrication et tests à petite échelle"
