@@ -244,16 +244,22 @@ const ContactUs = () => {
       <div className="contact-right-side">
         <div className="contact-sponsors">
           <div className="contact-sponsor-logos">
+            <div className="partner-with"> {language === "fr" ? "CERASP est partenaire de :" : "CERASP is partnering with:"}</div>
+            <div className="partner-logos">
             <img
               className="partner-card-img"
               src="/logos/partners/cerasp-partner.jpg"
               alt="Partners"
             />
+            </div>
+            <div className="member-of"> {language === "fr" ? "CERASP est un fier membre de :" : "CERASP is a proud member of:"}</div>
+            <div className="member-logos">
             <img
               className="partner-card-img"
               src="/logos/partners/cerasp-member.jpg"
               alt="Members"
             />
+            </div>
           </div>
         </div>
         <div className="contact-google-maps">

@@ -110,7 +110,10 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
+}
+
+.partner-logos {
+  margin-bottom: 1.2em;
 }
 
 .contact-sponsor-logos img {
@@ -118,17 +121,27 @@ textarea {
   object-fit: contain;
 }
 
+.member-of,
+.partner-with {
+  font-weight: bold;
+}
+
+
 @media (max-width: 1200px) {
   .contact-us {
     flex-direction: column-reverse;
 
     margin-bottom: 2em;
-    padding: 0 2em 0em 2em;
+    padding: 2em 2em 0em 2em;
   }
 
   .contact-form textarea {
     min-height: 100px;
     resize: none;
+  }
+
+  .contact-google-maps {
+    min-height: 300px;
   }
 }
 

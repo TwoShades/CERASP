@@ -3,6 +3,7 @@ import Footer from "../components/layouts/Footer.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
+import SectorsPrototyping from "./sectors-subpages/SectorsPrototyping.js";
 
 const Sectors = () => {
   useScrollToPanel();
@@ -88,37 +89,7 @@ const Sectors = () => {
         */}
 
       <div title="sector-of-activities" id="prototyping">
-        {/* <CenteredFeaturePanel
-          title="GMP EXPERTISE & BIOMANUFACTURING"
-          image={<div className="image-placeholder"></div>}
-          features={[
-            {
-              title: "Manufacturing",
-              text:
-                "Manufacturing According to GMP (Good Manufacturing Practices) Standards: " +
-                "At CERASP, we are a facility that is not GMP-compliant. However, our laboratories and " +
-                "production areas are GLP (Good Laboratory Practice) compliant, and we work and " +
-                "document according to GMP standards to facilitate technology transfer and the " +
-                "preparation of dossiers that will eventually be submitted to regulatory authorities for our " +
-                "clients.",
-            },
-            {
-              title: "Develop your Product",
-              text:
-                "CERASP helps you develop products and manufacturing processes that are GMP compliant (GMP ready, thus ready for transfer)." +
-                "Additionally, it is worth noting that we have several partnerships with universities and collaborations with other College Centers for " +
-                "Technology Transfer (CCTTs) for projects aimed at industrial partners.",
-            },
-            {
-              title: "Biomanufacturing",
-              text: `We specialize in the optimization of bioprocesses, focusing on fermentation-based 
-              processes in solid and liquid cultures. Our team has extensive experience in producing 
-              enzymes and bioproducts, conducting bioactivity assessments, and employing microbial 
-              identification and genomics techniques. We also apply analytical chemistry for specialized 
-              applications such as hydrocarbon analysis.`,
-            },
-          ]}
-        /> */}
+        <SectorsPrototyping />
       </div>
 
       {/*   =========================
