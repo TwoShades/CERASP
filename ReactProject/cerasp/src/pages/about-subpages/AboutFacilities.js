@@ -10,11 +10,12 @@ export default function AboutFacilities() {
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
   return (
     <div className="about-facilities-layout">
-      <SubPageHeader name={language === "fr" ? "LOCATIONS" : "FACILITIES"} />
-      <div className="about-facilities">
-        <div className="about-facilities-header">
-          <h3>
+      <SubPageHeader
+        name={language === "fr" ? "LOCATIONS" : "FACILITIES"}
+        extraContent={
+          <h4>
             {language === "fr"
+
               ? "Le CERASP compte trois sites répartis à travers Montréal."
               : "The CERASP has three platforms available across Montreal."}
           </h3>
@@ -31,7 +32,12 @@ export default function AboutFacilities() {
               alt="John Abbott College"
             />
             <div className="facility-card-info">
-              <h2>John Abbott College</h2>
+              {language === "fr" ? (
+                <h2>Cégep John Abbott</h2>
+              ) : (
+                <h2>John Abbott College</h2>
+              )}
+
               <p>
                 {language === "fr"
                   ? "Prototypage, fabrication à petit échelle et tests"
@@ -79,17 +85,10 @@ export default function AboutFacilities() {
 
         <div className="about-facilities-map">
           <h2>{language === "fr" ? "Où nous trouver" : "Where to find us"}</h2>
-          {isMobile ? (
-            <img
-              src="/photos/facilities/cerasp-map-portrait.jpg"
-              alt="CERASP Map"
-            />
+          {language === "fr" ? (
+            <img src="/photos/facilities/cerasp-map-fr.jpg" alt="CERASP Map" />
           ) : (
-            <img
-              className="map-quick-adjust"
-              src="/photos/facilities/cerasp-map-portrait.jpg"
-              alt="CERASP Map"
-            />
+            <img src="/photos/facilities/cerasp-map-en.jpg" alt="CERASP Map" />
           )}
         </div>
       </div>

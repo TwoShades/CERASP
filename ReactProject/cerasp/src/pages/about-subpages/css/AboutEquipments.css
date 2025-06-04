@@ -63,7 +63,7 @@
   text-align: center;
   padding: 32px 24px 24px;
   height: 400px;
-  width: 15%;
+  width: 25%;
   color: #333333;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
@@ -125,7 +125,7 @@
 }
 
 .equipment-card img {
-  width: 90%;
+  width: 60%;
   border-radius: 12px;
   object-fit: cover;
   margin-bottom: 20px;
@@ -221,6 +221,20 @@
 
 .pagination-arrow:hover:not(:disabled) {
   background-color: #003d80;
+}
+
+/* Master List */
+.equipment-master-list {
+  width: 240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 86, 179, 0.1);
+  border-radius: 16px;
 }
 
 /* Responsive adjustments */

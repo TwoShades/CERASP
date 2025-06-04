@@ -40,24 +40,20 @@ const ProjectsOverview = () => {
       <SubPageHeader
         name={language === "fr" ? "NOS PROJETS" : "OUR PROJECTS"}
         extraContent={
-          <div className="projects-overview-header-text">
-            <p>
-              {language === "fr"
-                ? "Projets innovants et bilingues axés sur la recherche pharmaceutique et biomédicale."
-                : "Innovative bilingual projects focused on pharmaceutical and biomedical research."}
-            </p>
-          </div>
+          <h4>
+            {language === "fr"
+              ? "Projets innovants et bilingues axés sur la recherche pharmaceutique et biomédicale."
+              : "Innovative bilingual projects focused on pharmaceutical and biomedical research."}
+          </h4>
         }
       />
       <div className="project-container">
-        <div className="project-right">
-          {projectsData.map((proj, index) => (
-            <div key={index} className="project-card">
-              <h3>{proj.title}</h3>
-              <p className="desc">{proj.content}</p>
-            </div>
-          ))}
-        </div>
+        {projectsData.map((proj, index) => (
+          <details key={index} className="project-card">
+            <summary>{proj.title}</summary>
+            <p>{proj.content}</p>
+          </details>
+        ))}
       </div>
     </div>
   );

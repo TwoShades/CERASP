@@ -11,8 +11,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: row wrap;
+  flex-flow: column;
   gap: 30px;
+}
+
+.news-overview-layout iframe {
+  width: 50%;
+  box-shadow: 0 8px 20px rgba(53, 53, 53, 0.6);
 }
 
 @media (max-width: 1200px) {
@@ -20,9 +25,14 @@
     padding-left: 0;
     padding-right: 0;
   }
+
+  .news-overview-layout iframe {
+    width: 60% !important;
+  }
 }
 
-.news-overview-layout iframe {
-  width: 40%;
-  box-shadow: 0 8px 20px rgba(53, 53, 53, 0.6);
+@media (max-width: 768px) {
+  .news-overview-layout iframe {
+    width: 80% !important;
+  }
 }

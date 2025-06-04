@@ -19,6 +19,22 @@
 
 .subpage-header h1 {
   padding: 1em 1em 1em 0;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subpage-header p {
+  font-size: 1.4rem;
+  font-weight: 200;
+  margin: 0.5em 0;
+}
+
+.subpage-header h4 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 0.5em 0;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
 }
 
 .subpage-header::before {
@@ -59,20 +75,19 @@
 }
 
 @media screen and (max-width: 850px) {
-  .subpage-header h1 {
-    font-size: 1.5rem;
-    padding: 0.5em;
-  } 
+  .subpage-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .subpage-header p {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .subpage-header h1 {
-    font-size: 1.2rem;
-    padding: 0.5em;
-  }
-}
-@media (max-width: 768px) {
-  .subpage-header {
-    padding: 0.5em 2em 0.5em 2em;
+  .subpage-header p {
+    font-size: 0.8rem;
+    font-weight: 200;
+    text-align: justify;
   }
 }

@@ -33,6 +33,8 @@
 .nav-logo.mobile {
   display: block;
   z-index: 1001;
+  height: 30px;
+  width: auto;
 }
 
 .nav-item {

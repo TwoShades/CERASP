@@ -16,7 +16,7 @@ const AboutEquipments = () => {
     const fetchEquipments = async () => {
       try {
         const res = await fetch(
-          `https://loving-bird-9ef3b0470a.strapiapp.com/api/equipments?&populate=PDF&populate=Image`
+          `https://loving-bird-9ef3b0470a.strapiapp.com/api/equipments?&populate=PDF&populate=Image&pagination[page]=1&pagination[pageSize]=100`
         );
         const json = await res.json();
 
@@ -37,7 +37,7 @@ const AboutEquipments = () => {
     fetchEquipments();
   }, [language]);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 4 : 4;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 4 : 3;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
@@ -56,15 +56,18 @@ const AboutEquipments = () => {
 
   return (
     <div className="about-equipments-layout">
-      <SubPageHeader name={language === "fr" ? "ÉQUIPEMENT" : "EQUIPMENT"} />
-      <div className="about-equipments">
-        <div className="about-equipments-header">
-          <h3>
+      <SubPageHeader
+        name={language === "fr" ? "ÉQUIPEMENT" : "EQUIPMENT"}
+        extraContent={
+          <h4>
             {language === "fr"
               ? "Découvrez notre équipement à la fine pointe de la technologie!"
               : "Discover our state-of-the-art equipment!"}
-          </h3>
-        </div>
+          </h4>
+        }
+      />
+      <div className="about-equipments">
+        <div className="about-equipments-header"></div>
 
         <div className="about-equipments-images">
           {currentItems.map((equipment) => (
@@ -107,6 +110,21 @@ const AboutEquipments = () => {
           >
             &gt;
           </button>
+        </div>
+        <div className="equipment-master-list">
+          {language === "fr" ? (
+            <h4 className="equipment-master-list-title">
+              Liste complète de l'équipement
+            </h4>
+          ) : (
+            <h4 className="equipment-master-list-title">
+              Comprehensive List of Equipment
+            </h4>
+          )}
+          <LearnMoreButton
+            pdfUrl={`equipments/pdfs/cerasp-equipment-master-list.pdf`}
+            text={language === "fr" ? "Cliquez Ici" : "Click Here"}
+          />
         </div>
       </div>
     </div>
