@@ -1,0 +1,68 @@
+{
+"contact_form": {
+  "sectionTitles": {
+    "en": {
+      "formTitle": "Contact Form",
+      "detailsTitle": "Contact Details"
+    },
+    "fr": {
+      "formTitle": "Formulaire de contact",
+      "detailsTitle": "Coordonnées"
+    }
+  },
+  "placeholders": {
+    "en": {
+      "name": "Name *",
+      "company": "Company",
+      "email": "Email *",
+      "phone": "Phone",
+      "message": "Message *"
+    },
+    "fr": {
+      "name": "Nom *",
+      "company": "Entreprise",
+      "email": "Courriel *",
+      "phone": "Téléphone",
+      "message": "Message *"
+    }
+  },
+  "checkboxes": {
+    "en": {
+      "privacy": "I agree to the Privacy Policy *",
+      "newsletter": "Be part of the Newsletter"
+    },
+    "fr": {
+      "privacy": "J'accepte la politique de confidentialité *",
+      "newsletter": "Je souhaite recevoir la newsletter"
+    }
+  },
+  "buttons": {
+    "en": {
+      "submit": "Send",
+      "submitting": "Sending..."
+    },
+    "fr": {
+      "submit": "Envoyer",
+      "submitting": "Envoi en cours..."
+    }
+  },
+  "messages": {
+    "en": {
+      "success": "Your message has been sent successfully!",
+      "error": "There was an error sending your message. Please try again later.",
+      "validationError": "Please fill in all required fields and accept the privacy policy.",
+      "newsletterSubscribed": "Successfully subscribed to newsletter",
+      "newsletterAlreadySubscribed": "You're already subscribed to our newsletter!",
+      "newsletterError": "Error subscribing to newsletter. Please try again later."
+    },
+    "fr": {
+      "success": "Votre message a été envoyé avec succès!",
+      "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.",
+      "validationError": "Veuillez remplir tous les champs requis et accepter la politique de confidentialité.",
+      "newsletterSubscribed": "Abonnement à la newsletter réussi",
+      "newsletterAlreadySubscribed": "Vous êtes déjà abonné à notre newsletter!",
+      "newsletterError": "Erreur lors de l'abonnement à la newsletter. Veuillez réessayer plus tard."
+    }
+  }
+}
+}

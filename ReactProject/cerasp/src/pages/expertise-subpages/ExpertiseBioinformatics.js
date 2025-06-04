@@ -13,7 +13,7 @@ const ExpertiseBioinformatics = () => {
     <div className="expertise-bioinformatics">
       <div className="bioinfo-header">
         <SubPageHeader
-                name={language === "fr" ? "EXCELLENCE EN BIOINFORMATIQUE" : "BIOINFORMATICS EXCELLENCE"}
+                name={language === "fr" ? "BIOINFORMATIQUE" : "BIOINFORMATICS"}
               />
       </div>
       

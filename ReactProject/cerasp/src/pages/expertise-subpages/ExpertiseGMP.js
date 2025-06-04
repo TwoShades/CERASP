@@ -8,15 +8,16 @@ import SubPageHeader from "../../components/layouts/SubPageHeader";
 const ExpertiseGMP = () => {
   const { language } = useContext(LanguageContext);
   const gmp = expertiseTranslations.gmp_biomanufacturing;
+  const { overview, capabilities, collaboration } = gmp.content[language];
 
   return (
     <div className="expertise-gmp">
-      <SubPageHeader
-              name={language === "fr" ? "BIOFABRICATION PRêTE POUR LES BPF ET PARTENARIATS STRATéGIQUES" : "GMP-READY BIOMANUFACTURING AND STRATEGIC PARTNERSHIPS"}
-            />
+      <SubPageHeader name={gmp.title[language]} />
+
       <div className="expertise-gmp-content">
-        <div className="expertise-gmp-image">
-          <div className="expertise-gmp-image-content">
+        {/* Hero Section with Image */}
+        <div className="gmp-hero-section">
+          <div className="gmp-hero-image">
             <StockImageFetch
               searchTerm="biologist"
               imgSource="large"
@@ -26,9 +27,45 @@ const ExpertiseGMP = () => {
             />
           </div>
         </div>
-        <div className="feature-card">
-          <div className="feature-text">
-            <p>{gmp.content[language]}</p>
+
+        <div className="gmp-cards-container">
+          {/* Overview Card */}
+          <div className="gmp-card overview-card">
+            <div className="card-header">
+              <div className="card-icon">🏢</div>
+            </div>
+            <div className="card-content">
+              {overview.map((point, idx) => (
+                <div key={`overview-${idx}`} className="bullet-point">• {point}</div>
+              ))}
+            </div>
+          </div>
+
+          {/* Capabilities Card */}
+          <div className="gmp-card capabilities-card">
+            <div className="card-header">
+              <div className="card-icon">🧬</div>
+            </div>
+            <div className="card-content">
+              <div className="bullet-point">• {language === "fr" ? "Capacités :" : "Capabilities include:"}</div>
+              <div className="sub-bullet-points">
+                {capabilities.map((item, idx) => (
+                  <div key={`capability-${idx}`} className="sub-bullet">o {item}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Collaboration Card */}
+          <div className="gmp-card collaboration-card">
+            <div className="card-header">
+              <div className="card-icon">🤝</div>
+            </div>
+            <div className="card-content">
+              {collaboration.map((item, idx) => (
+                <div key={`collab-${idx}`} className="bullet-point">• {item}</div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

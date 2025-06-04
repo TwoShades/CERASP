@@ -71,7 +71,7 @@
     {
       "page-id": "sector-of-activities",
       "nav": {
-        "en": "Sector of Activities",
+        "en": "Areas of Activities",
         "fr": "Secteurs d’activités"
       },
       "sub-pages": [
@@ -89,8 +89,8 @@
         },
         {
           "id": "ref-aff-activities",
-          "en": "Ref Aff Activities",
-          "fr": "Activités réglementaires"
+          "en": "Regulatory Affairs",
+          "fr": "Affaires Réglementaires"
         },
         { "id": "prototyping", "en": "Prototyping", "fr": "Prototypage" },
         {
