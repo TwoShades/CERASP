@@ -133,7 +133,15 @@
         "en": "Our Projects",
         "fr": "Nos projets"
       },
-      "sub-pages": [{ "id": "overview", "en": "Overview", "fr": "Aperçu" }]
+      "sub-pages": [
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
+        {
+          "id": "grants",
+          "en": "Grants Awarded",
+          "fr": "Subventions accordées"
+        },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
+      ]
     },
     {
       "page-id": "news",

@@ -56,23 +56,6 @@ export default function NewsOverview() {
           allowfullscreen=""
           title="Embedded post"
         ></iframe>
-        <iframe
-          src="https://www.linkedin.com/embed/feed/update/urn:li:share:7320803035293573120?collapsed=1"
-          height="671"
-          width="504"
-          frameborder="0"
-          allowfullscreen=""
-          title="Embedded post"
-        ></iframe>
-
-        <iframe
-          src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7308839915805376512"
-          height="756"
-          width="504"
-          frameborder="0"
-          allowfullscreen=""
-          title="Embedded post"
-        ></iframe>
       </div>
     </div>
   );

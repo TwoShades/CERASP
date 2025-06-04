@@ -4,7 +4,9 @@
   flex-direction: column;
   font-family: "Segoe UI", sans-serif;
   position: relative;
-  min-height: 100vh;
+  display: flex;
+  gap: 20px;
+  padding: 1em;
 }
 
 .project-container::after {
@@ -45,36 +47,6 @@
   line-height: 1.6;
 }
 
-.project-left::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 45deg,
-    transparent,
-    rgba(255, 255, 255, 0.03),
-    transparent,
-    rgba(255, 255, 255, 0.05),
-    transparent
-  );
-  animation: rotate 20s linear infinite;
-  pointer-events: none;
-}
-
-.project-left::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  right: -2px;
-  height: 4px;
-  background: linear-gradient(90deg, #00d4ff, #0099cc, #005eb8, #003d82);
-  border-radius: 0 0 18px 18px;
-}
-
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -102,24 +74,14 @@
   font-weight: 400;
 }
 
-.project-right {
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 25px;
-}
-
+/* NEW: Project card as <details> styled component */
 .project-card {
-  padding: 35px 30px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #e6e6e6;
   border-radius: 18px;
-  border: 1px solid rgba(0, 94, 184, 0.15);
-  position: relative;
   overflow: hidden;
-  /* Removed slide animation and initial transform/opacity */
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .project-card::before {
@@ -128,67 +90,67 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #005eb8, #0074d9, #00a8ff);
+  height: 0px;
+  background: linear-gradient(135deg, #7fb0ff, #085dbd);
+  transition: height 0.1s ease;
+  z-index: 2;
 }
 
-.project-card::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  opacity: 0;
+.project-card:hover::before {
+  height: 4px;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(0, 94, 184, 0.25);
+  /* border-color: #0056b3; */
   box-shadow: 0 12px 40px rgba(0, 94, 184, 0.12),
     0 4px 20px rgba(0, 94, 184, 0.08);
 }
 
-.project-card:hover::before {
-  transform: scaleX(1);
-}
-
-.project-card:hover::after {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.project-card h3 {
-  font-size: 1.45rem;
-  color: #003d82;
-  margin-bottom: 12px;
-  font-weight: 700;
-  position: relative;
-  transition: all 0.3s ease;
-  letter-spacing: -0.02em;
-}
-
-.project-card:hover h3 {
-  color: #005eb8;
-  transform: translateX(1px);
-}
-
-.project-card h4 {
-  font-size: 1.25rem;
-  margin-top: 18px;
-  color: #0074d9;
+.project-card summary {
+  cursor: pointer;
+  padding: 28px 30px;
+  font-size: 1.35rem;
   font-weight: 600;
-  opacity: 0.9;
+  color: #003d82;
+  background-color: #f8f9fa;
+  border: none;
+  position: relative;
+  list-style: none;
+  transition: background-color 0.2s ease;
 }
 
-.project-card .desc {
-  font-size: 1.05rem;
+.project-card summary:hover {
+  background-color: #f0f7ff;
+}
+
+.project-card summary::marker {
+  display: none;
+}
+
+.project-card summary::after {
+  content: "▶";
+  position: absolute;
+  right: 24px;
+  color: #0056b3;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.project-card[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.project-card[open] summary {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.project-card p {
+  padding: 24px 30px;
+  margin: 0;
   color: #4a5568;
-  margin: 12px 0;
+  font-size: 1.05rem;
   line-height: 1.7;
-  position: relative;
+  background-color: #ffffff;
   font-weight: 400;
 }
 
@@ -223,20 +185,13 @@
     line-height: 1.6;
   }
 
-  .project-card {
-    padding: 25px 20px;
-    border-radius: 14px;
+  .project-card summary {
+    padding: 22px 24px;
+    font-size: 1.2rem;
   }
 
-  .project-card h3 {
-    font-size: 1.3rem;
-  }
-
-  .project-card h4 {
-    font-size: 1.15rem;
-  }
-
-  .project-card .desc {
+  .project-card p {
+    padding: 22px 24px;
     font-size: 1rem;
   }
 }
@@ -255,14 +210,12 @@
     font-size: 1.8rem;
   }
 
-  .project-card {
-    padding: 20px 18px;
+  .project-card summary {
+    padding: 20px;
+    font-size: 1.15rem;
   }
 
-  .project-card::after {
-    width: 40px;
-    height: 40px;
-    top: 15px;
-    right: 20px;
+  .project-card p {
+    padding: 20px;
   }
 }

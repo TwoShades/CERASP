@@ -1,6 +1,7 @@
 import "./Pages-css/Projects.css";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import ProjectsOverview from "./projects-subpages/ProjectsOverview.js";
+import ProjectsGrants from "./projects-subpages/ProjectsGrants.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 
 const Projects = () => {
@@ -11,6 +12,10 @@ const Projects = () => {
       <div id="overview">
         <ProjectsOverview />
       </div>
+      <div id="grants">
+        <ProjectsGrants />
+      </div>
+
       <div id="contact-us-form">
         <ContactUs />
       </div>

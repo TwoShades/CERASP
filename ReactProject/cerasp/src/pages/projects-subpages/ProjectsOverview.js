@@ -50,14 +50,12 @@ const ProjectsOverview = () => {
         }
       />
       <div className="project-container">
-        <div className="project-right">
-          {projectsData.map((proj, index) => (
-            <div key={index} className="project-card">
-              <h3>{proj.title}</h3>
-              <p className="desc">{proj.content}</p>
-            </div>
-          ))}
-        </div>
+        {projectsData.map((proj, index) => (
+          <details key={index} className="project-card">
+            <summary>{proj.title}</summary>
+            <p>{proj.content}</p>
+          </details>
+        ))}
       </div>
     </div>
   );

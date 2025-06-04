@@ -151,7 +151,7 @@
 .about-facilities-map h2 {
   color: #333333;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 1.5em;
 }
 
@@ -160,10 +160,14 @@
   border: 1px solid #e6e6e6;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  width: 75%;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out,
+    border 0.3s ease-out;
 }
 
 .about-facilities-map img:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid #0056b3;
 }
 
 /* Responsive */

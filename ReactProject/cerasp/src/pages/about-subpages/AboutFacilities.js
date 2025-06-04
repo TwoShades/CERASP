@@ -79,17 +79,10 @@ export default function AboutFacilities() {
 
         <div className="about-facilities-map">
           <h2>{language === "fr" ? "Où nous trouver" : "Where to find us"}</h2>
-          {isMobile ? (
-            <img
-              src="/photos/facilities/cerasp-map-portrait.jpg"
-              alt="CERASP Map"
-            />
+          {language === "fr" ? (
+            <img src="/photos/facilities/cerasp-map-fr.jpg" alt="CERASP Map" />
           ) : (
-            <img
-              className="map-quick-adjust"
-              src="/photos/facilities/cerasp-map-portrait.jpg"
-              alt="CERASP Map"
-            />
+            <img src="/photos/facilities/cerasp-map-en.jpg" alt="CERASP Map" />
           )}
         </div>
       </div>
