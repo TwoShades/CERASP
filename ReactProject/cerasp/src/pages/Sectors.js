@@ -5,6 +5,8 @@ import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
 import SectorsPrototyping from "./sectors-subpages/SectorsPrototyping.js";
 import UnderConstruction from "../components/layouts/UnderConstruction.js";
+import SectorsPreformulation from "./sectors-subpages/SectorsPreformulation.js";
+import SectorsFormulation from "./sectors-subpages/SectorsFormulation.js";
 
 const Sectors = () => {
   useScrollToPanel();
@@ -27,7 +29,7 @@ const Sectors = () => {
         */}
 
       <div title="sector-of-activities" id="preformulation">
-        <p>PREFORMULATION</p>
+        <SectorsPreformulation />
       </div>
 
       {/*   ======================
@@ -36,7 +38,7 @@ const Sectors = () => {
         */}
 
       <div title="sector-of-activities" id="formulation">
-        <p>one big panel = formulation</p>
+        <SectorsFormulation />
       </div>
 
       {/*   ==========================
