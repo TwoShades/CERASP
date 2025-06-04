@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./css/AboutBoard.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutBoard() {
@@ -15,7 +14,7 @@ export default function AboutBoard() {
           `https://loving-bird-9ef3b0470a.strapiapp.com/api/board-members?locale=${language}&populate=Picture`
         );
         const json = await res.json();
-        console.log("Fetched board data:", json.data);
+
         const cleaned = json.data.map((entry) => ({
           id: entry.id,
           name: entry.Name || "",
@@ -24,7 +23,26 @@ export default function AboutBoard() {
           photo: entry.Picture?.url || "",
         }));
 
-        setBoardMembers(cleaned);
+        // Define the 4 priority members by their exact names
+        const priorityNames = [
+          "Julie Pelletier",
+          "Teresa Berghello",
+          "Simon Fortin",
+          "Roberta Silerova",
+        ];
+
+        // Extract priority members in order
+        const priorityMembers = priorityNames
+          .map((name) => cleaned.find((m) => m.name === name))
+          .filter(Boolean); // remove undefined if any name not found
+
+        // Filter out priority members from the rest
+        const otherMembers = cleaned.filter(
+          (m) => !priorityNames.includes(m.name)
+        );
+
+        // Combine priority first, then others
+        setBoardMembers([...priorityMembers, ...otherMembers]);
       } catch (err) {
         console.error("Failed to fetch board members:", err);
       }
