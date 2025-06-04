@@ -46,7 +46,7 @@ const Navigation = () => {
       <Link to="/">
         <div className="nav-logo-wrapper">
           <img
-            src="/logos/ceraspicon.png"
+            src="/logos/cerasplogo.png"
             alt="CERASP Logo"
             className={`nav-logo ${isMobile || isTablet ? "mobile" : "hidden"}`}
           />

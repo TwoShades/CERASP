@@ -22,13 +22,15 @@ export default function AboutOverview() {
       />
       <div className="about-overview">
         <div className="about-overview-video">
-          <div className="about-overview-video-icon">
-            <img
-              src="/svg/microscope-bacteria.svg"
-              alt="Microscope Bacteria"
-              className="about-icon-img"
-            />
-          </div>
+          {isFullScreen && (
+            <div className="about-overview-video-icon">
+              <img
+                src="/svg/microscope-bacteria.svg"
+                alt="Microscope Bacteria"
+                className="about-icon-img"
+              />
+            </div>
+          )}
           <iframe
             src={`https://www.youtube.com/embed/ShwbF2xodT8`}
             title="YouTube video player"

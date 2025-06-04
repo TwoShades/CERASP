@@ -37,7 +37,7 @@ const AboutEquipments = () => {
     fetchEquipments();
   }, [language]);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 4 : 4;
+  const itemsPerPage = isMobile ? 2 : isTablet ? 4 : 3;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = equipments.slice(indexOfFirstItem, indexOfLastItem);
@@ -56,15 +56,18 @@ const AboutEquipments = () => {
 
   return (
     <div className="about-equipments-layout">
-      <SubPageHeader name={language === "fr" ? "ÉQUIPEMENT" : "EQUIPMENT"} />
-      <div className="about-equipments">
-        <div className="about-equipments-header">
-          <h3>
+      <SubPageHeader
+        name={language === "fr" ? "ÉQUIPEMENT" : "EQUIPMENT"}
+        extraContent={
+          <h4>
             {language === "fr"
               ? "Découvrez notre équipement à la fine pointe de la technologie!"
               : "Discover our state-of-the-art equipment!"}
-          </h3>
-        </div>
+          </h4>
+        }
+      />
+      <div className="about-equipments">
+        <div className="about-equipments-header"></div>
 
         <div className="about-equipments-images">
           {currentItems.map((equipment) => (

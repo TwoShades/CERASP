@@ -215,7 +215,8 @@
   }
 
   .about-facilities-map img {
-    max-width: 75%;
+    max-width: 100%;
+    width: 100%;
     height: auto;
   }
 }
