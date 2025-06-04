@@ -13,11 +13,11 @@ export default function AboutFacilities() {
       <SubPageHeader
         name={language === "fr" ? "LOCATIONS" : "FACILITIES"}
         extraContent={
-          <p>
+          <h4>
             {language === "fr"
               ? "Le CERASP dispose de 3 sites à la fine pointe de la technologie!"
               : "The CERASP has 3 state-of-the-art sites available!"}
-          </p>
+          </h4>
         }
       />
       <div className="about-facilities">
