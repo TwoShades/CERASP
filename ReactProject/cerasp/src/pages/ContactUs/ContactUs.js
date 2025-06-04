@@ -1,9 +1,9 @@
-import React, { useState, useRef, useContext } from 'react';
-import './ContactUs.css';
-import { LanguageContext } from '../../contexts/LanguageContext';
-import contactTranslations from './contact-translations.json';
-import emailjs from '@emailjs/browser';
-import axios from 'axios';
+import React, { useState, useRef, useContext } from "react";
+import "./ContactUs.css";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import contactTranslations from "./contact-translations.json";
+import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 const ContactUs = () => {
   const { language } = useContext(LanguageContext);
@@ -11,58 +11,60 @@ const ContactUs = () => {
   const form = useRef();
 
   const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: "",
     privacyPolicy: false,
-    newsletter: false
+    newsletter: false,
   });
 
   const [formStatus, setFormStatus] = useState({
     submitting: false,
     success: null,
     error: null,
-    newsletterStatus: null
+    newsletterStatus: null,
   });
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
   const subscribeToNewsletter = async (name, email) => {
     try {
       const response = await axios.post(
-        'https://loving-bird-9ef3b0470a.strapiapp.com/api/subscribers',
+        "https://loving-bird-9ef3b0470a.strapiapp.com/api/subscribers",
         {
-          data: { Name: name, Email: email }
+          data: { Name: name, Email: email },
         },
-        { headers: { 'Content-Type': 'application/json' } }
+        { headers: { "Content-Type": "application/json" } }
       );
 
       return {
         success: true,
-        message: t.messages[language].newsletterSubscribed
+        message: t.messages[language].newsletterSubscribed,
       };
     } catch (error) {
       if (
-        error.response?.data?.error?.message?.includes('duplicate') ||
-        error.response?.data?.error?.details?.errors?.some(e => e.message.includes('already taken'))
+        error.response?.data?.error?.message?.includes("duplicate") ||
+        error.response?.data?.error?.details?.errors?.some((e) =>
+          e.message.includes("already taken")
+        )
       ) {
         return {
           success: true,
-          message: t.messages[language].newsletterAlreadySubscribed
+          message: t.messages[language].newsletterAlreadySubscribed,
         };
       }
 
       return {
         success: false,
-        message: t.messages[language].newsletterError
+        message: t.messages[language].newsletterError,
       };
     }
   };
@@ -70,53 +72,66 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message || !formData.privacyPolicy) {
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.message ||
+      !formData.privacyPolicy
+    ) {
       setFormStatus({
         ...formStatus,
         submitting: false,
         success: false,
-        error: t.messages[language].validationError
+        error: t.messages[language].validationError,
       });
       return;
     }
 
-    setFormStatus({ ...formStatus, submitting: true, success: null, error: null });
+    setFormStatus({
+      ...formStatus,
+      submitting: true,
+      success: null,
+      error: null,
+    });
 
     try {
       await emailjs.sendForm(
-        'service_qahust4',
-        'template_jnlaadq',
+        "service_qahust4",
+        "template_jnlaadq",
         form.current,
-        'qqVYpUXwpvqGKOkgx'
+        "qqVYpUXwpvqGKOkgx"
       );
 
       let newsletterResult = null;
       if (formData.newsletter) {
-        newsletterResult = await subscribeToNewsletter(formData.name, formData.email);
+        newsletterResult = await subscribeToNewsletter(
+          formData.name,
+          formData.email
+        );
       }
 
       setFormStatus({
         submitting: false,
         success: t.messages[language].success,
         error: null,
-        newsletterStatus: newsletterResult?.message
+        newsletterStatus: newsletterResult?.message,
       });
 
       setFormData({
-        name: '',
-        company: '',
-        email: '',
-        phone: '',
-        message: '',
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        message: "",
         privacyPolicy: false,
-        newsletter: false
+        newsletter: false,
       });
     } catch (error) {
       setFormStatus({
         ...formStatus,
         submitting: false,
         success: null,
-        error: t.messages[language].error
+        error: t.messages[language].error,
       });
     }
   };
@@ -139,7 +154,9 @@ const ContactUs = () => {
           )}
 
           {formStatus.newsletterStatus && (
-            <div className="form-success-message">{formStatus.newsletterStatus}</div>
+            <div className="form-success-message">
+              {formStatus.newsletterStatus}
+            </div>
           )}
 
           {formStatus.error && (
@@ -196,7 +213,10 @@ const ContactUs = () => {
               onChange={handleChange}
               required
             />
-            {t.checkboxes[language].privacy} <a href="/privacy" target="_blank" rel="noopener noreferrer">🔗</a>
+            {t.checkboxes[language].privacy}{" "}
+            <a href="/privacy" target="_blank" rel="noopener noreferrer">
+              🔗
+            </a>
           </label>
 
           <label className="checkbox-label">
@@ -212,9 +232,11 @@ const ContactUs = () => {
           <button
             type="submit"
             disabled={formStatus.submitting}
-            className={formStatus.submitting ? 'submitting' : ''}
+            className={formStatus.submitting ? "submitting" : ""}
           >
-            {formStatus.submitting ? t.buttons[language].submitting : t.buttons[language].submit}
+            {formStatus.submitting
+              ? t.buttons[language].submitting
+              : t.buttons[language].submit}
           </button>
         </form>
       </div>
@@ -224,7 +246,7 @@ const ContactUs = () => {
           <div className="contact-sponsor-logos">
             <img
               className="partner-card-img"
-              src="/logos/partners/cerasp-partners.jpg"
+              src="/logos/partners/cerasp-partner.jpg"
               alt="Partners"
             />
             <img
@@ -238,7 +260,7 @@ const ContactUs = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.355649417134!2d-73.76856082306308!3d45.48278247107427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc93d8bef0bf3dd%3A0x861d8d2c0f4117f3!2sCERASP!5e0!3m2!1sen!2sus!4v1747083278539!5m2!1sen!2sus"
             width="100%"
-            height="300"
+            height="100%"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
