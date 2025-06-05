@@ -18,7 +18,7 @@ const ExpertiseFunding = () => {
         <div className="expertise-Funding-image">
           <div className="expertise-Funding-image-content">
             <StockImageFetch
-              searchTerm="biologist"
+              searchTerm="scientist working in a lab"
               imgSource="large"
               orientation="landscape"
               page={1}

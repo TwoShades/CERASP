@@ -100,6 +100,200 @@
             "fr": "Conformité réglementaire : Comprendre et se conformer aux directives réglementaires pour l'approbation et la commercialisation des produits, en garantissant la conformité avec les exigences du marché."
         }
       }
-    }
-
+    },    
+    "regulatoryAffairs": {
+      "title": {
+        "en": "Regulatory Affairs",
+        "fr": "Affaires réglementaires"
+      },
+      "content": {
+        "en": "As a Health Canada Partner, we have privileged access when depositing regulatory dossiers, gaining clarity around a regulatory pathway and preparing for or responding to audits and observations. We can guide you on the regulatory process with our in-depth knowledge of Canadian, US and EU policies, and niche experiences to tackle any complex issues associated with new therapies, and support productive interactions with Health Canada, the FDA and the European authorities. While your intellectual property remains fully under your control, we can guide you to patent experts as well as assist your organization in registering IP in Canada.",
+        "fr": "En tant que partenaire de Santé Canada, nous bénéficions d’un accès privilégié pour le dépôt des dossiers réglementaires, l’éclaircissement des voies réglementaires et la préparation ou la réponse aux audits et observations. Nous pouvons vous guider dans le processus réglementaire grâce à notre connaissance approfondie des politiques canadiennes, américaines et européennes, ainsi qu’à notre expertise de niche pour résoudre les problèmes complexes liés aux nouvelles thérapies, et favoriser des interactions productives avec Santé Canada, la FDA et les autorités européennes. Votre propriété intellectuelle restant entièrement sous votre contrôle, nous pouvons vous orienter vers des experts en brevets et vous aider à enregistrer votre PI au Canada."
+      },
+      "overview": {
+        "title": {
+          "en": "Regulatory Overview",
+          "fr": "Vue d’ensemble réglementaire"
+        },
+        "theMedicine": {
+          "title": {
+            "en": "The Medicine",
+            "fr": "Le médicament"
+          },
+          "cards": {
+            "card1": {
+              "title": {
+                "en": "Safety, Quality and Efficiency",
+                "fr": "Sécurité, qualité et efficacité"
+              },
+              "desc": {
+                "en": "Core principles guiding regulatory compliance",
+                "fr": "Principes fondamentaux guidant la conformité réglementaire"
+              }
+            },
+            "card2": {
+              "title": {
+                "en": "Placing on the market",
+                "fr": "Mise sur le marché"
+              },
+              "desc": {
+                "en": "Market authorization and commercialization",
+                "fr": "Autorisation de mise sur le marché et commercialisation"
+              }
+            },
+            "card3": {
+              "title": {
+                "en": "Development Process",
+                "fr": "Processus de développement"
+              },
+              "desc": {
+                "en": "Various drugs and health products",
+                "fr": "Divers médicaments et produits de santé"
+              }
+            }
+          }
+        },
+        "products": {
+          "drugs": {
+            "title": {
+              "en": "Drugs and Biologics",
+              "fr": "Médicaments et produits biologiques"
+            },
+            "items": {
+              "item1": {
+                "en": "Prescription drugs",
+                "fr": "Médicaments sur ordonnance"
+              },
+              "item2": {
+                "en": "Over the counter (OTC) drugs",
+                "fr": "Médicaments en vente libre (OTC)"
+              },
+              "item3": {
+                "en": "Natural Health Products (NHP)",
+                "fr": "Produits de santé naturels (PSN)"
+              }
+            }
+          },
+          "veterinary": {
+            "title": {
+              "en": "Veterinary Medicine",
+              "fr": "Médecine vétérinaire"
+            },
+            "items": {
+              "item1": {
+                "en": "Animal Health Products (AHP)",
+                "fr": "Produits de santé animale (PSA)"
+              },
+              "item2": {
+                "en": "Over the counter (OTC) and prescription drugs",
+                "fr": "Médicaments en vente libre (OTC) et sur ordonnance"
+              }
+            }
+          }
+        },
+        "development": {
+          "title": {
+            "en": "Development Process",
+            "fr": "Processus de développement"
+          },
+          "leftColumn": {
+            "title": {
+              "en": "Key Considerations",
+              "fr": "Éléments clés"
+            },
+            "list": {
+              "point1": {
+                "en": "Important and necessary steps in the development of all these products",
+                "fr": "Étapes importantes et nécessaires dans le développement de tous ces produits"
+              },
+              "point2": {
+                "en": "Development cost for a drug (excluding NHP and AHP)",
+                "fr": "Coût de développement d’un médicament (hors PSN et PSA)"
+              },
+              "point3": {
+                "en": "Steps to follow in R&D when developing all these products",
+                "fr": "Étapes à suivre en R&D pour développer tous ces produits"
+              }
+            }
+          },
+          "rightColumn": {
+            "description": {
+              "en": "Comprehensive R&D Guidance",
+              "fr": "Orientation complète en R&D"
+            }
+          }
+        }
+      }
+    },
+    "pharma": {
+      "title": {
+        "en": "Pharmaceutical",
+        "fr": "Pharmaceutique"
+      },
+      "content": {
+        "en": "At CERASP, we offer comprehensive support throughout the drug development process, from formulation to commercialization. Our services include formulation development, process development and optimization, regulatory guidance, and GMP-ready compliance. We assist during technological transfers and support. Our expertise helps you navigate complex regulatory requirements and bring innovative pharmaceutical solutions to market efficiently and effectively.",
+        "fr": "Au CERASP, nous offrons un soutien complet tout au long du processus de développement de médicaments, de la formulation à la commercialisation. Nos services incluent le développement de formulations, le développement et l’optimisation des processus, l’orientation réglementaire, ainsi que la conformité prête pour les BPF. Nous apportons notre aide lors des transferts technologiques et du soutien. Notre expertise vous aide à naviguer à travers des exigences réglementaires complexes et à amener des solutions pharmaceutiques innovantes sur le marché de manière efficace et efficiente."
+      }
+    },
+    "applied_research": {
+      "title": {
+        "en": "Applied Research",
+        "fr": "Recherche appliquée"
+      }
+    },
+    "pilot_scale_production": {
+      "title": {
+        "en": "Pilot-Scale Production",
+        "fr": "Production à l’échelle pilote"
+      },
+      "content": {
+        "en": "We offer pilot-scale fermentation and downstream processing capabilities. This includes cell harvesting, purification, and formulation of active ingredients. Our goal is to support clients in scaling up their production processes efficiently and cost-effectively.",
+        "fr": "Nous offrons des capacités de fermentation à l’échelle pilote et de traitement en aval, incluant la récolte cellulaire, la purification et la formulation d’ingrédients actifs. Notre objectif est d’aider les clients à mettre à l’échelle leurs procédés de production de manière efficace et rentable."
+      }
+    },
+    "protein_synthesis": {
+        "title": {
+          "en": "Protein Synthesis",
+          "fr": "Synthèse des protéines"
+        },
+        "content": {
+          "en": {
+            "overview": [
+              "Examples of types of proteins:",
+              "• Enzymes",
+              "• Membrane markers",
+              "• Growth hormones",
+              "• Peptides",
+              "• Monoclonal antibodies"
+            ],
+            "capabilities": [
+              "Examples of applications:",
+              "• Antimicrobial formulations and coatings",
+              "• Enzymatic biosensors",
+              "• Functionalization of nanoparticles with specific ligands (antibodies, peptides, proteins) for cell line-specific targeting"
+            ],
+            "collaboration": [
+              "Specific equipments :\n• For production:\no Bioreactors\no Incubator-Agitator\n• Purification :\no Fast Protein Liquid Chromatography (FPLC)\no Tangential Flow Filtration (TFF)\n• Characterizations :\no Liquid Chromatography coupled with Quadrupole Time of Flight LC/MS\no Gel electrophoresis"
+            ]
+          },
+          "fr": {
+            "overview": [
+              "Le CERASP est une installation conforme aux BPL qui opère selon des procédures alignées sur les BPF pour soutenir la préparation réglementaire.",
+              "Nous développons des procédés biopharmaceutiques prêts pour les BPF afin de faciliter un transfert technologique fluide vers les fabricants agréés.",
+              "Notre expertise couvre le développement des procédés en amont et en aval pour les produits biologiques et les thérapies avancées."
+            ],
+            "capabilities": [
+              "Optimisation des bioprocédés (fermentation et culture cellulaire)",
+              "Purification des biomolécules",
+              "Tests de bioactivité et de stabilité",
+              "Caractérisation génomique et microbienne",
+              "Développement de méthodes analytiques pour les produits biologiques"
+            ],
+            "collaboration": [
+              "Nous collaborons avec des universités et des CCTT pour soutenir l'innovation industrielle et le passage à l'échelle des thérapies avancées.",
+              "Spécialisé dans la culture de cellules microbiennes et de mammifères pour la production de protéines thérapeutiques et d'autres biologiques."
+            ]
+          }
+        }
+      }
 }
