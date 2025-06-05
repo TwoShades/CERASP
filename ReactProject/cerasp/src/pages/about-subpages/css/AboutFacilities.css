@@ -4,13 +4,11 @@
 }
 
 .about-facilities {
-  padding: var(--global-page-padding);
-  background-color: #ffffff;
-  color: #333333;
+  padding-top: 90px;
 }
 
 .about-facilities-layout {
-  padding-top: 90px;
+  padding: 4em 8em 0em 8em;
   display: flex;
   flex-direction: column;
 }
@@ -173,6 +171,10 @@
 /* Responsive */
 
 @media screen and (max-width: 1200px) {
+  .about-facilities-layout {
+    padding: 2em 2em 4em 2em;
+  }
+
   .about-facilities-images {
     padding: 0;
     flex-direction: column;
@@ -221,7 +223,7 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .about-facilities {
     padding-top: 40px;
   }
