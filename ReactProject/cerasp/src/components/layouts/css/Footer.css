@@ -26,7 +26,16 @@
   margin-right: 10%;
 }
 
-.address,
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10%;
+}
+
+.made-by,
+.copyright,
 .privacy {
   flex: 1;
   /* margin: 10px; */
@@ -37,7 +46,7 @@
   text-align: center;
 }
 
-.footer .address p,
+.footer .copyright p,
 .footer .privacy p {
   margin: 5px 0;
 }
@@ -65,7 +74,9 @@ footer a:hover {
     margin-right: 0;
     padding: 8px;
   }
-  .address,
+
+  .made-by,
+  .copyright,
   .contact-info {
     width: 100%;
     text-align: center;
@@ -88,7 +99,9 @@ footer a:hover {
   .privacy {
     padding: 6px;
   }
-  .address,
+
+  .made-by,
+  .copyright,
   .privacy {
     font-size: 0.9rem;
   }
@@ -105,7 +118,9 @@ footer a:hover {
   .privacy {
     padding: 4px;
   }
-  .address,
+
+  .made-by,
+  .copyright,
   .privacy {
     font-size: 0.85rem;
   }
@@ -123,7 +138,9 @@ footer a:hover {
   .privacy {
     padding: 2px;
   }
-  .address,
+
+  .made-by,
+  .copyright,
   .privacy {
     font-size: 0.4rem;
   }

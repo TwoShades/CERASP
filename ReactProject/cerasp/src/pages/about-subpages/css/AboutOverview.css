@@ -94,6 +94,7 @@
   position: relative;
   z-index: 2;
   transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 

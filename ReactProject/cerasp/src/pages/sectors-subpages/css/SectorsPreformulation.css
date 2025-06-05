@@ -1,7 +1,12 @@
+.sectors-preformulation-layout {
+  padding-top: calc(4em + 90px);
+}
+
+
 .sectors-preformulation {
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  padding: 80px 60px;
-  margin: 90px 50px 90px 50px;
+  margin: 0 4em 8em 4em;
+  padding-bottom: 4em;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -21,12 +26,12 @@
   pointer-events: none;
 }
 
-.preform-header {
+/* .preform-header {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
   z-index: 2;
-}
+} */
 
 .preform-title {
   font-size: 42px;
@@ -50,6 +55,7 @@
   display: grid;
   grid-template-columns: 3fr 3fr;
   gap: 60px;
+  padding: 0 4em;
   align-items: start;
   position: relative;
   z-index: 2;
@@ -265,7 +271,7 @@
 } */
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .sectors-preformulation {
     padding: 60px 40px;
   }
@@ -277,16 +283,17 @@
   .preform-title {
     font-size: 36px;
   }
-}
+} */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .sectors-preformulation {
-    padding: 40px 24px;
   }
 
   .preform-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    /* gap: 40px; */
+    margin: 0;
+    padding: 1em;
   }
 
   .preform-title {
@@ -298,7 +305,7 @@
   }
 
   .preform-image {
-    max-width: 280px;
+    max-width: 60%;
   }
 
   .fieldBox {
@@ -314,10 +321,15 @@
   }
 }
 
+@media (max-width: 768px) {
+  .sectors-preformulation {
+  margin: 0px 2em 4em 2em;
+  }
+}
+
 @media (max-width: 480px) {
   .sectors-preformulation {
-    padding: 0 1em 1em 1em;
-    margin: 2em 1em 1em 1em;
+    margin: 0 1em 1em 1em;
   }
 
   .preform-header {
@@ -329,7 +341,7 @@
   }
 
   .preform-image {
-    max-width: 240px;
+    max-width: 100%;
   }
 
   .caption {
