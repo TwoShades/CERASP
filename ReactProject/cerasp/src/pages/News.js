@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Pages-css/News.css";
-import { ThreeDots } from "react-loader-spinner";
+// import { ThreeDots } from "react-loader-spinner";
 import Footer from "../components/layouts/Footer.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import NewsOverview from "./news-subpages/NewsOverview.js";
 import ContactUs from "./ContactUs/ContactUs.js";
+import ThreeDotsLoader from "../components/uicomponents/ThreeDotLoader.js";
 
 const News = () => {
   const [isOverviewReady, setIsOverviewReady] = useState(false);
@@ -14,14 +15,8 @@ const News = () => {
     <div className="news-page page-content">
       {!isOverviewReady && (
         <div className="news-loader-overlay">
-          <ThreeDots
-            visible={true}
-            height="200"
-            width="200"
-            color="#FF9800"
-            radius="9"
-            ariaLabel="three-dots-loading"
-          />
+          <h1>Loading News</h1>
+          <ThreeDotsLoader />
         </div>
       )}
 
