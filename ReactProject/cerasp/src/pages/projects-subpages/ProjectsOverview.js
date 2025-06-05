@@ -2,7 +2,6 @@ import "./css/ProjectsOverview.css";
 import { useEffect, useState, useContext } from "react";
 import ScrollPanel from "../../components/layouts/ScrollPanel.js";
 import Footer from "../../components/layouts/Footer.js";
-import ContactUsForm from "../../components/panels/ContactUsForm.js";
 import useScrollToPanel from "../../hooks/useScrollToPanel.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import SubPageHeader from "../../components/layouts/SubPageHeader.js";
