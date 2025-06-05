@@ -47,12 +47,23 @@
   border-radius: 8px;
 }
 
+.contact-sponsors {
+  background-color: white;
+}
+
 .contact-google-maps {
   padding: 0px;
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
   height: 100%;
+}
+
+.contact-google-maps iframe {
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Form Styling */
@@ -125,7 +136,6 @@ textarea {
 .partner-with {
   font-weight: bold;
 }
-
 
 @media (max-width: 1200px) {
   .contact-us {

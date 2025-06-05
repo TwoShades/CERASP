@@ -1,0 +1,16 @@
+.news-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 90%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.news-page .news-overview-layout {
+  transition: opacity 0.3s ease-in-out;
+}
