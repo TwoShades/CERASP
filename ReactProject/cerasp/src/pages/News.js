@@ -5,7 +5,9 @@ import Footer from "../components/layouts/Footer.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import NewsOverview from "./news-subpages/NewsOverview.js";
 import ContactUs from "./ContactUs/ContactUs.js";
-import ThreeDotsLoader from "../components/uicomponents/ThreeDotLoader.js";
+
+// import ThreeDotsLoader from "../components/uicomponents/ThreeDotLoader.js";
+
 
 const News = () => {
   const [isOverviewReady, setIsOverviewReady] = useState(false);
@@ -15,8 +17,10 @@ const News = () => {
     <div className="news-page page-content">
       {!isOverviewReady && (
         <div className="news-loader-overlay">
-          <h1>Loading News</h1>
-          <ThreeDotsLoader />
+
+          <h1>Loading News...</h1>
+          {/* <ThreeDotsLoader /> */}
+
         </div>
       )}
 
