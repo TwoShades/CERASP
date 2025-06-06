@@ -13,15 +13,21 @@ const News = () => {
 
   return (
     <div className="news-page page-content">
-      {!isOverviewReady && (
+
+      {/* NO LOADER */}
+      {/* {!isOverviewReady && (
         <div className="news-loader-overlay">
           <h1>Loading News</h1>
           <ThreeDotsLoader />
         </div>
-      )}
+      )} */}
 
-      <div id="overview" style={{ opacity: isOverviewReady ? 1 : 0 }}>
-        <NewsOverview onReady={() => setIsOverviewReady(true)} />
+{/* NO LOADER */}
+      {/* <div id="overview" style={{ opacity: isOverviewReady ? 1 : 0 }}> */}
+        <div id="overview">
+        {/* <NewsOverview onReady={() => setIsOverviewReady(true)} /> */}
+        <NewsOverview />
+
       </div>
 
       <div id="equipment-updates"></div>

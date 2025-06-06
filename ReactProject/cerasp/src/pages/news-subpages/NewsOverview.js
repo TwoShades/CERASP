@@ -4,7 +4,8 @@ import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 import "./css/NewsOverview.css";
 
-export default function NewsOverview({ onReady }) {
+// export default function NewsOverview({ onReady }) {
+  export default function NewsOverview() {
   const { language } = useContext(LanguageContext);
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
 
@@ -15,17 +16,17 @@ export default function NewsOverview({ onReady }) {
     "https://www.linkedin.com/embed/feed/update/urn:li:share:7320474480449912832?collapsed=1",
   ];
 
-  const [loadedCount, setLoadedCount] = useState(0);
+  // const [loadedCount, setLoadedCount] = useState(0);
 
-  useEffect(() => {
-    if (loadedCount === iframeSources.length) {
-      onReady?.(); // call onReady once all iframes are loaded
-    }
-  }, [loadedCount, iframeSources.length, onReady]);
+  // useEffect(() => {
+  //   if (loadedCount === iframeSources.length) {
+  //     onReady?.(); // call onReady once all iframes are loaded
+  //   }
+  // }, [loadedCount, iframeSources.length, onReady]);
 
-  const handleIframeLoad = () => {
-    setLoadedCount((prev) => prev + 1);
-  };
+  // const handleIframeLoad = () => {
+  //   setLoadedCount((prev) => prev + 1);
+  // };
 
   return (
     <div className="news-overview-layout">
@@ -47,7 +48,7 @@ export default function NewsOverview({ onReady }) {
             frameBorder="0"
             allowFullScreen
             title={`Embedded post ${index}`}
-            onLoad={handleIframeLoad}
+            // onLoad={handleIframeLoad}
           ></iframe>
         ))}
       </div>
