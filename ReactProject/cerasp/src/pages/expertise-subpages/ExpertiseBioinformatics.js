@@ -21,7 +21,7 @@ const ExpertiseBioinformatics = () => {
         <div className="bioinfo-left">
           <div className="bioinfo-image">
             <StockImageFetch
-              searchTerm="microscope"
+              searchTerm="bioinformatics"
               imgSource="large"
               orientation="landscape"
               page={1}
