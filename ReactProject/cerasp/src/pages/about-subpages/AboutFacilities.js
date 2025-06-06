@@ -27,7 +27,7 @@ export default function AboutFacilities() {
               src={`/photos/facilities/${
                 isFullScreen
                   ? "john-abbott-college.jpg"
-                  : "john-abbott-college-Landscape.jpg"
+                  : "john-abbott-college-landscape.jpg"
               }`}
               alt="John Abbott College"
             />
@@ -51,7 +51,7 @@ export default function AboutFacilities() {
               src={`/photos/facilities/${
                 isFullScreen
                   ? "cegep-gerald-godin.jpg"
-                  : "cegep-gerald-godin-Landscape.jpg"
+                  : "cegep-gerald-godin-landscape.jpg"
               }`}
               alt="Cégep Gérald-Godin"
             />
@@ -68,7 +68,7 @@ export default function AboutFacilities() {
           <div className="facility-card">
             <img
               src={`/photos/facilities/${
-                isFullScreen ? "admare.jpg" : "admare-Landscape.jpg"
+                isFullScreen ? "admare.jpg" : "admare-landscape.jpg"
               }`}
               alt="AdMare Facility"
             />

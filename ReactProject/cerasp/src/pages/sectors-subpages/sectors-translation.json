@@ -1,299 +1,637 @@
 {
-    "preformulation": {
+  "preformulation": {
+    "title": {
+      "en": "Preformulation",
+      "fr": "Préformulation"
+    },
+    "content": {
+      "en": "Selection and Configuration of Equipment/Processes Destined to cGMP Environment:",
+      "fr": "Sélection et configuration des équipements/processus destinés à un environnement cGMP : "
+    },
+    "fields": {
+      "ingredientSelection": {
         "title": {
-            "en": "Preformulation",
-            "fr": "Préformulation"
+          "en": "Selection of ingredients",
+          "fr": "Sélection des ingrédients"
         },
-        "content": {
-            "en": "Selection and Configuration of Equipment/Processes Destined to cGMP Environment:",
-            "fr": "Sélection et configuration des équipements/processus destinés à un environnement cGMP : "
-        },
-        "fields": {
-            "ingredientSelection": {
-            "title": {
-                "en": "Selection of ingredients",
-                "fr": "Sélection des ingrédients"
-            },
-            "desc": {
-                "en": "Choosing the right APIs and excipients with attention to quality and safety.",
-                "fr": "Choisir les bons principes actifs et excipients en tenant compte de la qualité et de la sécurité."
-            }
-            },
-            "processOptimization": {
-            "title": {
-                "en": "Process optimization",
-                "fr": "Optimisation des processus"
-            },
-            "desc": {
-                "en": "Maximizing production efficiency through strategic equipment choices.",
-                "fr": "Maximiser l'efficacité de la production grâce à des choix d'équipements stratégiques."
-            }
-            },
-            "dataIntegration": {
-            "title": {
-                "en": "Data integration",
-                "fr": "Intégration des données"
-            },
-            "desc": {
-                "en": "Guidance for real-time data collection and analysis systems.",
-                "fr": "Orientation pour les systèmes de collecte et d’analyse de données en temps réel."
-            }
-            },
-            "rdSupport": {
-            "title": {
-                "en": "Support for R&D",
-                "fr": "Soutien à la R&D"
-            },
-            "desc": {
-                "en": "Helping select optimal equipment for your research and development projects.",
-                "fr": "Aider à choisir les équipements optimaux pour vos projets de recherche et développement."
-            }
-            }
+        "desc": {
+          "en": "Choosing the right APIs and excipients with attention to quality and safety.",
+          "fr": "Choisir les bons principes actifs et excipients en tenant compte de la qualité et de la sécurité."
         }
+      },
+      "processOptimization": {
+        "title": {
+          "en": "Process optimization",
+          "fr": "Optimisation des processus"
+        },
+        "desc": {
+          "en": "Maximizing production efficiency through strategic equipment choices.",
+          "fr": "Maximiser l'efficacité de la production grâce à des choix d'équipements stratégiques."
+        }
+      },
+      "dataIntegration": {
+        "title": {
+          "en": "Data integration",
+          "fr": "Intégration des données"
+        },
+        "desc": {
+          "en": "Guidance for real-time data collection and analysis systems.",
+          "fr": "Orientation pour les systèmes de collecte et d’analyse de données en temps réel."
+        }
+      },
+      "rdSupport": {
+        "title": {
+          "en": "Support for R&D",
+          "fr": "Soutien à la R&D"
+        },
+        "desc": {
+          "en": "Helping select optimal equipment for your research and development projects.",
+          "fr": "Aider à choisir les équipements optimaux pour vos projets de recherche et développement."
+        }
+      }
+    }
+  },
+  "formulation": {
+    "title": {
+      "en": "Formulation",
+      "fr": "Formulation"
+    },
+    "content": {
+      "en": "The process of combining various ingredients to create a final product in a specific form, such as tablets, capsules, liquid, or injectables, for the intended therapeutic effect: ",
+      "fr": "Le processus de combinaison de divers ingrédients pour créer un produit final sous une forme spécifique, telle que des comprimés, des capsules, des liquides ou des injectables, pour l'effet thérapeutique prévu : "
+    },
+    "card1": {
+      "title": {
+        "en": "Foundation & Skills",
+        "fr": "Fondations et compétences"
+      },
+      "content": {
+        "en": "Development of new products and/or improvement of existing products.",
+        "fr": "Développement de nouveaux produits et/ou amélioration des produits existants."
+      }
+    },
+    "card2": {
+      "title": {
+        "en": "Advanced Compliance",
+        "fr": "Conformité avancée"
+      },
+      "content": {
+        "en": "Dosage Forms: Develop appropriate dosage forms, such as tablets, capsules, creams, gels, injectables, etc., tailored to the needs of patients. ",
+        "fr": "Formes posologiques : Développer des formes posologiques appropriées, telles que des comprimés, des capsules, des crèmes, des gels, des injectables, etc., adaptées aux besoins des patients. "
+      }
+    },
+    "card3": {
+      "title": {
+        "en": "Customization & Delivery",
+        "fr": "Personnalisation et diffusion"
+      },
+      "content": {
+        "en": "Product Optimization/Line Extension: Ensure that the formulation remains stable under different conditions and maintains its effectiveness over time, in compliance with pharmaceutical regulations. ",
+        "fr": "Optimisation du produit/Extension de ligne : S'assurer que la formulation reste stable dans différentes conditions et conserve son efficacité au fil du temps, en conformité avec les réglementations pharmaceutiques."
+      }
+    },
+    "card4": {
+      "title": {
+        "en": "Customization & Delivery",
+        "fr": "Personnalisation et diffusion"
+      },
+      "content": {
+        "en": "Regulatory Compliance: Understand and comply with regulatory guidelines for product approval and marketing, ensuring compliance with market requirements.",
+        "fr": "Conformité réglementaire : Comprendre et se conformer aux directives réglementaires pour l'approbation et la commercialisation des produits, en garantissant la conformité avec les exigences du marché."
+      }
+    }
+  },
+  "regulatoryAffairs": {
+    "title": {
+      "en": "Regulatory Affairs",
+      "fr": "Affaires réglementaires"
+    },
+    "content": {
+      "en": "As a Health Canada Partner, we have privileged access when depositing regulatory dossiers, gaining clarity around a regulatory pathway and preparing for or responding to audits and observations. We can guide you on the regulatory process with our in-depth knowledge of Canadian, US and EU policies, and niche experiences to tackle any complex issues associated with new therapies, and support productive interactions with Health Canada, the FDA and the European authorities. While your intellectual property remains fully under your control, we can guide you to patent experts as well as assist your organization in registering IP in Canada.",
+      "fr": "En tant que partenaire de Santé Canada, nous bénéficions d’un accès privilégié pour le dépôt des dossiers réglementaires, l’éclaircissement des voies réglementaires et la préparation ou la réponse aux audits et observations. Nous pouvons vous guider dans le processus réglementaire grâce à notre connaissance approfondie des politiques canadiennes, américaines et européennes, ainsi qu’à notre expertise de niche pour résoudre les problèmes complexes liés aux nouvelles thérapies, et favoriser des interactions productives avec Santé Canada, la FDA et les autorités européennes. Votre propriété intellectuelle restant entièrement sous votre contrôle, nous pouvons vous orienter vers des experts en brevets et vous aider à enregistrer votre PI au Canada."
+    },
+    "overview": {
+      "title": {
+        "en": "Regulatory Overview",
+        "fr": "Vue d’ensemble réglementaire"
+      },
+      "theMedicine": {
+        "title": {
+          "en": "The Medicine",
+          "fr": "Le médicament"
+        },
+        "cards": {
+          "card1": {
+            "title": {
+              "en": "Safety, Quality and Efficiency",
+              "fr": "Sécurité, qualité et efficacité"
+            },
+            "desc": {
+              "en": "Core principles guiding regulatory compliance",
+              "fr": "Principes fondamentaux guidant la conformité réglementaire"
+            }
+          },
+          "card2": {
+            "title": {
+              "en": "Placing on the market",
+              "fr": "Mise sur le marché"
+            },
+            "desc": {
+              "en": "Market authorization and commercialization",
+              "fr": "Autorisation de mise sur le marché et commercialisation"
+            }
+          },
+          "card3": {
+            "title": {
+              "en": "Development Process",
+              "fr": "Processus de développement"
+            },
+            "desc": {
+              "en": "Various drugs and health products",
+              "fr": "Divers médicaments et produits de santé"
+            }
+          }
+        }
+      },
+      "products": {
+        "drugs": {
+          "title": {
+            "en": "Drugs and Biologics",
+            "fr": "Médicaments et produits biologiques"
+          },
+          "items": {
+            "item1": {
+              "en": "Prescription drugs",
+              "fr": "Médicaments sur ordonnance"
+            },
+            "item2": {
+              "en": "Over the counter (OTC) drugs",
+              "fr": "Médicaments en vente libre (OTC)"
+            },
+            "item3": {
+              "en": "Natural Health Products (NHP)",
+              "fr": "Produits de santé naturels (PSN)"
+            }
+          }
+        },
+        "veterinary": {
+          "title": {
+            "en": "Veterinary Medicine",
+            "fr": "Médecine vétérinaire"
+          },
+          "items": {
+            "item1": {
+              "en": "Animal Health Products (AHP)",
+              "fr": "Produits de santé animale (PSA)"
+            },
+            "item2": {
+              "en": "Over the counter (OTC) and prescription drugs",
+              "fr": "Médicaments en vente libre (OTC) et sur ordonnance"
+            }
+          }
+        }
+      },
+      "development": {
+        "title": {
+          "en": "Development Process",
+          "fr": "Processus de développement"
+        },
+        "leftColumn": {
+          "title": {
+            "en": "Key Considerations",
+            "fr": "Éléments clés"
+          },
+          "list": {
+            "point1": {
+              "en": "Important and necessary steps in the development of all these products",
+              "fr": "Étapes importantes et nécessaires dans le développement de tous ces produits"
+            },
+            "point2": {
+              "en": "Development cost for a drug (excluding NHP and AHP)",
+              "fr": "Coût de développement d’un médicament (hors PSN et PSA)"
+            },
+            "point3": {
+              "en": "Steps to follow in R&D when developing all these products",
+              "fr": "Étapes à suivre en R&D pour développer tous ces produits"
+            }
+          }
+        },
+        "rightColumn": {
+          "description": {
+            "en": "Comprehensive R&D Guidance",
+            "fr": "Orientation complète en R&D"
+          }
+        }
+      }
+    }
+  },
+  "pharma": {
+    "title": {
+      "en": "Pharmaceutical",
+      "fr": "Pharmaceutique"
+    },
+    "content": {
+      "en": "At CERASP, we offer comprehensive support throughout the drug development process, from formulation to commercialization. Our services include formulation development, process development and optimization, regulatory guidance, and GMP-ready compliance. We assist during technological transfers and support. Our expertise helps you navigate complex regulatory requirements and bring innovative pharmaceutical solutions to market efficiently and effectively.",
+      "fr": "Au CERASP, nous offrons un soutien complet tout au long du processus de développement de médicaments, de la formulation à la commercialisation. Nos services incluent le développement de formulations, le développement et l’optimisation des processus, l’orientation réglementaire, ainsi que la conformité prête pour les BPF. Nous apportons notre aide lors des transferts technologiques et du soutien. Notre expertise vous aide à naviguer à travers des exigences réglementaires complexes et à amener des solutions pharmaceutiques innovantes sur le marché de manière efficace et efficiente."
+    }
+  },
+  "applied_research": {
+    "title": {
+      "en": "Applied Research",
+      "fr": "Recherche appliquée"
+    }
+  },
+  "pilot_scale_production": {
+    "title": {
+      "en": "Pilot-Scale Production",
+      "fr": "Production à l’échelle pilote"
+    },
+    "content": {
+      "en": "We offer pilot-scale fermentation and downstream processing capabilities. This includes cell harvesting, purification, and formulation of active ingredients. Our goal is to support clients in scaling up their production processes efficiently and cost-effectively.",
+      "fr": "Nous offrons des capacités de fermentation à l’échelle pilote et de traitement en aval, incluant la récolte cellulaire, la purification et la formulation d’ingrédients actifs. Notre objectif est d’aider les clients à mettre à l’échelle leurs procédés de production de manière efficace et rentable."
+    }
+  },
+  "protein_synthesis": {
+    "title": {
+      "en": "Protein Synthesis",
+      "fr": "Synthèse des protéines"
+    },
+    "content": {
+      "en": {
+        "overview": [
+          "Examples of types of proteins:",
+          "• Enzymes",
+          "• Membrane markers",
+          "• Growth hormones",
+          "• Peptides",
+          "• Monoclonal antibodies"
+        ],
+        "capabilities": [
+          "Examples of applications:",
+          "• Antimicrobial formulations and coatings",
+          "• Enzymatic biosensors",
+          "• Functionalization of nanoparticles with specific ligands (antibodies, peptides, proteins) for cell line-specific targeting"
+        ],
+        "collaboration": [
+          "Specific equipments :\n• For production:\no Bioreactors\no Incubator-Agitator\n• Purification :\no Fast Protein Liquid Chromatography (FPLC)\no Tangential Flow Filtration (TFF)\n• Characterizations :\no Liquid Chromatography coupled with Quadrupole Time of Flight LC/MS\no Gel electrophoresis"
+        ]
+      },
+      "fr": {
+        "overview": [
+          "Le CERASP est une installation conforme aux BPL qui opère selon des procédures alignées sur les BPF pour soutenir la préparation réglementaire.",
+          "Nous développons des procédés biopharmaceutiques prêts pour les BPF afin de faciliter un transfert technologique fluide vers les fabricants agréés.",
+          "Notre expertise couvre le développement des procédés en amont et en aval pour les produits biologiques et les thérapies avancées."
+        ],
+        "capabilities": [
+          "Optimisation des bioprocédés (fermentation et culture cellulaire)",
+          "Purification des biomolécules",
+          "Tests de bioactivité et de stabilité",
+          "Caractérisation génomique et microbienne",
+          "Développement de méthodes analytiques pour les produits biologiques"
+        ],
+        "collaboration": [
+          "Nous collaborons avec des universités et des CCTT pour soutenir l'innovation industrielle et le passage à l'échelle des thérapies avancées.",
+          "Spécialisé dans la culture de cellules microbiennes et de mammifères pour la production de protéines thérapeutiques et d'autres biologiques."
+        ]
+      }
+    }
+  },
+  "researchSupport": {
+    "title": {
+      "en": "Research & Technical Support",
+      "fr": "Soutien en recherche et technique"
+    },
+    "content": {
+      "en": "Research & Technical Support ensures the safe, efficient, and compliant development of various products from inception to commercialization.",
+      "fr": "Le soutien en recherche et technique minimise les risques et assure un développement sûr, efficace et conforme de produits variés, de l'idée jusqu'à leur commercialisation."
     },
     "formulation": {
       "title": {
-        "en": "Formulation",
-        "fr": "Formulation"
+        "en": "Formulation Development",
+        "fr": "Développement de formulations"
       },
       "content": {
-          "en": "The process of combining various ingredients to create a final product in a specific form, such as tablets, capsules, liquid, or injectables, for the intended therapeutic effect: ",
-          "fr": "Le processus de combinaison de divers ingrédients pour créer un produit final sous une forme spécifique, telle que des comprimés, des capsules, des liquides ou des injectables, pour l'effet thérapeutique prévu : "
-      },
-      "card1": {
-        "title": {
-          "en": "Foundation & Skills",
-          "fr": "Fondations et compétences"
-        },
-        "content": {
-          "en": "Development of new products and/or improvement of existing products.",
-          "fr": "Développement de nouveaux produits et/ou amélioration des produits existants."
-        }
-      },
-      "card2": {
-        "title": {
-          "en": "Advanced Compliance",
-          "fr": "Conformité avancée"
-        },
-        "content": {
-          "en": "Dosage Forms: Develop appropriate dosage forms, such as tablets, capsules, creams, gels, injectables, etc., tailored to the needs of patients. ",
-          "fr": "Formes posologiques : Développer des formes posologiques appropriées, telles que des comprimés, des capsules, des crèmes, des gels, des injectables, etc., adaptées aux besoins des patients. "
-        }
-      },
-      "card3": {
-        "title": {
-          "en": "Customization & Delivery",
-          "fr": "Personnalisation et diffusion"
-        },
-        "content": {
-            "en": "Product Optimization/Line Extension: Ensure that the formulation remains stable under different conditions and maintains its effectiveness over time, in compliance with pharmaceutical regulations. ",
-            "fr": "Optimisation du produit/Extension de ligne : S'assurer que la formulation reste stable dans différentes conditions et conserve son efficacité au fil du temps, en conformité avec les réglementations pharmaceutiques."
-        }
-      },
-      "card4": {
-        "title": {
-          "en": "Customization & Delivery",
-          "fr": "Personnalisation et diffusion"
-        },
-        "content": {
-            "en": "Regulatory Compliance: Understand and comply with regulatory guidelines for product approval and marketing, ensuring compliance with market requirements.",
-            "fr": "Conformité réglementaire : Comprendre et se conformer aux directives réglementaires pour l'approbation et la commercialisation des produits, en garantissant la conformité avec les exigences du marché."
-        }
+        "en": "Assisting in creating and improving drug formulations to ensure efficacy, safety, and stability.",
+        "fr": "Aide à la création et à l'amélioration des formulations de médicaments pour assurer leur efficacité, sécurité et stabilité."
       }
-    },    
-    "regulatoryAffairs": {
+    },
+    "processOptimization": {
       "title": {
-        "en": "Regulatory Affairs",
-        "fr": "Affaires réglementaires"
+        "en": "Process Optimization",
+        "fr": "Optimisation des processus"
       },
       "content": {
-        "en": "As a Health Canada Partner, we have privileged access when depositing regulatory dossiers, gaining clarity around a regulatory pathway and preparing for or responding to audits and observations. We can guide you on the regulatory process with our in-depth knowledge of Canadian, US and EU policies, and niche experiences to tackle any complex issues associated with new therapies, and support productive interactions with Health Canada, the FDA and the European authorities. While your intellectual property remains fully under your control, we can guide you to patent experts as well as assist your organization in registering IP in Canada.",
-        "fr": "En tant que partenaire de Santé Canada, nous bénéficions d’un accès privilégié pour le dépôt des dossiers réglementaires, l’éclaircissement des voies réglementaires et la préparation ou la réponse aux audits et observations. Nous pouvons vous guider dans le processus réglementaire grâce à notre connaissance approfondie des politiques canadiennes, américaines et européennes, ainsi qu’à notre expertise de niche pour résoudre les problèmes complexes liés aux nouvelles thérapies, et favoriser des interactions productives avec Santé Canada, la FDA et les autorités européennes. Votre propriété intellectuelle restant entièrement sous votre contrôle, nous pouvons vous orienter vers des experts en brevets et vous aider à enregistrer votre PI au Canada."
+        "en": "We optimize manufacturing processes to ensure consistency, scalability and efficiency while minimizing risk and costs.",
+        "fr": "Nous optimisons les processus de fabrication pour garantir la cohérence, la scalabilité et l'efficacité tout en minimisant les risques et les coûts."
+      }
+    },
+    "regulatory": {
+      "title": {
+        "en": "Regulatory Guidance",
+        "fr": "Conseils réglementaires"
       },
-      "overview": {
+      "content": {
+        "en": "Ensuring that all products meet the necessary regulatory standards through documentation, audits, and compliance assistance.",
+        "fr": "S'assurer que tous les produits respectent les normes réglementaires nécessaires à travers la documentation, les audits et l'assistance en matière de conformité."
+      }
+    },
+    "troubleshooting": {
+      "title": {
+        "en": "Troubleshooting & Problem-Solving",
+        "fr": "Résolution de problèmes"
+      },
+      "content": {
+        "en": "Identifying and resolving technical challenges in both research and production settings to ensure continuous improvement.",
+        "fr": "Identifier et résoudre les défis techniques tant en recherche qu'en production afin d'assurer une amélioration continue."
+      }
+    },
+    "preclinical": {
+      "title": {
+        "en": "Preclinical & Clinical Support",
+        "fr": "Soutien préclinique et clinique"
+      },
+      "content": {
+        "en": "Providing research support for the development of new therapies, from laboratory studies to clinical trials.",
+        "fr": "Fournir un soutien à la recherche pour le développement de nouvelles thérapies, des études de laboratoire aux essais cliniques."
+      }
+    },
+    "strategic": {
+      "title": {
+        "en": "Strategic Decisions",
+        "fr": "Décisions stratégiques"
+      },
+      "content": {
+        "en": "Our expertise supports strategic decisions on whether or not to pursue product development, thanks to robust data and in-depth analysis.",
+        "fr": "Notre expertise soutient les décisions stratégiques concernant la poursuite ou non du développement d'un produit, grâce à des données solides et à une analyse approfondie."
+      }
+    }
+  },
+  "scaleUp": {
+    "title": {
+      "en": "R&D Scale up",
+      "fr": "Montée à l’échelle R&D"
+    },
+    "content1": {
+      "en": {
+        "intro": "Our feasibility and pilot lots expertise is essential for the transition to large-scale manufacturing. We ensure efficient and reliable scaling. The range of process scaling work that can be performed by the CERASP:",
+        "bullets": [
+          "Optimization of Operating Procedures and parameters",
+          "Determination of production protocols and development of production SOP",
+          "Pilot scale adaptation of laboratory protocols",
+          "New process safety review",
+          "Pilot scale process validation"
+        ]
+      },
+      "fr": {
+        "intro": "Notre expertise en faisabilité et en lots pilotes est essentielle pour la transition vers la fabrication à grande échelle. Nous assurons un passage à l'échelle efficace et fiable. Voici les types de travaux de mise à l'échelle des processus que le CERASP peut réaliser :",
+        "bullets": [
+          "Optimisation des procédures opérationnelles et des paramètres",
+          "Détermination des protocoles de production et développement des PON de production",
+          "Adaptation des protocoles de laboratoire à l'échelle pilote",
+          "Revue de sécurité des nouveaux processus",
+          "Validation des processus à l'échelle pilote"
+        ]
+      }
+    },
+    "content2": {
+      "en": {
+        "intro": "The CERASP is there to support you with:",
+        "bullets": [
+          "Wide range of production equipment for steering",
+          "Technical support during operation",
+          "Private office accessible to meet you on site",
+          "Access to a team of scientific experts",
+          "Analytical laboratory available in support and reaction monitoring",
+          "Possibility of obtaining a refundable SR&ED investment tax credit (Canadian companies)"
+        ]
+      },
+      "fr": {
+        "intro": "Le CERASP est là pour vous soutenir avec :",
+        "bullets": [
+          "Une large gamme d'équipements de production pour la conduite des processus",
+          "Un soutien technique pendant l'opération",
+          "Un bureau privé accessible pour vous rencontrer sur place",
+          "L'accès à une équipe d'experts scientifiques",
+          "Un laboratoire analytique disponible pour le soutien et la surveillance des réactions",
+          "La possibilité d'obtenir des crédits d'impôt remboursables pour la recherche scientifique et le développement expérimental (RS&DE) (entreprises canadiennes)"
+        ]
+      }
+    }
+  },
+  "chemistry": {
+    "title": {
+      "en": "Medicinal Chemistry",
+      "fr": "Chimie Médicinale"
+    },
+    "steps": [
+      {
         "title": {
-          "en": "Regulatory Overview",
-          "fr": "Vue d’ensemble réglementaire"
+          "en": "Cell Culture and Fermentation",
+          "fr": "Culture cellulaire et fermentation"
         },
-        "theMedicine": {
-          "title": {
-            "en": "The Medicine",
-            "fr": "Le médicament"
-          },
-          "cards": {
-            "card1": {
-              "title": {
-                "en": "Safety, Quality and Efficiency",
-                "fr": "Sécurité, qualité et efficacité"
-              },
-              "desc": {
-                "en": "Core principles guiding regulatory compliance",
-                "fr": "Principes fondamentaux guidant la conformité réglementaire"
-              }
-            },
-            "card2": {
-              "title": {
-                "en": "Placing on the market",
-                "fr": "Mise sur le marché"
-              },
-              "desc": {
-                "en": "Market authorization and commercialization",
-                "fr": "Autorisation de mise sur le marché et commercialisation"
-              }
-            },
-            "card3": {
-              "title": {
-                "en": "Development Process",
-                "fr": "Processus de développement"
-              },
-              "desc": {
-                "en": "Various drugs and health products",
-                "fr": "Divers médicaments et produits de santé"
-              }
-            }
-          }
+        "description": {
+          "en": "Formulate, validate and prepare new products after the results of basic research or to find the right molecules.",
+          "fr": "Formuler, valider et préparer de nouveaux produits à partir des résultats de la recherche fondamentale ou pour identifier les bonnes molécules."
+        }
+      },
+      {
+        "title": {
+          "en": "Upstream Processing",
+          "fr": "Procédés en amont"
         },
-        "products": {
-          "drugs": {
-            "title": {
-              "en": "Drugs and Biologics",
-              "fr": "Médicaments et produits biologiques"
-            },
-            "items": {
-              "item1": {
-                "en": "Prescription drugs",
-                "fr": "Médicaments sur ordonnance"
-              },
-              "item2": {
-                "en": "Over the counter (OTC) drugs",
-                "fr": "Médicaments en vente libre (OTC)"
-              },
-              "item3": {
-                "en": "Natural Health Products (NHP)",
-                "fr": "Produits de santé naturels (PSN)"
-              }
-            }
-          },
-          "veterinary": {
-            "title": {
-              "en": "Veterinary Medicine",
-              "fr": "Médecine vétérinaire"
-            },
-            "items": {
-              "item1": {
-                "en": "Animal Health Products (AHP)",
-                "fr": "Produits de santé animale (PSA)"
-              },
-              "item2": {
-                "en": "Over the counter (OTC) and prescription drugs",
-                "fr": "Médicaments en vente libre (OTC) et sur ordonnance"
-              }
-            }
-          }
+        "description": {
+          "en": "Support the development of production processes through new processes, including standard operating procedures.",
+          "fr": "Soutenir le développement des procédés de production par l'intégration de nouveaux procédés, incluant les procédures opérationnelles normalisées."
+        }
+      },
+      {
+        "title": {
+          "en": "Downstream Processing",
+          "fr": "Procédés en aval"
         },
-        "development": {
-          "title": {
-            "en": "Development Process",
-            "fr": "Processus de développement"
-          },
-          "leftColumn": {
-            "title": {
-              "en": "Key Considerations",
-              "fr": "Éléments clés"
-            },
-            "list": {
-              "point1": {
-                "en": "Important and necessary steps in the development of all these products",
-                "fr": "Étapes importantes et nécessaires dans le développement de tous ces produits"
-              },
-              "point2": {
-                "en": "Development cost for a drug (excluding NHP and AHP)",
-                "fr": "Coût de développement d’un médicament (hors PSN et PSA)"
-              },
-              "point3": {
-                "en": "Steps to follow in R&D when developing all these products",
-                "fr": "Étapes à suivre en R&D pour développer tous ces produits"
-              }
-            }
-          },
-          "rightColumn": {
-            "description": {
-              "en": "Comprehensive R&D Guidance",
-              "fr": "Orientation complète en R&D"
-            }
-          }
+        "description": {
+          "en": "Transfer and adapt technological innovations for the development of scale-up pilot scale production.",
+          "fr": "Transférer et adapter les innovations technologiques pour le développement à l'échelle pilote."
+        }
+      },
+      {
+        "title": {
+          "en": "Bioprocess Optimization and Scale-up",
+          "fr": "Optimisation et mise à l’échelle des bioprocédés"
+        },
+        "description": {
+          "en": "Select and configure equipment for research and production from an Industry perspective.",
+          "fr": "Sélectionner et configurer l’équipement de recherche et de production selon les exigences industrielles."
+        }
+      },
+      {
+        "title": {
+          "en": "Good Manufacturing Practices (GMP) Compliance",
+          "fr": "Conformité aux Bonnes Pratiques de Fabrication (BPF)"
+        },
+        "description": {
+          "en": "Formulate and develop pilot processes, prototypes and batches.",
+          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
+        }
+      },
+      {
+        "title": {
+          "en": "Bioprocess Monitoring and Automation",
+          "fr": "Surveillance et automatisation des bioprocédés"
+        },
+        "description": {
+          "en": "Formulate and develop pilot processes, prototypes and batches.",
+          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
+        }
+      },
+      {
+        "title": {
+          "en": "Sustainability in Bioproduction",
+          "fr": "Durabilité dans la bioproduction"
+        },
+        "description": {
+          "en": "Formulate and develop pilot processes, prototypes and batches.",
+          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
         }
       }
-    },
-    "pharma": {
-      "title": {
-        "en": "Pharmaceutical",
-        "fr": "Pharmaceutique"
-      },
-      "content": {
-        "en": "At CERASP, we offer comprehensive support throughout the drug development process, from formulation to commercialization. Our services include formulation development, process development and optimization, regulatory guidance, and GMP-ready compliance. We assist during technological transfers and support. Our expertise helps you navigate complex regulatory requirements and bring innovative pharmaceutical solutions to market efficiently and effectively.",
-        "fr": "Au CERASP, nous offrons un soutien complet tout au long du processus de développement de médicaments, de la formulation à la commercialisation. Nos services incluent le développement de formulations, le développement et l’optimisation des processus, l’orientation réglementaire, ainsi que la conformité prête pour les BPF. Nous apportons notre aide lors des transferts technologiques et du soutien. Notre expertise vous aide à naviguer à travers des exigences réglementaires complexes et à amener des solutions pharmaceutiques innovantes sur le marché de manière efficace et efficiente."
-      }
-    },
-    "applied_research": {
-      "title": {
-        "en": "Applied Research",
-        "fr": "Recherche appliquée"
-      }
-    },
-    "pilot_scale_production": {
-      "title": {
-        "en": "Pilot-Scale Production",
-        "fr": "Production à l’échelle pilote"
-      },
-      "content": {
-        "en": "We offer pilot-scale fermentation and downstream processing capabilities. This includes cell harvesting, purification, and formulation of active ingredients. Our goal is to support clients in scaling up their production processes efficiently and cost-effectively.",
-        "fr": "Nous offrons des capacités de fermentation à l’échelle pilote et de traitement en aval, incluant la récolte cellulaire, la purification et la formulation d’ingrédients actifs. Notre objectif est d’aider les clients à mettre à l’échelle leurs procédés de production de manière efficace et rentable."
-      }
-    },
-    "protein_synthesis": {
-        "title": {
-          "en": "Protein Synthesis",
-          "fr": "Synthèse des protéines"
-        },
-        "content": {
-          "en": {
-            "overview": [
-              "Examples of types of proteins:",
-              "• Enzymes",
-              "• Membrane markers",
-              "• Growth hormones",
-              "• Peptides",
-              "• Monoclonal antibodies"
-            ],
-            "capabilities": [
-              "Examples of applications:",
-              "• Antimicrobial formulations and coatings",
-              "• Enzymatic biosensors",
-              "• Functionalization of nanoparticles with specific ligands (antibodies, peptides, proteins) for cell line-specific targeting"
-            ],
-            "collaboration": [
-              "Specific equipments :\n• For production:\no Bioreactors\no Incubator-Agitator\n• Purification :\no Fast Protein Liquid Chromatography (FPLC)\no Tangential Flow Filtration (TFF)\n• Characterizations :\no Liquid Chromatography coupled with Quadrupole Time of Flight LC/MS\no Gel electrophoresis"
+    ],
+    "bottomRow": {
+      "en": {
+        "title": "Pharmaceuticals (therapeutic molecules) Produced by Biomanufacturing",
+        "sections": [
+          {
+            "heading": "Traditional Biologics:",
+            "items": [
+              "Antibiotics",
+              "Immunosuppressants",
+              "Anticancer Compounds",
+              "Enzymes",
+              "Hormones & Growth Factors",
+              "Statins (Cholesterol-lowering drugs)"
             ]
           },
-          "fr": {
-            "overview": [
-              "Le CERASP est une installation conforme aux BPL qui opère selon des procédures alignées sur les BPF pour soutenir la préparation réglementaire.",
-              "Nous développons des procédés biopharmaceutiques prêts pour les BPF afin de faciliter un transfert technologique fluide vers les fabricants agréés.",
-              "Notre expertise couvre le développement des procédés en amont et en aval pour les produits biologiques et les thérapies avancées."
-            ],
-            "capabilities": [
-              "Optimisation des bioprocédés (fermentation et culture cellulaire)",
-              "Purification des biomolécules",
-              "Tests de bioactivité et de stabilité",
-              "Caractérisation génomique et microbienne",
-              "Développement de méthodes analytiques pour les produits biologiques"
-            ],
-            "collaboration": [
-              "Nous collaborons avec des universités et des CCTT pour soutenir l'innovation industrielle et le passage à l'échelle des thérapies avancées.",
-              "Spécialisé dans la culture de cellules microbiennes et de mammifères pour la production de protéines thérapeutiques et d'autres biologiques."
+          {
+            "heading": "Advanced Therapies:",
+            "items": [
+              "mRNA Vaccines (e.g., COVID-19 vaccines)",
+              "siRNA & Antisense Oligonucleotides (gene silencing)",
+              "Cell Therapies (CAR-T, stem cell therapies)",
+              "Gene Therapies (CRISPR, viral vectors)"
+            ]
+          },
+          {
+            "heading": "Specialty Biopolymers & Delivery Systems",
+            "items": [
+              "Chitosan (Drug delivery, wound healing, tissue engineering)",
+              "Lipid Nanoparticles (RNA & drug delivery)"
             ]
           }
+        ]
+      },
+      "fr": {
+        "title": "Médicaments (molécules thérapeutiques) produits par bioproduction",
+        "sections": [
+          {
+            "heading": "Biologiques traditionnels :",
+            "items": [
+              "Antibiotiques",
+              "Immunosuppresseurs",
+              "Composés anticancéreux",
+              "Enzymes",
+              "Hormones et facteurs de croissance",
+              "Statines (médicaments contre le cholestérol)"
+            ]
+          },
+          {
+            "heading": "Thérapies avancées :",
+            "items": [
+              "Vaccins à ARNm (ex. : vaccins contre la COVID-19)",
+              "siRNA et oligonucléotides antisens (silencieux génique)",
+              "Thérapies cellulaires (CAR-T, cellules souches)",
+              "Thérapies géniques (CRISPR, vecteurs viraux)"
+            ]
+          },
+          {
+            "heading": "Biopolymères spécialisés et systèmes de délivrance",
+            "items": [
+              "Chitosane (administration de médicaments, cicatrisation, ingénierie tissulaire)",
+              "Nanoparticules lipidiques (délivrance d’ARN ou de médicaments)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "feasibility": {
+    "title": {
+      "en": "Feasibility",
+      "fr": "Faisabilité"
+    },
+    "content": {
+      "en": "Our Services include:",
+      "fr": "Nos services incluent :"
+    }
+  },
+  "TechTrans": {
+    "title": {
+      "en": "Technical Transfer",
+      "fr": "Transfert technique"
+    },
+    "content": {
+      "en": "Our technical transfer services include process optimization for protocols and parameters:",
+      "fr": "Nos services de transfert technologique incluent l'optimisation des processus pour les protocoles et les paramètres : "
+    }
+  },
+  "training": {
+    "title": {
+      "en": "Training Program Support ",
+      "fr": "Soutien au programme de formation"
+    },
+    "content": {
+      "en": "We offer tailored training solutions that build technical skills, support business development, and align with industry standards through customizable competency models.",
+      "fr": "Nous offrons des formations sur mesure pour développer des compétences techniques, soutenir le développement des affaires et répondre aux normes de l'industrie grâce à des modèles de compétences personnalisables."
+    },
+    "fields": {
+      "trainingSolutions": {
+        "title": {
+          "en": "Skills-Based Learning",
+          "fr": "Apprentissage axé sur les compétences"
+        },
+        "desc": {
+          "en": "We use competency models developed via industry standards to ensure learners develop the needed skills, through theory and practice. We can customize any of our trainings to meet your needs and can deliver trainings virtually or face to face on our or your premises.",
+          "fr": "Nous utilisons des modèles de compétences développés selon les normes de l'industrie pour nous assurer que les apprenants développent les compétences nécessaires, à travers la théorie et la pratique. Nous pouvons personnaliser toutes nos formations pour répondre à vos besoins et les dispenser à distance ou en personne, sur nos sites ou les vôtres."
+        }
+      },
+      "competencyLearning": {
+        "title": {
+          "en": "Customized Competency Models",
+          "fr": "Modèles de compétences personnalisés"
+        },
+        "desc": {
+          "en": "We can develop a competency model guided by industry standards and tailored to your company needs, and designing the needed workforce training, to be delivered by you (via train the trainer) or by us. ",
+          "fr": "Nous pouvons développer un modèle de compétences guidé par les normes de l'industrie et adapté aux besoins de votre entreprise, ainsi que concevoir la formation nécessaire pour votre personnel, à dispenser par vos soins (via la formation de formateurs) ou par nos soins."
+        }
+      },
+      "adaptableTraining": {
+        "title": {
+          "en": "Technical Process Training",
+          "fr": "Formation technique sur les processus"
+        },
+        "desc": {
+          "en": "We can create one-off or repeat technical training and training guides on specific manufacturing processes (including GMP), research activities, equipment usage, writing SOPs and Regulatory. ",
+          "fr": "Nous pouvons créer des formations techniques ponctuelles ou récurrentes ainsi que des guides de formation sur des processus de fabrication spécifiques (y compris les BPF), des activités de recherche, l'utilisation d'équipements, la rédaction de PON et les affaires réglementaires. "
+        }
+      },
+      "empoweringTeams": {
+        "title": {
+          "en": "Business Skills Coaching",
+          "fr": "Coaching en développement des affaires"
+        },
+        "desc": {
+          "en": "We offer training, coaching and mentoring on business development and selling skills using face to face training and web-based business simulations.",
+          "fr": "Nous offrons des formations, du coaching et du mentorat en développement des affaires et en compétences de vente, en utilisant des formations en face à face et des simulations d'affaires en ligne. "
         }
       }
+    }
+  }
 }
