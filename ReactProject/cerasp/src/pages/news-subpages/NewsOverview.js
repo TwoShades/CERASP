@@ -9,6 +9,7 @@ export default function NewsOverview({ onReady }) {
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
 
   const iframeSources = [
+    "https://www.linkedin.com/embed/feed/update/urn:li:share:7336061660295573506?collapsed=1",
     "https://www.linkedin.com/embed/feed/update/urn:li:share:7320803035293573120?collapsed=1",
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7308839915805376512",
     "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7331320643541422081?collapsed=1",
