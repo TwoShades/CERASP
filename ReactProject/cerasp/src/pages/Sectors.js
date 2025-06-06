@@ -11,6 +11,11 @@ import SectorsRegulatory from "./sectors-subpages/SectorsRegulatory.js";
 import SectorsPharma from "./sectors-subpages/SectorsPharma.js";
 import SectorsProtein from "./sectors-subpages/SectorsProtein.js";
 import SectorsSupport from "./sectors-subpages/SectorsSupport.js";
+import SectorsRnTech from "./sectors-subpages/SectorsRnTech.js";
+import SectorsScaleUp from "./sectors-subpages/SectorsScaleUp.js";
+import SectorsChemistry from "./sectors-subpages/SectorsChemistry.js";
+import SectorsFeasibility from "./sectors-subpages/SectorsFeasibility.js";
+import SectorsTraining from "./sectors-subpages/SectorsTraining.js";
 
 const Sectors = () => {
   useScrollToPanel();
@@ -27,82 +32,55 @@ const Sectors = () => {
         <UnderConstruction />
       </div>
 
-      {/*   =========================
-              =====PREFORMULATION======
-              =========================
-        */}
+      {/*===PREFORMULATION====*/}
 
       <div id="preformulation">
         <SectorsPreformulation />
       </div>
 
-      {/*   ======================
-              =====FORMULATION======
-              ======================
-        */}
+      {/*====FORMULATION==== */}
 
       <div id="formulation">
         <SectorsFormulation />
       </div>
 
-      {/*   ==========================
-              ==RESEARCH & TECH SUPPORT=
-              ==========================
-        */}
+      {/*=====RESEARCH & TECH SUPPORT=====*/}
 
       <div id="research-&-tech-support">
-        
+        <SectorsRnTech />
       </div>
 
-      {/*   ======================
-              ==REF AFF ACTIVITIES==
-              ======================
-        */}
+      {/*=====REF AFF ACTIVITIES======*/}
 
       <div id="ref-aff-activities">
         <SectorsRegulatory />
       </div>
 
-      {/*   ======================
-              =====PROTOTYPING======
-              ======================
-        */}
+      {/*====PROTOTYPING====*/}
 
       <div id="prototyping">
         <SectorsPrototyping />
       </div>
 
-      {/*   =========================
-              =====PHARMACEUTICAL======
-              =========================
-        */}
+      {/*====PHARMACEUTICAL===== */}
 
       <div id="pharmaceutical">
         <SectorsPharma />
       </div>
 
-      {/*   =================================
-              =====CHEMISTRY & EXTRACTION======
-              =================================
-        */}
+      {/*====CHEMISTRY & EXTRACTION====*/}
 
       <div id="chemistry-&-extraction">
-        
+        <SectorsChemistry />
       </div>
 
-      {/*   =======================
-              =====R&D SCALE UP======
-              =======================
-        */}
+      {/*=====R&D SCALE UP====*/}
 
       <div id="r&d-scale-up">
-        
+        <SectorsScaleUp />
       </div>
 
-      {/*   ============================
-              =====PROTEIN SYNTHESIS======
-              ============================
-        */}
+      {/*====PROTEIN SYNTHESIS==== */}
 
       <div id="protein-synthesis">
         <SectorsProtein />
@@ -114,7 +92,7 @@ const Sectors = () => {
         */}
 
       <div id="feasibility-&-tech-trans">
-        
+        <SectorsFeasibility />
       </div>
 
       {/*   ===========================
@@ -123,22 +101,16 @@ const Sectors = () => {
         */}
 
       <div id="training-program">
+        <SectorsTraining />
+      </div>
+
+      {/*====SUPPORT====*/}
+
+      <div id="support">
         <SectorsSupport />
       </div>
 
-      {/*   ===================
-              =====SUPPORT=======
-              ===================
-        */}
-
-      <div id="support">
-        
-      </div>
-
-      {/*   =======================
-              =====CONTACT FORM======
-              =======================
-        */}
+      {/*====CONTACT FORM===*/}
 
       <div id="contact-us-form">
         <ContactUs />
