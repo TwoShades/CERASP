@@ -18,7 +18,7 @@ const ExpertiseGMP = () => {
         <div className="gmp-hero-section">
           <div className="gmp-hero-image">
             <StockImageFetch
-              searchTerm="biologist"
+              searchTerm="pills"
               imgSource="large"
               orientation="landscape"
               page={1}

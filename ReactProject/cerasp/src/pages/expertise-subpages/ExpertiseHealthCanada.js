@@ -58,7 +58,7 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
                 alt="Government of Canada Logo" 
                 loading="lazy"
               />
-              <ExternalLink size={16} className="external-icon" />
+              {/* <ExternalLink size={16} className="external-icon" /> */}
             </button>
           </div>
 
@@ -88,7 +88,7 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
                 </div>
               </div>
               
-              <div className="feature-item">
+              {/* <div className="feature-item">
                 <div className="feature-icon">
                   <Award size={20} />
                 </div>
@@ -96,7 +96,7 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
                   <span className="feature-title">Quality Assured</span>
                   <span className="feature-desc">Certified processes</span>
                 </div>
-              </div>
+              </div> */}
               
               <div className="feature-item">
                 <div className="feature-icon">
@@ -110,14 +110,14 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
             </div>
 
             {/* Call to Action */}
-            <div className="cta-section">
+            {/* <div className="cta-section">
               <button className="primary-cta">
                 Learn More About Our Services
               </button>
               <button className="secondary-cta">
                 View Certifications
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -144,7 +144,7 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
           </div>
           
           {/* Floating Statistics */}
-          <div className="floating-stats">
+          {/* <div className="floating-stats">
             <div className="stat-card">
               <span className="stat-number">100%</span>
               <span className="stat-label">Compliant</span>
@@ -153,7 +153,7 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
               <span className="stat-number">5+</span>
               <span className="stat-label">Years</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

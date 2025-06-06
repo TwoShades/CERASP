@@ -90,4 +90,8 @@
     font-weight: 200;
     text-align: justify;
   }
+
+  .subpage-header h1 {
+    font-size: 1.6rem;
+  }
 }

@@ -10,11 +10,13 @@ const SectorsPreformulation = () => {
   const preform = sectorsTranslations.preformulation;
   
   return (
+    <div className="sectors-preformulation-layout">
     <div className="sectors-preformulation">
-      <div className="preform-header">
-        <SubPageHeader
+      <SubPageHeader
                 name={language === "fr" ? "PRÉFORMULATION" : "PREFORMULATION"}
               />
+      <div className="preform-header">
+        
       </div>
       
       <div className="preform-content">
@@ -61,6 +63,7 @@ const SectorsPreformulation = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
