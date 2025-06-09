@@ -3,8 +3,10 @@ import "./Pages-css/LandingPage.css";
 import ContactUs from "./ContactUs/ContactUs.js";
 import Footer from "../components/layouts/Footer.js";
 import UnderConstruction from "../components/layouts/UnderConstruction.js";
+import scrollToTop from "../utils/scrollToTop.js";
 
 const LandingPage = () => {
+  scrollToTop();
   const [stage, setStage] = useState("logo");
 
   useEffect(() => {
@@ -26,7 +28,6 @@ const LandingPage = () => {
         }}
       />
 
-
       <div className="content">
         {/* ===================
             =====LANDING ZONE=====
@@ -40,7 +41,9 @@ const LandingPage = () => {
                 className="fade logo"
               />
             )}
-            {stage === "text" && <h1 className="fade text">Welcome to CERASP</h1>}
+            {stage === "text" && (
+              <h1 className="fade text">Welcome to CERASP</h1>
+            )}
             {stage === "page" && (
               <div className="main-content-landing">
                 <UnderConstruction />
