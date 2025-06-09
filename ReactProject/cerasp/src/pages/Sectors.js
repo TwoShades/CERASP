@@ -2,6 +2,7 @@ import "./Pages-css/Sectors.css";
 import Footer from "../components/layouts/Footer.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
 import SectorsPrototyping from "./sectors-subpages/SectorsPrototyping.js";
 import UnderConstruction from "../components/layouts/UnderConstruction.js";
@@ -19,6 +20,7 @@ import SectorsTraining from "./sectors-subpages/SectorsTraining.js";
 
 const Sectors = () => {
   useScrollToPanel();
+  useScrollOnNavigate();
 
   return (
     <div className="sectors page-content">

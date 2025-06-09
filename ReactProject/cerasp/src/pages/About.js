@@ -1,6 +1,7 @@
 import "./Pages-css/About.css";
 import Footer from "../components/layouts/Footer.js";
 import useScrollToPanel from "../hooks/useScrollToPanel";
+import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 
 // Individual Panels //
 import AboutOverview from "./about-subpages/AboutOverview.js";
@@ -12,6 +13,7 @@ import ContactUs from "./ContactUs/ContactUs.js";
 
 const About = () => {
   useScrollToPanel();
+  useScrollOnNavigate();
 
   return (
     <div className="about-page page-content">
