@@ -6,6 +6,7 @@ import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 import scrollToTop from "../utils/scrollToTop.js";
 import NewsOverview from "./news-subpages/NewsOverview.js";
 import ContactUs from "./ContactUs/ContactUs.js";
+import { PropagateLoader } from "react-spinners";
 
 const News = () => {
   const [isOverviewReady, setIsOverviewReady] = useState(false);
@@ -24,6 +25,12 @@ const News = () => {
       {!isOverviewReady && (
         <div className="news-loader-overlay">
           <h1>Loading News...</h1>
+          <PropagateLoader
+            color="#0056b3"
+            size={45}
+            speedMultiplier={3}
+            aria-label="Loading news overview..."
+          />
         </div>
       )}
 
