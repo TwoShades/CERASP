@@ -3,6 +3,31 @@
   background-color: #ffffff;
 }
 
+.equipment-card.placeholder-card {
+  background: linear-gradient(135deg, #e6e6e6 0%, #f5f5f5 100%);
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  height: 400px;
+  width: 25%;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #eeeeee;
+  }
+  50% {
+    background-color: #dddddd;
+  }
+  100% {
+    background-color: #eeeeee;
+  }
+}
+
 .about-equipments-title {
   background-color: #0056b3;
   box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
@@ -253,6 +278,11 @@
   .equipment-card img {
     width: 40%;
   }
+
+  .equipment-card.placeholder-card {
+    width: 36%;
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 776px) {
@@ -281,6 +311,11 @@
 
   .equipment-card p {
     font-size: 0.9rem;
+  }
+
+  .equipment-card.placeholder-card {
+    width: 30%;
+    height: 300px;
   }
 }
 

@@ -1,29 +1,44 @@
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const useScrollToPanel = () => {
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
-    if (location.state?.scrollTo) {
-      scrollToPanel(location.state.scrollTo);
+    const sectionId = location.state?.scrollTo;
+    if (!sectionId) return;
 
-      // Uncomment so that "back" just returns to 'top' of previous page.
-      // navigate(location.pathname, { replace: true });
-    }
-  }, [location, navigate]); // Runs only when location changes
+    const delayNeeded = location.state?.fromDifferentPage ?? true;
 
-  const scrollToPanel = (id) => {
-    setTimeout(() => {
-      const panel = document.getElementById(id);
-      if (panel) {
-        panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    const scrollToTarget = () => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        if (delayNeeded) {
+          setTimeout(() => {
+            const el = document.getElementById(sectionId);
+            if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 400);
+        } else {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        return true;
       }
-    }, 200);
-  };
+      return false;
+    };
 
-  return scrollToPanel;
+    if (scrollToTarget()) return;
+
+    const observer = new MutationObserver(() => {
+      if (scrollToTarget()) observer.disconnect();
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => observer.disconnect();
+  }, [location]);
 };
 
 export default useScrollToPanel;

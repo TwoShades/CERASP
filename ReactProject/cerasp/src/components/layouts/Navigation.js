@@ -18,17 +18,27 @@ const Navigation = () => {
   const [openSubMenu, setOpenSubMenu] = useState(null);
 
   const handleLinkClick = (linkPath) => {
-    if (pathname === linkPath) {
+    const isSamePage = pathname === linkPath;
+
+    if (isSamePage) {
       scrollToTop();
       setMenuOpen(false);
     } else {
-      navigate(linkPath, { state: { scrollToTop: true } });
+      navigate(linkPath, {
+        state: { scrollToTop: true, fromDifferentPage: true },
+      });
       setMenuOpen(false);
     }
   };
 
   const handleNavigateToSection = (sectionId, path) => {
-    navigate(path, { state: { scrollTo: sectionId } });
+    const isSamePage = pathname === path;
+    navigate(path, {
+      state: {
+        scrollTo: sectionId,
+        fromDifferentPage: !isSamePage,
+      },
+    });
     setMenuOpen(false);
     setOpenSubMenu(null);
   };
