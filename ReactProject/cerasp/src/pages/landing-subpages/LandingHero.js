@@ -21,16 +21,6 @@ const LandingHero = () => {
   useEffect(() => {
     if (stage !== "page") return;
 
-    const hero = document.getElementById("heroContainer");
-
-    const handleMouseMove = (e) => {
-      const rect = hero.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      hero.style.setProperty("--x", `${x}%`);
-      hero.style.setProperty("--y", `${y}%`);
-    };
-
     const handleScroll = () => {
       const scrolled = window.pageYOffset;
       const shapes = document.querySelectorAll(".shape");
@@ -41,11 +31,9 @@ const LandingHero = () => {
       });
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("scroll", handleScroll);
     };
   }, [stage]);

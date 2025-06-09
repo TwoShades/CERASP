@@ -20,6 +20,8 @@ const ExpertiseAnimal = ({ className = "" }) => {
   const { language } = useContext(LanguageContext);
   const animal = expertiseTranslations.animal_health;
   const nhp = expertiseTranslations.nhp_nutraceuticals;
+  const labels = expertiseTranslations.animal_health;
+
   const [hoveredSection, setHoveredSection] = useState(null);
 
   const expertiseSections = [
@@ -30,12 +32,7 @@ const ExpertiseAnimal = ({ className = "" }) => {
       icon: Heart,
       searchTerm: "veterinary care",
       color: "#FF6B6B",
-      features: [
-        "Veterinary Research",
-        "Pet Nutrition",
-        "Animal Wellness",
-        "Clinical Trials",
-      ],
+      features: ["Veterinary Research", "Pet Nutrition", "Animal Wellness"],
       stats: { projects: "200+", success: "95%", years: "15+" },
     },
     {
@@ -49,7 +46,6 @@ const ExpertiseAnimal = ({ className = "" }) => {
         "Natural Products",
         "Supplement Development",
         "Quality Testing",
-        "Regulatory Support",
       ],
       stats: { projects: "150+", success: "98%", years: "12+" },
     }, //,
@@ -79,8 +75,8 @@ const ExpertiseAnimal = ({ className = "" }) => {
     <div className="expertise-animal-layout">
       <div className={`expertise-container-enhanced ${className}`}>
         <div className="expertise-header">
-          <h1> Animal Health, NHP & Nutraceuticals</h1>
-          <p>Leading innovation in health, research, and natural solutions</p>
+          <h1>{labels.title[language].toUpperCase()}</h1>
+          <p>{labels.subtitle[language]}</p>
         </div>
 
         <div className="expertise-grid">
@@ -142,19 +138,25 @@ const ExpertiseAnimal = ({ className = "" }) => {
                       <div className="animal-stat-number">
                         {section.stats.projects}
                       </div>
-                      <div className="animal-stat-label">Projects</div>
+                      <div className="animal-stat-label">
+                        {labels.projects[language]}
+                      </div>
                     </div>
                     <div className="animal-stat-item">
                       <div className="animal-stat-number">
                         {section.stats.success}
                       </div>
-                      <div className="animal-stat-label">Success Rate</div>
+                      <div className="animal-stat-label">
+                        {labels.success_rate[language]}
+                      </div>
                     </div>
                     <div className="animal-stat-item">
                       <div className="animal-stat-number">
                         {section.stats.years}
                       </div>
-                      <div className="animal-stat-label">Experience</div>
+                      <div className="animal-stat-label">
+                        {labels.experience[language]}
+                      </div>
                     </div>
                   </div>
 
@@ -181,12 +183,8 @@ const ExpertiseAnimal = ({ className = "" }) => {
 
         <div className="expertise-summary">
           <div className="summary-content">
-            <h3>Comprehensive Solutions</h3>
-            <p>
-              Our integrated approach combines cutting-edge research, natural
-              innovation, and proven methodologies to deliver exceptional
-              results across all domains.
-            </p>
+            <h3>{labels.summary_title[language]}</h3>
+            <p>{labels.summary_text[language]}</p>
           </div>
         </div>
       </div>

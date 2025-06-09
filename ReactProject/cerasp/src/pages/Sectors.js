@@ -86,19 +86,13 @@ const Sectors = () => {
         <SectorsProtein />
       </div>
 
-      {/*   ===================================
-              =====FEASIBILITY & TECH TRANS======
-              ===================================
-        */}
+      {/* ===FEASIBILITY & TECH TRANS==== */}
 
       <div id="feasibility-&-tech-trans">
         <SectorsFeasibility />
       </div>
 
-      {/*   ===========================
-              =====TRAINING PROGRAM======
-              ===========================
-        */}
+      {/* ====TRAINING PROGRAM==== */}
 
       <div id="training-program">
         <SectorsTraining />

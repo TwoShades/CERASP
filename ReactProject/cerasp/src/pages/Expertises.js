@@ -17,27 +17,14 @@ import ExpertiseNumeric from "./expertise-subpages/ExpertiseNumeric.js";
 import ContactUs from "./ContactUs/ContactUs.js";
 import Footer from "../components/layouts/Footer.js";
 
-
 const Expertises = () => {
   useScrollToPanel();
   return (
     <div className="expertises-page page-content">
-      
-
       {/* ====OVERVIEW==== */}
 
       <div id="overview">
-        <ExpertiseOverview
-          topRowContent={
-            <>
-              <h1>Expertise & Solution</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
-                vitae enim ut tu.
-              </p>
-            </>
-          }
-        />
+        <ExpertiseOverview />
       </div>
 
       {/* ===GMP EXPERTISE=== */}
