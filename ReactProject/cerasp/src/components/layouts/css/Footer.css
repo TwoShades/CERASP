@@ -18,6 +18,14 @@
   justify-content: space-between;
 }
 
+.made-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10%;
+}
+
 .privacy {
   display: flex;
   justify-content: center;
@@ -46,6 +54,7 @@
   text-align: center;
 }
 
+.footer .made-by p,
 .footer .copyright p,
 .footer .privacy p {
   margin: 5px 0;

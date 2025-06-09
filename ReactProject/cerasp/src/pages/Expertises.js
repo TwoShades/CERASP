@@ -26,17 +26,7 @@ const Expertises = () => {
       {/* ====OVERVIEW==== */}
 
       <div id="overview">
-        <ExpertiseOverview
-          topRowContent={
-            <>
-              <h1>Expertise & Solution</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Molestie ac viverra
-                vitae enim ut tu.
-              </p>
-            </>
-          }
-        />
+        <ExpertiseOverview />
       </div>
 
       {/* ===GMP EXPERTISE=== */}
