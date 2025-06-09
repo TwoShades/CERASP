@@ -10,10 +10,10 @@ import LandingHero from "./landing-subpages/LandingHero.js";
 
 const LandingPage = () => {
   useScrollToPanel();
-  scrollToTop();
   const [stage, setStage] = useState("logo");
 
   useEffect(() => {
+    scrollToTop();
     const timer1 = setTimeout(() => setStage("text"), 1000);
     const timer2 = setTimeout(() => setStage("page"), 2000);
 
@@ -25,43 +25,24 @@ const LandingPage = () => {
 
   return (
     <div className="landing page-content">
-      <div id="landing-hero">
-        <LandingHero />
-
-        <div className="content">
-          {/* ===================
+      <div className="content">
+        {/* ===================
             =====LANDING ZONE=====
             =================== */}
-          <div id="landing">
-            <div className="landing-bloc">
-              {stage === "logo" && (
-                <img
-                  src="/logos/cerasplogo.png"
-                  alt="CERASP Logo"
-                  className="fade logo"
-                />
-              )}
-              {stage === "text" && (
-                <h1 className="fade text">Welcome to CERASP</h1>
-              )}
-              {stage === "page" && (
-                <div className="main-content-landing">
-                  <UnderConstruction />
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div id="contact-us-form">
-            <ContactUs />
-          </div>
+        <div id="landing-hero">
+          <LandingHero />
         </div>
+
+        <div id="landing-under-construction">
+          <UnderConstruction />
+        </div>
+
         <div id="contact-us-form">
           <ContactUs />
         </div>
-
-        <Footer />
       </div>
+
+      <Footer />
     </div>
   );
 };

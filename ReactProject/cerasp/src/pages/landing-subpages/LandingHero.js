@@ -56,14 +56,6 @@ const LandingHero = () => {
         </div>
 
         <div className="hero-content">
-          {/* {stage === "logo" && (
-            <img
-              src="/logos/cerasplogo.png"
-              alt="CERASP Logo"
-              className="fade logo"
-            />
-          )} */}
-
           {stage === "text" && <h1 className="fade text">Welcome to CERASP</h1>}
 
           {stage === "page" && (
@@ -74,9 +66,6 @@ const LandingHero = () => {
                 className="fade logo"
               />
               <p className="tagline">{t.tagline}</p>
-              {/* <button className="cta-button" onClick={scrollToNext}>
-                {t.cta}
-              </button> */}
             </>
           )}
         </div>
