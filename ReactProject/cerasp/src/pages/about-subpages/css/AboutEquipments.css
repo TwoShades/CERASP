@@ -258,6 +258,7 @@
 @media screen and (max-width: 776px) {
   .about-equipments {
     padding-top: 60px;
+    padding: 0;
   }
 
   .about-equipments-images {
@@ -266,15 +267,15 @@
   }
 
   .equipment-card {
-    width: 40%;
+    width: 30%;
     flex-direction: column;
     padding: 20px 16px;
-    height: 260px;
+    height: 300px;
   }
 
   .equipment-card img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 12px;
   }
 
