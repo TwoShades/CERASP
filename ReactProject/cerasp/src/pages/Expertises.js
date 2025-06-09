@@ -1,6 +1,7 @@
 import "./Pages-css/Expertises.css";
 
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 
 import ExpertiseOverview from "../pages/expertise-subpages/ExpertiseOverview.js";
 import ExpertiseGMP from "./expertise-subpages/ExpertiseGMP.js";
@@ -19,6 +20,7 @@ import Footer from "../components/layouts/Footer.js";
 
 const Expertises = () => {
   useScrollToPanel();
+  useScrollOnNavigate();
   return (
     <div className="expertises-page page-content">
       {/* ====OVERVIEW==== */}

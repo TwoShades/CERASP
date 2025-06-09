@@ -1,26 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Pages-css/News.css";
-// import { ThreeDots } from "react-loader-spinner";
 import Footer from "../components/layouts/Footer.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
+import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
+import scrollToTop from "../utils/scrollToTop.js";
 import NewsOverview from "./news-subpages/NewsOverview.js";
 import ContactUs from "./ContactUs/ContactUs.js";
-
-// import ThreeDotsLoader from "../components/uicomponents/ThreeDotLoader.js";
-
+import { PropagateLoader } from "react-spinners";
 
 const News = () => {
   const [isOverviewReady, setIsOverviewReady] = useState(false);
   useScrollToPanel();
+  useScrollOnNavigate();
+
+  // THIS IS REQUIRED: Scroll to Top after LinkedIn renders
+  useEffect(() => {
+    if (isOverviewReady) {
+      scrollToTop();
+    }
+  }, [isOverviewReady]);
 
   return (
     <div className="news-page page-content">
       {!isOverviewReady && (
         <div className="news-loader-overlay">
-
           <h1>Loading News...</h1>
-          {/* <ThreeDotsLoader /> */}
-
+          <PropagateLoader
+            color="#0056b3"
+            size={45}
+            speedMultiplier={3}
+            aria-label="Loading news overview..."
+          />
         </div>
       )}
 

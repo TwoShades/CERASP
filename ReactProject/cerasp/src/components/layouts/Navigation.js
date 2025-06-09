@@ -1,10 +1,10 @@
 import { useState, useRef, useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./css/Navigation.css";
-import useScrollToTop from "../../hooks/useScrollToTop";
 import sitemap from "../../sitemap.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import scrollToTop from "../../utils/scrollToTop";
 
 const Navigation = () => {
   const { pathname } = useLocation();
@@ -17,9 +17,35 @@ const Navigation = () => {
   const [hoveredMenu, setHoveredMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
 
-  const { handleLinkClick } = useScrollToTop(pathname, () =>
-    setMenuOpen(false)
-  );
+  const handleLinkClick = (linkPath) => {
+    const isSamePage = pathname === linkPath;
+
+    if (isSamePage) {
+      scrollToTop();
+      setMenuOpen(false);
+    } else {
+      navigate(linkPath, {
+        state: { scrollToTop: true, fromDifferentPage: true },
+      });
+      setMenuOpen(false);
+    }
+  };
+
+  const handleNavigateToSection = (sectionId, path) => {
+    const isSamePage = pathname === path;
+    navigate(path, {
+      state: {
+        scrollTo: sectionId,
+        fromDifferentPage: !isSamePage,
+      },
+    });
+    setMenuOpen(false);
+    setOpenSubMenu(null);
+  };
+
+  const toggleSubMenu = (menu) => {
+    setOpenSubMenu((prev) => (prev === menu ? null : menu));
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -32,14 +58,6 @@ const Navigation = () => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
-
-  const handleNavigateToSection = (sectionId, path) => {
-    navigate(path, { state: { scrollTo: sectionId } });
-  };
-
-  const toggleSubMenu = (menu) => {
-    setOpenSubMenu((prev) => (prev === menu ? null : menu));
-  };
 
   return (
     <>
@@ -81,7 +99,7 @@ const Navigation = () => {
               const filteredSubPages = subPages.filter(
                 (subPage) => subPage.id !== "contact-us-form"
               );
-              console.log({ pageId, displayTitle, nav });
+
               return (
                 <li
                   key={pageId}
@@ -94,15 +112,16 @@ const Navigation = () => {
                   }
                 >
                   <div className="dropdown-clickable-zone">
-                    <Link
-                      to={`/${pageId}`}
-                      onClick={() => {
+                    <a
+                      href={`/${pageId}`}
+                      onClick={(e) => {
+                        e.preventDefault();
                         handleLinkClick(`/${pageId}`);
                         setOpenSubMenu(null);
                       }}
                     >
                       {displayTitle}
-                    </Link>
+                    </a>
 
                     {(isMobile || isTablet) && filteredSubPages.length > 0 && (
                       <span
@@ -125,13 +144,12 @@ const Navigation = () => {
                           {filteredSubPages.map((subPage) => (
                             <li
                               key={subPage.id}
-                              onClick={() => {
+                              onClick={() =>
                                 handleNavigateToSection(
                                   subPage.id,
                                   `/${pageId}`
-                                );
-                                setOpenSubMenu(null);
-                              }}
+                                )
+                              }
                             >
                               {subPage[language]}
                             </li>
