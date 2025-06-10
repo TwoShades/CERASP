@@ -33,8 +33,8 @@ const News = () => {
           </h1>
           <PropagateLoader
             color="#0056b3"
-            size={45}
-            speedMultiplier={3}
+            size={40}
+            speedMultiplier={2.4}
             aria-label="Loading news overview..."
           />
         </div>
