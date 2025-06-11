@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Pages-css/News.css";
 import Footer from "../components/layouts/Footer.js";
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
@@ -6,12 +6,14 @@ import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 import scrollToTop from "../utils/scrollToTop.js";
 import NewsOverview from "./news-subpages/NewsOverview.js";
 import ContactUs from "./ContactUs/ContactUs.js";
+import { LanguageContext } from "../contexts/LanguageContext.js";
 import { PropagateLoader } from "react-spinners";
 
 const News = () => {
   const [isOverviewReady, setIsOverviewReady] = useState(false);
   useScrollToPanel();
   useScrollOnNavigate();
+  const { language } = useContext(LanguageContext);
 
   // THIS IS REQUIRED: Scroll to Top after LinkedIn renders
   useEffect(() => {
@@ -24,11 +26,15 @@ const News = () => {
     <div className="news-page page-content">
       {!isOverviewReady && (
         <div className="news-loader-overlay">
-          <h1>Loading News...</h1>
+          <h1>
+            {language === "fr"
+              ? "Chargement des nouvelles..."
+              : "Loading News..."}
+          </h1>
           <PropagateLoader
             color="#0056b3"
-            size={45}
-            speedMultiplier={3}
+            size={40}
+            speedMultiplier={2.4}
             aria-label="Loading news overview..."
           />
         </div>
