@@ -56,19 +56,23 @@
   font-weight: 400;
 }
 
+/* Fixed services grid layout */
 .services-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  position: relative;
-  z-index: 2;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0;
 }
 
 .service-card {
-  flex: 0 1 380px;
-  min-width: 320px;
-  max-width: 420px;
+  flex: 0 1 calc(33.333% - 20px);
+  min-width: 300px;
+  max-width: 400px;
   background: rgba(255, 255, 255, 0.95);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(15px);
@@ -79,6 +83,7 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .service-card::before {
@@ -219,8 +224,15 @@
 .service-card:nth-child(5) { animation-delay: 0.5s; }
 .service-card:nth-child(6) { animation-delay: 0.6s; }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Responsive Design - Desktop */
+@media (min-width: 1200px) {
+  .service-card {
+    flex: 0 1 calc(33.333% - 20px);
+  }
+}
+
+/* Responsive Design - Tablets */
+@media (max-width: 1199px) and (min-width: 769px) {
   .research-technical-support {
     padding: 60px 30px;
   }
@@ -230,9 +242,9 @@
   }
   
   .service-card {
-    flex: 0 1 350px;
+    flex: 0 1 calc(50% - 12.5px);
     min-width: 280px;
-    max-width: 380px;
+    max-width: none;
     padding: 30px 25px;
   }
   
@@ -244,10 +256,17 @@
   }
 }
 
+/* Mobile Design - Large phones and small tablets */
 @media (max-width: 768px) {
+  .sectors-rn-tech-parent {
+    padding-top: 60px;
+    margin-bottom: 80px;
+  }
+
   .research-technical-support {
-    padding: 40px 20px;
+    padding: 30px 20px;
     border-radius: 16px;
+    margin: 0 10px;
   }
   
   .support-header {
@@ -263,8 +282,10 @@
   .service-card {
     flex: none;
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
+    min-width: auto;
     padding: 25px 20px;
+    border-radius: 16px;
   }
   
   .service-icon {
@@ -281,6 +302,7 @@
   
   .service-description {
     font-size: 0.95rem;
+    line-height: 1.6;
   }
   
   .support-cta {
@@ -289,15 +311,39 @@
   }
 }
 
+/* Mobile Design - Standard phones */
 @media (max-width: 480px) {
+  .sectors-rn-tech-parent {
+    padding-top: 40px;
+    margin-bottom: 60px;
+  }
+
   .research-technical-support {
-    padding: 30px 15px;
-    margin: 10px;
+    padding: 25px 15px;
+    margin: 0 5px;
+    border-radius: 12px;
+  }
+  
+  .support-header {
+    margin-bottom: 30px;
+  }
+
+  .support-header h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    margin-bottom: 15px;
+  }
+
+  .support-header p {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+  }
+  
+  .services-grid {
+    gap: 15px;
   }
   
   .service-card {
     padding: 20px 15px;
-    max-width: none;
+    border-radius: 12px;
   }
   
   .service-icon {
@@ -305,6 +351,7 @@
     height: 50px;
     font-size: 20px;
     margin-bottom: 15px;
+    border-radius: 12px;
   }
   
   .service-title {
@@ -314,9 +361,71 @@
   
   .service-description {
     font-size: 0.9rem;
+    line-height: 1.5;
   }
   
   .support-cta {
+    margin-top: 30px;
     padding: 25px 15px;
+    border-radius: 12px;
+  }
+}
+
+/* Mobile Design - Small phones */
+@media (max-width: 360px) {
+  .sectors-rn-tech-parent {
+    padding-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .research-technical-support {
+    padding: 20px 10px;
+    margin: 0;
+  }
+
+  .support-header {
+    margin-bottom: 25px;
+  }
+
+  .support-header h1 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+    margin-bottom: 12px;
+  }
+
+  .support-header p {
+    font-size: clamp(0.6rem, 4vw, 0.7rem);
+  }
+
+  .services-grid {
+    gap: 12px;
+  }
+
+  .service-card {
+    padding: 18px 12px;
+    border-radius: 10px;
+  }
+
+  .service-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .service-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .support-cta {
+    margin-top: 25px;
+    padding: 20px 10px;
+    border-radius: 10px;
   }
 }

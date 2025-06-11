@@ -225,69 +225,11 @@
   color: #475569;
 }
 
-/* Dark mode support
-@media (prefers-color-scheme: dark) {
-  .sectors-preformulation {
-    background: linear-gradient(135deg, #f4faff 0%, #e1ecf6 100%);
-  }
-
-  .preform-title {
-    color: #f8fafc;
-  }
-
-  .preform-subtitle {
-    color: #94a3b8;
-  }
-
-  .fieldBox {
-    background: rgba(30, 41, 59, 0.8);
-    border-color: rgba(148, 163, 184, 0.1);
-  }
-
-  .fieldBox:hover {
-    background: rgba(30, 41, 59, 0.95);
-  }
-
-  .caption {
-    background: rgba(30, 41, 59, 0.9);
-    color: #e2e8f0;
-  }
-
-  .caption:hover {
-    background: rgba(30, 41, 59, 0.95);
-  }
-
-  .title {
-    color: #f8fafc;
-  }
-
-  .desc {
-    color: #94a3b8;
-  }
-
-  .fieldBox:hover .desc {
-    color: #cbd5e1;
-  }
-} */
-
-/* Responsive Design */
-/* @media (max-width: 1200px) {
-  .sectors-preformulation {
-    padding: 60px 40px;
-  }
-
-  .preform-content {
-    gap: 40px;
-  }
-
-  .preform-title {
-    font-size: 36px;
-  }
-} */
-
 @media (max-width: 1200px) {
-  .sectors-preformulation {
-  }
+.sectors-preformulation-layout {
+  padding-top: calc(4em + 40px);
+}
+
 
   .preform-content {
     grid-template-columns: 1fr;
@@ -328,6 +270,10 @@
 }
 
 @media (max-width: 480px) {
+  .sectors-preformulation-layout {
+  padding-top: calc(4em + 20px);
+}
+
   .sectors-preformulation {
     margin: 0 1em 1em 1em;
   }

@@ -1,7 +1,7 @@
 /* Enhanced sectors Container */
 
 .sectors-feasibility-layout {
-  padding-top: calc(90px + 4em);
+  padding-top: calc(40px + 4em);
 }
 .sectors-container-enhanced {
   padding: 80px 4em;
@@ -436,6 +436,9 @@
 }
 
 @media (max-width: 480px) {
+  .sectors-feasibility-layout {
+    padding-top: calc(20px + 4em);
+  }
   .sectors-container-enhanced {
     padding: 30px 1.5em;
     margin: 1em;

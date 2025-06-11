@@ -30,12 +30,7 @@ const SectorsFeasibility = ({ className = "" }) => {
       icon: Microscope,
       searchTerm: "feasibility studies",
       color: "#FF6B6B",
-      features: [
-        "Studies on manufacturing, process or formulation methods (preformulation).",
-        "Conducting pilot and prototype studies. ",
-        "Running studies on designing new facilities and equipment purchases. ",
-        "Conduct digital health integration studies and incorporate digital transformation. ",
-      ],
+      features: feasibility.features[language],
       stats: { projects: "200+", success: "95%", years: "15+" },
     },
     {
@@ -45,45 +40,17 @@ const SectorsFeasibility = ({ className = "" }) => {
       icon: Stethoscope,
       searchTerm: "technical transfer",
       color: "#4ECDC4",
-      features: [
-        "Improving existing products in the case of a flawed or outdated procedure. ",
-        "Improve existing products, processes or processes for business, pharmacological or regulatory reasons. ",
-        "Improving an existing product for aesthetic reasons such as changing colour or taste.",
-        "Enable the integration of technological tools for digital health and for the corporate digital shift.",
-      ],
+      features: TechTrans.features[language],
       stats: { projects: "150+", success: "98%", years: "12+" },
-    }, //,
-    // {
-    //     id: 'research',
-    //     title: "ADVANCED RESEARCH",
-    //     content: "Cutting-edge research methodologies and innovative solutions for complex biological challenges.",
-    //     icon: Microscope,
-    //     searchTerm: "laboratory research",
-    //     color: "#45B7D1",
-    //     features: ["Lab Analysis", "Method Development", "Data Analytics", "Innovation"],
-    //     stats: { projects: "300+", success: "97%", years: "20+" }
-    // },
-    // {
-    //     id: 'natural',
-    //     title: "NATURAL SOLUTIONS",
-    //     content: "Sustainable and eco-friendly approaches to health and wellness product development.",
-    //     icon: Leaf,
-    //     searchTerm: "natural ingredients",
-    //     color: "#96CEB4",
-    //     features: ["Organic Compounds", "Green Chemistry", "Sustainability", "Bio-Innovation"],
-    //     stats: { projects: "180+", success: "94%", years: "10+" }
-    // }
+    },
   ];
 
   return (
     <div className="sectors-feasibility-layout">
       <div className={`sectors-container-enhanced ${className}`}>
         <div className="sectors-header">
-          <h1>Feasibility & Technical Transfer</h1>
-          <p>
-            Our Feasibility studies and pilot trials will ensure your project is
-            possible, or save you time and money!{" "}
-          </p>
+          <h1>{sectorsTranslations.section.title[language]}</h1>
+          <p>{sectorsTranslations.section.subtitle[language]}</p>
         </div>
 
         <div className="sectors-grid">
@@ -106,10 +73,6 @@ const SectorsFeasibility = ({ className = "" }) => {
                   <div className="section-icon">
                     <IconComponent size={28} />
                   </div>
-                  {/* <div className="section-badge">
-                                    <Star size={16} />
-                                    <span>Premium</span>
-                                </div> */}
                 </div>
 
                 <div className="sectors-image-enhanced">
@@ -120,12 +83,6 @@ const SectorsFeasibility = ({ className = "" }) => {
                     page={1}
                     perPage={1}
                   />
-                  {/* <div className="image-overlay">
-                                    <div className="overlay-content">
-                                        <TrendingUp size={24} />
-                                        <span>View Details</span>
-                                    </div>
-                                </div> */}
                 </div>
 
                 <div className="sectors-content">
@@ -139,44 +96,7 @@ const SectorsFeasibility = ({ className = "" }) => {
                       </div>
                     ))}
                   </div>
-
-                  {/* <div className="feasibility-stats-grid">
-                    <div className="feasibility-stat-item">
-                      <div className="feasibility-stat-number">
-                        {section.stats.projects}
-                      </div>
-                      <div className="feasibility-stat-label">Projects</div>
-                    </div>
-                    <div className="feasibility-stat-item">
-                      <div className="feasibility-stat-number">
-                        {section.stats.success}
-                      </div>
-                      <div className="feasibility-stat-label">Success Rate</div>
-                    </div>
-                    <div className="feasibility-stat-item">
-                      <div className="feasibility-stat-number">
-                        {section.stats.years}
-                      </div>
-                      <div className="feasibility-stat-label">Experience</div>
-                    </div>
-                  </div> */}
-
-                  {/* <button className="cta-button">
-                                    <span>Learn More</span>
-                                </button> */}
                 </div>
-
-                {/* <div className="sectors-footer">
-                                <div className="quality-badge">
-                                    <Award size={16} />
-                                    <span>Quality Assured</span>
-                                </div>
-                                <div className="rating">
-                                    {[...Array(5)].map((_, i) => (
-                                        <Star key={i} size={12} fill="currentColor" />
-                                    ))}
-                                </div>
-                            </div> */}
               </div>
             );
           })}
@@ -184,12 +104,8 @@ const SectorsFeasibility = ({ className = "" }) => {
 
         <div className="sectors-summary">
           <div className="summary-content">
-            <h3>Comprehensive Solutions</h3>
-            <p>
-              Our integrated approach combines cutting-edge research, natural
-              innovation, and proven methodologies to deliver exceptional
-              results across all domains.
-            </p>
+            <h3>{sectorsTranslations.section.summary_title[language]}</h3>
+            <p>{sectorsTranslations.section.summary_text[language]}</p>
           </div>
         </div>
       </div>

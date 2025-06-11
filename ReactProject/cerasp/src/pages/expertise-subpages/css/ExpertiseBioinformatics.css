@@ -1,11 +1,18 @@
+.expertise-bioinformatics-layout {
+  padding-top: calc(90px + 4em);
+}
+
 .expertise-bioinformatics {
+ max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  /* margin-top: 120px; */
+  margin-bottom: 90px;
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  padding: 80px 60px;
-  margin: 90px 50px 90px 50px;
   border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .expertise-bioinformatics::before {
@@ -22,6 +29,7 @@
 }
 
 .bioinfo-header {
+  color: white;
   text-align: center;
   margin-bottom: 60px;
   position: relative;
@@ -267,8 +275,18 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .expertise-bioinformatics {
-    padding: 60px 40px;
+    max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  /* margin-top: 120px; */
+  margin-bottom: 90px;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
   }
+  
 
   .bioinfo-content {
     gap: 40px;
@@ -315,9 +333,12 @@
 }
 
 @media (max-width: 480px) {
+  .expertise-bioinformatics-layout {
+    padding-top: calc(40px + 2em);
+  }
+  
   .expertise-bioinformatics {
-    padding: 0 1em 1em 1em;
-    margin: 2em 1em 1em 1em;
+    padding-top: 0px;
   }
 
   .bioinfo-header {

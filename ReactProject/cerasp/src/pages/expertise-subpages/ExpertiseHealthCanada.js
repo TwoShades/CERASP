@@ -4,7 +4,11 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 import { ExternalLink, Shield, Award, Users } from "lucide-react";
 
-const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) => {
+const ExpertiseHealthCanada = ({
+  leftContent,
+  rightContent,
+  className = "",
+}) => {
   const { language } = useContext(LanguageContext);
   const healthCanada = expertiseTranslations.health_canada;
   const [isVisible, setIsVisible] = useState(false);
@@ -19,7 +23,7 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
           setIsVisible(true);
         }
       },
-      { threshold: 0.1, rootMargin: '50px' }
+      { threshold: 0.1, rootMargin: "50px" }
     );
 
     if (panelRef.current) {
@@ -36,26 +40,28 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
   const handleLogoClick = (e) => {
     e.preventDefault();
     // Add smooth scroll or navigation logic here
-    console.log('Health Canada logo clicked');
+    console.log("Health Canada logo clicked");
   };
 
   return (
     <section className="expertise-health-canada-parent">
-      <div 
+      <div
         ref={panelRef}
-        className={`expertise-health-canada-panel ${isVisible ? 'animate-in' : ''} ${className}`}
+        className={`expertise-health-canada-panel ${
+          isVisible ? "animate-in" : ""
+        } ${className}`}
       >
         <div className="expertise-health-canada-left">
           {/* Enhanced Logo Section */}
           <div className="expertise-health-canada-link">
-            <button 
+            <button
               onClick={handleLogoClick}
               className="logo-button"
               aria-label="Health Canada Official Site"
             >
-              <img 
+              <img
                 src="./svg/canadagovlogo.svg"
-                alt="Government of Canada Logo" 
+                alt="Government of Canada Logo"
                 loading="lazy"
               />
               {/* <ExternalLink size={16} className="external-icon" /> */}
@@ -68,14 +74,14 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
             <h2>{healthCanada.title[language]}</h2>
             <div className="title-badge">
               <Shield size={16} />
-              <span>Certified Partner</span>
+              <span>{healthCanada.badge[language]}</span>
             </div>
           </div>
 
           {/* Enhanced Content Section */}
           <div className="expertise-health-canada-content">
             <p className="main-text">{healthCanada.content[language]}</p>
-            
+
             {/* New Features Grid */}
             <div className="features-grid">
               <div className="feature-item">
@@ -83,28 +89,26 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
                   <Shield size={20} />
                 </div>
                 <div className="feature-text">
-                  <span className="feature-title">Regulatory Compliance</span>
-                  <span className="feature-desc">Full Health Canada compliance</span>
+                  <span className="feature-title">
+                    {healthCanada.features.regulatory.title[language]}
+                  </span>
+                  <span className="feature-desc">
+                    {healthCanada.features.regulatory.description[language]}
+                  </span>
                 </div>
               </div>
-              
-              {/* <div className="feature-item">
-                <div className="feature-icon">
-                  <Award size={20} />
-                </div>
-                <div className="feature-text">
-                  <span className="feature-title">Quality Assured</span>
-                  <span className="feature-desc">Certified processes</span>
-                </div>
-              </div> */}
-              
+
               <div className="feature-item">
                 <div className="feature-icon">
                   <Users size={20} />
                 </div>
                 <div className="feature-text">
-                  <span className="feature-title">Expert Team</span>
-                  <span className="feature-desc">Healthcare specialists</span>
+                  <span className="feature-title">
+                    {healthCanada.features.team.title[language]}
+                  </span>
+                  <span className="feature-desc">
+                    {healthCanada.features.team.description[language]}
+                  </span>
                 </div>
               </div>
             </div>
@@ -124,25 +128,25 @@ const ExpertiseHealthCanada = ({ leftContent, rightContent, className = "" }) =>
         {/* Enhanced Image Section */}
         <div className="expertise-health-canada-image">
           <div className="image-container">
-            <div className={`image-placeholder ${imageLoaded ? 'loaded' : ''}`}>
+            <div className={`image-placeholder ${imageLoaded ? "loaded" : ""}`}>
               <div className="placeholder-shimmer"></div>
             </div>
-            <img 
+            <img
               src="./photos/cerasp-image1-scaled-450x450.jpg"
               alt="Healthcare Technology Solutions"
               loading="lazy"
               onLoad={handleImageLoad}
-              className={`main-image ${imageLoaded ? 'loaded' : ''}`}
+              className={`main-image ${imageLoaded ? "loaded" : ""}`}
             />
             <div className="image-overlay">
               <div className="overlay-content">
                 <div className="overlay-badge">
-                  <span>Health Canada Approved</span>
+                  <span>{healthCanada.overlay_badge[language]}</span>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Floating Statistics */}
           {/* <div className="floating-stats">
             <div className="stat-card">

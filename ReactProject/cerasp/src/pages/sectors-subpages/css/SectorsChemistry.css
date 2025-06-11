@@ -123,24 +123,33 @@
 
 /* Individual step color schemes */
 .step1 {
-  --step-gradient: linear-gradient(135deg, #ef4444, #dc2626);
+  --step-gradient: linear-gradient(135deg, #ef4444, #dc2626); /* red */
 }
 
 .step2 {
-  --step-gradient: linear-gradient(135deg, #f97316, #ea580c);
+  --step-gradient: linear-gradient(135deg, #f97316, #ea580c); /* orange */
 }
 
 .step3 {
-  --step-gradient: linear-gradient(135deg, #eab308, #ca8a04);
+  --step-gradient: linear-gradient(135deg, #eab308, #ca8a04); /* yellow */
 }
 
 .step4 {
-  --step-gradient: linear-gradient(135deg, #22c55e, #16a34a);
+  --step-gradient: linear-gradient(135deg, #22c55e, #16a34a); /* green */
 }
 
 .step5 {
-  --step-gradient: linear-gradient(135deg, #06b6d4, #0891b2);
+  --step-gradient: linear-gradient(135deg, #3b82f6, #2563eb); /* blue */
 }
+
+.step6 {
+  --step-gradient: linear-gradient(135deg, #8b5cf6, #7c3aed); /* indigo */
+}
+
+.step7 {
+  --step-gradient: linear-gradient(135deg, #ec4899, #db2777); /* pink */
+}
+
 
 /* Enhanced bottom-row to match your glassmorphism design */
 .bottom-row {

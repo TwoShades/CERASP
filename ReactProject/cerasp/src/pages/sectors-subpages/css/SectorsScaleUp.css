@@ -5,18 +5,22 @@
 .sectors-scale-up-container {
   display: flex;
   justify-content: center;
-  padding: 4em;
-  margin: 4em 8em 8em 8em;
+  align-items: center;
+  padding: 1rem;
+  margin: 8rem 8rem 8rem 8rem;
   background: linear-gradient(to right, #e0f7ff, #d0eaff);
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   flex-direction: row;
   min-height: 60vh;
+  gap: 2rem;
+  box-sizing: border-box;
 }
 
 .visual-section {
-  margin-left: 4em;
+  flex: 0 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 12px;
@@ -24,10 +28,6 @@
   backdrop-filter: blur(10px);
   text-align: center;
   transition: transform 0.4s ease;
-}
-
-.visual-section:hover {
-  transform: scale(1.05);
 }
 
 .sectors-scale-up-badge {
@@ -41,10 +41,7 @@
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 1rem;
   transition: transform 0.3s ease;
-}
-
-.sectors-badge:hover {
-  transform: rotate(1turn);
+  flex-shrink: 0;
 }
 
 .emoji {
@@ -54,25 +51,27 @@
 }
 
 .scale-up-content-section {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   max-width: 50%;
-  margin: 0 auto;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 10px;
 }
 
 .sectors-scale-up-card {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  padding: 1rem;
+  padding: 2rem;
   color: #333;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   transition: box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .sectors-scale-up-card:hover {
@@ -80,108 +79,190 @@
 }
 
 .sectors-scale-up-card h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: 1rem;
   color: #222;
+  font-weight: 700;
 }
 
 .sectors-scale-up-card p {
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2vw, 1rem);
   line-height: 1.6;
   color: #444;
+  margin: 0;
 }
 
+/* Large Desktop */
+@media screen and (min-width: 1400px) {
+  .sectors-scale-up-container {
+    margin: 4rem 10rem 8rem 10rem;
+  }
+}
+
+/* Desktop to Tablet transition */
 @media screen and (max-width: 1200px) {
   .sectors-scale-up-container {
     flex-direction: column;
-    padding: 3em;
-    margin: 2em;
+    padding: 3rem;
+    margin: 2rem;
+    gap: 3rem;
+    min-height: auto;
   }
-
+  
   .scale-up-content-section {
-    max-width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 100%;
+    order: 2;
+    gap: 10px;
   }
-
+  
   .visual-section {
-    align-self: center;
+    order: 1;
     margin: 0;
-    margin-bottom: 2em;
-    width: 80%;
+    width: auto;
   }
-
+  
   .sectors-scale-up-badge {
     width: 180px;
     height: 180px;
   }
-
+  
   .sectors-scale-up-card {
-    max-width: 90%;
-    padding: 3rem;
+    padding: 2.5rem;
+    max-width: 100%;
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .sectors-scale-up-layout {
+    padding-top: 60px;
+  }
+
   .sectors-scale-up-container {
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
+    margin: 1.5rem;
+    gap: 2rem;
+    border-radius: 12px;
   }
-
-  .scale-up-content-section {
-    text-align: justify;
-  }
-
+  
   .sectors-scale-up-badge {
     width: 140px;
     height: 140px;
   }
-
+  
   .emoji {
     font-size: 2.5rem;
   }
-
-  .sectors-scale-up-card h2 {
-    font-size: 1.5rem;
+  
+  .sectors-scale-up-card {
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
   }
-
+  
+  .sectors-scale-up-card h2 {
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
+    margin-bottom: 0.75rem;
+  }
+  
   .sectors-scale-up-card p {
-    font-size: 0.95rem;
+    font-size: clamp(0.9rem, 3vw, 0.95rem);
+    line-height: 1.5;
   }
 }
 
-@media (max-width: 475px) {
+/* Large Mobile */
+@media screen and (max-width: 480px) {
+  .sectors-scale-up-layout {
+    padding-top: 40px;
+  }
+
   .sectors-scale-up-container {
-    /* padding: 2rem 1rem;
-    margin: 2em 1em;
-    gap: 1.5rem; */
+    padding: 1.5rem 1rem;
+    margin: 1rem 0.5rem;
+    gap: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .sectors-scale-up-badge {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .emoji {
+    font-size: 2.2rem;
+  }
+  
+  .sectors-scale-up-card {
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+  }
+  
+  .sectors-scale-up-card h2 {
+    font-size: clamp(1.2rem, 5vw, 1.4rem);
+    margin-bottom: 0.5rem;
+  }
+  
+  .sectors-scale-up-card p {
+    font-size: clamp(0.85rem, 4vw, 0.9rem);
+    line-height: 1.4;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 360px) {
+  .sectors-scale-up-layout {
+    padding-top: 30px;
   }
 
-  .visual-section {
-    width: 50%;
+  .sectors-scale-up-container {
+    padding: 1rem 0.75rem;
+    margin: 0.5rem 0.25rem;
+    gap: 1rem;
+    border-radius: 8px;
   }
-
+  
   .sectors-scale-up-badge {
     width: 100px;
     height: 100px;
   }
-
+  
   .emoji {
     font-size: 2rem;
   }
-
-  .badge-caption {
-    font-size: 0.75rem;
-    padding: 0.3em 0.7em;
+  
+  .sectors-scale-up-card {
+    padding: 1.25rem 0.75rem;
+    border-radius: 6px;
   }
-
+  
   .sectors-scale-up-card h2 {
-    font-size: 1.25rem;
+    font-size: clamp(1.1rem, 6vw, 1.25rem);
+    margin-bottom: 0.5rem;
   }
-
+  
   .sectors-scale-up-card p {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 4.5vw, 0.85rem);
+    line-height: 1.3;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  .sectors-scale-up-container {
+    padding: 0.75rem 0.5rem;
+    margin: 0.25rem;
+  }
+  
+  .sectors-scale-up-badge {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .emoji {
+    font-size: 1.5rem;
+  }
+  
+  .sectors-scale-up-card {
+    padding: 1rem 0.5rem;
   }
 }

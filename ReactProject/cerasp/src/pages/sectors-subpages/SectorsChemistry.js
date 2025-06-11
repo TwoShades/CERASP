@@ -49,11 +49,12 @@ const SectorsChemistry = () => {
         </div>
 
         <div className="bottom-row">
-          <h3>{chemistry.bottomRow[language].intro}</h3>
+          <h3>{chemistry.bottomRow[language].title}</h3>
+
           <div className="bottom-sections-grid">
             {chemistry.bottomRow[language].sections.map((section, idx) => (
               <div key={idx} className="bottom-section">
-                <strong>{section.title}</strong>
+                <strong>{section.heading}</strong>
                 <ul>
                   {section.items.map((item, i) => (
                     <li key={i}>{item}</li>

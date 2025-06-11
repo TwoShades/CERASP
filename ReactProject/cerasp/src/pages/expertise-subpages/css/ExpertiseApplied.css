@@ -227,6 +227,9 @@
 }
 
 @media (max-width: 480px) {
+  .expertise-applied-layout {
+  padding-top: calc(60px);
+}
   .five-steps-grid-layout {
     padding: 30px 15px;
     margin: 10px;
