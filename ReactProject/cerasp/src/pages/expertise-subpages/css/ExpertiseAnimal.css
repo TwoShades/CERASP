@@ -410,6 +410,9 @@
 }
 
 @media (max-width: 768px) {
+    .expertise-animal-layout {
+    padding-top: 20px;
+  }
   .expertise-container-enhanced {
     padding: 40px 2em;
   }
@@ -436,6 +439,9 @@
 }
 
 @media (max-width: 480px) {
+  .expertise-animal-layout {
+    padding-top: calc(40px + 2em);
+  }
   .expertise-container-enhanced {
     padding: 30px 1.5em;
     margin: 1em;

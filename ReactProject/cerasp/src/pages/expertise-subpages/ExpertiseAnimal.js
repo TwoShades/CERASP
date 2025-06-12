@@ -24,6 +24,9 @@ const ExpertiseAnimal = ({ className = "" }) => {
 
   const [hoveredSection, setHoveredSection] = useState(null);
 
+  const research = expertiseTranslations.advanced_research;
+  const natural = expertiseTranslations.natural_solutions;
+
   const expertiseSections = [
     {
       id: "animal",
@@ -32,7 +35,7 @@ const ExpertiseAnimal = ({ className = "" }) => {
       icon: Heart,
       searchTerm: "veterinary care",
       color: "#FF6B6B",
-      features: ["Veterinary Research", "Pet Nutrition", "Animal Wellness"],
+      features: animal.features[language],
       stats: { projects: "200+", success: "95%", years: "15+" },
     },
     {
@@ -42,33 +45,29 @@ const ExpertiseAnimal = ({ className = "" }) => {
       icon: Pill,
       searchTerm: "natural supplements",
       color: "#4ECDC4",
-      features: [
-        "Natural Products",
-        "Supplement Development",
-        "Quality Testing",
-      ],
+      features: nhp.features[language],
       stats: { projects: "150+", success: "98%", years: "12+" },
     }, //,
     // {
-    //     id: 'research',
-    //     title: "ADVANCED RESEARCH",
-    //     content: "Cutting-edge research methodologies and innovative solutions for complex biological challenges.",
-    //     icon: Microscope,
-    //     searchTerm: "laboratory research",
-    //     color: "#45B7D1",
-    //     features: ["Lab Analysis", "Method Development", "Data Analytics", "Innovation"],
-    //     stats: { projects: "300+", success: "97%", years: "20+" }
+    //   id: "research",
+    //   title: research.title[language].toUpperCase(),
+    //   content: research.content[language],
+    //   icon: Microscope,
+    //   searchTerm: "laboratory research",
+    //   color: "#45B7D1",
+    //   features: research.features[language],
+    //   stats: { projects: "300+", success: "97%", years: "20+" },
     // },
     // {
-    //     id: 'natural',
-    //     title: "NATURAL SOLUTIONS",
-    //     content: "Sustainable and eco-friendly approaches to health and wellness product development.",
-    //     icon: Leaf,
-    //     searchTerm: "natural ingredients",
-    //     color: "#96CEB4",
-    //     features: ["Organic Compounds", "Green Chemistry", "Sustainability", "Bio-Innovation"],
-    //     stats: { projects: "180+", success: "94%", years: "10+" }
-    // }
+    //   id: "natural",
+    //   title: natural.title[language].toUpperCase(),
+    //   content: natural.content[language],
+    //   icon: Leaf,
+    //   searchTerm: "natural ingredients",
+    //   color: "#96CEB4",
+    //   features: natural.features[language],
+    //   stats: { projects: "180+", success: "94%", years: "10+" },
+    // },
   ];
 
   return (

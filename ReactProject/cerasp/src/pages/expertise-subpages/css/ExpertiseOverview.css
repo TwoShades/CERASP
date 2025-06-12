@@ -165,6 +165,7 @@
 }
 
 .expertise-overview-card .card-title {
+  color: white;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 8px;
@@ -205,6 +206,9 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .expertise-overview-layout {
+    padding-top: calc(20px + 4em);
+  }
   .expertise-overview {
     padding: 70px 30px;
   }
@@ -274,6 +278,10 @@
 }
 
 @media (max-width: 480px) {
+  .expertise-overview-layout {
+    padding-top: calc(40px + 1em);
+  }
+
   .expertise-overview {
     padding: 60px 15px;
     margin: 10px;

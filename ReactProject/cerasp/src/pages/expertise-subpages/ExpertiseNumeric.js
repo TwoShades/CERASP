@@ -18,24 +18,30 @@ const ExpertiseNumeric = () => {
     <div className="expertise-numeric-container">
       <div className="expertise-numeric-left">
         <div className="deep-blue-panel">
-          <h2 className="expertise-title">Healthcare Analytics</h2>
+          <h2 className="expertise-title">{numeric.section_title[language]}</h2>
           <div className="numeric-stats">
             <div className="stat-block">
               <span className="stat-number">95%</span>
-              <span className="stat-label">Accuracy</span>
+              <span className="stat-label">
+                {numeric.stats.accuracy[language]}
+              </span>
             </div>
             <div className="stat-block">
               <span className="stat-number">2.4x</span>
-              <span className="stat-label">Efficiency</span>
+              <span className="stat-label">
+                {numeric.stats.efficiency[language]}
+              </span>
             </div>
             <div className="stat-block">
               <span className="stat-number">40%</span>
-              <span className="stat-label">Cost Reduction</span>
+              <span className="stat-label">
+                {numeric.stats.cost_reduction[language]}
+              </span>
             </div>
           </div>
 
           <div className="custom-chart-container">
-            <div className="chart-label">Performance Metrics</div>
+            <div className="chart-label">{numeric.chart_label[language]}</div>
             <div className="custom-chart">
               {performanceData.map((item, index) => (
                 <div key={index} className="chart-item">
@@ -65,8 +71,8 @@ const ExpertiseNumeric = () => {
                 <Database size={24} />
               </div>
               <div className="numeric-feature-content">
-                <h3>Health Data Analysis</h3>
-                <p>Transform raw healthcare data into actionable insights</p>
+                <h3>{numeric.features.data.title[language]}</h3>
+                <p>{numeric.features.data.description[language]}</p>
               </div>
             </div>
 
@@ -75,10 +81,8 @@ const ExpertiseNumeric = () => {
                 <Activity size={24} />
               </div>
               <div className="numeric-feature-content">
-                <h3>Real-Time Monitoring</h3>
-                <p>
-                  Continuous patient monitoring systems for timely interventions
-                </p>
+                <h3>{numeric.features.monitoring.title[language]}</h3>
+                <p>{numeric.features.monitoring.description[language]}</p>
               </div>
             </div>
 
@@ -87,8 +91,8 @@ const ExpertiseNumeric = () => {
                 <BarChart2 size={24} />
               </div>
               <div className="numeric-feature-content">
-                <h3>Predictive Analytics</h3>
-                <p>Anticipate healthcare needs through pattern recognition</p>
+                <h3>{numeric.features.predictive.title[language]}</h3>
+                <p>{numeric.features.predictive.description[language]}</p>
               </div>
             </div>
 
@@ -97,15 +101,13 @@ const ExpertiseNumeric = () => {
                 <Zap size={24} />
               </div>
               <div className="numeric-feature-content">
-                <h3>Digital Integration</h3>
-                <p>Seamless connection of existing healthcare systems</p>
+                <h3>{numeric.features.integration.title[language]}</h3>
+                <p>{numeric.features.integration.description[language]}</p>
               </div>
             </div>
           </div>
 
-          <button className="learn-more-btn">
-            Learn More About Our Solutions
-          </button>
+          {/* <button className="learn-more-btn">{numeric.button[language]}</button> */}
         </div>
       </div>
     </div>

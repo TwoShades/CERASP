@@ -18,37 +18,32 @@ const ExpertiseApplied = () => {
   const steps = [
     {
       icon: FlaskConical,
-      title: "FORMULATE",
-      description:
-        "Formulate, validate and prepare new products after the results of basic research or to find the right molecules.",
+      title: applied.steps.formulate.title[language],
+      description: applied.steps.formulate.description[language],
       className: "step1",
     },
     {
       icon: Headphones,
-      title: "SUPPORT",
-      description:
-        "Support the development of production processes through new processes, including standard operating procedures.",
+      title: applied.steps.support.title[language],
+      description: applied.steps.support.description[language],
       className: "step2",
     },
     {
       icon: ArrowRightLeft,
-      title: "TRANSFER",
-      description:
-        "Transfer and adapt technological innovations for the development of scale-up pilot scale production.",
+      title: applied.steps.transfer.title[language],
+      description: applied.steps.transfer.description[language],
       className: "step3",
     },
     {
       icon: Settings,
-      title: "SELECT",
-      description:
-        "Select and configure equipment for research and production from an Industry perspective.",
+      title: applied.steps.select.title[language],
+      description: applied.steps.select.description[language],
       className: "step4",
     },
     {
       icon: Cog,
-      title: "DEVELOP",
-      description:
-        "Formulate and develop pilot processes, prototypes and batches.",
+      title: applied.steps.develop.title[language],
+      description: applied.steps.develop.description[language],
       className: "step5",
     },
   ];
@@ -57,9 +52,8 @@ const ExpertiseApplied = () => {
     <div className="expertise-applied-layout">
       <div className="five-steps-grid-layout">
         <div className="top-row">
-          <SubPageHeader
-            name={language === "fr" ? "RECHERCHE APPLIQUÉ" : "APPLIED RESEARCH"}
-          />
+          <SubPageHeader name={applied.title[language].toUpperCase()} />
+
           {/* <p>{applied.content[language]}</p> */}
         </div>
 
@@ -76,11 +70,7 @@ const ExpertiseApplied = () => {
         </div>
 
         <div className="bottom-row">
-          <p>
-            Our fields of expertise used for applied research projects enable us
-            to propose innovative solutions for various technologies and product
-            formats.
-          </p>
+          <p>{applied.bottom_text[language]}</p>
         </div>
       </div>
     </div>

@@ -254,6 +254,9 @@
 }
 
 @media (max-width: 400px) {
+  .expertise-troubleshooting-parent {
+  padding-top: calc(40px + 2em);
+}
   .expertise-troubleshooting-panel {
     padding: 2.5em 1.5em;
     margin: 1em 0.5em 2em 0.5em;

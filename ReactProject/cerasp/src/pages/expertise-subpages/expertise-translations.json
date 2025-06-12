@@ -102,6 +102,47 @@
     "title": {
       "en": "Applied Research",
       "fr": "Recherche appliquée"
+    },
+    "steps": {
+      "formulate": {
+        "title": { "en": "FORMULATE", "fr": "FORMULER" },
+        "description": {
+          "en": "Formulate, validate and prepare new products after the results of basic research or to find the right molecules.",
+          "fr": "Formuler, valider et préparer de nouveaux produits à partir des résultats de la recherche fondamentale ou pour identifier les bonnes molécules."
+        }
+      },
+      "support": {
+        "title": { "en": "SUPPORT", "fr": "SOUTENIR" },
+        "description": {
+          "en": "Support the development of production processes through new processes, including standard operating procedures.",
+          "fr": "Soutenir le développement des processus de production via de nouveaux procédés, y compris les procédures opératoires normalisées."
+        }
+      },
+      "transfer": {
+        "title": { "en": "TRANSFER", "fr": "TRANSFÉRER" },
+        "description": {
+          "en": "Transfer and adapt technological innovations for the development of scale-up pilot scale production.",
+          "fr": "Transférer et adapter les innovations technologiques pour le développement de productions pilotes à l’échelle."
+        }
+      },
+      "select": {
+        "title": { "en": "SELECT", "fr": "SÉLECTIONNER" },
+        "description": {
+          "en": "Select and configure equipment for research and production from an Industry perspective.",
+          "fr": "Sélectionner et configurer les équipements pour la recherche et la production dans une optique industrielle."
+        }
+      },
+      "develop": {
+        "title": { "en": "DEVELOP", "fr": "DÉVELOPPER" },
+        "description": {
+          "en": "Formulate and develop pilot processes, prototypes and batches.",
+          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
+        }
+      }
+    },
+    "bottom_text": {
+      "en": "Our fields of expertise used for applied research projects enable us to propose innovative solutions for various technologies and product formats.",
+      "fr": "Nos domaines d'expertise utilisés pour les projets de recherche appliquée nous permettent de proposer des solutions innovantes pour diverses technologies et formats de produits."
     }
   },
   "pilot_scale_production": {
@@ -155,10 +196,7 @@
     }
   },
   "animal_health": {
-    "title": {
-      "en": "Animal Health",
-      "fr": "Santé animale"
-    },
+    "title": { "en": "Animal Health", "fr": "Santé animale" },
     "subtitle": {
       "en": "Leading innovation in health, research, and natural solutions",
       "fr": "Leader en innovation pour la santé, la recherche et les solutions naturelles"
@@ -167,18 +205,9 @@
       "en": "We provide specialized formulation services for animal health products, ensuring effective, safe, and compliant dosage forms tailored to industry and regulatory standards.",
       "fr": "Nous fournissons des services de formulation spécialisés pour les produits de santé animale, garantissant des formes posologiques efficaces, sûres et conformes, adaptées aux normes industrielles et réglementaires."
     },
-    "projects": {
-      "en": "Projects",
-      "fr": "Projets"
-    },
-    "success_rate": {
-      "en": "Success Rate",
-      "fr": "Taux de réussite"
-    },
-    "experience": {
-      "en": "Experience",
-      "fr": "Expérience"
-    },
+    "projects": { "en": "Projects", "fr": "Projets" },
+    "success_rate": { "en": "Success Rate", "fr": "Taux de réussite" },
+    "experience": { "en": "Experience", "fr": "Expérience" },
     "summary_title": {
       "en": "Comprehensive Solutions",
       "fr": "Solutions complètes"
@@ -186,16 +215,67 @@
     "summary_text": {
       "en": "Our integrated approach combines cutting-edge research, natural innovation, and proven methodologies to deliver exceptional results across all domains.",
       "fr": "Notre approche intégrée combine recherche de pointe, innovation naturelle et méthodologies éprouvées pour offrir des résultats exceptionnels dans tous les domaines."
+    },
+    "features": {
+      "en": ["Veterinary Research", "Pet Nutrition", "Animal Wellness"],
+      "fr": ["Recherche vétérinaire", "Nutrition animale", "Bien-être animal"]
     }
   },
   "nhp_nutraceuticals": {
-    "title": {
-      "en": "NHP & Nutraceuticals",
-      "fr": "PSN & Nutraceutiques"
-    },
+    "title": { "en": "NHP & Nutraceuticals", "fr": "PSN & Nutraceutiques" },
     "content": {
       "en": "Our team assists in the development of natural health products (NHPs) and nutraceuticals, ensuring compliance with regulatory standards and market requirements. We provide support from concept to commercialization.",
       "fr": "Notre équipe accompagne le développement de produits de santé naturels (PSN) et de nutraceutiques, en assurant la conformité réglementaire et les exigences du marché. Nous offrons un soutien de la conception à la commercialisation."
+    },
+    "features": {
+      "en": ["Natural Products", "Supplement Development", "Quality Testing"],
+      "fr": [
+        "Produits naturels",
+        "Développement de suppléments",
+        "Contrôle qualité"
+      ]
+    }
+  },
+  "advanced_research": {
+    "title": { "en": "Advanced Research", "fr": "Recherche Avancée" },
+    "content": {
+      "en": "Cutting-edge research methodologies and innovative solutions for complex biological challenges.",
+      "fr": "Méthodologies de recherche de pointe et solutions innovantes pour les défis biologiques complexes."
+    },
+    "features": {
+      "en": [
+        "Lab Analysis",
+        "Method Development",
+        "Data Analytics",
+        "Innovation"
+      ],
+      "fr": [
+        "Analyse en laboratoire",
+        "Développement de méthodes",
+        "Analyse de données",
+        "Innovation"
+      ]
+    }
+  },
+  "natural_solutions": {
+    "title": { "en": "Natural Solutions", "fr": "Solutions Naturelles" },
+    "content": {
+      "en": "Sustainable and eco-friendly approaches to health and wellness product development.",
+      "fr": "Approches durables et écologiques pour le développement de produits de santé et de bien-être."
+    },
+    "features": {
+      "en": [
+        "Organic Compounds",
+        "Green Chemistry",
+        "Sustainability",
+        "Bio-Innovation"
+      ],
+      "fr": [
+        "Composés organiques",
+        "Chimie verte",
+        "Durabilité",
+        "Bio-innovation"
+      ]
     }
   },
   "bioinformatics": {
@@ -245,9 +325,62 @@
       "en": "Data-Driven Healthcare Solutions",
       "fr": "Solutions de santé axées sur les données"
     },
+    "section_title": {
+      "en": "Healthcare Analytics",
+      "fr": "Analyse des données de santé"
+    },
     "content": {
       "en": "We provide data-driven solutions for the healthcare sector, utilizing advanced digital tools and analytics to enhance patient care and optimize health outcomes. Our services include health data analysis, digital health integration, and the development of systems for real-time monitoring and decision support. We help healthcare organizations leverage technology to improve operational efficiency, ensure compliance, and drive innovation in patient care.",
       "fr": "Nous proposons des solutions basées sur les données pour le secteur de la santé, en utilisant des outils numériques avancés et des analyses pour améliorer les soins aux patients et optimiser les résultats de santé. Nos services incluent l'analyse des données de santé, l'intégration de la santé numérique et le développement de systèmes pour la surveillance en temps réel et le support à la décision. Nous aidons les organisations de santé à tirer parti de la technologie pour améliorer l'efficacité opérationnelle, assurer la conformité et stimuler l'innovation dans les soins aux patients."
+    },
+    "stats": {
+      "accuracy": { "en": "Accuracy", "fr": "Précision" },
+      "efficiency": { "en": "Efficiency", "fr": "Efficacité" },
+      "cost_reduction": { "en": "Cost Reduction", "fr": "Réduction des coûts" }
+    },
+    "chart_label": {
+      "en": "Performance Metrics",
+      "fr": "Indicateurs de performance"
+    },
+    "features": {
+      "data": {
+        "title": {
+          "en": "Health Data Analysis",
+          "fr": "Analyse des données de santé"
+        },
+        "description": {
+          "en": "Transform raw healthcare data into actionable insights",
+          "fr": "Transformer les données de santé brutes en informations exploitables"
+        }
+      },
+      "monitoring": {
+        "title": {
+          "en": "Real-Time Monitoring",
+          "fr": "Surveillance en temps réel"
+        },
+        "description": {
+          "en": "Continuous patient monitoring systems for timely interventions",
+          "fr": "Systèmes de surveillance continue des patients pour des interventions rapides"
+        }
+      },
+      "predictive": {
+        "title": { "en": "Predictive Analytics", "fr": "Analyse prédictive" },
+        "description": {
+          "en": "Anticipate healthcare needs through pattern recognition",
+          "fr": "Anticiper les besoins en santé grâce à la reconnaissance de motifs"
+        }
+      },
+      "integration": {
+        "title": { "en": "Digital Integration", "fr": "Intégration numérique" },
+        "description": {
+          "en": "Seamless connection of existing healthcare systems",
+          "fr": "Connexion transparente des systèmes de santé existants"
+        }
+      }
+    },
+    "button": {
+      "en": "Learn More About Our Solutions",
+      "fr": "En savoir plus sur nos solutions"
     }
   },
   "health_canada": {
@@ -258,6 +391,36 @@
     "content": {
       "en": "Recognized partner of Health Canada for regulatory affairs and audits. As an official partner, we deliver solutions that meet the highest industry standards.",
       "fr": "Partenaire accrédité de Santé Canada pour les affaires réglementaires et les audits. En tant que partenaire officiel de Santé Canada, nous offrons des solutions qui respectent les normes les plus strictes de l’industrie."
+    },
+    "badge": {
+      "en": "Certified Partner",
+      "fr": "Partenaire certifié"
+    },
+    "features": {
+      "regulatory": {
+        "title": {
+          "en": "Regulatory Compliance",
+          "fr": "Conformité réglementaire"
+        },
+        "description": {
+          "en": "Full Health Canada compliance",
+          "fr": "Conformité complète à Santé Canada"
+        }
+      },
+      "team": {
+        "title": {
+          "en": "Expert Team",
+          "fr": "Équipe d'experts"
+        },
+        "description": {
+          "en": "Healthcare specialists",
+          "fr": "Spécialistes des soins de santé"
+        }
+      }
+    },
+    "overlay_badge": {
+      "en": "Health Canada Approved",
+      "fr": "Approuvé par Santé Canada"
     }
   },
   "funding": {

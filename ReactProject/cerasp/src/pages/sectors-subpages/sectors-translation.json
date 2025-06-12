@@ -235,12 +235,6 @@
       "fr": "Au CERASP, nous offrons un soutien complet tout au long du processus de développement de médicaments, de la formulation à la commercialisation. Nos services incluent le développement de formulations, le développement et l’optimisation des processus, l’orientation réglementaire, ainsi que la conformité prête pour les BPF. Nous apportons notre aide lors des transferts technologiques et du soutien. Notre expertise vous aide à naviguer à travers des exigences réglementaires complexes et à amener des solutions pharmaceutiques innovantes sur le marché de manière efficace et efficiente."
     }
   },
-  "applied_research": {
-    "title": {
-      "en": "Applied Research",
-      "fr": "Recherche appliquée"
-    }
-  },
   "pilot_scale_production": {
     "title": {
       "en": "Pilot-Scale Production",
@@ -564,22 +558,68 @@
   },
   "feasibility": {
     "title": {
-      "en": "Feasibility",
-      "fr": "Faisabilité"
+      "en": "Feasibility Services",
+      "fr": "Services de faisabilité"
     },
     "content": {
-      "en": "Our Services include:",
-      "fr": "Nos services incluent :"
+      "en": "We provide comprehensive feasibility studies to assess technical and regulatory aspects, pilot-scale operations, and infrastructure design for health and wellness innovation.",
+      "fr": "Nous fournissons des études de faisabilité complètes pour évaluer les aspects techniques et réglementaires, les opérations à l'échelle pilote et la conception des infrastructures pour l'innovation en santé et bien-être."
+    },
+    "features": {
+      "en": [
+        "Studies on manufacturing, process or formulation methods (preformulation).",
+        "Conducting pilot and prototype studies.",
+        "Running studies on designing new facilities and equipment purchases.",
+        "Conduct digital health integration studies and incorporate digital transformation."
+      ],
+      "fr": [
+        "Études sur les méthodes de fabrication, de procédé ou de formulation (préformulation).",
+        "Réalisation d'études pilotes et de prototypes.",
+        "Études sur la conception de nouvelles installations et l'achat d'équipements.",
+        "Études d'intégration de la santé numérique et de transformation numérique."
+      ]
     }
   },
   "TechTrans": {
     "title": {
-      "en": "Technical Transfer",
-      "fr": "Transfert technique"
+      "en": "Technical Transfer Services",
+      "fr": "Services de transfert technologique"
     },
     "content": {
-      "en": "Our technical transfer services include process optimization for protocols and parameters:",
-      "fr": "Nos services de transfert technologique incluent l'optimisation des processus pour les protocoles et les paramètres : "
+      "en": "We facilitate the transfer and optimization of technologies and processes, adapting them for improved outcomes and compliance in commercial settings.",
+      "fr": "Nous facilitons le transfert et l'optimisation des technologies et des procédés, en les adaptant pour de meilleurs résultats et une conformité accrue en environnement commercial."
+    },
+    "features": {
+      "en": [
+        "Improving existing products in the case of a flawed or outdated procedure.",
+        "Improve existing products, processes or procedures for business, pharmacological or regulatory reasons.",
+        "Improving an existing product for aesthetic reasons such as changing colour or taste.",
+        "Enable the integration of technological tools for digital health and for the corporate digital shift."
+      ],
+      "fr": [
+        "Amélioration de produits existants en cas de procédure défectueuse ou obsolète.",
+        "Amélioration des produits, procédés ou procédures pour des raisons commerciales, pharmacologiques ou réglementaires.",
+        "Amélioration esthétique d’un produit existant (couleur, goût, etc.).",
+        "Intégration d'outils technologiques pour la santé numérique et la transition numérique d'entreprise."
+      ]
+    }
+  },
+  "section": {
+    "title": {
+      "en": "Feasibility & Technical Transfer",
+      "fr": "Faisabilité & Transfert technologique"
+    },
+    "subtitle": {
+      "en": "Our feasibility studies and pilot trials ensure your project is viable—saving time and resources!",
+      "fr": "Nos études de faisabilité et essais pilotes garantissent la viabilité de votre projet — vous faisant gagner temps et ressources !"
+    },
+    "summary_title": {
+      "en": "Comprehensive Solutions",
+      "fr": "Solutions complètes"
+    },
+    "summary_text": {
+      "en": "Our integrated approach combines cutting-edge research, natural innovation, and proven methodologies to deliver exceptional results across all domains.",
+      "fr": "Notre approche intégrée combine recherche de pointe, innovation naturelle et méthodologies éprouvées pour offrir des résultats exceptionnels dans tous les domaines."
     }
   },
   "training": {
