@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Pages-css/EquipmentsMasterList.css";
 import SubPageHeader from "../components/layouts/SubPageHeader";
 import { LanguageContext } from "../contexts/LanguageContext";
+import scrollToTop from "../utils/scrollToTop";
 
 const EquipmentsMasterList = [
   {
@@ -124,40 +125,45 @@ const EquipmentsMasterList = [
 
 export default function EquipmentByLocation() {
   const { language } = useContext(LanguageContext);
+  useEffect(() => {
+    scrollToTop();
+  }, []);
 
   return (
-    <div className="equipment-section">
-      <SubPageHeader
-        name={
-          language === "fr" ? "ÉQUIPEMENTS PAR SITE" : "EQUIPMENT BY LOCATION"
-        }
-        extraContent={
-          language === "fr" ? (
-            <h4>
-              Une vue d’ensemble de nos équipements répartis entre CERASP et
-              Gérald-Godin.
-            </h4>
-          ) : (
-            <h4>
-              An overview of our equipment distributed between CERASP and
-              Gérald-Godin.
-            </h4>
-          )
-        }
-      />
-      <div className="equipment-list">
-        {EquipmentsMasterList.map((site, index) => (
-          <div key={index} className="equipment-location">
-            <h5 className="location-title">{site.location[language]}</h5>
-            <ul className="equipment-items">
-              {site.equipments[language].map((item, idx) => (
-                <li key={idx} className="equipment-item">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+    <div className="page-content">
+      <div className="equipment-section">
+        <SubPageHeader
+          name={
+            language === "fr" ? "ÉQUIPEMENTS PAR SITE" : "EQUIPMENT BY LOCATION"
+          }
+          extraContent={
+            language === "fr" ? (
+              <h4>
+                Une vue d’ensemble de nos équipements répartis entre CERASP et
+                Gérald-Godin.
+              </h4>
+            ) : (
+              <h4>
+                An overview of our equipment distributed between CERASP and
+                Gérald-Godin.
+              </h4>
+            )
+          }
+        />
+        <div className="equipment-list">
+          {EquipmentsMasterList.map((site, index) => (
+            <div key={index} className="equipment-location">
+              <h5 className="location-title">{site.location[language]}</h5>
+              <ul className="equipment-items">
+                {site.equipments[language].map((item, idx) => (
+                  <li key={idx} className="equipment-item">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
