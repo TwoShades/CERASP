@@ -1,0 +1,57 @@
+.equipment-section {
+  padding-top: 90px;
+  margin-bottom: 60px;
+}
+
+.equipment-list {
+  padding: 1em 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.equipment-location {
+  background: linear-gradient(135deg, #f9fafb, #e2e8f0);
+  border-left: 6px solid #0056b3;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+.location-title {
+  margin-bottom: 0.8em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.equipment-items {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+.equipment-item {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 0.4em;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .equipment-list {
+    padding: 1em;
+  }
+
+  .equipment-location {
+    padding: 1.2em;
+  }
+
+  .location-title {
+    font-size: 1.1rem;
+  }
+
+  .equipment-item {
+    font-size: 0.95rem;
+  }
+}
