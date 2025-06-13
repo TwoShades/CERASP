@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import LearnMoreButton from "../../components/interactables/LearnMoreButton";
+import { Link } from "react-router-dom";
 import "./css/AboutEquipments.css";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 
@@ -121,10 +122,13 @@ const AboutEquipments = () => {
               Comprehensive List of Equipment
             </h4>
           )}
-          <LearnMoreButton
-            pdfUrl={`equipments/pdfs/cerasp-equipment-master-list.pdf`}
-            text={language === "fr" ? "Cliquez Ici" : "Click Here"}
-          />
+          <Link
+            to="/equipment-list"
+            className="learn-more-button"
+            style={{ textDecoration: "none" }}
+          >
+            {language === "fr" ? "Cliquez Ici" : "Click Here"}
+          </Link>
         </div>
       </div>
     </div>

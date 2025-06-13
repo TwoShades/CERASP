@@ -14,6 +14,7 @@ import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import ContactButton from "./components/interactables/ContactButton";
 import "./App.css";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import EquipmentsMasterList from "./pages/EquipmentsMasterList";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -32,6 +33,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/news" element={<News />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/equipment-list" element={<EquipmentsMasterList />} />
         </Routes>
       </main>
     </ScreenSizeProvider>

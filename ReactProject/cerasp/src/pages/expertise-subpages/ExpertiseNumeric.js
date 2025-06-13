@@ -8,10 +8,16 @@ const ExpertiseNumeric = () => {
   const { language } = useContext(LanguageContext);
   const numeric = expertiseTranslations.numeric_healthcare;
   const performanceData = [
-    { name: "Patient Outcomes", value: 87 },
-    { name: "Cost Efficiency", value: 92 },
-    { name: "Data Security", value: 95 },
-    { name: "User Satisfaction", value: 89 },
+    {
+      name: { en: "Patient Outcomes", fr: "Résultats des patients" },
+      value: 87,
+    },
+    { name: { en: "Cost Efficiency", fr: "Efficacité des coûts" }, value: 92 },
+    { name: { en: "Data Security", fr: "Sécurité des données" }, value: 95 },
+    {
+      name: { en: "User Satisfaction", fr: "Satisfaction des utilisateurs" },
+      value: 89,
+    },
   ];
 
   return (
@@ -45,7 +51,7 @@ const ExpertiseNumeric = () => {
             <div className="custom-chart">
               {performanceData.map((item, index) => (
                 <div key={index} className="chart-item">
-                  <div className="chart-item-label">{item.name}</div>
+                  <div className="chart-item-label">{item.name[language]}</div>
                   <div className="chart-bar-container">
                     <div
                       className="chart-bar"
