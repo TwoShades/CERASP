@@ -20,6 +20,7 @@ export default function AboutTeam() {
           return {
             Name: entry.Name,
             Title: entry.Title,
+            LinkedIn: entry.LinkedIn,
             Picture:
               entry.Picture?.formats?.medium?.url || entry.Picture?.url || "",
             createdAt: entry.createdAt,

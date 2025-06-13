@@ -5,6 +5,7 @@ const Employee = ({ member }) => {
   const defaultMember = {
     Name: "John Doe",
     Title: "This is a default employee profile.",
+    LinkedIn: "https://www.linkedin.com/",
     Picture: "/photos/placeholder.jpg",
   };
 
@@ -18,10 +19,17 @@ const Employee = ({ member }) => {
   return (
     <div className="employee-card">
       {/* Background image div */}
-      <div
-        className="employee-background"
-        style={{ backgroundImage: `url(${imageUrl})` }}
-      />
+      <a
+        href={finalMember.LinkedIn || "https://www.linkedin.com/"}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {/* Background image div */}
+        <div
+          className="employee-background"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        />
+      </a>
 
       {/* Blue paper background div */}
       <div className="employee-blue-paper-background" />
@@ -31,15 +39,17 @@ const Employee = ({ member }) => {
       <div>
         <p>{finalMember.Title}</p>
         <a
-          href="https://ca.linkedin.com"
+          href={finalMember.LinkedIn || "https://www.linkedin.com/"}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            className="linkedin"
-            src="/logos/linkedinlogo.png"
-            alt="LinkedIn Logo"
-          />
+          {finalMember.LinkedIn && (
+            <img
+              className="linkedin"
+              src="/logos/linkedinlogo.png"
+              alt="LinkedIn Logo"
+            />
+          )}
         </a>
       </div>
     </div>
