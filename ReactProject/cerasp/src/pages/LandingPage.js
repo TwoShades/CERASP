@@ -7,9 +7,11 @@ import UnderConstruction from "../components/layouts/UnderConstruction.js";
 import scrollToTop from "../utils/scrollToTop.js";
 
 import LandingHero from "./landing-subpages/LandingHero.js";
+import LandingAboutUs from "./landing-subpages/LandingAboutUs.js";
 import LandingExpertise from "./landing-subpages/LandingExpertise.js";
 import LandingSectors from "./landing-subpages/LandingSectors.js";
 import LandingProjects from "./landing-subpages/LandingProjects.js";
+import LandingNews from "./landing-subpages/LandingNews.js";
 
 const LandingPage = () => {
   useScrollToPanel();
@@ -36,8 +38,8 @@ const LandingPage = () => {
           <LandingHero />
         </div>
 
-        <div id="landing-under-construction">
-          <UnderConstruction />
+        <div id="landing-about">
+          <LandingAboutUs />
         </div>
 
         <div id="landing-expertise">
@@ -50,6 +52,10 @@ const LandingPage = () => {
 
         <div id="landing-projects">
           <LandingProjects />
+        </div>
+
+        <div id="landing-projects">
+          <LandingNews />
         </div>
 
         <div id="contact-us-form">
