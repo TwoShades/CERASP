@@ -1,21 +1,26 @@
 import "./Pages-css/Sectors.css";
 import Footer from "../components/layouts/Footer.js";
 import ContactUs from "./ContactUs/ContactUs.js";
+
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
+import UnderConstruction from "../components/layouts/UnderConstruction.js";
+
 import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
 import SectorsPrototyping from "./sectors-subpages/SectorsPrototyping.js";
-import UnderConstruction from "../components/layouts/UnderConstruction.js";
 import SectorsPreformulation from "./sectors-subpages/SectorsPreformulation.js";
 import SectorsFormulation from "./sectors-subpages/SectorsFormulation.js";
+
 import SectorsRegulatory from "./sectors-subpages/SectorsRegulatory.js";
 import SectorsPharma from "./sectors-subpages/SectorsPharma.js";
 import SectorsProtein from "./sectors-subpages/SectorsProtein.js";
 import SectorsSupport from "./sectors-subpages/SectorsSupport.js";
+
 import SectorsRnTech from "./sectors-subpages/SectorsRnTech.js";
 import SectorsScaleUp from "./sectors-subpages/SectorsScaleUp.js";
 import SectorsChemistry from "./sectors-subpages/SectorsChemistry.js";
 import SectorsFeasibility from "./sectors-subpages/SectorsFeasibility.js";
+
 import SectorsTraining from "./sectors-subpages/SectorsTraining.js";
 
 const Sectors = () => {
@@ -31,7 +36,7 @@ const Sectors = () => {
 
       <div id="overview">
         {/* <SectorsOverview /> */}
-        <UnderConstruction />
+        <SectorsOverview />
       </div>
 
       {/*===PREFORMULATION====*/}

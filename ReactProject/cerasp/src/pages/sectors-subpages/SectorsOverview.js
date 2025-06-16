@@ -1,109 +1,113 @@
-import React, { useState } from 'react';
-import './css/SectorsOverview.css';
+import React from "react";
+import { Activity } from "lucide-react";
 
 const OverviewPanel = () => {
-  const [activeSection, setActiveSection] = useState(null);
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const contentData = [
-    { name: 'Preformulation', type: 'major-card', points: 4, color: '#3b82f6', icon: '🔬' },
-    { name: 'Formulation', type: 'paragraph-cards', points: 4, color: '#10b981', icon: '⚗️' },
-    { name: 'Research & Technical Support', type: 'detailed', points: 6, color: '#8b5cf6', icon: '🔍' },
-    { name: 'Regulatory Affairs', type: 'comprehensive', points: 14, color: '#f59e0b', icon: '📋' },
-    { name: 'Prototyping', type: 'overview', points: 1, color: '#ef4444', icon: '🛠️' },
-    { name: 'Pharmaceutical', type: 'overview', points: 1, color: '#06b6d4', icon: '💊' },
-    { name: 'Therapeutic Molecules', type: 'specialty-cards', points: 8, color: '#84cc16', icon: '🧬' },
-    { name: 'Chemistry & Extraction', type: 'process-steps', points: 7, color: '#f97316', icon: '⚛️' },
-    { name: 'R&D Scale-up', type: 'approach-cards', points: 12, color: '#ec4899', icon: '📈' },
-    { name: 'Protein Synthesis', type: 'method-cards', points: 12, color: '#6366f1', icon: '🔗' },
-    { name: 'Biopharmaceutical Production', type: 'process-cards', points: 11, color: '#14b8a6', icon: '🏭' },
-    { name: 'Feasibility & Tech Transfer', type: 'approach-cards', points: 8, color: '#a855f7', icon: '🔄' },
-    { name: 'Training Program', type: 'programs', points: 4, color: '#22c55e', icon: '🎓' },
-    { name: 'Support Services', type: 'assistance', points: 1, color: '#64748b', icon: '🤝' },
-  ];
-
-  const getContentSize = (points) => {
-    if (points >= 12) return 'xl';
-    if (points >= 8) return 'lg';
-    if (points >= 4) return 'md';
-    return 'sm';
-  };
-
-  const getTypeLabel = (type) => {
-    const labels = {
-      'major-card': 'Key Points',
-      'paragraph-cards': 'Info Cards',
-      'detailed': 'Details',
-      'comprehensive': 'Guidelines',
-      'overview': 'Overview',
-      'specialty-cards': 'Specialties',
-      'process-steps': 'Steps',
-      'approach-cards': 'Approaches',
-      'method-cards': 'Methods',
-      'process-cards': 'Processes',
-      'programs': 'Programs',
-      'assistance': 'Support',
-    };
-    return labels[type] || 'Content';
-  };
-
-  const totalSections = contentData.length;
-  const totalPoints = contentData.reduce((sum, item) => sum + item.points, 0);
-
   return (
-    <div className="dashboard-wrapper">
-      <div className="header-section">
-        <h1>Content Overview</h1>
-        <div className="metrics-group">
-          <span className="metric-item">{totalSections} Sections</span>
-          <span className="metric-item">{totalPoints} Key Points</span>
-          <button 
-            className={`toggle-btn ${isExpanded ? 'open' : ''}`}
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {isExpanded ? '−' : '+'}
-          </button>
-        </div>
+    <div style={styles.container}>
+      <div style={styles.header}>
+        <h1 style={styles.title}>Areas of Activities</h1>
       </div>
 
-      <div className={`grid-container ${isExpanded ? 'open' : ''}`}>
-        {contentData.map((item, index) => (
-          <div
-            key={index}
-            className={`card ${getContentSize(item.points)} ${activeSection === index ? 'active' : ''}`}
-            style={{ '--accent-color': item.color }}
-            onMouseEnter={() => setActiveSection(index)}
-            onMouseLeave={() => setActiveSection(null)}
-          >
-            <div className="icon-box">{item.icon}</div>
-            <div className="card-body">
-              <h3 className="card-title">{item.name}</h3>
-              <div className="card-footer">
-                <span className="tag-label">{getTypeLabel(item.type)}</span>
-                <span className="point-badge">{item.points}</span>
-              </div>
-            </div>
-            <div className="tooltip">
-              <p>Click to navigate to {item.name}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="quick-links">
-        <div className="links-header">
-          <h3>Quick Access</h3>
+      <div
+        style={styles.card}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.transform = "translateY(-5px)";
+          e.currentTarget.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.15)";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.transform = "translateY(0)";
+          e.currentTarget.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.1)";
+        }}
+      >
+        <div style={styles.iconContainer}>
+          <Activity size={40} style={styles.icon} />
         </div>
-        <div className="link-tags">
-          {['Major Sections', 'Processes', 'Support'].map((category, idx) => (
-            <button key={idx} className="link-tag">
-              {category}
-            </button>
-          ))}
+        <div style={styles.content}>
+          <p style={styles.description}>
+            Explore our comprehensive range of strategic initiatives and
+            operational focus areas designed to drive innovation, foster
+            collaboration, and deliver exceptional results across all
+            organizational domains.
+          </p>
         </div>
       </div>
     </div>
   );
 };
+
+const styles = {
+  container: {
+    padding: "40px",
+    backgroundColor: "#f8fafc",
+    minHeight: "100vh",
+    fontFamily:
+      "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  header: {
+    textAlign: "center",
+    marginBottom: "40px",
+  },
+  title: {
+    fontSize: "3rem",
+    fontWeight: "700",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    backgroundClip: "text",
+    marginBottom: "0",
+    letterSpacing: "-0.02em",
+  },
+  card: {
+    backgroundColor: "white",
+    borderRadius: "24px",
+    padding: "50px",
+    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+    border: "1px solid rgba(226, 232, 240, 0.8)",
+    maxWidth: "600px",
+    width: "100%",
+    textAlign: "center",
+    position: "relative",
+    overflow: "hidden",
+    cursor: "pointer",
+  },
+  iconContainer: {
+    width: "80px",
+    height: "80px",
+    borderRadius: "20px",
+    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "0 auto 30px auto",
+    boxShadow: "0 8px 25px rgba(102, 126, 234, 0.3)",
+  },
+  icon: {
+    color: "white",
+  },
+  content: {
+    position: "relative",
+    zIndex: 2,
+  },
+  description: {
+    fontSize: "1.25rem",
+    color: "#475569",
+    lineHeight: "1.7",
+    margin: "0",
+    fontWeight: "400",
+    letterSpacing: "0.01em",
+  },
+};
+
+// Add CSS animation keyframes and font import
+const styleSheet = document.createElement("style");
+styleSheet.textContent = `
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+`;
+document.head.appendChild(styleSheet);
 
 export default OverviewPanel;

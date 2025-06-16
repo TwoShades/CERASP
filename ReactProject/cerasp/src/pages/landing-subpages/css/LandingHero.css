@@ -1,17 +1,10 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
-}
-
 .fade {
   animation: fadeIn 1s ease-in-out forwards;
   opacity: 0;
+}
+
+.fade-text {
+  color: white;
 }
 @keyframes fadeIn {
   to {
@@ -97,7 +90,7 @@ body {
     80% 0%,
     50% 30%
   );
-  animation: pulse 8s ease-in-out infinite;
+  animation: rotate 15s linear infinite;
 }
 
 .shape-3 {
@@ -106,7 +99,7 @@ body {
   top: 10%;
   right: 30%;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  animation: float 12s ease-in-out infinite;
+  animation: rotate 15s linear infinite;
 }
 
 .hero-content {
