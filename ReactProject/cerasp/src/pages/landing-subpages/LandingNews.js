@@ -1,54 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./css/LandingNews.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import landingTranslations from "./landing-translations.json";
 
 const LandingNews = () => {
-  // Sample news data - replace with your actual data
-  const newsItems = [
-    {
-      id: 1,
-      title: "Company Launches New Product Line",
-      excerpt:
-        "Exciting developments in our latest innovation that will transform the industry and create new opportunities for growth.",
-      date: "June 12, 2025",
-      category: "Product",
-      image: "https://via.placeholder.com/400x300",
-      stockimgname: "Blood Vial",
-    },
-    {
-      id: 2,
-      title: "Partnership Announcement",
-      excerpt:
-        "Strategic collaboration with industry leaders to enhance our service offerings and expand market reach.",
-      date: "June 10, 2025",
-      category: "Business",
-      image: "https://via.placeholder.com/400x300",
-      stockimgname: "Handshake",
-    },
-    {
-      id: 3,
-      title: "Award Recognition",
-      excerpt:
-        "Honored for excellence in customer service and innovative solutions that drive industry standards.",
-      date: "June 8, 2025",
-      category: "Awards",
-      image: "https://via.placeholder.com/400x300",
-      stockimgname: "Award Trophy",
-    },
-    {
-      id: 4,
-      title: "Technology Innovation",
-      excerpt:
-        "Breakthrough in AI-powered solutions that revolutionize how businesses operate and scale.",
-      date: "June 6, 2025",
-      category: "Technology",
-      image: "https://via.placeholder.com/400x300",
-      stockimgname: "Technology",
-    },
-  ];
+  const { language } = useContext(LanguageContext);
+  const t =
+    landingTranslations.news[language] || landingTranslations.news["en"];
+  const newsItems = t.items;
 
   const handleViewAllNews = () => {
-    // For React Router, you'd use navigate('/news') or <Link to="/news">
     window.location.href = "/news";
   };
 
@@ -57,15 +19,15 @@ const LandingNews = () => {
       <div className="news-container">
         <div className="news-header">
           <div className="header-content">
-            <span className="section-label">News & Updates</span>
-            <h2>What's happening</h2>
-            <p>Stay in the loop with our latest stories and announcements</p>
+            <span className="section-label">{t.sectionLabel}</span>
+            <h2>{t.title}</h2>
+            <p>{t.subtitle}</p>
           </div>
           <button
             className="landing-news-cta-button"
             onClick={handleViewAllNews}
           >
-            All News →
+            {t.cta}
           </button>
         </div>
 
@@ -77,7 +39,7 @@ const LandingNews = () => {
                   searchTerm={newsItems[0].stockimgname}
                   imgSource="large"
                   orientation="landscape"
-                  page={newsItems[0].id}
+                  page={1}
                   perPage={1}
                 />
                 <span className="category-tag">{newsItems[0].category}</span>
@@ -91,14 +53,14 @@ const LandingNews = () => {
           </div>
 
           <div className="secondary-articles">
-            {newsItems.slice(1).map((item) => (
-              <article key={item.id} className="news-card secondary">
+            {newsItems.slice(1).map((item, index) => (
+              <article key={index} className="news-card secondary">
                 <div className="news-image">
                   <StockImageFetch
                     searchTerm={item.stockimgname}
                     imgSource="medium"
                     orientation="landscape"
-                    page={item.id}
+                    page={index + 2}
                     perPage={1}
                   />
                   <span className="category-tag">{item.category}</span>

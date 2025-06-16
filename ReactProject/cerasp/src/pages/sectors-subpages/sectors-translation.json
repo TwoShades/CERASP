@@ -1,4 +1,15 @@
 {
+  "overview": {
+    "en": {
+      "title": "Areas of Activities",
+      "description": "Explore our comprehensive range of strategic initiatives and operational focus areas designed to drive innovation, foster collaboration, and deliver exceptional results across all organizational domains."
+    },
+    "fr": {
+      "title": "Domaines d’activités",
+      "description": "Découvrez notre gamme complète d’initiatives stratégiques et de domaines d’intervention opérationnels conçus pour stimuler l’innovation, favoriser la collaboration et offrir des résultats exceptionnels dans tous les domaines organisationnels."
+    }
+  },
+
   "preformulation": {
     "title": {
       "en": "Preformulation",

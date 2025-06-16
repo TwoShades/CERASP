@@ -1,12 +1,410 @@
 {
-  "en": {
-    "tagline": "Innovation at the intersection of technology and excellence",
-    "cta": "Discover More",
-    "scroll": "Scroll Down"
+  "landingHero": {
+    "en": {
+      "tagline": "Innovation at the intersection of technology and excellence",
+      "welcome": "Welcome to CERASP"
+    },
+    "fr": {
+      "tagline": "Innovation à l'intersection de la technologie et de l'excellence",
+      "welcome": "Bienvenue à CERASP"
+    }
   },
-  "fr": {
-    "tagline": "Innovation à l'intersection de la technologie et de l'excellence",
-    "cta": "Découvrir",
-    "scroll": "Faire défiler"
+  "landing-about-us": {
+    "en": {
+      "tagline": "Innovation at the intersection of technology and excellence",
+      "cta": "Discover More",
+      "scroll": "Scroll Down",
+      "aboutUs": {
+        "sectionLabel": "About Us",
+        "title": "Building the future, one solution at a time",
+        "landing-expertise": "Our Expertise",
+        "description": "We're a passionate team of innovators, designers, and problem-solvers dedicated to transforming ideas into reality. With over a decade of experience, we've helped businesses of all sizes achieve their digital ambitions through creative solutions and cutting-edge technology.",
+        "drivesUs": "What drives us",
+        "values": [
+          {
+            "title": "Innovation",
+            "description": "We push boundaries and embrace cutting-edge technologies to deliver exceptional results."
+          },
+          {
+            "title": "Quality",
+            "description": "Excellence is our standard. We never compromise on the quality of our work and solutions."
+          },
+          {
+            "title": "Collaboration",
+            "description": "Success comes from teamwork. We work closely with our clients as trusted partners."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Years Experience"
+          },
+          {
+            "label": "Projects Completed"
+          },
+          {
+            "label": "Team Members"
+          },
+          {
+            "label": "Client Satisfaction"
+          }
+        ],
+        "missionTitle": "Our Mission",
+        "missionDescription": "To deliver innovative solutions that drive digital transformation and empower businesses to thrive in the modern world.",
+        "visionTitle": "Our Vision",
+        "visionDescription": "To be the leading partner for businesses seeking cutting-edge technology solutions and exceptional service excellence.",
+        "learnMore": "Learn More About Us →"
+      }
+    },
+    "fr": {
+      "tagline": "Innovation à l'intersection de la technologie et de l'excellence",
+      "cta": "Découvrir",
+      "scroll": "Faire défiler",
+      "aboutUs": {
+        "sectionLabel": "À propos de nous",
+        "title": "Construire le futur, une solution à la fois",
+        "landing-expertise": "Notre expertise",
+        "description": "Nous sommes une équipe passionnée d’innovateurs, de designers et de résolveurs de problèmes, dédiée à transformer des idées en réalité. Avec plus de dix ans d’expérience, nous avons aidé des entreprises de toutes tailles à atteindre leurs ambitions numériques grâce à des solutions créatives et une technologie de pointe.",
+        "drivesUs": "Ce qui nous motive",
+        "values": [
+          {
+            "title": "Innovation",
+            "description": "Nous repoussons les limites et adoptons les technologies de pointe pour offrir des résultats exceptionnels."
+          },
+          {
+            "title": "Qualité",
+            "description": "L'excellence est notre norme. Nous ne faisons jamais de compromis sur la qualité de notre travail et de nos solutions."
+          },
+          {
+            "title": "Collaboration",
+            "description": "Le succès repose sur le travail d'équipe. Nous collaborons étroitement avec nos clients en tant que partenaires de confiance."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Années d'expérience"
+          },
+          {
+            "label": "Projets complétés"
+          },
+          {
+            "label": "Membres de l'équipe"
+          },
+          {
+            "label": "Satisfaction client"
+          }
+        ],
+        "missionTitle": "Notre mission",
+        "missionDescription": "Fournir des solutions innovantes qui favorisent la transformation numérique et permettent aux entreprises de prospérer dans le monde moderne.",
+        "visionTitle": "Notre vision",
+        "visionDescription": "Être le partenaire de référence pour les entreprises en quête de solutions technologiques de pointe et d'une excellence de service exceptionnelle.",
+        "learnMore": "En savoir plus sur nous →"
+      }
+    }
+  },
+  "landing-expertise": {
+    "en": {
+      "title": "Expertise & Solutions",
+      "description": "We deliver cutting-edge technology solutions tailored to your business needs. Our expertise spans across multiple domains, ensuring comprehensive support for your digital transformation journey.",
+      "cta": "Explore Our Expertise"
+    },
+    "fr": {
+      "title": "Expertise et solutions",
+      "description": "Nous proposons des solutions technologiques de pointe adaptées aux besoins de votre entreprise. Notre expertise couvre plusieurs domaines, garantissant un accompagnement complet dans votre transformation numérique.",
+      "cta": "Découvrez notre expertise"
+    }
+  },
+  "overview": {
+    "en": {
+      "title": "Areas of Activities",
+      "subtitle": "Comprehensive pharmaceutical and biotechnology solutions from concept to commercialization",
+      "sections": [
+        {
+          "title": "Preformulation & Formulation",
+          "description": "Selection and configuration of equipment/processes for cGMP environments, ingredient selection, and development of dosage forms tailored to patient needs.",
+          "highlights": [
+            "API & Excipient Selection",
+            "Process Optimization",
+            "Dosage Form Development"
+          ]
+        },
+        {
+          "title": "Research & Technical Support",
+          "description": "Comprehensive support ensuring safe, efficient, and compliant development from inception to commercialization.",
+          "highlights": [
+            "Formulation Development",
+            "Process Optimization",
+            "Regulatory Guidance"
+          ]
+        },
+        {
+          "title": "Regulatory Affairs",
+          "description": "Health Canada Partner with privileged access for regulatory dossiers, guidance on Canadian, US and EU policies.",
+          "highlights": [
+            "Market Authorization",
+            "Compliance Assistance",
+            "IP Registration Support"
+          ]
+        },
+        {
+          "title": "Pharmaceutical Development",
+          "description": "Comprehensive support throughout drug development process, from formulation to commercialization with GMP compliance.",
+          "highlights": [
+            "Drug Formulation",
+            "Technology Transfer",
+            "Scale-up Support"
+          ]
+        },
+        {
+          "title": "Biomanufacturing",
+          "description": "Protein synthesis, cell culture, fermentation, and production of traditional biologics and advanced therapies.",
+          "highlights": [
+            "Protein Production",
+            "mRNA Vaccines",
+            "Gene Therapies"
+          ]
+        },
+        {
+          "title": "Feasibility & Technical Transfer",
+          "description": "Comprehensive feasibility studies, pilot trials, and technology transfer services for improved outcomes and compliance.",
+          "highlights": [
+            "Pilot Studies",
+            "Process Transfer",
+            "Digital Integration"
+          ]
+        }
+      ],
+      "footer": {
+        "title": "Why Choose CERASP?",
+        "items": [
+          {
+            "title": "Health Canada Partnership",
+            "description": "Privileged access for regulatory submissions and guidance"
+          },
+          {
+            "title": "Comprehensive Expertise",
+            "description": "From R&D to commercial production with GMP compliance"
+          },
+          {
+            "title": "Global Reach",
+            "description": "Experience with Canadian, US, and EU regulatory frameworks"
+          }
+        ]
+      }
+    },
+    "fr": {
+      "title": "Domaines d'activité",
+      "subtitle": "Solutions pharmaceutiques et biotechnologiques complètes, du concept à la commercialisation",
+      "sections": [
+        {
+          "title": "Préformulation et formulation",
+          "description": "Sélection et configuration des équipements/processus pour les environnements BPF, choix des ingrédients et développement de formes posologiques adaptées aux besoins des patients.",
+          "highlights": [
+            "Sélection des API et excipients",
+            "Optimisation des processus",
+            "Développement de formes posologiques"
+          ]
+        },
+        {
+          "title": "Recherche et soutien technique",
+          "description": "Soutien complet pour garantir un développement sûr, efficace et conforme de l'idée à la commercialisation.",
+          "highlights": [
+            "Développement de formulation",
+            "Optimisation des processus",
+            "Conseils réglementaires"
+          ]
+        },
+        {
+          "title": "Affaires réglementaires",
+          "description": "Partenaire de Santé Canada avec un accès privilégié aux dossiers réglementaires et conseils sur les politiques canadiennes, américaines et européennes.",
+          "highlights": [
+            "Autorisation de mise en marché",
+            "Assistance à la conformité",
+            "Soutien à l'enregistrement de la PI"
+          ]
+        },
+        {
+          "title": "Développement pharmaceutique",
+          "description": "Soutien complet tout au long du processus de développement du médicament, de la formulation à la commercialisation avec conformité BPF.",
+          "highlights": [
+            "Formulation de médicaments",
+            "Transfert de technologie",
+            "Soutien au changement d’échelle"
+          ]
+        },
+        {
+          "title": "Bioproduction",
+          "description": "Synthèse de protéines, culture cellulaire, fermentation et production de biologiques traditionnels et de thérapies avancées.",
+          "highlights": [
+            "Production de protéines",
+            "Vaccins à ARNm",
+            "Thérapies géniques"
+          ]
+        },
+        {
+          "title": "Faisabilité et transfert technique",
+          "description": "Études de faisabilité, essais pilotes et services de transfert technologique pour de meilleurs résultats et une conformité accrue.",
+          "highlights": [
+            "Études pilotes",
+            "Transfert de processus",
+            "Intégration numérique"
+          ]
+        }
+      ],
+      "footer": {
+        "title": "Pourquoi choisir CERASP ?",
+        "items": [
+          {
+            "title": "Partenariat avec Santé Canada",
+            "description": "Accès privilégié pour les soumissions réglementaires et les conseils"
+          },
+          {
+            "title": "Expertise complète",
+            "description": "De la R&D à la production commerciale avec conformité BPF"
+          },
+          {
+            "title": "Portée mondiale",
+            "description": "Expérience des cadres réglementaires canadiens, américains et européens"
+          }
+        ]
+      }
+    }
+  },
+  "projects": {
+    "en": {
+      "title": "Our Projects",
+      "subtitle": "Showcasing our expertise through successful project implementations",
+      "cta": "View All Projects",
+      "list": [
+        {
+          "title": "Advanced Pharmaceutical Formulation",
+          "subtitle": "Next-generation drug delivery systems"
+        },
+        {
+          "title": "Biotech Research Initiative",
+          "subtitle": "Innovative protein synthesis solutions"
+        },
+        {
+          "title": "Chemical Extraction Process",
+          "subtitle": "Sustainable extraction methodologies"
+        },
+        {
+          "title": "Regulatory Compliance Framework",
+          "subtitle": "Comprehensive compliance solutions"
+        },
+        {
+          "title": "R&D Scale-Up Project",
+          "subtitle": "Laboratory to production transition"
+        },
+        {
+          "title": "Training & Development Program",
+          "subtitle": "Industry-leading educational initiatives"
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nos projets",
+      "subtitle": "Une démonstration de notre expertise à travers des projets réussis",
+      "cta": "Voir tous les projets",
+      "list": [
+        {
+          "title": "Formulation pharmaceutique avancée",
+          "subtitle": "Systèmes de délivrance de médicaments de nouvelle génération"
+        },
+        {
+          "title": "Initiative de recherche en biotechnologie",
+          "subtitle": "Solutions innovantes pour la synthèse de protéines"
+        },
+        {
+          "title": "Processus d'extraction chimique",
+          "subtitle": "Méthodologies d'extraction durables"
+        },
+        {
+          "title": "Cadre de conformité réglementaire",
+          "subtitle": "Solutions de conformité complètes"
+        },
+        {
+          "title": "Projet de montée en échelle en R&D",
+          "subtitle": "Transition du laboratoire à la production"
+        },
+        {
+          "title": "Programme de formation et développement",
+          "subtitle": "Initiatives éducatives à la pointe de l'industrie"
+        }
+      ]
+    }
+  },
+  "news": {
+    "en": {
+      "sectionLabel": "News & Updates",
+      "title": "What's happening",
+      "subtitle": "Stay in the loop with our latest stories and announcements",
+      "cta": "All News →",
+      "items": [
+        {
+          "title": "Company Launches New Product Line",
+          "excerpt": "Exciting developments in our latest innovation that will transform the industry and create new opportunities for growth.",
+          "date": "June 12, 2025",
+          "category": "Product",
+          "stockimgname": "Blood Vial"
+        },
+        {
+          "title": "Partnership Announcement",
+          "excerpt": "Strategic collaboration with industry leaders to enhance our service offerings and expand market reach.",
+          "date": "June 10, 2025",
+          "category": "Business",
+          "stockimgname": "Handshake"
+        },
+        {
+          "title": "Award Recognition",
+          "excerpt": "Honored for excellence in customer service and innovative solutions that drive industry standards.",
+          "date": "June 8, 2025",
+          "category": "Awards",
+          "stockimgname": "Award Trophy"
+        },
+        {
+          "title": "Technology Innovation",
+          "excerpt": "Breakthrough in AI-powered solutions that revolutionize how businesses operate and scale.",
+          "date": "June 6, 2025",
+          "category": "Technology",
+          "stockimgname": "Technology"
+        }
+      ]
+    },
+    "fr": {
+      "sectionLabel": "Nouvelles & Mises à jour",
+      "title": "Ce qui se passe",
+      "subtitle": "Restez informé de nos dernières nouvelles et annonces",
+      "cta": "Toutes les nouvelles →",
+      "items": [
+        {
+          "title": "Lancement d'une nouvelle gamme de produits",
+          "excerpt": "Développements passionnants dans notre dernière innovation qui transformera l'industrie et créera de nouvelles opportunités de croissance.",
+          "date": "12 juin 2025",
+          "category": "Produit",
+          "stockimgname": "Blood Vial"
+        },
+        {
+          "title": "Annonce de partenariat",
+          "excerpt": "Collaboration stratégique avec des leaders du secteur pour améliorer nos services et élargir notre portée.",
+          "date": "10 juin 2025",
+          "category": "Affaires",
+          "stockimgname": "Handshake"
+        },
+        {
+          "title": "Reconnaissance de prix",
+          "excerpt": "Récompensé pour l'excellence du service client et les solutions innovantes qui façonnent l'industrie.",
+          "date": "8 juin 2025",
+          "category": "Prix",
+          "stockimgname": "Award Trophy"
+        },
+        {
+          "title": "Innovation technologique",
+          "excerpt": "Avancée dans les solutions alimentées par l'IA qui révolutionne la manière dont les entreprises fonctionnent.",
+          "date": "6 juin 2025",
+          "category": "Technologie",
+          "stockimgname": "Technology"
+        }
+      ]
+    }
   }
 }

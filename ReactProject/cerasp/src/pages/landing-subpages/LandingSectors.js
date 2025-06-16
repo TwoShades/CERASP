@@ -1,82 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import overviewTranslations from "./landing-translations.json"; // or landing-translations.json
 
 const OverviewPanel = () => {
-  const activities = [
-    {
-      icon: "🧪",
-      title: "Preformulation & Formulation",
-      description:
-        "Selection and configuration of equipment/processes for cGMP environments, ingredient selection, and development of dosage forms tailored to patient needs.",
-      highlights: [
-        "API & Excipient Selection",
-        "Process Optimization",
-        "Dosage Form Development",
-      ],
-    },
-    {
-      icon: "🔬",
-      title: "Research & Technical Support",
-      description:
-        "Comprehensive support ensuring safe, efficient, and compliant development from inception to commercialization.",
-      highlights: [
-        "Formulation Development",
-        "Process Optimization",
-        "Regulatory Guidance",
-      ],
-    },
-    {
-      icon: "📋",
-      title: "Regulatory Affairs",
-      description:
-        "Health Canada Partner with privileged access for regulatory dossiers, guidance on Canadian, US and EU policies.",
-      highlights: [
-        "Market Authorization",
-        "Compliance Assistance",
-        "IP Registration Support",
-      ],
-    },
-    {
-      icon: "💊",
-      title: "Pharmaceutical Development",
-      description:
-        "Comprehensive support throughout drug development process, from formulation to commercialization with GMP compliance.",
-      highlights: [
-        "Drug Formulation",
-        "Technology Transfer",
-        "Scale-up Support",
-      ],
-    },
-    {
-      icon: "🧬",
-      title: "Biomanufacturing",
-      description:
-        "Protein synthesis, cell culture, fermentation, and production of traditional biologics and advanced therapies.",
-      highlights: ["Protein Production", "mRNA Vaccines", "Gene Therapies"],
-    },
-    {
-      icon: "⚙️",
-      title: "Feasibility & Technical Transfer",
-      description:
-        "Comprehensive feasibility studies, pilot trials, and technology transfer services for improved outcomes and compliance.",
-      highlights: ["Pilot Studies", "Process Transfer", "Digital Integration"],
-    },
-  ];
+  const { language } = useContext(LanguageContext);
+  const t =
+    overviewTranslations["overview"][language] ||
+    overviewTranslations["overview"]["en"];
+
+  const icons = ["🧪", "🔬", "📋", "💊", "🧬", "⚙️"];
 
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-        <h1 style={styles.title}>Areas of Activities</h1>
-        <p style={styles.subtitle}>
-          Comprehensive pharmaceutical and biotechnology solutions from concept
-          to commercialization
-        </p>
+        <h1 style={styles.title}>{t.title}</h1>
+        <p style={styles.subtitle}>{t.subtitle}</p>
       </div>
 
       <div style={styles.grid}>
-        {activities.map((activity, index) => (
+        {t.sections.map((activity, index) => (
           <div key={index} style={styles.card}>
             <div style={styles.iconContainer}>
-              <span style={styles.icon}>{activity.icon}</span>
+              <span style={styles.icon}>{icons[index]}</span>
             </div>
             <h3 style={styles.cardTitle}>{activity.title}</h3>
             <p style={styles.cardDescription}>{activity.description}</p>
@@ -93,26 +38,22 @@ const OverviewPanel = () => {
 
       <div style={styles.footer}>
         <div style={styles.footerContent}>
-          <h3 style={styles.footerTitle}>Why Choose CERASP?</h3>
+          <h3 style={styles.footerTitle}>{t.footer.title}</h3>
           <div style={styles.benefits}>
-            <div style={styles.benefit}>
-              <strong>Health Canada Partnership</strong>
-              <p>Privileged access for regulatory submissions and guidance</p>
-            </div>
-            <div style={styles.benefit}>
-              <strong>Comprehensive Expertise</strong>
-              <p>From R&D to commercial production with GMP compliance</p>
-            </div>
-            <div style={styles.benefit}>
-              <strong>Global Reach</strong>
-              <p>Experience with Canadian, US, and EU regulatory frameworks</p>
-            </div>
+            {t.footer.items.map((benefit, idx) => (
+              <div key={idx} style={styles.benefit}>
+                <strong>{benefit.title}</strong>
+                <p>{benefit.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+// ... keep your styles and hover logic the same
 
 const styles = {
   container: {

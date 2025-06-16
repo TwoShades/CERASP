@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Activity } from "lucide-react";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import landingTranslations from "./sectors-translation.json";
 
 const OverviewPanel = () => {
+  const { language } = useContext(LanguageContext);
+  const t =
+    landingTranslations.overview[language] ||
+    landingTranslations.overview["en"];
+
   return (
     <div style={styles.container}>
       <div style={styles.header}>
-        <h1 style={styles.title}>Areas of Activities</h1>
+        <h1 style={styles.title}>{t.title}</h1>
       </div>
 
       <div
@@ -23,12 +30,7 @@ const OverviewPanel = () => {
           <Activity size={40} style={styles.icon} />
         </div>
         <div style={styles.content}>
-          <p style={styles.description}>
-            Explore our comprehensive range of strategic initiatives and
-            operational focus areas designed to drive innovation, foster
-            collaboration, and deliver exceptional results across all
-            organizational domains.
-          </p>
+          <p style={styles.description}>{t.description}</p>
         </div>
       </div>
     </div>
@@ -103,7 +105,7 @@ const styles = {
   },
 };
 
-// Add CSS animation keyframes and font import
+// Add Google Font once globally (only if not already included elsewhere)
 const styleSheet = document.createElement("style");
 styleSheet.textContent = `
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');

@@ -1,5 +1,6 @@
 .landing-expertise-container {
-  padding: 80px 20px;
+  padding: 150px 20px;
+  margin-bottom: 60px;
   background-color: #ffffff;
   min-height: 500px;
   display: flex;
@@ -78,7 +79,6 @@
 
 .landing-expertise-imageIcon {
   margin-bottom: 16px;
-  opacity: 0.6;
 }
 
 .landing-expertise-placeholderText {
