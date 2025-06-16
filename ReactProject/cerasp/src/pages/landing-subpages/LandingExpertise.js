@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./css/LandingExpertise.css";
+import StockImageFetch from "../../components/placeholders/StockImageFetch";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import landingTranslations from "./landing-translations.json";
 
 const LandingExpertise = () => {
+  const { language } = useContext(LanguageContext);
+  const t =
+    landingTranslations["landing-expertise"][language] ||
+    landingTranslations["landing-expertise"]["en"];
+
   const handleExpertiseClick = () => {
     window.location.href = "/expertises";
   };
@@ -10,38 +18,25 @@ const LandingExpertise = () => {
     <div className="landing-expertise-container">
       <div className="landing-expertise-content">
         <div className="landing-expertise-textSection">
-          <h2 className="landing-expertise-title">Expertise & Solutions</h2>
-          <p className="landing-expertise-description">
-            We deliver cutting-edge technology solutions tailored to your
-            business needs. Our expertise spans across multiple domains,
-            ensuring comprehensive support for your digital transformation
-            journey.
-          </p>
+          <h2 className="landing-expertise-title">{t.title}</h2>
+          <p className="landing-expertise-description">{t.description}</p>
           <button
             className="landing-expertise-button"
             onClick={handleExpertiseClick}
           >
-            Explore Our Expertise
+            {t.cta}
           </button>
         </div>
 
         <div className="landing-expertise-imageSection">
-          <div className="landing-expertise-imagePlaceholder">
-            <div className="landing-expertise-imageIcon">
-              <svg
-                width="80"
-                height="80"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                <path d="M2 17l10 5 10-5" />
-                <path d="M2 12l10 5 10-5" />
-              </svg>
-            </div>
-            <p className="landing-expertise-placeholderText">Your Image Here</p>
+          <div className="landing-expertise-imageIcon">
+            <StockImageFetch
+              searchTerm="expertise & solutions"
+              imgSource="large"
+              orientation="landscape"
+              page={3}
+              perPage={1}
+            />
           </div>
         </div>
       </div>

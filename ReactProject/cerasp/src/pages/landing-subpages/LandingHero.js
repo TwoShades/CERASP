@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./css/LandingHero.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import heroTranslations from "./landing-translations.json";
+import translations from "./landing-translations.json";
 
 const LandingHero = () => {
   const { language } = useContext(LanguageContext);
-  const t = heroTranslations[language];
+  const landingHero = translations.landingHero;
+  const tagline = landingHero[language]?.tagline || "";
+  const welcome = landingHero[language]?.welcome || "";
   const [stage, setStage] = useState("logo");
 
   useEffect(() => {
@@ -56,7 +58,7 @@ const LandingHero = () => {
         </div>
 
         <div className="hero-content">
-          {stage === "text" && <h1 className="fade text">Welcome to CERASP</h1>}
+          {stage === "text" && <h1 className="fade text">{welcome}</h1>}
 
           {stage === "page" && (
             <>
@@ -65,7 +67,7 @@ const LandingHero = () => {
                 alt="CERASP Logo"
                 className="fade logo"
               />
-              <p className="tagline">{t.tagline}</p>
+              <p className="tagline">{tagline}</p>
             </>
           )}
         </div>
