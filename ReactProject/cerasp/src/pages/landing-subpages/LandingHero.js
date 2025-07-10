@@ -71,12 +71,6 @@ const LandingHero = () => {
             </>
           )}
         </div>
-
-        {stage === "page" && (
-          <div className="scroll-indicator">
-            {/* <span>{t.scroll}</span> */}
-          </div>
-        )}
       </div>
     </>
   );

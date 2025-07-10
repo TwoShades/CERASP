@@ -18,8 +18,8 @@
     {
       "page-id": "expertises",
       "nav": {
-        "en": "Expertises & Solutions",
-        "fr": "Expertises et solutions"
+        "en": "Our Sectors",
+        "fr": "Nos Secteurs"
       },
       "sub-pages": [
         { "id": "overview", "en": "Overview", "fr": "Aperçu" },

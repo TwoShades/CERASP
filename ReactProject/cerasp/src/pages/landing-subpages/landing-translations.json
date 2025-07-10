@@ -11,27 +11,31 @@
   },
   "landing-about-us": {
     "en": {
-      "tagline": "Innovation at the intersection of technology and excellence",
+      "tagline": "Building innovation, one solution at a time",
       "cta": "Discover More",
       "scroll": "Scroll Down",
       "aboutUs": {
         "sectionLabel": "About Us",
         "title": "Building the future, one solution at a time",
         "landing-expertise": "Our Expertise",
-        "description": "We're a passionate team of innovators, designers, and problem-solvers dedicated to transforming ideas into reality. With over a decade of experience, we've helped businesses of all sizes achieve their digital ambitions through creative solutions and cutting-edge technology.",
+        "description": "We're a passionate team of smart innovators, researchers, and problem-solvers dedicated to delivering flexible solutions that accelerate your R&D projects, reduce risk, and ensure alignment with scientific and regulatory standards. From safeguarding your IP to supporting your product development journey, we’re here to turn your innovation into impact — faster, safer, and with lasting value.",
         "drivesUs": "What drives us",
         "values": [
           {
             "title": "Innovation",
-            "description": "We push boundaries and embrace cutting-edge technologies to deliver exceptional results."
+            "description": "We develop innovative, eco-responsible solutions that reduce environmental impact and promote sustainable practices"
           },
           {
-            "title": "Quality",
-            "description": "Excellence is our standard. We never compromise on the quality of our work and solutions."
+            "title": "Open-mindedness",
+            "description": "Embracing global perspectives and adapting to change with an open and forward-thinking mindset is our standard."
           },
           {
             "title": "Collaboration",
-            "description": "Success comes from teamwork. We work closely with our clients as trusted partners."
+            "description": "Our team drives innovation by fostering partnerships and supporting entrepreneurship within a dynamic local and national ecosystem."
+          },
+          {
+            "title": "Excellence",
+            "description": "We deliver high-quality, confidential, and proactive support to help SMEs grow with integrity and professionalism."
           }
         ],
         "stats": [
@@ -39,31 +43,31 @@
             "label": "Years Experience"
           },
           {
-            "label": "Projects Completed"
+            "label": "Sites"
           },
           {
-            "label": "Team Members"
+            "label": "Equipment Value"
           },
           {
-            "label": "Client Satisfaction"
+            "label": "Clients"
           }
         ],
         "missionTitle": "Our Mission",
-        "missionDescription": "To deliver innovative solutions that drive digital transformation and empower businesses to thrive in the modern world.",
+        "missionDescription": "Develop and support applied research, training, and technology transfer related to the discovery, development, and evaluation of innovative solutions in the pharmaceutical field, particularly in biopharmaceutics, pharmaceutical technology, production, and digital health.",
         "visionTitle": "Our Vision",
-        "visionDescription": "To be the leading partner for businesses seeking cutting-edge technology solutions and exceptional service excellence.",
+        "visionDescription": "Become a strategic partner in applied pharmaceutical research in Quebec and Canada, recognized for its ability to deliver innovative solutions to its clients, while maintaining strong ties with the educational and research communities at the provincial, federal, and international levels.",
         "learnMore": "Learn More About Us →"
       }
     },
     "fr": {
-      "tagline": "Innovation à l'intersection de la technologie et de l'excellence",
+      "tagline": "Construire l’innovation, une solution à la fois.",
       "cta": "Découvrir",
       "scroll": "Faire défiler",
       "aboutUs": {
         "sectionLabel": "À propos de nous",
-        "title": "Construire le futur, une solution à la fois",
+        "title": "Construire l'innovation', une solution à la fois",
         "landing-expertise": "Notre expertise",
-        "description": "Nous sommes une équipe passionnée d’innovateurs, de designers et de résolveurs de problèmes, dédiée à transformer des idées en réalité. Avec plus de dix ans d’expérience, nous avons aidé des entreprises de toutes tailles à atteindre leurs ambitions numériques grâce à des solutions créatives et une technologie de pointe.",
+        "description": "Nous sommes une équipe passionnée d’innovateurs, de chercheurs et de stratèges engagés à offrir des solutions flexibles qui accélèrent vos projets de R&D, réduisent les risques et assurent la conformité aux normes scientifiques et réglementaires. De la protection de votre propriété intellectuelle à l’accompagnement dans le développement de vos produits, nous transformons votre innovation en impact — plus rapidement, plus sûrement, et avec une valeur durable.",
         "drivesUs": "Ce qui nous motive",
         "values": [
           {
@@ -71,12 +75,16 @@
             "description": "Nous repoussons les limites et adoptons les technologies de pointe pour offrir des résultats exceptionnels."
           },
           {
-            "title": "Qualité",
-            "description": "L'excellence est notre norme. Nous ne faisons jamais de compromis sur la qualité de notre travail et de nos solutions."
+            "title": "Ouverture d'esprit",
+            "description": "Nous adoptons une vision globale et agile face aux transformations grâce à un esprit ouvert et tourné vers l’avenir."
           },
           {
             "title": "Collaboration",
-            "description": "Le succès repose sur le travail d'équipe. Nous collaborons étroitement avec nos clients en tant que partenaires de confiance."
+            "description": "Notre équipe favorise l’innovation et l’entrepreneuriat en créant des partenariats au sein d’un écosystème local et national dynamique."
+          },
+          {
+            "title": "Excellence",
+            "description": "Nous offrons un accompagnement de qualité, confidentiel et proactif afin d’aider les PME à croître avec intégrité et professionnalisme."
           }
         ],
         "stats": [
@@ -84,19 +92,19 @@
             "label": "Années d'expérience"
           },
           {
-            "label": "Projets complétés"
+            "label": "Sites"
           },
           {
-            "label": "Membres de l'équipe"
+            "label": "Valeur d’équipement"
           },
           {
-            "label": "Satisfaction client"
+            "label": "Clients"
           }
         ],
         "missionTitle": "Notre mission",
-        "missionDescription": "Fournir des solutions innovantes qui favorisent la transformation numérique et permettent aux entreprises de prospérer dans le monde moderne.",
+        "missionDescription": "Développer et soutenir la recherche appliquée, la formation et le transfert de technologie liés à la découverte, au développement et à l'évaluation de solutions innovantes dans le domaine pharmaceutique, notamment en biopharmaceutiques, technologie pharmaceutique, production et santé numérique.",
         "visionTitle": "Notre vision",
-        "visionDescription": "Être le partenaire de référence pour les entreprises en quête de solutions technologiques de pointe et d'une excellence de service exceptionnelle.",
+        "visionDescription": "Devenir un partenaire stratégique en recherche pharmaceutique appliquée au Québec et au Canada, reconnu pour sa capacité à fournir des solutions innovantes à ses clients, tout en maintenant des liens solides avec les communautés éducatives et de recherche aux niveaux provincial, fédéral et international.",
         "learnMore": "En savoir plus sur nous →"
       }
     }
@@ -177,8 +185,8 @@
         "title": "Why Choose CERASP?",
         "items": [
           {
-            "title": "Health Canada Partnership",
-            "description": "Privileged access for regulatory submissions and guidance"
+            "title": "Health Canada Partner",
+            "description": "Taking your idea from concept to GMP-ready, one R&D project at a time"
           },
           {
             "title": "Comprehensive Expertise",
@@ -187,6 +195,10 @@
           {
             "title": "Global Reach",
             "description": "Experience with Canadian, US, and EU regulatory frameworks"
+          },
+          {
+            "title": "Derisking Approach",
+            "description": "We accelerate your R&D projects while you retain full ownership of your IP"
           }
         ]
       }
@@ -254,8 +266,8 @@
         "title": "Pourquoi choisir CERASP ?",
         "items": [
           {
-            "title": "Partenariat avec Santé Canada",
-            "description": "Accès privilégié pour les soumissions réglementaires et les conseils"
+            "title": "Partenaire de Santé Canada",
+            "description": "Du concept à la conformité BPF, étape par étape"
           },
           {
             "title": "Expertise complète",
@@ -264,6 +276,10 @@
           {
             "title": "Portée mondiale",
             "description": "Expérience des cadres réglementaires canadiens, américains et européens"
+          },
+          {
+            "title": "Réduction des Risques",
+            "description": "Nous accélérons vos projets R&D — tout en vous assurant que vous conserviez votre propriété intellectuelle"
           }
         ]
       }

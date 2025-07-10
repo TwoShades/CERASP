@@ -9,22 +9,22 @@ const LandingAboutUs = () => {
 
   const stats = [
     {
-      number: "10+",
+      number: "5+",
       label: t.stats[0].label,
       icon: "🚀",
     },
     {
-      number: "500+",
+      number: "3",
       label: t.stats[1].label,
       icon: "💼",
     },
     {
-      number: "50+",
+      number: "10M$",
       label: t.stats[2].label,
       icon: "👥",
     },
     {
-      number: "99%",
+      number: "50+",
       label: t.stats[3].label,
       icon: "⭐",
     },
@@ -32,7 +32,7 @@ const LandingAboutUs = () => {
 
   const values = t.values.map((val, index) => ({
     ...val,
-    icon: ["💡", "🎯", "🤝"][index],
+    icon: ["💡", "🎯", "🤝", "💎"][index],
   }));
 
   const handleLearnMore = () => {
