@@ -30,12 +30,10 @@ const LandingExpertise = () => {
 
         <div className="landing-expertise-imageSection">
           <div className="landing-expertise-imageIcon">
-            <StockImageFetch
-              searchTerm="expertise & solutions"
-              imgSource="large"
-              orientation="landscape"
-              page={3}
-              perPage={1}
+            <img
+              src="/photos/FromOldSite/AdobeStock_141805489-scaled.jpg"
+              alt="Expertise & Solutions"
+              className="landing-expertise-image"
             />
           </div>
         </div>

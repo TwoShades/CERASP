@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./css/LandingNews.css";
-import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import landingTranslations from "./landing-translations.json";
 
@@ -13,6 +12,15 @@ const LandingNews = () => {
   const handleViewAllNews = () => {
     window.location.href = "/news";
   };
+
+  const newsImages = [
+    "/photos/FromOldSite/AdobeStock_316052779__-scaled-450x450.jpg",
+    "/photos/FromOldSite/AdobeStock_338819211-copy-scaled-450x450.jpg",
+    "/photos/FromOldSite/AdobeStock_383184899-copy-scaled-450x450.jpg",
+    "/photos/FromOldSite/biotech-scaled.jpg",
+    "/photos/FromOldSite/slide_1-scaled.jpg",
+    "/photos/FromOldSite/slide_2-scaled.jpg",
+  ];
 
   return (
     <section className="news-panel">
@@ -32,15 +40,14 @@ const LandingNews = () => {
         </div>
 
         <div className="news-layout">
+          {/* Featured article */}
           <div className="featured-article">
             <article className="news-card featured">
               <div className="news-image">
-                <StockImageFetch
-                  searchTerm={newsItems[0].stockimgname}
-                  imgSource="large"
-                  orientation="landscape"
-                  page={1}
-                  perPage={1}
+                <img
+                  src={newsImages[0]}
+                  alt={newsItems[0].title}
+                  className="landing-news-image"
                 />
                 <span className="category-tag">{newsItems[0].category}</span>
               </div>
@@ -52,16 +59,15 @@ const LandingNews = () => {
             </article>
           </div>
 
+          {/* Secondary articles */}
           <div className="secondary-articles">
             {newsItems.slice(1).map((item, index) => (
               <article key={index} className="news-card secondary">
                 <div className="news-image">
-                  <StockImageFetch
-                    searchTerm={item.stockimgname}
-                    imgSource="medium"
-                    orientation="landscape"
-                    page={index + 2}
-                    perPage={1}
+                  <img
+                    src={newsImages[index + 1]}
+                    alt={item.title}
+                    className="landing-news-image"
                   />
                   <span className="category-tag">{item.category}</span>
                 </div>

@@ -11,14 +11,14 @@ const ExpertiseFunding = () => {
 
   return (
     <div className="expertise-Funding">
-        <SubPageHeader
-              name={language === "fr" ? "AIDE AU FINANCEMENT" : "HELP WITH FUNDING"}
-            />
+      <SubPageHeader
+        name={language === "fr" ? "AIDE AU FINANCEMENT" : "HELP WITH FUNDING"}
+      />
       <div className="expertise-Funding-content">
         <div className="expertise-Funding-image">
           <div className="expertise-Funding-image-content">
             <StockImageFetch
-              searchTerm="scientist working in a lab"
+              searchTerm="growth"
               imgSource="large"
               orientation="landscape"
               page={1}
