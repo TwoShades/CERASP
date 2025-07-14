@@ -164,6 +164,7 @@ const AboutEquipments = () => {
             to="/equipment-list"
             className="learn-more-button"
             style={{ textDecoration: "none" }}
+            state={{ equipments: filteredEquipments }}
           >
             {language === "fr" ? "Cliquez Ici" : "Click Here"}
           </Link>
