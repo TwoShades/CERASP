@@ -2,6 +2,14 @@
   padding-top: calc(4em + 90px);
 }
 
+.sectors-preformulation-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
 
 .sectors-preformulation {
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
@@ -14,15 +22,22 @@
 }
 
 .sectors-preformulation::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(217, 232, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(231, 250, 244, 0.06) 0%, transparent 50%);
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(217, 232, 255, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(231, 250, 244, 0.06) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -72,15 +87,13 @@
   width: 80%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 
-    0 10px 25px rgba(0, 0, 0, 0.1),
-    0 20px 48px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 20px 48px rgba(0, 0, 0, 0.1);
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
 }
 
 .preform-image::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 20px;
@@ -90,9 +103,7 @@
 
 .preform-image:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.15),
-    0 30px 60px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 30px 60px rgba(0, 0, 0, 0.1);
 }
 
 .preform-image img {
@@ -142,7 +153,7 @@
 }
 
 .fieldBox::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -167,9 +178,7 @@
 .fieldBox:hover {
   background: rgba(255, 255, 255, 0.95);
   transform: translateY(-4px);
-  box-shadow: 
-    0 12px 32px rgba(0, 0, 0, 0.1),
-    0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .fieldBox:hover::before {
@@ -226,10 +235,9 @@
 }
 
 @media (max-width: 1200px) {
-.sectors-preformulation-layout {
-  padding-top: calc(4em + 40px);
-}
-
+  .sectors-preformulation-layout {
+    padding-top: calc(4em + 40px);
+  }
 
   .preform-content {
     grid-template-columns: 1fr;
@@ -265,14 +273,14 @@
 
 @media (max-width: 768px) {
   .sectors-preformulation {
-  margin: 0px 2em 4em 2em;
+    margin: 0px 2em 4em 2em;
   }
 }
 
 @media (max-width: 480px) {
   .sectors-preformulation-layout {
-  padding-top: calc(4em + 20px);
-}
+    padding-top: calc(4em + 20px);
+  }
 
   .sectors-preformulation {
     margin: 0 1em 1em 1em;

@@ -27,6 +27,11 @@ const ExpertiseAnimal = ({ className = "" }) => {
   const research = expertiseTranslations.advanced_research;
   const natural = expertiseTranslations.natural_solutions;
 
+  const localImages = [
+    "/photos/FromOldSite/animal-health-scaled.jpg", // animal
+    "/photos/FromOldSite/pharmaNHP.jpg", // nhp
+  ];
+
   const expertiseSections = [
     {
       id: "animal",
@@ -105,13 +110,12 @@ const ExpertiseAnimal = ({ className = "" }) => {
                 </div>
 
                 <div className="expertise-image-enhanced">
-                  <StockImageFetch
-                    searchTerm={section.searchTerm}
-                    imgSource="large"
-                    orientation="landscape"
-                    page={1}
-                    perPage={1}
+                  <img
+                    src={localImages[index]}
+                    alt={section.title}
+                    className="expertise-static-image"
                   />
+
                   {/* <div className="image-overlay">
                                     <div className="overlay-content">
                                         <TrendingUp size={24} />

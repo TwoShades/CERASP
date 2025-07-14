@@ -10,13 +10,13 @@ const OurProjectsPanel = () => {
     landingTranslations.projects[language] ||
     landingTranslations.projects["en"];
 
-  const searchTerms = [
-    "pharmaceutical, pills, medicine",
-    "biotechnology, lab, research",
-    "chemical, extraction, laboratory",
-    "documents, regulation",
-    "scale-up, production, industry",
-    "training, education",
+  const projectImages = [
+    "/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg",
+    "/photos/FromOldSite/AdobeStock_193906597_-scaled-450x450.jpg",
+    "/photos/FromOldSite/AdobeStock_240748778__-scaled.jpg",
+    "/photos/FromOldSite/AdobeStock_309159152-scaled-450x450.jpg",
+    "/photos/FromOldSite/AdobeStock_315975074__-scaled-450x450.jpg",
+    "/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg",
   ];
 
   const handleProjectsClick = () => {
@@ -37,12 +37,10 @@ const OurProjectsPanel = () => {
               <div className="landing-projects-imageContainer">
                 <div className="landing-projects-imagePlaceholder">
                   <div className="landing-projects-imageIcon">
-                    <StockImageFetch
-                      searchTerm={searchTerms[index] || "science"}
-                      imgSource="large"
-                      orientation="landscape"
-                      page={index + 1}
-                      perPage={1}
+                    <img
+                      src={projectImages[index]}
+                      alt={project.title}
+                      className="landing-projects-image"
                     />
                   </div>
                 </div>
