@@ -25,7 +25,7 @@ const AboutEquipments = () => {
         const cleaned = json.data.map((item) => ({
           id: item.id,
           name: item.Name || "",
-          site: item.Site || "Unknown",
+          site: item.site || "Unknown",
           photoUrl: item.Image?.url || "",
         }));
 
@@ -52,9 +52,12 @@ const AboutEquipments = () => {
     setCurrentPage(1);
 
     if (site === "ALL") {
+      // console.log("Filtered Equipments (ALL):", allEquipments);
       setFilteredEquipments(allEquipments);
     } else {
-      setFilteredEquipments(allEquipments.filter((eq) => eq.site === site));
+      const filtered = allEquipments.filter((eq) => eq.site === site);
+      // console.log(`Filtered Equipments (${site}):`, filtered);
+      setFilteredEquipments(filtered);
     }
   };
 
