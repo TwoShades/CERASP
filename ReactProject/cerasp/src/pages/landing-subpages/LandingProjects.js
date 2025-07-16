@@ -14,8 +14,8 @@ const OurProjectsPanel = () => {
     "/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg",
     "/photos/FromOldSite/AdobeStock_193906597_-scaled-450x450.jpg",
     "/photos/FromOldSite/AdobeStock_240748778__-scaled.jpg",
-    "/photos/FromOldSite/AdobeStock_309159152-scaled-450x450.jpg",
     "/photos/FromOldSite/AdobeStock_315975074__-scaled-450x450.jpg",
+    "/photos/FromOldSite/AdobeStock_309159152-scaled-450x450.jpg",
     "/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg",
   ];
 

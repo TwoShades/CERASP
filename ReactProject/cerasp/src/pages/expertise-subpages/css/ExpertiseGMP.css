@@ -123,7 +123,7 @@
 
 /* Card Content */
 .card-content {
-  color: #475569;
+  color: #1a1a1a;
   line-height: 1.7;
 }
 
@@ -148,7 +148,7 @@
 .sub-bullet {
   margin-bottom: 0.7rem;
   font-size: 1rem;
-  color: #64748b;
+  color: #1a1a1a;
   padding-left: 1rem;
   position: relative;
 }

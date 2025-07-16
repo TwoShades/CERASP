@@ -32,7 +32,7 @@ const Sectorstraining = () => {
                 perPage={1}
               />
             </div>
-            <div className="caption">{preform.content[language]}</div>
+            {/* <div className="caption">{preform.content[language]}</div> */}
           </div>
 
           <div className="preform-right">

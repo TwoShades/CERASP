@@ -132,7 +132,7 @@
 
 /* Card Content */
 .card-content {
-  color: #475569;
+  color: #1a1a1a;
   line-height: 1.7;
 }
 
@@ -157,7 +157,7 @@
 .sub-bullet {
   margin-bottom: 0.7rem;
   font-size: 1rem;
-  color: #64748b;
+  color: #1a1a1a;
   padding-left: 1rem;
   position: relative;
 }
@@ -212,12 +212,10 @@
   border-radius: 6px;
   padding: 0.6rem 0.8rem;
   margin-bottom: 0.6rem;
-  background: rgba(241, 245, 249, 0.5);
   border-left: 2px solid transparent;
 }
 
 .sub-bullet:hover {
-  background: rgba(219, 234, 254, 0.8);
   border-left-color: #06b6d4;
   transform: translateX(3px);
 }
