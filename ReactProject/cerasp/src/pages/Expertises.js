@@ -37,15 +37,15 @@ const Expertises = () => {
 
       {/* =FORMULATIONS OF PHARMACEUTICALS= */}
 
-      <div id="formulation-of-pharmaceuticals">
+      {/* <div id="formulation-of-pharmaceuticals">
         <ExpertiseFormulation />
-      </div>
+      </div> */}
 
       {/* =====Animal health, NHP & Nutraceuticals==== */}
 
-      <div id="animal-health">
+      {/* <div id="animal-health">
         <ExpertiseAnimal />
-      </div>
+      </div> */}
 
       {/* ===Applied Research==== */}
 
@@ -55,15 +55,15 @@ const Expertises = () => {
 
       {/* =====Troubleshooting===== */}
 
-      <div id="troubleshooting">
+      {/* <div id="troubleshooting">
         <ExpertiseTroubleshooting />
-      </div>
+      </div> */}
 
       {/* ====HEALTH CANADA PARTNER==== */}
 
-      <div id="health-canada-partner">
+      {/* <div id="health-canada-partner">
         <ExpertiseHealthCanada />
-      </div>
+      </div> */}
 
       {/* ====Technical Training==== */}
 

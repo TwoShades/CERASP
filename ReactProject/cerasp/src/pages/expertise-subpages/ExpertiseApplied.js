@@ -52,9 +52,14 @@ const ExpertiseApplied = () => {
     <div className="expertise-applied-layout">
       <div className="five-steps-grid-layout">
         <div className="top-row">
-          <SubPageHeader name={applied.title[language].toUpperCase()} />
-
-          {/* <p>{applied.content[language]}</p> */}
+          <SubPageHeader
+            name={applied.title[language].toUpperCase()}
+            extraContent={
+              <div className="about-overview-header-text">
+                <p>{applied.content[language]}</p>
+              </div>
+            }
+          />
         </div>
 
         <div className="steps-container">

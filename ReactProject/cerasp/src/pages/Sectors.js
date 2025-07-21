@@ -83,21 +83,21 @@ const Sectors = () => {
 
       {/*=====R&D SCALE UP====*/}
 
-      <div id="r&d-scale-up">
+      {/* <div id="r&d-scale-up">
         <SectorsScaleUp />
-      </div>
+      </div> */}
 
       {/*====PROTEIN SYNTHESIS==== */}
 
-      <div id="protein-synthesis">
+      {/* <div id="protein-synthesis">
         <SectorsProtein />
-      </div>
+      </div> */}
 
       {/* ===FEASIBILITY & TECH TRANS==== */}
 
-      <div id="feasibility-&-tech-trans">
+      {/* <div id="feasibility-&-tech-trans">
         <SectorsFeasibility />
-      </div>
+      </div> */}
 
       {/* ====TRAINING PROGRAM==== */}
 
