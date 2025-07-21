@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 export default function EquipmentByLocation() {
   const { language } = useContext(LanguageContext);
   const location = useLocation();
-  const [EquipmentMasterList, setEquipmentMasterList] = useState(
+  const [equipmentList, setEquipmentList] = useState(
     location.state?.equipments || []
   );
   const [loading, setLoading] = useState(!location.state?.equipments);
@@ -27,10 +27,9 @@ export default function EquipmentByLocation() {
           const cleaned = json.data.map((item) => ({
             id: item.id,
             name: item.Name || "",
-            site: item.Site || "Unknown",
           }));
 
-          setEquipmentMasterList(cleaned);
+          setEquipmentList(cleaned);
           setLoading(false);
         } catch (err) {
           console.error("Failed to fetch equipments:", err);
@@ -41,13 +40,6 @@ export default function EquipmentByLocation() {
     }
   }, []);
 
-  const groupedBySite = EquipmentMasterList.reduce((acc, item) => {
-    const site = item.site || "Unknown";
-    if (!acc[site]) acc[site] = [];
-    acc[site].push(item.name);
-    return acc;
-  }, {});
-
   if (loading) {
     return <div className="page-content">Loading equipment data...</div>;
   }
@@ -56,37 +48,22 @@ export default function EquipmentByLocation() {
     <div className="page-content">
       <div className="equipment-section">
         <SubPageHeader
-          name={
-            language === "fr" ? "ÉQUIPEMENTS PAR SITE" : "EQUIPMENT BY LOCATION"
-          }
+          name={language === "fr" ? "LISTE DES ÉQUIPEMENTS" : "EQUIPMENT LIST"}
           extraContent={
             language === "fr" ? (
-              <h4>
-                Une vue d’ensemble de nos équipements répartis entre CERASP et
-                Gérald-Godin.
-              </h4>
+              <h4>Une vue d’ensemble de tout notre équipement.</h4>
             ) : (
-              <h4>
-                An overview of our equipment distributed between CERASP and
-                Gérald-Godin.
-              </h4>
+              <h4>An overview of all our equipment.</h4>
             )
           }
         />
-        <div className="equipment-list">
-          {Object.entries(groupedBySite).map(([site, items]) => (
-            <div key={site} className="equipment-location">
-              <h5 className="location-title">{site}</h5>
-              <ul className="equipment-items">
-                {items.map((item, idx) => (
-                  <li key={idx} className="equipment-item">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <ul className="equipment-items flat-list">
+          {equipmentList.map((item) => (
+            <li key={item.id} className="equipment-item">
+              {item.name}
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );
