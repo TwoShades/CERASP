@@ -7,8 +7,6 @@ import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 const AboutEquipments = () => {
   const [allEquipments, setAllEquipments] = useState([]);
-  const [filteredEquipments, setFilteredEquipments] = useState([]);
-  const [selectedSite, setSelectedSite] = useState("ALL");
   const [currentPage, setCurrentPage] = useState(1);
 
   const { language } = useContext(LanguageContext);
@@ -30,47 +28,21 @@ const AboutEquipments = () => {
         }));
 
         setAllEquipments(cleaned);
-
-        // Re-apply selected site filter
-        if (selectedSite === "ALL") {
-          setFilteredEquipments(cleaned);
-        } else {
-          setFilteredEquipments(
-            cleaned.filter((eq) => eq.site === selectedSite)
-          );
-        }
       } catch (err) {
         console.error("Failed to fetch equipments:", err);
       }
     };
 
     fetchEquipments();
-  }, [language, selectedSite]);
-
-  const handleSiteChange = (site) => {
-    setSelectedSite(site);
-    setCurrentPage(1);
-
-    if (site === "ALL") {
-      // console.log("Filtered Equipments (ALL):", allEquipments);
-      setFilteredEquipments(allEquipments);
-    } else {
-      const filtered = allEquipments.filter((eq) => eq.site === site);
-      // console.log(`Filtered Equipments (${site}):`, filtered);
-      setFilteredEquipments(filtered);
-    }
-  };
+  }, [language]);
 
   const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 3;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = filteredEquipments.slice(
-    indexOfFirstItem,
-    indexOfLastItem
-  );
+  const currentItems = allEquipments.slice(indexOfFirstItem, indexOfLastItem);
 
   const nextPage = () => {
-    if (currentPage < Math.ceil(filteredEquipments.length / itemsPerPage)) {
+    if (currentPage < Math.ceil(allEquipments.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -93,22 +65,6 @@ const AboutEquipments = () => {
           </h4>
         }
       />
-
-      {/* Site Filter Buttons */}
-      <div className="equipment-site-filters">
-        {["ALL", "JAC", "GG", "CERASP"].map((site) => (
-          <label key={site}>
-            <input
-              type="radio"
-              name="site"
-              value={site}
-              checked={selectedSite === site}
-              onChange={() => handleSiteChange(site)}
-            />
-            {site}
-          </label>
-        ))}
-      </div>
 
       <div className="about-equipments">
         <div className="about-equipments-images">
@@ -149,7 +105,7 @@ const AboutEquipments = () => {
           <button
             onClick={nextPage}
             disabled={
-              currentPage >= Math.ceil(filteredEquipments.length / itemsPerPage)
+              currentPage >= Math.ceil(allEquipments.length / itemsPerPage)
             }
             className="pagination-arrow"
           >
@@ -167,7 +123,7 @@ const AboutEquipments = () => {
             to="/equipment-list"
             className="learn-more-button"
             style={{ textDecoration: "none" }}
-            state={{ equipments: filteredEquipments }}
+            state={{ equipments: allEquipments }}
           >
             {language === "fr" ? "Cliquez Ici" : "Click Here"}
           </Link>
