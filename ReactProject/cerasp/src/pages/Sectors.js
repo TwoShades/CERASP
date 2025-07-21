@@ -7,21 +7,21 @@ import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 import UnderConstruction from "../components/layouts/UnderConstruction.js";
 
 import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
-import SectorsPrototyping from "./sectors-subpages/SectorsPrototyping.js";
-import SectorsPreformulation from "./sectors-subpages/SectorsPreformulation.js";
-import SectorsFormulation from "./sectors-subpages/SectorsFormulation.js";
+import SectorsNHP from "./sectors-subpages/SectorsNHP.js";
+import SectorsPharmaceutical from "./sectors-subpages/SectorsPharmaceutical.js";
+import SectorsBiopharmaceutical from "./sectors-subpages/SectorsBiopharmaceutical.js";
 
-import SectorsRegulatory from "./sectors-subpages/SectorsRegulatory.js";
-import SectorsPharma from "./sectors-subpages/SectorsPharma.js";
+import SectorsbioTechBioMan from "./sectors-subpages/SectorsbioTechBioMan.js";
+import SectorsCosmeceuticals from "./sectors-subpages/SectorsCosmeceuticals.js";
 import SectorsProtein from "./sectors-subpages/SectorsProtein.js";
-import SectorsSupport from "./sectors-subpages/SectorsSupport.js";
+import SectorsDiagnosticTools from "./sectors-subpages/SectorsDiagnosticTools.js";
 
-import SectorsRnTech from "./sectors-subpages/SectorsRnTech.js";
+import SectorsAnimalHealth from "./sectors-subpages/SectorsAnimalHealth.js";
 import SectorsScaleUp from "./sectors-subpages/SectorsScaleUp.js";
-import SectorsChemistry from "./sectors-subpages/SectorsChemistry.js";
+import SectorsNutraceutical from "./sectors-subpages/SectorsNutraceutical.js";
 import SectorsFeasibility from "./sectors-subpages/SectorsFeasibility.js";
 
-import SectorsTraining from "./sectors-subpages/SectorsTraining.js";
+import SectorsMedicalDevices from "./sectors-subpages/SectorsMedicalDevices.js";
 
 const Sectors = () => {
   useScrollToPanel();
@@ -39,46 +39,46 @@ const Sectors = () => {
         <SectorsOverview />
       </div>
 
-      {/*===PREFORMULATION====*/}
+      {/*===PHARMACEUTICAL====*/}
 
-      <div id="preformulation">
-        <SectorsPreformulation />
+      <div id="pharmaceutical">
+        <SectorsPharmaceutical />
       </div>
 
-      {/*====FORMULATION==== */}
+      {/*====BIOPHARMACEUTICAL==== */}
 
-      <div id="formulation">
-        <SectorsFormulation />
+      <div id="biopharmaceutical">
+        <SectorsBiopharmaceutical />
       </div>
 
-      {/*=====RESEARCH & TECH SUPPORT=====*/}
+      {/*=====ANIMAL HEALTH=====*/}
 
-      <div id="research-&-tech-support">
-        <SectorsRnTech />
+      <div id="animal-health">
+        <SectorsAnimalHealth />
       </div>
 
       {/*=====REF AFF ACTIVITIES======*/}
 
-      <div id="ref-aff-activities">
-        <SectorsRegulatory />
+      <div id="bioTechBioMan">
+        <SectorsbioTechBioMan />
       </div>
 
-      {/*====PROTOTYPING====*/}
+      {/*====NHP====*/}
 
-      <div id="prototyping">
-        <SectorsPrototyping />
+      <div id="nhp">
+        <SectorsNHP />
       </div>
 
-      {/*====PHARMACEUTICAL===== */}
+      {/*====cosmeceuticals===== */}
 
-      <div id="pharmaceutical">
-        <SectorsPharma />
+      <div id="cosmeceuticals">
+        <SectorsCosmeceuticals />
       </div>
 
-      {/*====CHEMISTRY & EXTRACTION====*/}
+      {/*====Nutraceutical====*/}
 
-      <div id="chemistry-&-extraction">
-        <SectorsChemistry />
+      <div id="nutraceutical">
+        <SectorsNutraceutical />
       </div>
 
       {/*=====R&D SCALE UP====*/}
@@ -99,16 +99,16 @@ const Sectors = () => {
         <SectorsFeasibility />
       </div> */}
 
-      {/* ====TRAINING PROGRAM==== */}
+      {/* ====MedicalDevices==== */}
 
-      <div id="training-program">
-        <SectorsTraining />
+      <div id="medicalDevices">
+        <SectorsMedicalDevices />
       </div>
 
-      {/*====SUPPORT====*/}
+      {/*====DiagnosticTools====*/}
 
-      <div id="support">
-        <SectorsSupport />
+      <div id="diagnostic-tools">
+        <SectorsDiagnosticTools />
       </div>
 
       {/*====CONTACT FORM===*/}

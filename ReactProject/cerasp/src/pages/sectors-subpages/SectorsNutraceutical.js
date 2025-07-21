@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./css/SectorsChemistry.css";
+import "./css/SectorsNutraceutical.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import sectorsTranslations from "./sectors-translation.json";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
@@ -21,19 +21,19 @@ const iconMap = [
   Cog,
 ];
 
-const SectorsChemistry = () => {
+const SectorsNutraceutical = () => {
   const { language } = useContext(LanguageContext);
-  const chemistry = sectorsTranslations.chemistry;
+  const nutraceutical = sectorsTranslations.nutraceutical;
 
   return (
     <div className="sectors-chemistry-layout">
       <div className="five-steps-grid-layout">
         <div className="top-row">
-          <SubPageHeader name={chemistry.title[language]} />
+          <SubPageHeader name={nutraceutical.title[language]} />
         </div>
 
         <div className="steps-container">
-          {chemistry.steps.map((step, index) => {
+          {nutraceutical.steps.map((step, index) => {
             const Icon = iconMap[index] || Cog;
             return (
               <div key={index} className={`step step${index + 1}`}>
@@ -69,4 +69,4 @@ const SectorsChemistry = () => {
   );
 };
 
-export default SectorsChemistry;
+export default SectorsNutraceutical;

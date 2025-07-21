@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "./css/SectorsPrototyping.css";
+import "./css/SectorsNHP.css";
 import { MessagesSquare } from "lucide-react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 // import sectorsTranslations from "./sectors-translations.json";
 
-const SectorsPrototyping = () => {
+const SectorsNHP = () => {
   const { language } = useContext(LanguageContext);
   //   const prototyping = sectorsTranslations.prototyping;
 
@@ -43,4 +43,4 @@ ingredients.`}
   );
 };
 
-export default SectorsPrototyping;
+export default SectorsNHP;

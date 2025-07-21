@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import "./css/SectorsPharma.css";
+import "./css/SectorsCosmeceuticals.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import sectorsTranslations from "./sectors-translation.json";
 
-const SectorsPharma = () => {
+const SectorsCosmeceuticals = () => {
   const { language } = useContext(LanguageContext);
-  const pharma = sectorsTranslations.pharma;
+  const cosmeceuticals = sectorsTranslations.cosmeceuticals;
 
   return (
     <div className="sectors-pharma-layout">
@@ -25,9 +25,9 @@ const SectorsPharma = () => {
         <div className="pharma-content-section">
           <article className="sectors-pharma-card">
             <header>
-              <h2>{pharma.title[language]}</h2>
+              <h2>{cosmeceuticals.title[language]}</h2>
             </header>
-            <p>{pharma.content[language]}</p>
+            <p>{cosmeceuticals.content[language]}</p>
           </article>
         </div>
       </section>
@@ -35,4 +35,4 @@ const SectorsPharma = () => {
   );
 };
 
-export default SectorsPharma;
+export default SectorsCosmeceuticals;

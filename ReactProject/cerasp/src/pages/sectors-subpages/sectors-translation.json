@@ -10,7 +10,7 @@
     }
   },
 
-  "preformulation": {
+  "pharmaceutical": {
     "title": {
       "en": "Pharmaceutical",
       "fr": "Pharmaceutique"
@@ -20,7 +20,7 @@
       "fr": "Nous collaborons avec les entreprises pharmaceutiques pour soutenir le développement et la commercialisation de médicaments sûrs et efficaces. Nos services contribuent à garantir :"
     },
     "fields": {
-      "ingredientSelection": {
+      "regulatoryCompliance": {
         "title": {
           "en": "Regulatory compliance",
           "fr": "Conformité réglementaire"
@@ -30,7 +30,7 @@
           "fr": "Respect des directives, spécifications et réglementations applicables au client et au secteur."
         }
       },
-      "processOptimization": {
+      "qualityAssurance": {
         "title": {
           "en": "Quality assurance",
           "fr": "Assurance qualité"
@@ -40,7 +40,7 @@
           "fr": "Que les produits ou les processus répondent aux normes définies et aux attentes des clients."
         }
       },
-      "dataIntegration": {
+      "operationalEfficiency": {
         "title": {
           "en": "Operational efficiency",
           "fr": "Efficacité opérationnelle"
@@ -50,7 +50,7 @@
           "fr": "À chaque étape du cycle de développement du produit."
         }
       },
-      "rdSupport": {
+      "gmpReady": {
         "title": {
           "en": "GMP-ready status",
           "fr": "Statut de conformité aux BPF"
@@ -62,7 +62,7 @@
       }
     }
   },
-  "formulation": {
+  "biopharmaceutical": {
     "title": {
       "en": "Biopharmaceutical",
       "fr": "Biopharmaceutique"
@@ -112,7 +112,7 @@
       }
     }
   },
-  "regulatoryAffairs": {
+  "bioTechBioMan": {
     "title": {
       "en": "Biotechnology & Biomanufacturing",
       "fr": "Biotechnologie et biofabrication"
@@ -236,7 +236,7 @@
       }
     }
   },
-  "pharma": {
+  "cosmeceuticals": {
     "title": {
       "en": "Cosmetics & Cosmeceuticals",
       "fr": "Cosmétiques et cosméceutiques"
@@ -301,7 +301,7 @@
       }
     }
   },
-  "researchSupport": {
+  "animalHealth": {
     "title": {
       "en": "Animal Health",
       "fr": "Santé animale"
@@ -310,7 +310,7 @@
       "en": "From veterinary pharmaceuticals to nutritional supplements, we assist companies focused on improving animal health and well-being. Our solutions are designed to meet the specific regulatory and quality standards of this important industry.",
       "fr": "Des produits pharmaceutiques vétérinaires aux compléments alimentaires, nous accompagnons les entreprises soucieuses d'améliorer la santé et le bien-être des animaux. Nos solutions sont conçues pour répondre aux normes réglementaires et de qualité spécifiques à ce secteur crucial."
     },
-    "formulation": {
+    "vetPharma": {
       "title": {
         "en": "Veterinary Pharmaceuticals",
         "fr": "Produits pharmaceutiques vétérinaires"
@@ -320,7 +320,7 @@
         "fr": "Pour le traitement et la gestion des maladies et affections telles que les antibiotiques et les anti-inflammatoires."
       }
     },
-    "processOptimization": {
+    "supplements": {
       "title": {
         "en": "Nutritional Supplements",
         "fr": "Compléments alimentaires"
@@ -330,7 +330,7 @@
         "fr": "Pour soutenir la santé et la performance (ex. Vitamines, minéraux, probiotiques, etc.)."
       }
     },
-    "regulatory": {
+    "therapies": {
       "title": {
         "en": "Advanced Therapies",
         "fr": "Thérapies avancées"
@@ -340,7 +340,7 @@
         "fr": "Sert à traiter des maladies complexes ou chroniques comme les produits de médecine régénérative."
       }
     },
-    "troubleshooting": {
+    "vaccines": {
       "title": {
         "en": "Vaccines",
         "fr": "Vaccins"
@@ -350,7 +350,7 @@
         "fr": "Qui préviennent les maladies infectieuses comme les vaccins à ADN."
       }
     },
-    "preclinical": {
+    "biologics": {
       "title": {
         "en": "Biologics",
         "fr": "Produits biologiques"
@@ -360,7 +360,7 @@
         "fr": "Utiliser des organismes vivants ou leurs produits pour traiter ou prévenir des maladies (p. ex. anticorps monoclonaux)."
       }
     },
-    "strategic": {
+    "topAndDerma": {
       "title": {
         "en": "Topical and Dermatological Products",
         "fr": "Produits topiques et dermatologiques"
@@ -423,7 +423,7 @@
       }
     }
   },
-  "chemistry": {
+  "nutraceutical": {
     "title": {
       "en": "Nutraceutical",
       "fr": "Nutraceutique"
@@ -593,7 +593,7 @@
       "fr": "Notre approche intégrée combine recherche de pointe, innovation naturelle et méthodologies éprouvées pour offrir des résultats exceptionnels dans tous les domaines."
     }
   },
-  "training": {
+  "medicalDevices": {
     "title": {
       "en": "Medical Devices",
       "fr": "Dispositifs médicaux"

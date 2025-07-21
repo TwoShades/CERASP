@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
-import "./css/SectorsRegulatory.css";
+import "./css/SectorsbioTechBioMan.css";
 import { FileText, Shield, Globe, CheckCircle } from "lucide-react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import regulatoryData from "./sectors-translation.json"; // <- path to your JSON
 
-export default function SectorsRegulatory() {
+export default function SectorsbioTechBioMan() {
   const { language } = useContext(LanguageContext);
-  const data = regulatoryData.regulatoryAffairs;
+  const data = regulatoryData.bioTechBioMan;
   const t = (path) => path?.[language] || "";
 
   return (
@@ -22,7 +22,7 @@ export default function SectorsRegulatory() {
         </div>
       </div>
 
-      {/* Regulatory Overview Section */}
+      {/* bioTechBioMan Overview Section */}
       <div className="section">
         <div className="icon-heading">
           <FileText className="icon green" />

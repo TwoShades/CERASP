@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
-import './css/ExpertiseTraining.css';
+import React, { useState, useEffect, useContext } from "react";
+import "./css/SectorsBiopharmaceutical.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import expertiseTranslations from "./expertise-translations.json";
+import sectorsTranslations from "./sectors-translation.json";
 
-const ExpertiseTraining = () => {
+const SectorsBiopharmaceutical = () => {
   const { language } = useContext(LanguageContext);
-  const training = expertiseTranslations.training;
+  const biopharmaceutical = sectorsTranslations.biopharmaceutical;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -14,50 +14,60 @@ const ExpertiseTraining = () => {
   }, []);
 
   return (
-    <div className="training-container">
+    <div className="formulation-container">
       {/* Subtle background elements */}
       <div className="background-accent"></div>
-      
-      <div className="training-content">
+
+      <div className="formulation-content">
         {/* Header */}
-        <div className={`training-header ${isVisible ? 'visible' : ''}`}>
-          <h2 className="training-title">
-            {training.title[language]}
+        <div className={`formulation-header ${isVisible ? "visible" : ""}`}>
+          <h2 className="formulation-title">
+            {biopharmaceutical.title[language]}
           </h2>
           <div className="title-accent"></div>
         </div>
 
         {/* Main content card */}
-        <div className={`training-card ${isVisible ? 'visible' : ''}`}>
+        <div className={`formulation-card ${isVisible ? "visible" : ""}`}>
           <div className="card-inner">
             <div className="content-section">
               <div className="icon-container">
-                <div className="training-icon">🎓</div>
+                <div className="formulation-icon">🧪</div>
               </div>
-              <p className="training-description">
-                {training.content[language]}
+              <p className="formulation-description">
+                {biopharmaceutical.content[language]}
               </p>
             </div>
-            
+
             <div className="decorative-section">
               <div className="accent-line"></div>
               <div className="feature-highlights">
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    {language === 'en' ? 'GMP Practices' : 'Pratiques BPF'}
+                    <p>{biopharmaceutical.card1.title[language]}</p>
+                    <p>{biopharmaceutical.card1.content[language]}</p>
                   </span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    {language === 'en' ? 'Bioprocessing' : 'Bioprocédés'}
+                    <p>{biopharmaceutical.card2.title[language]}</p>
+                    <p>{biopharmaceutical.card2.content[language]}</p>
                   </span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    {language === 'en' ? 'Quality Control' : 'Contrôle Qualité'}
+                    <p>{biopharmaceutical.card3.title[language]}</p>
+                    <p>{biopharmaceutical.card3.content[language]}</p>
+                  </span>
+                </div>
+                <div className="highlight-item">
+                  <span className="highlight-icon">✓</span>
+                  <span className="highlight-text">
+                    <p>{biopharmaceutical.card4.title[language]}</p>
+                    <p>{biopharmaceutical.card4.content[language]}</p>
                   </span>
                 </div>
               </div>
@@ -69,4 +79,4 @@ const ExpertiseTraining = () => {
   );
 };
 
-export default ExpertiseTraining;
+export default SectorsBiopharmaceutical;

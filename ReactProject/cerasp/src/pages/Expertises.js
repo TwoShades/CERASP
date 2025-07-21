@@ -11,7 +11,7 @@ import ExpertiseApplied from "./expertise-subpages/ExpertiseApplied.js";
 import ExpertiseBioinformatics from "./expertise-subpages/ExpertiseBioinformatics.js";
 import ExpertiseTroubleshooting from "./expertise-subpages/ExpertiseTroubleshooting.js";
 import ExpertiseHealthCanada from "./expertise-subpages/ExpertiseHealthCanada.js";
-import ExpertiseTraining from "./expertise-subpages/ExpertiseTraining.js";
+import ExpertiseProductDev from "./expertise-subpages/ExpertiseProductDev.js";
 import ExpertiseFunding from "./expertise-subpages/ExpertiseFunding.js";
 import ExpertiseNumeric from "./expertise-subpages/ExpertiseNumeric.js";
 
@@ -68,7 +68,7 @@ const Expertises = () => {
       {/* ====Technical Training==== */}
 
       <div id="technical-training">
-        <ExpertiseTraining />
+        <ExpertiseProductDev />
       </div>
 
       {/* =====Bioinformatics===== */}
