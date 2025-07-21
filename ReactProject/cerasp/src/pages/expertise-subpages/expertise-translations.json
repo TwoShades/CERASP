@@ -5,8 +5,8 @@
       "fr": "Aperçu"
     },
     "content": {
-      "en": "CERASP is a leading innovation hub offering biomanufacturing, formulation, applied research, and pilot-scale production services. Operating in GLP-compliant labs with GMP standards, CERASP supports partners through strategic collaborations, regulatory expertise, bioinformatics, and training. From product development to funding and troubleshooting, CERASP accelerates innovation across pharma, biotech, and healthcare.",
-      "fr": "CERASP est un centre d’innovation offrant des services en biofabrication, formulation, recherche appliquée et production à l’échelle pilote. Travaillant dans des laboratoires conformes aux BPL et aux normes BPF, CERASP soutient ses partenaires grâce à des collaborations stratégiques, une expertise réglementaire, de la bio-informatique et de la formation. Du développement de produits au financement et au dépannage, CERASP accélère l’innovation en pharma, biotechnologie et santé."
+      "en": "At CERASP, we are proud to support a wide range of sectors within the life sciences and healthcare ecosystem. Our deep expertise and commitment to innovation allow us to offer tailor-made solutions tailored to the specific needs of each industry.",
+      "fr": "Au CERASP, nous sommes fiers de soutenir un large éventail de secteurs dans l’écosystème des sciences de la vie et de la santé. Notre expertise approfondie et notre engagement envers l’innovation nous permettent de proposer des solutions sur mesure adaptées aux besoins spécifiques de chaque industrie."
     },
     "expertise": [
       {
@@ -46,26 +46,50 @@
   },
   "gmp_biomanufacturing": {
     "title": {
-      "en": "GMP-Ready Biopharmaceutical Production at CERASP",
-      "fr": "Production biopharmaceutique prête pour les Bonnes Pratiques de Fabrication (BPF) chez CERASP"
+      "en": "Ideation: From Concept to Strategy",
+      "fr": "De l’idée à la stratégie"
+    },
+    "sub1": {
+      "en": "At CERASP, we help turn ideas into viable products by providing expert support from early ideation to strategic planning, ensuring a solid foundation for successful development",
+      "fr": ""
+    },
+    "sub2": {
+      "en": "Driven by innovation and scientific rigor, our ideation services turn concepts into actionable plans—shaping the future of your innovation.",
+      "fr": ""
+    },
+    "sub3": {
+      "en": "Our Expertise Includes: ",
+      "fr": ""
     },
     "content": {
       "en": {
         "overview": [
-          "CERASP is a GLP-compliant facility operating under GMP-aligned procedures to support regulatory readiness.",
-          "We develop GMP-ready biopharmaceutical processes to facilitate seamless technology transfer to licensed manufacturers.",
-          "Expertise includes upstream and downstream process development for biologics and advanced therapies."
+          "Design and Sketch:",
+          "We turn abstract ideas into clear visuals through initial designs and sketches, bringing your concept to life.",
+          "Feasibility Studies:",
+          "We assess technical, regulatory, and commercial feasibility to validate your idea before major investment.",
+          "Consulting:",
+          "Our experts offer strategic and scientific guidance to ensure your innovation is built on a solid foundation.",
+          "Applied Research:",
+          "We conduct applied research to turn scientific discovery into practical solutions aligned with your goals."
         ],
         "capabilities": [
-          "Bioprocess optimization (fermentation and cell culture)",
-          "Purification of biomolecules",
-          "Bioactivity and stability testing",
-          "Genomic and microbial characterization",
-          "Analytical method development for biologics"
+          "Business Plan Development:",
+          "We help shape your vision into a clear business plan with goals, strategy, resources, timelines, and financials.",
+          "Market Study and Evaluation:",
+          "Our market analysis uncovers opportunities, evaluates demand, and positions your innovation competitively.",
+          "Mapping Activities:",
+          "We create a clear roadmap from idea to market, aligning activities, stakeholders, and milestones."
         ],
         "collaboration": [
-          "We collaborate with universities and CCTTs to support industrial innovation and scale-up for advanced therapies.",
-          "Specialized in microbial and mammalian cell culture for the production of therapeutic proteins and other biologics."
+          "Preformulation:",
+          "We conduct preformulation studies to define optimal conditions and components for early product development.",
+          "Gap Analysis:",
+          "We pinpoint gaps in your development and regulatory strategy to ensure compliance and success.",
+          "Literature Evaluation:",
+          "We review scientific literature to support your concept with data and prevent redundancy.",
+          "Grant Search:",
+          "We help identify and secure funding, including refundable SR&ED tax credits for Canadian companies, by managing the entire grant application process for projects ranging from $4K to over $10M, covering research, development, commercialization, and expansion needs."
         ]
       },
       "fr": {
@@ -100,49 +124,92 @@
   },
   "applied_research": {
     "title": {
-      "en": "Applied Research",
-      "fr": "Recherche appliquée"
+      "en": "Proof of Concept",
+      "fr": "Preuve de concept"
+    },
+    "content": {
+      "en": "We validate your idea’s technical feasibility, reducing risk and guiding decisions before full-scale development.",
+      "fr": "Nous validons la faisabilité technique de votre idée, réduisant ainsi les risques et guidant les décisions avant le développement à grande échelle."
     },
     "steps": {
       "formulate": {
-        "title": { "en": "FORMULATE", "fr": "FORMULER" },
+        "title": { "en": "Formulation", "fr": "Formulation" },
         "description": {
-          "en": "Formulate, validate and prepare new products after the results of basic research or to find the right molecules.",
-          "fr": "Formuler, valider et préparer de nouveaux produits à partir des résultats de la recherche fondamentale ou pour identifier les bonnes molécules."
+          "en": "Our team develops robust formulations tailored to your product goals — pharmaceuticals, biologics, nutraceuticals, cosmetics, and more—while meeting regulatory and industry standards.",
+          "fr": "Notre équipe conçoit des formulations stables et efficaces, conformes aux normes, adaptées à vos objectifs (pharmaceutiques, biologiques, nutraceutiques, cosmétiques, etc.). "
         }
       },
       "support": {
-        "title": { "en": "SUPPORT", "fr": "SOUTENIR" },
+        "title": { "en": "Prototyping", "fr": "Prototypage" },
         "description": {
-          "en": "Support the development of production processes through new processes, including standard operating procedures.",
-          "fr": "Soutenir le développement des processus de production via de nouveaux procédés, y compris les procédures opératoires normalisées."
+          "en": "We create early prototypes that simulate the final product, enabling thorough testing and refinement before scaling up.",
+          "fr": "Nous réalisons des prototypes pour tester et affiner performance, aspect, usage et production avant la montée en échelle."
         }
       },
       "transfer": {
-        "title": { "en": "TRANSFER", "fr": "TRANSFÉRER" },
+        "title": {
+          "en": "Dosage Forms Identification",
+          "fr": "Identification des formes posologiques"
+        },
         "description": {
-          "en": "Transfer and adapt technological innovations for the development of scale-up pilot scale production.",
-          "fr": "Transférer et adapter les innovations technologiques pour le développement de productions pilotes à l’échelle."
+          "en": "We identify the optimal dosage form—solid, liquid, semi-solid, or alternative—based on efficacy, compliance, and market needs.",
+          "fr": "Nous sélectionnons la forme galénique optimale selon efficacité, observance et marché."
         }
       },
       "select": {
-        "title": { "en": "SELECT", "fr": "SÉLECTIONNER" },
+        "title": {
+          "en": "Ingredient Selection",
+          "fr": "Sélection des ingrédients"
+        },
         "description": {
-          "en": "Select and configure equipment for research and production from an Industry perspective.",
-          "fr": "Sélectionner et configurer les équipements pour la recherche et la production dans une optique industrielle."
+          "en": "Our experts select optimal active and excipient ingredients, ensuring compatibility, functionality, cost-effectiveness, and compliance.",
+          "fr": "Nos experts choisissent ingrédients et excipients selon compatibilité, efficacité, rentabilité et conformité."
         }
       },
       "develop": {
-        "title": { "en": "DEVELOP", "fr": "DÉVELOPPER" },
+        "title": {
+          "en": "Equipment Layout",
+          "fr": "Aménagement des équipements"
+        },
         "description": {
-          "en": "Formulate and develop pilot processes, prototypes and batches.",
-          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
+          "en": "We guide equipment selection and facility layout for efficient, scalable manufacturing that meets industry standards.",
+          "fr": "Nous conseillons sur équipements et agencement pour une production efficace et évolutive."
+        }
+      },
+      "physico": {
+        "title": {
+          "en": "Physico-Chemical Testing",
+          "fr": "Essais physico-chimiques"
+        },
+        "description": {
+          "en": "Our lab performs key physico-chemical tests to ensure stability, uniformity, and quality for R&D and regulatory needs.",
+          "fr": "Nos laboratoires réalisent des tests physico-chimiques essentiels pour évaluer la stabilité, l’uniformité et la qualité du produit, tout en appuyant les exigences réglementaires."
+        }
+      },
+      "scale": {
+        "title": {
+          "en": "Lab Scale Manufacturing",
+          "fr": "Fabrication à l’échelle laboratoire"
+        },
+        "description": {
+          "en": "We offer small-scale production capabilities to produce development batches for testing, validation, and early-stage market feedback.",
+          "fr": "Nous produisons des lots pilotes à petite échelle pour les essais, la validation et les retours du marché en phase pré-commerciale."
+        }
+      },
+      "techsupport": {
+        "title": {
+          "en": "Technical Support",
+          "fr": "Support technique"
+        },
+        "description": {
+          "en": "Our experts provide ongoing technical support throughout the development lifecycle, offering troubleshooting, process optimization, and scale-up recommendations.",
+          "fr": "Nous assurons un accompagnement technique continu : résolution, optimisation et conseils pour l’industrialisation."
         }
       }
     },
     "bottom_text": {
-      "en": "Our fields of expertise used for applied research projects enable us to propose innovative solutions for various technologies and product formats.",
-      "fr": "Nos domaines d'expertise utilisés pour les projets de recherche appliquée nous permettent de proposer des solutions innovantes pour diverses technologies et formats de produits."
+      "en": "At CERASP, we combine technical expertise, scientific rigor, and industry insight to support you through early development—turning ideas into validated, scalable products. Our pragmatic approach ensures efficient progress from concept to reality, minimizing risk and maximizing success.",
+      "fr": "Transformer une idée en produit testable requiert expertise technique, rigueur scientifique et connaissance du marché. Au CERASP, nous vous accompagnons dès le début pour valider et faire évoluer vos concepts, en minimisant les risques et maximisant vos chances de succès."
     }
   },
   "pilot_scale_production": {
@@ -157,41 +224,101 @@
   },
   "training": {
     "title": {
-      "en": "Training",
-      "fr": "Formation"
+      "en": "Product Development",
+      "fr": "Développement de Produits"
     },
     "content": {
-      "en": "At CERASP, we offer specialized technical training designed to enhance the skills and knowledge of your team. Our services cover a range of topics, including pharmaceutical manufacturing, biomanufacturing, GMP compliance, and regulatory requirements. We provide both customized training sessions and industry-standard programs, available in-person or virtually. Our training ensures that your staff or interns from affiliated colleges are well-equipped to handle technical challenges, optimize processes, and maintain high standards of quality and compliance in your operations.",
-      "fr": "Au CERASP, nous offrons une formation technique spécialisée conçue pour améliorer les compétences et les connaissances de votre équipe. Nos services couvrent un éventail de sujets, notamment la fabrication pharmaceutique, la biofabrication, la conformité aux BPF et les exigences réglementaires. Nous proposons des sessions de formation personnalisées ainsi que des programmes conformes aux normes de l'industrie, disponibles en présentiel ou virtuellement. Notre formation garantit que votre personnel ou des stagiaires provenant du milieu collégial seront bien préparés pour relever les défis techniques, optimiser les processus et maintenir des normes élevées de qualité et de conformité dans vos opérations."
+      "en": "At CERASP, we guide your product from concept to market with scientific rigor, regulatory expertise, and technical precision. Partnering closely with you, we streamline development, reduce risks, and speed time-to-market with cost-effective solutions—supporting innovation at every stage.",
+      "fr": "Au CERASP, nous vous accompagnons de l’optimisation du concept à la mise en marché grâce à une approche intégrée alliant rigueur scientifique, expertise réglementaire et précision technique. Nous collaborons étroitement avec vous pour accélérer le développement, réduire les risques et garantir le succès de vos innovations, qu’il s’agisse d’améliorer un produit existant ou d’en créer un nouveau."
     },
     "card1": {
       "title": {
-        "en": "Foundation & Skills",
-        "fr": "Fondations et compétences"
+        "en": "Product Optimization",
+        "fr": "Optimisation de produit"
       },
       "content": {
-        "en": "At CERASP, we begin by laying a strong foundation. Our technical training programs are designed to introduce core principles in pharmaceutical and biomanufacturing environments. Participants gain hands-on knowledge in production workflows, safety protocols, and quality assurance fundamentals — all essential for navigating regulated industry spaces with confidence.",
-        "fr": "Au CERASP, nous commençons par établir des bases solides. Nos programmes de formation technique sont conçus pour introduire les principes fondamentaux dans les environnements pharmaceutiques et de biofabrication. Les participants acquièrent des connaissances pratiques sur les flux de production, les protocoles de sécurité et les bases de l’assurance qualité — essentiels pour évoluer avec confiance dans des secteurs réglementés."
+        "en": "We optimize formulations to boost performance, stability, efficacy, and cost efficiency—preparing your product for scale-up.",
+        "fr": "Nous optimisons les formulations pour renforcer performance, stabilité, efficacité et rentabilité, afin d’assurer leur compétitivité et leur industrialisation."
       }
     },
     "card2": {
       "title": {
-        "en": "Advanced Compliance",
-        "fr": "Conformité avancée"
+        "en": "Analytical Method Development (Physico-Chemical & Chemistry)",
+        "fr": "Développement de méthodes analytiques (physico-chimiques et chimiques)"
       },
       "content": {
-        "en": "Moving beyond the basics, our intermediate and advanced sessions focus on Good Manufacturing Practices (GMP), documentation standards, and regulatory compliance. These training modules help participants understand inspection readiness, data integrity, and how to adapt processes to meet evolving health authority requirements both locally and globally.",
-        "fr": "Au-delà des bases, nos sessions intermédiaires et avancées portent sur les Bonnes Pratiques de Fabrication (BPF), les normes de documentation et la conformité réglementaire. Ces modules aident les participants à comprendre la préparation aux inspections, l’intégrité des données et l’adaptation des processus aux exigences changeantes des autorités sanitaires, localement et mondialement."
+        "en": "Our scientists develop analytical methods to characterize products and support quality control throughout development.",
+        "fr": "Nos scientifiques développent des méthodes analytiques pour caractériser vos produits et soutenir le contrôle qualité tout au long du développement."
       }
     },
     "card3": {
       "title": {
-        "en": "Customization & Delivery",
-        "fr": "Personnalisation et diffusion"
+        "en": "Stability Studies",
+        "fr": "Études de stabilité"
       },
       "content": {
-        "en": "We offer flexible delivery models — online, hybrid, or in-person — tailored to your team's schedule. Our custom training is designed in partnership with clients and academic institutions, ensuring interns and professionals alike are equipped to solve real-world challenges. Every program emphasizes operational excellence, innovation, and continuous improvement in technical performance.",
-        "fr": "Nous proposons des modèles de formation flexibles — en ligne, hybrides ou en présentiel — adaptés à l’horaire de votre équipe. Nos formations sur mesure sont conçues en partenariat avec les clients et les institutions académiques, garantissant que stagiaires et professionnels sont prêts à relever les défis concrets. Chaque programme met l’accent sur l’excellence opérationnelle, l’innovation et l’amélioration continue des performances techniques."
+        "en": "We conduct stability studies under client’s appropriate requirements to determine product shelf life, storage conditions, and formulation robustness.",
+        "fr": "Nous réalisons des études de stabilité pour définir durée de conservation, conditions de stockage et robustesse des formulations."
+      }
+    },
+    "card4": {
+      "title": {
+        "en": "Extraction and Purification Steps",
+        "fr": "Étapes d’extraction et de purification"
+      },
+      "content": {
+        "en": "We design and optimize extraction and purification for high-quality actives, better yield, and batch consistency.",
+        "fr": "Nous optimisons extraction et purification pour garantir qualité, rendement et reproductibilité des ingrédients actifs."
+      }
+    },
+    "card5": {
+      "title": {
+        "en": "Product Line Extension",
+        "fr": "Extension de gamme"
+      },
+      "content": {
+        "en": "We help you adapt formulations to new dosage forms, populations, or markets for strategic, efficient product expansion.",
+        "fr": "Nous vous aidons à élargir votre portefeuille de produits en adaptant les formulations à de nouveaux formats, populations cibles ou segments de marché."
+      }
+    },
+    "card6": {
+      "title": {
+        "en": "Regulatory Compliance",
+        "fr": "Conformité réglementaire"
+      },
+      "content": {
+        "en": "Our experts ensure regulatory compliance (GMP, ICH, FDA, EMA, Health Canada) by supporting documentation and communications. CERASP is a certified Health Canada partner.",
+        "fr": "Nos experts garantissent votre conformité réglementaire (BPF, ICH, Santé Canada, FDA, EMA) en vous accompagnant dans la documentation et les échanges avec les autorités. CERASP est partenaire certifié de Santé Canada."
+      }
+    },
+    "card7": {
+      "title": {
+        "en": "Cost Evaluation",
+        "fr": "Évaluation des coûts"
+      },
+      "content": {
+        "en": "We evaluate costs to help you develop quality products with economic viability.",
+        "fr": "Nous analysons les coûts des matières premières, de production et d’opérations afin de développer des produits viables économiquement, sans compromis sur la qualité."
+      }
+    },
+    "card8": {
+      "title": {
+        "en": "Data Reporting",
+        "fr": "Rapports de données"
+      },
+      "content": {
+        "en": "We deliver clear, compliant data reports from lab results to studies, supporting decision-making and submissions.",
+        "fr": "Nous fournissons des rapports clairs et conformes sur analyses, stabilité et développement pour appuyer vos décisions et soumissions réglementaires."
+      }
+    },
+    "card9": {
+      "title": {
+        "en": "Bioinformatics",
+        "fr": "Bio-informatique"
+      },
+      "content": {
+        "en": "Our Bioinformatics team uses advanced computational tools to support biotech and personalized health product development. We provide genomic, transcriptomic, proteomic, and metabolomic analyses to optimize therapies, accelerate research, and deliver tailored precision medicine solutions. Whether in pharma or healthcare, we offer data-driven expertise for complex research and clinical challenges.",
+        "fr": "Notre équipe de bio-informatique utilise des outils avancés pour enrichir le développement en biotechnologie, diagnostic et santé personnalisée. Nous offrons analyses génomiques, transcriptomiques, protéomiques et métabolomiques, fournissant des insights pour optimiser les thérapies, accélérer la recherche et proposer des solutions sur mesure en médecine de précision. Nos services s’adaptent aux besoins pharmaceutiques et cliniques les plus complexes avec expertise et innovation."
       }
     }
   },
@@ -280,27 +407,27 @@
   },
   "bioinformatics": {
     "title": {
-      "en": "Bioinformatics",
+      "en": "Scale-Up & Manufacturing Readiness",
       "fr": "Bio-informatique"
     },
     "content": {
-      "en": "At the CERASP, we offer cutting-edge Bioinformatics services tailored for both pharmaceutical and healthcare sectors. Our Bioinformatics team specializes in leveraging advanced computational methods and data analysis techniques to support drug discovery, personalized medicine, and biomarker identification.",
+      "en": "Scaling from lab to production demands precision and process expertise. At CERASP, our specialized scale-up services bridge R&D and commercial manufacturing, reducing risk, ensuring compliance, and accelerating time to market.",
       "fr": "Au CERASP, nous offrons des services de bioinformatique de pointe adaptés aux secteurs pharmaceutique et de la santé. Notre équipe de bioinformatique se spécialise dans l'utilisation de méthodes computationnelles avancées et de techniques d'analyse de données pour soutenir la découverte de médicaments, la médecine personnalisée et l'identification de biomarqueurs."
     },
     "fields": {
       "genomicDataAnalysis": {
         "title": {
-          "en": "Genomic data analysis",
+          "en": "Scale-Up to Larger Scale Manufacturing",
           "fr": "Analyse de données génomiques"
         },
         "desc": {
-          "en": "Transcriptomics, proteomics, and metabolomics services.",
+          "en": "Challenge Testing",
           "fr": "Services de transcriptomique, protéomique et métabolomique."
         }
       },
       "comprehensiveDataInsights": {
         "title": {
-          "en": "Comprehensive data insights",
+          "en": "Pilot Batching",
           "fr": "Analyses de données complètes"
         },
         "desc": {
@@ -308,9 +435,59 @@
           "fr": "Pour optimiser les stratégies thérapeutiques."
         }
       },
+      "processOptimization": {
+        "title": {
+          "en": "Technical Support",
+          "fr": "Recherche accélérée"
+        },
+        "desc": {
+          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
+          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+        }
+      },
+      "troubleshooting": {
+        "title": {
+          "en": "Technical Support",
+          "fr": "Recherche accélérée"
+        },
+        "desc": {
+          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
+          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+        }
+      },
+      "dataCollection": {
+        "title": {
+          "en": "Technical Support",
+          "fr": "Recherche accélérée"
+        },
+        "desc": {
+          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
+          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+        }
+      },
+      "gmpEnvironment": {
+        "title": {
+          "en": "Technical Support",
+          "fr": "Recherche accélérée"
+        },
+        "desc": {
+          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
+          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+        }
+      },
       "acceleratedResearch": {
         "title": {
-          "en": "Accelerated research",
+          "en": "Technical Support",
+          "fr": "Recherche accélérée"
+        },
+        "desc": {
+          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
+          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+        }
+      },
+      "acceleratedResearch": {
+        "title": {
+          "en": "Technical Support",
           "fr": "Recherche accélérée"
         },
         "desc": {

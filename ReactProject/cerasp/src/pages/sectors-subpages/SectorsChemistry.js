@@ -40,15 +40,15 @@ const SectorsChemistry = () => {
                 <div className="sectors-chemistry-title">
                   {step.title[language]}
                 </div>
-                <div className="content">
+                {/* <div className="content">
                   <p>{step.description[language]}</p>
-                </div>
+                </div> */}
               </div>
             );
           })}
         </div>
 
-        <div className="bottom-row">
+        {/* <div className="bottom-row">
           <h3>{chemistry.bottomRow[language].title}</h3>
 
           <div className="bottom-sections-grid">
@@ -63,7 +63,7 @@ const SectorsChemistry = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -2,164 +2,164 @@
   "overview": {
     "en": {
       "title": "Our Sectors",
-      "description": "Explore our comprehensive range of strategic initiatives and operational focus areas designed to drive innovation, foster collaboration, and deliver exceptional results across all organizational domains."
+      "description": "At CERASP, we are proud to support a diverse range of industries within the life sciences and healthcare ecosystem. Our deep expertise and commitment to innovation enable us to deliver tailored solutions that meet the unique needs of each sector we serve."
     },
     "fr": {
       "title": "Nos Secteurs",
-      "description": "Découvrez notre gamme complète d’initiatives stratégiques et de domaines d’intervention opérationnels conçus pour stimuler l’innovation, favoriser la collaboration et offrir des résultats exceptionnels dans tous les domaines organisationnels."
+      "description": "Chez CERASP, nous sommes fiers d'accompagner un large éventail d'industries au sein de l'écosystème des sciences de la vie et de la santé. Notre expertise approfondie et notre engagement en faveur de l'innovation nous permettent de proposer des solutions sur mesure qui répondent aux besoins spécifiques de chaque secteur que nous servons."
     }
   },
 
   "preformulation": {
     "title": {
-      "en": "Preformulation",
-      "fr": "Préformulation"
+      "en": "Pharmaceutical",
+      "fr": "Pharmaceutique"
     },
     "content": {
-      "en": "Selection and Configuration of Equipment/Processes Destined to cGMP Environment:",
-      "fr": "Sélection et configuration des équipements/processus destinés à un environnement cGMP : "
+      "en": "We work with pharmaceutical companies to support the development and commercialization of safe and effective medicines. Our services help ensure:",
+      "fr": "Nous collaborons avec les entreprises pharmaceutiques pour soutenir le développement et la commercialisation de médicaments sûrs et efficaces. Nos services contribuent à garantir :"
     },
     "fields": {
       "ingredientSelection": {
         "title": {
-          "en": "Selection of ingredients",
-          "fr": "Sélection des ingrédients"
+          "en": "Regulatory compliance",
+          "fr": "Conformité réglementaire"
         },
         "desc": {
-          "en": "Choosing the right APIs and excipients with attention to quality and safety.",
-          "fr": "Choisir les bons principes actifs et excipients en tenant compte de la qualité et de la sécurité."
+          "en": "Adherence to guidelines, specification and regulations, relevant to the customer and industry.",
+          "fr": "Respect des directives, spécifications et réglementations applicables au client et au secteur."
         }
       },
       "processOptimization": {
         "title": {
-          "en": "Process optimization",
-          "fr": "Optimisation des processus"
+          "en": "Quality assurance",
+          "fr": "Assurance qualité"
         },
         "desc": {
-          "en": "Maximizing production efficiency through strategic equipment choices.",
-          "fr": "Maximiser l'efficacité de la production grâce à des choix d'équipements stratégiques."
+          "en": "That products or processes meet defined standards and customer expectations.",
+          "fr": "Que les produits ou les processus répondent aux normes définies et aux attentes des clients."
         }
       },
       "dataIntegration": {
         "title": {
-          "en": "Data integration",
-          "fr": "Intégration des données"
+          "en": "Operational efficiency",
+          "fr": "Efficacité opérationnelle"
         },
         "desc": {
-          "en": "Guidance for real-time data collection and analysis systems.",
-          "fr": "Orientation pour les systèmes de collecte et d’analyse de données en temps réel."
+          "en": "At every stage of the product development lifecycle.",
+          "fr": "À chaque étape du cycle de développement du produit."
         }
       },
       "rdSupport": {
         "title": {
-          "en": "Support for R&D",
-          "fr": "Soutien à la R&D"
+          "en": "GMP-ready status",
+          "fr": "Statut de conformité aux BPF"
         },
         "desc": {
-          "en": "Helping select optimal equipment for your research and development projects.",
-          "fr": "Aider à choisir les équipements optimaux pour vos projets de recherche et développement."
+          "en": "That the products or processes is prepared to meet Good Manufacturing Practice (GMP) requirements.",
+          "fr": "Les produits ou procédés sont préparés conformément aux exigences des Bonnes Pratiques de Fabrication (BPF)."
         }
       }
     }
   },
   "formulation": {
     "title": {
-      "en": "Formulation",
-      "fr": "Formulation"
+      "en": "Biopharmaceutical",
+      "fr": "Biopharmaceutique"
     },
     "content": {
-      "en": "The process of combining various ingredients to create a final product in a specific form, such as tablets, capsules, liquid, or injectables, for the intended therapeutic effect: ",
-      "fr": "Le processus de combinaison de divers ingrédients pour créer un produit final sous une forme spécifique, telle que des comprimés, des capsules, des liquides ou des injectables, pour l'effet thérapeutique prévu : "
+      "en": "In the fast-evolving biopharmaceutical sector, our team understands the complex science and regulatory requirements that drive this innovative field. We provide specialized expertise to support the development of:",
+      "fr": "Dans un secteur biopharmaceutique en constante évolution, notre équipe maîtrise la complexité scientifique et réglementaire de ce domaine innovant. Nous proposons une expertise spécialisée pour accompagner le développement de :"
     },
     "card1": {
       "title": {
-        "en": "",
-        "fr": ""
+        "en": "Traditional biologics & Biosimilars",
+        "fr": "Produits biologiques traditionnels et biosimilaires"
       },
       "content": {
-        "en": "Development of new products and/or improvement of existing products.",
-        "fr": "Développement de nouveaux produits et/ou amélioration des produits existants."
+        "en": "Complex medicines made from living organisms, like vaccines or monoclonal antibodies",
+        "fr": "Médicaments complexes fabriqués à partir d'organismes vivants, comme les vaccins ou les anticorps monoclonaux"
       }
     },
     "card2": {
       "title": {
-        "en": "",
-        "fr": ""
+        "en": "Advanced therapies",
+        "fr": "Thérapies avancées"
       },
       "content": {
-        "en": "Dosage Forms: Develop appropriate dosage forms, such as tablets, capsules, creams, gels, injectables, etc., tailored to the needs of patients. ",
-        "fr": "Formes posologiques : Développer des formes posologiques appropriées, telles que des comprimés, des capsules, des crèmes, des gels, des injectables, etc., adaptées aux besoins des patients. "
+        "en": "Cutting-edge medical treatments, such as cell and gene therapies, and tissue-engineered products, that aim to treat or cure diseases at the genetic or cellular level (e.g., mRNA, siRNA, and Antisense).",
+        "fr": "Traitements médicaux de pointe, tels que les thérapies cellulaires et géniques, et les produits issus de l'ingénierie tissulaire, visant à traiter ou à guérir des maladies au niveau génétique ou cellulaire (par exemple, ARNm, ARNsi et antisens)."
       }
     },
     "card3": {
       "title": {
-        "en": "",
-        "fr": ""
+        "en": "Specialty biopolymers",
+        "fr": "Biopolymères de spécialité"
       },
       "content": {
-        "en": "Product Optimization/Line Extension: Ensure that the formulation remains stable under different conditions and maintains its effectiveness over time, in compliance with pharmaceutical regulations. ",
-        "fr": "Optimisation du produit/Extension de ligne : S'assurer que la formulation reste stable dans différentes conditions et conserve son efficacité au fil du temps, en conformité avec les réglementations pharmaceutiques."
+        "en": "High-performance, bio-based polymers designed for specific applications, offering unique properties like biodegradability, biocompatibility, or enhanced strength.",
+        "fr": "Polymères biosourcés hautes performances conçus pour des applications spécifiques, offrant des propriétés uniques telles que la biodégradabilité, la biocompatibilité ou une résistance accrue."
       }
     },
     "card4": {
       "title": {
-        "en": "",
-        "fr": ""
+        "en": "Delivery systems",
+        "fr": "Systèmes de livraison"
       },
       "content": {
-        "en": "Regulatory Compliance: Understand and comply with regulatory guidelines for product approval and marketing, ensuring compliance with market requirements.",
-        "fr": "Conformité réglementaire : Comprendre et se conformer aux directives réglementaires pour l'approbation et la commercialisation des produits, en garantissant la conformité avec les exigences du marché."
+        "en": "Technologies used to transport a therapeutic agent to its intended site in the body safely and effectively such as Lipidic nanoparticles, liposomes, etc.",
+        "fr": "Technologies utilisées pour transporter un agent thérapeutique vers sa cible dans l'organisme de manière sûre et efficace, telles que les nanoparticules lipidiques, les liposomes, etc."
       }
     }
   },
   "regulatoryAffairs": {
     "title": {
-      "en": "Regulatory Affairs",
-      "fr": "Affaires réglementaires"
+      "en": "Biotechnology & Biomanufacturing",
+      "fr": "Biotechnologie et biofabrication"
     },
     "content": {
-      "en": "As a Health Canada Partner, we have privileged access when depositing regulatory dossiers, gaining clarity around a regulatory pathway and preparing for or responding to audits and observations. We can guide you on the regulatory process with our in-depth knowledge of Canadian, US and EU policies, and niche experiences to tackle any complex issues associated with new therapies, and support productive interactions with Health Canada, the FDA and the European authorities. While your intellectual property remains fully under your control, we can guide you to patent experts as well as assist your organization in registering IP in Canada.",
-      "fr": "En tant que partenaire de Santé Canada, nous bénéficions d’un accès privilégié pour le dépôt des dossiers réglementaires, l’éclaircissement des voies réglementaires et la préparation ou la réponse aux audits et observations. Nous pouvons vous guider dans le processus réglementaire grâce à notre connaissance approfondie des politiques canadiennes, américaines et européennes, ainsi qu’à notre expertise de niche pour résoudre les problèmes complexes liés aux nouvelles thérapies, et favoriser des interactions productives avec Santé Canada, la FDA et les autorités européennes. Votre propriété intellectuelle restant entièrement sous votre contrôle, nous pouvons vous orienter vers des experts en brevets et vous aider à enregistrer votre PI au Canada."
+      "en": "Biotech innovation is at the heart of modern healthcare. We offer solutions that drive scientific advancement and operational scalability.",
+      "fr": "L'innovation biotechnologique est au cœur des soins de santé modernes. Nous proposons des solutions qui favorisent le progrès scientifique et l'évolutivité opérationnelle."
     },
     "overview": {
       "title": {
-        "en": "Regulatory Overview",
-        "fr": "Vue d’ensemble réglementaire"
+        "en": "We partner with clients in need of",
+        "fr": "Nous travaillons en partenariat avec des clients qui ont besoin de"
       },
       "theMedicine": {
         "title": {
-          "en": "The Medicine",
-          "fr": "Le médicament"
+          "en": "Applied Research",
+          "fr": "Recherche appliquée"
         },
         "cards": {
           "card1": {
             "title": {
-              "en": "Safety, Quality and Efficiency",
-              "fr": "Sécurité, qualité et efficacité"
+              "en": "Applied Research",
+              "fr": "Recherche appliquée"
             },
             "desc": {
-              "en": "Core principles guiding regulatory compliance",
-              "fr": "Principes fondamentaux guidant la conformité réglementaire"
+              "en": "Solving real-world problems by using scientific methods and knowledge",
+              "fr": "Résoudre des problèmes du monde réel en utilisant des méthodes et des connaissances scientifiques"
             }
           },
           "card2": {
             "title": {
-              "en": "Placing on the market",
-              "fr": "Mise sur le marché"
+              "en": "Product Development",
+              "fr": "Développement de produits"
             },
             "desc": {
-              "en": "Market authorization and commercialization",
-              "fr": "Autorisation de mise sur le marché et commercialisation"
+              "en": "Either a new product to market or an improved one to meet customer needs and business goals",
+              "fr": "Lancement d'un nouveau produit ou d'une version améliorée pour répondre aux besoins des clients et aux objectifs commerciaux."
             }
           },
           "card3": {
             "title": {
-              "en": "Development Process",
-              "fr": "Processus de développement"
+              "en": "Larger-scale biomanufacturing capabilities",
+              "fr": "Capacités de biofabrication à plus grande échelle"
             },
             "desc": {
-              "en": "Various drugs and health products",
-              "fr": "Divers médicaments et produits de santé"
+              "en": "Producing high volumes using industrial-scale equipment and processes",
+              "fr": "Produire de grands volumes en utilisant des équipements et des procédés à l'échelle industrielle"
             }
           }
         }
@@ -238,12 +238,12 @@
   },
   "pharma": {
     "title": {
-      "en": "Pharmaceutical",
-      "fr": "Pharmaceutique"
+      "en": "Cosmetics & Cosmeceuticals",
+      "fr": "Cosmétiques et cosméceutiques"
     },
     "content": {
-      "en": "At CERASP, we offer comprehensive support throughout the drug development process, from formulation to commercialization. Our services include formulation development, process development and optimization, regulatory guidance, and GMP-ready compliance. We assist during technological transfers and support. Our expertise helps you navigate complex regulatory requirements and bring innovative pharmaceutical solutions to market efficiently and effectively.",
-      "fr": "Au CERASP, nous offrons un soutien complet tout au long du processus de développement de médicaments, de la formulation à la commercialisation. Nos services incluent le développement de formulations, le développement et l’optimisation des processus, l’orientation réglementaire, ainsi que la conformité prête pour les BPF. Nous apportons notre aide lors des transferts technologiques et du soutien. Notre expertise vous aide à naviguer à travers des exigences réglementaires complexes et à amener des solutions pharmaceutiques innovantes sur le marché de manière efficace et efficiente."
+      "en": "We collaborate with cosmetic and cosmeceutical brands to navigate product safety, quality, and market regulations. Our services help ensure your products are not only effective but also compliant and market-ready.",
+      "fr": "Nous collaborons avec les marques de cosmétiques et de cosméceutiques pour les aider à maîtriser la sécurité, la qualité et les réglementations du marché. Nos services garantissent que vos produits sont non seulement efficaces, mais aussi conformes et prêts à être commercialisés."
     }
   },
   "pilot_scale_production": {
@@ -303,71 +303,71 @@
   },
   "researchSupport": {
     "title": {
-      "en": "Research & Technical Support",
-      "fr": "Soutien en recherche et technique"
+      "en": "Animal Health",
+      "fr": "Santé animale"
     },
     "content": {
-      "en": "Research & Technical Support ensures the safe, efficient, and compliant development of various products from inception to commercialization.",
-      "fr": "Le soutien en recherche et technique minimise les risques et assure un développement sûr, efficace et conforme de produits variés, de l'idée jusqu'à leur commercialisation."
+      "en": "From veterinary pharmaceuticals to nutritional supplements, we assist companies focused on improving animal health and well-being. Our solutions are designed to meet the specific regulatory and quality standards of this important industry.",
+      "fr": "Des produits pharmaceutiques vétérinaires aux compléments alimentaires, nous accompagnons les entreprises soucieuses d'améliorer la santé et le bien-être des animaux. Nos solutions sont conçues pour répondre aux normes réglementaires et de qualité spécifiques à ce secteur crucial."
     },
     "formulation": {
       "title": {
-        "en": "Formulation Development",
-        "fr": "Développement de formulations"
+        "en": "Veterinary Pharmaceuticals",
+        "fr": "Produits pharmaceutiques vétérinaires"
       },
       "content": {
-        "en": "Assisting in creating and improving drug formulations to ensure efficacy, safety, and stability.",
-        "fr": "Aide à la création et à l'amélioration des formulations de médicaments pour assurer leur efficacité, sécurité et stabilité."
+        "en": "Support for the treatment and management of diseases and conditions, including antibiotics and anti-inflammatory drugs.",
+        "fr": "Pour le traitement et la gestion des maladies et affections telles que les antibiotiques et les anti-inflammatoires."
       }
     },
     "processOptimization": {
       "title": {
-        "en": "Process Optimization",
-        "fr": "Optimisation des processus"
+        "en": "Nutritional Supplements",
+        "fr": "Compléments alimentaires"
       },
       "content": {
-        "en": "We optimize manufacturing processes to ensure consistency, scalability and efficiency while minimizing risk and costs.",
-        "fr": "Nous optimisons les processus de fabrication pour garantir la cohérence, la scalabilité et l'efficacité tout en minimisant les risques et les coûts."
+        "en": "To Support health and performance (ex. Vitamins, minerals, probiotics, etc.)..",
+        "fr": "Pour soutenir la santé et la performance (ex. Vitamines, minéraux, probiotiques, etc.)."
       }
     },
     "regulatory": {
       "title": {
-        "en": "Regulatory Guidance",
-        "fr": "Conseils réglementaires"
+        "en": "Advanced Therapies",
+        "fr": "Thérapies avancées"
       },
       "content": {
-        "en": "Ensuring that all products meet the necessary regulatory standards through documentation, audits, and compliance assistance.",
-        "fr": "S'assurer que tous les produits respectent les normes réglementaires nécessaires à travers la documentation, les audits et l'assistance en matière de conformité."
+        "en": "Serve to address complex or chronic conditions like regenerative medicine products.",
+        "fr": "Sert à traiter des maladies complexes ou chroniques comme les produits de médecine régénérative."
       }
     },
     "troubleshooting": {
       "title": {
-        "en": "Troubleshooting & Problem-Solving",
-        "fr": "Résolution de problèmes"
+        "en": "Vaccines",
+        "fr": "Vaccins"
       },
       "content": {
-        "en": "Identifying and resolving technical challenges in both research and production settings to ensure continuous improvement.",
-        "fr": "Identifier et résoudre les défis techniques tant en recherche qu'en production afin d'assurer une amélioration continue."
+        "en": "That prevent infectious diseases such as DNA vaccines.",
+        "fr": "Qui préviennent les maladies infectieuses comme les vaccins à ADN."
       }
     },
     "preclinical": {
       "title": {
-        "en": "Preclinical & Clinical Support",
-        "fr": "Soutien préclinique et clinique"
+        "en": "Biologics",
+        "fr": "Produits biologiques"
       },
       "content": {
-        "en": "Providing research support for the development of new therapies, from laboratory studies to clinical trials.",
-        "fr": "Fournir un soutien à la recherche pour le développement de nouvelles thérapies, des études de laboratoire aux essais cliniques."
+        "en": "Use living organisms or their products to treat or prevent disease (ex. Monoclonal antibodies).",
+        "fr": "Utiliser des organismes vivants ou leurs produits pour traiter ou prévenir des maladies (p. ex. anticorps monoclonaux)."
       }
     },
     "strategic": {
       "title": {
-        "en": "Strategic Decisions",
-        "fr": "Décisions stratégiques"
+        "en": "Topical and Dermatological Products",
+        "fr": "Produits topiques et dermatologiques"
       },
       "content": {
-        "en": "Our expertise supports strategic decisions on whether or not to pursue product development, thanks to robust data and in-depth analysis.",
-        "fr": "Notre expertise soutient les décisions stratégiques concernant la poursuite ou non du développement d'un produit, grâce à des données solides et à une analyse approfondie."
+        "en": "Used to treat skin infections, wounds, or irritations such as medicated shampoos, antimicrobial ointments, sprays, etc.",
+        "fr": "Utilisé pour traiter les infections cutanées, les plaies ou les irritations telles que les shampooings médicamenteux, les onguents antimicrobiens, les sprays, etc."
       }
     }
   },
@@ -425,78 +425,38 @@
   },
   "chemistry": {
     "title": {
-      "en": "Medicinal Chemistry",
-      "fr": "Chimie Médicinale"
+      "en": "Nutraceutical",
+      "fr": "Nutraceutique"
     },
     "steps": [
       {
         "title": {
-          "en": "Cell Culture and Fermentation",
-          "fr": "Culture cellulaire et fermentation"
+          "en": "Our team supports nutraceutical companies in developing functional foods",
+          "fr": "Notre équipe accompagne les entreprises nutraceutiques dans le développement d'aliments fonctionnels"
         },
         "description": {
-          "en": "Formulate, validate and prepare new products after the results of basic research or to find the right molecules.",
-          "fr": "Formuler, valider et préparer de nouveaux produits à partir des résultats de la recherche fondamentale ou pour identifier les bonnes molécules."
+          "en": "",
+          "fr": ""
         }
       },
       {
         "title": {
-          "en": "Upstream Processing",
-          "fr": "Procédés en amont"
+          "en": "We also develop dietary supplements",
+          "fr": "Nous développons également des compléments alimentaires"
         },
         "description": {
-          "en": "Support the development of production processes through new processes, including standard operating procedures.",
-          "fr": "Soutenir le développement des procédés de production par l'intégration de nouveaux procédés, incluant les procédures opérationnelles normalisées."
+          "en": "",
+          "fr": ""
         }
       },
       {
         "title": {
-          "en": "Downstream Processing",
-          "fr": "Procédés en aval"
+          "en": "Our researchers prioritize quality, efficacy, and regulatory compliance",
+          "fr": "Nos chercheurs privilégient la qualité, l'efficacité et la conformité réglementaire"
         },
         "description": {
-          "en": "Transfer and adapt technological innovations for the development of scale-up pilot scale production.",
-          "fr": "Transférer et adapter les innovations technologiques pour le développement à l'échelle pilote."
-        }
-      },
-      {
-        "title": {
-          "en": "Bioprocess Optimization and Scale-up",
-          "fr": "Optimisation et mise à l’échelle des bioprocédés"
-        },
-        "description": {
-          "en": "Select and configure equipment for research and production from an Industry perspective.",
-          "fr": "Sélectionner et configurer l’équipement de recherche et de production selon les exigences industrielles."
-        }
-      },
-      {
-        "title": {
-          "en": "Good Manufacturing Practices (GMP) Compliance",
-          "fr": "Conformité aux Bonnes Pratiques de Fabrication (BPF)"
-        },
-        "description": {
-          "en": "Formulate and develop pilot processes, prototypes and batches.",
-          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
-        }
-      },
-      {
-        "title": {
-          "en": "Bioprocess Monitoring and Automation",
-          "fr": "Surveillance et automatisation des bioprocédés"
-        },
-        "description": {
-          "en": "Formulate and develop pilot processes, prototypes and batches.",
-          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
-        }
-      },
-      {
-        "title": {
-          "en": "Sustainability in Bioproduction",
-          "fr": "Durabilité dans la bioproduction"
-        },
-        "description": {
-          "en": "Formulate and develop pilot processes, prototypes and batches.",
-          "fr": "Formuler et développer des procédés pilotes, des prototypes et des lots."
+          "en": "",
+          "fr": ""
         }
       }
     ],
@@ -635,52 +595,42 @@
   },
   "training": {
     "title": {
-      "en": "Training Program Support ",
-      "fr": "Soutien au programme de formation"
+      "en": "Medical Devices",
+      "fr": "Dispositifs médicaux"
     },
     "content": {
-      "en": "We offer tailored training solutions that build technical skills, support business development, and align with industry standards through customizable competency models.",
-      "fr": "Nous offrons des formations sur mesure pour développer des compétences techniques, soutenir le développement des affaires et répondre aux normes de l'industrie grâce à des modèles de compétences personnalisables."
+      "en": "We help bring medical technologies to market by providing strategic support across the board, ensuring that devices meet both safety standards and patient needs.",
+      "fr": "Nous contribuons à la commercialisation des technologies médicales en fournissant un soutien stratégique à tous les niveaux, garantissant que les dispositifs répondent aux normes de sécurité et aux besoins des patients."
     },
     "fields": {
       "trainingSolutions": {
         "title": {
-          "en": "Skills-Based Learning",
-          "fr": "Apprentissage axé sur les compétences"
+          "en": "Regulatory affairs",
+          "fr": "Affaires réglementaires"
         },
         "desc": {
-          "en": "We use competency models developed via industry standards to ensure learners develop the needed skills, through theory and practice. We can customize any of our trainings to meet your needs and can deliver trainings virtually or face to face on our or your premises.",
-          "fr": "Nous utilisons des modèles de compétences développés selon les normes de l'industrie pour nous assurer que les apprenants développent les compétences nécessaires, à travers la théorie et la pratique. Nous pouvons personnaliser toutes nos formations pour répondre à vos besoins et les dispenser à distance ou en personne, sur nos sites ou les vôtres."
+          "en": "We ensure compliance, managing approvals, and handling documentation and communication with regulatory bodies.",
+          "fr": "Nous assurons la conformité, gérons les approbations, la documentation et la communication avec les organismes de réglementation."
         }
       },
       "competencyLearning": {
         "title": {
-          "en": "Customized Competency Models",
-          "fr": "Modèles de compétences personnalisés"
+          "en": "Quality systems",
+          "fr": "Systèmes de qualité"
         },
         "desc": {
-          "en": "We can develop a competency model guided by industry standards and tailored to your company needs, and designing the needed workforce training, to be delivered by you (via train the trainer) or by us. ",
-          "fr": "Nous pouvons développer un modèle de compétences guidé par les normes de l'industrie et adapté aux besoins de votre entreprise, ainsi que concevoir la formation nécessaire pour votre personnel, à dispenser par vos soins (via la formation de formateurs) ou par nos soins."
+          "en": "Corresponds to consistent product safety and performance through documented processes, controls, and compliance with regulatory standards.",
+          "fr": "Assure une sécurité et des performances constantes des produits grâce à des processus et des contrôles documentés et à la conformité aux normes réglementaires."
         }
       },
       "adaptableTraining": {
         "title": {
-          "en": "Technical Process Training",
-          "fr": "Formation technique sur les processus"
+          "en": "Clinical evaluation",
+          "fr": "Évaluation clinique"
         },
         "desc": {
-          "en": "We can create one-off or repeat technical training and training guides on specific manufacturing processes (including GMP), research activities, equipment usage, writing SOPs and Regulatory. ",
-          "fr": "Nous pouvons créer des formations techniques ponctuelles ou récurrentes ainsi que des guides de formation sur des processus de fabrication spécifiques (y compris les BPF), des activités de recherche, l'utilisation d'équipements, la rédaction de PON et les affaires réglementaires. "
-        }
-      },
-      "empoweringTeams": {
-        "title": {
-          "en": "Business Skills Coaching",
-          "fr": "Coaching en développement des affaires"
-        },
-        "desc": {
-          "en": "We offer training, coaching and mentoring on business development and selling skills using face to face training and web-based business simulations.",
-          "fr": "Nous offrons des formations, du coaching et du mentorat en développement des affaires et en compétences de vente, en utilisant des formations en face à face et des simulations d'affaires en ligne. "
+          "en": "We can help assessing clinical data to confirm the device's safety, performance, and effectiveness.",
+          "fr": "Nous pouvons vous aider à évaluer les données cliniques afin de confirmer la sécurité, les performances et l’efficacité du dispositif."
         }
       }
     }

@@ -60,14 +60,14 @@ const Sectorstraining = () => {
                 {preform.fields.adaptableTraining.desc[language]}
               </p>
             </div>
-            <div className="fieldBox">
+            {/* <div className="fieldBox">
               <h2 className="title">
                 {preform.fields.empoweringTeams.title[language]}
               </h2>
               <p className="desc">
                 {preform.fields.empoweringTeams.desc[language]}
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

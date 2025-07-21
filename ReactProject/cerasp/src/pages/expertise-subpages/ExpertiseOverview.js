@@ -25,7 +25,7 @@ const ExpertiseOverview = () => {
           <p>{overview.content[language]}</p>
         </div>
 
-        <div className="expertise-overview-content">
+        {/* <div className="expertise-overview-content">
           {expertiseCards.map((card, index) => (
             <div key={index} className="expertise-overview-card">
               <div className="stock-image-container">
@@ -46,7 +46,7 @@ const ExpertiseOverview = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

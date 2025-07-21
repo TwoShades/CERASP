@@ -24,53 +24,50 @@
       "sub-pages": [
         { "id": "overview", "en": "Overview", "fr": "Aperçu" },
         {
-          "id": "preformulation",
-          "en": "Preformulation",
-          "fr": "Préformulation"
-        },
-        { "id": "formulation", "en": "Formulation", "fr": "Formulation" },
-        {
-          "id": "research-&-tech-support",
-          "en": "Research & Tech Support",
-          "fr": "Soutien technique & recherche"
-        },
-        {
-          "id": "ref-aff-activities",
-          "en": "Regulatory Affairs",
-          "fr": "Affaires Réglementaires"
-        },
-        { "id": "prototyping", "en": "Prototyping", "fr": "Prototypage" },
-        {
           "id": "pharmaceutical",
           "en": "Pharmaceutical",
           "fr": "Pharmaceutique"
         },
         {
-          "id": "chemistry-&-extraction",
-          "en": "Chemistry & Extraction",
-          "fr": "Chimie et extraction"
+          "id": "biopharmaceutical",
+          "en": "Biopharmaceutical",
+          "fr": "Biopharmaceutique"
         },
         {
-          "id": "r&d-scale-up",
-          "en": "R&D Scale-Up",
-          "fr": "Montée à l’échelle R&D"
+          "id": "animal-health",
+          "en": "Animal Health",
+          "fr": "Santé animale"
         },
         {
-          "id": "protein-synthesis",
-          "en": "Protein Synthesis",
-          "fr": "Synthèse de protéines"
+          "id": "biotechnology-biomanufacturing ",
+          "en": "Biotechnology & Biomanufacturing ",
+          "fr": "Biotechnologie et biofabrication"
         },
         {
-          "id": "feasibility-&-tech-trans",
-          "en": "Feasibility & Tech Transfer",
-          "fr": "Faisabilité et transfert technologique"
+          "id": "natural-health-products",
+          "en": "Natural Health Products",
+          "fr": "Produits de santé naturels"
         },
         {
-          "id": "training-program",
-          "en": "Training Program",
-          "fr": "Programme de formation"
+          "id": "cosmetics-cosmeceuticals",
+          "en": "Cosmetics & Cosmeceuticals",
+          "fr": "Cosmétiques et cosméceutiques"
         },
-        { "id": "support", "en": "Support", "fr": "Support" },
+        {
+          "id": "nutraceutical",
+          "en": "Nutraceutical",
+          "fr": "Nutraceutique"
+        },
+        {
+          "id": "medical-devices",
+          "en": "Medical Devices",
+          "fr": "Dispositifs médicaux"
+        },
+        {
+          "id": "diagnostic-tools",
+          "en": "Diagnostic Tools",
+          "fr": "Outils de diagnostic"
+        },
         { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },

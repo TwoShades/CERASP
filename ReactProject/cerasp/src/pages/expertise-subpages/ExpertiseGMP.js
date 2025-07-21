@@ -13,7 +13,16 @@ const ExpertiseGMP = () => {
   return (
     <div className="expertise-gmp">
       <div className="expertise-gmp-content">
-        <SubPageHeader name={gmp.title[language]} />
+        <SubPageHeader
+          name={gmp.title[language]}
+          extraContent={
+            <div className="about-overview-header-text">
+              <p>{gmp.sub1[language]}</p>
+              <p>{gmp.sub2[language]}</p>
+              <p>{gmp.sub3[language]}</p>
+            </div>
+          }
+        />
         {/* Hero Section with Image */}
         <div className="gmp-hero-section">
           <div className="gmp-hero-image">
@@ -31,45 +40,38 @@ const ExpertiseGMP = () => {
           {/* Overview Card */}
           <div className="gmp-card overview-card">
             <div className="card-header">
-              <div className="card-icon">🏢</div>
+              <div className="card-icon"></div>
             </div>
             <div className="card-content">
               {overview.map((point, idx) => (
                 <div key={`overview-${idx}`} className="bullet-point">
-                  • {point}
+                  {point}
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Capabilities Card */}
-          <div className="gmp-card capabilities-card">
+          <div className="gmp-card overview-card">
             <div className="card-header">
-              <div className="card-icon">🧬</div>
+              <div className="card-icon"></div>
             </div>
             <div className="card-content">
-              <div className="bullet-point">
-                • {language === "fr" ? "Capacités :" : "Capabilities include:"}
-              </div>
-              <div className="sub-bullet-points">
-                {capabilities.map((item, idx) => (
-                  <div key={`capability-${idx}`} className="sub-bullet">
-                    o {item}
-                  </div>
-                ))}
-              </div>
+              {capabilities.map((point, idx) => (
+                <div key={`capability-${idx}`} className="bullet-point">
+                  {point}
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Collaboration Card */}
-          <div className="gmp-card collaboration-card">
+          <div className="gmp-card overview-card">
             <div className="card-header">
-              <div className="card-icon">🤝</div>
+              <div className="card-icon"></div>
             </div>
             <div className="card-content">
-              {collaboration.map((item, idx) => (
+              {collaboration.map((point, idx) => (
                 <div key={`collab-${idx}`} className="bullet-point">
-                  • {item}
+                  {point}
                 </div>
               ))}
             </div>
