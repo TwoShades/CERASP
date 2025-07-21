@@ -73,8 +73,8 @@
     },
     "card1": {
       "title": {
-        "en": "Foundation & Skills",
-        "fr": "Fondations et compétences"
+        "en": "",
+        "fr": ""
       },
       "content": {
         "en": "Development of new products and/or improvement of existing products.",
@@ -83,8 +83,8 @@
     },
     "card2": {
       "title": {
-        "en": "Advanced Compliance",
-        "fr": "Conformité avancée"
+        "en": "",
+        "fr": ""
       },
       "content": {
         "en": "Dosage Forms: Develop appropriate dosage forms, such as tablets, capsules, creams, gels, injectables, etc., tailored to the needs of patients. ",
@@ -93,8 +93,8 @@
     },
     "card3": {
       "title": {
-        "en": "Customization & Delivery",
-        "fr": "Personnalisation et diffusion"
+        "en": "",
+        "fr": ""
       },
       "content": {
         "en": "Product Optimization/Line Extension: Ensure that the formulation remains stable under different conditions and maintains its effectiveness over time, in compliance with pharmaceutical regulations. ",
@@ -103,8 +103,8 @@
     },
     "card4": {
       "title": {
-        "en": "Customization & Delivery",
-        "fr": "Personnalisation et diffusion"
+        "en": "",
+        "fr": ""
       },
       "content": {
         "en": "Regulatory Compliance: Understand and comply with regulatory guidelines for product approval and marketing, ensuring compliance with market requirements.",

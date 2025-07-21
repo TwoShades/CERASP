@@ -9,7 +9,7 @@ const LandingAboutUs = () => {
 
   const stats = [
     {
-      number: "5+",
+      number: "80+",
       label: t.stats[0].label,
       icon: "🚀",
     },

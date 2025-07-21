@@ -40,7 +40,7 @@
         ],
         "stats": [
           {
-            "label": "Years Experience"
+            "label": "Years of Industry Experience"
           },
           {
             "label": "Sites"
@@ -89,7 +89,7 @@
         ],
         "stats": [
           {
-            "label": "Années d'expérience"
+            "label": "Années d'expérience dans l'industrie"
           },
           {
             "label": "Sites"
@@ -123,7 +123,7 @@
   },
   "overview": {
     "en": {
-      "title": "Areas of Activities",
+      "title": "Our Sectors",
       "subtitle": "Comprehensive pharmaceutical and biotechnology solutions from concept to commercialization",
       "sections": [
         {
@@ -185,12 +185,12 @@
         "title": "Why Choose CERASP?",
         "items": [
           {
-            "title": "Health Canada Partner",
+            "title": "Authorized Health Canada Partner",
             "description": "Taking your idea from concept to GMP-ready, one R&D project at a time"
           },
           {
             "title": "Comprehensive Expertise",
-            "description": "From R&D to commercial production with GMP compliance"
+            "description": "From R&D to Prototype Formulation, Pilot-Scale to Tech Transfer for commercial production within GMP compliance"
           },
           {
             "title": "Global Reach",
@@ -204,7 +204,7 @@
       }
     },
     "fr": {
-      "title": "Domaines d'activité",
+      "title": "Nos Secteurs",
       "subtitle": "Solutions pharmaceutiques et biotechnologiques complètes, du concept à la commercialisation",
       "sections": [
         {
@@ -266,12 +266,12 @@
         "title": "Pourquoi choisir CERASP ?",
         "items": [
           {
-            "title": "Partenaire de Santé Canada",
+            "title": "Partenaire autorisé de Santé Canada",
             "description": "Du concept à la conformité BPF, étape par étape"
           },
           {
             "title": "Expertise complète",
-            "description": "De la R&D à la production commerciale avec conformité BPF"
+            "description": "De la R&D à la formulation de prototypes, de l'échelle pilote au transfert de technologie pour la production commerciale dans le respect des BPF"
           },
           {
             "title": "Portée mondiale",
@@ -300,7 +300,7 @@
           "subtitle": "Innovative protein synthesis solutions"
         },
         {
-          "title": "Chemical Extraction Process",
+          "title": "Extraction & Purification Process",
           "subtitle": "Sustainable extraction methodologies"
         },
         {
@@ -331,7 +331,7 @@
           "subtitle": "Solutions innovantes pour la synthèse de protéines"
         },
         {
-          "title": "Processus d'extraction chimique",
+          "title": "Processus d'extraction et de purification",
           "subtitle": "Méthodologies d'extraction durables"
         },
         {
