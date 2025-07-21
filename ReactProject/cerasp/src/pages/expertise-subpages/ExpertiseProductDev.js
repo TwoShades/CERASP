@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
-import './css/SectorsFormulation.css';
+import React, { useState, useEffect, useContext } from "react";
+import "./css/ExpertiseTraining.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import sectorsTranslations from "./sectors-translation.json";
+import expertiseTranslations from "./expertise-translations.json";
 
-const SectorsFormulation = () => {
+const ExpertiseProductDev = () => {
   const { language } = useContext(LanguageContext);
-  const formulation = sectorsTranslations.formulation;
+  const productDev = expertiseTranslations.productDev;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -14,60 +14,48 @@ const SectorsFormulation = () => {
   }, []);
 
   return (
-    <div className="formulation-container">
+    <div className="training-container">
       {/* Subtle background elements */}
       <div className="background-accent"></div>
-      
-      <div className="formulation-content">
+
+      <div className="training-content">
         {/* Header */}
-        <div className={`formulation-header ${isVisible ? 'visible' : ''}`}>
-          <h2 className="formulation-title">
-            {formulation.title[language]}
-          </h2>
+        <div className={`training-header ${isVisible ? "visible" : ""}`}>
+          <h2 className="training-title">{productDev.title[language]}</h2>
           <div className="title-accent"></div>
         </div>
 
         {/* Main content card */}
-        <div className={`formulation-card ${isVisible ? 'visible' : ''}`}>
+        <div className={`training-card ${isVisible ? "visible" : ""}`}>
           <div className="card-inner">
             <div className="content-section">
               <div className="icon-container">
-                <div className="formulation-icon">🧪</div>
+                <div className="training-icon">🎓</div>
               </div>
-              <p className="formulation-description">
-                {formulation.content[language]}
+              <p className="training-description">
+                {productDev.content[language]}
               </p>
             </div>
-            
+
             <div className="decorative-section">
               <div className="accent-line"></div>
               <div className="feature-highlights">
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    <p>{formulation.card1.title[language]}</p>
-                    <p>{formulation.card1.content[language]}</p>
+                    {language === "en" ? "GMP Practices" : "Pratiques BPF"}
                   </span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    <p>{formulation.card2.title[language]}</p>
-                    <p>{formulation.card2.content[language]}</p>
+                    {language === "en" ? "Bioprocessing" : "Bioprocédés"}
                   </span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    <p>{formulation.card3.title[language]}</p>
-                    <p>{formulation.card3.content[language]}</p>
-                  </span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span className="highlight-text">
-                    <p>{formulation.card4.title[language]}</p>
-                    <p>{formulation.card4.content[language]}</p>
+                    {language === "en" ? "Quality Control" : "Contrôle Qualité"}
                   </span>
                 </div>
               </div>
@@ -79,4 +67,4 @@ const SectorsFormulation = () => {
   );
 };
 
-export default SectorsFormulation;
+export default ExpertiseProductDev;

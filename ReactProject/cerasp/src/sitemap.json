@@ -39,7 +39,7 @@
           "fr": "Santé animale"
         },
         {
-          "id": "biotechnology-biomanufacturing ",
+          "id": "bioTechBioMan",
           "en": "Biotechnology & Biomanufacturing ",
           "fr": "Biotechnologie et biofabrication"
         },
@@ -49,7 +49,7 @@
           "fr": "Produits de santé naturels"
         },
         {
-          "id": "cosmetics-cosmeceuticals",
+          "id": "cosmeceuticals",
           "en": "Cosmetics & Cosmeceuticals",
           "fr": "Cosmétiques et cosméceutiques"
         },
@@ -59,7 +59,7 @@
           "fr": "Nutraceutique"
         },
         {
-          "id": "medical-devices",
+          "id": "medicalDevices",
           "en": "Medical Devices",
           "fr": "Dispositifs médicaux"
         },

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import sectorsTranslations from "./sectors-translation.json";
-import "./css/SectorsRnTech.css";
+import "./css/SectorsAnimalHealth.css";
 
-const SectorsRnTech = () => {
+const SectorsAnimalHealth = () => {
   const { language } = useContext(LanguageContext);
-  const translation = sectorsTranslations.researchSupport;
+  const translation = sectorsTranslations.animalHealth;
 
   const content = {
     title: translation.title[language],
@@ -15,33 +15,33 @@ const SectorsRnTech = () => {
   const services = [
     {
       icon: "🧪",
-      title: translation.formulation.title[language],
-      description: translation.formulation.content[language],
+      title: translation.vetPharma.title[language],
+      description: translation.vetPharma.content[language],
     },
     {
       icon: "⚙️",
-      title: translation.processOptimization.title[language],
-      description: translation.processOptimization.content[language],
+      title: translation.supplements.title[language],
+      description: translation.supplements.content[language],
     },
     {
       icon: "📋",
-      title: translation.regulatory.title[language],
-      description: translation.regulatory.content[language],
+      title: translation.therapies.title[language],
+      description: translation.therapies.content[language],
     },
     {
       icon: "🔧",
-      title: translation.troubleshooting.title[language],
-      description: translation.troubleshooting.content[language],
+      title: translation.vaccines.title[language],
+      description: translation.vaccines.content[language],
     },
     {
       icon: "🔬",
-      title: translation.preclinical.title[language],
-      description: translation.preclinical.content[language],
+      title: translation.biologics.title[language],
+      description: translation.biologics.content[language],
     },
     {
       icon: "📊",
-      title: translation.strategic.title[language],
-      description: translation.strategic.content[language],
+      title: translation.topAndDerma.title[language],
+      description: translation.topAndDerma.content[language],
     },
   ];
 
@@ -67,4 +67,4 @@ const SectorsRnTech = () => {
   );
 };
 
-export default SectorsRnTech;
+export default SectorsAnimalHealth;

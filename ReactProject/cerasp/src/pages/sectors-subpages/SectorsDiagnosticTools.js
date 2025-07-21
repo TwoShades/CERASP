@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "./css/SectorsSupport.css";
+import "./css/SectorsDiagnosticTools.css";
 import { MessagesSquare } from "lucide-react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 // import sectorsTranslations from "./sectors-translations.json";
 
-const SectorsSupport = () => {
+const SectorsDiagnosticTools = () => {
   const { language } = useContext(LanguageContext);
   //   const support = sectorsTranslations.support;
 
@@ -39,4 +39,4 @@ const SectorsSupport = () => {
   );
 };
 
-export default SectorsSupport;
+export default SectorsDiagnosticTools;
