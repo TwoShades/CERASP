@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import "./css/ExpertiseTraining.css";
+import "./css/ExpertiseProductDev.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 

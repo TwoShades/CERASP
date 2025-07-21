@@ -44,7 +44,7 @@
       }
     ]
   },
-  "gmp_biomanufacturing": {
+  "ideation": {
     "title": {
       "en": "Ideation: From Concept to Strategy",
       "fr": "De l’idée à la stratégie"
@@ -122,7 +122,7 @@
       "fr": "Notre installation est équipée pour préparer diverses formulations, y compris la microencapsulation, les émulsions et les liposomes. Nous aidons à la transition de la production en laboratoire à l’échelle pilote, fournissant à nos clients des prototypes de haute qualité pour les tests de marché et l’approbation réglementaire."
     }
   },
-  "applied_research": {
+  "proofConcept": {
     "title": {
       "en": "Proof of Concept",
       "fr": "Preuve de concept"

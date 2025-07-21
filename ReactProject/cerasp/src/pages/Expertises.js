@@ -4,10 +4,10 @@ import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 
 import ExpertiseOverview from "../pages/expertise-subpages/ExpertiseOverview.js";
-import ExpertiseGMP from "./expertise-subpages/ExpertiseGMP.js";
+import ExpertiseIdeation from "./expertise-subpages/ExpertiseIdeation.js";
 import ExpertiseFormulation from "./expertise-subpages/ExpertiseFormulation.js";
 import ExpertiseAnimal from "./expertise-subpages/ExpertiseAnimal.js";
-import ExpertiseApplied from "./expertise-subpages/ExpertiseApplied.js";
+import ExpertiseProofConcept from "./expertise-subpages/ExpertiseProofConcept.js";
 import ExpertiseBioinformatics from "./expertise-subpages/ExpertiseBioinformatics.js";
 import ExpertiseTroubleshooting from "./expertise-subpages/ExpertiseTroubleshooting.js";
 import ExpertiseHealthCanada from "./expertise-subpages/ExpertiseHealthCanada.js";
@@ -31,8 +31,8 @@ const Expertises = () => {
 
       {/* ===GMP EXPERTISE=== */}
 
-      <div id="gmp-expertise-&-biomanufacturing">
-        <ExpertiseGMP />
+      <div id="ideation">
+        <ExpertiseIdeation />
       </div>
 
       {/* =FORMULATIONS OF PHARMACEUTICALS= */}
@@ -47,10 +47,10 @@ const Expertises = () => {
         <ExpertiseAnimal />
       </div> */}
 
-      {/* ===Applied Research==== */}
+      {/* ===proofConcept==== */}
 
-      <div id="applied-research">
-        <ExpertiseApplied />
+      <div id="proofConcept">
+        <ExpertiseProofConcept />
       </div>
 
       {/* =====Troubleshooting===== */}

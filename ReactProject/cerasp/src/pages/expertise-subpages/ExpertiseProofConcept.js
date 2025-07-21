@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./css/ExpertiseApplied.css";
+import "./css/ExpertiseProofConcept.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
@@ -11,39 +11,39 @@ import {
   Cog,
 } from "lucide-react";
 
-const ExpertiseApplied = () => {
+const ExpertiseProofConcept = () => {
   const { language } = useContext(LanguageContext);
-  const applied = expertiseTranslations.applied_research;
+  const proofConcept = expertiseTranslations.proofConcept;
 
   const steps = [
     {
       icon: FlaskConical,
-      title: applied.steps.formulate.title[language],
-      description: applied.steps.formulate.description[language],
+      title: proofConcept.steps.formulate.title[language],
+      description: proofConcept.steps.formulate.description[language],
       className: "step1",
     },
     {
       icon: Headphones,
-      title: applied.steps.support.title[language],
-      description: applied.steps.support.description[language],
+      title: proofConcept.steps.support.title[language],
+      description: proofConcept.steps.support.description[language],
       className: "step2",
     },
     {
       icon: ArrowRightLeft,
-      title: applied.steps.transfer.title[language],
-      description: applied.steps.transfer.description[language],
+      title: proofConcept.steps.transfer.title[language],
+      description: proofConcept.steps.transfer.description[language],
       className: "step3",
     },
     {
       icon: Settings,
-      title: applied.steps.select.title[language],
-      description: applied.steps.select.description[language],
+      title: proofConcept.steps.select.title[language],
+      description: proofConcept.steps.select.description[language],
       className: "step4",
     },
     {
       icon: Cog,
-      title: applied.steps.develop.title[language],
-      description: applied.steps.develop.description[language],
+      title: proofConcept.steps.develop.title[language],
+      description: proofConcept.steps.develop.description[language],
       className: "step5",
     },
   ];
@@ -53,10 +53,10 @@ const ExpertiseApplied = () => {
       <div className="five-steps-grid-layout">
         <div className="top-row">
           <SubPageHeader
-            name={applied.title[language].toUpperCase()}
+            name={proofConcept.title[language].toUpperCase()}
             extraContent={
               <div className="about-overview-header-text">
-                <p>{applied.content[language]}</p>
+                <p>{proofConcept.content[language]}</p>
               </div>
             }
           />
@@ -75,11 +75,11 @@ const ExpertiseApplied = () => {
         </div>
 
         <div className="bottom-row">
-          <p>{applied.bottom_text[language]}</p>
+          <p>{proofConcept.bottom_text[language]}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default ExpertiseApplied;
+export default ExpertiseProofConcept;
