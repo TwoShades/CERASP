@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import overviewTranslations from "./landing-translations.json"; // or landing-translations.json
 
-const OverviewPanel = () => {
+const LandingSectors = () => {
   const { language } = useContext(LanguageContext);
   const t =
     overviewTranslations["overview"][language] ||
@@ -93,7 +93,6 @@ const styles = {
     boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
     border: "1px solid #e8e8e8",
     transition: "transform 0.3s ease, box-shadow 0.3s ease",
-    cursor: "pointer",
   },
   iconContainer: {
     marginBottom: "20px",
@@ -167,4 +166,4 @@ if (typeof document !== "undefined") {
   document.head.appendChild(styleElement);
 }
 
-export default OverviewPanel;
+export default LandingSectors;

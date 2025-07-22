@@ -124,60 +124,47 @@
   "overview": {
     "en": {
       "title": "Our Sectors",
-      "subtitle": "Comprehensive pharmaceutical and biotechnology solutions from concept to commercialization",
+      "subtitle": "A solution for every development stage",
       "sections": [
         {
-          "title": "Preformulation & Formulation",
-          "description": "Selection and configuration of equipment/processes for cGMP environments, ingredient selection, and development of dosage forms tailored to patient needs.",
+          "title": "Ideation",
+          "description": "Integrates scientific rigor, market insight, and regulatory awareness to lay the foundation for successful product innovation.",
           "highlights": [
-            "API & Excipient Selection",
-            "Process Optimization",
-            "Dosage Form Development"
+            "Design and Sketch",
+            "Feasibility Studies",
+            "Applied Research"
           ]
         },
         {
-          "title": "Research & Technical Support",
-          "description": "Comprehensive support ensuring safe, efficient, and compliant development from inception to commercialization.",
+          "title": "Proof of Concept",
+          "description": " Turning promising concepts into scalable, validated prototypes—laying the groundwork for future success while minimizing uncertainty and resource waste.",
+          "highlights": ["Formulation", "Prototyping", "Ingredient Selection"]
+        },
+        {
+          "title": "Product Development",
+          "description": " End-to-end process of transforming a concept into a market-ready solution.",
           "highlights": [
-            "Formulation Development",
-            "Process Optimization",
-            "Regulatory Guidance"
+            "Product Optimization",
+            "Regulatory Compliance",
+            "Bioinformatics"
           ]
         },
         {
-          "title": "Regulatory Affairs",
-          "description": "Health Canada Partner with privileged access for regulatory dossiers, guidance on Canadian, US and EU policies.",
+          "title": "Scale-up & Manufacturing Readiness ",
+          "description": " Derisking the transition from laboratory-scale to pilot to manufacturing, confirming production processes, and accelerating the path to market with confidence and consistency.",
           "highlights": [
-            "Market Authorization",
-            "Compliance Assistance",
-            "IP Registration Support"
+            "Scale-up",
+            "Technical Support",
+            "GMP-like Environment"
           ]
         },
         {
-          "title": "Pharmaceutical Development",
-          "description": "Comprehensive support throughout drug development process, from formulation to commercialization with GMP compliance.",
+          "title": "Technology Transfer & Regulatory Readiness",
+          "description": "Transfer from the development team to manufacturing, client and regulatory teams—ensuring that the product is ready for compliant, large-scale production.",
           "highlights": [
-            "Drug Formulation",
-            "Technology Transfer",
-            "Scale-up Support"
-          ]
-        },
-        {
-          "title": "Biomanufacturing",
-          "description": "Protein synthesis, cell culture, fermentation, and production of traditional biologics and advanced therapies.",
-          "highlights": [
-            "Protein Production",
-            "mRNA Vaccines",
-            "Gene Therapies"
-          ]
-        },
-        {
-          "title": "Feasibility & Technical Transfer",
-          "description": "Comprehensive feasibility studies, pilot trials, and technology transfer services for improved outcomes and compliance.",
-          "highlights": [
-            "Pilot Studies",
-            "Process Transfer",
-            "Digital Integration"
+            "Certified Health Canada Partner",
+            "R&D Support",
+            "Regulatory Affairs Activities"
           ]
         }
       ],
@@ -193,8 +180,8 @@
             "description": "From R&D to Prototype Formulation, Pilot-Scale to Tech Transfer for commercial production within GMP compliance"
           },
           {
-            "title": "Global Reach",
-            "description": "Experience with Canadian, US, and EU regulatory frameworks"
+            "title": "International Reach",
+            "description": "Proven knowledge and expertise in Canadian, U.S., and EU regulatory frameworks"
           },
           {
             "title": "Derisking Approach",
@@ -205,60 +192,47 @@
     },
     "fr": {
       "title": "Nos Secteurs",
-      "subtitle": "Solutions pharmaceutiques et biotechnologiques complètes, du concept à la commercialisation",
+      "subtitle": "Une solution à chaque étape de développement",
       "sections": [
         {
-          "title": "Préformulation et formulation",
-          "description": "Sélection et configuration des équipements/processus pour les environnements BPF, choix des ingrédients et développement de formes posologiques adaptées aux besoins des patients.",
+          "title": "Idéation",
+          "description": "Intègre rigueur scientifique, connaissance du marché et veille réglementaire afin de poser les bases de la réussite dans l’innovation de produit.",
           "highlights": [
-            "Sélection des API et excipients",
-            "Optimisation des processus",
-            "Développement de formes posologiques"
+            "Conception",
+            "Études de faisabilité",
+            "Recherche appliquée"
           ]
         },
         {
-          "title": "Recherche et soutien technique",
-          "description": "Soutien complet pour garantir un développement sûr, efficace et conforme de l'idée à la commercialisation.",
+          "title": "Preuve de concept",
+          "description": "Transformer des concepts prometteurs en prototypes validés et évolutifs, permettant un succès futur tout en minimisant incertitudes et pertes.",
+          "highlights": ["Formulation", "Prototypage", "Choix des ingrédients"]
+        },
+        {
+          "title": "Développement de produit",
+          "description": "Processus complet de transformation d’un concept en solution prête à commercialiser.",
           "highlights": [
-            "Développement de formulation",
-            "Optimisation des processus",
-            "Conseils réglementaires"
+            "Optimisation de produit",
+            "Conformité réglementaire",
+            "Bioinformatique"
           ]
         },
         {
-          "title": "Affaires réglementaires",
-          "description": "Partenaire de Santé Canada avec un accès privilégié aux dossiers réglementaires et conseils sur les politiques canadiennes, américaines et européennes.",
+          "title": "Mise à l’échelle et préparation à la production",
+          "description": "Réduction des risques lors de la transition du laboratoire à la production pilote puis industrielle, confirmation des procédés de fabrication et accélération de la mise en marché avec assurance et contrôle.",
           "highlights": [
-            "Autorisation de mise en marché",
-            "Assistance à la conformité",
-            "Soutien à l'enregistrement de la PI"
+            "’Mise à l’échelle",
+            "Support technique",
+            "Environnement semblable aux BPF"
           ]
         },
         {
-          "title": "Développement pharmaceutique",
-          "description": "Soutien complet tout au long du processus de développement du médicament, de la formulation à la commercialisation avec conformité BPF.",
+          "title": "Transfert technologique et préparation à la conformité réglementaire",
+          "description": "Transfert de l’équipe de développement vers les équipes de production, du client et des affaires réglementaires — assurant que le produit est prêt pour une fabrication à grande échelle et conforme aux exigences.",
           "highlights": [
-            "Formulation de médicaments",
-            "Transfert de technologie",
-            "Soutien au changement d’échelle"
-          ]
-        },
-        {
-          "title": "Bioproduction",
-          "description": "Synthèse de protéines, culture cellulaire, fermentation et production de biologiques traditionnels et de thérapies avancées.",
-          "highlights": [
-            "Production de protéines",
-            "Vaccins à ARNm",
-            "Thérapies géniques"
-          ]
-        },
-        {
-          "title": "Faisabilité et transfert technique",
-          "description": "Études de faisabilité, essais pilotes et services de transfert technologique pour de meilleurs résultats et une conformité accrue.",
-          "highlights": [
-            "Études pilotes",
-            "Transfert de processus",
-            "Intégration numérique"
+            "Partenaire certifié de Santé Canada",
+            "Support R&D",
+            "Activités en affaires règlementaires"
           ]
         }
       ],
@@ -274,8 +248,8 @@
             "description": "De la R&D à la formulation de prototypes, de l'échelle pilote au transfert de technologie pour la production commerciale dans le respect des BPF"
           },
           {
-            "title": "Portée mondiale",
-            "description": "Expérience des cadres réglementaires canadiens, américains et européens"
+            "title": "Portée internationale",
+            "description": "Expertise et connaissance éprouvées des cadres réglementaires canadien, américain et européen’"
           },
           {
             "title": "Réduction des Risques",
@@ -292,28 +266,19 @@
       "cta": "View All Projects",
       "list": [
         {
-          "title": "Advanced Pharmaceutical Formulation",
-          "subtitle": "Next-generation drug delivery systems"
+          "title": "Nanoparticle-Based Drug Delivery"
         },
         {
-          "title": "Biotech Research Initiative",
-          "subtitle": "Innovative protein synthesis solutions"
+          "title": "Active Pharmaceutical Ingredient Manufacturing"
         },
         {
-          "title": "Extraction & Purification Process",
-          "subtitle": "Sustainable extraction methodologies"
+          "title": "Advanced Wound Healing"
         },
         {
-          "title": "Regulatory Compliance Framework",
-          "subtitle": "Comprehensive compliance solutions"
+          "title": "Technical Support"
         },
         {
-          "title": "R&D Scale-Up Project",
-          "subtitle": "Laboratory to production transition"
-        },
-        {
-          "title": "Training & Development Program",
-          "subtitle": "Industry-leading educational initiatives"
+          "title": "Theranostic Nanoparticles"
         }
       ]
     },
@@ -323,28 +288,19 @@
       "cta": "Voir tous les projets",
       "list": [
         {
-          "title": "Formulation pharmaceutique avancée",
-          "subtitle": "Systèmes de délivrance de médicaments de nouvelle génération"
+          "title": "Fabrication d'ingrédients pharmaceutiques actifs"
         },
         {
-          "title": "Initiative de recherche en biotechnologie",
-          "subtitle": "Solutions innovantes pour la synthèse de protéines"
+          "title": "Cicatrisation avancée des plaies"
         },
         {
-          "title": "Processus d'extraction et de purification",
-          "subtitle": "Méthodologies d'extraction durables"
+          "title": "Nanoparticules théranostiques"
         },
         {
-          "title": "Cadre de conformité réglementaire",
-          "subtitle": "Solutions de conformité complètes"
+          "title": "Assistance technique"
         },
         {
-          "title": "Projet de montée en échelle en R&D",
-          "subtitle": "Transition du laboratoire à la production"
-        },
-        {
-          "title": "Programme de formation et développement",
-          "subtitle": "Initiatives éducatives à la pointe de l'industrie"
+          "title": "Administration de médicaments à base de nanoparticules"
         }
       ]
     }
@@ -358,29 +314,29 @@
       "items": [
         {
           "title": "Company Launches New Product Line",
-          "excerpt": "Exciting developments in our latest innovation that will transform the industry and create new opportunities for growth.",
-          "date": "June 12, 2025",
+          "excerpt": " Donkey milk, known as the “white gold of cosmetics,” has long been valued for its skincare benefits. To bring this tradition back, a donkey farm in Saguenay–Lac-Saint-Jean partnered with CERASP to develop a line of creams. CERASP formulated the first product—a hand cream—balancing milk composition and cost for small-scale production, and is managing the production transfer. The cream is set to launch with more products to follow.",
+          "date": "November 19th 2024",
           "category": "Product",
           "stockimgname": "Blood Vial"
         },
         {
           "title": "Partnership Announcement",
-          "excerpt": "Strategic collaboration with industry leaders to enhance our service offerings and expand market reach.",
-          "date": "June 10, 2025",
+          "excerpt": "CERASP and John Abbott College have received the Applied Tools and Instruments grant, of over 2M$, from Natural Sciences and Engineering Research Council of Canada (NSERC).",
+          "date": " June 6th 2025",
           "category": "Business",
           "stockimgname": "Handshake"
         },
         {
           "title": "Award Recognition",
-          "excerpt": "Honored for excellence in customer service and innovative solutions that drive industry standards.",
-          "date": "June 8, 2025",
+          "excerpt": "To come soon.",
+          "date": "-",
           "category": "Awards",
           "stockimgname": "Award Trophy"
         },
         {
           "title": "Technology Innovation",
-          "excerpt": "Breakthrough in AI-powered solutions that revolutionize how businesses operate and scale.",
-          "date": "June 6, 2025",
+          "excerpt": "To come soon.",
+          "date": "-",
           "category": "Technology",
           "stockimgname": "Technology"
         }
@@ -394,29 +350,29 @@
       "items": [
         {
           "title": "Lancement d'une nouvelle gamme de produits",
-          "excerpt": "Développements passionnants dans notre dernière innovation qui transformera l'industrie et créera de nouvelles opportunités de croissance.",
-          "date": "12 juin 2025",
+          "excerpt": "Le lait d’ânesse, surnommé « l’or blanc de la cosmétique », est depuis longtemps reconnu pour ses bienfaits pour la peau. Pour remettre cette tradition au goût du jour, une asinerie du Saguenay–Lac-Saint-Jean a collaboré avec le CERASP pour développer une gamme de crèmes. Le CERASP a formulé le premier produit — une crème pour les mains — en équilibrant la composition du lait et les coûts pour une production à petite échelle, et supervise le transfert de production. Le lancement est prévu prochainement, avec d'autres produits à venir.",
+          "date": "16 novembre 2024",
           "category": "Produit",
           "stockimgname": "Blood Vial"
         },
         {
           "title": "Annonce de partenariat",
-          "excerpt": "Collaboration stratégique avec des leaders du secteur pour améliorer nos services et élargir notre portée.",
-          "date": "10 juin 2025",
+          "excerpt": "Le CERASP et le Collège John Abbott ont reçu une subvention de plus de 2 millions de dollars du Conseil de recherches en sciences naturelles et en génie du Canada (CRSNG) dans le cadre du programme « Outils et instruments de recherche appliquée ».",
+          "date": "6 juin 2025",
           "category": "Affaires",
           "stockimgname": "Handshake"
         },
         {
           "title": "Reconnaissance de prix",
-          "excerpt": "Récompensé pour l'excellence du service client et les solutions innovantes qui façonnent l'industrie.",
-          "date": "8 juin 2025",
+          "excerpt": "À venir",
+          "date": "",
           "category": "Prix",
           "stockimgname": "Award Trophy"
         },
         {
           "title": "Innovation technologique",
-          "excerpt": "Avancée dans les solutions alimentées par l'IA qui révolutionne la manière dont les entreprises fonctionnent.",
-          "date": "6 juin 2025",
+          "excerpt": "À venir",
+          "date": "",
           "category": "Technologie",
           "stockimgname": "Technology"
         }
