@@ -4,16 +4,16 @@ import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
 
 import ExpertiseOverview from "../pages/expertise-subpages/ExpertiseOverview.js";
-import ExpertiseGMP from "./expertise-subpages/ExpertiseGMP.js";
+import ExpertiseIdeation from "./expertise-subpages/ExpertiseIdeation.js";
 import ExpertiseFormulation from "./expertise-subpages/ExpertiseFormulation.js";
 import ExpertiseAnimal from "./expertise-subpages/ExpertiseAnimal.js";
-import ExpertiseApplied from "./expertise-subpages/ExpertiseApplied.js";
-import ExpertiseBioinformatics from "./expertise-subpages/ExpertiseBioinformatics.js";
+import ExpertiseProofConcept from "./expertise-subpages/ExpertiseProofConcept.js";
+import ExpertiseScaleUp from "./expertise-subpages/ExpertiseScaleUp.js";
 import ExpertiseTroubleshooting from "./expertise-subpages/ExpertiseTroubleshooting.js";
 import ExpertiseHealthCanada from "./expertise-subpages/ExpertiseHealthCanada.js";
 import ExpertiseProductDev from "./expertise-subpages/ExpertiseProductDev.js";
 import ExpertiseFunding from "./expertise-subpages/ExpertiseFunding.js";
-import ExpertiseNumeric from "./expertise-subpages/ExpertiseNumeric.js";
+import ExpertiseTechTransfer from "./expertise-subpages/ExpertiseTechTransfer.js";
 
 import ContactUs from "./ContactUs/ContactUs.js";
 import Footer from "../components/layouts/Footer.js";
@@ -31,8 +31,8 @@ const Expertises = () => {
 
       {/* ===GMP EXPERTISE=== */}
 
-      <div id="gmp-expertise-&-biomanufacturing">
-        <ExpertiseGMP />
+      <div id="ideation">
+        <ExpertiseIdeation />
       </div>
 
       {/* =FORMULATIONS OF PHARMACEUTICALS= */}
@@ -47,10 +47,10 @@ const Expertises = () => {
         <ExpertiseAnimal />
       </div> */}
 
-      {/* ===Applied Research==== */}
+      {/* ===proofConcept==== */}
 
-      <div id="applied-research">
-        <ExpertiseApplied />
+      <div id="proofConcept">
+        <ExpertiseProofConcept />
       </div>
 
       {/* =====Troubleshooting===== */}
@@ -67,27 +67,27 @@ const Expertises = () => {
 
       {/* ====Technical Training==== */}
 
-      <div id="technical-training">
+      <div id="product-development">
         <ExpertiseProductDev />
       </div>
 
       {/* =====Bioinformatics===== */}
 
-      <div id="bioinformatics">
-        <ExpertiseBioinformatics />
+      <div id="scale-up-manufacturing">
+        <ExpertiseScaleUp />
       </div>
 
-      {/* =====Numeric Health=====  */}
+      {/* =====techTransfer=====  */}
 
-      <div id="numeric-health">
-        <ExpertiseNumeric />
+      <div id="techTransfer">
+        <ExpertiseTechTransfer />
       </div>
 
       {/* ====Help Access Funding==== */}
 
-      <div id="help-access-funding">
+      {/* <div id="help-access-funding">
         <ExpertiseFunding />
-      </div>
+      </div> */}
 
       {/* ===CONTACT FORM=== */}
 

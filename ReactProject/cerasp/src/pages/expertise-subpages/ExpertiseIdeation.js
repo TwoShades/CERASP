@@ -1,25 +1,25 @@
 import React, { useContext } from "react";
-import "./css/ExpertiseGMP.css";
+import "./css/ExpertiseIdeation.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 
-const ExpertiseGMP = () => {
+const ExpertiseIdeation = () => {
   const { language } = useContext(LanguageContext);
-  const gmp = expertiseTranslations.gmp_biomanufacturing;
-  const { overview, capabilities, collaboration } = gmp.content[language];
+  const ideation = expertiseTranslations.ideation;
+  const { overview, capabilities, collaboration } = ideation.content[language];
 
   return (
     <div className="expertise-gmp">
       <div className="expertise-gmp-content">
         <SubPageHeader
-          name={gmp.title[language]}
+          name={ideation.title[language]}
           extraContent={
             <div className="about-overview-header-text">
-              <p>{gmp.sub1[language]}</p>
-              <p>{gmp.sub2[language]}</p>
-              <p>{gmp.sub3[language]}</p>
+              <p>{ideation.sub1[language]}</p>
+              <p>{ideation.sub2[language]}</p>
+              <p>{ideation.sub3[language]}</p>
             </div>
           }
         />
@@ -82,4 +82,4 @@ const ExpertiseGMP = () => {
   );
 };
 
-export default ExpertiseGMP;
+export default ExpertiseIdeation;
