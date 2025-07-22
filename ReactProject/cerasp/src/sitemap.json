@@ -89,31 +89,20 @@
           "en": "Proof of Concept",
           "fr": "Preuve de concept"
         },
-        { "id": "troubleshooting", "en": "Troubleshooting", "fr": "Dépannage" },
         {
-          "id": "health-canada-partner",
-          "en": "Health Canada Partner",
-          "fr": "Partenaire de Santé Canada"
+          "id": "product-development",
+          "en": "Product Development",
+          "fr": "Développement de Produits"
         },
         {
-          "id": "technical-training",
-          "en": "Technical Training",
-          "fr": "Formation technique"
+          "id": "scale-up-manufacturing",
+          "en": "Scale-Up & Manufacturing Readiness",
+          "fr": "Mise à l’échelle & préparation à la production"
         },
         {
-          "id": "bioinformatics",
-          "en": "Bioinformatics",
-          "fr": "Bio-informatique"
-        },
-        {
-          "id": "numeric-health",
-          "en": "Numeric Health",
-          "fr": "Santé numérique"
-        },
-        {
-          "id": "help-access-funding",
-          "en": "Help Access Funding",
-          "fr": "Aide au financement"
+          "id": "techTransfer",
+          "en": "Technology Transfer & Regulatory Readiness",
+          "fr": "Transfert Technologique & Préparation Réglementaire"
         },
         { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]

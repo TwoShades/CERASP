@@ -405,110 +405,120 @@
       ]
     }
   },
-  "bioinformatics": {
+  "scaleUpManufacturing": {
     "title": {
       "en": "Scale-Up & Manufacturing Readiness",
-      "fr": "Bio-informatique"
+      "fr": "Mise à l’échelle & préparation à la production"
     },
     "content": {
       "en": "Scaling from lab to production demands precision and process expertise. At CERASP, our specialized scale-up services bridge R&D and commercial manufacturing, reducing risk, ensuring compliance, and accelerating time to market.",
-      "fr": "Au CERASP, nous offrons des services de bioinformatique de pointe adaptés aux secteurs pharmaceutique et de la santé. Notre équipe de bioinformatique se spécialise dans l'utilisation de méthodes computationnelles avancées et de techniques d'analyse de données pour soutenir la découverte de médicaments, la médecine personnalisée et l'identification de biomarqueurs."
+      "fr": "La mise à l’échelle, étape clé entre la R&D et la production, exige précision et maîtrise des procédés. Au CERASP, nous offrons des services spécialisés pour assurer une transition fluide, réduire les risques, garantir la conformité et accélérer l’accès au marché."
     },
     "fields": {
-      "genomicDataAnalysis": {
+      "scaleUp": {
         "title": {
           "en": "Scale-Up to Larger Scale Manufacturing",
-          "fr": "Analyse de données génomiques"
+          "fr": "Mise à l’échelle vers une production à plus grande échelle"
         },
         "desc": {
-          "en": "Challenge Testing",
-          "fr": "Services de transcriptomique, protéomique et métabolomique."
+          "en": "We ensure robust, repeatable, and efficient scale-up from lab to pilot and larger manufacturing.",
+          "fr": "Nous assurons une transition fluide du laboratoire à la fabrication pilote, avec des procédés reproductibles, stables et efficaces."
         }
       },
-      "comprehensiveDataInsights": {
+      "testing": {
         "title": {
-          "en": "Pilot Batching",
-          "fr": "Analyses de données complètes"
+          "en": "Challenge Testing",
+          "fr": "Essais d’efficacité"
         },
         "desc": {
-          "en": "To optimize therapeutic strategies.",
-          "fr": "Pour optimiser les stratégies thérapeutiques."
+          "en": "We perform stress tests to evaluate product stability, formulation robustness, and process reliability.",
+          "fr": "Nous testons en conditions critiques la robustesse des formulations, la stabilité et la fiabilité des procédés."
+        }
+      },
+      "pilotBatching": {
+        "title": {
+          "en": "Pilot Batching",
+          "fr": "Production de lots pilotes"
+        },
+        "desc": {
+          "en": "We produce pilot batches to simulate production and validate readiness for full-scale manufacturing.",
+          "fr": "Nos installations produisent des lots pilotes représentatifs et fournissant des données essentielles à la validation et à la préparation commerciale"
+        }
+      },
+      "techSupport": {
+        "title": {
+          "en": "Technical Support",
+          "fr": "Support technique"
+        },
+        "desc": {
+          "en": "Our experts support process refinement and equipment integration during development and scale-up.",
+          "fr": "Nos experts optimisent procédés, intègrent les équipements et résolvent les défis techniques de la montée en échelle."
         }
       },
       "processOptimization": {
         "title": {
-          "en": "Technical Support",
-          "fr": "Recherche accélérée"
+          "en": "Process Optimization",
+          "fr": "Optimisation des procédés"
         },
         "desc": {
-          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
-          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+          "en": "We optimize production to boost efficiency, yield, and quality while minimizing waste.",
+          "fr": "Nous ajustons les paramètres pour optimiser efficacité, rendement, qualité et réduire les pertes."
         }
       },
       "troubleshooting": {
         "title": {
-          "en": "Technical Support",
-          "fr": "Recherche accélérée"
+          "en": "Troubleshooting",
+          "fr": "Dépannage et résolution de problèmes"
         },
         "desc": {
-          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
-          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+          "en": "We quickly resolve formulation, processing, and equipment issues to minimize downtime and delays.",
+          "fr": "Nous identifions rapidement les problèmes de formulation, procédé ou équipement et proposons des solutions pour éviter les retards."
         }
       },
       "dataCollection": {
         "title": {
-          "en": "Technical Support",
-          "fr": "Recherche accélérée"
+          "en": "Real-Time Data Collection",
+          "fr": "Collecte de données en temps réel"
         },
         "desc": {
-          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
-          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+          "en": "We implement real-time monitoring for process control and quality assurance.",
+          "fr": "Nous installons des systèmes de suivi en temps réel pour assurer le contrôle des procédés et la qualité continue. "
         }
       },
       "gmpEnvironment": {
         "title": {
-          "en": "Technical Support",
-          "fr": "Recherche accélérée"
+          "en": "GMP-like Environment",
+          "fr": "Environnement similaire aux BPF"
         },
         "desc": {
-          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
-          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+          "en": "All scale-up occurs in a GMP-like environment adhering to industry cleanliness, documentation, and quality standards.",
+          "fr": "Toutes nos activités de scale-up respectent un environnement similaire aux BPF, avec des normes strictes de propreté, documentation et qualité."
         }
       },
-      "acceleratedResearch": {
+      "protocolReporting": {
         "title": {
-          "en": "Technical Support",
-          "fr": "Recherche accélérée"
+          "en": "Protocol and Reporting",
+          "fr": "Protocoles et rapports"
         },
         "desc": {
-          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
-          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
-        }
-      },
-      "acceleratedResearch": {
-        "title": {
-          "en": "Technical Support",
-          "fr": "Recherche accélérée"
-        },
-        "desc": {
-          "en": "Through advanced computational methods. Tailored solutions for precision medicine.",
-          "fr": "Grâce à des méthodes computationnelles avancées. Solutions sur mesure pour la médecine de précision."
+          "en": "We deliver detailed protocols and reports to support technical reviews, regulatory submissions, and internal documentation.",
+          "fr": "Nous fournissons des protocoles et rapports complets pouvan appuyer démarches techniques, soumissions réglementaires et documentation interne."
         }
       }
     }
   },
-  "numeric_healthcare": {
+  "techTransfer": {
     "title": {
-      "en": "Data-Driven Healthcare Solutions",
-      "fr": "Solutions de santé axées sur les données"
+      "en": "Technology Transfer & Regulatory Readiness",
+      "fr": "Transfert Technologique & Préparation Réglementaire"
     },
     "section_title": {
       "en": "Healthcare Analytics",
       "fr": "Analyse des données de santé"
     },
     "content": {
-      "en": "We provide data-driven solutions for the healthcare sector, utilizing advanced digital tools and analytics to enhance patient care and optimize health outcomes. Our services include health data analysis, digital health integration, and the development of systems for real-time monitoring and decision support. We help healthcare organizations leverage technology to improve operational efficiency, ensure compliance, and drive innovation in patient care.",
-      "fr": "Nous proposons des solutions basées sur les données pour le secteur de la santé, en utilisant des outils numériques avancés et des analyses pour améliorer les soins aux patients et optimiser les résultats de santé. Nos services incluent l'analyse des données de santé, l'intégration de la santé numérique et le développement de systèmes pour la surveillance en temps réel et le support à la décision. Nous aidons les organisations de santé à tirer parti de la technologie pour améliorer l'efficacité opérationnelle, assurer la conformité et stimuler l'innovation dans les soins aux patients."
+      "en": "Successful technology transfer requires structured processes, regulatory compliance, and smooth integration. At CERASP, we provide technical, regulatory, and training support to ensure a seamless, low-risk transition from development to production or partner to partner.",
+      "fr": "Un transfert technologique réussi dépasse la simple transmission de savoir : il requiert processus structurés, conformité réglementaire et coordination fluide entre le R&D et la production. Au CERASP, nous assurons un accompagnement complet pour une transition efficace, conforme et fiable, du développement à la production ou entre partenaires."
     },
     "stats": {
       "accuracy": { "en": "Accuracy", "fr": "Précision" },
@@ -520,38 +530,94 @@
       "fr": "Indicateurs de performance"
     },
     "features": {
-      "data": {
+      "training": {
         "title": {
-          "en": "Health Data Analysis",
-          "fr": "Analyse des données de santé"
+          "en": "Customized Training",
+          "fr": "Formations personnalisées"
         },
         "description": {
-          "en": "Transform raw healthcare data into actionable insights",
-          "fr": "Transformer les données de santé brutes en informations exploitables"
+          "en": "We provide tailored virtual or onsite training and coaching—covering technical skills, GMP, SOPs, regulatory, and business development—to equip your teams for success. Training can be delivered by us or through train-the-trainer programs.",
+          "fr": "Nous offrons des formations sur mesure (scientifique, technique, réglementaire, affaires), en présentiel ou à distance, avec coaching, et adaptées à vos besoins."
         }
       },
-      "monitoring": {
+      "rndSupport": {
         "title": {
-          "en": "Real-Time Monitoring",
-          "fr": "Surveillance en temps réel"
+          "en": "R&D Support",
+          "fr": "Soutien à la R&D"
         },
         "description": {
-          "en": "Continuous patient monitoring systems for timely interventions",
-          "fr": "Systèmes de surveillance continue des patients pour des interventions rapides"
+          "en": "We ensure seamless transition from research to production with technical support that maintains scientific and process integrity.",
+          "fr": "Nous garantissons un soutien technique continu, assurant la continuité scientifique et l’intégrité des procédés lors du transfert."
         }
       },
-      "predictive": {
-        "title": { "en": "Predictive Analytics", "fr": "Analyse prédictive" },
+      "regAffairs": {
+        "title": {
+          "en": "Regulatory Affairs Activities",
+          "fr": "Activités réglementaires"
+        },
         "description": {
-          "en": "Anticipate healthcare needs through pattern recognition",
-          "fr": "Anticiper les besoins en santé grâce à la reconnaissance de motifs"
+          "en": "We handle regulatory documentation and communication to support global product approvals.",
+          "fr": "Notre équipe gère les documents réglementaires, de la classification produit aux échanges avec les autorités."
         }
       },
-      "integration": {
-        "title": { "en": "Digital Integration", "fr": "Intégration numérique" },
+      "fullPackage": {
+        "title": {
+          "en": "Full Package Dossier",
+          "fr": "Dossier de produit"
+        },
         "description": {
-          "en": "Seamless connection of existing healthcare systems",
-          "fr": "Connexion transparente des systèmes de santé existants"
+          "en": "We prepare compliant technical dossiers with formulation, testing, safety, and regulatory data for submission.",
+          "fr": "Nous préparons des dossiers techniques complets et conformes avec les données de formulation, essais, preuves de sécurité et résumés réglementaires."
+        }
+      },
+      "submission": {
+        "title": {
+          "en": "Submission Support and Guidance",
+          "fr": "Support et accompagnement aux dépôts réglementaires"
+        },
+        "description": {
+          "en": "We guide you from pre-submission strategy to post-submission follow-up to boost regulatory approval success.",
+          "fr": "Nous optimisons vos soumissions en vous accompagnant dans la stratégie, la rédaction et les échanges avec les autorités."
+        }
+      },
+      "healthCanada": {
+        "title": {
+          "en": "Health Canada Partner",
+          "fr": "Partenaire certifié de Santé Canada"
+        },
+        "description": {
+          "en": "As a certified Health Canada partner, we offer expert guidance on Health Canada’s requirements to streamline your approval process.",
+          "fr": "Experts du cadre règlementaire canadien et étant un partenaire certifié de Santé Canada, nous facilitons vos démarches auprès de Santé Canada avec une approche fluide, conforme et efficace."
+        }
+      },
+      "gmpReady": {
+        "title": {
+          "en": "GMP-Ready",
+          "fr": "Préparation aux BPF"
+        },
+        "description": {
+          "en": "We help ensure your processes, documents, and facilities meet GMP standards for manufacturing and inspections.",
+          "fr": "Nous assurons votre conformité aux BPF sur les processus, la documentation et les installations."
+        }
+      },
+      "research": {
+        "title": {
+          "en": "Research",
+          "fr": "Recherche"
+        },
+        "description": {
+          "en": "Our scientists engage in applied research to drive continuous innovation and technology transfer.",
+          "fr": "Notre équipe scientifique reste active en recherche appliquée afin de soutenir l’amélioration continue et le transfert des technologies les plus innovantes."
+        }
+      },
+      "virtualReality": {
+        "title": {
+          "en": "Virtual Reality Solutions",
+          "fr": "Solutions en réalité virtuelle"
+        },
+        "description": {
+          "en": "We use virtual reality for training and simulation to boost learning, safety, and readiness.",
+          "fr": "Nous utilisons la réalité virtuelle immersive pour renforcer la formation, simuler des processus et améliorer sécurité et préparation opérationnelle."
         }
       }
     },

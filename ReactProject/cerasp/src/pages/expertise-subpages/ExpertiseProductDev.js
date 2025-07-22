@@ -40,24 +40,17 @@ const ExpertiseProductDev = () => {
             <div className="decorative-section">
               <div className="accent-line"></div>
               <div className="feature-highlights">
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span className="highlight-text">
-                    {language === "en" ? "GMP Practices" : "Pratiques BPF"}
-                  </span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span className="highlight-text">
-                    {language === "en" ? "Bioprocessing" : "Bioprocédés"}
-                  </span>
-                </div>
-                <div className="highlight-item">
-                  <span className="highlight-icon">✓</span>
-                  <span className="highlight-text">
-                    {language === "en" ? "Quality Control" : "Contrôle Qualité"}
-                  </span>
-                </div>
+                {Object.entries(productDev)
+                  .filter(([key]) => key.startsWith("card"))
+                  .map(([key, card]) => (
+                    <div key={key} className="highlight-item">
+                      <span className="highlight-icon">✓</span>
+                      <span className="highlight-text">
+                        <strong>{card.title[language]}</strong>:{" "}
+                        {card.content[language]}
+                      </span>
+                    </div>
+                  ))}
               </div>
             </div>
           </div>
