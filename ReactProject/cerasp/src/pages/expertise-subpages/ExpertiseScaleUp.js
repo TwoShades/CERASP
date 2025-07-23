@@ -11,34 +11,34 @@ const ExpertiseScaleUp = () => {
 
   return (
     <div className="expertise-bioinformatics-layout">
+      <div className="bioinfo-header">
+        <SubPageHeader
+          name={
+            language === "fr"
+              ? "Mise à l'échelle & préparation à la production"
+              : "Scale-Up & Manufacturing Readiness"
+          }
+          extraContent={
+            <div className="about-overview-header-text">
+              <p>{scaleUpManufacturing.content[language]}</p>
+            </div>
+          }
+        />
+      </div>
       <div className="expertise-bioinformatics">
-        <div className="bioinfo-header">
-          <SubPageHeader
-            name={
-              language === "fr"
-                ? "Mise à l’échelle & préparation à la production"
-                : "Scale-Up & Manufacturing Readiness"
-            }
+        {/* Background image container */}
+        <div className="background-image-container">
+          <StockImageFetch
+            searchTerm="bioinformatics"
+            imgSource="large"
+            orientation="landscape"
+            page={1}
+            perPage={1}
           />
         </div>
 
         <div className="bioinfo-content">
-          <div className="bioinfo-left">
-            <div className="bioinfo-image">
-              <StockImageFetch
-                searchTerm="bioinformatics"
-                imgSource="large"
-                orientation="landscape"
-                page={1}
-                perPage={1}
-              />
-            </div>
-            <div className="caption">
-              {scaleUpManufacturing.content[language]}
-            </div>
-          </div>
-
-          <div className="bioinfo-right">
+          <div className="cards-container">
             <div className="fieldBox">
               <h2 className="title">
                 {scaleUpManufacturing.fields.scaleUp.title[language]}
