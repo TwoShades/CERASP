@@ -160,11 +160,11 @@
 }
 
 .fieldBox:nth-child(2) {
-  --accent-color: #10b981;
+  --accent-color: #3b82f6;
 }
 
 .fieldBox:nth-child(3) {
-  --accent-color: #f59e0b;
+  --accent-color: #3b82f6;
 }
 
 .fieldBox:hover {

@@ -45,28 +45,36 @@ const SectorsBiopharmaceutical = () => {
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    <p>{biopharmaceutical.card1.title[language]}</p>
+                    <p>
+                      <strong>{biopharmaceutical.card1.title[language]}</strong>
+                    </p>
                     <p>{biopharmaceutical.card1.content[language]}</p>
                   </span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    <p>{biopharmaceutical.card2.title[language]}</p>
+                    <p>
+                      <strong>{biopharmaceutical.card2.title[language]}</strong>
+                    </p>
                     <p>{biopharmaceutical.card2.content[language]}</p>
                   </span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    <p>{biopharmaceutical.card3.title[language]}</p>
+                    <p>
+                      <strong>{biopharmaceutical.card3.title[language]}</strong>
+                    </p>
                     <p>{biopharmaceutical.card3.content[language]}</p>
                   </span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon">✓</span>
                   <span className="highlight-text">
-                    <p>{biopharmaceutical.card4.title[language]}</p>
+                    <p>
+                      <strong>{biopharmaceutical.card4.title[language]}</strong>
+                    </p>
                     <p>{biopharmaceutical.card4.content[language]}</p>
                   </span>
                 </div>

@@ -53,7 +53,7 @@ const ExpertiseProofConcept = () => {
       <div className="five-steps-grid-layout">
         <div className="top-row">
           <SubPageHeader
-            name={proofConcept.title[language].toUpperCase()}
+            name={proofConcept.title[language]}
             extraContent={
               <div className="about-overview-header-text">
                 <p>{proofConcept.content[language]}</p>

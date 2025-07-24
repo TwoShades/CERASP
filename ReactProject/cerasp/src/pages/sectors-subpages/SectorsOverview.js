@@ -42,8 +42,6 @@ const styles = {
     padding: "40px",
     backgroundColor: "#f8fafc",
     minHeight: "100vh",
-    fontFamily:
-      "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -107,9 +105,7 @@ const styles = {
 
 // Add Google Font once globally (only if not already included elsewhere)
 const styleSheet = document.createElement("style");
-styleSheet.textContent = `
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-`;
+
 document.head.appendChild(styleSheet);
 
 export default OverviewPanel;

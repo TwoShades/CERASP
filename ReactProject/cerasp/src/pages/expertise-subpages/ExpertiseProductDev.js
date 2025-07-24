@@ -39,14 +39,16 @@ const ExpertiseProductDev = () => {
 
             <div className="decorative-section">
               <div className="accent-line"></div>
-              <div className="feature-highlights">
+              <div className="expertise-feature-highlights">
                 {Object.entries(productDev)
                   .filter(([key]) => key.startsWith("card"))
                   .map(([key, card]) => (
-                    <div key={key} className="highlight-item">
+                    <div key={key} className="expertise-highlight-item">
                       <span className="highlight-icon">✓</span>
                       <span className="highlight-text">
-                        <strong>{card.title[language]}</strong>:{" "}
+                        <strong className="highlight-title-strong">
+                          {card.title[language]}
+                        </strong>{" "}
                         {card.content[language]}
                       </span>
                     </div>

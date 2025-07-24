@@ -106,7 +106,6 @@
   color: #1e293b;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 .step .content {
@@ -228,8 +227,8 @@
 
 @media (max-width: 480px) {
   .expertise-applied-layout {
-  padding-top: calc(60px);
-}
+    padding-top: calc(60px);
+  }
   .five-steps-grid-layout {
     padding: 30px 15px;
     margin: 10px;
