@@ -14,7 +14,11 @@
   right: 0;
   width: 40%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 51, 234, 0.03) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.05) 0%,
+    rgba(147, 51, 234, 0.03) 100%
+  );
   clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
@@ -42,7 +46,7 @@
 }
 
 .formulation-title {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 16px;
@@ -78,8 +82,7 @@
   background: white;
   border-radius: 20px;
   padding: 48px;
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.08),
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08),
     0 0 0 1px rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease-out;
   position: relative;
@@ -88,9 +91,7 @@
 
 .formulation-card:hover .card-inner {
   transform: translateY(-4px);
-  box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.12),
-    0 0 0 1px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(59, 130, 246, 0.2);
 }
 
 /* Content section */
@@ -194,37 +195,37 @@
     padding-top: calc(60px + 2em);
     padding-bottom: 60px;
   }
-  
+
   .formulation-title {
     font-size: 2.5rem;
   }
-  
+
   .card-inner {
     padding: 32px 24px;
   }
-  
+
   .content-section {
     flex-direction: column;
     gap: 24px;
     text-align: center;
   }
-  
+
   .formulation-icon {
     width: 70px;
     height: 70px;
     font-size: 2rem;
     margin: 0 auto;
   }
-  
+
   .formulation-description {
     font-size: 1rem;
   }
-  
+
   .feature-highlights {
     display: flex;
     flex-direction: column;
   }
-  
+
   .highlight-item {
     padding: 12px 16px;
   }
@@ -234,15 +235,15 @@
   .formulation-content {
     padding: 0 16px;
   }
-  
+
   .formulation-title {
     font-size: 2rem;
   }
-  
+
   .card-inner {
     padding: 24px 20px;
   }
-  
+
   .background-accent {
     display: none;
   }

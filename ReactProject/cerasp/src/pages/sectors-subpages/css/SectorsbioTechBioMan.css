@@ -18,7 +18,7 @@
 }
 
 .heading-main {
-  font-size: 2rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: bold;
   color: #1f2937;
 }
@@ -34,7 +34,7 @@
   border-left: 4px solid #3b82f6;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  color: #374151;
+  color: #64748b;
   line-height: 1.7;
 }
 
@@ -114,7 +114,7 @@
 
 .card p {
   font-size: 0.875rem;
-  color: #4b5563;
+  color: #64748b;
 }
 
 .product-box {

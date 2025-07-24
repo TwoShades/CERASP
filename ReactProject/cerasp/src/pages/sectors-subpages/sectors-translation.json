@@ -132,16 +132,6 @@
           "fr": "Recherche appliquée"
         },
         "cards": {
-          "card1": {
-            "title": {
-              "en": "Applied Research",
-              "fr": "Recherche appliquée"
-            },
-            "desc": {
-              "en": "Solving real-world problems by using scientific methods and knowledge",
-              "fr": "Résoudre des problèmes du monde réel en utilisant des méthodes et des connaissances scientifiques"
-            }
-          },
           "card2": {
             "title": {
               "en": "Product Development",
