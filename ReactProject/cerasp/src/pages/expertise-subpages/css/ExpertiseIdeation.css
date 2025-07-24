@@ -10,6 +10,10 @@
   padding-bottom: 90px;
 }
 
+.about-overview-header-text p {
+  text-transform: none;
+}
+
 /* Hero Image Section */
 .gmp-hero-section {
   max-width: 1200px;

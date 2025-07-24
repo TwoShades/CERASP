@@ -201,6 +201,10 @@
   margin-bottom: 4px;
 }
 
+.highlight-title-strong {
+  margin-bottom: 1em;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .training-container {

@@ -46,7 +46,9 @@ const ExpertiseProductDev = () => {
                     <div key={key} className="expertise-highlight-item">
                       <span className="highlight-icon">✓</span>
                       <span className="highlight-text">
-                        <strong>{card.title[language]}</strong>:{" "}
+                        <strong className="highlight-title-strong">
+                          {card.title[language]}
+                        </strong>{" "}
                         {card.content[language]}
                       </span>
                     </div>
