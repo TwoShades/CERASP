@@ -24,7 +24,7 @@ const SectorsMedicalDevices = () => {
 
         <div className="preform-content">
           <div className="preform-left">
-            <div className="preform-image">
+            <div className="sectors-medDevice-image">
               <img src="/photos/Picture-CERASP-7.png" alt="Preformulation" />
             </div>
             {/* <div className="caption">{preform.content[language]}</div> */}

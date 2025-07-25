@@ -74,9 +74,9 @@
   gap: 30px;
 }
 
-.preform-image {
+.sectors-medDevice-image {
   width: 80%;
-  height: 100;
+  height: 60%;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 20px 48px rgba(0, 0, 0, 0.1);
@@ -84,7 +84,7 @@
   position: relative;
 }
 
-.preform-image::after {
+.sectors-medDevice-image::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -93,12 +93,12 @@
   pointer-events: none;
 }
 
-.preform-image:hover {
+.sectors-medDevice-image:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 30px 60px rgba(0, 0, 0, 0.1);
 }
 
-.preform-image img {
+.sectors-medDevice-image img {
   width: 100%;
   height: auto;
   display: block;
@@ -245,7 +245,7 @@
     font-size: 16px;
   }
 
-  .preform-image {
+  .sectors-medDevice-image {
     max-width: 60%;
   }
 
@@ -284,7 +284,7 @@
     font-size: 28px;
   }
 
-  .preform-image {
+  .sectors-medDevice-image {
     max-width: 100%;
   }
 
