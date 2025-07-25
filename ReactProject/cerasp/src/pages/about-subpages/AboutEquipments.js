@@ -60,8 +60,8 @@ const AboutEquipments = () => {
         extraContent={
           <h4>
             {language === "fr"
-              ? "Découvrez notre équipement à la fine pointe de la technologie!"
-              : "Discover our state-of-the-art equipment!"}
+              ? "Découvrez notre équipement de pointe!"
+              : "Discover our cutting edge equipment!"}
           </h4>
         }
       />
