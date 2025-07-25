@@ -5,8 +5,8 @@
   overflow: hidden;
 
   padding: 0 8em 0em 8em;
-  padding-top: 120px;
-  padding-bottom: 8em;
+  padding-top: calc(90px + 4em);
+  padding-bottom: calc(90px + 4em);
 
   border: solid 1px #8585851d;
   border-radius: 16px;

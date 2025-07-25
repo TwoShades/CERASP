@@ -51,7 +51,7 @@ const ExpertiseProofConcept = () => {
   return (
     <div className="expertise-applied-layout">
       <div className="five-steps-grid-layout">
-        <div className="top-row">
+        <div className="proof-top-row">
           <SubPageHeader
             name={proofConcept.title[language]}
             extraContent={
@@ -74,7 +74,7 @@ const ExpertiseProofConcept = () => {
           ))}
         </div>
 
-        <div className="bottom-row">
+        <div className="proof-bottom-row">
           <p>{proofConcept.bottom_text[language]}</p>
         </div>
       </div>
