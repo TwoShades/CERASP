@@ -1,5 +1,6 @@
 .expertise-applied-layout {
   padding-top: calc(90px);
+  padding-bottom: calc(90px);
 }
 
 .five-steps-grid-layout {
@@ -141,11 +142,11 @@
   --step-gradient: linear-gradient(135deg, #06b6d4, #0891b2);
 }
 
-.bottom-row {
+.proof-bottom-row {
   text-align: center;
   position: relative;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.7);
+  background: #f4faff;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 16px;
@@ -153,7 +154,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.bottom-row p {
+.proof-bottom-row p {
   font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   color: #475569;
   line-height: 1.7;
@@ -168,6 +169,16 @@
   .five-steps-grid-layout {
     padding: 60px 30px;
   }
+
+  /* .proof-top-row {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    margin: 0 4em 8em 4em;
+    padding-bottom: 4em;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  } */
 
   .steps-container {
     gap: 25px;
@@ -187,7 +198,7 @@
     border-radius: 16px;
   }
 
-  .top-row {
+  .proof-top-row {
     margin-bottom: 40px;
   }
 
@@ -220,7 +231,7 @@
     font-size: 0.95rem;
   }
 
-  .bottom-row {
+  .proof-bottom-row {
     padding: 30px 20px;
   }
 }
@@ -256,7 +267,7 @@
     font-size: 0.9rem;
   }
 
-  .bottom-row {
+  .proof-bottom-row {
     padding: 25px 15px;
   }
 }

@@ -1,7 +1,7 @@
 .sectors-support-parent {
   padding: 0 8em 0em 8em;
   padding-top: calc(80px + 2em);
-  padding-bottom: 1em;
+  padding-bottom: calc(80px + 2em);
   border: solid 1px #8585851d;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }

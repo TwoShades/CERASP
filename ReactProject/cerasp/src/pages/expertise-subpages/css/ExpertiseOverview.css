@@ -1,5 +1,6 @@
 .expertise-overview-layout {
-  padding-top: calc(90px + 4em);
+  padding-top: calc(256px + 4em);
+  padding-bottom: calc(192px + 4em);
 }
 
 .expertise-overview {
@@ -207,7 +208,8 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .expertise-overview-layout {
-    padding-top: calc(20px + 4em);
+    padding-top: calc(128px + 4em);
+    padding-bottom: calc(192px + 4em);
   }
   .expertise-overview {
     padding: 70px 30px;
