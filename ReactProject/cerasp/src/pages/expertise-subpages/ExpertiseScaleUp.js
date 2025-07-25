@@ -28,13 +28,7 @@ const ExpertiseScaleUp = () => {
       <div className="expertise-bioinformatics">
         {/* Background image container */}
         <div className="background-image-container">
-          <StockImageFetch
-            searchTerm="bioinformatics"
-            imgSource="large"
-            orientation="landscape"
-            page={1}
-            perPage={1}
-          />
+          <img src="/photos/Picture-CERASP-16.jpg" alt="Preformulation" />
         </div>
 
         <div className="bioinfo-content">

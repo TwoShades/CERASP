@@ -16,7 +16,7 @@ const ExpertiseIdeation = () => {
       if (idx % 2 !== 0) return null;
       return (
         <div key={`${keyPrefix}-${idx}`} className="bullet-point">
-          <strong>{arr[idx]}</strong> {arr[idx + 1]}
+          <h4>{arr[idx]}</h4> {arr[idx + 1]}
         </div>
       );
     });
@@ -39,13 +39,7 @@ const ExpertiseIdeation = () => {
         {/* Hero Section with Image */}
         <div className="gmp-hero-section">
           <div className="gmp-hero-image">
-            <StockImageFetch
-              searchTerm="pills"
-              imgSource="large"
-              orientation="landscape"
-              page={1}
-              perPage={1}
-            />
+            <img src="/photos/Picture-CERASP-12.jpg" alt="Preformulation" />
           </div>
         </div>
 

@@ -57,13 +57,13 @@
 
 .bioinfo-header {
   color: white;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 60px;
   position: relative;
   z-index: 3;
   padding-top: 40px;
-  margin-left: -40px;
-  margin-right: -40px;
+  /* margin-left: -40px;
+  margin-right: -40px; */
 }
 
 .bioinfo-title {
