@@ -14,6 +14,10 @@
   text-transform: none;
 }
 
+h4 {
+  margin-top: 8px;
+}
+
 /* Hero Image Section */
 .gmp-hero-section {
   max-width: 1200px;

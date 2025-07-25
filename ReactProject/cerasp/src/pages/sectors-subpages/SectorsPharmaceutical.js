@@ -23,7 +23,6 @@ const SectorsPharmaceutical = () => {
               <img
                 src="/photos/FromOldSite/pexels-rfstudio-3825435-scaled-450x450.jpg"
                 alt="Preformulation"
-                className="sectors-preformulation-image"
               />
             </div>
             <div className="caption">{pharmaceutical.content[language]}</div>

@@ -25,13 +25,7 @@ const SectorsMedicalDevices = () => {
         <div className="preform-content">
           <div className="preform-left">
             <div className="preform-image">
-              <StockImageFetch
-                searchTerm="technical training"
-                imgSource="large"
-                orientation="landscape"
-                page={1}
-                perPage={1}
-              />
+              <img src="/photos/Picture-CERASP-7.png" alt="Preformulation" />
             </div>
             {/* <div className="caption">{preform.content[language]}</div> */}
           </div>

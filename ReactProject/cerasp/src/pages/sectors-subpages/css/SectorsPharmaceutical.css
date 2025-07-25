@@ -11,10 +11,6 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
-.subpage-header {
-  text-transform: uppercase;
-}
-
 .sectors-preformulation {
   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
   margin: 0 4em 8em 4em;
