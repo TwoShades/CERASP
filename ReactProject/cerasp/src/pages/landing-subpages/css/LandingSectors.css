@@ -1,4 +1,4 @@
-.landing-container {
+.landing-sector-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -6,26 +6,26 @@
   color: #333;
 }
 
-.landing-header {
+.landing-sector-header {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.landing-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+.landing-sector-title {
+  font-size: 48px;
+  font-weight: 700;
   color: #2c3e50;
   margin-bottom: 10px;
 }
 
-.landing-subtitle {
+.landing-sector-subtitle {
   font-size: 1.2rem;
-  color: #7f8c8d;
+  color: #666666;
   max-width: 600px;
   margin: 0 auto;
 }
 
-.landing-grid {
+.landing-sector-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -33,7 +33,7 @@
   margin-bottom: 60px;
 }
 
-.landing-card {
+.landing-sector-card {
   max-width: 300px;
   background: #ffffff;
   border-radius: 12px;
@@ -43,40 +43,40 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.landing-card:hover {
+.landing-sector-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.landing-icon-container {
+.landing-sector-icon-container {
   margin-bottom: 20px;
 }
 
-.landing-icon {
+.landing-sector-icon {
   font-size: 3rem;
   display: block;
 }
 
-.landing-card-title {
+.landing-sector-card-title {
   font-size: 1.4rem;
   font-weight: bold;
   color: #2c3e50;
   margin-bottom: 15px;
 }
 
-.landing-card-description {
+.landing-sector-card-description {
   font-size: 1rem;
   color: #555;
   margin-bottom: 20px;
 }
 
-.landing-highlights-container {
+.landing-sector-highlights-container {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.landing-highlight {
+.landing-sector-highlight {
   background: #e3f2fd;
   color: #1976d2;
   padding: 6px 12px;
@@ -85,7 +85,7 @@
   font-weight: 500;
 }
 
-.landing-footer {
+.landing-sector-footer {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 15px;
   padding: 40px;
@@ -93,23 +93,23 @@
   text-align: center;
 }
 
-.landing-footer-content {
+.landing-sector-footer-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.landing-footer-title {
+.landing-sector-footer-title {
   font-size: 1.8rem;
   margin-bottom: 30px;
   font-weight: bold;
 }
 
-.landing-benefits {
+.landing-sector-benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
-.landing-benefit {
+.landing-sector-benefit {
   text-align: left;
 }

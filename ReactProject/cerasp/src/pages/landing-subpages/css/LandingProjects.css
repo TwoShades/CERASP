@@ -15,7 +15,7 @@
 }
 
 .landing-projects-title {
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 16px;
@@ -84,7 +84,7 @@
 }
 
 .landing-projects-imageIcon {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .landing-projects-overlay {
