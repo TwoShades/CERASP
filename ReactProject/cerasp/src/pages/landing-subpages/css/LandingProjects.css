@@ -31,8 +31,9 @@
 }
 
 .landing-projects-projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin-bottom: 60px;
 }
@@ -47,6 +48,8 @@
   border: 1px solid #e9ecef;
   display: flex;
   flex-direction: column;
+  flex: 0 1 350px;
+  max-width: 400px;
 }
 
 .landing-projects-projectCard:hover {
@@ -75,10 +78,9 @@
 }
 
 .landing-projects-image {
-  width: 100%;
+  height: 250px;
+  width: 350px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .landing-projects-imageIcon {
@@ -96,12 +98,13 @@
 }
 
 .landing-projects-projectInfo {
-  padding: 30px;
+  text-align: center;
+  padding: 20px;
 }
 
 .landing-projects-projectTitle {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #1a1a1a;
   margin-bottom: 8px;
   line-height: 1.3;
