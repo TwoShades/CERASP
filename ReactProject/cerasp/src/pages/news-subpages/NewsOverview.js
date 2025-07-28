@@ -8,29 +8,47 @@ export default function NewsOverview({ onReady }) {
   const { language } = useContext(LanguageContext);
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
 
-  const iframeSources = [
-    "https://www.linkedin.com/embed/feed/update/urn:li:share:7336061660295573506?collapsed=1",
-    "https://www.linkedin.com/embed/feed/update/urn:li:share:7320803035293573120?collapsed=1",
-    "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7308839915805376512",
-    "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7331320643541422081?collapsed=1",
-    "https://www.linkedin.com/embed/feed/update/urn:li:share:7320474480449912832?collapsed=1",
-  ];
-
-  const test = (
-    <iframe
-      src="https://www.linkedin.com/embed/feed/update/urn:li:share:7340054711737151489?collapsed=1"
-      height="500"
-      width="504"
-      frameborder="0"
-      allowfullscreen=""
-      title="Embedded post"
-    ></iframe>
-  );
+  const [iframeSources, setIframeSources] = useState([]);
   const [loadedCount, setLoadedCount] = useState(0);
 
   useEffect(() => {
-    if (loadedCount === iframeSources.length) {
-      onReady?.(); // call onReady once all iframes are loaded
+    async function fetchNews() {
+      try {
+        const response = await fetch(
+          "https://loving-bird-9ef3b0470a.strapiapp.com/api/news-posts"
+        );
+        const data = await response.json();
+        const posts = data.data || [];
+
+        const sortedEmbeds = posts
+          .map((item) => {
+            const html = item.LinkedIn || item.attributes?.LinkedIn;
+            const publishedAt =
+              item.publishedAt || item.attributes?.publishedAt;
+            return { html, publishedAt };
+          })
+          .filter((item) => item.html && item.publishedAt)
+          .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+
+        const urls = sortedEmbeds
+          .map((item) => {
+            const match = item.html.match(/src="([^"]+)"/);
+            return match ? match[1] : null;
+          })
+          .filter(Boolean);
+
+        setIframeSources(urls);
+      } catch (error) {
+        console.error("Error fetching LinkedIn posts:", error);
+      }
+    }
+
+    fetchNews();
+  }, []);
+
+  useEffect(() => {
+    if (loadedCount === iframeSources.length && iframeSources.length > 0) {
+      onReady?.();
     }
   }, [loadedCount, iframeSources.length, onReady]);
 
@@ -42,21 +60,15 @@ export default function NewsOverview({ onReady }) {
     <div className="news-overview-layout">
       <SubPageHeader
         name={language === "en" ? "NEWS" : "NOUVELLES"}
-        extraContent={
-          <div className="news-overview-header-text">
-            {/* Optional subtitle here */}
-          </div>
-        }
+        extraContent={<div className="news-overview-header-text"></div>}
       />
-
-      <div className="news-linkedin-feed">{test}</div>
 
       <div className="news-linkedin-feed">
         {iframeSources.map((src, index) => (
           <iframe
             key={index}
             src={src}
-            height="671"
+            height="500"
             width="504"
             frameBorder="0"
             allowFullScreen
