@@ -16,6 +16,16 @@ export default function NewsOverview({ onReady }) {
     "https://www.linkedin.com/embed/feed/update/urn:li:share:7320474480449912832?collapsed=1",
   ];
 
+  const test = (
+    <iframe
+      src="https://www.linkedin.com/embed/feed/update/urn:li:share:7340054711737151489?collapsed=1"
+      height="500"
+      width="504"
+      frameborder="0"
+      allowfullscreen=""
+      title="Embedded post"
+    ></iframe>
+  );
   const [loadedCount, setLoadedCount] = useState(0);
 
   useEffect(() => {
@@ -38,6 +48,9 @@ export default function NewsOverview({ onReady }) {
           </div>
         }
       />
+
+      <div className="news-linkedin-feed">{test}</div>
+
       <div className="news-linkedin-feed">
         {iframeSources.map((src, index) => (
           <iframe
