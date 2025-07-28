@@ -22,9 +22,9 @@ const ExpertiseOverview = () => {
                 : "EXPERTISES & SOLUTIONS"
             }
           />
-          <p>{overview.content[language]}</p>
         </div>
 
+        <p>{overview.content[language]}</p>
         {/* <div className="expertise-overview-content">
           {expertiseCards.map((card, index) => (
             <div key={index} className="expertise-overview-card">
