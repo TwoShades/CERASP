@@ -65,7 +65,7 @@ const Sectors = () => {
 
       {/*====NHP====*/}
 
-      <div id="nhp">
+      <div id="natural-health-products">
         <SectorsNHP />
       </div>
 

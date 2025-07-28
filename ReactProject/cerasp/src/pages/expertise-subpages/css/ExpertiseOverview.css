@@ -4,8 +4,8 @@
 }
 
 .expertise-overview {
-  max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 4em;
+
   padding-bottom: 60px;
   /* margin-top: 120px; */
   margin-bottom: 90px;
@@ -38,6 +38,8 @@
 
 .expertise-overview-title {
   color: white;
+  background-color: cyan;
+  height: 100%;
   text-align: center;
   margin-bottom: 60px;
   position: relative;
@@ -51,13 +53,14 @@
   background-clip: text;
 }
 
-.expertise-overview-title p {
+.expertise-overview p {
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   color: #64748b;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
   font-weight: 400;
+  text-align: center;
 }
 
 .expertise-overview-content {
@@ -212,6 +215,7 @@
     padding-bottom: calc(192px + 4em);
   }
   .expertise-overview {
+    margin: 0 2em;
     padding: 70px 30px;
   }
 
