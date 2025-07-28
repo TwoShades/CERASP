@@ -20,12 +20,18 @@ const AboutEquipments = () => {
         );
         const json = await res.json();
 
-        const cleaned = json.data.map((item) => ({
-          id: item.id,
-          name: item.Name || "",
-          site: item.site || "Unknown",
-          photoUrl: item.Image?.url || "",
-        }));
+        const cleaned = json.data
+          .map((item) => ({
+            id: item.id,
+            name: item.Name || "",
+            site: item.site || "Unknown",
+            photoUrl: item.Image?.url || "",
+          }))
+          .sort((a, b) =>
+            a.name.localeCompare(b.name, language === "fr" ? "fr" : "en", {
+              sensitivity: "base",
+            })
+          );
 
         setAllEquipments(cleaned);
       } catch (err) {
