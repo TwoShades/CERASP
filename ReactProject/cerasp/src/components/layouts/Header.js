@@ -7,22 +7,22 @@ import "./css/Header.css";
 
 const Header = () => {
   const { language, setLanguage } = useContext(LanguageContext);
-  const { isMobile, isTablet } = useContext(ScreenSizeContext);
+  const { isMobile, isTablet } = useContext(ScreenSizeContext); // still useful if used elsewhere
 
   return (
     <div className="layout-header">
       <div className="bg-test"></div>
-      {!(isTablet || isMobile) && (
-        <Link to="/">
-          <img
-            src="/logos/cerasplogo.png"
-            alt="CERASP Logo"
-            className="header-logo"
-          />
-        </Link>
-      )}
+
+      <Link to="/">
+        {/* <img
+          src="/logos/cerasplogo.png"
+          alt="CERASP Logo"
+          className="header-logo-centered"
+        /> */}
+      </Link>
 
       <Navigation />
+
       <div className="language-switcher">
         <button
           className={`language-button ${language === "fr" ? "active" : ""}`}

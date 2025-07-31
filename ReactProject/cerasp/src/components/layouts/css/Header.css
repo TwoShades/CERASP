@@ -2,29 +2,38 @@
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 90px;
   width: 100%;
   z-index: 10;
-  background-color: #F0F4F8;
-  box-shadow: 0px 0px 4px 1px rgb(2, 32, 88);
+  background: none;
+  box-shadow: none;
+}
+
+.bg-test {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  top: 0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 5;
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .language-switcher {
   display: flex;
-  margin-right: 20px;
+  position: fixed;
+  left: 20px;
+  top: 20px;
   z-index: 6;
 }
 
-.header-logo {
-  width: 150px;
-  height: auto;
-  margin-left: 20px;
-  z-index: 6;
-}
-
-.header-logo-centered {
-  z-index: 100;
+.language-switcher-spacer {
+  color: grey;
+  text-shadow: 1px 1px 2px rgba(2, 32, 88, 0.8);
 }
 
 .language-button {
@@ -39,50 +48,17 @@
 }
 
 .language-button.active {
-  color: black;
+  color: white;
   font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(2, 32, 88, 0.8);
 }
 
-.bg-test {
+.header-logo {
   display: none;
 }
 
-@media (max-width: 1495px) {
-}
-
-@media (max-width: 1200px) {
-  .bg-test {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    top: 0;
-    backdrop-filter: blur(4px); /* Apply blur effect */
-    -webkit-backdrop-filter: blur(4px); /* Safari support */
-    z-index: 5;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-  }
-
-  .layout-header {
-    background: none;
-    box-shadow: none;
-    justify-content: center;
-  }
-
-  .language-switcher {
-    position: fixed;
-    left: 20px;
-    top: 20px;
-  }
-
-  .language-switcher-spacer {
-    color: grey;
-    text-shadow: 1px 1px 2px rgba(2, 32, 88, 0.8);
-  }
-
-  .language-button.active {
-    color: white;
-    text-shadow: 1px 1px 2px rgba(2, 32, 88, 0.8);
-  }
+.header-logo-centered {
+  width: 150px;
+  height: auto;
+  z-index: 100;
 }

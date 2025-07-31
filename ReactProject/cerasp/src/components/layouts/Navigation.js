@@ -11,10 +11,9 @@ const Navigation = () => {
   const navigate = useNavigate();
   const navRef = useRef(null);
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet } = useContext(ScreenSizeContext);
+  const { isMobile, isTablet } = useContext(ScreenSizeContext); // Kept in case you use elsewhere
 
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hoveredMenu, setHoveredMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState(null);
 
   const handleLinkClick = (linkPath) => {
@@ -66,31 +65,25 @@ const Navigation = () => {
           <img
             src="/logos/cerasplogo.png"
             alt="CERASP Logo"
-            className={`nav-logo ${isMobile || isTablet ? "mobile" : "hidden"}`}
+            className="nav-logo mobile"
           />
         </div>
       </Link>
       <nav className="nav" ref={navRef}>
-        {(isMobile || isTablet) && (
-          <button
-            className="hamburger"
-            onClick={() => {
-              setMenuOpen((prev) => {
-                const newState = !prev;
-                if (!newState) setOpenSubMenu(null);
-                return newState;
-              });
-            }}
-          >
-            {menuOpen ? "✖" : "☰"}
-          </button>
-        )}
-
-        <ul
-          className={`nav-list ${
-            (isMobile || isTablet) && menuOpen ? "show" : ""
-          }`}
+        <button
+          className="hamburger"
+          onClick={() => {
+            setMenuOpen((prev) => {
+              const newState = !prev;
+              if (!newState) setOpenSubMenu(null);
+              return newState;
+            });
+          }}
         >
+          {menuOpen ? "✖" : "☰"}
+        </button>
+
+        <ul className={`nav-list ${menuOpen ? "show" : ""}`}>
           {sitemap.pages.map(
             ({ "page-id": pageId, nav, "sub-pages": subPages }) => {
               if (pageId.toLowerCase() === "landing") return null;
@@ -101,16 +94,7 @@ const Navigation = () => {
               );
 
               return (
-                <li
-                  key={pageId}
-                  className="nav-item"
-                  onMouseEnter={() =>
-                    !isMobile && !isTablet && setHoveredMenu(pageId)
-                  }
-                  onMouseLeave={() =>
-                    !isMobile && !isTablet && setHoveredMenu(null)
-                  }
-                >
+                <li key={pageId} className="nav-item">
                   <div className="dropdown-clickable-zone">
                     <a
                       href={`/${pageId}`}
@@ -123,7 +107,7 @@ const Navigation = () => {
                       {displayTitle}
                     </a>
 
-                    {(isMobile || isTablet) && filteredSubPages.length > 0 && (
+                    {filteredSubPages.length > 0 && (
                       <span
                         className="dropdown-toggle"
                         onClick={(e) => {
@@ -136,27 +120,22 @@ const Navigation = () => {
                     )}
                   </div>
 
-                  {(hoveredMenu === pageId ||
-                    ((isMobile || isTablet) && openSubMenu === pageId)) &&
-                    filteredSubPages.length > 0 && (
-                      <div className="dropdown">
-                        <ul>
-                          {filteredSubPages.map((subPage) => (
-                            <li
-                              key={subPage.id}
-                              onClick={() =>
-                                handleNavigateToSection(
-                                  subPage.id,
-                                  `/${pageId}`
-                                )
-                              }
-                            >
-                              {subPage[language]}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                  {openSubMenu === pageId && filteredSubPages.length > 0 && (
+                    <div className="dropdown">
+                      <ul>
+                        {filteredSubPages.map((subPage) => (
+                          <li
+                            key={subPage.id}
+                            onClick={() =>
+                              handleNavigateToSection(subPage.id, `/${pageId}`)
+                            }
+                          >
+                            {subPage[language]}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </li>
               );
             }
