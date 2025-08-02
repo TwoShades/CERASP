@@ -1,26 +1,47 @@
 import "./css/AboutOverview.css";
-import React, { useContext, useState } from "react";
+import React, { useContext, useLayoutEffect, useRef } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import gsap from "gsap";
 import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 import RevealOnScroll from "../../components/uicomponents/RevealOnScroll";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
   const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
   const content = aboutTranslations.aboutOverview;
 
-  const [openValue, setOpenValue] = useState(null);
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          id: "excellence-trigger",
+          trigger: ".values-excellence",
+          start: "top 25%",
+          end: "+=3000",
+          pin: true,
+          scrub: 1,
+          markers: true,
+        },
+      });
 
-  const toggle = (key) => {
-    setOpenValue(openValue === key ? null : key);
-  };
+      tl.to(".values-excellence", {
+        opacity: 1,
+        ease: "none",
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <div className="about-overview-layout">
-      <div className="about-overview">
-        {/* <div className="about-overview-video">
+    // <div className="about-overview">
+    <>
+      {/* <div className="about-overview-video">
           {language === "fr" ? (
             <iframe
               src="https://www.youtube.com/embed/6Wmb18o6Yos?si=5gXT4SvgAUZu-CEG"
@@ -41,7 +62,8 @@ export default function AboutOverview() {
             ></iframe>
           )}
         </div> */}
-        <div className="about-overview-history">
+
+      {/* <div className="about-overview-history">
           <div className="history-a">
             <RevealOnScroll direction="right">
               <h1>{language === "fr" ? "HISTORIQUE" : "HISTORY"}</h1>
@@ -81,22 +103,34 @@ export default function AboutOverview() {
             <h2>{content.values.title[language]}</h2>
             <p>{content.values[language]}</p>
           </RevealOnScroll>
-        </div>
+        </div> */}
 
-        <div className="about-overview-secondary-sections">
-          {["excellence", "innovation", "collaboration", "openness"].map(
-            (key) => (
-              <details
-                key={key}
-                className={`about-overview-secondary values-${key}`}
-              >
-                <summary>{content.values[key].title[language]}</summary>
-                <p>{content.values[key][language]}</p>
-              </details>
-            )
-          )}
+      <div className="about-overview-secondary-sections">
+        <div className="spacer" />
+        <div className="about-overview-secondary values-excellence">
+          <h3>{content.values.excellence.title[language]}</h3>
+          <p>{content.values.excellence[language]}</p>
         </div>
+        <div className="spacer" />
+        <div className="spacer" />
+        <div className="about-overview-secondary values-innovation">
+          <h3>{content.values.innovation.title[language]}</h3>
+          <p>{content.values.innovation[language]}</p>
+        </div>
+        <div className="spacer" />
+        <div className="spacer" />
+        <div className="about-overview-secondary values-collaboration">
+          <h3>{content.values.collaboration.title[language]}</h3>
+          <p>{content.values.collaboration[language]}</p>
+        </div>
+        <div className="spacer" />
+        <div className="spacer" />
+        <div className="about-overview-secondary values-openness">
+          <h3>{content.values.openness.title[language]}</h3>
+          <p>{content.values.openness[language]}</p>
+        </div>{" "}
+        */}
       </div>
-    </div>
+    </>
   );
 }

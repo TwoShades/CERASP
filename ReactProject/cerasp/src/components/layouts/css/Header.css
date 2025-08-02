@@ -8,6 +8,7 @@
   z-index: 10;
   background-color: white;
   border-bottom: 1px solid #e0e0e0;
+  top: 0;
 }
 
 .language-switcher {

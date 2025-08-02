@@ -1,7 +1,10 @@
 /* AboutOverview.css - Light Version */
 .about-overview {
   width: 100vw;
-  padding-bottom: 10em;
+}
+
+.spacer {
+  height: 100vh;
 }
 
 .about-overview-header-text {
@@ -17,23 +20,11 @@
   margin-left: 20vw;
   margin-bottom: 2em;
   width: 6vw;
-  height: calc(6vw * 9 / 16); /* preserves 16:9 aspect ratio */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.5);
+  height: calc(6vw * 9 / 16);
   border: none;
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Add subtle animation to icons */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
 }
 
 .about-overview-history {
@@ -57,7 +48,6 @@
   grid-column: 2;
   width: 20vw;
   height: auto;
-  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.5); */
 }
 
 .history-b p {
@@ -101,69 +91,31 @@
 }
 
 .about-overview-secondary-sections {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
-  justify-content: center;
-  margin-top: -2em;
+  margin-top: 20em;
 }
 
-.about-overview-secondary {
-  border: 3px solid var(--gridline-light-blue);
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  line-height: 1.4em;
+.about-overview-secondary h3 {
+  font-size: var(--text-l);
+  color: var(--gridline-med-blue);
 }
 
 .values-excellence,
 .values-innovation,
 .values-collaboration,
 .values-openness {
+  height: 30vh;
   padding: 12px 16px;
   width: 50vw;
 }
 
-.about-overview-secondary:hover {
-  /* border-color: var(--gridline-med-blue); */
-  box-shadow: 0 4px 6px var(--gridline-med-blue);
-}
-
-.about-overview-secondary summary {
-  font-size: var(--text-l);
-  cursor: pointer;
-  padding: 20px 24px;
-  font-weight: 600;
-  border: none;
-  position: relative;
-  list-style: none;
-  transition: background-color 0.2s ease;
-}
-
-.about-overview-secondary summary::marker {
-  display: none;
-}
-
-.about-overview-secondary summary::after {
-  content: "▶";
-  position: absolute;
-  right: 24px;
-  color: #0056b3;
-  transition: transform 0.3s ease;
-  font-size: 14px;
-}
-
-.about-overview-secondary[open] summary::after {
-  transform: rotate(90deg);
-}
-
-.about-overview-secondary[open] summary {
-  border-bottom: 1px solid #e6e6e6;
+.values-excellence {
+  opacity: 0;
 }
 
 .about-overview-secondary p {
-  padding: 10px;
   margin: 0;
   color: #555555;
   font-size: var(--text-m);
