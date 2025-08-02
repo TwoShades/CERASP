@@ -1,6 +1,6 @@
 /* GLOBAL CSS */
 :root {
-  --bg-color-light: #f4faff;
+  /* --bg-color-light: #f4faff; */
   --text-color-light: #1a1a1a;
   --secondary-text-color-light: #4f4f4f;
   --primary-blue: #005ba1;
@@ -8,29 +8,24 @@
   --secondary-blue: #3ea7e1;
   --secondary-hover-blue: #72c5f0;
 
-  /* Project Panels */
-  --project-panel-background: rgba(255, 255, 255, 0.5);
-  --project-panel-color: black;
-  --project-panel-border-radius: 10px;
-  --project-panel-padding: 5%;
-  --project-panel-shadow: 1px 1px 2px 2px rgba(129, 129, 129, 0.068);
-  --temp-background-color: rgba(190, 220, 255, 0.062);
+  /* Aug-1 updated mockup */
+  --text-xl: 3rem;
+  --text-l: 2rem;
+  --text-m: 1.6rem;
+  --gridline-light-blue: #e7f3ff;
+  --gridline-med-blue: #0056b3;
 
-  /* GLOBAL PADDING FULLSCREEN */
-  --global-page-padding: 0 8em 0 8em;
+  /* Margins, used for animating scrolling elements */
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 8rem;
+  --space-xxl: 12rem;
 
   @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
 
   font-family: "Urbanist", sans-serif !important;
-
-  /* article,
-  header,
-  section,
-  figure,
-  blockquote {
-    margin: 0;
-    padding: 0;
-  } */
 
   figure {
     width: 100%;
@@ -90,10 +85,10 @@ body::before {
   --scroll-progress: 0;
   background: repeating-linear-gradient(
     to right,
-    transparent,
+    transparent 0,
     transparent calc(20vw - 2px),
-    #bbdeff calc(20vw - 2px),
-    #bbdeff 20vw
+    var(--gridline-light-blue) calc(20vw - 2px),
+    var(--gridline-light-blue) 20vw
   );
 }
 

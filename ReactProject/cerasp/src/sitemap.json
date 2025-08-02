@@ -7,12 +7,11 @@
         "fr": "À propos"
       },
       "sub-pages": [
-        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
-        { "id": "facilities", "en": "Facilities", "fr": "Installations" },
-        { "id": "equipments", "en": "Equipments", "fr": "Équipements" },
-        { "id": "our-team", "en": "Our Team", "fr": "Notre équipe" },
-        { "id": "board", "en": "Board", "fr": "Conseil d'administration" },
-        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
+        { "id": "history", "en": "HISTORY", "fr": "HISTORIQUE" },
+        { "id": "facilities", "en": "FACILITIES", "fr": "INSTALLATIONS" },
+        { "id": "equipment", "en": "EQUIPMENT", "fr": "ÉQUIPEMENT" },
+        { "id": "our-team", "en": "OUR TEAM", "fr": "NOTRE ÉQUIPE" },
+        { "id": "board", "en": "BOARD", "fr": "CONSEIL D'ADMINISTRATION" }
       ]
     },
     {

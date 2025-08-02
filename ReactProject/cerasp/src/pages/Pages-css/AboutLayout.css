@@ -1,9 +1,31 @@
 .about-page {
-  /* background-color: #ffffff; */
-  color: #555;
+  color: #424242;
+  height: 100dvh;
+  /* position: relative; */
 }
 
-.about-page h1 {
-  padding-left: 1em;
-  text-align: left;
+.about-sidebar {
+  margin-top: 130px;
+  margin-left: 50px;
+  height: auto;
+}
+
+.about-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.about-sidebar li {
+  margin: 0 0 2em 0;
+}
+
+.about-sidebar a {
+  text-decoration: none;
+  color: #0056b3;
+  font-weight: 600;
+  font-size: var(--text-xl);
+}
+
+.about-sidebar a:hover {
+  color: rgb(44, 58, 85);
 }

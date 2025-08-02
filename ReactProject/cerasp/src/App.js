@@ -37,10 +37,10 @@ function App() {
           <Route path="/" element={<LandingPage />} />
 
           <Route path="/about" element={<AboutLayout />}>
-            <Route index element={<AboutOverview />} />
+            <Route path="history" element={<AboutOverview />} />
             <Route path="facilities" element={<AboutFacilities />} />
             <Route path="equipment" element={<AboutEquipments />} />
-            <Route path="team" element={<AboutTeam />} />
+            <Route path="our-team" element={<AboutTeam />} />
             <Route path="board" element={<AboutBoard />} />
           </Route>
 
