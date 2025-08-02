@@ -12,25 +12,9 @@ export default function AboutOverview() {
 
   return (
     <div className="about-overview-layout">
-      <SubPageHeader
-        name={content.overview.title[language]}
-        extraContent={
-          <div className="about-overview-header-text">
-            <p>{content.overview[language]}</p>
-          </div>
-        }
-      />
+      <SubPageHeader name={content.overview.title[language]} />
       <div className="about-overview">
         <div className="about-overview-video">
-          {isFullScreen && (
-            <div className="about-overview-video-icon">
-              <img
-                src="/svg/microscope-bacteria.svg"
-                alt="Microscope Bacteria"
-                className="about-icon-img"
-              />
-            </div>
-          )}
           {language === "fr" ? (
             <iframe
               width="560"
@@ -53,16 +37,6 @@ export default function AboutOverview() {
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             ></iframe>
-          )}
-
-          {isFullScreen && (
-            <div className="about-overview-video-icon">
-              <img
-                src="/svg/flask-gear.svg"
-                alt="Flask Gear"
-                className="about-icon-img"
-              />
-            </div>
           )}
         </div>
 

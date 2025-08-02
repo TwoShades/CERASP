@@ -1,6 +1,6 @@
 /* AboutOverview.css - Light Version */
 .about-overview-layout {
-  padding-top: 90px;
+  /* padding-top: 90px; */
 }
 
 .about-overview-header {
@@ -9,7 +9,6 @@
 .about-overview {
   padding: 0 8em 0em 8em;
   padding-bottom: 8em;
-  background-color: #ffffff;
 }
 
 .about-overview-header-text {
@@ -28,36 +27,8 @@
   justify-content: space-around;
   align-items: center;
   color: #333333;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  border-radius: 16px;
-  border: 1px solid #e6e6e6;
   position: relative;
   overflow: hidden;
-}
-
-.about-overview-video:hover {
-  border-color: #0056b3;
-  background-color: #f0f7ff;
-}
-
-.about-overview-video::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-      circle at 20% 20%,
-      rgba(0, 86, 179, 0.03) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(0, 86, 179, 0.03) 0%,
-      transparent 50%
-    );
-  pointer-events: none;
 }
 
 .about-overview-video iframe {
@@ -70,66 +41,6 @@
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-overview-video iframe:hover {
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16),
-    0 0 0 1px rgba(255, 255, 255, 0.7);
-}
-
-.about-overview-video-icon {
-  width: 120px;
-  height: 120px;
-  border-radius: 20px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 86, 179, 0.08) 0%,
-    rgba(0, 86, 179, 0.12) 100%
-  );
-  border: 2px solid rgba(0, 86, 179, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 24px;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 2;
-  transition: all 0.3s ease;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-
-.about-overview-video-icon:hover {
-  transform: translateY(-2px) scale(1.05);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 86, 179, 0.12) 0%,
-    rgba(0, 86, 179, 0.16) 100%
-  );
-  border-color: rgba(0, 86, 179, 0.2);
-  box-shadow: 0 8px 24px rgba(0, 86, 179, 0.15);
-}
-
-.about-overview-video-icon::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 86, 179, 0.1),
-    rgba(0, 86, 179, 0.05)
-  );
-  border-radius: 22px;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.about-overview-video-icon:hover::before {
-  opacity: 1;
 }
 
 .about-icon-img {

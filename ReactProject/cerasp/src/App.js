@@ -4,7 +4,15 @@ import { ThemeContext } from "./contexts/ThemeContext";
 import { LanguageContext } from "./contexts/LanguageContext";
 import Header from "./components/layouts/Header";
 import LandingPage from "./pages/LandingPage";
-import About from "./pages/About";
+
+// ABOUT AND ITS SUBPAGES
+import AboutLayout from "./pages/about-subpages/AboutLayout";
+import AboutOverview from "./pages/about-subpages/AboutOverview";
+import AboutFacilities from "./pages/about-subpages/AboutFacilities";
+import AboutEquipments from "./pages/about-subpages/AboutEquipments";
+import AboutTeam from "./pages/about-subpages/AboutTeam";
+import AboutBoard from "./pages/about-subpages/AboutBoard";
+
 import Expertises from "./pages/Expertises";
 import Sectors from "./pages/Sectors";
 import Projects from "./pages/Projects";
@@ -27,7 +35,15 @@ function App() {
       <main className={`main-content app ${theme}`}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/about" element={<About />} />
+
+          <Route path="/about" element={<AboutLayout />}>
+            <Route index element={<AboutOverview />} />
+            <Route path="facilities" element={<AboutFacilities />} />
+            <Route path="equipment" element={<AboutEquipments />} />
+            <Route path="team" element={<AboutTeam />} />
+            <Route path="board" element={<AboutBoard />} />
+          </Route>
+
           <Route path="/expertises" element={<Expertises />} />
           <Route path="/sector-of-activities" element={<Sectors />} />
           <Route path="/projects" element={<Projects />} />
