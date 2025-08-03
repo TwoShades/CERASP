@@ -20,6 +20,7 @@ const AboutLayout = () => {
 
   return (
     <div className="about-page page-content">
+      <div className="about-layout-color-panel"></div>
       {isOverview && (
         <aside className="about-sidebar">
           <ul>

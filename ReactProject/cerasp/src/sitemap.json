@@ -7,7 +7,7 @@
         "fr": "À propos"
       },
       "sub-pages": [
-        { "id": "history", "en": "HISTORY", "fr": "HISTORIQUE" },
+        { "id": "overview", "en": "OVERVIEW", "fr": "APERÇU" },
         { "id": "facilities", "en": "FACILITIES", "fr": "INSTALLATIONS" },
         { "id": "equipment", "en": "EQUIPMENT", "fr": "ÉQUIPEMENT" },
         { "id": "our-team", "en": "OUR TEAM", "fr": "NOTRE ÉQUIPE" },

@@ -16,17 +16,14 @@ const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (linkPath) => {
-    const isSamePage = pathname === linkPath;
-
-    if (isSamePage) {
+    if (pathname === linkPath) {
       scrollToTop();
-      setMenuOpen(false);
     } else {
       navigate(linkPath, {
         state: { scrollToTop: true, fromDifferentPage: true },
       });
-      setMenuOpen(false);
     }
+    setMenuOpen(false);
   };
 
   useEffect(() => {
@@ -51,6 +48,7 @@ const Navigation = () => {
           />
         </div>
       </Link>
+
       <nav className="nav" ref={navRef}>
         {(isMobile || isTablet) && (
           <button
@@ -71,9 +69,14 @@ const Navigation = () => {
 
             const displayTitle = nav[language] || nav["en"];
             const linkPath = `/${pageId}`;
+            const isActive =
+              pathname === linkPath || pathname.startsWith(linkPath + "/");
 
             return (
-              <li key={pageId} className="nav-item">
+              <li
+                key={pageId}
+                className={`nav-item ${isActive ? "active" : ""}`}
+              >
                 <a
                   href={linkPath}
                   onClick={(e) => {
@@ -81,7 +84,7 @@ const Navigation = () => {
                     handleLinkClick(linkPath);
                   }}
                 >
-                  {displayTitle}
+                  {displayTitle.toUpperCase()}
                 </a>
               </li>
             );

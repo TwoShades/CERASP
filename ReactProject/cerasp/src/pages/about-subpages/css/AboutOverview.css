@@ -1,10 +1,7 @@
 /* AboutOverview.css - Light Version */
 .about-overview {
   width: 100vw;
-}
-
-.spacer {
-  height: 100vh;
+  position: relative;
 }
 
 .about-overview-header-text {
@@ -34,20 +31,51 @@
   font-size: var(--text-l);
 }
 
+.history-img-a {
+  grid-column: 1 / 5;
+  width: 100%;
+  height: auto;
+  margin-top: var(--space-l);
+}
+
+.history-img-a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.history-c {
+  grid-column: 1 / 5;
+  margin-left: 5vw;
+  padding-right: 2em;
+}
+
+.history-c-content {
+  display: flex;
+  align-items: center;
+}
+
+.history-c-img {
+  width: 60vw;
+  padding-right: 1em;
+  margin-block: var(--space-l);
+}
+
 .history-a {
-  margin-block: var(--space-xxl);
+  margin-block: var(--space-xl);
   grid-column: 2 / 5;
+  padding-right: 1em;
 }
 
 .history-b {
   margin-block: var(--space-xxl);
   grid-column: 2 / 5;
+  padding-right: 1em;
 }
 
-.history-img {
-  grid-column: 2;
-  width: 20vw;
-  height: auto;
+.history-a h1 {
+  color: var(--gridline-med-blue);
 }
 
 .history-b p {
@@ -56,16 +84,27 @@
 }
 
 .about-overview-primary-sections {
+  position: relative;
   display: grid;
   grid-template-rows: (3, 1fr);
   grid-template-columns: repeat(5, 1fr);
   width: 100vw;
 }
 
+.about-overview-primary-sections::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5vw;
+  height: 100%;
+  background-color: rgb(211, 234, 255);
+}
+
 .about-overview-primary {
+  padding-right: 2em;
   grid-column: 2 / 5;
   box-sizing: border-box;
-  padding: 32px;
   font-size: var(--text-l);
   margin-block: var(--space-l);
   line-height: 1.4em;
@@ -91,12 +130,14 @@
 }
 
 .about-overview-secondary-sections {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100vw;
 }
 
+.about-overview-secondary-sections-align {
+  grid-column: 2 / 5;
+}
 .about-overview-secondary h3 {
   font-size: var(--text-l);
   color: var(--gridline-med-blue);
@@ -106,13 +147,8 @@
 .values-innovation,
 .values-collaboration,
 .values-openness {
-  height: 30vh;
-  padding: 12px 16px;
+  height: 100vh;
   width: 50vw;
-}
-
-.values-excellence {
-  opacity: 0;
 }
 
 .about-overview-secondary p {
@@ -120,7 +156,6 @@
   color: #555555;
   font-size: var(--text-m);
   line-height: 1.6;
-  background-color: #ffffff;
 }
 
 /* Responsive Design */
