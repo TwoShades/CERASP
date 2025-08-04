@@ -3,12 +3,10 @@
 }
 
 .about-facilities-intro {
-  height: 100vh;
+  margin-block: var(--space-xxl);
+  height: 60vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 10vw;
+  padding-left: 20vw;
 }
 
 .about-facilities-intro h1 {

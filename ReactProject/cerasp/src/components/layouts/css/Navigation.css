@@ -53,8 +53,8 @@
 }
 
 .nav-item a {
-  font-weight: 500;
-  font-size: var(--text-sm);
+  font-weight: 600;
+  font-size: 1.2em;
   text-decoration: none;
   color: var(--gridline-med-blue);
 }
@@ -73,8 +73,7 @@
   top: 95%;
   left: -03%;
   background-color: rgb(255, 255, 255);
-  box-shadow: -1px 0px 3px 0px rgb(112, 140, 177),
-    1px 0px 3px 0px rgb(112, 140, 177), 0px 1px 3px 0px rgb(78, 99, 126);
+  box-shadow: -1px 0px 3px 0px rgb(112, 140, 177), 1px 0px 3px 0px rgb(112, 140, 177), 0px 1px 3px 0px rgb(78, 99, 126);
   border-radius: 10px;
   box-sizing: border-box;
   padding: 0;
