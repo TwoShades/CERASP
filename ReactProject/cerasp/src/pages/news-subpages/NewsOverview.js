@@ -20,7 +20,7 @@ export default function NewsOverview({ onReady }) {
 
   useEffect(() => {
     if (loadedCount === iframeSources.length) {
-      onReady?.(); // call onReady once all iframes are loaded
+      onReady?.();
     }
   }, [loadedCount, iframeSources.length, onReady]);
 
@@ -30,14 +30,7 @@ export default function NewsOverview({ onReady }) {
 
   return (
     <div className="news-overview-layout">
-      <SubPageHeader
-        name={language === "en" ? "NEWS" : "NOUVELLES"}
-        extraContent={
-          <div className="news-overview-header-text">
-            {/* Optional subtitle here */}
-          </div>
-        }
-      />
+      <SubPageHeader name={language === "en" ? "NEWS" : "NOUVELLES"} extraContent={<div className="news-overview-header-text"></div>} />
       <div className="news-linkedin-feed">
         {iframeSources.map((src, index) => (
           <iframe

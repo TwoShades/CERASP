@@ -1,8 +1,7 @@
-// SectorLayout.js
 import sitemap from "../../sitemap.json";
 import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
-import "../Pages-css/Layout.css";
+import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 const ExpertiseLayout = () => {

@@ -4,14 +4,14 @@ import React, { useContext } from "react";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
-const AboutLayout = () => {
+const ProjectsLayout = () => {
   const location = useLocation();
 
-  const isOverview = location.pathname === "/about";
+  const isOverview = location.pathname === "/projects";
 
-  const aboutPage = sitemap.pages.find((page) => page["page-id"] === "about");
+  const projectsPage = sitemap.pages.find((page) => page["page-id"] === "projects");
 
-  const aboutSubPages = aboutPage ? aboutPage["sub-pages"] : [];
+  const projectsSubPages = projectsPage ? projectsPage["sub-pages"] : [];
 
   const { language } = useContext(LanguageContext);
 
@@ -21,9 +21,9 @@ const AboutLayout = () => {
       {isOverview && (
         <aside className="layout-sidebar">
           <ul>
-            {aboutSubPages.map((subPage) => (
+            {projectsSubPages.map((subPage) => (
               <li key={subPage.id}>
-                <a href={`/about/${subPage.id}`}>{subPage[language].toUpperCase()}</a>
+                <a href={`/projects/${subPage.id}`}>{subPage[language].toUpperCase()}</a>
               </li>
             ))}
           </ul>
@@ -37,4 +37,4 @@ const AboutLayout = () => {
   );
 };
 
-export default AboutLayout;
+export default ProjectsLayout;

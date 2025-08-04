@@ -35,7 +35,9 @@ import ExpertiseProductDev from "./pages/expertise-subpages/ExpertiseProductDev.
 import ExpertiseTechTransfer from "./pages/expertise-subpages/ExpertiseTechTransfer.js";
 
 // PROJECTS AND ITS SUBPAGES
-import Projects from "./pages/Projects";
+import ProjectsLayout from "./pages/projects-subpages/ProjectsLayout.js";
+import ProjectsOverview from "./pages/projects-subpages/ProjectsOverview.js";
+import ProjectsGrants from "./pages/projects-subpages/ProjectsGrants.js";
 
 // NEWS AND ITS SUBPAGES
 import News from "./pages/News";
@@ -80,7 +82,10 @@ function App() {
           <Route path="technology-transfer" element={<ExpertiseTechTransfer />} />
         </Route>
 
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects" element={<ProjectsLayout />}>
+          <Route path="overview" element={<ProjectsOverview />} />
+          <Route path="grants" element={<ProjectsGrants />} />
+        </Route>
         <Route path="/news" element={<News />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/equipment-list" element={<EquipmentsMasterList />} />
