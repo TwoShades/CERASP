@@ -4,23 +4,16 @@ import ContactUs from "./ContactUs/ContactUs.js";
 
 import useScrollToPanel from "../hooks/useScrollToPanel.js";
 import useScrollOnNavigate from "../hooks/useScrollOnNavigate.js";
-import UnderConstruction from "../components/layouts/UnderConstruction.js";
 
 import SectorsOverview from "./sectors-subpages/SectorsOverview.js";
 import SectorsNHP from "./sectors-subpages/SectorsNHP.js";
 import SectorsPharmaceutical from "./sectors-subpages/SectorsPharmaceutical.js";
 import SectorsBiopharmaceutical from "./sectors-subpages/SectorsBiopharmaceutical.js";
-
-import SectorsbioTechBioMan from "./sectors-subpages/SectorsbioTechBioMan.js";
+import SectorsbioTechBioMan from "./sectors-subpages/SectorsBiotechBiomanufacturing.js";
 import SectorsCosmeceuticals from "./sectors-subpages/SectorsCosmeceuticals.js";
-import SectorsProtein from "./sectors-subpages/SectorsProtein.js";
 import SectorsDiagnosticTools from "./sectors-subpages/SectorsDiagnosticTools.js";
-
 import SectorsAnimalHealth from "./sectors-subpages/SectorsAnimalHealth.js";
-import SectorsScaleUp from "./sectors-subpages/SectorsScaleUp.js";
 import SectorsNutraceutical from "./sectors-subpages/SectorsNutraceutical.js";
-import SectorsFeasibility from "./sectors-subpages/SectorsFeasibility.js";
-
 import SectorsMedicalDevices from "./sectors-subpages/SectorsMedicalDevices.js";
 
 const Sectors = () => {

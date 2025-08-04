@@ -1,18 +1,18 @@
-// AboutLayout.js
+// SectorLayout.js
 import sitemap from "../../sitemap.json";
 import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
 import "../Pages-css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
-const AboutLayout = () => {
+const ExpertiseLayout = () => {
   const location = useLocation();
 
-  const isOverview = location.pathname === "/about";
+  const isOverview = location.pathname === "/expertise";
 
-  const aboutPage = sitemap.pages.find((page) => page["page-id"] === "about");
+  const expertisePage = sitemap.pages.find((page) => page["page-id"] === "expertise");
 
-  const aboutSubPages = aboutPage ? aboutPage["sub-pages"] : [];
+  const expertiseSubPages = expertisePage ? expertisePage["sub-pages"] : [];
 
   const { language } = useContext(LanguageContext);
 
@@ -22,11 +22,9 @@ const AboutLayout = () => {
       {isOverview && (
         <aside className="layout-sidebar">
           <ul>
-            {aboutSubPages.map((subPage) => (
+            {expertiseSubPages.map((subPage) => (
               <li key={subPage.id}>
-                <a href={`/about/${subPage.id}`}>
-                  {subPage[language].toUpperCase()}
-                </a>
+                <a href={`/expertise/${subPage.id}`}>{subPage[language].toUpperCase()}</a>
               </li>
             ))}
           </ul>
@@ -40,4 +38,4 @@ const AboutLayout = () => {
   );
 };
 
-export default AboutLayout;
+export default ExpertiseLayout;

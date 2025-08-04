@@ -38,7 +38,7 @@
           "fr": "Santé animale"
         },
         {
-          "id": "bioTechBioMan",
+          "id": "biotech-biomanufacturing",
           "en": "Biotechnology & Biomanufacturing ",
           "fr": "Biotechnologie et biofabrication"
         },
@@ -66,12 +66,11 @@
           "id": "diagnostic-tools",
           "en": "Diagnostic Tools",
           "fr": "Outils de diagnostic"
-        },
-        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
+        }
       ]
     },
     {
-      "page-id": "expertises",
+      "page-id": "expertise",
       "nav": {
         "en": "Expertises & Solutions",
         "fr": "Expertises & Solutions"
@@ -84,7 +83,7 @@
           "fr": "De l’idée à la stratégie"
         },
         {
-          "id": "proofConcept",
+          "id": "proof-of-concept",
           "en": "Proof of Concept",
           "fr": "Preuve de concept"
         },
@@ -99,11 +98,10 @@
           "fr": "Mise à l’échelle & préparation à la production"
         },
         {
-          "id": "techTransfer",
+          "id": "technology-transfer",
           "en": "Technology Transfer & Regulatory Readiness",
           "fr": "Transfert Technologique & Préparation Réglementaire"
-        },
-        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
+        }
       ]
     },
     {
@@ -118,8 +116,7 @@
           "id": "grants",
           "en": "Grants Awarded",
           "fr": "Subventions accordées"
-        },
-        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
+        }
       ]
     },
     {
@@ -128,9 +125,7 @@
         "en": "News",
         "fr": "Nouvelles"
       },
-      "sub-pages": [
-        { "id": "overview", "en": "Latest news", "fr": "Dernières nouvelles" }
-      ]
+      "sub-pages": [{ "id": "overview", "en": "Latest news", "fr": "Dernières nouvelles" }]
     }
   ]
 }

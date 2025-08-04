@@ -1,9 +1,9 @@
-.about-page {
+.layout-page {
   color: #424242;
   position: relative;
 }
 
-.about-layout-color-panel {
+.layout-color-panel {
   position: fixed;
   top: 0;
   right: 0;
@@ -13,28 +13,28 @@
   z-index: 10;
 }
 
-.about-sidebar {
+.layout-sidebar {
   margin-top: 130px;
   margin-left: 50px;
   height: auto;
 }
 
-.about-sidebar ul {
+.layout-sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.about-sidebar li {
+.layout-sidebar li {
   margin: 0 0 1em 0;
 }
 
-.about-sidebar a {
+.layout-sidebar a {
   text-decoration: none;
   color: #0056b3;
   font-weight: 600;
   font-size: var(--text-xl);
 }
 
-.about-sidebar a:hover {
+.layout-sidebar a:hover {
   color: rgb(44, 58, 85);
 }

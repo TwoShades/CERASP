@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "./css/SectorsbioTechBioMan.css";
+import "./css/SectorsBiotechBiomanufacturing.css";
 import { FileText, Shield, Globe, CheckCircle } from "lucide-react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import regulatoryData from "./sectors-translation.json"; // <- path to your JSON
 
-export default function SectorsbioTechBioMan() {
+export default function SectorsBiotechBiomanufacturing() {
   const { language } = useContext(LanguageContext);
   const data = regulatoryData.bioTechBioMan;
   const t = (path) => path?.[language] || "";
