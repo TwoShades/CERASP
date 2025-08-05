@@ -47,16 +47,17 @@
   position: relative;
 }
 
+.nav-item a {
+  font-weight: 400;
+  font-size: 1.4em;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--gridline-med-blue);
+}
+
 .nav-item.active a {
   color: rgb(44, 58, 85);
   font-weight: bold;
-}
-
-.nav-item a {
-  font-weight: 600;
-  font-size: 1.2em;
-  text-decoration: none;
-  color: var(--gridline-med-blue);
 }
 
 .nav-item:hover {

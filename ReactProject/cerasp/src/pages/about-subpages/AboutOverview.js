@@ -47,11 +47,7 @@ export default function AboutOverview() {
         </div>
 
         <div className="history-img-a">
-          <img
-            src="/photos/FromOldSite/biotech-scaled.jpg"
-            alt="Biotech facility"
-            className="history-img"
-          />
+          <img src="/photos/FromOldSite/biotech-scaled.jpg" alt="Biotech facility" className="history-img" />
         </div>
 
         <div className="history-b">
@@ -64,11 +60,7 @@ export default function AboutOverview() {
           <RevealOnScroll direction="right">
             <div className="history-c-content">
               <div className="history-c-img">
-                <img
-                  src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
-                  alt="Biotech facility"
-                  className="history-img"
-                />
+                <img src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg" alt="Biotech facility" className="history-img" />
               </div>
               <div className="history-c-text">
                 <p>{content.overviewC[language]}</p>
@@ -79,26 +71,17 @@ export default function AboutOverview() {
       </div>
 
       <div className="about-overview-primary-sections">
-        <RevealOnScroll
-          className="about-overview-primary mission"
-          direction="right"
-        >
+        <RevealOnScroll className="about-overview-primary mission" direction="right">
           <h2>{content.mission.title[language]}</h2>
           <p>{content.mission[language]}</p>
         </RevealOnScroll>
 
-        <RevealOnScroll
-          className="about-overview-primary vision"
-          direction="right"
-        >
+        <RevealOnScroll className="about-overview-primary vision" direction="right">
           <h2>{content.vision.title[language]}</h2>
           <p>{content.vision[language]}</p>
         </RevealOnScroll>
 
-        <RevealOnScroll
-          className="about-overview-primary values"
-          direction="right"
-        >
+        <RevealOnScroll className="about-overview-primary values" direction="right">
           <h2>{content.values.title[language]}</h2>
           <p>{content.values[language]}</p>
         </RevealOnScroll>
@@ -144,13 +127,7 @@ export default function AboutOverview() {
             </div>
           </ScrollFadeInSection>
 
-          <ScrollFadeInSection
-            id="openness"
-            scrollDuration={1000}
-            start="top 25%"
-            pin={true}
-            // markers={true}
-          >
+          <ScrollFadeInSection id="openness" scrollDuration={1000} start="top 25%" pin={true} markers={true}>
             <div className="about-overview-secondary values-openness">
               <h3>{content.values.openness.title[language]}</h3>
               <p>{content.values.openness[language]}</p>

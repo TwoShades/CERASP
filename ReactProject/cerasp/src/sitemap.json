@@ -39,18 +39,18 @@
         },
         {
           "id": "biotech-biomanufacturing",
-          "en": "Biotechnology & Biomanufacturing ",
-          "fr": "Biotechnologie et biofabrication"
+          "en": "Biotech/Biomanufacturing ",
+          "fr": "Biotech/biofabrication"
         },
         {
           "id": "natural-health-products",
-          "en": "Natural Health Products",
+          "en": "Natural Health",
           "fr": "Produits de santé naturels"
         },
         {
           "id": "cosmeceuticals",
-          "en": "Cosmetics & Cosmeceuticals",
-          "fr": "Cosmétiques et cosméceutiques"
+          "en": "Cosmetics/Cosmeceuticals",
+          "fr": "Cosmétiques/cosméceutiques"
         },
         {
           "id": "nutraceutical",

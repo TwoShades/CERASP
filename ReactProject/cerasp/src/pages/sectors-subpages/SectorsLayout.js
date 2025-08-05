@@ -17,7 +17,21 @@ const SectorsLayout = () => {
 
   return (
     <div className="layout-page page-content">
-      <div className="layout-color-panel"></div>
+      {/* <div className="layout-color-panel"></div> */}
+      {location.pathname === "/sector-of-activities" && (
+        <>
+          <div className="layout-bg-img">
+            <img src="/photos/FromOldSite/animal-health-scaled.jpg" alt="Animal Health" />
+          </div>
+          <div className="layout-rotated-title">{language === "fr" ? <h1>SECTEURS</h1> : <h1>SECTORS</h1>}</div>
+          <div className="layout-panel-1"></div>
+          <div className="layout-panel-2"></div>
+          <div className="layout-panel-3"></div>
+          <div className="layout-panel-4"></div>
+        </>
+      )}
+      <div className="layout-panel-5"></div>
+
       {isOverview && (
         <aside className="layout-sidebar">
           <ul>

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/layouts/Header";
 import LandingPage from "./pages/LandingPage";
 import "./App.css";
+import useLenis from "./hooks/useLenis";
 
 // ABOUT AND ITS SUBPAGES
 import AboutLayout from "./pages/about-subpages/AboutLayout";
@@ -46,6 +47,7 @@ import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
+  useLenis();
   return (
     <ScreenSizeProvider>
       <Header />
@@ -62,7 +64,7 @@ function App() {
 
         <Route path="/sector-of-activities" element={<SectorsLayout />}>
           <Route path="overview" element={<SectorsOverview />} />
-          <Route path="nhp" element={<SectorsNHP />} />
+          <Route path="natural-health-products" element={<SectorsNHP />} />
           <Route path="pharmaceutical" element={<SectorsPharmaceutical />} />
           <Route path="biopharmaceutical" element={<SectorsBiopharmaceutical />} />
           <Route path="biotech-biomanufacturing" element={<SectorsbioTechBioMan />} />
