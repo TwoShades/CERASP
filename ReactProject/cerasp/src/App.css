@@ -12,7 +12,7 @@
   --text-xl: 3rem;
   --text-l: 2rem;
   --text-m: 1.6rem;
-  --gridline-light-blue: #fafafa;
+  --gridline-light-blue: #f0f0f0;
   --gridline-med-blue: #0056b3;
 
   /* Margins, used for animating scrolling elements */
@@ -68,8 +68,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom left, transparent 50%, #3498db 50%)
-    center/200% 200%;
+  background: linear-gradient(to bottom left, transparent 50%, #3498db 50%) center/200% 200%;
   z-index: -1;
 }
 

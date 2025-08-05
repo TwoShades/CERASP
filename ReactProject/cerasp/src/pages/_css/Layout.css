@@ -3,14 +3,63 @@
   position: relative;
 }
 
-.layout-color-panel {
+.layout-bg-img {
   position: fixed;
+  top: 0;
+  left: 20vw;
+}
+
+.layout-bg-img img {
+  height: 100vh;
+}
+.layout-panel-1 {
+  position: fixed;
+  z-index: 10;
+  /* background-color: rgba(255, 255, 255, 0.151); */
+  top: 0;
+  left: 0vw;
+  width: 20vw;
+  height: 100vh;
+}
+
+.layout-panel-2 {
+  position: fixed;
+  z-index: 10;
+  /* background-color: rgba(0, 85, 255, 0.151); */
+  top: 0;
+  left: 20vw;
+  width: 20vw;
+  height: 100vh;
+}
+
+.layout-panel-3 {
+  position: fixed;
+  z-index: 10;
+  /* background-color: rgba(0, 60, 255, 0.438); */
+  top: 0;
+  left: 40vw;
+  width: 20vw;
+  height: 100vh;
+}
+
+.layout-panel-4 {
+  position: fixed;
+  z-index: 10;
+  /* background-color: rgba(0, 85, 255, 0.253); */
+  top: 0;
+  left: 60vw;
+  width: 20vw;
+  height: 100vh;
+}
+
+.layout-panel-5 {
+  position: fixed;
+  z-index: 10;
+  background-color: rgb(45, 118, 255);
   top: 0;
   right: 0;
   width: 20vw;
   height: 100vh;
-  background-color: rgb(45, 101, 255);
-  z-index: 10;
 }
 
 .layout-sidebar {
