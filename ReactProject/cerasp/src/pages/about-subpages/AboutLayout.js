@@ -21,7 +21,10 @@ const AboutLayout = () => {
       {location.pathname === "/about" && (
         <>
           <div className="layout-bg-img">
-            {/* <img src="/photos/FromOldSite/AdobeStock_141805489-scaled.jpg" alt="Biotech facility" className="history-img" /> */}
+            <img src="/photos/FromOldSite/AdobeStock_141805489-scaled.jpg" alt="Biotech facility" className="history-img" />
+          </div>
+          <div className="layout-rotated-title">
+            <h1>ABOUT US</h1>
           </div>
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>

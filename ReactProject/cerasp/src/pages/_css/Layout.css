@@ -12,6 +12,20 @@
 .layout-bg-img img {
   height: 100vh;
 }
+
+.layout-rotated-title {
+  z-index: 11;
+  margin-left: calc(20vw - 80px);
+  width: 30vw;
+  position: fixed;
+  margin-top: 20vh;
+  rotate: -90deg;
+}
+.layout-rotated-title h1 {
+  position: fixed;
+  font-size: var(--text-xxl);
+  color: #1d76d4;
+}
 .layout-panel-1 {
   position: fixed;
   /* background-color: rgba(255, 255, 255, 0.151); */
@@ -24,7 +38,7 @@
 .layout-panel-2 {
   position: fixed;
   z-index: 10;
-  /* background-color: rgba(0, 85, 255, 0.151); */
+  background-color: rgb(255, 255, 255);
   top: 0;
   left: 20vw;
   width: 20vw;
@@ -34,7 +48,7 @@
 .layout-panel-3 {
   position: fixed;
   z-index: 10;
-  /* background-color: rgba(0, 60, 255, 0.438); */
+  background-color: rgba(255, 255, 255, 0.438);
   top: 0;
   left: 40vw;
   width: 20vw;
@@ -53,7 +67,7 @@
 
 .layout-panel-5 {
   position: fixed;
-  z-index: 10;
+  z-index: 5;
   background-color: rgb(45, 118, 255);
   top: 0;
   right: 0;
@@ -81,7 +95,7 @@
   display: inline-block;
   text-decoration: none;
   color: #0056b3;
-  font-weight: 600;
+  font-weight: 200;
   font-size: var(--text-xl);
   transform: scale(1);
   transition: transform 0.2s ease-in-out, color 0.2s ease;
