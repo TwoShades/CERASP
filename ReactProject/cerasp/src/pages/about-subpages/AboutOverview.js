@@ -127,7 +127,13 @@ export default function AboutOverview() {
             </div>
           </ScrollFadeInSection>
 
-          <ScrollFadeInSection id="openness" scrollDuration={1000} start="top 25%" pin={true} markers={true}>
+          <ScrollFadeInSection
+            id="openness"
+            scrollDuration={1000}
+            start="top 25%"
+            pin={true}
+            // markers={true}
+          >
             <div className="about-overview-secondary values-openness">
               <h3>{content.values.openness.title[language]}</h3>
               <p>{content.values.openness[language]}</p>
