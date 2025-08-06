@@ -46,6 +46,21 @@
   height: 100%;
 }
 
+.facility-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-size: var(--text-l2);
+  background-color: white;
+}
+
+.facility-info h2,
+.facility-info p {
+  margin: 0.25em 0.25em; /* or whatever you want */
+  padding: 0;
+}
+
 .facility-jac-info {
   grid-column: 3 / 5;
 }
@@ -56,17 +71,6 @@
 
 .facility-admare-info {
   grid-column: 3 / 5;
-}
-
-.facility-jac-info,
-.facility-gg-info,
-.facility-admare-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  font-size: 0.6em;
 }
 
 .about-facilities-map {

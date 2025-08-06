@@ -24,63 +24,31 @@ export default function AboutFacilities() {
       <div className="about-facilities-content">
         <div className="facility-card facility-jac">
           <img
-            src={`/photos/facilities/${
-              isFullScreen
-                ? "john-abbott-college.jpg"
-                : "john-abbott-college-landscape.jpg"
-            }`}
+            src={`/photos/facilities/${isFullScreen ? "john-abbott-college.jpg" : "john-abbott-college-landscape.jpg"}`}
             alt="John Abbott College"
           />
         </div>
-        <div className="facility-jac-info">
+        <div className="facility-info facility-jac-info">
           {" "}
-          {language === "fr" ? (
-            <h2>Cégep John Abbott</h2>
-          ) : (
-            <h2>John Abbott College</h2>
-          )}
-          <p>
-            {language === "fr"
-              ? "Prototypage, fabrication à petit échelle et tests"
-              : "Prototyping, small-scale manufacturing and testing"}
-          </p>
+          {language === "fr" ? <h2>Cégep John Abbott</h2> : <h2>John Abbott College</h2>}
+          <p>{language === "fr" ? "Prototypage, fabrication à petit échelle et tests" : "Prototyping, small-scale manufacturing and testing"}</p>
         </div>
 
         <div className="facility-card facility-gg">
-          <img
-            src={`/photos/facilities/${
-              isFullScreen
-                ? "cegep-gerald-godin.jpg"
-                : "cegep-gerald-godin-landscape.jpg"
-            }`}
-            alt="Cégep Gérald-Godin"
-          />
+          <img src={`/photos/facilities/${isFullScreen ? "cegep-gerald-godin.jpg" : "cegep-gerald-godin-landscape.jpg"}`} alt="Cégep Gérald-Godin" />
         </div>
-        <div className="facility-gg-info">
+        <div className="facility-info facility-gg-info">
           {" "}
           <h2>Cégep Gérald-Godin</h2>
-          <p>
-            {language === "fr"
-              ? "Prototypage, fabrication à petit échelle et tests"
-              : "Prototyping, small-scale manufacturing and testing"}
-          </p>
+          <p>{language === "fr" ? "Prototypage, fabrication à petit échelle et tests" : "Prototyping, small-scale manufacturing and testing"}</p>
         </div>
         <div className="facility-card facility-admare">
-          <img
-            src={`/photos/facilities/${
-              isFullScreen ? "admare.jpg" : "admare-landscape.jpg"
-            }`}
-            alt="AdMare Facility"
-          />
+          <img src={`/photos/facilities/${isFullScreen ? "admare.jpg" : "admare-landscape.jpg"}`} alt="AdMare Facility" />
         </div>
-        <div className="facility-admare-info">
+        <div className="facility-info facility-admare-info">
           {" "}
           <h2>AdMare BioInnovations</h2>
-          <p>
-            {language === "fr"
-              ? "Laboratoire de recherche et développement"
-              : "Research laboratory and development"}
-          </p>
+          <p>{language === "fr" ? "Laboratoire de recherche et développement" : "Research laboratory and development"}</p>
         </div>
       </div>
 
