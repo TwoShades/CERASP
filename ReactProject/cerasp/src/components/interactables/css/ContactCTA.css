@@ -25,3 +25,19 @@
   text-align: center;
   font-size: var(--text-m);
 }
+
+@media screen and (max-width: 1200px) {
+  .contact-cta {
+    margin-left: 10vw;
+    width: 60vw;
+  }
+
+  .contact-cta p {
+    padding-left: 4em;
+    padding-right: 4em;
+    color: white;
+    align-self: center;
+    text-align: center;
+    font-size: var(--text-s);
+  }
+}
