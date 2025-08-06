@@ -19,7 +19,7 @@
 .subpage-overview-intro h1 {
   grid-column: 2 / 5;
   font-size: var(--text-l4);
-  color: var(--gridline-med-blue);
+  color: var(--color-button-blue);
 }
 
 .subpage-overview-intro p {
@@ -42,14 +42,30 @@
 
 .subpage-bullet-list {
   /* border: 2px dashed green; */
-  list-style: disc;
   margin-left: 20vw;
-  width: 30vw;
+  width: 35vw;
   padding-right: 1em;
   margin-bottom: var(--space-l);
 }
 
+.subpage-bullet-list li {
+  list-style-type: circle;
+}
+
+.subpage-bullet-list li::marker {
+  font-size: 1.5em;
+}
+
+.subpage-bullet-list h3 {
+  padding-left: 0.4em;
+  font-size: var(--text-l2);
+}
+
 .subpage-bullet-list p strong {
   font-weight: 800;
+  font-size: var(--text-s);
+}
+
+.subpage-bullet-list p {
   font-size: var(--text-s);
 }

@@ -18,6 +18,8 @@
   --text-s: 1.2rem;
   --gridline-light-blue: #f0f0f0;
   --gridline-med-blue: #0056b3;
+  --color-dodger-blue: #2d76ff;
+  --color-button-blue: #1d76d4;
 
   /* Margins, used for animating scrolling elements */
   --space-xs: 0.5rem;

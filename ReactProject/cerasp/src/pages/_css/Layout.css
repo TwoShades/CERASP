@@ -28,7 +28,7 @@
   margin: 0;
   position: fixed;
   font-size: var(--text-l6);
-  color: #1d76d4;
+  color: var(--color-button-blue);
 }
 
 .layout-sidebar {
@@ -106,7 +106,7 @@
 .layout-panel-5 {
   position: fixed;
   z-index: 5;
-  background-color: rgb(45, 118, 255);
+  background-color: var(--color-dodger-blue);
   top: 0;
   right: 0;
   width: 20vw;
