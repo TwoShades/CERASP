@@ -9,10 +9,13 @@
   --secondary-hover-blue: #72c5f0;
 
   /* Aug-1 updated mockup */
-  --text-xxl: 6rem;
-  --text-xl: 3rem;
-  --text-l: 2rem;
+  --text-l6: 6rem;
+  --text-l5: 5rem;
+  --text-l4: 4rem;
+  --text-l3: 3rem;
+  --text-l2: 2rem;
   --text-m: 1.6rem;
+  --text-s: 1.2rem;
   --gridline-light-blue: #f0f0f0;
   --gridline-med-blue: #0056b3;
 

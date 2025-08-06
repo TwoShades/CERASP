@@ -27,7 +27,7 @@
 .layout-rotated-title h1 {
   margin: 0;
   position: fixed;
-  font-size: var(--text-xxl);
+  font-size: var(--text-l6);
   color: #1d76d4;
 }
 .layout-panel-1 {
@@ -100,7 +100,7 @@
   text-decoration: none;
   color: #0056b3;
   font-weight: 200;
-  font-size: var(--text-l);
+  font-size: 2.4rem;
   transform: scale(1);
   transition: transform 0.2s ease-in-out, color 0.2s ease;
 }

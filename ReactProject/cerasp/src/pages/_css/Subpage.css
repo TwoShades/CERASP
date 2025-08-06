@@ -1,0 +1,34 @@
+.subpage {
+  width: 100vw;
+  position: relative;
+}
+
+.subpage-overview {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.subpage-overview-intro {
+  /* border: 2px dashed red; */
+  margin-block: var(--space-xl);
+  grid-column: 2 / 5;
+  padding-right: 1em;
+}
+
+.subpage-overview-intro p {
+  line-height: 1.4;
+  font-size: var(--text-l2);
+}
+
+.subpage-overview-intro h1 {
+  font-size: var(--text-l4);
+  color: var(--gridline-med-blue);
+}
+
+.subpage-bullet-list {
+  /* border: 2px dashed green; */
+  list-style: disc;
+  font-size: var(--text-s);
+  grid-column: 2 / 4;
+  padding-right: 1em;
+}

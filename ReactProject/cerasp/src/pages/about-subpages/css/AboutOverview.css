@@ -69,11 +69,6 @@
   color: var(--gridline-med-blue);
 }
 
-.history-b p {
-  grid-column: 2 / 4;
-  font-size: var(--text-l);
-}
-
 .about-overview-primary-sections {
   position: relative;
   display: grid;

@@ -44,74 +44,68 @@
       }
     ]
   },
+
   "ideation": {
     "title": {
       "en": "Ideation: From Concept to Strategy",
       "fr": "De l’idée à la stratégie"
     },
-    "sub1": {
-      "en": "At CERASP, we help turn ideas into viable products by providing expert support from early ideation to strategic planning, ensuring a solid foundation for successful development",
-      "fr": ""
-    },
-    "sub2": {
-      "en": "Driven by innovation and scientific rigor, our ideation services turn concepts into actionable plans—shaping the future of your innovation.",
-      "fr": ""
-    },
-    "sub3": {
-      "en": "Our Expertise Includes: ",
-      "fr": ""
+    "intro": {
+      "en": "At CERASP, we help turn ideas into viable products by providing expert support from early ideation to strategic planning, ensuring a solid foundation for successful development. Driven by innovation and scientific rigor, our ideation services turn concepts into actionable plans—shaping the future of your innovation. Our expertise includes:",
+      "fr": "Transformer une idée en solution viable commence par une base solide. Chez CERASP, nous accompagnons vos innovations de l’idéation à la planification stratégique, en évaluant la faisabilité et en posant les bases du succès. Notre approche, centrée sur l’innovation, la rigueur scientifique et la stratégie, vous aide à passer de l’idée à l’action en toute confiance. Notre expertise comprend :"
     },
     "content": {
-      "en": {
-        "overview": [
-          "Design and Sketch",
-          "We turn abstract ideas into clear visuals through initial designs and sketches, bringing your concept to life.",
-          "Feasibility Studies",
-          "We assess technical, regulatory, and commercial feasibility to validate your idea before major investment.",
-          "Consulting",
-          "Our experts offer strategic and scientific guidance to ensure your innovation is built on a solid foundation.",
-          "Applied Research",
-          "We conduct applied research to turn scientific discovery into practical solutions aligned with your goals."
-        ],
-        "capabilities": [
-          "Business Plan Development",
-          "We help shape your vision into a clear business plan with goals, strategy, resources, timelines, and financials.",
-          "Market Study and Evaluation",
-          "Our market analysis uncovers opportunities, evaluates demand, and positions your innovation competitively.",
-          "Mapping Activities",
-          "We create a clear roadmap from idea to market, aligning activities, stakeholders, and milestones."
-        ],
-        "collaboration": [
-          "Preformulation",
-          "We conduct preformulation studies to define optimal conditions and components for early product development.",
-          "Gap Analysis",
-          "We pinpoint gaps in your development and regulatory strategy to ensure compliance and success.",
-          "Literature Evaluation",
-          "We review scientific literature to support your concept with data and prevent redundancy.",
-          "Grant Search",
-          "We help identify and secure funding, including refundable SR&ED tax credits for Canadian companies, by managing the entire grant application process for projects ranging from $4K to over $10M, covering research, development, commercialization, and expansion needs."
-        ]
-      },
-      "fr": {
-        "overview": [
-          "Le CERASP est une installation conforme aux BPL qui opère selon des procédures alignées sur les BPF pour soutenir la préparation réglementaire.",
-          "Nous développons des procédés biopharmaceutiques prêts pour les BPF afin de faciliter un transfert technologique fluide vers les fabricants agréés.",
-          "Notre expertise couvre le développement des procédés en amont et en aval pour les produits biologiques et les thérapies avancées."
-        ],
-        "capabilities": [
-          "Optimisation des bioprocédés (fermentation et culture cellulaire)",
-          "Purification des biomolécules",
-          "Tests de bioactivité et de stabilité",
-          "Caractérisation génomique et microbienne",
-          "Développement de méthodes analytiques pour les produits biologiques"
-        ],
-        "collaboration": [
-          "Nous collaborons avec des universités et des CCTT pour soutenir l'innovation industrielle et le passage à l'échelle des thérapies avancées.",
-          "Spécialisé dans la culture de cellules microbiennes et de mammifères pour la production de protéines thérapeutiques et d'autres biologiques."
-        ]
-      }
+      "en": [
+        "Design and Sketch",
+        "We turn abstract ideas into clear visuals through initial designs and sketches, bringing your concept to life.",
+        "Feasibility Studies",
+        "We assess technical, regulatory, and commercial feasibility to validate your idea before major investment.",
+        "Consulting",
+        "Our experts offer strategic and scientific guidance to ensure your innovation is built on a solid foundation.",
+        "Applied Research",
+        "We conduct applied research to turn scientific discovery into practical solutions aligned with your goals.",
+        "Business Plan Development",
+        "We help shape your vision into a clear business plan with goals, strategy, resources, timelines, and financials.",
+        "Market Study and Evaluation",
+        "Our market analysis uncovers opportunities, evaluates demand, and positions your innovation competitively.",
+        "Mapping Activities",
+        "We create a clear roadmap from idea to market, aligning activities, stakeholders, and milestones.",
+        "Preformulation",
+        "We conduct preformulation studies to define optimal conditions and components for early product development.",
+        "Gap Analysis",
+        "We pinpoint gaps in your development and regulatory strategy to ensure compliance and success.",
+        "Literature Evaluation",
+        "We review scientific literature to support your concept with data and prevent redundancy.",
+        "Grant Search",
+        "We help identify and secure funding, including refundable SR&ED tax credits for Canadian companies, by managing the entire grant application process for projects ranging from $4K to over $10M, covering research, development, commercialization, and expansion needs."
+      ],
+      "fr": [
+        "Conception et croquis",
+        "Nous transformons vos idées en croquis et concepts visuels concrets, prêts à être développés.",
+        "Études de faisabilité",
+        "Nous évaluons la faisabilité technique, réglementaire et commerciale avant tout investissement majeur.",
+        "Consultation",
+        "Nos experts vous guident stratégiquement et scientifiquement pour structurer vos projets d’innovation.",
+        "Recherche appliquée",
+        "Nous menons des recherches appliquées ciblées pour transformer la science en solutions concrètes.",
+        "Plan d’affaires",
+        "Nous vous aidons à élaborer un plan d’affaires clair intégrant objectifs, stratégies, ressources, échéances et finances.",
+        "Étude et évaluation de marché",
+        "Nos analyses de marché identifient opportunités, évaluent la demande et positionnent votre innovation efficacement.",
+        "Cartographie des activités",
+        "Nous cartographions étapes, parties prenantes et jalons pour une feuille de route claire, de l’idée au marché.",
+        "Préformulation",
+        "Nous réalisons des études de préformulation pour définir les conditions et composants optimaux de votre produit.",
+        "Analyse des écarts et de risques",
+        "Nous identifions les lacunes de votre stratégie pour garantir le succès du projet.",
+        "Évaluation de la littérature scientifique",
+        "Nos revues de littérature consolident vos idées avec des données et évitent les doublons.",
+        "Recherche de subventions",
+        "Nous vous aidons à trouver et obtenir des financements adaptés, y compris le crédit d’impôt RS&DE pour les entreprises canadiennes, en prenant en charge l’ensemble du processus de demande. Nous ciblons des subventions non dilutives de 4 000 $ à plus de 10 millions, couvrant recherche, développement, prototypage, commercialisation et expansion (embauches, équipements, marchés, produits, services)."
+      ]
     }
   },
+
   "formulation": {
     "title": {
       "en": "Formulation",
@@ -356,11 +350,7 @@
     },
     "features": {
       "en": ["Natural Products", "Supplement Development", "Quality Testing"],
-      "fr": [
-        "Produits naturels",
-        "Développement de suppléments",
-        "Contrôle qualité"
-      ]
+      "fr": ["Produits naturels", "Développement de suppléments", "Contrôle qualité"]
     }
   },
   "advanced_research": {
@@ -370,18 +360,8 @@
       "fr": "Méthodologies de recherche de pointe et solutions innovantes pour les défis biologiques complexes."
     },
     "features": {
-      "en": [
-        "Lab Analysis",
-        "Method Development",
-        "Data Analytics",
-        "Innovation"
-      ],
-      "fr": [
-        "Analyse en laboratoire",
-        "Développement de méthodes",
-        "Analyse de données",
-        "Innovation"
-      ]
+      "en": ["Lab Analysis", "Method Development", "Data Analytics", "Innovation"],
+      "fr": ["Analyse en laboratoire", "Développement de méthodes", "Analyse de données", "Innovation"]
     }
   },
   "natural_solutions": {
@@ -391,18 +371,8 @@
       "fr": "Approches durables et écologiques pour le développement de produits de santé et de bien-être."
     },
     "features": {
-      "en": [
-        "Organic Compounds",
-        "Green Chemistry",
-        "Sustainability",
-        "Bio-Innovation"
-      ],
-      "fr": [
-        "Composés organiques",
-        "Chimie verte",
-        "Durabilité",
-        "Bio-innovation"
-      ]
+      "en": ["Organic Compounds", "Green Chemistry", "Sustainability", "Bio-Innovation"],
+      "fr": ["Composés organiques", "Chimie verte", "Durabilité", "Bio-innovation"]
     }
   },
   "scaleUpManufacturing": {
