@@ -21,6 +21,9 @@ const ExpertiseIdeation = () => {
           <h1>{title.toUpperCase()}</h1>
           <p>{intro}</p>
         </RevealOnScroll>
+        <RevealOnScroll direction="left" className="subpage-overview-image">
+          <img src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg" alt="Biotech facility" id="expertise-intro-img" height="600" />
+        </RevealOnScroll>
         {renderBullets(content)}
       </div>
     </div>

@@ -1,11 +1,10 @@
 import "./css/AboutOverview.css";
-import React, { useContext, useLayoutEffect, useRef } from "react";
+import "../_css/Subpage.css";
+import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
-import SubPageHeader from "../../components/layouts/SubPageHeader";
 import RevealOnScroll from "../../components/uicomponents/RevealOnScroll";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollFadeInSection } from "../../components/uicomponents/ScrollAnimations";
 
 export default function AboutOverview() {
@@ -40,7 +39,7 @@ export default function AboutOverview() {
 
       <div className="about-overview-history">
         <div className="history-a">
-          <RevealOnScroll direction="right">
+          <RevealOnScroll direction="right" className="subpage-overview-intro">
             <h1>{language === "fr" ? "HISTORIQUE" : "HISTORY"}</h1>
             <p>{content.overviewA[language]}</p>
           </RevealOnScroll>

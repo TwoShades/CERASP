@@ -4,31 +4,52 @@
 }
 
 .subpage-overview {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-direction: column;
 }
 
 .subpage-overview-intro {
-  /* border: 2px dashed red; */
+  /* border: 3px dashed blue; */
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin-block: var(--space-xl);
-  grid-column: 2 / 5;
-  padding-right: 1em;
-}
-
-.subpage-overview-intro p {
-  line-height: 1.4;
-  font-size: var(--text-l2);
 }
 
 .subpage-overview-intro h1 {
+  grid-column: 2 / 5;
   font-size: var(--text-l4);
   color: var(--gridline-med-blue);
+}
+
+.subpage-overview-intro p {
+  grid-column: 2 / 5;
+  line-height: 1.4;
+  font-size: var(--text-l2);
+  padding-right: 1em;
+}
+
+.subpage-overview-image {
+  display: flex;
+  width: 100vw;
+  /* border: 3px solid blue; */
+  margin-block: var(--space-xl);
+}
+
+.subpage-overview-img-right {
+  border: 2px dashed red;
 }
 
 .subpage-bullet-list {
   /* border: 2px dashed green; */
   list-style: disc;
-  font-size: var(--text-s);
-  grid-column: 2 / 4;
+  margin-left: 20vw;
+  width: 30vw;
   padding-right: 1em;
+  margin-bottom: var(--space-l);
+}
+
+.subpage-bullet-list p strong {
+  font-weight: 800;
+  font-size: var(--text-s);
 }
