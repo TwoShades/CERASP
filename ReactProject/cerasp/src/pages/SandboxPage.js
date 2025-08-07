@@ -5,6 +5,8 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import landingTranslations from "./landing-subpages/landing-translations.json";
 import { useState, useEffect, useContext } from "react";
 
+const content = landingTranslations;
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -94,13 +96,27 @@ const SandboxPage = () => {
           variants={whiteBoxVariants}
         >
           <div className="sandbox-gridlines-normal"></div>
-          <div className="layout-image-col">
-            <img
-              src="/photos/FromOldSite/biotech-scaled.jpg"
-              alt="CERASP Logo"
-            />
+
+          <div className="sandbox-white-box-content">
+            <div className="sandbox-white-box-img">
+              <img
+                src="/photos/FromOldSite/biotech-scaled.jpg"
+                alt="CERASP Logo"
+              />
+            </div>
+            <h1>
+              {language === "en"
+                ? content.en.title
+                : content.fr.title}
+            </h1>
+            <p>
+              {" "}
+              {language === "en"
+                ? content.en.description
+                : content.fr.description}
+            </p>
+            <div className="layout-panel-5" />
           </div>
-          <div className="layout-panel-5" />
         </motion.div>
       </motion.div>
     </>

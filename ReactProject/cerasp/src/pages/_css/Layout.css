@@ -122,10 +122,3 @@
   width: 80vw;
   height: 100vh;
 }
-
-.layout-image-col img {
-  z-index: 0;
-  object-fit: cover;
-  height: 90vh;
-  opacity: 0.5;
-}

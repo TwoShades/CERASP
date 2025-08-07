@@ -57,6 +57,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SandboxPage />} />
 
+        {/* ABOUT */}
         <Route path="/about" element={<AboutLayout />}>
           <Route
             path="overview"
@@ -74,6 +75,7 @@ function App() {
           <Route path="board" element={<AboutBoard />} />
         </Route>
 
+        {/* SECTOR */}
         <Route
           path="/sector-of-activities"
           element={<SectorsLayout />}
@@ -120,6 +122,7 @@ function App() {
           />
         </Route>
 
+        {/* EXPERTISE */}
         <Route
           path="/expertise"
           element={<ExpertiseLayout />}
@@ -150,6 +153,7 @@ function App() {
           />
         </Route>
 
+        {/* PROJECTS */}
         <Route
           path="/projects"
           element={<ProjectsLayout />}
@@ -163,7 +167,11 @@ function App() {
             element={<ProjectsGrants />}
           />
         </Route>
+
+        {/* NEWS */}
         <Route path="/news" element={<News />} />
+
+        {/* OTHER LINKS - MIGHT NEED REWORK */}
         <Route
           path="/privacy"
           element={<PrivacyPolicy />}
