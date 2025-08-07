@@ -1,0 +1,74 @@
+.sandbox-layout {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sandbox-gridlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent calc(20vw - 1px),
+    var(--gridline-light-blue) calc(20vw - 1px),
+    var(--gridline-light-blue) 20vw
+  );
+}
+
+.sandbox-content-alignment {
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 50%;
+  left: 50%;
+}
+
+.sandbox-logo img {
+  transform: translate(-50%, -125%);
+  width: 30vw;
+}
+
+.sandbox-subtext-1 p {
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  font-weight: 00;
+  font-size: 3rem;
+}
+
+.sandbox-subtext-2 p {
+  transform: translate(-50%, 100%);
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.sandbox-black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sandbox-gradient-bg {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0c3277ff 0%,
+    #2d76ff 35%,
+    #5590ffff 100%
+  );
+}

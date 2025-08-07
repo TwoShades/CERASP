@@ -43,6 +43,9 @@ import ProjectsGrants from "./pages/projects-subpages/ProjectsGrants.js";
 // NEWS AND ITS SUBPAGES
 import News from "./pages/News";
 
+// TESTING/SANDBOX PAGE
+import SandboxPage from "./pages/SandboxPage.js";
+
 import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
@@ -91,6 +94,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/equipment-list" element={<EquipmentsMasterList />} />
+        <Route path="/sandbox-page" element={<SandboxPage />} />
       </Routes>
     </ScreenSizeProvider>
   );

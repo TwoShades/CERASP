@@ -1,4 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  useContext,
+} from "react";
 import "./css/LandingHero.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import translations from "./landing-translations.json";
@@ -29,7 +33,9 @@ const LandingHero = () => {
 
       shapes.forEach((shape, index) => {
         const speed = 0.5 + index * 0.1;
-        shape.style.transform = `translateY(${scrolled * speed}px)`;
+        shape.style.transform = `translateY(${
+          scrolled * speed
+        }px)`;
       });
     };
 
@@ -58,7 +64,9 @@ const LandingHero = () => {
         </div>
 
         <div className="hero-content">
-          {stage === "text" && <h1 className="fade text">{welcome}</h1>}
+          {stage === "text" && (
+            <h1 className="fade text">{welcome}</h1>
+          )}
 
           {stage === "page" && (
             <>
