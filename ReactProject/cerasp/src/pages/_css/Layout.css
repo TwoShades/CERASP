@@ -112,3 +112,20 @@
   width: 20vw;
   height: 100vh;
 }
+
+/* Testing/Additional */
+.layout-image-col {
+  position: absolute;
+  z-index: 5;
+  top: 90px;
+  left: 0;
+  width: 80vw;
+  height: 100vh;
+}
+
+.layout-image-col img {
+  z-index: 0;
+  object-fit: cover;
+  height: 90vh;
+  opacity: 0.5;
+}

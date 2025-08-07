@@ -55,46 +55,127 @@ function App() {
     <ScreenSizeProvider>
       <Header />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<SandboxPage />} />
 
         <Route path="/about" element={<AboutLayout />}>
-          <Route path="overview" element={<AboutOverview />} />
-          <Route path="facilities" element={<AboutFacilities />} />
-          <Route path="equipment" element={<AboutEquipments />} />
+          <Route
+            path="overview"
+            element={<AboutOverview />}
+          />
+          <Route
+            path="facilities"
+            element={<AboutFacilities />}
+          />
+          <Route
+            path="equipment"
+            element={<AboutEquipments />}
+          />
           <Route path="our-team" element={<AboutTeam />} />
           <Route path="board" element={<AboutBoard />} />
         </Route>
 
-        <Route path="/sector-of-activities" element={<SectorsLayout />}>
-          <Route path="overview" element={<SectorsOverview />} />
-          <Route path="natural-health-products" element={<SectorsNHP />} />
-          <Route path="pharmaceutical" element={<SectorsPharmaceutical />} />
-          <Route path="biopharmaceutical" element={<SectorsBiopharmaceutical />} />
-          <Route path="biotech-biomanufacturing" element={<SectorsbioTechBioMan />} />
-          <Route path="cosmeceuticals" element={<SectorsCosmeceuticals />} />
-          <Route path="diagnostic-tools" element={<SectorsDiagnosticTools />} />
-          <Route path="animal-health" element={<SectorsAnimalHealth />} />
-          <Route path="nutraceutical" element={<SectorsNutraceutical />} />
-          <Route path="medical-devices" element={<SectorsMedicalDevices />} />
+        <Route
+          path="/sector-of-activities"
+          element={<SectorsLayout />}
+        >
+          <Route
+            path="overview"
+            element={<SectorsOverview />}
+          />
+          <Route
+            path="natural-health-products"
+            element={<SectorsNHP />}
+          />
+          <Route
+            path="pharmaceutical"
+            element={<SectorsPharmaceutical />}
+          />
+          <Route
+            path="biopharmaceutical"
+            element={<SectorsBiopharmaceutical />}
+          />
+          <Route
+            path="biotech-biomanufacturing"
+            element={<SectorsbioTechBioMan />}
+          />
+          <Route
+            path="cosmeceuticals"
+            element={<SectorsCosmeceuticals />}
+          />
+          <Route
+            path="diagnostic-tools"
+            element={<SectorsDiagnosticTools />}
+          />
+          <Route
+            path="animal-health"
+            element={<SectorsAnimalHealth />}
+          />
+          <Route
+            path="nutraceutical"
+            element={<SectorsNutraceutical />}
+          />
+          <Route
+            path="medical-devices"
+            element={<SectorsMedicalDevices />}
+          />
         </Route>
 
-        <Route path="/expertise" element={<ExpertiseLayout />}>
-          <Route path="overview" element={<ExpertiseOverview />} />
-          <Route path="ideation" element={<ExpertiseIdeation />} />
-          <Route path="proof-of-concept" element={<ExpertiseProofConcept />} />
-          <Route path="product-development" element={<ExpertiseProductDev />} />
-          <Route path="scale-up-manufacturing" element={<ExpertiseScaleUp />} />
-          <Route path="technology-transfer" element={<ExpertiseTechTransfer />} />
+        <Route
+          path="/expertise"
+          element={<ExpertiseLayout />}
+        >
+          <Route
+            path="overview"
+            element={<ExpertiseOverview />}
+          />
+          <Route
+            path="ideation"
+            element={<ExpertiseIdeation />}
+          />
+          <Route
+            path="proof-of-concept"
+            element={<ExpertiseProofConcept />}
+          />
+          <Route
+            path="product-development"
+            element={<ExpertiseProductDev />}
+          />
+          <Route
+            path="scale-up-manufacturing"
+            element={<ExpertiseScaleUp />}
+          />
+          <Route
+            path="technology-transfer"
+            element={<ExpertiseTechTransfer />}
+          />
         </Route>
 
-        <Route path="/projects" element={<ProjectsLayout />}>
-          <Route path="overview" element={<ProjectsOverview />} />
-          <Route path="grants" element={<ProjectsGrants />} />
+        <Route
+          path="/projects"
+          element={<ProjectsLayout />}
+        >
+          <Route
+            path="overview"
+            element={<ProjectsOverview />}
+          />
+          <Route
+            path="grants"
+            element={<ProjectsGrants />}
+          />
         </Route>
         <Route path="/news" element={<News />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/equipment-list" element={<EquipmentsMasterList />} />
-        <Route path="/sandbox-page" element={<SandboxPage />} />
+        <Route
+          path="/privacy"
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          path="/equipment-list"
+          element={<EquipmentsMasterList />}
+        />
+        <Route
+          path="/sandbox-page"
+          element={<SandboxPage />}
+        />
       </Routes>
     </ScreenSizeProvider>
   );

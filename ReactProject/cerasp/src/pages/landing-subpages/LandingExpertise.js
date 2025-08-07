@@ -18,8 +18,12 @@ const LandingExpertise = () => {
     <div className="landing-expertise-container">
       <div className="landing-expertise-content">
         <div className="landing-expertise-textSection">
-          <h2 className="landing-expertise-title">{t.title}</h2>
-          <p className="landing-expertise-description">{t.description}</p>
+          <h2 className="landing-expertise-title">
+            {t.title}
+          </h2>
+          <p className="landing-expertise-description">
+            {t.description}
+          </p>
           <button
             className="landing-expertise-button"
             onClick={handleExpertiseClick}

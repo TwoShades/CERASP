@@ -11,33 +11,11 @@
   },
   "landing-about-us": {
     "en": {
-      "tagline": "Building innovation, one solution at a time",
-      "cta": "Discover More",
-      "scroll": "Scroll Down",
       "aboutUs": {
-        "sectionLabel": "About Us",
         "title": "Building the future, one solution at a time",
-        "landing-expertise": "Our Expertise",
         "description": "We're a passionate team of smart innovators, researchers, and problem-solvers dedicated to delivering flexible solutions that accelerate your R&D projects, reduce risk, and ensure alignment with scientific and regulatory standards. From safeguarding your IP to supporting your product development journey, we’re here to turn your innovation into impact — faster, safer, and with lasting value.",
         "drivesUs": "What drives us",
-        "values": [
-          {
-            "title": "Innovation",
-            "description": "We develop innovative, eco-responsible solutions that reduce environmental impact and promote sustainable practices"
-          },
-          {
-            "title": "Open-mindedness",
-            "description": "Embracing global perspectives and adapting to change with an open and forward-thinking mindset is our standard."
-          },
-          {
-            "title": "Collaboration",
-            "description": "Our team drives innovation by fostering partnerships and supporting entrepreneurship within a dynamic local and national ecosystem."
-          },
-          {
-            "title": "Excellence",
-            "description": "We deliver high-quality, confidential, and proactive support to help SMEs grow with integrity and professionalism."
-          }
-        ],
+
         "stats": [
           {
             "label": "Years of Industry Experience"
@@ -138,7 +116,11 @@
         {
           "title": "Proof of Concept",
           "description": " Turning promising concepts into scalable, validated prototypes—laying the groundwork for future success while minimizing uncertainty and resource waste.",
-          "highlights": ["Formulation", "Prototyping", "Ingredient Selection"]
+          "highlights": [
+            "Formulation",
+            "Prototyping",
+            "Ingredient Selection"
+          ]
         },
         {
           "title": "Product Development",
@@ -206,7 +188,11 @@
         {
           "title": "Preuve de concept",
           "description": "Transformer des concepts prometteurs en prototypes validés et évolutifs, permettant un succès futur tout en minimisant incertitudes et pertes.",
-          "highlights": ["Formulation", "Prototypage", "Choix des ingrédients"]
+          "highlights": [
+            "Formulation",
+            "Prototypage",
+            "Choix des ingrédients"
+          ]
         },
         {
           "title": "Développement de produit",
