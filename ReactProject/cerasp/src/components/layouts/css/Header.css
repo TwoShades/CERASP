@@ -5,7 +5,7 @@
   justify-content: space-between;
   height: 90px;
   width: 100%;
-  z-index: 11;
+  z-index: 10;
   background-color: white;
   border-bottom: 1px solid #e0e0e0;
   top: 0;
@@ -61,8 +61,16 @@
     backdrop-filter: blur(4px); /* Apply blur effect */
     -webkit-backdrop-filter: blur(4px); /* Safari support */
     z-index: 5;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(
+      to bottom,
+      black 80%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 80%,
+      transparent 100%
+    );
   }
 
   .layout-header {

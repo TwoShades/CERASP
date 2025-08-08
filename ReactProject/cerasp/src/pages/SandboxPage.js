@@ -48,7 +48,7 @@ const colContainerVariants = {
   slideOut: {
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 4.6,
+      delayChildren: 4.4,
       ease: "easeInOut",
     },
   },
@@ -77,13 +77,30 @@ const contactIconVariants = {
   },
 };
 
+const gradientVariants = {
+  visible: { opacity: 1 },
+  fadeOut: {
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+      delay: 4.4,
+    },
+  },
+};
+
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
 
   return (
-    <>
+    <div className="landing-page-overlay">
       <div className="sandbox-gridlines-thin" />
-      <div className="sandbox-gradient-bg" />
+      <motion.div
+        className="sandbox-gradient-bg"
+        variants={gradientVariants}
+        initial="visible"
+        animate="fadeOut"
+      />
 
       <motion.div
         className="sandbox-black-overlay"
@@ -191,7 +208,7 @@ const SandboxPage = () => {
           </div>
         </motion.div>
       </motion.div>
-    </>
+    </div>
   );
 };
 
