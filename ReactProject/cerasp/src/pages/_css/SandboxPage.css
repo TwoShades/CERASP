@@ -46,8 +46,6 @@
   height: 100vh;
   grid-column: 1 / 5;
   padding-left: 10vw;
-  /* border: 3px dashed blue; */
-  /* background-color: yellow; */
 }
 
 .sandbox-white-box-img {
@@ -67,7 +65,6 @@
   padding-right: 2.2em;
   font-size: var(--text-l6);
   color: var(--color-dodger-blue);
-  /* text-shadow: 1px 1px 2px rgb(102, 100, 100); */
   font-weight: 400;
 }
 
@@ -122,15 +119,21 @@
 
 .sandbox-subtext-1 p {
   transform: translate(-50%, -50%);
-  width: 90vw;
-  font-weight: 00;
+  width: 50vw;
+  font-weight: 200;
   font-size: 3rem;
+  margin-top: 0.4em;
+}
+
+.sandbox-subtext-2 {
+  width: 100vw;
 }
 
 .sandbox-subtext-2 p {
   transform: translate(-50%, 100%);
-  font-weight: 600;
-  font-size: 4rem;
+  font-weight: 200;
+  font-size: 6rem;
+  margin: 0;
 }
 
 .sandbox-black-overlay {

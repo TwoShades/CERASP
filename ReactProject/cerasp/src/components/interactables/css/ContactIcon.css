@@ -46,7 +46,6 @@
   transition: fill 0.2s ease;
 }
 
-/* Fix: target border on child on hover */
 .contact-icon-wrapper:hover .contact-icon-border {
   border-color: var(--color-button-light-blue);
 }

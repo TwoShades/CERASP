@@ -38,7 +38,7 @@ const whiteBoxVariants = {
     transition: {
       duration: 0.6,
       ease: "easeInOut",
-      delay: 3.4,
+      delay: 4,
     },
   },
 };
@@ -47,31 +47,32 @@ const colContainerVariants = {
   hidden: {},
   slideOut: {
     transition: {
-      staggerChildren: 0.2,
-      delayChildren: 4.4, // waits for whiteBox animation (3.4 + 1)
+      staggerChildren: 0.1,
+      delayChildren: 4.6,
       ease: "easeInOut",
     },
   },
 };
 
 const colVariants = {
-  hidden: { x: 0, opacity: 1 },
+  hidden: { x: 0, opacity: 1, transformOrigin: "bottom" },
   slideOut: {
     x: "-100vw",
     opacity: 0,
-    transition: { duration: 1, ease: "easeInOut" },
+    scaleY: 0.2,
+    scaleX: 0.2,
+    transition: { duration: 0.8, ease: "easeInOut" },
   },
 };
 
-// ContactIcon fades IN at the same time sb-cols slide out (starting at 4.8s)
 const contactIconVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.8,
       ease: "easeInOut",
-      delay: 4.8,
+      delay: 5.2,
     },
   },
 };
@@ -133,10 +134,7 @@ const SandboxPage = () => {
           className="sandbox-white-box"
           variants={whiteBoxVariants}
         >
-          {/* <div className="sandbox-gridlines-normal"></div> */}
-
           <div className="sandbox-white-box-content">
-            {/* Contact Icon with fade-in animation */}
             <motion.div
               className="sandbox-contact-icon"
               variants={contactIconVariants}
