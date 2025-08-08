@@ -3,7 +3,8 @@ import "./_css/Layout.css";
 import "./_css/SandboxPage.css";
 import { LanguageContext } from "../contexts/LanguageContext";
 import landingTranslations from "./landing-subpages/landing-translations.json";
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
+import ContactIcon from "../components/interactables/ContactIcon";
 
 const content = landingTranslations;
 
@@ -35,15 +36,49 @@ const whiteBoxVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 1,
+      duration: 0.6,
       ease: "easeInOut",
       delay: 3.4,
     },
   },
 };
 
+const colContainerVariants = {
+  hidden: {},
+  slideOut: {
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 4.4, // waits for whiteBox animation (3.4 + 1)
+      ease: "easeInOut",
+    },
+  },
+};
+
+const colVariants = {
+  hidden: { x: 0, opacity: 1 },
+  slideOut: {
+    x: "-100vw",
+    opacity: 0,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+};
+
+// ContactIcon fades IN at the same time sb-cols slide out (starting at 4.8s)
+const contactIconVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+      delay: 4.8,
+    },
+  },
+};
+
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
+
   return (
     <>
       <div className="sandbox-gridlines-thin" />
@@ -71,6 +106,7 @@ const SandboxPage = () => {
             alt="CERASP Logo"
           />
         </motion.div>
+
         <motion.div
           className="sandbox-subtext-1 sandbox-content-alignment"
           variants={childVariants}
@@ -81,6 +117,7 @@ const SandboxPage = () => {
               : "Centre d’expertise en recherche appliquée en sciences pharmaceutiques"}
           </p>
         </motion.div>
+
         <motion.div
           className="sandbox-subtext-2 sandbox-content-alignment"
           variants={childVariants}
@@ -91,31 +128,68 @@ const SandboxPage = () => {
               : "Versatile. Expert. Avisé."}
           </p>
         </motion.div>
+
         <motion.div
           className="sandbox-white-box"
           variants={whiteBoxVariants}
         >
-          <div className="sandbox-gridlines-normal"></div>
+          {/* <div className="sandbox-gridlines-normal"></div> */}
 
           <div className="sandbox-white-box-content">
+            {/* Contact Icon with fade-in animation */}
+            <motion.div
+              className="sandbox-contact-icon"
+              variants={contactIconVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <ContactIcon />
+            </motion.div>
+
             <div className="sandbox-white-box-img">
               <img
                 src="/photos/FromOldSite/biotech-scaled.jpg"
                 alt="CERASP Logo"
               />
             </div>
+
             <h1>
               {language === "en"
                 ? content.en.title
                 : content.fr.title}
             </h1>
+
             <p>
-              {" "}
               {language === "en"
                 ? content.en.description
                 : content.fr.description}
             </p>
+
             <div className="layout-panel-5" />
+
+            <motion.div
+              variants={colContainerVariants}
+              initial="hidden"
+              animate="slideOut"
+              className="sb-cols"
+            >
+              <motion.div
+                className="sb-col-1"
+                variants={colVariants}
+              />
+              <motion.div
+                className="sb-col-2"
+                variants={colVariants}
+              />
+              <motion.div
+                className="sb-col-3"
+                variants={colVariants}
+              />
+              <motion.div
+                className="sb-col-4"
+                variants={colVariants}
+              />
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>

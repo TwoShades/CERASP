@@ -20,6 +20,7 @@
   --gridline-med-blue: #0056b3;
   --color-dodger-blue: #2d76ff;
   --color-button-blue: #1d76d4;
+  --color-button-light-blue: #6c9fff;
 
   /* Margins, used for animating scrolling elements */
   --space-xs: 0.5rem;
@@ -74,7 +75,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom left, transparent 50%, #3498db 50%) center/200% 200%;
+  background: linear-gradient(
+      to bottom left,
+      transparent 50%,
+      #3498db 50%
+    )
+    center/200% 200%;
   z-index: -1;
 }
 
