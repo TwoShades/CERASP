@@ -2,7 +2,7 @@
   z-index: 101;
 }
 
-.sandbox-layout {
+.landing-layout {
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -12,7 +12,7 @@
   justify-content: center;
 }
 
-.sandbox-gridlines-thin {
+.landing-gridlines-thin {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +30,7 @@
   );
 }
 
-.sandbox-white-box {
+.landing-white-box {
   position: fixed;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -41,7 +41,7 @@
   /* background-color: rgb(255, 255, 255); */
 }
 
-.sandbox-white-box-content {
+.landing-white-box-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@
   padding-left: 10vw;
 }
 
-.sandbox-white-box-img {
+.landing-white-box-img {
   background-color: white;
   width: 100vw;
   height: 90vh;
@@ -63,14 +63,14 @@
   opacity: 1;
 }
 
-.sandbox-white-box-img img {
+.landing-white-box-img img {
   position: fixed;
   top: calc(10vh - 4px);
   height: 90vh;
   opacity: 0.3;
 }
 
-.sandbox-white-box-content h1 {
+.landing-white-box-content h1 {
   margin-top: -1em;
   padding-right: 2.2em;
   font-size: var(--text-l6);
@@ -78,14 +78,14 @@
   font-weight: 400;
 }
 
-.sandbox-white-box-content p {
+.landing-white-box-content p {
   margin-top: -1.4em;
   padding-right: 6em;
   line-height: 1.6;
   font-size: var(--text-l2);
 }
 
-.sandbox-gridlines-normal {
+.landing-gridlines-normal {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -98,7 +98,7 @@
   );
 }
 
-.sandbox-gradient-bg {
+.landing-gradient-bg {
   position: fixed;
   z-index: 13;
   top: 0;
@@ -113,7 +113,7 @@
   );
 }
 
-.sandbox-content-alignment {
+.landing-content-alignment {
   position: absolute;
   text-align: center;
   color: white;
@@ -121,12 +121,12 @@
   left: 50%;
 }
 
-.sandbox-logo img {
+.landing-logo img {
   transform: translate(-50%, -125%);
   width: 600px;
 }
 
-.sandbox-subtext-1 p {
+.landing-subtext-1 p {
   transform: translate(-50%, -50%);
   width: 50vw;
   font-weight: 200;
@@ -134,18 +134,18 @@
   margin-top: 0.4em;
 }
 
-.sandbox-subtext-2 {
+.landing-subtext-2 {
   width: 100vw;
 }
 
-.sandbox-subtext-2 p {
+.landing-subtext-2 p {
   transform: translate(-50%, 100%);
   font-weight: 200;
   font-size: 6rem;
   margin: 0;
 }
 
-.sandbox-black-overlay {
+.landing-black-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -156,7 +156,7 @@
   pointer-events: none;
 }
 
-.sandbox-contact-icon {
+.landing-contact-icon {
   position: fixed;
   bottom: 5vh;
   right: 10vw;

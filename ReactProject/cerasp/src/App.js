@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/layouts/Header";
-import LandingPage from "./pages/LandingPage";
 import "./App.css";
 import useLenis from "./hooks/useLenis";
 
@@ -43,9 +42,8 @@ import ProjectsGrants from "./pages/projects-subpages/ProjectsGrants.js";
 // NEWS AND ITS SUBPAGES
 import News from "./pages/News";
 
-// TESTING/SANDBOX PAGE
-import SandboxPage from "./pages/SandboxPage.js";
-
+// TESTING/landing PAGE
+import LandingPage from "./pages/LandingPage.js";
 import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
@@ -55,7 +53,7 @@ function App() {
     <ScreenSizeProvider>
       <Header />
       <Routes>
-        <Route path="/" element={<SandboxPage />} />
+        <Route path="/" element={<LandingPage />} />
 
         {/* ABOUT */}
         <Route path="/about" element={<AboutLayout />}>
@@ -181,8 +179,8 @@ function App() {
           element={<EquipmentsMasterList />}
         />
         <Route
-          path="/sandbox-page"
-          element={<SandboxPage />}
+          path="/landing-page"
+          element={<LandingPage />}
         />
       </Routes>
     </ScreenSizeProvider>

@@ -299,66 +299,6 @@
     "content": {
       "en": "From veterinary pharmaceuticals to nutritional supplements, we assist companies focused on improving animal health and well-being. Our solutions are designed to meet the specific regulatory and quality standards of this important industry.",
       "fr": "Des produits pharmaceutiques vétérinaires aux compléments alimentaires, nous accompagnons les entreprises soucieuses d'améliorer la santé et le bien-être des animaux. Nos solutions sont conçues pour répondre aux normes réglementaires et de qualité spécifiques à ce secteur crucial."
-    },
-    "vetPharma": {
-      "title": {
-        "en": "Veterinary Pharmaceuticals",
-        "fr": "Produits pharmaceutiques vétérinaires"
-      },
-      "content": {
-        "en": "Support for the treatment and management of diseases and conditions, including antibiotics and anti-inflammatory drugs.",
-        "fr": "Pour le traitement et la gestion des maladies et affections telles que les antibiotiques et les anti-inflammatoires."
-      }
-    },
-    "supplements": {
-      "title": {
-        "en": "Nutritional Supplements",
-        "fr": "Compléments alimentaires"
-      },
-      "content": {
-        "en": "To Support health and performance (ex. Vitamins, minerals, probiotics, etc.)..",
-        "fr": "Pour soutenir la santé et la performance (ex. Vitamines, minéraux, probiotiques, etc.)."
-      }
-    },
-    "therapies": {
-      "title": {
-        "en": "Advanced Therapies",
-        "fr": "Thérapies avancées"
-      },
-      "content": {
-        "en": "Serve to address complex or chronic conditions like regenerative medicine products.",
-        "fr": "Sert à traiter des maladies complexes ou chroniques comme les produits de médecine régénérative."
-      }
-    },
-    "vaccines": {
-      "title": {
-        "en": "Vaccines",
-        "fr": "Vaccins"
-      },
-      "content": {
-        "en": "That prevent infectious diseases such as DNA vaccines.",
-        "fr": "Qui préviennent les maladies infectieuses comme les vaccins à ADN."
-      }
-    },
-    "biologics": {
-      "title": {
-        "en": "Biologics",
-        "fr": "Produits biologiques"
-      },
-      "content": {
-        "en": "Use living organisms or their products to treat or prevent disease (ex. Monoclonal antibodies).",
-        "fr": "Utiliser des organismes vivants ou leurs produits pour traiter ou prévenir des maladies (p. ex. anticorps monoclonaux)."
-      }
-    },
-    "topAndDerma": {
-      "title": {
-        "en": "Topical and Dermatological Products",
-        "fr": "Produits topiques et dermatologiques"
-      },
-      "content": {
-        "en": "Used to treat skin infections, wounds, or irritations such as medicated shampoos, antimicrobial ointments, sprays, etc.",
-        "fr": "Utilisé pour traiter les infections cutanées, les plaies ou les irritations telles que les shampooings médicamenteux, les onguents antimicrobiens, les sprays, etc."
-      }
     }
   },
   "scaleUp": {

@@ -2,6 +2,7 @@ import sitemap from "../../sitemap.json";
 import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
 import "../_css/Layout.css";
+import "./css/SectorsLayout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 const SectorsLayout = () => {
@@ -25,10 +26,11 @@ const SectorsLayout = () => {
       {/* <div className="layout-color-panel"></div> */}
       {location.pathname === "/sector-of-activities" && (
         <>
-          <div className="layout-bg-img">
+          <div className="layout-bg-img-col-3-4">
             <img
-              src="/photos/FromOldSite/animal-health-scaled.jpg"
-              alt="Animal Health"
+              src="/photos/FromOldSite/Picture-CERASP-7.png"
+              alt="Our Sectors"
+              className=""
             />
           </div>
           {/* <div className="layout-rotated-title">{language === "fr" ? <h1>SECTEURS</h1> : <h1>SECTORS</h1>}</div> */}

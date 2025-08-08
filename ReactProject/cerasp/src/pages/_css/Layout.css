@@ -25,6 +25,21 @@
   z-index: -100;
 }
 
+.layout-bg-img-col-3-4 {
+  position: fixed;
+  opacity: 1;
+  width: 40vw;
+  left: 40vw;
+}
+
+.layout-bg-img-col-3-4 img {
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  width: 40vw;
+  left: 40vw;
+}
+
 .layout-rotated-title {
   display: flex;
   justify-content: end;
