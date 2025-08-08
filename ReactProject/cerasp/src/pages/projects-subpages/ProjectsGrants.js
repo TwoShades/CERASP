@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import "./css/ProjectsGrants.css";
-import SubPageHeader from "../../components/layouts/SubPageHeader";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 const grantsData = [
@@ -54,23 +53,6 @@ export default function ProjectsGrants() {
   const { language } = useContext(LanguageContext);
   return (
     <div className="grants-section">
-      <SubPageHeader
-        name={language === "fr" ? "SUBVENTIONS" : "GRANTS"}
-        extraContent={
-          language === "fr" ? (
-            <h4>
-              Nous sommes fiers d'avoir reçu plus de 2 millions de dollars en
-              subventions au cours des deux dernières années pour soutenir nos
-              clients et l'écosystème.
-            </h4>
-          ) : (
-            <h4>
-              We are proud to have received over $2 million in grants over the
-              past two years to support our clients and the ecosystem.
-            </h4>
-          )
-        }
-      />
       <ul className="grants-list">
         {grantsData.map((grant, index) => (
           <li key={index} className="grant-item">

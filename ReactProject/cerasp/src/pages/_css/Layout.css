@@ -13,6 +13,18 @@
   height: 100vh;
 }
 
+.layout-bg-wide-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.layout-bg-wide-img img {
+  opacity: 1;
+  width: 100vw;
+  z-index: -100;
+}
+
 .layout-rotated-title {
   display: flex;
   justify-content: end;
@@ -66,7 +78,8 @@
 
 .layout-panel-1 {
   position: fixed;
-  /* background-color: rgba(255, 255, 255, 0.151); */
+  z-index: 5;
+  /* background-color: rgb(216, 31, 31); */
   top: 0;
   left: 0vw;
   width: 20vw;

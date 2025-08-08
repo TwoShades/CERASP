@@ -9,9 +9,13 @@ const AboutLayout = () => {
 
   const isOverview = location.pathname === "/about";
 
-  const aboutPage = sitemap.pages.find((page) => page["page-id"] === "about");
+  const aboutPage = sitemap.pages.find(
+    (page) => page["page-id"] === "about"
+  );
 
-  const aboutSubPages = aboutPage ? aboutPage["sub-pages"] : [];
+  const aboutSubPages = aboutPage
+    ? aboutPage["sub-pages"]
+    : [];
 
   const { language } = useContext(LanguageContext);
 
@@ -20,9 +24,13 @@ const AboutLayout = () => {
       {location.pathname === "/about" && (
         <>
           <div className="layout-bg-img">
-            <img src="/photos/FromOldSite/AdobeStock_141805489-scaled.jpg" alt="Biotech facility" className="history-img" />
+            <img
+              src="/photos/FromOldSite/AdobeStock_141805489-scaled.jpg"
+              alt="Biotech facility"
+              className="history-img"
+            />
           </div>
-          <div className="layout-rotated-title">{language === "fr" ? <h1>À PROPOS</h1> : <h1>ABOUT</h1>}</div>
+          {/* <div className="layout-rotated-title">{language === "fr" ? <h1>À PROPOS</h1> : <h1>ABOUT</h1>}</div> */}
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
@@ -36,7 +44,9 @@ const AboutLayout = () => {
           <ul>
             {aboutSubPages.map((subPage) => (
               <li key={subPage.id}>
-                <a href={`/about/${subPage.id}`}>{subPage[language].toUpperCase()}</a>
+                <a href={`/about/${subPage.id}`}>
+                  {subPage[language].toUpperCase()}
+                </a>
               </li>
             ))}
           </ul>
