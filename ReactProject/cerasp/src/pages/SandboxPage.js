@@ -5,6 +5,7 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import landingTranslations from "./landing-subpages/landing-translations.json";
 import { useContext } from "react";
 import ContactIcon from "../components/interactables/ContactIcon";
+import Header from "../components/layouts/Header";
 
 const content = landingTranslations;
 
@@ -72,7 +73,7 @@ const contactIconVariants = {
     transition: {
       duration: 0.8,
       ease: "easeInOut",
-      delay: 5.2,
+      delay: 5.6,
     },
   },
 };
@@ -89,12 +90,87 @@ const gradientVariants = {
   },
 };
 
+const headerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+      delay: 4.8,
+    },
+  },
+};
+
+<motion.div
+  style={{
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    zIndex: 10000, // above header & other elements
+    backgroundColor: "transparent", // invisible but still catches pointer events if needed
+  }}
+  variants={{
+    visible: { x: 0 },
+    slideOut: {
+      x: "-100vw",
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut",
+        delay: 4.4,
+      },
+    },
+  }}
+  initial="visible"
+  animate="slideOut"
+/>;
+
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
 
   return (
     <div className="landing-page-overlay">
       <div className="sandbox-gridlines-thin" />
+      <motion.div
+        style={{ position: "relative", zIndex: 9999 }}
+        variants={headerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <Header />
+      </motion.div>
+      <motion.div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100vw",
+          height: "100vh",
+          zIndex: 10000,
+          backgroundColor: "transparent",
+        }}
+        variants={{
+          visible: { x: 0 },
+          slideOut: {
+            x: "-100vw",
+            transition: {
+              duration: 0.8,
+              ease: "easeInOut",
+              delay: 4.4,
+            },
+          },
+        }}
+        initial="visible"
+        animate="slideOut"
+      />
+      <motion.div
+        className="sandbox-gradient-bg"
+        variants={gradientVariants}
+        initial="visible"
+        animate="fadeOut"
+      />
       <motion.div
         className="sandbox-gradient-bg"
         variants={gradientVariants}

@@ -5,10 +5,16 @@
   justify-content: space-between;
   height: 90px;
   width: 100%;
-  z-index: 10;
+  z-index: 11;
   background-color: white;
   border-bottom: 1px solid #e0e0e0;
   top: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Disable clicks/hover when hidden */
+.layout-header[style*="opacity: 0"] {
+  pointer-events: none;
 }
 
 .language-switcher {

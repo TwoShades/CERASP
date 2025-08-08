@@ -71,6 +71,7 @@
 }
 
 .sandbox-white-box-content h1 {
+  margin-top: -1em;
   padding-right: 2.2em;
   font-size: var(--text-l6);
   color: var(--color-dodger-blue);
@@ -78,7 +79,8 @@
 }
 
 .sandbox-white-box-content p {
-  padding-right: 1.6em;
+  margin-top: -1.4em;
+  padding-right: 6em;
   line-height: 1.6;
   font-size: var(--text-l2);
 }
