@@ -44,6 +44,7 @@
 }
 
 .layout-sidebar {
+  /* z-index: 9999; */
   width: 30vw;
   margin-top: 130px;
   margin-left: 50px;
@@ -60,6 +61,7 @@
 }
 
 .layout-sidebar a {
+  /* z-index: 9999; */
   display: inline-block;
   text-decoration: none;
   color: #0056b3;
@@ -78,7 +80,7 @@
 
 .layout-panel-1 {
   position: fixed;
-  z-index: 5;
+  z-index: 0;
   /* background-color: rgb(216, 31, 31); */
   top: 0;
   left: 0vw;
