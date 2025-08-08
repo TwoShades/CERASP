@@ -7,125 +7,19 @@ import { useContext } from "react";
 import ContactIcon from "../components/interactables/ContactIcon";
 import Header from "../components/layouts/Header";
 
+import {
+  containerVariants,
+  childVariants,
+  whiteBoxVariants,
+  colContainerVariants,
+  colVariants,
+  contactIconVariants,
+  gradientVariants,
+  headerVariants,
+  overlaySlideVariants,
+} from "./animations/LandingAnimations";
+
 const content = landingTranslations;
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 1,
-      delayChildren: 0,
-    },
-  },
-};
-
-const childVariants = {
-  hidden: { opacity: 0, y: -50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1.4, ease: "easeOut" },
-  },
-};
-
-const whiteBoxVariants = {
-  hidden: {
-    x: "100vw",
-    opacity: 0,
-  },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeInOut",
-      delay: 4,
-    },
-  },
-};
-
-const colContainerVariants = {
-  hidden: {},
-  slideOut: {
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 4.4,
-      ease: "easeInOut",
-    },
-  },
-};
-
-const colVariants = {
-  hidden: { x: 0, opacity: 1, transformOrigin: "bottom" },
-  slideOut: {
-    x: "-100vw",
-    opacity: 0,
-    scaleY: 0.2,
-    scaleX: 0.2,
-    transition: { duration: 0.8, ease: "easeInOut" },
-  },
-};
-
-const contactIconVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      ease: "easeInOut",
-      delay: 5.6,
-    },
-  },
-};
-
-const gradientVariants = {
-  visible: { opacity: 1 },
-  fadeOut: {
-    opacity: 0,
-    transition: {
-      duration: 1,
-      ease: "easeInOut",
-      delay: 4.4,
-    },
-  },
-};
-
-const headerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.2,
-      ease: "easeInOut",
-      delay: 4.8,
-    },
-  },
-};
-
-<motion.div
-  style={{
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100vw",
-    height: "100vh",
-    zIndex: 10000, // above header & other elements
-    backgroundColor: "transparent", // invisible but still catches pointer events if needed
-  }}
-  variants={{
-    visible: { x: 0 },
-    slideOut: {
-      x: "-100vw",
-      transition: {
-        duration: 0.8,
-        ease: "easeInOut",
-        delay: 4.4,
-      },
-    },
-  }}
-  initial="visible"
-  animate="slideOut"
-/>;
 
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
@@ -142,29 +36,12 @@ const SandboxPage = () => {
         <Header />
       </motion.div>
       <motion.div
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          height: "100vh",
-          zIndex: 10000,
-          backgroundColor: "transparent",
-        }}
-        variants={{
-          visible: { x: 0 },
-          slideOut: {
-            x: "-100vw",
-            transition: {
-              duration: 0.8,
-              ease: "easeInOut",
-              delay: 4.4,
-            },
-          },
-        }}
+        className="overlay"
+        variants={overlaySlideVariants}
         initial="visible"
         animate="slideOut"
       />
+
       <motion.div
         className="landing-gradient-bg"
         variants={gradientVariants}
