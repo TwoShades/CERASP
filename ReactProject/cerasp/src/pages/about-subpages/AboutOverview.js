@@ -4,178 +4,96 @@ import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
-import RevealOnScroll from "../../components/uicomponents/RevealOnScroll";
-import { ScrollFadeInSection } from "../../components/uicomponents/ScrollAnimations";
+import AnimateObject from "../../components/uicomponents/AnimateObject";
+import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
   const { isMobile, isTablet, isFullScreen } = useContext(
     ScreenSizeContext
   );
-  const content = aboutTranslations.aboutOverview;
+  const content = aboutTranslations;
 
   return (
-    <div className="about-overview">
-      <div className="about-overview-video">
-        {language === "fr" ? (
-          <iframe
-            src="https://www.youtube.com/embed/6Wmb18o6Yos?si=5gXT4SvgAUZu-CEG"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        ) : (
-          <iframe
-            src="https://www.youtube.com/embed/ShwbF2xodT8?si=gexIqKRxD2kxLQVe"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        )}
-      </div>
+    <div className="subpage-overview">
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>
+          {language === "fr" ? "HISTORIQUE" : "HISTORY"}
+        </h1>
+        <p>{content.overviewA[language]}</p>
+      </AnimateObject>
 
-      <div className="about-overview-history">
-        <div className="history-a">
-          <RevealOnScroll
-            direction="right"
-            className="subpage-overview-intro"
-          >
-            <h1>
-              {language === "fr" ? "HISTORIQUE" : "HISTORY"}
-            </h1>
-            <p>{content.overviewA[language]}</p>
-          </RevealOnScroll>
-        </div>
-
-        <div className="history-img-a">
+      <div className="subpage-row">
+        <div className="subpage-col-1-5">
           <img
             src="/photos/FromOldSite/biotech-scaled.jpg"
             alt="Biotech facility"
-            className="history-img"
           />
         </div>
-
-        <div className="history-b">
-          <RevealOnScroll direction="left">
-            <p>{content.overviewB[language]}</p>
-          </RevealOnScroll>
-        </div>
-
-        <div className="history-c">
-          <RevealOnScroll direction="right">
-            <div className="history-c-content">
-              <div className="history-c-img">
-                <img
-                  src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
-                  alt="Biotech facility"
-                  className="history-img"
-                />
-              </div>
-              <div className="history-c-text">
-                <p>{content.overviewC[language]}</p>
-              </div>
-            </div>
-          </RevealOnScroll>
-        </div>
       </div>
 
-      <div className="about-overview-primary-sections">
-        <RevealOnScroll
-          className="about-overview-primary mission"
-          direction="right"
+      <div className="subpage-row">
+        <AnimateObject className="subpage-col-1-3">
+          <img
+            src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
+            alt="Biotech facility"
+          />
+        </AnimateObject>
+        <AnimateObject
+          variantsToRun={["slideLeft", "fadeIn"]}
+          className="subpage-col-3-5"
+          style={{ padding: "30% 0 0 0" }}
         >
-          <h2>{content.mission.title[language]}</h2>
-          <p>{content.mission[language]}</p>
-        </RevealOnScroll>
+          <p>{content.overviewB[language]}</p>
+        </AnimateObject>
 
-        <RevealOnScroll
-          className="about-overview-primary vision"
+        {/*  <AnimateObject
           direction="right"
+          className="subpage-col-2-5"
         >
-          <h2>{content.vision.title[language]}</h2>
-          <p>{content.vision[language]}</p>
-        </RevealOnScroll>
+          <p>{content.overviewC[language]}</p>
+        </AnimateObject> */}
 
-        <RevealOnScroll
-          className="about-overview-primary values"
-          direction="right"
-        >
-          <h2>{content.values.title[language]}</h2>
-          <p>{content.values[language]}</p>
-        </RevealOnScroll>
-      </div>
-      <div className="about-overview-secondary-sections">
-        <div className="about-overview-secondary-sections-align">
-          <ScrollFadeInSection
-            id="excellence"
-            scrollDuration={1000}
-            start="top 25%"
-            pin={true}
-            // markers={true}
+        {/* <div className="about-overview-primary-sections">
+          <AnimateObject
+            className="about-overview-primary mission"
+            direction="right"
           >
-            <div className="about-overview-secondary values-excellence">
-              <h3>
-                {content.values.excellence.title[language]}
-              </h3>
-              <p>{content.values.excellence[language]}</p>
-            </div>
-          </ScrollFadeInSection>
+            <h2>{content.mission.title[language]}</h2>
+            <p>{content.mission[language]}</p>
+          </AnimateObject>
 
-          <ScrollFadeInSection
-            id="innovation"
-            scrollDuration={1000}
-            start="top 25%"
-            pin={true}
-            // markers={true}
+          <AnimateObject
+            className="about-overview-primary vision"
+            direction="right"
           >
-            <div className="about-overview-secondary values-innovation">
-              <h3>
-                {content.values.innovation.title[language]}
-              </h3>
-              <p>{content.values.innovation[language]}</p>
-            </div>
-          </ScrollFadeInSection>
+            <h2>{content.vision.title[language]}</h2>
+            <p>{content.vision[language]}</p>
+          </AnimateObject>
 
-          <ScrollFadeInSection
-            id="collaboration"
-            scrollDuration={1000}
-            start="top 25%"
-            pin={true}
-            // markers={true}
+          <AnimateObject
+            className="about-overview-primary values"
+            direction="right"
           >
-            <div className="about-overview-secondary values-collaboration">
-              <h3>
-                {
-                  content.values.collaboration.title[
-                    language
-                  ]
-                }
-              </h3>
-              <p>
-                {content.values.collaboration[language]}
-              </p>
-            </div>
-          </ScrollFadeInSection>
-
-          <ScrollFadeInSection
-            id="openness"
-            scrollDuration={1000}
-            start="top 25%"
-            pin={true}
-            // markers={true}
-          >
-            <div className="about-overview-secondary values-openness">
-              <h3>
-                {content.values.openness.title[language]}
-              </h3>
-              <p>{content.values.openness[language]}</p>
-            </div>
-          </ScrollFadeInSection>
-        </div>
+            <h2>{content.values.title[language]}</h2>
+            <p>{content.values[language]}</p>
+          </AnimateObject>
+        </div> */}
+        {/* <div className="about-overview-secondary-sections-align">
+          {Object.entries(content.subValues).map(
+            ([key, val]) => (
+              <InteractiveBullet
+                key={key}
+                title={val.title[language]}
+                description={val[language]}
+                className={`values-${key}`}
+              />
+            )
+          )}
+        </div> */}
       </div>
     </div>
   );

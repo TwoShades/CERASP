@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import sectorsTranslations from "./sectors-translation.json";
-import RevealOnScroll from "../../components/uicomponents/RevealOnScroll.js";
+import AnimateObject from "../../components/uicomponents/AnimateObject.js";
 import "./css/SectorsAnimalHealth.css";
 import "../_css/Subpage.css";
 
@@ -16,14 +16,14 @@ const SectorsAnimalHealth = () => {
 
   return (
     <div className="subpage-overview">
-      <RevealOnScroll
+      <AnimateObject
         className="sector-animal-health subpage-overview-intro"
         direction="right"
       >
         <h1>{content.title}</h1>
         <p>{content.subtitle}</p>
-      </RevealOnScroll>
-      <RevealOnScroll
+      </AnimateObject>
+      <AnimateObject
         className="subpage-overview-image"
         direction="left"
       >
@@ -32,7 +32,7 @@ const SectorsAnimalHealth = () => {
           alt="Biotech facility"
           className="animal-health-img"
         />
-      </RevealOnScroll>
+      </AnimateObject>
     </div>
   );
 };

@@ -1,0 +1,21 @@
+import React from "react";
+import "./css/InteractiveBullet.css";
+
+export default function InteractiveBullet({
+  title,
+  description,
+}) {
+  return (
+    <details className="interactive-bullet">
+      <summary>
+        <span className="interactive-bullet-icon"></span>
+        <span className="interactive-bullet-title">
+          {title}
+        </span>
+      </summary>
+      <p className="interactive-bullet-description">
+        {description}
+      </p>
+    </details>
+  );
+}

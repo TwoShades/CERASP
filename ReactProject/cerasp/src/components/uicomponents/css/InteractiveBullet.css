@@ -1,0 +1,80 @@
+.interactive-bullet {
+  z-index: 5;
+  margin-bottom: 2.4em;
+  width: 40vw;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.interactive-bullet summary {
+  z-index: 10;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: var(--text-l2);
+  color: black;
+}
+
+.interactive-bullet
+  summary
+  .interactive-bullet
+  summary::-webkit-details-marker {
+  display: none;
+}
+
+.interactive-bullet-icon {
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 1em;
+  display: inline-block;
+  text-align: center;
+  user-select: none;
+  position: relative;
+}
+
+.interactive-bullet-icon::before {
+  content: "+";
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.interactive-bullet[open] .interactive-bullet-icon::before {
+  content: "-";
+}
+
+.interactive-bullet[open]
+  > summary
+  > .interactive-bullet-title {
+  font-weight: 600;
+}
+
+.interactive-bullet-description {
+  position: relative;
+  z-index: 4;
+  color: rgb(39, 39, 39);
+  padding: 1em;
+  padding-top: 0em;
+  font-size: var(--text-m);
+  letter-spacing: 2px;
+  background-color: rgba(232, 239, 255, 0.301);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.interactive-bullet-description::before {
+  position: absolute;
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  content: "";
+  height: 4em;
+  width: 100%;
+  background-color: rgba(232, 239, 255, 0.301);
+  top: -4em;
+  left: 0;
+  z-index: 0;
+}

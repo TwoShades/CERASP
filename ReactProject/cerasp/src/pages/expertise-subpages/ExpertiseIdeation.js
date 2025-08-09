@@ -3,8 +3,8 @@ import "./css/ExpertiseIdeation.css";
 import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
-import { renderBullets } from "../../utils/renderBullets";
-import RevealOnScroll from "../../components/uicomponents/RevealOnScroll";
+import InteractiveBullet from "../../components/uicomponents/InteractiveBullet"; // <-- your bullet component
+import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
 
 const ExpertiseIdeation = () => {
@@ -13,21 +13,41 @@ const ExpertiseIdeation = () => {
 
   const title = ideation.title[language];
   const intro = ideation.intro[language];
-  const content = ideation.content[language];
+  const content = ideation[language]; // <---- THIS line extracts the correct array for the current language
 
   return (
     <div className="subpage">
       <div className="subpage-overview">
-        <RevealOnScroll direction="right" className="subpage-overview-intro">
+        <AnimateObject
+          direction="right"
+          className="subpage-overview-intro"
+        >
           <h1>{title.toUpperCase()}</h1>
           <p>{intro}</p>
-        </RevealOnScroll>
-        <RevealOnScroll direction="left" className="subpage-overview-image">
-          <img src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg" alt="Biotech facility" id="expertise-intro-img" height="600" />
-        </RevealOnScroll>
-        {renderBullets(content, "Our Expertise Includes")}
+        </AnimateObject>
+        <AnimateObject
+          direction="left"
+          className="subpage-overview-image"
+        >
+          <img
+            src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg"
+            alt="Biotech facility"
+            id="expertise-intro-img"
+            height="600"
+          />
+        </AnimateObject>
+        <div className="subpage-bulleted-list">
+          {content.map(({ title, description }) => (
+            <InteractiveBullet
+              key={title}
+              title={title}
+              description={description}
+            />
+          ))}
+          <div className="expertise-generic-square"></div>
+        </div>
 
-        <ContactCTA infoText="////We can add custom text into each contact form; we can also set a default call-to-action here if we choose not to include a custom text.////" />
+        <ContactCTA infoText="////Custom Text.////" />
       </div>
     </div>
   );

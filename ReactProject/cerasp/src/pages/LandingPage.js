@@ -17,7 +17,7 @@ import {
   gradientVariants,
   headerVariants,
   overlaySlideVariants,
-} from "./animations/LandingAnimations";
+} from "./_animations/LandingAnimations";
 
 const content = landingTranslations;
 
