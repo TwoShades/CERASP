@@ -3,6 +3,24 @@
   flex-direction: column;
 }
 
+.subpage-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  width: 100vw;
+  margin-bottom: var(--space-xl);
+}
+
+.subpage-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.subpage-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .subpage-intro-grid {
   position: relative;
   width: 100vw;
@@ -32,15 +50,6 @@
   line-height: 1.4;
   font-size: var(--text-l2);
   padding-right: 1em;
-}
-
-.subpage-row {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  position: relative;
-  width: 100vw;
-  margin-bottom: var(--space-xxl);
-  /* border: 3px dashed red; */
 }
 
 /* COLUMN LAYOUTS FOR ALL PAGES */
@@ -109,6 +118,13 @@
   margin-top: var(--space-l);
 }
 
+[class^="subpage-col-"] h2 {
+  /* border: 2px dashed rgb(194, 161, 13); */
+  font-size: var(--text-l3);
+  line-height: 1.4;
+  padding: 0 1.2em;
+}
+
 [class^="subpage-col-"] p {
   /* border: 2px dashed rgb(194, 161, 13); */
   font-size: var(--text-l2);
@@ -133,7 +149,6 @@
 
 .subpage-bulleted-list {
   position: relative;
-  width: 41vw;
   margin-left: 20vw;
   margin-bottom: var(--space-xl);
 }

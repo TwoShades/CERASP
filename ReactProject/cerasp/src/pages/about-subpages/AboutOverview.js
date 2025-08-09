@@ -6,6 +6,7 @@ import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
+import ContactCTA from "../../components/interactables/ContactCTA";
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
@@ -13,9 +14,9 @@ export default function AboutOverview() {
     ScreenSizeContext
   );
   const content = aboutTranslations;
-
+  const subValues = content.subValues;
   return (
-    <div className="subpage-overview">
+    <page className="subpage-overview">
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"
@@ -26,16 +27,16 @@ export default function AboutOverview() {
         <p>{content.overviewA[language]}</p>
       </AnimateObject>
 
-      <div className="subpage-row">
+      <section className="subpage-row">
         <div className="subpage-col-1-5">
           <img
             src="/photos/FromOldSite/biotech-scaled.jpg"
             alt="Biotech facility"
           />
         </div>
-      </div>
+      </section>
 
-      <div className="subpage-row">
+      <section className="subpage-row">
         <AnimateObject className="subpage-col-1-3">
           <img
             src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
@@ -49,52 +50,62 @@ export default function AboutOverview() {
         >
           <p>{content.overviewB[language]}</p>
         </AnimateObject>
+      </section>
 
-        {/*  <AnimateObject
+      <section className="subpage-row">
+        <AnimateObject
           direction="right"
-          className="subpage-col-2-5"
+          className="subpage-col-1-5"
         >
           <p>{content.overviewC[language]}</p>
-        </AnimateObject> */}
+        </AnimateObject>
+      </section>
 
-        {/* <div className="about-overview-primary-sections">
-          <AnimateObject
-            className="about-overview-primary mission"
-            direction="right"
-          >
-            <h2>{content.mission.title[language]}</h2>
-            <p>{content.mission[language]}</p>
-          </AnimateObject>
+      <section
+        className="subpage-row"
+        id="about-overview-secondary-content"
+      >
+        <AnimateObject
+          className="subpage-col-2-5"
+          variantsToRun={["slideLeft", "fadeIn"]}
+          style={{ marginBottom: "var(--space-l" }}
+        >
+          <h2>{content.mission.title[language]}</h2>
+          <p>{content.mission[language]}</p>
+        </AnimateObject>
 
-          <AnimateObject
-            className="about-overview-primary vision"
-            direction="right"
-          >
-            <h2>{content.vision.title[language]}</h2>
-            <p>{content.vision[language]}</p>
-          </AnimateObject>
+        <AnimateObject
+          className="subpage-col-2-5"
+          variantsToRun={["slideRight", "fadeIn"]}
+          style={{ marginBottom: "var(--space-l" }}
+        >
+          <h2>{content.vision.title[language]}</h2>
+          <p>{content.vision[language]}</p>
+        </AnimateObject>
+        <AnimateObject
+          className="subpage-col-2-5"
+          variantsToRun={["slideLeft", "fadeIn"]}
+        >
+          <h2>{content.values.title[language]}</h2>
+          <p>{content.values[language]}</p>
+        </AnimateObject>
+      </section>
 
-          <AnimateObject
-            className="about-overview-primary values"
-            direction="right"
-          >
-            <h2>{content.values.title[language]}</h2>
-            <p>{content.values[language]}</p>
-          </AnimateObject>
-        </div> */}
-        {/* <div className="about-overview-secondary-sections-align">
-          {Object.entries(content.subValues).map(
-            ([key, val]) => (
-              <InteractiveBullet
-                key={key}
-                title={val.title[language]}
-                description={val[language]}
-                className={`values-${key}`}
-              />
-            )
-          )}
-        </div> */}
+      <div
+        className="subpage-flex-column"
+        id="about-overview-bullets"
+      >
+        {/* <div className="subpage-col-1-5"> */}
+        {subValues.map(({ title, en, fr }) => (
+          <InteractiveBullet
+            key={title[language]}
+            title={title[language]}
+            description={language === "en" ? en : fr}
+          />
+        ))}
+        {/* </div> */}
       </div>
-    </div>
+      <ContactCTA />
+    </page>
   );
 }

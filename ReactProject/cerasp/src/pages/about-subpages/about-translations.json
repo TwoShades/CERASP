@@ -40,8 +40,9 @@
     "en": "At CERASP, our core values—excellence, innovation, collaboration, and openness—guide our commitment to delivering high-quality services, fostering sustainable development, building strong partnerships, and embracing global perspectives in the pharmaceutical sciences.",
     "fr": "Au CERASP, nos valeurs fondamentales—l’excellence, l’innovation, la collaboration et l’ouverture—guident notre engagement à offrir des services de haute qualité, à promouvoir le développement durable, à établir des partenariats solides et à adopter une perspective mondiale dans les sciences pharmaceutiques."
   },
-  "subValues": {
-    "excellence": {
+  "subValues": [
+    {
+      "key": "excellence",
       "title": {
         "en": "Excellence",
         "fr": "L’excellence"
@@ -49,7 +50,8 @@
       "en": "The CERASP aims for excellence through quality service and the implementation of effective solutions to help SMEs thrive. The CERASP prioritizes dedication and integrity, focusing all its efforts on mutual success in an environment of respect, loyalty, rigor, and openness. This will be achieved through trust with our clients, proactivity, and fast service, while ensuring confidentiality.",
       "fr": "Le CERASP vise l’excellence par un service de qualité et la mise en place de solutions efficaces pour aider les PME à prospérer. Le CERASP privilégie le dévouement et l’intégrité, concentrant tous ses efforts pour le succès mutuel dans un environnement de respect, loyauté, rigueur, et ouverture. Ceci sera atteint par une confiance avec nos clients, une proactivité, et une rapidité de service, tout en garantissant la confidentialité."
     },
-    "innovation": {
+    {
+      "key": "innovation",
       "title": {
         "en": "Innovation in Sustainable Development",
         "fr": "L’innovation en développement durable"
@@ -57,7 +59,8 @@
       "en": "Considering the international context of long-term climate change, the CERASP is committed to developing innovative technologies that adhere to the principles of sustainable development and environmental responsibility. The solutions offered to our clients will be designed to reduce emissions and prioritize the prudent use of raw materials, opting for processes with minimal environmental impact. These solutions aim to change the behaviors of users and consumers in the medium term.",
       "fr": "Tenant compte du contexte international des changements climatiques à long terme, le CERASP s'engage à développer des technologies innovantes qui respectent les principes du développement durable et de l'écoresponsabilité. Les solutions proposées à nos clients seront conçues pour réduire les émissions et privilégier l'utilisation judicieuse de matières premières, en optant pour des procédés ayant un impact environnemental minimal. Ces solutions visent à modifier, à moyen terme, les comportements des utilisateurs et des consommateurs."
     },
-    "collaboration": {
+    {
+      "key": "collaboration",
       "title": {
         "en": "Collaboration",
         "fr": "La collaboration"
@@ -65,7 +68,8 @@
       "en": "The CERASP strives to attract and stimulate the creation of new businesses by establishing an environment conducive to creativity, applied research, and technological innovation in Quebec and Canada. The CERASP aspires to be a central hub in its ecosystem, positively contributing to the advancement of a modern and innovative industry in the region. The partnership envisioned between the two colleges serves as a perfect example of solidarity.",
       "fr": "Le CERASP s'efforce d'attirer et de stimuler la création de nouvelles entreprises en établissant un environnement favorable à la créativité, à la recherche appliquée et à l'innovation technologique au Québec et au Canada. Le CERASP aspire à être un pivot central dans son écosystème, contribuant positivement à l'avancement d'une industrie moderne et innovante dans la région. Le partenariat envisagé entre les deux cégeps sert d'exemple parfait en matière de solidarité."
     },
-    "openness": {
+    {
+      "key": "openness",
       "title": {
         "en": "Openness",
         "fr": "L’ouverture"
@@ -73,5 +77,5 @@
       "en": "Keeping an open mind to international developments and a constantly evolving world.",
       "fr": "Garder l’esprit ouvert sur l’international et un monde en constante évolution."
     }
-  }
+  ]
 }

@@ -1,1 +1,21 @@
 /* #id only */
+
+#about-overview-bullets {
+  padding-left: 25vw;
+  width: 50vw;
+  margin-top: -5vw;
+}
+
+#about-overview-secondary-content {
+  position: relative;
+}
+
+#about-overview-secondary-content::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 4vw;
+  top: 0;
+  left: 0vw;
+  background-color: rgb(193, 232, 255);
+}
