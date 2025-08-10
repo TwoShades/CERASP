@@ -10,53 +10,49 @@ const ExpertiseTechTransfer = () => {
   const { language } = useContext(LanguageContext);
   const techTransfer = expertiseTranslations.techTransfer;
 
-  // Convert features object to array for mapping
   const featuresArray = Object.values(
     techTransfer.features
   );
 
   return (
-    <main className="subpage">
+    <main className="subpage-overview">
       <div className="layout-panel-5"></div>
 
-      <div className="subpage-overview">
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>
+          {techTransfer.title[language].toUpperCase()}
+        </h1>
+        <p>{techTransfer.content[language]}</p>
+      </AnimateObject>
+
+      <section className="subpage-row">
         <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-intro-grid"
+          direction="left"
+          className="subpage-col-1-3"
         >
-          <h1>
-            {techTransfer.title[language].toUpperCase()}
-          </h1>
-          <p>{techTransfer.content[language]}</p>
+          <img
+            src="/photos/FromOldSite/cerasp-image1-scaled-450x450.jpg"
+            alt="Technology Transfer"
+          />
         </AnimateObject>
+      </section>
 
-        <section className="subpage-row">
-          <AnimateObject
-            direction="left"
-            className="subpage-col-1-3"
-          >
-            {/* Optional image: swap or remove */}
-            <img
-              src="/photos/FromOldSite/cerasp-image1-scaled-450x450.jpg"
-              alt="Technology Transfer"
+      <div className="subpage-flex-column">
+        <div id="expertise-ideation-bullets">
+          {featuresArray.map((feature, i) => (
+            <InteractiveBullet
+              key={i}
+              title={feature.title[language]}
+              description={feature.description[language]}
             />
-          </AnimateObject>
-        </section>
-
-        <div className="subpage-flex-column">
-          <div id="expertise-ideation-bullets">
-            {featuresArray.map((feature, i) => (
-              <InteractiveBullet
-                key={i}
-                title={feature.title[language]}
-                description={feature.description[language]}
-              />
-            ))}
-          </div>
+          ))}
         </div>
-
-        <ContactCTA infoText="////Custom Text.////" />
       </div>
+
+      <ContactCTA infoText="////Custom Text.////" />
     </main>
   );
 };

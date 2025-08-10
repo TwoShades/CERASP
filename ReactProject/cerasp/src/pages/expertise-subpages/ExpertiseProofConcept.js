@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./css/ExpertiseProofConcept.css"; // you said you’ll handle CSS later
+import "./css/ExpertiseProofConcept.css";
 import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
@@ -21,41 +21,40 @@ const ExpertiseProofConcept = () => {
   );
 
   return (
-    <main className="subpage">
+    <main className="subpage-overview">
       <div className="layout-panel-5"></div>
-      <div className="subpage-overview">
+
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>{title.toUpperCase()}</h1>
+        <p>{intro}</p>
+      </AnimateObject>
+      <section className="subpage-row">
         <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-intro-grid"
+          direction="left"
+          className="subpage-col-1-4"
         >
-          <h1>{title.toUpperCase()}</h1>
-          <p>{intro}</p>
+          <img
+            src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg"
+            alt="Biotech facility"
+          />
         </AnimateObject>
-        <section className="subpage-row">
-          <AnimateObject
-            direction="left"
-            className="subpage-col-1-4"
-          >
-            <img
-              src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg"
-              alt="Biotech facility"
+      </section>
+      <div className="subpage-flex-column">
+        <div id="expertise-ideation-bullets">
+          {content.map(({ title, description }) => (
+            <InteractiveBullet
+              key={title}
+              title={title}
+              description={description}
             />
-          </AnimateObject>
-        </section>
-        <div className="subpage-flex-column">
-          <div id="expertise-ideation-bullets">
-            {content.map(({ title, description }) => (
-              <InteractiveBullet
-                key={title}
-                title={title}
-                description={description}
-              />
-            ))}
-            <div className="expertise-generic-square"></div>
-          </div>
+          ))}
+          <div className="expertise-generic-square"></div>
         </div>
-        <ContactCTA />
       </div>
+      <ContactCTA />
     </main>
   );
 };

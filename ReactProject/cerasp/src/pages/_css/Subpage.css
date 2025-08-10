@@ -32,7 +32,7 @@
   width: 100vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-block: var(--space-xxl);
+  margin-block: var(--space-xl);
 }
 
 .subpage-intro-grid h1 {

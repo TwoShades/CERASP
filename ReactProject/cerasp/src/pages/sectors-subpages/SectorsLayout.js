@@ -41,7 +41,6 @@ const SectorsLayout = () => {
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
-          <div className="layout-panel-4"></div>
         </>
       )}
 

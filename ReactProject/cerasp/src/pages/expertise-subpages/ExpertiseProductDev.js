@@ -11,53 +11,49 @@ const ExpertiseProductDev = () => {
   const productDev = expertiseTranslations.productDev;
 
   return (
-    <main className="subpage">
+    <main className="subpage-overview">
       <div className="layout-panel-5"></div>
-      <div className="subpage-overview">
+
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>{productDev.title[language].toUpperCase()}</h1>
+        <p>
+          {productDev.content
+            ? productDev.content[language]
+            : ""}
+        </p>
+      </AnimateObject>
+
+      <section className="subpage-row">
         <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-intro-grid"
+          direction="left"
+          className="subpage-col-1-4"
         >
-          <h1>
-            {productDev.title[language].toUpperCase()}
-          </h1>
-          <p>
-            {productDev.content
-              ? productDev.content[language]
-              : ""}
-          </p>
+          <img
+            src="/photos/FromOldSite/biotech-scaled.jpg"
+            alt="Product Development"
+          />
         </AnimateObject>
+      </section>
 
-        <section className="subpage-row">
-          <AnimateObject
-            direction="left"
-            className="subpage-col-1-4"
-          >
-            {/* Replace with an image or relevant visual, if you have one */}
-            <img
-              src="/photos/FromOldSite/biotech-scaled.jpg"
-              alt="Product Development"
-            />
-          </AnimateObject>
-        </section>
-
-        <div className="subpage-flex-column">
-          <div id="expertise-ideation-bullets">
-            {Object.entries(productDev)
-              .filter(([key]) => key.startsWith("card"))
-              .map(([key, card]) => (
-                <InteractiveBullet
-                  key={key}
-                  title={card.title[language]}
-                  description={card.content[language]}
-                />
-              ))}
-            <div className="expertise-generic-square"></div>
-          </div>
+      <div className="subpage-flex-column">
+        <div id="expertise-ideation-bullets">
+          {Object.entries(productDev)
+            .filter(([key]) => key.startsWith("card"))
+            .map(([key, card]) => (
+              <InteractiveBullet
+                key={key}
+                title={card.title[language]}
+                description={card.content[language]}
+              />
+            ))}
+          <div className="expertise-generic-square"></div>
         </div>
-
-        <ContactCTA infoText="////Custom Text.////" />
       </div>
+
+      <ContactCTA infoText="////Custom Text.////" />
     </main>
   );
 };

@@ -137,6 +137,7 @@
 .layout-panel-4 {
   position: fixed;
   z-index: 0;
+  background-color: var(--color-dodger-blue);
   top: 0;
   left: 60vw;
   width: 20vw;
@@ -151,6 +152,10 @@
   right: 0;
   width: 20vw;
   height: 100vh;
+}
+
+.narrow {
+  width: 6vw;
 }
 
 /* Testing/Additional */
