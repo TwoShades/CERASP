@@ -17,36 +17,38 @@ const ExpertiseIdeation = () => {
 
   return (
     <main className="subpage">
+      <div className="layout-panel-5"></div>
       <div className="subpage-overview">
         <AnimateObject
-          direction="right"
-          className="subpage-overview-intro"
+          variantsToRun={["slideLeft", "fadeIn"]}
+          className="subpage-intro-grid"
         >
           <h1>{title.toUpperCase()}</h1>
           <p>{intro}</p>
         </AnimateObject>
-        <AnimateObject
-          direction="left"
-          className="subpage-overview-image"
-        >
-          <img
-            src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg"
-            alt="Biotech facility"
-            id="expertise-intro-img"
-            height="600"
-          />
-        </AnimateObject>
-        <div className="subpage-bulleted-list">
-          {content.map(({ title, description }) => (
-            <InteractiveBullet
-              key={title}
-              title={title}
-              description={description}
+        <section className="subpage-row">
+          <AnimateObject
+            direction="left"
+            className="subpage-col-1-4"
+          >
+            <img
+              src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg"
+              alt="Biotech facility"
             />
-          ))}
-          <div className="expertise-generic-square"></div>
+          </AnimateObject>
+        </section>
+        <div className="subpage-flex-column">
+          <div id="expertise-ideation-bullets">
+            {content.map(({ title, description }) => (
+              <InteractiveBullet
+                key={title}
+                title={title}
+                description={description}
+              />
+            ))}
+            <div className="expertise-generic-square"></div>
+          </div>
         </div>
-
         <ContactCTA infoText="////Custom Text.////" />
       </div>
     </main>

@@ -23,6 +23,7 @@ const ExpertiseLayout = () => {
     <div className="layout-page page-content">
       {location.pathname === "/expertise" && (
         <>
+          <div className="layout-panel-5"></div>
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/AdobeStock_240748778__-scaled.jpg"
@@ -37,7 +38,6 @@ const ExpertiseLayout = () => {
           <div className="layout-panel-4"></div>
         </>
       )}
-      <div className="layout-panel-5"></div>
       {isOverview && (
         <aside className="layout-sidebar">
           <ul>

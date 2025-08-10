@@ -1,5 +1,7 @@
-#expertise-intro-img {
-  align-self: start;
+#expertise-ideation-bullets {
+  margin-top: var(--space-m);
+  padding-left: 25vw;
+  width: 50vw;
 }
 
 .expertise-generic-square {

@@ -1,64 +1,64 @@
-import React, { useState, useEffect, useContext } from "react";
-import "./css/ExpertiseProductDev.css";
+import React, { useContext } from "react";
+import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
+import AnimateObject from "../../components/uicomponents/AnimateObject";
+import ContactCTA from "../../components/interactables/ContactCTA";
+import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 
 const ExpertiseProductDev = () => {
   const { language } = useContext(LanguageContext);
   const productDev = expertiseTranslations.productDev;
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
-    <div className="training-container">
-      {/* Subtle background elements */}
-      <div className="background-accent"></div>
+    <main className="subpage">
+      <div className="layout-panel-5"></div>
+      <div className="subpage-overview">
+        <AnimateObject
+          variantsToRun={["slideLeft", "fadeIn"]}
+          className="subpage-intro-grid"
+        >
+          <h1>
+            {productDev.title[language].toUpperCase()}
+          </h1>
+          <p>
+            {productDev.content
+              ? productDev.content[language]
+              : ""}
+          </p>
+        </AnimateObject>
 
-      <div className="training-content">
-        {/* Header */}
-        <div className={`training-header ${isVisible ? "visible" : ""}`}>
-          <h2 className="training-title">{productDev.title[language]}</h2>
-          <div className="title-accent"></div>
-        </div>
+        <section className="subpage-row">
+          <AnimateObject
+            direction="left"
+            className="subpage-col-1-4"
+          >
+            {/* Replace with an image or relevant visual, if you have one */}
+            <img
+              src="/photos/FromOldSite/biotech-scaled.jpg"
+              alt="Product Development"
+            />
+          </AnimateObject>
+        </section>
 
-        {/* Main content card */}
-        <div className={`training-card ${isVisible ? "visible" : ""}`}>
-          <div className="card-inner">
-            <div className="content-section">
-              <div className="icon-container">
-                <div className="training-icon">🎓</div>
-              </div>
-              <p className="training-description">
-                {productDev.content[language]}
-              </p>
-            </div>
-
-            <div className="decorative-section">
-              <div className="accent-line"></div>
-              <div className="expertise-feature-highlights">
-                {Object.entries(productDev)
-                  .filter(([key]) => key.startsWith("card"))
-                  .map(([key, card]) => (
-                    <div key={key} className="expertise-highlight-item">
-                      <span className="highlight-icon">✓</span>
-                      <span className="highlight-text">
-                        <strong className="highlight-title-strong">
-                          {card.title[language]}
-                        </strong>{" "}
-                        {card.content[language]}
-                      </span>
-                    </div>
-                  ))}
-              </div>
-            </div>
+        <div className="subpage-flex-column">
+          <div id="expertise-ideation-bullets">
+            {Object.entries(productDev)
+              .filter(([key]) => key.startsWith("card"))
+              .map(([key, card]) => (
+                <InteractiveBullet
+                  key={key}
+                  title={card.title[language]}
+                  description={card.content[language]}
+                />
+              ))}
+            <div className="expertise-generic-square"></div>
           </div>
         </div>
+
+        <ContactCTA infoText="////Custom Text.////" />
       </div>
-    </div>
+    </main>
   );
 };
 
