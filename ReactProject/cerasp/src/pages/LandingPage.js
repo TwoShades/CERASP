@@ -21,6 +21,25 @@ import {
 
 const content = landingTranslations;
 
+const data = [
+  {
+    number: "80+",
+    info: {
+      en: "Years of Industry Experience",
+      fr: "Années d'expérience dans l'industrie",
+    },
+  },
+  { number: "3", info: { en: "Sites", fr: "Sites" } },
+  {
+    number: "10M$",
+    info: {
+      en: "Equipment Value",
+      fr: "Valeur d'équipement",
+    },
+  },
+  { number: "50+", info: { en: "Clients", fr: "Clients" } },
+];
+
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
 
@@ -111,7 +130,7 @@ const SandboxPage = () => {
               initial="hidden"
               animate="visible"
             >
-              <ContactIcon />
+              <ContactIcon theme="contact-icon-light" />
             </motion.div>
 
             <div className="landing-white-box-img">
@@ -157,7 +176,24 @@ const SandboxPage = () => {
                 className="sb-col-4"
                 variants={colVariants}
               />
+              <motion.div
+                className="sb-col-5"
+                variants={colVariants}
+              />
             </motion.div>
+          </div>
+          <div className="landing-white-box-numbers">
+            {data.map(({ number, info }, i) => (
+              <div
+                key={i}
+                className="landing-white-box-item"
+              >
+                <div className="number">{number}</div>
+                <div className="info">
+                  {info[language] || info.en}
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </motion.div>

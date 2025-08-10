@@ -3,10 +3,10 @@ import { ReactComponent as ContactSvg } from "../../svg/contact-us.svg";
 import "./css/ContactIcon.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
-const ContactIcon = () => {
+const ContactIcon = ({ theme = "contact-icon-light" }) => {
   const { language } = useContext(LanguageContext);
   return (
-    <div className="contact-icon-wrapper">
+    <div className={`contact-icon-wrapper ${theme}`}>
       <div className="contact-icon-border">
         <ContactSvg className="contact-icon-svg" />
       </div>
