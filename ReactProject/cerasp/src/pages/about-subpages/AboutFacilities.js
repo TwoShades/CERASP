@@ -6,6 +6,7 @@ import { useContext } from "react";
 import React from "react";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
+import ContactCTA from "../../components/interactables/ContactCTA";
 
 export default function AboutFacilities() {
   const { language } = useContext(LanguageContext);
@@ -108,6 +109,7 @@ export default function AboutFacilities() {
             <img
               src="/photos/facilities/cerasp-map-fr.jpg"
               alt="CERASP Map"
+              id="about-facilities-map"
             />
           ) : (
             <img
@@ -118,6 +120,7 @@ export default function AboutFacilities() {
           )}
         </div>
       </section>
+      <ContactCTA />
     </main>
   );
 }
