@@ -50,29 +50,29 @@ export default function AboutTeam() {
   }, [language]);
 
   return (
-    <main className="subpage-overview subpage-center-all">
-      <AnimateObject
-        variantsToRun={["slideLeft", "fadeIn"]}
-        className="subpage-intro-grid"
-      >
-        <h1>
-          {language === "fr"
-            ? "RENCONTREZ L'ÉQUIPE"
-            : "MEET THE TEAM"}
-        </h1>
-      </AnimateObject>
-      <section className="subpage-center-all">
+    <>
+      <main className="subpage-overview subpage-center-all">
         <AnimateObject
           variantsToRun={["slideLeft", "fadeIn"]}
-          className="team-cards"
+          className="subpage-intro-grid"
         >
-          {teamData.map((member) => {
-            return (
-              <Employee key={member.id} member={member} />
-            );
-          })}
+          <h1>
+            {language === "fr"
+              ? "RENCONTREZ L'ÉQUIPE"
+              : "MEET THE TEAM"}
+          </h1>
         </AnimateObject>
-      </section>
-    </main>
+        <section className="subpage-center-all">
+          <div className="team-cards">
+            {teamData.map((member) => {
+              return (
+                <Employee key={member.id} member={member} />
+              );
+            })}
+          </div>
+        </section>
+      </main>
+      {teamData.length > 0 && <ContactCTA />}
+    </>
   );
 }

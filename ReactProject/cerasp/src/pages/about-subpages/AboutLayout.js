@@ -22,11 +22,10 @@ const AboutLayout = () => {
 
   return (
     <div className="layout-page page-content">
-      <div className="layout-panel-5" />
-      <ContactIcon />
-
       {location.pathname === "/about" && (
         <>
+          <ContactIcon />
+          <div className="layout-panel-5" />
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/agri-food-food-production-scaled.jpg"
