@@ -9,9 +9,13 @@
 }
 
 .contact-icon-wrapper {
+  /* border: 2px dashed green; */
+  position: fixed;
+  z-index: 2;
+  right: 4vw;
+  bottom: 8vh;
   width: 200px;
   height: 200px;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

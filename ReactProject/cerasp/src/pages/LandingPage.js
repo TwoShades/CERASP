@@ -125,7 +125,6 @@ const SandboxPage = () => {
         >
           <div className="landing-white-box-content">
             <motion.div
-              className="landing-contact-icon"
               variants={contactIconVariants}
               initial="hidden"
               animate="visible"

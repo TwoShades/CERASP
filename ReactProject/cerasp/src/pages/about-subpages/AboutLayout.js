@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import ContactIcon from "../../components/interactables/ContactIcon";
 
 const AboutLayout = () => {
   const location = useLocation();
@@ -21,6 +22,9 @@ const AboutLayout = () => {
 
   return (
     <div className="layout-page page-content">
+      <div className="layout-panel-5" />
+      <ContactIcon />
+
       {location.pathname === "/about" && (
         <>
           <div className="layout-bg-img">
@@ -35,7 +39,6 @@ const AboutLayout = () => {
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
           <div className="layout-panel-4"></div>
-          <div className="layout-panel-5"></div>
         </>
       )}
 

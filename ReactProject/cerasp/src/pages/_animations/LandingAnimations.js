@@ -61,9 +61,9 @@ export const contactIconVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.8,
+      duration: 1.2,
       ease: "easeInOut",
-      delay: 5.6,
+      delay: 3,
     },
   },
 };

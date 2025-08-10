@@ -192,14 +192,6 @@
   pointer-events: none;
 }
 
-.landing-contact-icon {
-  position: fixed;
-  bottom: 5vh;
-  right: 10vw;
-  z-index: 100;
-  transform: translate(50%, 0%);
-}
-
 .sb-col-1 {
   position: fixed;
   top: 0;
