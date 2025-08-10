@@ -1,4 +1,5 @@
 import "./css/AboutFacilities.css";
+import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { useContext } from "react";
@@ -12,23 +13,25 @@ export default function AboutFacilities() {
     ScreenSizeContext
   );
   return (
-    <div className="about-facilities">
-      <div className="about-facilities-intro">
-        <AnimateObject direction="right">
-          <h1>
-            {language === "fr"
-              ? "INSTALLATIONS"
-              : "FACILITIES"}
-          </h1>
-          <p>
-            {language === "fr"
-              ? "Le CERASP compte trois sites répartis à travers Montréal."
-              : "The CERASP has three platforms available across Montreal."}
-          </p>
-        </AnimateObject>
-      </div>
-      <div className="about-facilities-content">
-        <div className="facility-card facility-jac">
+    <main className="subpage-overview">
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>
+          {language === "fr"
+            ? "INSTALLATIONS"
+            : "FACILITIES"}
+        </h1>
+        <p>
+          {language === "fr"
+            ? "Le CERASP compte trois sites répartis à travers Montréal."
+            : "The CERASP has three platforms available across Montreal."}
+        </p>
+      </AnimateObject>
+
+      <section className="subpage-row">
+        <div className="subpage-col-1-3">
           <img
             src={`/photos/facilities/${
               isFullScreen
@@ -38,7 +41,7 @@ export default function AboutFacilities() {
             alt="John Abbott College"
           />
         </div>
-        <div className="facility-info facility-jac-info">
+        <div className="subpage-col-3-5 about-facilities-names">
           {" "}
           {language === "fr" ? (
             <h2>Cégep John Abbott</h2>
@@ -51,19 +54,9 @@ export default function AboutFacilities() {
               : "Prototyping, small-scale manufacturing and testing"}
           </p>
         </div>
-
-        <div className="facility-card facility-gg">
-          <img
-            src={`/photos/facilities/${
-              isFullScreen
-                ? "cegep-gerald-godin.jpg"
-                : "cegep-gerald-godin-landscape.jpg"
-            }`}
-            alt="Cégep Gérald-Godin"
-          />
-        </div>
-        <div className="facility-info facility-gg-info">
-          {" "}
+      </section>
+      <section className="subpage-row">
+        <div className="subpage-col-1-3 about-facilities-names">
           <h2>Cégep Gérald-Godin</h2>
           <p>
             {language === "fr"
@@ -71,7 +64,19 @@ export default function AboutFacilities() {
               : "Prototyping, small-scale manufacturing and testing"}
           </p>
         </div>
-        <div className="facility-card facility-admare">
+        <div className="subpage-col-3-5">
+          <img
+            src={`/photos/facilities/${
+              isFullScreen
+                ? "cegep-gerald-godin.jpg"
+                : "cegep-gerald-godin-landscape.jpg"
+            }`}
+            alt="Cégep Gérald-Godin"
+          />{" "}
+        </div>
+      </section>
+      <section className="subpage-row">
+        <div className="subpage-col-1-3">
           <img
             src={`/photos/facilities/${
               isFullScreen
@@ -81,7 +86,8 @@ export default function AboutFacilities() {
             alt="AdMare Facility"
           />
         </div>
-        <div className="facility-info facility-admare-info">
+
+        <div className="subpage-col-3-5 about-facilities-names">
           {" "}
           <h2>AdMare BioInnovations</h2>
           <p>
@@ -90,26 +96,28 @@ export default function AboutFacilities() {
               : "Research laboratory and development"}
           </p>
         </div>
-      </div>
-
-      <div className="about-facilities-map">
-        <h2>
-          {language === "fr"
-            ? "Où nous trouver"
-            : "Where to find us"}
-        </h2>
-        {language === "fr" ? (
-          <img
-            src="/photos/facilities/cerasp-map-fr.jpg"
-            alt="CERASP Map"
-          />
-        ) : (
-          <img
-            src="/photos/facilities/cerasp-map-en.jpg"
-            alt="CERASP Map"
-          />
-        )}
-      </div>
-    </div>
+      </section>
+      <section className="subpage-row">
+        <div className="subpage-col-2-4 about-facilities-map-container">
+          <h2 id="about-facilities-map-title">
+            {language === "fr"
+              ? "Où nous trouver"
+              : "Where to find us"}
+          </h2>
+          {language === "fr" ? (
+            <img
+              src="/photos/facilities/cerasp-map-fr.jpg"
+              alt="CERASP Map"
+            />
+          ) : (
+            <img
+              src="/photos/facilities/cerasp-map-en.jpg"
+              alt="CERASP Map"
+              id="about-facilities-map"
+            />
+          )}
+        </div>
+      </section>
+    </main>
   );
 }

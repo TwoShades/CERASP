@@ -16,7 +16,7 @@ export default function AboutOverview() {
   const content = aboutTranslations;
   const subValues = content.subValues;
   return (
-    <page className="subpage-overview">
+    <main className="subpage-overview">
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"
@@ -106,6 +106,6 @@ export default function AboutOverview() {
         {/* </div> */}
       </div>
       <ContactCTA />
-    </page>
+    </main>
   );
 }

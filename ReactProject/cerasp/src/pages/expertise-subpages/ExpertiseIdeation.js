@@ -3,7 +3,7 @@ import "./css/ExpertiseIdeation.css";
 import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
-import InteractiveBullet from "../../components/uicomponents/InteractiveBullet"; // <-- your bullet component
+import InteractiveBullet from "../../components/uicomponents/InteractiveBullet"; //
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
 
@@ -13,10 +13,10 @@ const ExpertiseIdeation = () => {
 
   const title = ideation.title[language];
   const intro = ideation.intro[language];
-  const content = ideation[language]; // <---- THIS line extracts the correct array for the current language
+  const content = ideation[language];
 
   return (
-    <div className="subpage">
+    <main className="subpage">
       <div className="subpage-overview">
         <AnimateObject
           direction="right"
@@ -49,7 +49,7 @@ const ExpertiseIdeation = () => {
 
         <ContactCTA infoText="////Custom Text.////" />
       </div>
-    </div>
+    </main>
   );
 };
 
