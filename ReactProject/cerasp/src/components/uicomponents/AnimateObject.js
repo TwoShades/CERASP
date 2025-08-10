@@ -54,9 +54,13 @@ export default function AnimateObject({
     ? variantsToRun.includes("fadeIn")
     : variantsToRun === "fadeIn";
 
+  const includesSlowFade = Array.isArray(variantsToRun)
+    ? variantsToRun.includes("slowFadeIn")
+    : variantsToRun === "slowFadeIn";
+
   const variants = {
     hidden: {
-      opacity: includesFade ? 0 : 1,
+      opacity: includesFade || includesSlowFade ? 0 : 1,
       x: initialX,
       y: initialY,
     },
@@ -64,7 +68,10 @@ export default function AnimateObject({
       opacity: 1,
       x: 0,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: {
+        duration: includesSlowFade ? 1 : 0.6, // slow fade if requested
+        ease: "easeOut",
+      },
     },
   };
 

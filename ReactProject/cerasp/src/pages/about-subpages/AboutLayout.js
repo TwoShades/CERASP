@@ -35,9 +35,9 @@ const AboutLayout = () => {
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
           <div className="layout-panel-4"></div>
+          <div className="layout-panel-5"></div>
         </>
       )}
-      <div className="layout-panel-5"></div>
 
       {isOverview && (
         <aside className="layout-sidebar">
