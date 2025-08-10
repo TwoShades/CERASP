@@ -79,7 +79,6 @@ const AboutEquipments = () => {
 
   return (
     <main className="subpage-overview">
-      {/* <div className="layout-panel-4"></div> */}
       <div
         className="layout-panel-5 narrow"
         style={{ zIndex: 0 }}
@@ -97,7 +96,10 @@ const AboutEquipments = () => {
             : "Discover our cutting edge equipment"}
         </p>
       </AnimateObject>
-      <div className="about-equipments-images">
+      <AnimateObject
+        variantsToRun={["slowFadeIn"]}
+        className="about-equipments-images"
+      >
         {currentItems.map((equipment) => (
           <div
             key={equipment.id}
@@ -124,7 +126,7 @@ const AboutEquipments = () => {
             </div>
           </div>
         ))}
-      </div>
+      </AnimateObject>
 
       {allEquipments.length > 0 && (
         <>
