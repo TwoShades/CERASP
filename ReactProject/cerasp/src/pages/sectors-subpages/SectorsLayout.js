@@ -26,10 +26,11 @@ const SectorsLayout = () => {
       {/* <div className="layout-color-panel"></div> */}
       {location.pathname === "/sector-of-activities" && (
         <>
-          <div className="layout-bg-img-col-3-4">
+          <div className="layout-bg-img">
             <img
-              src="/photos/FromOldSite/Picture-CERASP-7.png"
+              src="/photos/FromOldSite/slide_1-scaled.jpeg"
               alt="Our Sectors"
+              style={{ zIndex: 3000 }}
               className=""
             />
           </div>

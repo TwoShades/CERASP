@@ -63,7 +63,7 @@ body {
   background: repeating-linear-gradient(
     to right,
     transparent 0,
-    transparent calc(20vw - 2px),
+    transparent calc(20vw - 1px),
     var(--gridline-light-blue) calc(20vw - 2px),
     var(--gridline-light-blue) 20vw
   );

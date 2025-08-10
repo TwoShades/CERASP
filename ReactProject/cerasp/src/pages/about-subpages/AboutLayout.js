@@ -25,7 +25,7 @@ const AboutLayout = () => {
         <>
           <div className="layout-bg-img">
             <img
-              src="/photos/FromOldSite/AdobeStock_141805489-scaled.jpg"
+              src="/photos/FromOldSite/agri-food-food-production-scaled.jpg"
               alt="Biotech facility"
               className="history-img"
             />
