@@ -7,11 +7,31 @@
         "fr": "À propos"
       },
       "sub-pages": [
-        { "id": "overview", "en": "OVERVIEW", "fr": "APERÇU" },
-        { "id": "facilities", "en": "FACILITIES", "fr": "INSTALLATIONS" },
-        { "id": "equipment", "en": "EQUIPMENT", "fr": "ÉQUIPEMENT" },
-        { "id": "our-team", "en": "OUR TEAM", "fr": "NOTRE ÉQUIPE" },
-        { "id": "board", "en": "BOARD", "fr": "CONSEIL D'ADMINISTRATION" }
+        {
+          "id": "overview",
+          "en": "OVERVIEW",
+          "fr": "APERÇU"
+        },
+        {
+          "id": "facilities",
+          "en": "FACILITIES",
+          "fr": "INSTALLATIONS"
+        },
+        {
+          "id": "equipment",
+          "en": "EQUIPMENT",
+          "fr": "ÉQUIPEMENT"
+        },
+        {
+          "id": "our-team",
+          "en": "OUR TEAM",
+          "fr": "NOTRE ÉQUIPE"
+        },
+        {
+          "id": "board",
+          "en": "BOARD",
+          "fr": "CONSEIL D'ADMINISTRATION"
+        }
       ]
     },
     {
@@ -21,7 +41,6 @@
         "fr": "Nos Secteurs"
       },
       "sub-pages": [
-        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
         {
           "id": "pharmaceutical",
           "en": "Pharmaceutical",
@@ -76,7 +95,6 @@
         "fr": "Expertises & Solutions"
       },
       "sub-pages": [
-        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
         {
           "id": "ideation",
           "en": "Ideation: From Concept to Strategy",
@@ -111,7 +129,11 @@
         "fr": "Nos projets"
       },
       "sub-pages": [
-        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
+        {
+          "id": "overview",
+          "en": "Overview",
+          "fr": "Aperçu"
+        },
         {
           "id": "grants",
           "en": "Grants Awarded",
@@ -125,7 +147,13 @@
         "en": "News",
         "fr": "Nouvelles"
       },
-      "sub-pages": [{ "id": "overview", "en": "Latest news", "fr": "Dernières nouvelles" }]
+      "sub-pages": [
+        {
+          "id": "overview",
+          "en": "Latest news",
+          "fr": "Dernières nouvelles"
+        }
+      ]
     }
   ]
 }

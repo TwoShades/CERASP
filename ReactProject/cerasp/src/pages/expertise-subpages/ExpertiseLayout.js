@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import ContactIcon from "../../components/interactables/ContactIcon";
 
 const ExpertiseLayout = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const ExpertiseLayout = () => {
 
   return (
     <div className="layout-page page-content">
+      <ContactIcon />
       {location.pathname === "/expertise" && (
         <>
           <div className="layout-panel-5"></div>
