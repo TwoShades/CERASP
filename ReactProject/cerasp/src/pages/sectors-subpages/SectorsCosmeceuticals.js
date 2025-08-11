@@ -5,7 +5,8 @@ import sectorsTranslations from "./sectors-translation.json";
 
 const SectorsCosmeceuticals = () => {
   const { language } = useContext(LanguageContext);
-  const cosmeceuticals = sectorsTranslations.cosmeceuticals;
+  const cosmeceuticals =
+    sectorsTranslations.dermo_cosmeceuticals;
 
   return (
     <div className="sectors-pharma-layout">
@@ -16,7 +17,11 @@ const SectorsCosmeceuticals = () => {
           aria-label="sectors Visual Element"
         >
           <div className="sectors-pharma-badge">
-            <span className="emoji" role="img" aria-label="science emoji">
+            <span
+              className="emoji"
+              role="img"
+              aria-label="science emoji"
+            >
               💊
             </span>
           </div>

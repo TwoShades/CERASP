@@ -226,14 +226,14 @@
       }
     }
   },
-  "cosmeceuticals": {
+  "dermo_cosmeceuticals": {
     "title": {
-      "en": "Cosmetics & Cosmeceuticals",
-      "fr": "Cosmétiques et cosméceutiques"
+      "en": "Dermo & Cosmeceuticals",
+      "fr": "Dermo et cosméceutiques"
     },
     "content": {
-      "en": "We collaborate with cosmetic and cosmeceutical brands to navigate product safety, quality, and market regulations. Our services help ensure your products are not only effective but also compliant and market-ready.",
-      "fr": "Nous collaborons avec les marques de cosmétiques et de cosméceutiques pour les aider à maîtriser la sécurité, la qualité et les réglementations du marché. Nos services garantissent que vos produits sont non seulement efficaces, mais aussi conformes et prêts à être commercialisés."
+      "en": "Our team collaborates to formulate while navigating product safety, quality, and market regulations. Our services help ensure your products are not only effective but also compliant and market-ready.",
+      "fr": "Notre équipe collabore à la formulation tout en veillant à la sécurité, la qualité et les réglementations du marché. Nos services garantissent que vos produits sont non seulement efficaces, mais aussi conformes et prêts à être commercialisés."
     }
   },
   "pilot_scale_production": {

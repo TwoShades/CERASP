@@ -53,7 +53,7 @@ const ExpertiseProductDev = () => {
         </div>
       </div>
 
-      <ContactCTA infoText="At CERASP, we guide your product from concept to market with scientific rigor, regulatory expertise, and technical precision. Partnering closely with you, we streamline development, reduce risks, and speed time-to-market with cost-effective solutions—supporting innovation at every stage." />
+      <ContactCTA />
     </main>
   );
 };

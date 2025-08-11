@@ -46,12 +46,12 @@ export const colContainerVariants = {
 };
 
 export const colVariants = {
-  hidden: { x: 0, opacity: 1, transformOrigin: "bottom" },
+  hidden: { y: 0, opacity: 1, transformOrigin: "bottom" },
   slideOut: {
-    x: "-100vw",
+    y: "100vw",
     opacity: 0,
-    scaleY: 0.2,
-    scaleX: 0.2,
+    scaleY: 0.8,
+    scaleX: 0.8,
     transition: { duration: 0.8, ease: "easeInOut" },
   },
 };

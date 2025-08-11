@@ -79,40 +79,20 @@ function App() {
           element={<SectorsLayout />}
         >
           <Route
-            path="overview"
-            element={<SectorsOverview />}
-          />
-          <Route
-            path="natural-health-products"
-            element={<SectorsNHP />}
-          />
-          <Route
-            path="pharmaceutical"
+            path="pharmaceutical-biopharmaceutical"
             element={<SectorsPharmaceutical />}
-          />
-          <Route
-            path="biopharmaceutical"
-            element={<SectorsBiopharmaceutical />}
-          />
-          <Route
-            path="biotech-biomanufacturing"
-            element={<SectorsbioTechBioMan />}
-          />
-          <Route
-            path="cosmeceuticals"
-            element={<SectorsCosmeceuticals />}
-          />
-          <Route
-            path="diagnostic-tools"
-            element={<SectorsDiagnosticTools />}
           />
           <Route
             path="animal-health"
             element={<SectorsAnimalHealth />}
           />
           <Route
-            path="nutraceutical"
-            element={<SectorsNutraceutical />}
+            path="natural-health-products"
+            element={<SectorsNHP />}
+          />
+          <Route
+            path="dermo-cosmeceuticals"
+            element={<SectorsCosmeceuticals />}
           />
           <Route
             path="medical-devices"
@@ -125,10 +105,6 @@ function App() {
           path="/expertise"
           element={<ExpertiseLayout />}
         >
-          <Route
-            path="overview"
-            element={<ExpertiseOverview />}
-          />
           <Route
             path="ideation"
             element={<ExpertiseIdeation />}
@@ -155,16 +131,7 @@ function App() {
         <Route
           path="/projects"
           element={<ProjectsLayout />}
-        >
-          <Route
-            path="overview"
-            element={<ProjectsOverview />}
-          />
-          <Route
-            path="grants"
-            element={<ProjectsGrants />}
-          />
-        </Route>
+        ></Route>
 
         {/* NEWS */}
         <Route path="/news" element={<News />} />
