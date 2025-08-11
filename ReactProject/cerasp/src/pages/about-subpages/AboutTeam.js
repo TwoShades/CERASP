@@ -9,6 +9,7 @@ import Employee from "../../components/uicomponents/Employee.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA.js";
 
 export default function AboutTeam() {
   const { language } = useContext(LanguageContext);
@@ -72,7 +73,15 @@ export default function AboutTeam() {
           </div>
         </section>
       </main>
-      {teamData.length > 0 && <ContactCTA />}
+      {teamData.length > 0 && (
+        <>
+          <PageLinkCTA
+            text="Meet our Board Members"
+            url="/about/board"
+          />
+          <ContactCTA />
+        </>
+      )}
     </>
   );
 }
