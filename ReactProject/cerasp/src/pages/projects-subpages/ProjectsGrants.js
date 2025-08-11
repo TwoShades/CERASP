@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./css/ProjectsGrants.css";
+// import "./css/ProjectsGrants.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 const grantsData = [

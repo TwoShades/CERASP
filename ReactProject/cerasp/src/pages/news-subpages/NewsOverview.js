@@ -1,12 +1,19 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, {
+  useEffect,
+  useContext,
+  useState,
+} from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import SubPageHeader from "../../components/layouts/SubPageHeader";
 import "./css/NewsOverview.css";
+import AnimateObject from "../../components/uicomponents/AnimateObject";
 
 export default function NewsOverview({ onReady }) {
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
+  const { isMobile, isTablet, isFullScreen } = useContext(
+    ScreenSizeContext
+  );
 
   const iframeSources = [
     "https://www.linkedin.com/embed/feed/update/urn:li:share:7336061660295573506?collapsed=1",
@@ -30,7 +37,13 @@ export default function NewsOverview({ onReady }) {
 
   return (
     <div className="news-overview-layout">
-      <SubPageHeader name={language === "en" ? "NEWS" : "NOUVELLES"} extraContent={<div className="news-overview-header-text"></div>} />
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        // className="subpage-intro-grid"
+      >
+        <h1>{language === "fr" ? "NOUVELLES" : "NEWS"}</h1>
+        <div>=======TITLE PLACEMENT/FRAMING=========</div>
+      </AnimateObject>
       <div className="news-linkedin-feed">
         {iframeSources.map((src, index) => (
           <iframe

@@ -1,11 +1,17 @@
 import sitemap from "../../sitemap.json";
 import { Outlet, useLocation } from "react-router-dom";
-import React, { useContext } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import "../_css/Layout.css";
+import "./css/ProjectsLayout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 import ProjectsGrants from "./ProjectsGrants";
-import ProjectsOverview from "./ProjectsOverview";
+import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
+import AnimateObject from "../../components/uicomponents/AnimateObject";
 
 const ProjectsLayout = () => {
   const location = useLocation();
@@ -14,28 +20,72 @@ const ProjectsLayout = () => {
   );
 
   const { language } = useContext(LanguageContext);
+  const [projectsData, setProjectsData] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const res = await fetch(
+          `https://loving-bird-9ef3b0470a.strapiapp.com/api/projects?locale=${language}`
+        );
+        const json = await res.json();
+
+        const cleaned = json.data.map((entry) => ({
+          title: entry.Title || "",
+          subtitle: entry.Subtitle?.trim() || "",
+          content: entry.Content || "",
+        }));
+
+        setProjectsData(cleaned);
+      } catch (err) {
+        console.error(
+          "Failed to fetch projects data:",
+          err
+        );
+      }
+    };
+
+    fetchProjects();
+  }, [language]);
 
   return (
-    <div className="layout-page page-content">
-      {location.pathname === "/projects" && (
-        <>
-          <div className="layout-bg-wide-img">
-            <img
-              src="/photos/FromOldSite/slide_1-scaled.jpeg"
-              alt="Biotech facility"
-              className="history-img"
-            />
-          </div>
-          {/* <div className="layout-rotated-title">{language === "fr" ? <h1>NOS PROJETS</h1> : <h1>OUR PROJECTS</h1>}</div> */}
-        </>
-      )}
+    <main className="subpage-overview">
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>
+          {language === "fr"
+            ? "NOS PROJETS"
+            : "OUR PROJECTS"}
+        </h1>
+      </AnimateObject>
       <div className="layout-panel-5"></div>
-      <ProjectsGrants />
-      <ProjectsOverview />
+
+      {/* <ProjectsGrants /> */}
+
+      {/* New bullet-style projects list */}
+      <div className="subpage-flex-column">
+        <div id="projects-bullets">
+          {projectsData.map((proj, index) => (
+            <InteractiveBullet
+              key={index}
+              title={proj.title}
+              description={proj.content}
+            />
+          ))}
+          <div className="expertise-generic-square"></div>
+        </div>
+      </div>
+      <div>
+        ========MIGHT NEED PHOTO/VISUAL ELEMENT=========
+      </div>
+      <div> ========GRANTS IN PROGRESS=========</div>
+
       <main className="layout-main-content">
         <Outlet />
       </main>
-    </div>
+    </main>
   );
 };
 

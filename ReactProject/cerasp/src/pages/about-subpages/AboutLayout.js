@@ -51,6 +51,7 @@ const AboutLayout = () => {
               </li>
             ))}
           </ul>
+          <div>====LAYOUT ADJUSTMENTS IN EACH PAGE====</div>
         </aside>
       )}
 
