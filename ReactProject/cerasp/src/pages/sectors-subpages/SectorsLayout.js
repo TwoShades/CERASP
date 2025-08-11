@@ -5,6 +5,7 @@ import "../_css/Layout.css";
 import "./css/SectorsLayout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ContactIcon from "../../components/interactables/ContactIcon";
+import sectorTranslations from "./sectors-translation.json";
 
 const SectorsLayout = () => {
   const location = useLocation();
@@ -21,6 +22,8 @@ const SectorsLayout = () => {
     : [];
 
   const { language } = useContext(LanguageContext);
+  const overview =
+    sectorTranslations.overview.content[language];
 
   return (
     <div className="layout-page page-content">
@@ -28,7 +31,11 @@ const SectorsLayout = () => {
       {/* <div className="layout-color-panel"></div> */}
       {location.pathname === "/sector-of-activities" && (
         <>
-          <div className="layout-panel-5"></div>
+          <div className="layout-panel-5">
+            <div className="layout-page-overview">
+              <p>{overview}</p>
+            </div>
+          </div>
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/slide_1-scaled.jpeg"

@@ -4,10 +4,10 @@ import React, { useContext } from "react";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ContactIcon from "../../components/interactables/ContactIcon";
+import expertiseTranslations from "./expertise-translations.json";
 
 const ExpertiseLayout = () => {
   const location = useLocation();
-
   const isOverview = location.pathname === "/expertise";
 
   const expertisePage = sitemap.pages.find(
@@ -19,13 +19,19 @@ const ExpertiseLayout = () => {
     : [];
 
   const { language } = useContext(LanguageContext);
+  const overview =
+    expertiseTranslations.overview.content[language];
 
   return (
     <div className="layout-page page-content">
       <ContactIcon />
       {location.pathname === "/expertise" && (
         <>
-          <div className="layout-panel-5"></div>
+          <div className="layout-panel-5">
+            <div className="layout-page-overview">
+              <p>{overview}</p>
+            </div>
+          </div>
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/AdobeStock_240748778__-scaled.jpg"

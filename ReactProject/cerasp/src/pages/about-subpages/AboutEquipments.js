@@ -88,13 +88,10 @@ const AboutEquipments = () => {
         className="subpage-intro-grid"
       >
         <h1>
-          {language === "fr" ? "ÉQUIPEMENT" : "EQUIPMENT"}
-        </h1>
-        <p>
           {language === "fr"
-            ? "Découvrez notre équipement de pointe"
-            : "Discover our cutting edge equipment"}
-        </p>
+            ? "DÉCOUVREZ NOTRE ÉQUIPEMENT DE POINTE"
+            : "DISCOVER OUR CUTTING EDGE EQUIPMENT"}
+        </h1>
       </AnimateObject>
       <AnimateObject
         variantsToRun={["slowFadeIn"]}
@@ -169,6 +166,7 @@ const AboutEquipments = () => {
                 : "Click Here"}
             </Link>
           </div>
+          <ContactCTA />
         </>
       )}
     </main>

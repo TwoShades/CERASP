@@ -43,7 +43,6 @@
 .layout-rotated-title {
   display: flex;
   justify-content: end;
-  /* border: 2px solid black; */
   z-index: 11;
   margin-left: calc(20vw - 100px);
   width: 40vw;
@@ -59,7 +58,6 @@
 }
 
 .layout-sidebar {
-  /* z-index: 9999; */
   width: 30vw;
   margin-top: 130px;
   margin-left: 50px;
@@ -76,7 +74,6 @@
 }
 
 .layout-sidebar a {
-  /* z-index: 9999; */
   display: inline-block;
   text-decoration: none;
   color: #0056b3;
@@ -96,7 +93,6 @@
 .layout-panel-1 {
   position: fixed;
   z-index: 0;
-  /* background-color: rgb(216, 31, 31); */
   top: 0;
   left: 0vw;
   width: 20vw;
@@ -152,6 +148,27 @@
   right: 0;
   width: 20vw;
   height: 100vh;
+}
+
+.layout-page-overview {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  width: 20vw;
+  top: 0vh;
+  right: 0vw;
+}
+
+/* USE THIS FOR EXPERTISE AND SECTOR */
+.layout-page-overview p {
+  padding: 1em;
+  text-align: left;
+  margin-top: 20vh;
+  color: white;
+  font-size: var(--text-m);
 }
 
 .narrow {
