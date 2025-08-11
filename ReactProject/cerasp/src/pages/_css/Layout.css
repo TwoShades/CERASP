@@ -169,6 +169,8 @@
   margin-top: 20vh;
   color: white;
   font-size: var(--text-m);
+  font-weight: 100;
+  line-height: 1.2;
 }
 
 .narrow {

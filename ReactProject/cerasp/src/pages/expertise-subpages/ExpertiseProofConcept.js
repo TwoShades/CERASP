@@ -34,10 +34,10 @@ const ExpertiseProofConcept = () => {
       <section className="subpage-row">
         <AnimateObject
           direction="left"
-          className="subpage-col-1-4"
+          className="subpage-col-1-3"
         >
           <img
-            src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg"
+            src="/photos/FromOldSite/AdobeStock_315975074__-scaled-450x450.jpg"
             alt="Biotech facility"
           />
         </AnimateObject>
