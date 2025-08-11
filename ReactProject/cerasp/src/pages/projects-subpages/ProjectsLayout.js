@@ -80,6 +80,10 @@ const ProjectsLayout = () => {
       <div>
         ========MIGHT NEED PHOTO/VISUAL ELEMENT=========
       </div>
+      <div>
+        ========PROJECT LIST - MAYBE DIFFERENT BULLET
+        STYLE=========
+      </div>
       <div> ========GRANTS IN PROGRESS=========</div>
 
       <main className="layout-main-content">

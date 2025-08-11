@@ -52,6 +52,7 @@ const AboutLayout = () => {
             ))}
           </ul>
           <div>====LAYOUT ADJUSTMENTS IN EACH PAGE====</div>
+          <div>====TEAM/BOARD MORE ELEMENTS====</div>
         </aside>
       )}
 
