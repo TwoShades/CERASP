@@ -1,5 +1,6 @@
 .team-cards {
   position: relative;
+  z-index: 10;
   margin-top: -15vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);

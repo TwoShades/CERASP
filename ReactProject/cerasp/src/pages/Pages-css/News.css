@@ -12,6 +12,38 @@
   z-index: 1;
 }
 
+#news-iframe-wrapper {
+  margin-left: 20vw;
+  margin-bottom: var(--space-l);
+  width: 50%;
+  height: 75vh;
+}
+
 .news-page .news-overview-layout {
   transition: opacity 0.3s ease-in-out;
+}
+
+.news-linkedin-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .news-overview-layout {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .news-overview-layout iframe {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-overview-layout iframe {
+    width: 80% !important;
+  }
 }

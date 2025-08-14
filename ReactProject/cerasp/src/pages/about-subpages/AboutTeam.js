@@ -75,10 +75,7 @@ export default function AboutTeam() {
       </main>
       {teamData.length > 0 && (
         <>
-          {/* <PageLinkCTA
-            text="Meet our Board Members"
-            url="/about/board"
-          /> */}
+          <div className="layout-panel-5-transp" />
           <ContactCTA />
         </>
       )}
