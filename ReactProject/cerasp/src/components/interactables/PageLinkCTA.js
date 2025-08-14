@@ -1,22 +1,29 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import useLenis from "../../hooks/useLenis";
+import "./css/PageLinkCTA.css";
 
-// pass location param
 export default function PageLinkCTA({
   text = "Click Here",
   url,
 }) {
-  const language = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
+  const navigate = useNavigate();
+  const { scrollToTopWithLenis } = useLenis();
+
+  const handleClick = () => {
+    scrollToTopWithLenis();
+    navigate(url);
+  };
+
   return (
-    <>
-      <Link
-        to={url}
-        className="learn-more-button"
-        style={{ textDecoration: "none" }}
-      >
-        {text}
-      </Link>
-    </>
+    <div
+      className="page-link-cta"
+      onClick={handleClick}
+      style={{ cursor: "pointer", textDecoration: "none" }}
+    >
+      {text}
+    </div>
   );
 }

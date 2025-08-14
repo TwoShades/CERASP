@@ -73,10 +73,10 @@ export default function AboutBoard() {
       {boardMembers.length > 0 && (
         <>
           <ContactCTA />
-          <PageLinkCTA
+          {/* <PageLinkCTA
             text="Meet Our Team"
             url="/about/our-team"
-          />
+          /> */}
         </>
       )}
     </>

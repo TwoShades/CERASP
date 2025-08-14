@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./css/ExpertiseProofConcept.css";
 import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
@@ -6,6 +6,7 @@ import expertiseTranslations from "./expertise-translations.json";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseProofConcept = () => {
   const { language } = useContext(LanguageContext);
@@ -54,6 +55,10 @@ const ExpertiseProofConcept = () => {
           <div className="expertise-generic-square"></div>
         </div>
       </div>
+      <PageLinkCTA
+        text="Product Development"
+        url="/expertise/product-development"
+      />
       <ContactCTA />
     </main>
   );

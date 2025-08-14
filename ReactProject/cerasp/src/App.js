@@ -1,4 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
+import { useEffect } from "react";
+import scrollToTop from "./utils/scrollToTop";
 import Header from "./components/layouts/Header";
 import "./App.css";
 import useLenis from "./hooks/useLenis";
@@ -14,32 +21,24 @@ import EquipmentsMasterList from "./pages/EquipmentsMasterList";
 
 // SECTOR OF ACTIVITIES AND ITS SUBPAGES
 import SectorsLayout from "./pages/sectors-subpages/SectorsLayout.js";
-import SectorsOverview from "./pages/sectors-subpages/SectorsOverview.js";
 import SectorsNHP from "./pages/sectors-subpages/SectorsNHP.js";
 import SectorsPharmaceutical from "./pages/sectors-subpages/SectorsPharmaceutical.js";
-import SectorsBiopharmaceutical from "./pages/sectors-subpages/SectorsBiopharmaceutical.js";
-import SectorsbioTechBioMan from "./pages/sectors-subpages/SectorsBiotechBiomanufacturing.js";
 import SectorsCosmeceuticals from "./pages/sectors-subpages/SectorsCosmeceuticals.js";
-import SectorsDiagnosticTools from "./pages/sectors-subpages/SectorsDiagnosticTools.js";
 import SectorsAnimalHealth from "./pages/sectors-subpages/SectorsAnimalHealth.js";
-import SectorsNutraceutical from "./pages/sectors-subpages/SectorsNutraceutical.js";
 import SectorsMedicalDevices from "./pages/sectors-subpages/SectorsMedicalDevices.js";
 
 // EXPERTISES AND ITS SUBPAGES
 import ExpertiseLayout from "./pages/expertise-subpages/ExpertiseLayout.js";
-import ExpertiseOverview from "./pages/expertise-subpages/ExpertiseOverview.js";
 import ExpertiseIdeation from "./pages/expertise-subpages/ExpertiseIdeation.js";
 import ExpertiseProofConcept from "./pages/expertise-subpages/ExpertiseProofConcept.js";
 import ExpertiseScaleUp from "./pages/expertise-subpages/ExpertiseScaleUp.js";
 import ExpertiseProductDev from "./pages/expertise-subpages/ExpertiseProductDev.js";
 import ExpertiseTechTransfer from "./pages/expertise-subpages/ExpertiseTechTransfer.js";
 
-// PROJECTS AND ITS SUBPAGES
+// PROJECTS PAGE
 import ProjectsLayout from "./pages/projects-subpages/ProjectsLayout.js";
-import ProjectsOverview from "./pages/projects-subpages/ProjectsOverview.js";
-import ProjectsGrants from "./pages/projects-subpages/ProjectsGrants.js";
 
-// NEWS AND ITS SUBPAGES
+// NEWS PAGE
 import News from "./pages/News";
 
 // TESTING/landing PAGE
@@ -49,6 +48,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   useLenis();
+  const location = useLocation();
   return (
     <ScreenSizeProvider>
       <Header />

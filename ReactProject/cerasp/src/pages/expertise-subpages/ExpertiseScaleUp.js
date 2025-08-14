@@ -5,6 +5,7 @@ import expertiseTranslations from "./expertise-translations.json";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseScaleUp = () => {
   const { language } = useContext(LanguageContext);
@@ -53,7 +54,10 @@ const ExpertiseScaleUp = () => {
           ))}
         </div>
       </div>
-
+      <PageLinkCTA
+        text="Technology Transfer & Regulatory Readiness"
+        url="/expertise/technology-transfer"
+      />
       <ContactCTA infoText="////Custom Text.////" />
     </main>
   );

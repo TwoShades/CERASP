@@ -5,6 +5,7 @@ import expertiseTranslations from "./expertise-translations.json";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseProductDev = () => {
   const { language } = useContext(LanguageContext);
@@ -52,7 +53,10 @@ const ExpertiseProductDev = () => {
           <div className="expertise-generic-square"></div>
         </div>
       </div>
-
+      <PageLinkCTA
+        text="Scale-Up & Manufacturing Readiness"
+        url="/expertise/scale-up-manufacturing"
+      />
       <ContactCTA />
     </main>
   );

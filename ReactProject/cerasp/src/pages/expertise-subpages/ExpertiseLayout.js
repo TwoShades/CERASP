@@ -1,13 +1,15 @@
-import sitemap from "../../sitemap.json";
+import React, { useContext, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import React, { useContext } from "react";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import sitemap from "../../sitemap.json";
 import ContactIcon from "../../components/interactables/ContactIcon";
 import expertiseTranslations from "./expertise-translations.json";
 
 const ExpertiseLayout = () => {
   const location = useLocation();
+  const { language } = useContext(LanguageContext);
+
   const isOverview = location.pathname === "/expertise";
 
   const expertisePage = sitemap.pages.find(
@@ -18,14 +20,22 @@ const ExpertiseLayout = () => {
     ? expertisePage["sub-pages"]
     : [];
 
-  const { language } = useContext(LanguageContext);
   const overview =
     expertiseTranslations.overview.content[language];
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      document.documentElement.style.scrollBehavior =
+        "auto";
+      window.scrollTo(0, 0);
+    });
+  }, [location.pathname]);
 
   return (
     <div className="layout-page page-content">
       <ContactIcon />
-      {location.pathname === "/expertise" && (
+
+      {isOverview && (
         <>
           <div className="layout-panel-5">
             <div className="layout-page-overview">
@@ -39,12 +49,12 @@ const ExpertiseLayout = () => {
               className="history-img"
             />
           </div>
-          {/* <div className="layout-rotated-title">{language === "fr" ? <h1>EXPERTISE</h1> : <h1>EXPERTISE</h1>}</div> */}
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
         </>
       )}
+
       {isOverview && (
         <aside className="layout-sidebar">
           <ul>

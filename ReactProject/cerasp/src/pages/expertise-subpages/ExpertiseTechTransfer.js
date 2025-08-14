@@ -5,6 +5,7 @@ import expertiseTranslations from "./expertise-translations.json";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseTechTransfer = () => {
   const { language } = useContext(LanguageContext);
@@ -51,8 +52,11 @@ const ExpertiseTechTransfer = () => {
           ))}
         </div>
       </div>
-
-      <ContactCTA infoText="////Custom Text.////" />
+      <PageLinkCTA
+        text="Ideation: From Concept to Strategy"
+        url="/expertise/ideation"
+      />
+      <ContactCTA />
     </main>
   );
 };
