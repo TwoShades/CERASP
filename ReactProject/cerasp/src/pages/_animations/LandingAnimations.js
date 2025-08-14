@@ -1,4 +1,3 @@
-// src/animations/landingAnimations.js
 export const containerVariants = {
   hidden: {},
   visible: {
@@ -18,18 +17,16 @@ export const childVariants = {
   },
 };
 
+// All animations after second line (“Versatile. Expert. Aware”) delayed +0.4s
 export const whiteBoxVariants = {
-  hidden: {
-    x: "100vw",
-    opacity: 0,
-  },
+  hidden: { x: "100vw", opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
     transition: {
       duration: 0.6,
       ease: "easeInOut",
-      delay: 4,
+      delay: 4.8, // was 4.4 → +0.4
     },
   },
 };
@@ -39,7 +36,7 @@ export const colContainerVariants = {
   slideOut: {
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 4.4,
+      delayChildren: 5.2, // was 4.8 → +0.4
       ease: "easeInOut",
     },
   },
@@ -63,7 +60,7 @@ export const contactIconVariants = {
     transition: {
       duration: 1.2,
       ease: "easeInOut",
-      delay: 3,
+      delay: 3.8, // was 3.4 → +0.4
     },
   },
 };
@@ -75,7 +72,7 @@ export const gradientVariants = {
     transition: {
       duration: 1,
       ease: "easeInOut",
-      delay: 4.4,
+      delay: 5.2, // was 4.8 → +0.4
     },
   },
 };
@@ -87,7 +84,7 @@ export const headerVariants = {
     transition: {
       duration: 0.2,
       ease: "easeInOut",
-      delay: 4.8,
+      delay: 5.6, // was 5.2 → +0.4
     },
   },
 };
@@ -108,7 +105,7 @@ export const overlaySlideVariants = {
     transition: {
       duration: 0.8,
       ease: "easeInOut",
-      delay: 4.4,
+      delay: 5.2, // was 4.8 → +0.4
     },
   },
 };

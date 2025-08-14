@@ -65,14 +65,14 @@
   position: fixed;
   top: calc(10vh - 4px);
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.2;
 }
 
 .landing-white-box-content h1 {
   margin-top: 1em;
   padding-right: 2.2em;
   font-size: var(--text-l5);
-  color: var(--color-dodger-blue);
+  color: var(--color-button-blue);
   font-weight: 400;
 }
 
@@ -112,7 +112,7 @@
 
 .landing-white-box-item .number {
   font-size: var(--text-l4);
-  color: var(--color-dodger-blue);
+  color: var(--color-button-blue);
 }
 
 .landing-white-box-item .info {
@@ -162,12 +162,21 @@
   width: 600px;
 }
 
-.landing-subtext-1 p {
-  transform: translate(-50%, -50%);
+.landing-subtext {
+  position: absolute;
+  top: 50%; /* slightly below logo, adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   width: 50vw;
+  color: white;
   font-weight: 200;
   font-size: 3rem;
-  margin-top: 0.4em;
+}
+
+.landing-subtext-larger {
+  font-size: var(--text-l4) !important;
+  font-weight: 600;
 }
 
 .landing-subtext-2 {

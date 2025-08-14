@@ -19,6 +19,10 @@
   height: 75vh;
 }
 
+#news-iframe-wrapper iframe {
+  border: none !important;
+}
+
 .news-page .news-overview-layout {
   transition: opacity 0.3s ease-in-out;
 }

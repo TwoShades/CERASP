@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "./_css/Layout.css";
 import "./_css/LandingPage.css";
 import { LanguageContext } from "../contexts/LanguageContext";
 import landingTranslations from "./landing-subpages/landing-translations.json";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import ContactIcon from "../components/interactables/ContactIcon";
+import AboutUsIcon from "../components/interactables/AboutUsIcon";
 import Header from "../components/layouts/Header";
 
 import {
@@ -43,9 +44,31 @@ const data = [
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
 
+  const [showFirstLine, setShowFirstLine] = useState(false);
+  const [showSecondLine, setShowSecondLine] =
+    useState(false);
+
+  useEffect(() => {
+    const firstTimeout = setTimeout(
+      () => setShowFirstLine(true),
+      500
+    );
+    const secondTimeout = setTimeout(
+      () => setShowSecondLine(true),
+      2500
+    );
+
+    return () => {
+      clearTimeout(firstTimeout);
+      clearTimeout(secondTimeout);
+    };
+  }, []);
+
   return (
     <div className="landing-page-overlay">
       <div className="landing-gridlines-thin" />
+
+      {/* Header */}
       <motion.div
         style={{ position: "relative", zIndex: 9999 }}
         variants={headerVariants}
@@ -54,6 +77,8 @@ const SandboxPage = () => {
       >
         <Header />
       </motion.div>
+
+      {/* Overlay */}
       <motion.div
         className="overlay"
         variants={overlaySlideVariants}
@@ -61,6 +86,7 @@ const SandboxPage = () => {
         animate="slideOut"
       />
 
+      {/* Gradients */}
       <motion.div
         className="landing-gradient-bg"
         variants={gradientVariants}
@@ -74,6 +100,7 @@ const SandboxPage = () => {
         animate="fadeOut"
       />
 
+      {/* Black overlay */}
       <motion.div
         className="landing-black-overlay"
         initial={{ opacity: 1 }}
@@ -87,9 +114,13 @@ const SandboxPage = () => {
         initial="hidden"
         animate="visible"
       >
+        {/* Logo */}
         <motion.div
           className="landing-logo landing-content-alignment"
           variants={childVariants}
+          custom={0}
+          initial="hidden"
+          animate="visible"
         >
           <img
             src="/logos/cerasplogo-hires.png"
@@ -97,28 +128,49 @@ const SandboxPage = () => {
           />
         </motion.div>
 
-        <motion.div
-          className="landing-subtext-1 landing-content-alignment"
-          variants={childVariants}
-        >
-          <p>
-            {language === "en"
-              ? "Center for Expertise in Applied Research in Pharmaceutical Sciences"
-              : "Centre d’expertise en recherche appliquée en sciences pharmaceutiques"}
-          </p>
+        {/* Subtexts */}
+        <motion.div className="landing-subtext landing-content-alignment">
+          <AnimatePresence mode="wait">
+            {!showSecondLine && showFirstLine && (
+              <motion.p
+                key="line1"
+                variants={childVariants}
+                custom={0.2}
+                initial="hidden"
+                animate="visible"
+                exit={{
+                  opacity: 0,
+                  y: -20,
+                  transition: { duration: 0.8 },
+                }}
+              >
+                {language === "en"
+                  ? "Center for Expertise in Applied Research in Pharmaceutical Sciences"
+                  : "Centre d’expertise en recherche appliquée en sciences pharmaceutiques"}
+              </motion.p>
+            )}
+            {showSecondLine && (
+              <motion.p
+                key="line2"
+                className="landing-subtext-larger"
+                variants={childVariants}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 1 },
+                }}
+                exit={{ opacity: 0 }}
+              >
+                {language === "en"
+                  ? "Versatile. Expert. Aware."
+                  : "Versatile. Expert. Avisé."}
+              </motion.p>
+            )}
+          </AnimatePresence>
         </motion.div>
 
-        <motion.div
-          className="landing-subtext-2 landing-content-alignment"
-          variants={childVariants}
-        >
-          <p>
-            {language === "en"
-              ? "Versatile. Expert. Aware."
-              : "Versatile. Expert. Avisé."}
-          </p>
-        </motion.div>
-
+        {/* White Box */}
         <motion.div
           className="landing-white-box"
           variants={whiteBoxVariants}
@@ -129,6 +181,7 @@ const SandboxPage = () => {
               initial="hidden"
               animate="visible"
             >
+              <AboutUsIcon />
               <ContactIcon theme="contact-icon-light" />
             </motion.div>
 
@@ -144,7 +197,6 @@ const SandboxPage = () => {
                 ? content.en.title
                 : content.fr.title}
             </h1>
-
             <p>
               {language === "en"
                 ? content.en.description
@@ -153,6 +205,7 @@ const SandboxPage = () => {
 
             <div className="layout-panel-5" />
 
+            {/* Columns inside white box */}
             <motion.div
               variants={colContainerVariants}
               initial="hidden"
@@ -181,6 +234,8 @@ const SandboxPage = () => {
               />
             </motion.div>
           </div>
+
+          {/* Numbers */}
           <div className="landing-white-box-numbers">
             {data.map(({ number, info }, i) => (
               <div
