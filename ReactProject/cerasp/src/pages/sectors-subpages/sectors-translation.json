@@ -44,9 +44,13 @@
       "en": "ANIMAL HEALTH",
       "fr": "SANTÉ ANIMALE"
     },
-    "content": {
-      "en": "From veterinary pharmaceuticals to nutritional supplements, we support companies dedicated to improving animal health and well-being. Our solutions are designed to meet the regulatory and quality standards of this vital industry, helping treat diseases and conditions, manage infections, and support the overall health and performance of companion animals.",
-      "fr": "Des produits pharmaceutiques vétérinaires aux suppléments nutritionnels, nous aidons les entreprises dédiées à améliorer la santé et le bien-être animal. Nos solutions sont conçues pour répondre aux normes réglementaires et de qualité de ce secteur essentiel, en aidant à traiter les maladies et conditions particulières, à gérer les infections, et à soutenir la santé et la performance globales des animaux de compagnie."
+    "contentA": {
+      "en": "From veterinary pharmaceuticals to nutritional supplements, we support companies dedicated to improving animal health and well-being.",
+      "fr": "Des produits pharmaceutiques vétérinaires aux suppléments nutritionnels, nous aidons les entreprises dédiées à améliorer la santé et le bien-être animal."
+    },
+    "contentB": {
+      "en": "Our solutions are designed to meet the regulatory and quality standards of this vital industry, helping treat diseases and conditions, manage infections, and support the overall health and performance of companion animals.",
+      "fr": "Nos solutions sont conçues pour répondre aux normes réglementaires et de qualité de ce secteur essentiel, en aidant à traiter les maladies et conditions particulières, à gérer les infections, et à soutenir la santé et la performance globales des animaux de compagnie."
     }
   },
   "natural_health_product": {

@@ -41,7 +41,7 @@ export default function SectorsPharmaBiopharma() {
         <AnimateObject
           variantsToRun={["slideLeft", "fadeIn"]}
           className="subpage-col-3-5"
-          style={{ padding: "30% 0 0 0" }}
+          style={{ padding: "10% 0 0 0" }}
         >
           <p>{content.contentB[language]}</p>
         </AnimateObject>
