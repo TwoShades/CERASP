@@ -21,6 +21,7 @@ import EquipmentsMasterList from "./pages/EquipmentsMasterList";
 
 // SECTOR OF ACTIVITIES AND ITS SUBPAGES
 import SectorsLayout from "./pages/sectors-subpages/SectorsLayout.js";
+import SectorsPharmaBiopharma from "./pages/sectors-subpages/SectorsPharmaBiopharma.js";
 import SectorsNHP from "./pages/sectors-subpages/SectorsNHP.js";
 import SectorsPharmaceutical from "./pages/sectors-subpages/SectorsPharmaceutical.js";
 import SectorsCosmeceuticals from "./pages/sectors-subpages/SectorsCosmeceuticals.js";
@@ -80,7 +81,7 @@ function App() {
         >
           <Route
             path="pharmaceutical-biopharmaceutical"
-            element={<SectorsPharmaceutical />}
+            element={<SectorsPharmaBiopharma />}
           />
           <Route
             path="animal-health"

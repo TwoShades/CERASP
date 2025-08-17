@@ -76,15 +76,16 @@ const ProjectsLayout = () => {
           ))}
           <div className="expertise-generic-square"></div>
         </div>
+        <ProjectsGrants />
       </div>
-      <div>
+      {/* <div>
         ========MIGHT NEED PHOTO/VISUAL ELEMENT=========
       </div>
       <div>
         ========PROJECT LIST - MAYBE DIFFERENT BULLET
         STYLE=========
       </div>
-      <div> ========GRANTS IN PROGRESS=========</div>
+      <div> ========GRANTS IN PROGRESS=========</div> */}
 
       <main className="layout-main-content">
         <Outlet />

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-// import "./css/ProjectsGrants.css";
+import "./css/ProjectsGrants.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
 const grantsData = [
@@ -53,6 +53,7 @@ export default function ProjectsGrants() {
   const { language } = useContext(LanguageContext);
   return (
     <div className="grants-section">
+      <h1> Grants Awarded </h1>
       <ul className="grants-list">
         {grantsData.map((grant, index) => (
           <li key={index} className="grant-item">

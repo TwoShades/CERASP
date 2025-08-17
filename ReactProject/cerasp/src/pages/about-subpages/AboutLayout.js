@@ -51,8 +51,8 @@ const AboutLayout = () => {
               </li>
             ))}
           </ul>
-          <div>====LAYOUT ADJUSTMENTS IN EACH PAGE====</div>
-          <div>====TEAM/BOARD MORE ELEMENTS====</div>
+          {/* <div>====LAYOUT ADJUSTMENTS IN EACH PAGE====</div>
+          <div>====TEAM/BOARD MORE ELEMENTS====</div> */}
         </aside>
       )}
 

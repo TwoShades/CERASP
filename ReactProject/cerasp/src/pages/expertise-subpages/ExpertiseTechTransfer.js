@@ -35,7 +35,7 @@ const ExpertiseTechTransfer = () => {
           className="subpage-col-1-3"
         >
           <img
-            src="/photos/FromOldSite/cerasp-image1-scaled-450x450.jpg"
+            src="/photos/FromOldSite/AdobeStock_316052779__-scaled-450x450.jpg"
             alt="Technology Transfer"
           />
         </AnimateObject>
