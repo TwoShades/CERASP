@@ -78,3 +78,28 @@
   left: 0;
   z-index: 0;
 }
+
+.interactive-bullet.hero summary .interactive-bullet-title {
+  font-size: var(--text-xxxl); /* pick your scale */
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.interactive-bullet.hero .interactive-bullet-icon::before {
+  content: "●"; /* solid disc instead of + / - */
+  font-size: 1.6em;
+  color: #004080; /* or your brand accent color */
+}
+
+.interactive-bullet.hero[open]
+  .interactive-bullet-icon::before {
+  content: "○"; /* outlined disc when expanded, optional */
+}
+
+.interactive-bullet.hero .interactive-bullet-description {
+  background: none; /* remove background */
+  padding: 1em 0;
+  border-radius: 0; /* no rounded borders */
+  font-size: var(--text-l); /* bigger font */
+  line-height: 1.8;
+}

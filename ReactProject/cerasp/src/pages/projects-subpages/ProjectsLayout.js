@@ -64,6 +64,7 @@ const ProjectsLayout = () => {
               key={index}
               title={proj.title}
               description={proj.content}
+              variant="hero"
             />
           ))}
           <div className="expertise-generic-square"></div>

@@ -4,10 +4,13 @@ import "./css/InteractiveBullet.css";
 export default function InteractiveBullet({
   title,
   description,
+  variant = "default",
 }) {
   return (
-    <div className="interactive-bullet-wrapper">
-      <details className="interactive-bullet">
+    <div
+      className={`interactive-bullet-wrapper ${variant}`}
+    >
+      <details className={`interactive-bullet ${variant}`}>
         <summary>
           <span className="interactive-bullet-icon"></span>
           <span className="interactive-bullet-title">
