@@ -14,11 +14,6 @@ import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 
 const ProjectsLayout = () => {
-  const location = useLocation();
-  const projectsPage = sitemap.pages.find(
-    (page) => page["page-id"] === "projects"
-  );
-
   const { language } = useContext(LanguageContext);
   const [projectsData, setProjectsData] = useState([]);
 
@@ -62,9 +57,6 @@ const ProjectsLayout = () => {
       </AnimateObject>
       <div className="layout-panel-5"></div>
 
-      {/* <ProjectsGrants /> */}
-
-      {/* New bullet-style projects list */}
       <div className="subpage-flex-column">
         <div id="projects-bullets">
           {projectsData.map((proj, index) => (
@@ -78,14 +70,6 @@ const ProjectsLayout = () => {
         </div>
         <ProjectsGrants />
       </div>
-      {/* <div>
-        ========MIGHT NEED PHOTO/VISUAL ELEMENT=========
-      </div>
-      <div>
-        ========PROJECT LIST - MAYBE DIFFERENT BULLET
-        STYLE=========
-      </div>
-      <div> ========GRANTS IN PROGRESS=========</div> */}
 
       <main className="layout-main-content">
         <Outlet />

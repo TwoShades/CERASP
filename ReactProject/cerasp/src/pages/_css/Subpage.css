@@ -45,7 +45,7 @@
   grid-column: 2 / 5;
   line-height: 1.4;
   font-size: var(--text-l2);
-  padding-right: 1em;
+  padding-right: 10vw;
 }
 
 .subpage-intro-grid::after {
