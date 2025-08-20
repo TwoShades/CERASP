@@ -23,8 +23,7 @@ import EquipmentsMasterList from "./pages/EquipmentsMasterList";
 import SectorsLayout from "./pages/sectors-subpages/SectorsLayout.js";
 import SectorsPharmaBiopharma from "./pages/sectors-subpages/SectorsPharmaBiopharma.js";
 import SectorsNHP from "./pages/sectors-subpages/SectorsNHP.js";
-import SectorsPharmaceutical from "./pages/sectors-subpages/SectorsPharmaceutical.js";
-import SectorsCosmeceuticals from "./pages/sectors-subpages/SectorsCosmeceuticals.js";
+import SectorsDermoCosmeceuticals from "./pages/sectors-subpages/SectorsDermoCosmeceuticals.js";
 import SectorsAnimalHealth from "./pages/sectors-subpages/SectorsAnimalHealth.js";
 import SectorsMedicalDevices from "./pages/sectors-subpages/SectorsMedicalDevices.js";
 
@@ -93,7 +92,7 @@ function App() {
           />
           <Route
             path="dermo-cosmeceuticals"
-            element={<SectorsCosmeceuticals />}
+            element={<SectorsDermoCosmeceuticals />}
           />
           <Route
             path="medical-devices"
