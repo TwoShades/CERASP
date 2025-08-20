@@ -54,7 +54,11 @@ const ExpertiseProductDev = () => {
         </div>
       </div>
       <PageLinkCTA
-        text="Scale-Up & Manufacturing Readiness"
+        text={
+          language === "fr"
+            ? "Mise à l'Échelle & Préparation à la Production"
+            : "Scale-Up & Manufacturing Readiness"
+        }
         url="/expertise/scale-up-manufacturing"
       />
       <ContactCTA />

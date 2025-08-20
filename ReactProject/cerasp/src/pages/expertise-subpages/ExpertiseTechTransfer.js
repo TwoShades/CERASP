@@ -53,7 +53,11 @@ const ExpertiseTechTransfer = () => {
         </div>
       </div>
       <PageLinkCTA
-        text="Ideation: From Concept to Strategy"
+        text={
+          language === "fr"
+            ? "De l'Idée à la Stratégie"
+            : "Ideation: From Concept to Strategy"
+        }
         url="/expertise/ideation"
       />
       <ContactCTA />

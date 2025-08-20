@@ -63,8 +63,12 @@ const SectorsAnimalHealth = () => {
         </div>
       </section>
       <PageLinkCTA
-        text="REPLACE"
-        url="/sector-of-activities"
+        text={
+          language === "fr"
+            ? "Pharmaceutical / Biopharmaceutical"
+            : "Pharmaceutique / Biopharmaceutique"
+        }
+        url="/sector-of-activities/pharmaceutical-biopharmaceutical"
       />
       <ContactCTA />
     </main>

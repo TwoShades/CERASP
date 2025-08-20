@@ -62,8 +62,12 @@ export default function SectorsPharmaBiopharma() {
         </AnimateObject>
       </section>
       <PageLinkCTA
-        text="REPLACE"
-        url="/sector-of-activities"
+        text={
+          language === "fr"
+            ? "Dermo / Cosméceutiques"
+            : "Dermo / Cosmeceuticals"
+        }
+        url="/sector-of-activities/dermo-cosmeceuticals"
       />
       <ContactCTA />
     </main>

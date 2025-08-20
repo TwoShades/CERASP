@@ -79,12 +79,16 @@
   },
   "medical_device": {
     "title": {
-      "en": "MEDICAL DEVICE",
+      "en": "MEDICAL DEVICES",
       "fr": "DISPOSITIFS MÉDICAUX"
     },
-    "content": {
-      "en": "We help bring medical technologies to market by providing strategic support across all stages, ensuring devices meet safety standards and patient needs through regulatory assessment, quality system development, and clinical evaluation. From laboratory diagnostics to point-of-care testing, we assist in developing and validating diagnostic tools essential to modern healthcare. Our goal is to help you deliver accurate, reliable, and regulatory-compliant diagnostics to the market.",
-      "fr": "Nous aidons à la mise sur le marché de technologies médicales en offrant un soutien stratégique à chaque étape, garantissant ainsi que les dispositifs répondent aux normes de sécurité et aux besoins des patients grâce à l’évaluation réglementaire, au développement des systèmes qualité et à l’évaluation clinique. De développement en laboratoire aux tests aux patients, nous assistons nos partenaires dans le développement et la validation d’outils diagnostiques essentiels aux soins de santé modernes. Notre objectif est de vous aider à commercialiser des diagnostics précis, fiables et conformes aux réglementations."
+    "contentA": {
+      "en": "We help bring medical technologies to market by providing strategic support across all stages, ensuring devices meet safety standards and patient needs through regulatory assessment, quality system development, and clinical evaluation.",
+      "fr": "Nous aidons à la mise sur le marché de technologies médicales en offrant un soutien stratégique à chaque étape, garantissant ainsi que les dispositifs répondent aux normes de sécurité et aux besoins des patients grâce à l’évaluation réglementaire, au développement des systèmes qualité et à l’évaluation clinique."
+    },
+    "contentB": {
+      "en": "From laboratory diagnostics to point-of-care testing, we assist in developing and validating diagnostic tools essential to modern healthcare. Our goal is to help you deliver accurate, reliable, and regulatory-compliant diagnostics to the market.",
+      "fr": "De développement en laboratoire aux tests aux patients, nous assistons nos partenaires dans le développement et la validation d’outils diagnostiques essentiels aux soins de santé modernes. Notre objectif est de vous aider à commercialiser des diagnostics précis, fiables et conformes aux réglementations."
     }
   }
 }

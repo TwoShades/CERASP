@@ -7,7 +7,7 @@ import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 import ContactCTA from "../../components/interactables/ContactCTA";
 import sectorTranslations from "./sectors-translation.json";
 import "../_css/Subpage.css";
-import "./css/SectorsPharmaBiopharma.css";
+import "./css/SectorsNHP.css";
 
 export default function SectorsNHP() {
   const { language } = useContext(LanguageContext);
@@ -40,6 +40,15 @@ export default function SectorsNHP() {
           <p>{content.contentB[language]}</p>
         </AnimateObject>
       </section>
+      <PageLinkCTA
+        text={
+          language === "fr"
+            ? "Dispositifs Médicaux"
+            : "Medical Devices"
+        }
+        url="/sector-of-activities/medical-devices"
+      />
+      <ContactCTA />
     </main>
   );
 }

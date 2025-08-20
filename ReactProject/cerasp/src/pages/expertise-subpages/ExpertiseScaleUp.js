@@ -55,7 +55,11 @@ const ExpertiseScaleUp = () => {
         </div>
       </div>
       <PageLinkCTA
-        text="Technology Transfer & Regulatory Readiness"
+        text={
+          language === "fr"
+            ? "Transfert Technologique & Préparation Réglementaire"
+            : "Technology Transfer & Regulatory Readiness"
+        }
         url="/expertise/technology-transfer"
       />
       <ContactCTA infoText="////Custom Text.////" />

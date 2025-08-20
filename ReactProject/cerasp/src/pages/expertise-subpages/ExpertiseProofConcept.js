@@ -56,7 +56,11 @@ const ExpertiseProofConcept = () => {
         </div>
       </div>
       <PageLinkCTA
-        text="Product Development"
+        text={
+          language === "fr"
+            ? "Développement de Produits"
+            : "Product Development"
+        }
         url="/expertise/product-development"
       />
       <ContactCTA />
