@@ -58,9 +58,13 @@
       "en": "NATURAL HEALTH PRODUCT",
       "fr": "PRODUIT DE SANTÉ NATUREL"
     },
-    "content": {
-      "en": "We support the development and market readiness of natural health products, ensuring regulatory compliance while preserving the integrity of natural ingredients. Our team works with partners to develop functional foods and dietary supplements, with a focus on quality, efficacy, and compliance.",
-      "fr": "Nous soutenons le développement, la formulation et la mise sur le marché des produits de santé naturels, en garantissant la conformité réglementaire tout en préservant l’intégrité des ingrédients naturels. Notre équipe collabore avec ses partenaires pour développer des aliments fonctionnels et des compléments alimentaires, en mettant l’accent sur la qualité, l’efficacité et la conformité."
+    "contentA": {
+      "en": "We support the development and market readiness of natural health products, ensuring regulatory compliance while preserving the integrity of natural ingredients.",
+      "fr": "Nous soutenons le développement, la formulation et la mise sur le marché des produits de santé naturels, en garantissant la conformité réglementaire tout en préservant l’intégrité des ingrédients naturels. "
+    },
+    "contentB": {
+      "en": "Our team works with partners to develop functional foods and dietary supplements, with a focus on quality, efficacy, and compliance.",
+      "fr": "Notre équipe collabore avec ses partenaires pour développer des aliments fonctionnels et des compléments alimentaires, en mettant l’accent sur la qualité, l’efficacité et la conformité."
     }
   },
   "dermo_cosmeceutical": {

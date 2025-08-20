@@ -20,8 +20,26 @@ export default function SectorsNHP() {
         className="subpage-intro-grid"
       >
         <h1>{content.title[language]}</h1>
-        <p>{content.content[language]}</p>
+        <p>{content.contentA[language]}</p>
       </AnimateObject>
+      <section className="subpage-row">
+        <AnimateObject
+          variantsToRun={["slideRight", "fadeIn"]}
+          className="subpage-col-1-3"
+        >
+          <img
+            src="/photos/FromOldSite/pharmaNHP.jpg"
+            alt="Biotech facility"
+          />
+        </AnimateObject>
+        <AnimateObject
+          variantsToRun={["slideRight", "fadeIn"]}
+          className="subpage-col-3-5"
+          style={{ padding: "15% 0 0 0" }}
+        >
+          <p>{content.contentB[language]}</p>
+        </AnimateObject>
+      </section>
     </main>
   );
 }
