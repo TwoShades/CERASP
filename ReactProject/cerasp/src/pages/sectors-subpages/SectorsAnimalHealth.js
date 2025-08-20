@@ -21,26 +21,7 @@ const SectorsAnimalHealth = () => {
         <h1>{content.title[language]}</h1>
         <p>{content.contentA[language]}</p>
       </AnimateObject>
-      <section className="subpage-row">
-        <AnimateObject
-          variantsToRun={["fadeIn"]}
-          className="subpage-col-3-4"
-        >
-          <img
-            src="/photos/pexels/pexels-tima-miroshnichenko-6235018.jpg"
-            alt="Biotech facility"
-          />
-        </AnimateObject>
-        <AnimateObject
-          variantsToRun={["fadeIn"]}
-          className="subpage-col-4-5"
-        >
-          <img
-            src="/photos/pexels/pexels-pixabay-416160.jpg"
-            alt="Biotech facility"
-          />
-        </AnimateObject>
-      </section>
+
       <section className="subpage-row">
         <AnimateObject
           variantsToRun={["slideRight", "fadeIn"]}
@@ -58,6 +39,28 @@ const SectorsAnimalHealth = () => {
         >
           <p>{content.contentB[language]}</p>
         </AnimateObject>
+      </section>
+      <section className="subpage-row">
+        <div className="subpage-col-1-5 subpage-row-flex subpage-center-all">
+          <AnimateObject
+            variantsToRun={["fadeIn"]}
+            className="animal-health-photo"
+          >
+            <img
+              src="/photos/pexels/pexels-tima-miroshnichenko-6235018.jpg"
+              alt="Biotech facility"
+            />
+          </AnimateObject>
+          <AnimateObject
+            variantsToRun={["fadeIn"]}
+            className="animal-health-photo"
+          >
+            <img
+              src="/photos/pexels/pexels-pixabay-416160.jpg"
+              alt="Biotech facility"
+            />
+          </AnimateObject>
+        </div>
       </section>
       <PageLinkCTA
         text="REPLACE"
