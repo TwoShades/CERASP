@@ -26,6 +26,11 @@
   flex-direction: column;
 }
 
+.subpage-spacer-10vh {
+  height: 10vh;
+  margin: none;
+  padding: none;
+}
 .subpage-spacer-20vh {
   height: 20vh;
   margin: none;

@@ -2,13 +2,16 @@ import React, { useContext } from "react";
 import { ReactComponent as ContactSvg } from "../../svg/contact-us.svg";
 import "./css/ContactIcon.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import useLenis from "../../hooks/useLenis";
 import { useNavigate } from "react-router-dom";
 
 const ContactIcon = ({ theme = "contact-icon-light" }) => {
   const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
+  const { scrollToTopWithLenis } = useLenis();
 
   const handleClick = () => {
+    scrollToTopWithLenis();
     navigate("/contact-us"); // navigate to /contact-us page
   };
   return (

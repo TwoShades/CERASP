@@ -226,7 +226,11 @@ const ContactUs = () => {
                   onChange={handleChange}
                   required
                 />
-                <span>I agree to the Privacy Policy</span>
+                <span>
+                  {language === "fr"
+                    ? "J’accepte la politique de confidentialité"
+                    : "I agree to the Privacy Policy"}
+                </span>
                 <a
                   href="/privacy"
                   target="_blank"
@@ -244,21 +248,29 @@ const ContactUs = () => {
                   onChange={handleChange}
                 />
                 <span className="checkbox-text">
-                  Be part of the Newsletter
+                  {language === "fr"
+                    ? "Faites partie de la newsletter"
+                    : "Be part of the Newsletter"}
                 </span>
               </label>
             </div>
 
             <button
+              id="contact-button-font"
               type="submit"
               disabled={formStatus.submitting}
               className={
                 formStatus.submitting ? "submitting" : ""
               }
             >
-              Send
+              <span>
+                {language === "fr" ? "Envoyer" : "Send"}
+              </span>
             </button>
           </form>
+        </div>
+        <div className="subpage-col-1-5">
+          <div className="subpage-spacer-10vh"></div>
         </div>
         <div className="subpage-col-1-5 contact-bottom">
           <div className="contact-sponsors">

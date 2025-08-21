@@ -85,8 +85,13 @@
   text-decoration: none;
 }
 
+#contact-button-font span {
+  font-size: var(--text-s);
+}
+
 .contact-form button {
   margin-top: 16px;
+  width: 8vw;
   align-self: start;
 }
 
@@ -97,10 +102,14 @@
   width: 100%;
 }
 
-.contact-sponsors,
+.contact-sponsors {
+  width: 65vw;
+  padding-left: 5vw;
+}
+
 .contact-google-maps {
-  flex: 1;
-  min-height: 300px;
+  width: 45vw;
+  padding-left: 2vw;
 }
 
 .contact-google-maps iframe {
