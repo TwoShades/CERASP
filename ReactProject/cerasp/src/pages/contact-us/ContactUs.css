@@ -1,0 +1,149 @@
+.contact-us {
+  z-index: 10;
+  padding-top: 10vh;
+  background: none;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3em;
+}
+
+/* Form */
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 95%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: none;
+  border-bottom: 1px solid #464646;
+  font-family: "Urbanist", sans-serif;
+  font-size: var(--text-s);
+  background: none;
+}
+
+.contact-form input {
+  width: 90%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.contact-form textarea {
+  grid-column: 1 / -1;
+  min-height: 200px;
+  resize: none;
+}
+
+.contact-form button {
+  grid-column: 1 / -1;
+  padding: 12px 24px;
+  background-color: var(--color-button-blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.checkbox-label input {
+  flex-shrink: 0;
+  margin: 0;
+  margin-right: 8px;
+  width: 20px;
+}
+
+.checkbox-label span,
+.checkbox-label a {
+  font-size: var(--text-s);
+  border: none;
+  text-decoration: none;
+}
+
+.contact-form button {
+  margin-top: 16px;
+  align-self: start;
+}
+
+/* Bottom row: sponsors + map */
+.contact-bottom {
+  display: flex;
+  gap: 2em;
+  width: 100%;
+}
+
+.contact-sponsors,
+.contact-google-maps {
+  flex: 1;
+  min-height: 300px;
+}
+
+.contact-google-maps iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Sponsors */
+.contact-sponsor-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.partner-logos img,
+.member-logos img {
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Placeholder focus styling */
+input::placeholder,
+textarea::placeholder {
+  color: #292929;
+  font-size: var(--text-s);
+  font-weight: normal;
+  transition: color 0.2s ease;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: #bbb;
+  font-weight: 200;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-bottom {
+    flex-direction: column;
+  }
+}

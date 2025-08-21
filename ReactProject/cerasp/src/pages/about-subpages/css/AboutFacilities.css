@@ -8,7 +8,7 @@
 
 .about-facilities-map-container:hover
   #about-facilities-map-title {
-  opacity: 0;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 

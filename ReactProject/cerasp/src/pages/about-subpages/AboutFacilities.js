@@ -3,8 +3,6 @@ import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { useContext } from "react";
-import React from "react";
-import SubPageHeader from "../../components/layouts/SubPageHeader";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
 

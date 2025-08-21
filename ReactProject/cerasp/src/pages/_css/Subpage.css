@@ -26,6 +26,12 @@
   flex-direction: column;
 }
 
+.subpage-spacer-20vh {
+  height: 20vh;
+  margin: none;
+  padding: none;
+}
+
 /* TITLE AND SUBTITLE FOR ALL SUBPAGES */
 .subpage-intro-grid {
   position: relative;

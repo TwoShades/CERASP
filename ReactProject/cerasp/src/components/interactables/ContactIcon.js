@@ -2,11 +2,20 @@ import React, { useContext } from "react";
 import { ReactComponent as ContactSvg } from "../../svg/contact-us.svg";
 import "./css/ContactIcon.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { useNavigate } from "react-router-dom";
 
 const ContactIcon = ({ theme = "contact-icon-light" }) => {
   const { language } = useContext(LanguageContext);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact-us"); // navigate to /contact-us page
+  };
   return (
-    <div className={`contact-icon-wrapper ${theme}`}>
+    <div
+      className={`contact-icon-wrapper ${theme}`}
+      onClick={handleClick}
+    >
       <div className="contact-icon-border">
         <ContactSvg className="contact-icon-svg" />
       </div>

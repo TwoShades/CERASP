@@ -4,11 +4,12 @@ import {
   useLocation,
 } from "react-router-dom";
 
-import { useEffect } from "react";
-import scrollToTop from "./utils/scrollToTop";
 import Header from "./components/layouts/Header";
 import "./App.css";
 import useLenis from "./hooks/useLenis";
+
+// LANDING PAGE
+import LandingPage from "./pages/LandingPage.js";
 
 // ABOUT AND ITS SUBPAGES
 import AboutLayout from "./pages/about-subpages/AboutLayout";
@@ -41,8 +42,10 @@ import ProjectsLayout from "./pages/projects-subpages/ProjectsLayout.js";
 // NEWS PAGE
 import News from "./pages/News";
 
+// CONTACT PAGE
+import ContactUs from "./pages/contact-us/ContactUs.js";
+
 // TESTING/landing PAGE
-import LandingPage from "./pages/LandingPage.js";
 import { ScreenSizeProvider } from "./contexts/ScreenSizeContext";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
@@ -137,6 +140,9 @@ function App() {
         <Route path="/news" element={<News />} />
 
         {/* OTHER LINKS - MIGHT NEED REWORK */}
+
+        <Route path="/contact-us" element={<ContactUs />} />
+
         <Route
           path="/privacy"
           element={<PrivacyPolicy />}
