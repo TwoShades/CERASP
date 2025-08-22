@@ -32,22 +32,21 @@
 
 .landing-white-box {
   position: fixed;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  /* top: 5vh; */
+  display: flex;
+  flex-direction: column;
   left: 0;
-  width: 100%;
+  padding-top: 10vh;
+  width: 80%;
   height: 100vh;
 }
 
 .landing-white-box-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  grid-column: 1 / 4;
+  align-items: left;
+  justify-content: start;
   padding-left: 5vw;
+  /* border: 2px dashed green; */
 }
 
 .landing-white-box-img {
@@ -70,7 +69,7 @@
 
 .landing-white-box-content h1 {
   margin-top: 1em;
-  padding-right: 2.2em;
+  padding-right: 25vw;
   font-size: var(--text-l5);
   color: var(--color-button-blue);
   font-weight: 400;
@@ -79,18 +78,16 @@
 .landing-white-box-content p {
   margin-top: -1.4em;
   padding-right: 6em;
-  line-height: 1.6;
+  line-height: 1.4;
+  font-weight: 200;
   text-align: justify;
-  font-size: var(--text-l2);
+  font-size: var(--text-m);
 }
 
 .landing-white-box-numbers {
-  display: grid;
-  grid-template-columns: 12vw;
-  grid-auto-rows: 8vw;
+  /* border: 2px solid green; */
+  display: flex;
   justify-content: center;
-  padding-top: 30%;
-  grid-column: 4 / 5;
   gap: 10px;
   /* background-color: rgba(255, 255, 255, 0.712); */
   background: linear-gradient(

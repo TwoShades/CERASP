@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./_css/Layout.css";
 import "./_css/LandingPage.css";
 import { LanguageContext } from "../contexts/LanguageContext";
-import landingTranslations from "./landing-subpages/landing-translations.json";
+import landingTranslations from "./landing-translations.json";
 import { useContext, useState, useEffect } from "react";
 import ContactIcon from "../components/interactables/ContactIcon";
 import AboutUsIcon from "../components/interactables/AboutUsIcon";
@@ -185,12 +185,7 @@ const SandboxPage = () => {
               <ContactIcon theme="contact-icon-light" />
             </motion.div>
 
-            <div className="landing-white-box-img">
-              <img
-                src="/photos/FromOldSite/biotech-scaled.jpg"
-                alt="CERASP Logo"
-              />
-            </div>
+            <div className="landing-white-box-img"></div>
 
             <h1>
               {language === "en"
@@ -204,6 +199,7 @@ const SandboxPage = () => {
             </p>
 
             <div className="layout-panel-5" />
+            <div className="layout-panel-3-4-transp" />
 
             {/* Columns inside white box */}
             <motion.div
