@@ -9,7 +9,6 @@ import "../_css/Subpage.css";
 import "./css/SectorsMedicalDevices.css";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import PageLinkCTA from "../../components/interactables/PageLinkCTA";
-import ContactCTA from "../../components/interactables/ContactCTA";
 
 export default function SectorsMedicalDevices() {
   const { language } = useContext(LanguageContext);
@@ -51,7 +50,6 @@ export default function SectorsMedicalDevices() {
         }
         url="/sector-of-activities/animal-health"
       />
-      <ContactCTA />
     </main>
   );
 }

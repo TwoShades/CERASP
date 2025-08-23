@@ -9,7 +9,6 @@ import Employee from "../../components/uicomponents/Employee.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
-import PageLinkCTA from "../../components/interactables/PageLinkCTA.js";
 
 export default function AboutTeam() {
   const { language } = useContext(LanguageContext);

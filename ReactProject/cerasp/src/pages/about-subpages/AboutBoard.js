@@ -9,7 +9,6 @@ import BoardMember from "../../components/uicomponents/BoardMember"; // import t
 import { LanguageContext } from "../../contexts/LanguageContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactCTA from "../../components/interactables/ContactCTA";
-import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 export default function AboutBoard() {
   const { language } = useContext(LanguageContext);

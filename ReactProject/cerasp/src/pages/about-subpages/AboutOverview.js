@@ -6,7 +6,7 @@ import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
-import ContactCTA from "../../components/interactables/ContactCTA";
+import ContactIcon from "../../components/interactables/ContactIcon";
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
@@ -17,6 +17,7 @@ export default function AboutOverview() {
   const subValues = content.subValues;
   return (
     <main className="subpage-overview">
+      <ContactIcon />
       <div className="layout-panel-5"></div>
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
@@ -106,7 +107,6 @@ export default function AboutOverview() {
         ))}
         {/* </div> */}
       </div>
-      <ContactCTA />
     </main>
   );
 }

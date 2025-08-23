@@ -5,7 +5,6 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
-import ContactCTA from "../../components/interactables/ContactCTA";
 import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseProofConcept = () => {
@@ -63,7 +62,6 @@ const ExpertiseProofConcept = () => {
         }
         url="/expertise/product-development"
       />
-      <ContactCTA />
     </main>
   );
 };

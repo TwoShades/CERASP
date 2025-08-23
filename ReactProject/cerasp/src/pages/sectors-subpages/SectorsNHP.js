@@ -4,7 +4,6 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import PageLinkCTA from "../../components/interactables/PageLinkCTA";
-import ContactCTA from "../../components/interactables/ContactCTA";
 import sectorTranslations from "./sectors-translation.json";
 import "../_css/Subpage.css";
 import "./css/SectorsNHP.css";
@@ -48,7 +47,6 @@ export default function SectorsNHP() {
         }
         url="/sector-of-activities/medical-devices"
       />
-      <ContactCTA />
     </main>
   );
 }

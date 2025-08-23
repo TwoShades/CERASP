@@ -4,7 +4,6 @@ import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import PageLinkCTA from "../../components/interactables/PageLinkCTA";
-import ContactCTA from "../../components/interactables/ContactCTA";
 import sectorTranslations from "./sectors-translation.json";
 
 import "../_css/Subpage.css";
@@ -69,7 +68,6 @@ export default function SectorsPharmaBiopharma() {
         }
         url="/sector-of-activities/dermo-cosmeceuticals"
       />
-      <ContactCTA />
     </main>
   );
 }

@@ -5,7 +5,6 @@ import AnimateObject from "../../components/uicomponents/AnimateObject.js";
 import "./css/SectorsAnimalHealth.css";
 import "../_css/Subpage.css";
 import PageLinkCTA from "../../components/interactables/PageLinkCTA";
-import ContactCTA from "../../components/interactables/ContactCTA";
 
 const SectorsAnimalHealth = () => {
   const { language } = useContext(LanguageContext);
@@ -70,7 +69,6 @@ const SectorsAnimalHealth = () => {
         }
         url="/sector-of-activities/pharmaceutical-biopharmaceutical"
       />
-      <ContactCTA />
     </main>
   );
 };

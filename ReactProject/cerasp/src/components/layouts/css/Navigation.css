@@ -1,10 +1,3 @@
-/* .nav {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-} */
-
 .nav-list {
   display: flex;
   flex-direction: row;
@@ -56,7 +49,7 @@
 }
 
 .nav-item.active a {
-  color: rgb(44, 58, 85);
+  color: dodgerblue;
   font-weight: bold;
 }
 
@@ -65,58 +58,7 @@
 }
 
 .nav-item:hover a {
-  color: rgb(44, 58, 85);
-}
-
-.dropdown {
-  position: absolute;
-  width: 230px;
-  top: 95%;
-  left: -03%;
-  background-color: rgb(255, 255, 255);
-  box-shadow: -1px 0px 3px 0px rgb(112, 140, 177), 1px 0px 3px 0px rgb(112, 140, 177), 0px 1px 3px 0px rgb(78, 99, 126);
-  border-radius: 10px;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.dropdown ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown ul:first-child {
-  margin-top: 0;
-}
-
-.dropdown li {
-  margin: 0;
-  padding: 10px 20px;
-  width: 100%;
-  font-size: 16px;
-  box-sizing: border-box;
-  color: rgb(21, 47, 82);
-  border-bottom: 1px solid #ddd;
-  line-height: 1.5;
-  text-align: left;
-}
-
-.dropdown li:first-child {
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
-}
-
-.dropdown li:last-child {
-  border: none;
-  border-bottom-left-radius: 9px;
-  border-bottom-right-radius: 9px;
-  border-bottom: none;
-}
-
-.dropdown li:hover {
-  background-color: #ffb300a9;
-  cursor: pointer;
+  color: dodgerblue;
 }
 
 .nav-link-wrapper {
@@ -126,50 +68,7 @@
   width: 100%;
 }
 
-.dropdown-clickable-zone {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  padding-left: 5px;
-  cursor: pointer;
-  width: 100%;
-}
-
-.dropdown-toggle {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 @media (max-width: 1200px) {
-  .dropdown {
-    position: absolute;
-    width: 100%;
-    min-height: 50vh;
-    left: 0;
-    top: 80%;
-    border: none;
-    box-shadow: none;
-    box-sizing: border-box;
-    padding: 0;
-    z-index: 100;
-    padding: 0;
-  }
-
-  .dropdown li {
-    padding: 10px;
-    margin: 0px;
-    height: 40px;
-  }
-
-  .dropdown li:first-child {
-    border-radius: 0px;
-  }
-
-  .dropdown li:last-child {
-    border-radius: 0px;
-  }
-
   .hamburger {
     background: none;
     border: none;
@@ -203,18 +102,6 @@
     font-size: medium;
     font-weight: bold;
     padding: 8px 20px;
-  }
-
-  .dropdown ul li {
-    padding-left: 35px;
-  }
-
-  .dropdown li:first-child {
-    border-top: 1px solid #ddd;
-  }
-
-  .dropdown li:last-child {
-    border-bottom: 1px solid #ddd;
   }
 
   .nav-list.show {

@@ -199,7 +199,6 @@ const SandboxPage = () => {
             </p>
 
             <div className="layout-panel-5" />
-            <div className="layout-panel-3-4-transp" />
 
             {/* Columns inside white box */}
             <motion.div

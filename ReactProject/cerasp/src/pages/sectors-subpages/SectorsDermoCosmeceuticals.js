@@ -5,7 +5,6 @@ import AnimateObject from "../../components/uicomponents/AnimateObject.js";
 import "./css/SectorsDermoCosmeceuticals.css";
 import "../_css/Subpage.css";
 import PageLinkCTA from "../../components/interactables/PageLinkCTA";
-import ContactCTA from "../../components/interactables/ContactCTA";
 
 export default function SectorsDermoCosmeceuticals() {
   const { language } = useContext(LanguageContext);
@@ -39,7 +38,6 @@ export default function SectorsDermoCosmeceuticals() {
         }
         url="/sector-of-activities/natural-health-products"
       />
-      <ContactCTA />
     </main>
   );
 }

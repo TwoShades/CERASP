@@ -64,7 +64,6 @@ const SectorsLayout = () => {
               </li>
             ))}
           </ul>
-          <div>====SUBPAGE LOOK IN PROGRESS====</div>
         </aside>
       )}
 

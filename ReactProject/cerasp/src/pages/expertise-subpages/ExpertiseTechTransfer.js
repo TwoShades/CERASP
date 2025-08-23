@@ -3,7 +3,6 @@ import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
-import ContactCTA from "../../components/interactables/ContactCTA";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
@@ -60,7 +59,6 @@ const ExpertiseTechTransfer = () => {
         }
         url="/expertise/ideation"
       />
-      <ContactCTA />
     </main>
   );
 };

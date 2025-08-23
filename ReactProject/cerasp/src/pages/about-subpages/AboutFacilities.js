@@ -4,7 +4,7 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { useContext } from "react";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
-import ContactCTA from "../../components/interactables/ContactCTA";
+import ContactIcon from "../../components/interactables/ContactIcon";
 
 export default function AboutFacilities() {
   const { language } = useContext(LanguageContext);
@@ -13,6 +13,7 @@ export default function AboutFacilities() {
   );
   return (
     <main className="subpage-overview">
+      <ContactIcon />
       <div className="layout-panel-5"></div>
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
@@ -119,7 +120,6 @@ export default function AboutFacilities() {
           )}
         </div>
       </section>
-      <ContactCTA />
     </main>
   );
 }
