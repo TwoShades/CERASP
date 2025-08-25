@@ -53,7 +53,6 @@ export default function ProjectsGrants() {
   const { language } = useContext(LanguageContext);
   return (
     <div className="grants-section">
-      <h1> Grants Awarded </h1>
       <ul className="grants-list">
         {grantsData.map((grant, index) => (
           <li key={index} className="grant-item">

@@ -12,6 +12,7 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import ProjectsGrants from "./ProjectsGrants";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
+import ContactIcon from "../../components/interactables/ContactIcon";
 
 const ProjectsLayout = () => {
   const { language } = useContext(LanguageContext);
@@ -56,25 +57,36 @@ const ProjectsLayout = () => {
         </h1>
       </AnimateObject>
       <div className="layout-panel-5"></div>
-
-      <div className="subpage-flex-column">
-        <div id="projects-bullets">
-          {projectsData.map((proj, index) => (
-            <InteractiveBullet
-              key={index}
-              title={proj.title}
-              description={proj.content}
-              variant="hero"
-            />
-          ))}
-          <div className="expertise-generic-square"></div>
-        </div>
-        <ProjectsGrants />
-      </div>
-
-      <main className="layout-main-content">
-        <Outlet />
-      </main>
+      {projectsData && (
+        <>
+          <div className="subpage-flex-column">
+            <div id="projects-bullets">
+              <AnimateObject variantsToRun={["fadeIn"]}>
+                {projectsData.map((proj, index) => (
+                  <InteractiveBullet
+                    key={index}
+                    title={proj.title}
+                    description={proj.content}
+                    variant="hero"
+                  />
+                ))}
+              </AnimateObject>
+            </div>
+            <AnimateObject
+              variantsToRun={["slideLeft", "fadeIn"]}
+              className="subpage-intro-grid"
+            >
+              <h1>
+                {language === "fr"
+                  ? "SUBVENTIONS ATTRIBUÉES"
+                  : "GRANTS AWARDED"}
+              </h1>
+            </AnimateObject>
+            <ProjectsGrants style={{ zIndex: "30" }} />
+          </div>
+          <ContactIcon />
+        </>
+      )}
     </main>
   );
 };
