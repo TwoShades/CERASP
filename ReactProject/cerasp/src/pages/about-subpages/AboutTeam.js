@@ -8,7 +8,6 @@ import "../_css/Subpage.css";
 import Employee from "../../components/uicomponents/Employee.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
-import ContactCTA from "../../components/interactables/ContactCTA";
 
 export default function AboutTeam() {
   const { language } = useContext(LanguageContext);
@@ -75,7 +74,6 @@ export default function AboutTeam() {
       {teamData.length > 0 && (
         <>
           <div className="layout-panel-5-transp" />
-          <ContactCTA />
         </>
       )}
     </>
