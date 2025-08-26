@@ -7,28 +7,90 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <div className="made-by">
-          <p>
-            {language === "fr"
-              ? "Réalisé par Samuel Rivest et Nick Pelletier"
-              : "Made by Samuel Rivest & Nick Pelletier"}
-          </p>
+      <div className="footer-logo">
+        <div className="logo-icon">
+          <img
+            src="/logos/cerasplogo.png" // placeholder for your actual logo
+            alt="CERASP Logo"
+            width="200px"
+          />
         </div>
-        <div className="copyright">
-          <p>
-            {language === "fr"
-              ? "Droits d’auteur © 2019 - 2025 CERASP. Tous droits réservés."
-              : "Copyrights © 2019 - 2025 CERASP All Rights Reserved"}
-          </p>
+      </div>
+
+      <div className="footer-links">
+        <h2>
+          {language === "fr"
+            ? "Suivez-nous sur"
+            : "Follow us at"}
+        </h2>
+        <a
+          href="https://www.linkedin.com/company/dummy-url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <div className="footer-contact">
+        <h2>
+          {language === "fr" ? "Contacte" : "Contact"}
+        </h2>
+        <div className="address-lines">
+          <span>7171 Rue Frederick Banting</span>
+          <span>Saint-Laurent, QC</span>
+          <span>H4S 1Z9</span>
+          <span>(438) 923-9257</span>
         </div>
-        <div className="privacy">
-          <a href="/privacy" target="_blank" rel="noopener noreferrer">
-            {language === "fr"
-              ? "Politique de confidentialité"
-              : "Privacy Policy"}
-          </a>
+        <div className="map-icon">
+          <img
+            src="/logos/google-maps.png"
+            height="50px"
+            width="50px"
+            alt="CERASP Location"
+          />
         </div>
+      </div>
+
+      <div className="footer-partners">
+        <div className="contact-sponsor-logos">
+          <h2 className="partner-with">
+            {language === "fr"
+              ? "CERASP est partenaire de :"
+              : "CERASP is partnering with:"}
+          </h2>
+          <div className="partner-logos">
+            <img
+              className="partner-card-img"
+              src="/logos/partners/cerasp-partner.jpg"
+              alt="Partners"
+            />
+          </div>
+          <h2 className="member-of">
+            {language === "fr"
+              ? "CERASP est un fier membre de :"
+              : "CERASP is a proud member of:"}
+          </h2>
+          <div className="member-logos">
+            <img
+              className="partner-card-img"
+              src="/logos/partners/cerasp-member.jpg"
+              alt="Members"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-privacy">
+        <a
+          href="/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {language === "fr"
+            ? "Politique de confidentialité"
+            : "Privacy Policy"}
+        </a>
       </div>
     </footer>
   );

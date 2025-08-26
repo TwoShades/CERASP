@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import Header from "./components/layouts/Header";
+import Footer from "./components/layouts/Footer.js";
 import "./App.css";
 import useLenis from "./hooks/useLenis";
 

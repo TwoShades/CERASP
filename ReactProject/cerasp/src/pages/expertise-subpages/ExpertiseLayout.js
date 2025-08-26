@@ -5,6 +5,7 @@ import { LanguageContext } from "../../contexts/LanguageContext";
 import sitemap from "../../sitemap.json";
 import ContactIcon from "../../components/interactables/ContactIcon";
 import expertiseTranslations from "./expertise-translations.json";
+import Footer from "../../components/layouts/Footer";
 
 const ExpertiseLayout = () => {
   const location = useLocation();
@@ -72,6 +73,7 @@ const ExpertiseLayout = () => {
       <main className="layout-main-content">
         <Outlet />
       </main>
+      {location.pathname !== "/expertise" && <Footer />}
     </div>
   );
 };
