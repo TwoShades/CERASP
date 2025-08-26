@@ -13,6 +13,7 @@ import ProjectsGrants from "./ProjectsGrants";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactIcon from "../../components/interactables/ContactIcon";
+import Footer from "../../components/layouts/Footer";
 
 const ProjectsLayout = () => {
   const { language } = useContext(LanguageContext);
@@ -85,6 +86,7 @@ const ProjectsLayout = () => {
             <ProjectsGrants style={{ zIndex: "30" }} />
           </div>
           <ContactIcon />
+          <Footer />
         </>
       )}
     </main>

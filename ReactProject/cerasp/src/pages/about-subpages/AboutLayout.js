@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ContactIcon from "../../components/interactables/ContactIcon";
+import Footer from "../../components/layouts/Footer";
 
 const AboutLayout = () => {
   const location = useLocation();
@@ -59,6 +60,7 @@ const AboutLayout = () => {
       <main className="layout-main-content">
         <Outlet />
       </main>
+      {location.pathname !== "/about" && <Footer />}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import "./css/SectorsLayout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import ContactIcon from "../../components/interactables/ContactIcon";
 import sectorTranslations from "./sectors-translation.json";
+import Footer from "../../components/layouts/Footer";
 
 const SectorsLayout = () => {
   const location = useLocation();
@@ -70,6 +71,9 @@ const SectorsLayout = () => {
       <main className="layout-main-content">
         <Outlet />
       </main>
+      {location.pathname !== "/sector-of-activities" && (
+        <Footer />
+      )}
     </div>
   );
 };
