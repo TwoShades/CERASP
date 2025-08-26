@@ -40,7 +40,7 @@ const Footer = () => {
           <span>7171 Rue Frederick Banting</span>
           <span>Saint-Laurent, QC</span>
           <span>H4S 1Z9</span>
-          <span>(438) 923-9257</span>
+          <span>(263) 362-2760</span>
         </div>
         <div className="map-icon">
           <img
