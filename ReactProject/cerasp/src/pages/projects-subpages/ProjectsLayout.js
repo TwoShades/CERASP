@@ -1,5 +1,3 @@
-import sitemap from "../../sitemap.json";
-import { Outlet, useLocation } from "react-router-dom";
 import React, {
   useContext,
   useEffect,
@@ -14,8 +12,10 @@ import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import ContactIcon from "../../components/interactables/ContactIcon";
 import Footer from "../../components/layouts/Footer";
+import useLenis from "../../hooks/useLenis";
 
 const ProjectsLayout = () => {
+  useLenis().scrollToTopWithLenis();
   const { language } = useContext(LanguageContext);
   const [projectsData, setProjectsData] = useState([]);
 

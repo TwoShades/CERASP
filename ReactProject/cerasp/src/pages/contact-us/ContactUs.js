@@ -6,6 +6,7 @@ import AnimateObject from "../../components/uicomponents/AnimateObject";
 import "../_css/Subpage.css";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
+import Footer from "../../components/layouts/Footer";
 
 const ContactUs = () => {
   const { language } = useContext(LanguageContext);
@@ -273,36 +274,7 @@ const ContactUs = () => {
           <div className="subpage-spacer-10vh"></div>
         </div>
         <div className="subpage-col-1-5 contact-bottom">
-          <div className="contact-sponsors">
-            <div className="contact-sponsor-logos">
-              <div className="partner-with">
-                {language === "fr"
-                  ? "CERASP est partenaire de :"
-                  : "CERASP is partnering with:"}
-              </div>
-              <div className="partner-logos">
-                <img
-                  className="partner-card-img"
-                  src="/logos/partners/cerasp-partner.jpg"
-                  alt="Partners"
-                />
-              </div>
-              <div className="member-of">
-                {language === "fr"
-                  ? "CERASP est un fier membre de :"
-                  : "CERASP is a proud member of:"}
-              </div>
-              <div className="member-logos">
-                <img
-                  className="partner-card-img"
-                  src="/logos/partners/cerasp-member.jpg"
-                  alt="Members"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="contact-google-maps">
+          {/* <div className="contact-google-maps">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.355649417134!2d-73.76856082306308!3d45.48278247107427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc93d8bef0bf3dd%3A0x861d8d2c0f4117f3!2sCERASP!5e0!3m2!1sen!2sus!4v1747083278539!5m2!1sen!2sus"
               width="100%"
@@ -313,9 +285,10 @@ const ContactUs = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="CERASP Location Map"
             />
-          </div>
+          </div> */}
         </div>
       </section>
+      <Footer />
     </main>
   );
 };

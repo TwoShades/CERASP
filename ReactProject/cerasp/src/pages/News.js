@@ -10,6 +10,7 @@ import { LanguageContext } from "../contexts/LanguageContext.js";
 import { PropagateLoader } from "react-spinners";
 import scrollToTop from "../utils/scrollToTop.js";
 import ContactIcon from "../components/interactables/ContactIcon.js";
+import Footer from "../components/layouts/Footer.js";
 
 const News = () => {
   const [isOverviewReady, setIsOverviewReady] =
@@ -54,7 +55,6 @@ const News = () => {
         className="subpage-intro-grid"
       >
         <h1>{language === "fr" ? "NOUVELLES" : "NEWS"}</h1>
-        <div>=======TITLE PLACEMENT/FRAMING=========</div>
       </AnimateObject>
 
       {!isOverviewReady && (
@@ -88,7 +88,7 @@ const News = () => {
         <div className="expertise-generic-square"></div>
       </div>
 
-      <ContactCTA />
+      {isOverviewReady && <Footer />}
     </main>
   );
 };

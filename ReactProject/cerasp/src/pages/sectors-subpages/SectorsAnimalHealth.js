@@ -46,17 +46,8 @@ const SectorsAnimalHealth = () => {
             className="animal-health-photo"
           >
             <img
-              src="/photos/pexels/pexels-tima-miroshnichenko-6235018.jpg"
-              alt="Biotech facility"
-            />
-          </AnimateObject>
-          <AnimateObject
-            variantsToRun={["fadeIn"]}
-            className="animal-health-photo"
-          >
-            <img
-              src="/photos/pexels/pexels-pixabay-416160.jpg"
-              alt="Biotech facility"
+              src="/photos/unsplash/gemma-regalado-3O801cdcLPc-unsplash.jpg"
+              alt="Dog in Park"
             />
           </AnimateObject>
         </div>

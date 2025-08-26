@@ -1,5 +1,6 @@
 /* ---------- FOOTER BASE ---------- */
 .footer {
+  margin-top: 15vh;
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -31,9 +32,7 @@
 
 .footer-logo .logo-icon:hover {
   cursor: pointer;
-  transform: scale(
-    1.1
-  ); /* optional offset can be added if desired */
+  transform: scale(1.1);
 }
 
 /* ---------- FOOTER LINKS ---------- */
@@ -74,9 +73,10 @@
   transition: transform 0.3s ease;
 }
 
+/* This is just because the map png image isn't center on itself */
 .footer-contact .map-icon:hover {
   cursor: pointer;
-  transform: scale(1.1) translateX(10px); /* enlarge and move right */
+  transform: scale(1.1) translateX(10px);
 }
 
 /* ---------- FOOTER PARTNERS ---------- */
