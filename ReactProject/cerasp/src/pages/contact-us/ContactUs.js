@@ -250,8 +250,8 @@ const ContactUs = () => {
                 />
                 <span className="checkbox-text">
                   {language === "fr"
-                    ? "Faites partie de la newsletter"
-                    : "Be part of the Newsletter"}
+                    ? "Inscrivez-vous à la newsletter"
+                    : "Sign up for the Newsletter"}
                 </span>
               </label>
             </div>

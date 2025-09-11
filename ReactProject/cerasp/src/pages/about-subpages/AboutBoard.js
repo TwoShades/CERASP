@@ -33,7 +33,31 @@ export default function AboutBoard() {
             "",
         }));
 
-        setBoardMembers(cleaned);
+        const customOrder = [
+          "Julie Pelletier",
+          "Teresa Berghello",
+          "Simon Fortin",
+          "Roberta Silerova",
+          "Annie Charland",
+          "Guy LeHouiller",
+          "Benjamin Tanguay",
+          "Marc Purcell",
+          "Phil Roche",
+        ];
+
+        const sorted = cleaned.sort((a, b) => {
+          const indexA = customOrder.indexOf(a.Name);
+          const indexB = customOrder.indexOf(b.Name);
+
+          if (indexA === -1 && indexB === -1) {
+            return 0;
+          }
+          if (indexA === -1) return 1;
+          if (indexB === -1) return -1;
+          return indexA - indexB;
+        });
+
+        setBoardMembers(sorted);
       } catch (err) {
         console.error(
           "Failed to fetch board members:",

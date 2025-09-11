@@ -63,11 +63,18 @@ export default function AboutTeam() {
         </AnimateObject>
         <section className="subpage-center-all">
           <div className="team-cards">
-            {teamData.map((member) => {
-              return (
-                <Employee key={member.id} member={member} />
-              );
-            })}
+            {teamData
+              .filter(
+                (member) => member.Name !== "Claude Sara"
+              )
+              .map((member) => {
+                return (
+                  <Employee
+                    key={member.id}
+                    member={member}
+                  />
+                );
+              })}
           </div>
         </section>
       </main>

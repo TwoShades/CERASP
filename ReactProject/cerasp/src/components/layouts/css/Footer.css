@@ -56,6 +56,10 @@
 }
 
 /* ---------- FOOTER CONTACT ---------- */
+.footer-contact {
+  margin-top: 1.2em;
+}
+
 .footer-contact .address-lines {
   display: flex;
   flex-direction: column;
@@ -63,7 +67,7 @@
 }
 
 .footer-contact span {
-  font-size: var(--text-s);
+  font-size: var(--text-m);
 }
 
 .footer-contact .map-icon {
