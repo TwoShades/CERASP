@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="footer-logo">
         <div className="logo-icon">
           <img
-            src="/logos/cerasplogo.png" // placeholder for your actual logo
+            src="/logos/cerasplogo.png"
             alt="CERASP Logo"
             width="200px"
           />

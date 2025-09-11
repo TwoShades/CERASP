@@ -3,9 +3,9 @@ import React, {
   useState,
   useContext,
 } from "react";
-import "./css/AboutTeam.css"; // for layout and Employee/BoardMember styles
+import "./css/AboutTeam.css";
 import "../_css/Subpage.css";
-import BoardMember from "../../components/uicomponents/BoardMember"; // import the new component
+import BoardMember from "../../components/uicomponents/BoardMember";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 
