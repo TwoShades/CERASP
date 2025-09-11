@@ -3,7 +3,8 @@ import {
   useAnimation,
   useInView,
 } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext"; // 👈 import your context
 
 const OFFSET = 50;
 
@@ -22,33 +23,44 @@ export default function AnimateObject({
     once,
   });
 
+  const { isMobile } = useContext(ScreenSizeContext);
+
   useEffect(() => {
+    if (isMobile) {
+      // 👇 On mobile, just set everything visible instantly
+      controls.set("visible");
+      return;
+    }
+
     if (isInView) {
       controls.start("visible");
     } else if (!once) {
       controls.start("hidden");
     }
-  }, [isInView, controls, once]);
+  }, [isInView, controls, once, isMobile]);
 
-  const initialX = Array.isArray(variantsToRun)
-    ? variantsToRun.includes("slideLeft")
+  // If mobile, skip offsets completely
+  const initialX =
+    !isMobile && Array.isArray(variantsToRun)
+      ? variantsToRun.includes("slideLeft")
+        ? -OFFSET
+        : variantsToRun.includes("slideRight")
+        ? OFFSET
+        : 0
+      : !isMobile && variantsToRun === "slideLeft"
       ? -OFFSET
-      : variantsToRun.includes("slideRight")
+      : !isMobile && variantsToRun === "slideRight"
       ? OFFSET
-      : 0
-    : variantsToRun === "slideLeft"
-    ? -OFFSET
-    : variantsToRun === "slideRight"
-    ? OFFSET
-    : 0;
+      : 0;
 
-  const initialY = Array.isArray(variantsToRun)
-    ? variantsToRun.includes("slideDown")
+  const initialY =
+    !isMobile && Array.isArray(variantsToRun)
+      ? variantsToRun.includes("slideDown")
+        ? -OFFSET
+        : 0
+      : !isMobile && variantsToRun === "slideDown"
       ? -OFFSET
-      : 0
-    : variantsToRun === "slideDown"
-    ? -OFFSET
-    : 0;
+      : 0;
 
   const includesFade = Array.isArray(variantsToRun)
     ? variantsToRun.includes("fadeIn")
@@ -58,22 +70,39 @@ export default function AnimateObject({
     ? variantsToRun.includes("slowFadeIn")
     : variantsToRun === "slowFadeIn";
 
-  const variants = {
-    hidden: {
-      opacity: includesFade || includesSlowFade ? 0 : 1,
-      x: initialX,
-      y: initialY,
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      y: 0,
-      transition: {
-        duration: includesSlowFade ? 1 : 0.6, // slow fade if requested
-        ease: "easeOut",
-      },
-    },
-  };
+  const variants = isMobile
+    ? {
+        hidden: {
+          opacity: includesFade || includesSlowFade ? 0 : 1,
+          x: 0,
+          y: 0,
+        },
+        visible: {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          transition: {
+            duration: includesSlowFade ? 1 : 0.6,
+            ease: "easeOut",
+          },
+        },
+      }
+    : {
+        hidden: {
+          opacity: includesFade || includesSlowFade ? 0 : 1,
+          x: initialX,
+          y: initialY,
+        },
+        visible: {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          transition: {
+            duration: includesSlowFade ? 1 : 0.6,
+            ease: "easeOut",
+          },
+        },
+      };
 
   return (
     <motion.div

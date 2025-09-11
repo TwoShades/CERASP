@@ -18,13 +18,8 @@ const Footer = () => {
       </div>
 
       <div className="footer-links">
-        <h2>
-          {language === "fr"
-            ? "Suivez-nous sur"
-            : "Follow us at"}
-        </h2>
         <a
-          href="https://www.linkedin.com/company/dummy-url"
+          href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -8,7 +8,6 @@ import "../_css/Subpage.css";
 import BoardMember from "../../components/uicomponents/BoardMember"; // import the new component
 import { LanguageContext } from "../../contexts/LanguageContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
-import ContactCTA from "../../components/interactables/ContactCTA";
 
 export default function AboutBoard() {
   const { language } = useContext(LanguageContext);
@@ -96,7 +95,6 @@ export default function AboutBoard() {
       {boardMembers.length > 0 && (
         <>
           <div className="layout-panel-5-transp" />
-          <ContactCTA />
         </>
       )}
     </>

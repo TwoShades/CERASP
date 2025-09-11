@@ -211,3 +211,37 @@
   width: 80vw;
   height: 100vh;
 }
+
+@media (max-width: 768px) {
+  /* Hide all fixed layout panels */
+  .layout-panel-1,
+  .layout-panel-2,
+  .layout-panel-3,
+  .layout-panel-4,
+  .layout-panel-5,
+  .layout-panel-5-transp,
+  .layout-panel-3-4-transp,
+  .layout-bg-img,
+  .layout-bg-wide-img,
+  .layout-bg-img-col-3-4,
+  .layout-rotated-title,
+  .layout-page-overview {
+    display: none !important;
+  }
+
+  /* Sidebar also shouldn’t hog space on mobile */
+  .layout-sidebar {
+    width: 100%;
+    margin: 2em 0;
+  }
+
+  .layout-sidebar a {
+    font-size: 1.6rem; /* smaller clickable size for mobile */
+  }
+
+  /* Make sure content takes full width */
+  .layout-main-content {
+    width: 100%;
+    padding: 0 1em;
+  }
+}

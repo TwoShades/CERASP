@@ -116,3 +116,19 @@ body {
   border-radius: 50%;
   background-color: var(--color-dodger-blue);
 }
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: repeating-linear-gradient(
+      to right,
+      transparent 0,
+      transparent calc(25vw - 1px),
+      var(--gridline-light-blue) calc(25vw - 2px),
+      var(--gridline-light-blue) 25vw
+    );
+  }
+}
