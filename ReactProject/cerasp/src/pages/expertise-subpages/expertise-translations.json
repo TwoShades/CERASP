@@ -52,7 +52,7 @@
     },
     "intro": {
       "en": "At CERASP, we help turn ideas into viable products by providing expert support from early ideation to strategic planning, ensuring a solid foundation for successful development. Driven by innovation and scientific rigor, our ideation services turn concepts into actionable plans—shaping the future of your innovation. Our expertise includes:",
-      "fr": "Transformer une idée en solution viable commence par une base solide. Chez CERASP, nous accompagnons vos innovations de l’idéation à la planification stratégique, en évaluant la faisabilité et en posant les bases du succès. Notre approche, centrée sur l’innovation, la rigueur scientifique et la stratégie, vous aide à passer de l’idée à l’action en toute confiance. Notre expertise comprend :"
+      "fr": "Transformer une idée en solution viable commence par une base solide. Au CERASP, nous accompagnons vos innovations de l’idéation à la planification stratégique, en évaluant la faisabilité et en posant les bases du succès. Notre approche, centrée sur l’innovation, la rigueur scientifique et la stratégie, vous aide à passer de l’idée à l’action en toute confiance. Notre expertise comprend :"
     },
     "en": [
       {
@@ -164,10 +164,20 @@
       "fr": "Preuve de concept"
     },
     "content": {
-      "en": "We validate your idea’s technical feasibility, reducing risk and guiding decisions before full-scale development.",
-      "fr": "Nous validons la faisabilité technique de votre idée, réduisant ainsi les risques et guidant les décisions avant le développement à grande échelle."
+      "en": "At CERASP, we combine technical expertise, scientific rigor, and industry insight to support you through early development—turning ideas into validated, scalable products. Our pragmatic approach ensures efficient progress from concept to reality, minimizing risk and maximizing success",
+      "fr": "Transformer une idée en produit testable requiert expertise technique, rigueur scientifique et connaissance du marché. Au CERASP, nous vous accompagnons dès le début pour valider et faire évoluer vos concepts, en minimisant les risques et maximisant vos chances de succès."
     },
     "steps": {
+      "proof": {
+        "title": {
+          "en": "Proof of Concept",
+          "fr": "Preuve de concept"
+        },
+        "description": {
+          "en": "We validate your idea’s technical feasibility, reducing risk and guiding decisions before full-scale development.",
+          "fr": "Nous validons la faisabilité technique pour limiter les risques et orienter vos décisions avant le développement complet"
+        }
+      },
       "formulate": {
         "title": {
           "en": "Formulation",
