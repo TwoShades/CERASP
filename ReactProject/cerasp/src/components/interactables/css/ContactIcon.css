@@ -10,10 +10,9 @@
 
 .contact-icon-wrapper {
   /* border: 2px dashed green; */
-  position: fixed;
+  position: absolute;
   z-index: 2;
-  right: 4vw;
-  bottom: 16vh;
+  bottom: 10vh;
   width: 200px;
   height: 200px;
   display: flex;

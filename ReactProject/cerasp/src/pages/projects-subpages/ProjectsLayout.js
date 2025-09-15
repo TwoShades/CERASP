@@ -57,7 +57,10 @@ const ProjectsLayout = () => {
             : "OUR PROJECTS"}
         </h1>
       </AnimateObject>
-      <div className="layout-panel-5"></div>
+      <div className="layout-panel-5">
+        {" "}
+        <ContactIcon />
+      </div>
       {projectsData && (
         <>
           <div className="subpage-flex-column">
@@ -83,9 +86,13 @@ const ProjectsLayout = () => {
                   : "GRANTS AWARDED"}
               </h1>
             </AnimateObject>
-            <ProjectsGrants style={{ zIndex: "30" }} />
+            <AnimateObject
+              variantsToRun={["fadeIn"]}
+              className="grants-animate"
+            >
+              <ProjectsGrants />
+            </AnimateObject>
           </div>
-          <ContactIcon />
           <Footer />
         </>
       )}

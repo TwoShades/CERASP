@@ -34,13 +34,12 @@ const ExpertiseLayout = () => {
 
   return (
     <div className="layout-page page-content">
-      <ContactIcon />
-
       {isOverview && (
         <>
           <div className="layout-panel-5">
             <div className="layout-page-overview">
               <p>{overview}</p>
+              <ContactIcon />
             </div>
           </div>
           <div className="layout-bg-img">

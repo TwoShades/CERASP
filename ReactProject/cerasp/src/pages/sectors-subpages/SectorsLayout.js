@@ -28,13 +28,13 @@ const SectorsLayout = () => {
 
   return (
     <div className="layout-page page-content">
-      <ContactIcon />
       {/* <div className="layout-color-panel"></div> */}
       {location.pathname === "/sector-of-activities" && (
         <>
           <div className="layout-panel-5">
             <div className="layout-page-overview">
               <p>{overview}</p>
+              <ContactIcon />
             </div>
           </div>
           <div className="layout-bg-img">

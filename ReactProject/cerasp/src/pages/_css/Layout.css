@@ -162,7 +162,13 @@
   top: 0;
   right: 0;
   width: 20vw;
+  min-width: 350px;
   height: 100vh;
+
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 0;
 }
 
 .layout-panel-5-transp {
@@ -176,15 +182,15 @@
 }
 
 .layout-page-overview {
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 2;
-  width: 20vw;
-  top: 0vh;
-  right: 0vw;
+  /* width: 20vw; */
+  /* top: 0vh; */
+  /* right: 0vw; */
 }
 
 /* USE THIS FOR EXPERTISE AND SECTOR */
