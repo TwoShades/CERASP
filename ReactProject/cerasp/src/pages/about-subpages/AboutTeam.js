@@ -1,13 +1,8 @@
-import React, {
-  useEffect,
-  useState,
-  useContext,
-} from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./css/AboutTeam.css";
-import "../_css/Subpage.css";
 import Employee from "../../components/uicomponents/Employee.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import AnimateObject from "../../components/uicomponents/AnimateObject";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutTeam() {
   const { language } = useContext(LanguageContext);
@@ -27,9 +22,7 @@ export default function AboutTeam() {
             Title: entry.Title,
             LinkedIn: entry.LinkedIn,
             Picture:
-              entry.Picture?.formats?.medium?.url ||
-              entry.Picture?.url ||
-              "",
+              entry.Picture?.formats?.medium?.url || entry.Picture?.url || "",
             createdAt: entry.createdAt,
           };
         });
@@ -49,40 +42,23 @@ export default function AboutTeam() {
   }, [language]);
 
   return (
-    <>
-      <main className="subpage-overview subpage-center-all">
-        <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-intro-grid"
-        >
-          <h1>
-            {language === "fr"
-              ? "RENCONTREZ L'ÉQUIPE"
-              : "MEET THE TEAM"}
-          </h1>
-        </AnimateObject>
-        <section className="subpage-center-all">
-          <div className="team-cards">
-            {teamData
-              .filter(
-                (member) => member.Name !== "Claude Sara"
-              )
-              .map((member) => {
-                return (
-                  <Employee
-                    key={member.id}
-                    member={member}
-                  />
-                );
-              })}
-          </div>
-        </section>
-      </main>
-      {teamData.length > 0 && (
-        <>
-          <div className="layout-panel-5-transp" />
-        </>
-      )}
-    </>
+    <div className="about-team-layout">
+      <SubPageHeader
+        name={language === "fr" ? "RENCONTREZ L'ÉQUIPE" : "MEET THE TEAM"}
+      />
+      <div className="about-team">
+        <div className="team-cards">
+          {teamData.map((member) => {
+            return (
+              <Employee
+                key={member.id}
+                member={member}
+                className="team-member"
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
   );
 }

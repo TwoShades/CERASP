@@ -1,0 +1,214 @@
+.project-container {
+  margin: 0 8em 0 8em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 1em;
+}
+
+.project-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects-overview-layout {
+  padding-top: 90px;
+}
+
+.projects-overview-header {
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 80px;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-overview-header-text {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.project-l h2 {
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-intro {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+}
+
+/* NEW: Project card as <details> styled component */
+.project-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0px;
+  background: linear-gradient(135deg, #7fb0ff, #085dbd);
+  transition: height 0.1s ease;
+  z-index: 2;
+}
+
+.project-card:hover::before {
+  height: 4px;
+}
+
+.project-card:hover {
+  /* border-color: #0056b3; */
+  box-shadow: 0 12px 40px rgba(0, 94, 184, 0.12),
+    0 4px 20px rgba(0, 94, 184, 0.08);
+}
+
+.project-card summary {
+  cursor: pointer;
+  padding: 28px 30px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #003d82;
+  background-color: #f8f9fa;
+  border: none;
+  position: relative;
+  list-style: none;
+  transition: background-color 0.2s ease;
+}
+
+.project-card summary:hover {
+  background-color: #f0f7ff;
+}
+
+.project-card summary::marker {
+  display: none;
+}
+
+.project-card summary::after {
+  content: "▶";
+  position: absolute;
+  right: 24px;
+  color: #0056b3;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.project-card[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.project-card[open] summary {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.project-card p {
+  padding: 24px 30px;
+  margin: 0;
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  background-color: #ffffff;
+  font-weight: 400;
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 1024px) {
+  .project-container {
+    margin: 0 4em;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-container {
+    margin: 0;
+    margin-top: 40px;
+    padding: 0 2em;
+    background: linear-gradient(45deg, #f8faff 0%, #eef6ff 50%, #f0f7ff 100%);
+  }
+
+  .project-left {
+    border-radius: 16px;
+    padding: 35px 25px;
+    margin-bottom: 30px;
+  }
+
+  .project-left h2 {
+    font-size: 2rem;
+  }
+
+  .project-intro {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .project-card summary {
+    padding: 22px 24px;
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    padding: 22px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-container {
+    padding: 0 1.5em;
+  }
+
+  .project-left {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .project-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-card summary {
+    padding: 20px;
+    font-size: 1.15rem;
+  }
+
+  .project-card p {
+    padding: 20px;
+  }
+}

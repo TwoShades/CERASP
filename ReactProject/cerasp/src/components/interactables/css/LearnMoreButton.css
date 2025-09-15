@@ -13,6 +13,7 @@
     var(--primary-blue),
     var(--secondary-blue)
   );
+  border-radius: 15px;
   z-index: 20;
 }
 

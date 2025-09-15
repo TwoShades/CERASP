@@ -1,6 +1,6 @@
 /* GLOBAL CSS */
 :root {
-  /* --bg-color-light: #f4faff; */
+  --bg-color-light: #f4faff;
   --text-color-light: #1a1a1a;
   --secondary-text-color-light: #4f4f4f;
   --primary-blue: #005ba1;
@@ -8,37 +8,40 @@
   --secondary-blue: #3ea7e1;
   --secondary-hover-blue: #72c5f0;
 
-  /* Aug-1 updated mockup */
-  --text-l6: 6rem;
-  --text-l5: 5rem;
-  --text-l4: 4rem;
-  --text-l3: 3rem;
-  --text-l2: 2rem;
-  --text-m: 1.6rem;
-  --text-s: 1.2rem;
-  --gridline-light-blue: #f0f0f0;
-  --gridline-med-blue: #0056b3;
-  --color-dodger-blue: #2d76ff;
-  --color-button-blue: #1d76d4;
-  --color-button-light-blue: #6c9fff;
+  /* Project Panels */
+  --project-panel-background: rgba(255, 255, 255, 0.5);
+  --project-panel-color: black;
+  --project-panel-border-radius: 10px;
+  --project-panel-padding: 5%;
+  --project-panel-shadow: 1px 1px 2px 2px rgba(129, 129, 129, 0.068);
+  --temp-background-color: rgba(190, 220, 255, 0.062);
 
-  /* Margins, used for animating scrolling elements */
-  --space-xs: 0.5rem;
-  --space-s: 1rem;
-  --space-m: 2rem;
-  --space-l: 4rem;
-  --space-xl: 8rem;
-  --space-xxl: 12rem;
+  /* GLOBAL PADDING FULLSCREEN */
+  --global-page-padding: 0 8em 0 8em;
 
   @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
 
   font-family: "Urbanist", sans-serif !important;
+
+  /* article,
+  header,
+  section,
+  figure,
+  blockquote {
+    margin: 0;
+    padding: 0;
+  } */
 
   figure {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+
+.app.light {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
 }
 
 /* GLOBAL PADDING TABLET/MOBILE */
@@ -55,18 +58,57 @@
   }
 }
 
-html,
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  /* height: 100%; */
+
+  justify-content: flex-start;
+}
+
+.main-content {
   overflow-x: hidden;
-  background: repeating-linear-gradient(
-    to right,
-    transparent 0,
-    transparent calc(20vw - 1px),
-    var(--gridline-light-blue) calc(20vw - 2px),
-    var(--gridline-light-blue) 20vw
-  );
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+  scroll-snap-stop: always;
+  position: relative;
+  --scroll-progress: 0;
+}
+
+.background-gradient {
+  background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    linear-gradient(
+        225deg,
+        rgba(135, 184, 247, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    linear-gradient(
+        5deg,
+        rgba(1, 100, 248, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0,
+    linear-gradient(
+        315deg,
+        rgba(0, 162, 255, calc(0.1 + var(--scroll-progress) * 0.4)) 25%,
+        transparent 25%
+      )
+      0 0;
+
+  background-size: 2000px 1000px;
+  background-position: center;
+  background-repeat: repeat;
+  transition: background 0.3s ease;
 }
 
 .background-triangles {
@@ -75,11 +117,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-      to bottom left,
-      transparent 50%,
-      #3498db 50%
-    )
+  background: linear-gradient(to bottom left, transparent 50%, #3498db 50%)
     center/200% 200%;
   z-index: -1;
 }
@@ -106,29 +144,4 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-
-/* Generic Shapes */
-
-.circle-medium {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: var(--color-dodger-blue);
-}
-
-@media screen and (max-width: 768px) {
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background: repeating-linear-gradient(
-      to right,
-      transparent 0,
-      transparent calc(25vw - 1px),
-      var(--gridline-light-blue) calc(25vw - 2px),
-      var(--gridline-light-blue) 25vw
-    );
-  }
 }

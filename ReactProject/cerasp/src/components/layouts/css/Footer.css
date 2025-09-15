@@ -1,112 +1,156 @@
-/* ---------- FOOTER BASE ---------- */
+/* FOOTER COMPONENT */
 .footer {
-  margin-top: 15vh;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1em;
-  z-index: 1000;
-  background-color: #80121200;
-  border-top: 1px solid grey;
-  color: #4d4d4d;
+  background-color: #333;
+  color: #fff;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
   width: 100%;
-}
-
-.footer > div {
+  scroll-snap-align: end;
   display: flex;
-  flex-direction: column;
-  padding-top: 2em;
-  padding-left: 4em;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ---------- FOOTER LOGO ---------- */
-.footer-logo {
+.footer-content {
+  width: 100%;
   display: flex;
+  justify-content: space-between;
 }
 
-.footer-logo .logo-icon {
+.made-by {
   display: flex;
-  margin-top: 1em;
-  transition: transform 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10%;
 }
 
-.footer-logo .logo-icon:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-/* ---------- FOOTER LINKS ---------- */
-.footer-links {
+.privacy {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-right: 10%;
 }
 
-.footer-links h2 {
-  margin-bottom: 0.5em;
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10%;
 }
 
-.footer-links a {
-  margin-top: 1em;
-  color: #4d4d4d;
+.made-by,
+.copyright,
+.privacy {
+  flex: 1;
+  /* margin: 10px; */
+  font-size: 0.8rem;
+}
+
+.privacy {
+  text-align: center;
+}
+
+.footer .made-by p,
+.footer .copyright p,
+.footer .privacy p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  font-size: var(--text-m);
 }
 
-.footer-links a:hover {
+footer a:hover {
   text-decoration: underline;
 }
 
-/* ---------- FOOTER CONTACT ---------- */
-.footer-contact {
-  margin-top: 1.2em;
+.footer .blank {
+  flex: 1;
 }
 
-.footer-contact .address-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2em;
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .privacy {
+    margin-right: 0;
+    padding: 8px;
+  }
+
+  .made-by,
+  .copyright,
+  .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+  .footer .blank {
+    display: none;
+  }
 }
 
-.footer-contact span {
-  font-size: var(--text-m);
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+  .footer-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  .privacy {
+    padding: 6px;
+  }
+
+  .made-by,
+  .copyright,
+  .privacy {
+    font-size: 0.9rem;
+  }
 }
 
-.footer-contact .map-icon {
-  margin-top: 1em;
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease;
+@media (max-width: 640px) {
+  .footer {
+    
+    padding: 8px 0;
+  }
+  .footer-content {
+    gap: 6px;
+  }
+  .privacy {
+    padding: 4px;
+  }
+
+  .made-by,
+  .copyright,
+  .privacy {
+    font-size: 0.85rem;
+  }
 }
 
-/* This is just because the map png image isn't center on itself */
-.footer-contact .map-icon:hover {
-  cursor: pointer;
-  transform: scale(1.1) translateX(10px);
-}
+@media (max-width: 475px) {
+  .footer {
 
-/* ---------- FOOTER PARTNERS ---------- */
-.footer-partners {
-  padding: 2em;
-  grid-column: 4 / span 2;
-  align-items: flex-start;
-  background-color: white;
-}
+    padding: 6px 0;
+  }
+  .footer-content {
+    gap: 4px;
+  }
 
-.footer-partners h2 {
-  margin-block-end: 0em !important;
-}
+  .privacy {
+    padding: 2px;
+  }
 
-/* ---------- FOOTER PRIVACY ---------- */
-.footer-privacy {
-  position: absolute;
-  bottom: 2em;
-  left: 2em;
-  text-align: center;
-  padding: 1em 0;
-}
-
-.footer-privacy a {
-  color: #4d4d4d;
-  text-decoration: none;
+  .made-by,
+  .copyright,
+  .privacy {
+    font-size: 0.4rem;
+  }
 }

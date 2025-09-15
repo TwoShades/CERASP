@@ -1,52 +1,46 @@
 import React, { useContext } from "react";
 import "./css/SectorsNHP.css";
+import { MessagesSquare } from "lucide-react";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
-import AnimateObject from "../../components/uicomponents/AnimateObject";
-import PageLinkCTA from "../../components/interactables/PageLinkCTA";
-import sectorTranslations from "./sectors-translation.json";
-import "../_css/Subpage.css";
-import "./css/SectorsNHP.css";
+// import sectorsTranslations from "./sectors-translations.json";
 
-export default function SectorsNHP() {
+const SectorsNHP = () => {
   const { language } = useContext(LanguageContext);
-  const content = sectorTranslations.natural_health_product;
+  //   const prototyping = sectorsTranslations.prototyping;
+
   return (
-    <main className="subpage-overview">
-      <div className="layout-panel-5"></div>
-      <AnimateObject
-        variantsToRun={["slideLeft", "fadeIn"]}
-        className="subpage-intro-grid"
-      >
-        <h1>{content.title[language]}</h1>
-        <p>{content.contentA[language]}</p>
-      </AnimateObject>
-      <section className="subpage-row">
-        <AnimateObject
-          variantsToRun={["slideRight", "fadeIn"]}
-          className="subpage-col-1-3"
-        >
-          <img
-            src="/photos/FromOldSite/pharmaNHP.jpg"
-            alt="Biotech facility"
-          />
-        </AnimateObject>
-        <AnimateObject
-          variantsToRun={["slideRight", "fadeIn"]}
-          className="subpage-col-3-5"
-          style={{ padding: "15% 0 0 0" }}
-        >
-          <p>{content.contentB[language]}</p>
-        </AnimateObject>
-      </section>
-      <PageLinkCTA
-        text={
-          language === "fr"
-            ? "Dispositifs Médicaux"
-            : "Medical Devices"
-        }
-        url="/sector-of-activities/medical-devices"
-      />
-    </main>
+    <div className="sectors-prototyping-parent">
+      <div className="sectors-prototyping-panel">
+        {/* Title at top left */}
+        <div className="sectors-prototyping-title">
+          <h1>
+            {language === "fr"
+              ? "Produits de santé naturels"
+              : "Natural Health Products"}
+          </h1>
+        </div>
+
+        {/* <div className="sectors-prototyping-icon">
+          <MessagesSquare />
+        </div> */}
+
+        {/* Main text centered */}
+        <div className="sectors-prototyping-maintext">
+          <p>
+            {language === "fr"
+              ? `Nous soutenons le développement et la commercialisation de produits de santé naturels, en garantissant le respect des cadres réglementaires tout en préservant l'intégrité des ingrédients naturels.`
+              : `We support the development and market readiness of natural health products, ensuring 
+compliance with regulatory frameworks while maintaining the integrity of natural 
+ingredients.`}
+          </p>
+        </div>
+        {/* Optionally keep image section if needed */}
+        {/* <div className="sectors-prototyping-image-section">
+          Lorem Ipsum
+        </div> */}
+      </div>
+    </div>
   );
-}
+};
+
+export default SectorsNHP;

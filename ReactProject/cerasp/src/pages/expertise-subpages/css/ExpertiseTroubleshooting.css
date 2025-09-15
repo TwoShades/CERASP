@@ -1,0 +1,272 @@
+.expertise-troubleshooting-parent {
+  padding: 8em;
+  padding-top: calc(90px + 6em);
+}
+
+.expertise-troubleshooting-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 8em;
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #005ba1 0%, #3ea7e1 100%);
+  border-radius: 24px;
+  position: relative;
+  justify-content: center;
+  /* Smooth entrance animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  /* Subtle hover effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* .expertise-troubleshooting-panel:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 16px 48px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #0088e2 0%, #72c5f0 100%);
+} */
+
+.expertise-troubleshooting-title {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  /* Slide in from left */
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideInLeft 0.6s ease-out 0.5s forwards;
+}
+
+.expertise-troubleshooting-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  size: 100px;
+  /* Slide in from right with subtle rotation */
+  opacity: 0;
+  transform: translateX(20px) rotate(10deg);
+  animation: slideInRight 0.6s ease-out 0.7s forwards;
+  /* Gentle hover rotation */
+  transition: transform 0.3s ease;
+}
+
+.expertise-troubleshooting-icon:hover {
+  transform: translateX(0) rotate(-5deg) scale(1.05);
+}
+
+.expertise-troubleshooting-title h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #f4faff;
+  /* Subtle text glow effect */
+  transition: text-shadow 0.3s ease;
+}
+
+.expertise-troubleshooting-maintext {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f4faff;
+  /* Fade in after other elements */
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.9s forwards;
+}
+
+.expertise-troubleshooting-maintext p {
+  font-size: 2rem;
+  text-align: center;
+  max-width: 600px;
+  /* Subtle text animation on hover */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Subtle background animation */
+.expertise-troubleshooting-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  border-radius: 24px;
+  opacity: 0;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .expertise-troubleshooting-parent {
+    padding: 0 4em;
+    padding-top: 100px;
+    padding-bottom: 6em;
+  }
+
+  .expertise-troubleshooting-panel {
+    margin: 3em 4em 6em 4em;
+    padding: 6em;
+  }
+}
+
+@media (max-width: 992px) {
+  .expertise-troubleshooting-parent {
+    padding: 0 3em;
+    padding-top: 80px;
+    padding-bottom: 5em;
+  }
+
+  .expertise-troubleshooting-panel {
+    margin: 2em 3em 5em 3em;
+    padding: 5em 4em;
+  }
+
+  .expertise-troubleshooting-title h1 {
+    font-size: 2rem;
+  }
+
+  .expertise-troubleshooting-maintext p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .expertise-troubleshooting-parent {
+    padding: 0 2em;
+    padding-top: 60px;
+    padding-bottom: 4em;
+  }
+
+  .expertise-troubleshooting-panel {
+    margin: 2em 2em 4em 2em;
+    padding: 4em 3em;
+    border-radius: 20px;
+  }
+
+  .expertise-troubleshooting-title {
+    top: 20px;
+    left: 20px;
+  }
+
+  .expertise-troubleshooting-icon {
+    top: 20px;
+    right: 20px;
+  }
+
+  .expertise-troubleshooting-title h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.3px;
+  }
+
+  .expertise-troubleshooting-maintext p {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .expertise-troubleshooting-parent {
+    padding: 0 1em;
+    padding-top: 40px;
+    padding-bottom: 3em;
+  }
+
+  .expertise-troubleshooting-panel {
+    margin: 1.5em 1em 3em 1em;
+    padding: 3em 2em;
+    border-radius: 16px;
+    flex-direction: column;
+  }
+
+  .expertise-troubleshooting-title {
+    position: static;
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  .expertise-troubleshooting-icon {
+    position: static;
+    align-self: center;
+    margin-bottom: 2em;
+    order: -1;
+  }
+
+  .expertise-troubleshooting-title h1 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  .expertise-troubleshooting-maintext {
+    margin-top: 1em;
+  }
+
+  .expertise-troubleshooting-maintext p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 400px) {
+  .expertise-troubleshooting-parent {
+  padding-top: calc(40px + 2em);
+}
+  .expertise-troubleshooting-panel {
+    padding: 2.5em 1.5em;
+    margin: 1em 0.5em 2em 0.5em;
+  }
+
+  .expertise-troubleshooting-title h1 {
+    font-size: 1.4rem;
+  }
+
+  .expertise-troubleshooting-maintext p {
+    font-size: 1.2rem;
+  }
+}

@@ -1,112 +1,108 @@
 import "./css/AboutOverview.css";
-import "../_css/Subpage.css";
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
-import AnimateObject from "../../components/uicomponents/AnimateObject";
-import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
-import ContactIcon from "../../components/interactables/ContactIcon";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet, isFullScreen } = useContext(
-    ScreenSizeContext
-  );
-  const content = aboutTranslations;
-  const subValues = content.subValues;
+  const { isMobile, isTablet, isFullScreen } = useContext(ScreenSizeContext);
+  const content = aboutTranslations.aboutOverview;
+
   return (
-    <main className="subpage-overview">
-      <ContactIcon />
-      <div className="layout-panel-5"></div>
-      <AnimateObject
-        variantsToRun={["slideLeft", "fadeIn"]}
-        className="subpage-intro-grid"
-      >
-        <h1>
-          {language === "fr" ? "HISTORIQUE" : "HISTORY"}
-        </h1>
-        <p>{content.overviewA[language]}</p>
-      </AnimateObject>
+    <div className="about-overview-layout">
+      <SubPageHeader
+        name={content.overview.title[language]}
+        extraContent={
+          <div className="about-overview-header-text">
+            <p>{content.overview[language]}</p>
+          </div>
+        }
+      />
+      <div className="about-overview">
+        <div className="about-overview-video">
+          {isFullScreen && (
+            <div className="about-overview-video-icon">
+              <img
+                src="/svg/microscope-bacteria.svg"
+                alt="Microscope Bacteria"
+                className="about-icon-img"
+              />
+            </div>
+          )}
+          {language === "fr" ? (
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/6Wmb18o6Yos?si=5gXT4SvgAUZu-CEG"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ShwbF2xodT8?si=gexIqKRxD2kxLQVe"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          )}
 
-      <section className="subpage-row">
-        <div className="subpage-col-1-5">
-          <img
-            src="/photos/FromOldSite/biotech-scaled.jpg"
-            alt="Biotech facility"
-          />
+          {isFullScreen && (
+            <div className="about-overview-video-icon">
+              <img
+                src="/svg/flask-gear.svg"
+                alt="Flask Gear"
+                className="about-icon-img"
+              />
+            </div>
+          )}
         </div>
-      </section>
 
-      <section className="subpage-row">
-        <AnimateObject className="subpage-col-1-3">
-          <img
-            src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
-            alt="Biotech facility"
-          />
-        </AnimateObject>
-        <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-col-3-5"
-          style={{ padding: "30% 0 0 0" }}
-        >
-          <p>{content.overviewB[language]}</p>
-        </AnimateObject>
-      </section>
+        <div className="about-overview-primary-sections">
+          <div className="about-overview-primary">
+            <h2>{content.mission.title[language]}</h2>
+            <p>{content.mission[language]}</p>
+          </div>
+          <div className="about-overview-primary">
+            <h2>{content.vision.title[language]}</h2>
+            <p>{content.vision[language]}</p>
+          </div>
+          <div className="about-overview-primary">
+            <h2>{content.values.title[language]}</h2>
+            <p>{content.values[language]}</p>
+          </div>
+        </div>
 
-      <section className="subpage-row">
-        <AnimateObject
-          direction="right"
-          className="subpage-col-1-5"
-        >
-          <p>{content.overviewC[language]}</p>
-        </AnimateObject>
-      </section>
+        <div className="about-overview-secondary-sections">
+          <details className="about-overview-secondary">
+            <summary>{content.values.excellence.title[language]}</summary>
+            <p>{content.values.excellence[language]}</p>
+          </details>
 
-      <section
-        className="subpage-row"
-        id="about-overview-secondary-content"
-      >
-        <AnimateObject
-          className="subpage-col-2-5"
-          variantsToRun={["slideLeft", "fadeIn"]}
-          style={{ marginBottom: "var(--space-l" }}
-        >
-          <h2>{content.mission.title[language]}</h2>
-          <p>{content.mission[language]}</p>
-        </AnimateObject>
+          <details className="about-overview-secondary">
+            <summary>{content.values.innovation.title[language]}</summary>
+            <p>{content.values.innovation[language]}</p>
+          </details>
 
-        <AnimateObject
-          className="subpage-col-2-5"
-          variantsToRun={["slideRight", "fadeIn"]}
-          style={{ marginBottom: "var(--space-l" }}
-        >
-          <h2>{content.vision.title[language]}</h2>
-          <p>{content.vision[language]}</p>
-        </AnimateObject>
-        <AnimateObject
-          className="subpage-col-2-5"
-          variantsToRun={["slideLeft", "fadeIn"]}
-        >
-          <h2>{content.values.title[language]}</h2>
-          <p>{content.values[language]}</p>
-        </AnimateObject>
-      </section>
+          <details className="about-overview-secondary">
+            <summary>{content.values.collaboration.title[language]}</summary>
+            <p>{content.values.collaboration[language]}</p>
+          </details>
 
-      <div
-        className="subpage-flex-column"
-        id="about-overview-bullets"
-      >
-        {/* <div className="subpage-col-1-5"> */}
-        {subValues.map(({ title, en, fr }) => (
-          <InteractiveBullet
-            key={title[language]}
-            title={title[language]}
-            description={language === "en" ? en : fr}
-          />
-        ))}
-        {/* </div> */}
+          <details className="about-overview-secondary">
+            <summary>{content.values.openness.title[language]}</summary>
+            <p>{content.values.openness[language]}</p>
+          </details>
+        </div>
       </div>
-    </main>
+    </div>
   );
 }

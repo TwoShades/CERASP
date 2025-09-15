@@ -1,20 +1,14 @@
-import React, {
-  useEffect,
-  useState,
-  useContext,
-} from "react";
-import "./css/AboutTeam.css";
-import "../_css/Subpage.css";
-import BoardMember from "../../components/uicomponents/BoardMember";
+import React, { useState, useEffect, useContext } from "react";
+import "./css/AboutBoard.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import AnimateObject from "../../components/uicomponents/AnimateObject";
+import SubPageHeader from "../../components/layouts/SubPageHeader";
 
 export default function AboutBoard() {
-  const { language } = useContext(LanguageContext);
   const [boardMembers, setBoardMembers] = useState([]);
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
-    async function fetchBoard() {
+    const fetchBoardMembers = async () => {
       try {
         const res = await fetch(
           `https://loving-bird-9ef3b0470a.strapiapp.com/api/board-members?locale=${language}&populate=Picture`
@@ -23,80 +17,59 @@ export default function AboutBoard() {
 
         const cleaned = json.data.map((entry) => ({
           id: entry.id,
-          Name: entry.Name,
-          Title: entry.Title,
-          Affiliation: entry.Affiliation,
-          Picture:
-            entry.Picture?.formats?.medium?.url ||
-            entry.Picture?.url ||
-            "",
+          name: entry.Name || "",
+          position: entry.Title || "",
+          affiliation: entry.Affiliation || "",
+          photo: entry.Picture?.url || "",
         }));
 
-        const customOrder = [
+        // Define the 4 priority members by their exact names
+        const priorityNames = [
           "Julie Pelletier",
           "Teresa Berghello",
           "Simon Fortin",
           "Roberta Silerova",
-          "Annie Charland",
-          "Guy LeHouiller",
-          "Benjamin Tanguay",
-          "Marc Purcell",
-          "Phil Roche",
         ];
 
-        const sorted = cleaned.sort((a, b) => {
-          const indexA = customOrder.indexOf(a.Name);
-          const indexB = customOrder.indexOf(b.Name);
+        // Extract priority members in order
+        const priorityMembers = priorityNames
+          .map((name) => cleaned.find((m) => m.name === name))
+          .filter(Boolean); // remove undefined if any name not found
 
-          if (indexA === -1 && indexB === -1) {
-            return 0;
-          }
-          if (indexA === -1) return 1;
-          if (indexB === -1) return -1;
-          return indexA - indexB;
-        });
-
-        setBoardMembers(sorted);
-      } catch (err) {
-        console.error(
-          "Failed to fetch board members:",
-          err
+        // Filter out priority members from the rest
+        const otherMembers = cleaned.filter(
+          (m) => !priorityNames.includes(m.name)
         );
-      }
-    }
 
-    fetchBoard();
+        // Combine priority first, then others
+        setBoardMembers([...priorityMembers, ...otherMembers]);
+      } catch (err) {
+        console.error("Failed to fetch board members:", err);
+      }
+    };
+
+    fetchBoardMembers();
   }, [language]);
 
   return (
-    <>
-      <main className="subpage-overview subpage-center-all">
-        <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-intro-grid"
-        >
-          <h1>
-            {language === "fr"
-              ? "MEMBRES DU CONSEIL"
-              : "BOARD MEMBERS"}
-          </h1>
-        </AnimateObject>
-        <section className="subpage-center-all">
-          <div className="team-cards">
-            {boardMembers.map((member) => (
-              <BoardMember
-                key={member.id}
-                member={member}
-              />
-            ))}
-          </div>
-        </section>
-      </main>
-      {boardMembers.length > 0 && (
-        <>
-          <div className="layout-panel-5-transp" />
-        </>
-      )}
-    </>
+    <div className="about-board-layout">
+      <SubPageHeader
+        name={language === "fr" ? "MEMBRES DU CONSEIL" : "BOARD MEMBERS"}
+      />
+      <div className="about-board">
+        <div className="about-board-header"></div>
+
+        <div className="about-board-images">
+          {boardMembers.map((member) => (
+            <div key={member.id} className="board-member-card">
+              <img src={member.photo} alt={member.name} />
+              <h4>{member.name}</h4>
+              <p className="board-member-position">{member.position}</p>
+              <p className="board-member-affiliation">{member.affiliation}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

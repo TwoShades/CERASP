@@ -1,94 +1,628 @@
 {
   "overview": {
-    "title": {
-      "en": "OUR SECTORS",
-      "fr": "NOS SECTEURS"
+    "en": {
+      "title": "Our Sectors",
+      "description": "At CERASP, we are proud to support a diverse range of industries within the life sciences and healthcare ecosystem. Our deep expertise and commitment to innovation enable us to deliver tailored solutions that meet the unique needs of each sector we serve."
     },
-    "content": {
-      "en": "At CERASP, we support a diverse range of innovation within the life sciences and healthcare ecosystem. Our deep expertise and commitment enable us to deliver tailored solutions that meet the unique needs of each industrial partner we serve.",
-      "fr": "Au CERASP, nous soutenons un large éventail d’innovations au sein de l’écosystème des sciences de la vie et de la santé. Notre expertise approfondie et notre engagement nous permettent de proposer des solutions sur mesure répondant aux besoins uniques de chacun de nos partenaires industriels."
+    "fr": {
+      "title": "Nos Secteurs",
+      "description": "Chez CERASP, nous sommes fiers d'accompagner un large éventail d'industries au sein de l'écosystème des sciences de la vie et de la santé. Notre expertise approfondie et notre engagement en faveur de l'innovation nous permettent de proposer des solutions sur mesure qui répondent aux besoins spécifiques de chaque secteur que nous servons."
     }
   },
-  "pharmaceutical_biopharmaceutical": {
+
+  "pharmaceutical": {
     "title": {
-      "en": "PHARMACEUTICAL / BIOPHARMACEUTICAL",
-      "fr": "PHARMACEUTIQUE / BIOPHARMACEUTIQUE"
+      "en": "Pharmaceutical",
+      "fr": "Pharmaceutique"
     },
-    "contentA": {
-      "en": "We support pharmaceutical and biomanufacturing companies in developing and commercializing safe, effective medicines. Our expertise ensures regulatory compliance, quality assurance, operational efficiency, and GMP readiness.",
-      "fr": "Nous guidons des entreprises pharmaceutiques et de biofabrication dans le développement et la commercialisation de médicaments sûrs et efficaces. Notre expertise assure la conformité réglementaire, l’assurance qualité, l’efficacité opérationnelle et la préparation aux exigences des BPF (Bonnes Pratiques de Fabrication)."
+    "content": {
+      "en": "We work with pharmaceutical companies to support the development and commercialization of safe and effective medicines. Our services help ensure:",
+      "fr": "Nous collaborons avec les entreprises pharmaceutiques pour soutenir le développement et la commercialisation de médicaments sûrs et efficaces. Nos services contribuent à garantir :"
     },
-    "contentB": {
-      "en": "In the fast-evolving biopharmaceutical sector, we bring deep scientific and regulatory knowledge to accelerate the development of a wide range of products — from small molecules and traditional biologics to advanced therapies, specialty biopolymers, and drug delivery systems. Biotech innovation is at the core of modern healthcare, and we deliver solutions that drive both scientific advancement and operational scalability.",
-      "fr": "Le secteur biopharmaceutique étant en constante évolution, nous apportons une connaissance scientifique et réglementaire de pointe aidant à accélérer le développement d’une large gamme de produits — allant des petites molécules et des biologiques traditionnels aux thérapies avancées, biopolymères spécialisés et systèmes d’administration de médicaments. L’innovation en biotechnologie est au cœur des soins en santé auxquels nous proposons des solutions qui favorisent à la fois le progrès scientifique et la mise à l’échelle opérationnelle."
+    "fields": {
+      "regulatoryCompliance": {
+        "title": {
+          "en": "Regulatory compliance",
+          "fr": "Conformité réglementaire"
+        },
+        "desc": {
+          "en": "Adherence to guidelines, specification and regulations, relevant to the customer and industry.",
+          "fr": "Respect des directives, spécifications et réglementations applicables au client et au secteur."
+        }
+      },
+      "qualityAssurance": {
+        "title": {
+          "en": "Quality assurance",
+          "fr": "Assurance qualité"
+        },
+        "desc": {
+          "en": "That products or processes meet defined standards and customer expectations.",
+          "fr": "Que les produits ou les processus répondent aux normes définies et aux attentes des clients."
+        }
+      },
+      "operationalEfficiency": {
+        "title": {
+          "en": "Operational efficiency",
+          "fr": "Efficacité opérationnelle"
+        },
+        "desc": {
+          "en": "At every stage of the product development lifecycle.",
+          "fr": "À chaque étape du cycle de développement du produit."
+        }
+      },
+      "gmpReady": {
+        "title": {
+          "en": "GMP-ready status",
+          "fr": "Statut de conformité aux BPF"
+        },
+        "desc": {
+          "en": "That the products or processes is prepared to meet Good Manufacturing Practice (GMP) requirements.",
+          "fr": "Les produits ou procédés sont préparés conformément aux exigences des Bonnes Pratiques de Fabrication (BPF)."
+        }
+      }
+    }
+  },
+  "biopharmaceutical": {
+    "title": {
+      "en": "Biopharmaceutical",
+      "fr": "Biopharmaceutique"
     },
-    "bulletTitle": {
-      "en": "At CERASP, we support innovation through:",
-      "fr": "Au CERASP, nous soutenons l’innovation à travers :"
+    "content": {
+      "en": "In the fast-evolving biopharmaceutical sector, our team understands the complex science and regulatory requirements that drive this innovative field. We provide specialized expertise to support the development of:",
+      "fr": "Dans un secteur biopharmaceutique en constante évolution, notre équipe maîtrise la complexité scientifique et réglementaire de ce domaine innovant. Nous proposons une expertise spécialisée pour accompagner le développement de :"
     },
-    "bulletPoints": {
+    "card1": {
+      "title": {
+        "en": "Traditional biologics & Biosimilars",
+        "fr": "Produits biologiques traditionnels et biosimilaires"
+      },
+      "content": {
+        "en": "Complex medicines made from living organisms, like vaccines or monoclonal antibodies",
+        "fr": "Médicaments complexes fabriqués à partir d'organismes vivants, comme les vaccins ou les anticorps monoclonaux"
+      }
+    },
+    "card2": {
+      "title": {
+        "en": "Advanced therapies",
+        "fr": "Thérapies avancées"
+      },
+      "content": {
+        "en": "Cutting-edge medical treatments, such as cell and gene therapies, and tissue-engineered products, that aim to treat or cure diseases at the genetic or cellular level (e.g., mRNA, siRNA, and Antisense).",
+        "fr": "Traitements médicaux de pointe, tels que les thérapies cellulaires et géniques, et les produits issus de l'ingénierie tissulaire, visant à traiter ou à guérir des maladies au niveau génétique ou cellulaire (par exemple, ARNm, ARNsi et antisens)."
+      }
+    },
+    "card3": {
+      "title": {
+        "en": "Specialty biopolymers",
+        "fr": "Biopolymères de spécialité"
+      },
+      "content": {
+        "en": "High-performance, bio-based polymers designed for specific applications, offering unique properties like biodegradability, biocompatibility, or enhanced strength.",
+        "fr": "Polymères biosourcés hautes performances conçus pour des applications spécifiques, offrant des propriétés uniques telles que la biodégradabilité, la biocompatibilité ou une résistance accrue."
+      }
+    },
+    "card4": {
+      "title": {
+        "en": "Delivery systems",
+        "fr": "Systèmes de livraison"
+      },
+      "content": {
+        "en": "Technologies used to transport a therapeutic agent to its intended site in the body safely and effectively such as Lipidic nanoparticles, liposomes, etc.",
+        "fr": "Technologies utilisées pour transporter un agent thérapeutique vers sa cible dans l'organisme de manière sûre et efficace, telles que les nanoparticules lipidiques, les liposomes, etc."
+      }
+    }
+  },
+  "bioTechBioMan": {
+    "title": {
+      "en": "Biotechnology & Biomanufacturing",
+      "fr": "Biotechnologie et biofabrication"
+    },
+    "content": {
+      "en": "Biotech innovation is at the heart of modern healthcare. We offer solutions that drive scientific advancement and operational scalability.",
+      "fr": "L'innovation biotechnologique est au cœur des soins de santé modernes. Nous proposons des solutions qui favorisent le progrès scientifique et l'évolutivité opérationnelle."
+    },
+    "overview": {
+      "title": {
+        "en": "We partner with clients in need of",
+        "fr": "Nous travaillons en partenariat avec des clients qui ont besoin de"
+      },
+      "theMedicine": {
+        "title": {
+          "en": "Applied Research",
+          "fr": "Recherche appliquée"
+        },
+        "cards": {
+          "card2": {
+            "title": {
+              "en": "Product Development",
+              "fr": "Développement de produits"
+            },
+            "desc": {
+              "en": "Either a new product to market or an improved one to meet customer needs and business goals",
+              "fr": "Lancement d'un nouveau produit ou d'une version améliorée pour répondre aux besoins des clients et aux objectifs commerciaux."
+            }
+          },
+          "card3": {
+            "title": {
+              "en": "Larger-scale biomanufacturing capabilities",
+              "fr": "Capacités de biofabrication à plus grande échelle"
+            },
+            "desc": {
+              "en": "Producing high volumes using industrial-scale equipment and processes",
+              "fr": "Produire de grands volumes en utilisant des équipements et des procédés à l'échelle industrielle"
+            }
+          }
+        }
+      },
+      "products": {
+        "drugs": {
+          "title": {
+            "en": "Drugs and Biologics",
+            "fr": "Médicaments et produits biologiques"
+          },
+          "items": {
+            "item1": {
+              "en": "Prescription drugs",
+              "fr": "Médicaments sur ordonnance"
+            },
+            "item2": {
+              "en": "Over the counter (OTC) drugs",
+              "fr": "Médicaments en vente libre (OTC)"
+            },
+            "item3": {
+              "en": "Natural Health Products (NHP)",
+              "fr": "Produits de santé naturels (PSN)"
+            }
+          }
+        },
+        "veterinary": {
+          "title": {
+            "en": "Veterinary Medicine",
+            "fr": "Médecine vétérinaire"
+          },
+          "items": {
+            "item1": {
+              "en": "Animal Health Products (AHP)",
+              "fr": "Produits de santé animale (PSA)"
+            },
+            "item2": {
+              "en": "Over the counter (OTC) and prescription drugs",
+              "fr": "Médicaments en vente libre (OTC) et sur ordonnance"
+            }
+          }
+        }
+      },
+      "development": {
+        "title": {
+          "en": "Development Process",
+          "fr": "Processus de développement"
+        },
+        "leftColumn": {
+          "title": {
+            "en": "Key Considerations",
+            "fr": "Éléments clés"
+          },
+          "list": {
+            "point1": {
+              "en": "Important and necessary steps in the development of all these products",
+              "fr": "Étapes importantes et nécessaires dans le développement de tous ces produits"
+            },
+            "point2": {
+              "en": "Development cost for a drug (excluding NHP and AHP)",
+              "fr": "Coût de développement d’un médicament (hors PSN et PSA)"
+            },
+            "point3": {
+              "en": "Steps to follow in R&D when developing all these products",
+              "fr": "Étapes à suivre en R&D pour développer tous ces produits"
+            }
+          }
+        },
+        "rightColumn": {
+          "description": {
+            "en": "Comprehensive R&D Guidance",
+            "fr": "Orientation complète en R&D"
+          }
+        }
+      }
+    }
+  },
+  "cosmeceuticals": {
+    "title": {
+      "en": "Cosmetics & Cosmeceuticals",
+      "fr": "Cosmétiques et cosméceutiques"
+    },
+    "content": {
+      "en": "We collaborate with cosmetic and cosmeceutical brands to navigate product safety, quality, and market regulations. Our services help ensure your products are not only effective but also compliant and market-ready.",
+      "fr": "Nous collaborons avec les marques de cosmétiques et de cosméceutiques pour les aider à maîtriser la sécurité, la qualité et les réglementations du marché. Nos services garantissent que vos produits sont non seulement efficaces, mais aussi conformes et prêts à être commercialisés."
+    }
+  },
+  "pilot_scale_production": {
+    "title": {
+      "en": "Pilot-Scale Production",
+      "fr": "Production à l’échelle pilote"
+    },
+    "content": {
+      "en": "We offer pilot-scale fermentation and downstream processing capabilities. This includes cell harvesting, purification, and formulation of active ingredients. Our goal is to support clients in scaling up their production processes efficiently and cost-effectively.",
+      "fr": "Nous offrons des capacités de fermentation à l’échelle pilote et de traitement en aval, incluant la récolte cellulaire, la purification et la formulation d’ingrédients actifs. Notre objectif est d’aider les clients à mettre à l’échelle leurs procédés de production de manière efficace et rentable."
+    }
+  },
+  "protein_synthesis": {
+    "title": {
+      "en": "Protein Synthesis",
+      "fr": "Synthèse des protéines"
+    },
+    "content": {
+      "en": {
+        "overview": [
+          "Examples of types of proteins:",
+          "• Enzymes",
+          "• Membrane markers",
+          "• Growth hormones",
+          "• Peptides",
+          "• Monoclonal antibodies"
+        ],
+        "capabilities": [
+          "Examples of applications:",
+          "• Antimicrobial formulations and coatings",
+          "• Enzymatic biosensors",
+          "• Functionalization of nanoparticles with specific ligands (antibodies, peptides, proteins) for cell line-specific targeting"
+        ],
+        "collaboration": [
+          "Specific equipments :\n• For production:\no Bioreactors\no Incubator-Agitator\n• Purification :\no Fast Protein Liquid Chromatography (FPLC)\no Tangential Flow Filtration (TFF)\n• Characterizations :\no Liquid Chromatography coupled with Quadrupole Time of Flight LC/MS\no Gel electrophoresis"
+        ]
+      },
+      "fr": {
+        "overview": [
+          "Le CERASP est une installation conforme aux BPL qui opère selon des procédures alignées sur les BPF pour soutenir la préparation réglementaire.",
+          "Nous développons des procédés biopharmaceutiques prêts pour les BPF afin de faciliter un transfert technologique fluide vers les fabricants agréés.",
+          "Notre expertise couvre le développement des procédés en amont et en aval pour les produits biologiques et les thérapies avancées."
+        ],
+        "capabilities": [
+          "Optimisation des bioprocédés (fermentation et culture cellulaire)",
+          "Purification des biomolécules",
+          "Tests de bioactivité et de stabilité",
+          "Caractérisation génomique et microbienne",
+          "Développement de méthodes analytiques pour les produits biologiques"
+        ],
+        "collaboration": [
+          "Nous collaborons avec des universités et des CCTT pour soutenir l'innovation industrielle et le passage à l'échelle des thérapies avancées.",
+          "Spécialisé dans la culture de cellules microbiennes et de mammifères pour la production de protéines thérapeutiques et d'autres biologiques."
+        ]
+      }
+    }
+  },
+  "animalHealth": {
+    "title": {
+      "en": "Animal Health",
+      "fr": "Santé animale"
+    },
+    "content": {
+      "en": "From veterinary pharmaceuticals to nutritional supplements, we assist companies focused on improving animal health and well-being. Our solutions are designed to meet the specific regulatory and quality standards of this important industry.",
+      "fr": "Des produits pharmaceutiques vétérinaires aux compléments alimentaires, nous accompagnons les entreprises soucieuses d'améliorer la santé et le bien-être des animaux. Nos solutions sont conçues pour répondre aux normes réglementaires et de qualité spécifiques à ce secteur crucial."
+    },
+    "vetPharma": {
+      "title": {
+        "en": "Veterinary Pharmaceuticals",
+        "fr": "Produits pharmaceutiques vétérinaires"
+      },
+      "content": {
+        "en": "Support for the treatment and management of diseases and conditions, including antibiotics and anti-inflammatory drugs.",
+        "fr": "Pour le traitement et la gestion des maladies et affections telles que les antibiotiques et les anti-inflammatoires."
+      }
+    },
+    "supplements": {
+      "title": {
+        "en": "Nutritional Supplements",
+        "fr": "Compléments alimentaires"
+      },
+      "content": {
+        "en": "To Support health and performance (ex. Vitamins, minerals, probiotics, etc.)..",
+        "fr": "Pour soutenir la santé et la performance (ex. Vitamines, minéraux, probiotiques, etc.)."
+      }
+    },
+    "therapies": {
+      "title": {
+        "en": "Advanced Therapies",
+        "fr": "Thérapies avancées"
+      },
+      "content": {
+        "en": "Serve to address complex or chronic conditions like regenerative medicine products.",
+        "fr": "Sert à traiter des maladies complexes ou chroniques comme les produits de médecine régénérative."
+      }
+    },
+    "vaccines": {
+      "title": {
+        "en": "Vaccines",
+        "fr": "Vaccins"
+      },
+      "content": {
+        "en": "That prevent infectious diseases such as DNA vaccines.",
+        "fr": "Qui préviennent les maladies infectieuses comme les vaccins à ADN."
+      }
+    },
+    "biologics": {
+      "title": {
+        "en": "Biologics",
+        "fr": "Produits biologiques"
+      },
+      "content": {
+        "en": "Use living organisms or their products to treat or prevent disease (ex. Monoclonal antibodies).",
+        "fr": "Utiliser des organismes vivants ou leurs produits pour traiter ou prévenir des maladies (p. ex. anticorps monoclonaux)."
+      }
+    },
+    "topAndDerma": {
+      "title": {
+        "en": "Topical and Dermatological Products",
+        "fr": "Produits topiques et dermatologiques"
+      },
+      "content": {
+        "en": "Used to treat skin infections, wounds, or irritations such as medicated shampoos, antimicrobial ointments, sprays, etc.",
+        "fr": "Utilisé pour traiter les infections cutanées, les plaies ou les irritations telles que les shampooings médicamenteux, les onguents antimicrobiens, les sprays, etc."
+      }
+    }
+  },
+  "scaleUp": {
+    "title": {
+      "en": "R&D Scale up",
+      "fr": "Montée à l’échelle R&D"
+    },
+    "content1": {
+      "en": {
+        "intro": "Our feasibility and pilot lots expertise is essential for the transition to large-scale manufacturing. We ensure efficient and reliable scaling. The range of process scaling work that can be performed by the CERASP:",
+        "bullets": [
+          "Optimization of Operating Procedures and parameters",
+          "Determination of production protocols and development of production SOP",
+          "Pilot scale adaptation of laboratory protocols",
+          "New process safety review",
+          "Pilot scale process validation"
+        ]
+      },
+      "fr": {
+        "intro": "Notre expertise en faisabilité et en lots pilotes est essentielle pour la transition vers la fabrication à grande échelle. Nous assurons un passage à l'échelle efficace et fiable. Voici les types de travaux de mise à l'échelle des processus que le CERASP peut réaliser :",
+        "bullets": [
+          "Optimisation des procédures opérationnelles et des paramètres",
+          "Détermination des protocoles de production et développement des PON de production",
+          "Adaptation des protocoles de laboratoire à l'échelle pilote",
+          "Revue de sécurité des nouveaux processus",
+          "Validation des processus à l'échelle pilote"
+        ]
+      }
+    },
+    "content2": {
+      "en": {
+        "intro": "The CERASP is there to support you with:",
+        "bullets": [
+          "Wide range of production equipment for steering",
+          "Technical support during operation",
+          "Private office accessible to meet you on site",
+          "Access to a team of scientific experts",
+          "Analytical laboratory available in support and reaction monitoring",
+          "Possibility of obtaining a refundable SR&ED investment tax credit (Canadian companies)"
+        ]
+      },
+      "fr": {
+        "intro": "Le CERASP est là pour vous soutenir avec :",
+        "bullets": [
+          "Une large gamme d'équipements de production pour la conduite des processus",
+          "Un soutien technique pendant l'opération",
+          "Un bureau privé accessible pour vous rencontrer sur place",
+          "L'accès à une équipe d'experts scientifiques",
+          "Un laboratoire analytique disponible pour le soutien et la surveillance des réactions",
+          "La possibilité d'obtenir des crédits d'impôt remboursables pour la recherche scientifique et le développement expérimental (RS&DE) (entreprises canadiennes)"
+        ]
+      }
+    }
+  },
+  "nutraceutical": {
+    "title": {
+      "en": "Nutraceutical",
+      "fr": "Nutraceutique"
+    },
+    "steps": [
+      {
+        "title": {
+          "en": "Our team supports nutraceutical companies in developing functional foods",
+          "fr": "Notre équipe accompagne les entreprises nutraceutiques dans le développement d'aliments fonctionnels"
+        },
+        "description": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      {
+        "title": {
+          "en": "We also develop dietary supplements",
+          "fr": "Nous développons également des compléments alimentaires"
+        },
+        "description": {
+          "en": "",
+          "fr": ""
+        }
+      },
+      {
+        "title": {
+          "en": "Our researchers prioritize quality, efficacy, and regulatory compliance",
+          "fr": "Nos chercheurs privilégient la qualité, l'efficacité et la conformité réglementaire"
+        },
+        "description": {
+          "en": "",
+          "fr": ""
+        }
+      }
+    ],
+    "bottomRow": {
+      "en": {
+        "title": "Pharmaceuticals (therapeutic molecules) Produced by Biomanufacturing",
+        "sections": [
+          {
+            "heading": "Traditional Biologics:",
+            "items": [
+              "Antibiotics",
+              "Immunosuppressants",
+              "Anticancer Compounds",
+              "Enzymes",
+              "Hormones & Growth Factors",
+              "Statins (Cholesterol-lowering drugs)"
+            ]
+          },
+          {
+            "heading": "Advanced Therapies:",
+            "items": [
+              "mRNA Vaccines (e.g., COVID-19 vaccines)",
+              "siRNA & Antisense Oligonucleotides (gene silencing)",
+              "Cell Therapies (CAR-T, stem cell therapies)",
+              "Gene Therapies (CRISPR, viral vectors)"
+            ]
+          },
+          {
+            "heading": "Specialty Biopolymers & Delivery Systems",
+            "items": [
+              "Chitosan (Drug delivery, wound healing, tissue engineering)",
+              "Lipid Nanoparticles (RNA & drug delivery)"
+            ]
+          }
+        ]
+      },
+      "fr": {
+        "title": "Médicaments (molécules thérapeutiques) produits par bioproduction",
+        "sections": [
+          {
+            "heading": "Biologiques traditionnels :",
+            "items": [
+              "Antibiotiques",
+              "Immunosuppresseurs",
+              "Composés anticancéreux",
+              "Enzymes",
+              "Hormones et facteurs de croissance",
+              "Statines (médicaments contre le cholestérol)"
+            ]
+          },
+          {
+            "heading": "Thérapies avancées :",
+            "items": [
+              "Vaccins à ARNm (ex. : vaccins contre la COVID-19)",
+              "siRNA et oligonucléotides antisens (silencieux génique)",
+              "Thérapies cellulaires (CAR-T, cellules souches)",
+              "Thérapies géniques (CRISPR, vecteurs viraux)"
+            ]
+          },
+          {
+            "heading": "Biopolymères spécialisés et systèmes de délivrance",
+            "items": [
+              "Chitosane (administration de médicaments, cicatrisation, ingénierie tissulaire)",
+              "Nanoparticules lipidiques (délivrance d’ARN ou de médicaments)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "feasibility": {
+    "title": {
+      "en": "Feasibility Services",
+      "fr": "Services de faisabilité"
+    },
+    "content": {
+      "en": "We provide comprehensive feasibility studies to assess technical and regulatory aspects, pilot-scale operations, and infrastructure design for health and wellness innovation.",
+      "fr": "Nous fournissons des études de faisabilité complètes pour évaluer les aspects techniques et réglementaires, les opérations à l'échelle pilote et la conception des infrastructures pour l'innovation en santé et bien-être."
+    },
+    "features": {
       "en": [
-        "Applied Research",
-        "Product Development and Formulation",
-        "Scale-up Manufacturing"
+        "Studies on manufacturing, process or formulation methods (preformulation).",
+        "Conducting pilot and prototype studies.",
+        "Running studies on designing new facilities and equipment purchases.",
+        "Conduct digital health integration studies and incorporate digital transformation."
       ],
       "fr": [
-        "La recherche appliquée",
-        "Le développement et formulation de produits",
-        "La mise à l’échelle de la fabrication"
+        "Études sur les méthodes de fabrication, de procédé ou de formulation (préformulation).",
+        "Réalisation d'études pilotes et de prototypes.",
+        "Études sur la conception de nouvelles installations et l'achat d'équipements.",
+        "Études d'intégration de la santé numérique et de transformation numérique."
       ]
     }
   },
-  "animal_health": {
+  "TechTrans": {
     "title": {
-      "en": "ANIMAL HEALTH",
-      "fr": "SANTÉ ANIMALE"
-    },
-    "contentA": {
-      "en": "From veterinary pharmaceuticals to nutritional supplements, we support companies dedicated to improving animal health and well-being.",
-      "fr": "Des produits pharmaceutiques vétérinaires aux suppléments nutritionnels, nous aidons les entreprises dédiées à améliorer la santé et le bien-être animal."
-    },
-    "contentB": {
-      "en": "Our solutions are designed to meet the regulatory and quality standards of this vital industry, helping treat diseases and conditions, manage infections, and support the overall health and performance of companion animals.",
-      "fr": "Nos solutions sont conçues pour répondre aux normes réglementaires et de qualité de ce secteur essentiel, en aidant à traiter les maladies et conditions particulières, à gérer les infections, et à soutenir la santé et la performance globales des animaux de compagnie."
-    }
-  },
-  "natural_health_product": {
-    "title": {
-      "en": "NATURAL HEALTH PRODUCT",
-      "fr": "PRODUIT DE SANTÉ NATUREL"
-    },
-    "contentA": {
-      "en": "We support the development and market readiness of natural health products, ensuring regulatory compliance while preserving the integrity of natural ingredients.",
-      "fr": "Nous soutenons le développement, la formulation et la mise sur le marché des produits de santé naturels, en garantissant la conformité réglementaire tout en préservant l’intégrité des ingrédients naturels. "
-    },
-    "contentB": {
-      "en": "Our team works with partners to develop functional foods and dietary supplements, with a focus on quality, efficacy, and compliance.",
-      "fr": "Notre équipe collabore avec ses partenaires pour développer des aliments fonctionnels et des compléments alimentaires, en mettant l’accent sur la qualité, l’efficacité et la conformité."
-    }
-  },
-  "dermo_cosmeceutical": {
-    "title": {
-      "en": "DERMO / COSMECEUTICAL",
-      "fr": "DERMO / COSMÉCEUTIQUE"
+      "en": "Technical Transfer Services",
+      "fr": "Services de transfert technologique"
     },
     "content": {
-      "en": "Our team collaborates to conceive and formulate while navigating product safety, quality, and market regulations. Our services help ensure your products are not only effective but also compliant and market-ready.",
-      "fr": "Notre équipe collabore avec ses partenaires à la conception et formulation, tout en assurant la sécurité du produit, la qualité et la conformité aux réglementations du marché. Nos services garantissent que vos produits soient à la fois efficaces, conformes et prêts pour la commercialisation."
+      "en": "We facilitate the transfer and optimization of technologies and processes, adapting them for improved outcomes and compliance in commercial settings.",
+      "fr": "Nous facilitons le transfert et l'optimisation des technologies et des procédés, en les adaptant pour de meilleurs résultats et une conformité accrue en environnement commercial."
+    },
+    "features": {
+      "en": [
+        "Improving existing products in the case of a flawed or outdated procedure.",
+        "Improve existing products, processes or procedures for business, pharmacological or regulatory reasons.",
+        "Improving an existing product for aesthetic reasons such as changing colour or taste.",
+        "Enable the integration of technological tools for digital health and for the corporate digital shift."
+      ],
+      "fr": [
+        "Amélioration de produits existants en cas de procédure défectueuse ou obsolète.",
+        "Amélioration des produits, procédés ou procédures pour des raisons commerciales, pharmacologiques ou réglementaires.",
+        "Amélioration esthétique d’un produit existant (couleur, goût, etc.).",
+        "Intégration d'outils technologiques pour la santé numérique et la transition numérique d'entreprise."
+      ]
     }
   },
-  "medical_device": {
+  "section": {
     "title": {
-      "en": "MEDICAL DEVICES",
-      "fr": "DISPOSITIFS MÉDICAUX"
+      "en": "Feasibility & Technical Transfer",
+      "fr": "Faisabilité & Transfert technologique"
     },
-    "contentA": {
-      "en": "We help bring medical technologies to market by providing strategic support across all stages, ensuring devices meet safety standards and patient needs through regulatory assessment, quality system development, and clinical evaluation.",
-      "fr": "Nous aidons à la mise sur le marché de technologies médicales en offrant un soutien stratégique à chaque étape, garantissant ainsi que les dispositifs répondent aux normes de sécurité et aux besoins des patients grâce à l’évaluation réglementaire, au développement des systèmes qualité et à l’évaluation clinique."
+    "subtitle": {
+      "en": "Our feasibility studies and pilot trials ensure your project is viable—saving time and resources!",
+      "fr": "Nos études de faisabilité et essais pilotes garantissent la viabilité de votre projet — vous faisant gagner temps et ressources !"
     },
-    "contentB": {
-      "en": "From laboratory diagnostics to point-of-care testing, we assist in developing and validating diagnostic tools essential to modern healthcare. Our goal is to help you deliver accurate, reliable, and regulatory-compliant diagnostics to the market.",
-      "fr": "De développement en laboratoire aux tests aux patients, nous assistons nos partenaires dans le développement et la validation d’outils diagnostiques essentiels aux soins de santé modernes. Notre objectif est de vous aider à commercialiser des diagnostics précis, fiables et conformes aux réglementations."
+    "summary_title": {
+      "en": "Comprehensive Solutions",
+      "fr": "Solutions complètes"
+    },
+    "summary_text": {
+      "en": "Our integrated approach combines cutting-edge research, natural innovation, and proven methodologies to deliver exceptional results across all domains.",
+      "fr": "Notre approche intégrée combine recherche de pointe, innovation naturelle et méthodologies éprouvées pour offrir des résultats exceptionnels dans tous les domaines."
+    }
+  },
+  "medicalDevices": {
+    "title": {
+      "en": "Medical Devices",
+      "fr": "Dispositifs médicaux"
+    },
+    "content": {
+      "en": "We help bring medical technologies to market by providing strategic support across the board, ensuring that devices meet both safety standards and patient needs.",
+      "fr": "Nous contribuons à la commercialisation des technologies médicales en fournissant un soutien stratégique à tous les niveaux, garantissant que les dispositifs répondent aux normes de sécurité et aux besoins des patients."
+    },
+    "fields": {
+      "trainingSolutions": {
+        "title": {
+          "en": "Regulatory affairs",
+          "fr": "Affaires réglementaires"
+        },
+        "desc": {
+          "en": "We ensure compliance, managing approvals, and handling documentation and communication with regulatory bodies.",
+          "fr": "Nous assurons la conformité, gérons les approbations, la documentation et la communication avec les organismes de réglementation."
+        }
+      },
+      "competencyLearning": {
+        "title": {
+          "en": "Quality systems",
+          "fr": "Systèmes de qualité"
+        },
+        "desc": {
+          "en": "Corresponds to consistent product safety and performance through documented processes, controls, and compliance with regulatory standards.",
+          "fr": "Assure une sécurité et des performances constantes des produits grâce à des processus et des contrôles documentés et à la conformité aux normes réglementaires."
+        }
+      },
+      "adaptableTraining": {
+        "title": {
+          "en": "Clinical evaluation",
+          "fr": "Évaluation clinique"
+        },
+        "desc": {
+          "en": "We can help assessing clinical data to confirm the device's safety, performance, and effectiveness.",
+          "fr": "Nous pouvons vous aider à évaluer les données cliniques afin de confirmer la sécurité, les performances et l’efficacité du dispositif."
+        }
+      }
     }
   }
 }

@@ -1,0 +1,382 @@
+{
+  "landingHero": {
+    "en": {
+      "tagline": "Innovation at the intersection of technology and excellence",
+      "welcome": "Welcome to CERASP"
+    },
+    "fr": {
+      "tagline": "Innovation à l'intersection de la technologie et de l'excellence",
+      "welcome": "Bienvenue à CERASP"
+    }
+  },
+  "landing-about-us": {
+    "en": {
+      "tagline": "Building innovation, one solution at a time",
+      "cta": "Discover More",
+      "scroll": "Scroll Down",
+      "aboutUs": {
+        "sectionLabel": "About Us",
+        "title": "Building the future, one solution at a time",
+        "landing-expertise": "Our Expertise",
+        "description": "We're a passionate team of smart innovators, researchers, and problem-solvers dedicated to delivering flexible solutions that accelerate your R&D projects, reduce risk, and ensure alignment with scientific and regulatory standards. From safeguarding your IP to supporting your product development journey, we’re here to turn your innovation into impact — faster, safer, and with lasting value.",
+        "drivesUs": "What drives us",
+        "values": [
+          {
+            "title": "Innovation",
+            "description": "We develop innovative, eco-responsible solutions that reduce environmental impact and promote sustainable practices"
+          },
+          {
+            "title": "Open-mindedness",
+            "description": "Embracing global perspectives and adapting to change with an open and forward-thinking mindset is our standard."
+          },
+          {
+            "title": "Collaboration",
+            "description": "Our team drives innovation by fostering partnerships and supporting entrepreneurship within a dynamic local and national ecosystem."
+          },
+          {
+            "title": "Excellence",
+            "description": "We deliver high-quality, confidential, and proactive support to help SMEs grow with integrity and professionalism."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Years of Industry Experience"
+          },
+          {
+            "label": "Sites"
+          },
+          {
+            "label": "Equipment Value"
+          },
+          {
+            "label": "Clients"
+          }
+        ],
+        "missionTitle": "Our Mission",
+        "missionDescription": "Develop and support applied research, training, and technology transfer related to the discovery, development, and evaluation of innovative solutions in the pharmaceutical field, particularly in biopharmaceutics, pharmaceutical technology, production, and digital health.",
+        "visionTitle": "Our Vision",
+        "visionDescription": "Become a strategic partner in applied pharmaceutical research in Quebec and Canada, recognized for its ability to deliver innovative solutions to its clients, while maintaining strong ties with the educational and research communities at the provincial, federal, and international levels.",
+        "learnMore": "Learn More About Us →"
+      }
+    },
+    "fr": {
+      "tagline": "Construire l’innovation, une solution à la fois.",
+      "cta": "Découvrir",
+      "scroll": "Faire défiler",
+      "aboutUs": {
+        "sectionLabel": "À propos de nous",
+        "title": "Construire l'innovation, une solution à la fois",
+        "landing-expertise": "Notre expertise",
+        "description": "Nous sommes une équipe passionnée d’innovateurs, de chercheurs et de stratèges engagés à offrir des solutions flexibles qui accélèrent vos projets de R&D, réduisent les risques et assurent la conformité aux normes scientifiques et réglementaires. De la protection de votre propriété intellectuelle à l’accompagnement dans le développement de vos produits, nous transformons votre innovation en impact — plus rapidement, plus sûrement, et avec une valeur durable.",
+        "drivesUs": "Ce qui nous motive",
+        "values": [
+          {
+            "title": "Innovation",
+            "description": "Nous repoussons les limites et adoptons les technologies de pointe pour offrir des résultats exceptionnels."
+          },
+          {
+            "title": "Ouverture d'esprit",
+            "description": "Nous adoptons une vision globale et agile face aux transformations grâce à un esprit ouvert et tourné vers l’avenir."
+          },
+          {
+            "title": "Collaboration",
+            "description": "Notre équipe favorise l’innovation et l’entrepreneuriat en créant des partenariats au sein d’un écosystème local et national dynamique."
+          },
+          {
+            "title": "Excellence",
+            "description": "Nous offrons un accompagnement de qualité, confidentiel et proactif afin d’aider les PME à croître avec intégrité et professionnalisme."
+          }
+        ],
+        "stats": [
+          {
+            "label": "Années d'expérience dans l'industrie"
+          },
+          {
+            "label": "Sites"
+          },
+          {
+            "label": "Valeur d’équipement"
+          },
+          {
+            "label": "Clients"
+          }
+        ],
+        "missionTitle": "Notre mission",
+        "missionDescription": "Développer et soutenir la recherche appliquée, la formation et le transfert de technologie liés à la découverte, au développement et à l'évaluation de solutions innovantes dans le domaine pharmaceutique, notamment en biopharmaceutiques, technologie pharmaceutique, production et santé numérique.",
+        "visionTitle": "Notre vision",
+        "visionDescription": "Devenir un partenaire stratégique en recherche pharmaceutique appliquée au Québec et au Canada, reconnu pour sa capacité à fournir des solutions innovantes à ses clients, tout en maintenant des liens solides avec les communautés éducatives et de recherche aux niveaux provincial, fédéral et international.",
+        "learnMore": "En savoir plus sur nous →"
+      }
+    }
+  },
+  "landing-expertise": {
+    "en": {
+      "title": "Expertise & Solutions",
+      "description": "We deliver cutting-edge technology solutions tailored to your business needs. Our expertise spans across multiple domains, ensuring comprehensive support for your digital transformation journey.",
+      "cta": "Explore Our Expertise"
+    },
+    "fr": {
+      "title": "Expertise et solutions",
+      "description": "Nous proposons des solutions technologiques de pointe adaptées aux besoins de votre entreprise. Notre expertise couvre plusieurs domaines, garantissant un accompagnement complet dans votre transformation numérique.",
+      "cta": "Découvrez notre expertise"
+    }
+  },
+  "overview": {
+    "en": {
+      "title": "Our Sectors",
+      "subtitle": "A solution for every development stage",
+      "sections": [
+        {
+          "title": "Ideation",
+          "description": "Integrates scientific rigor, market insight, and regulatory awareness to lay the foundation for successful product innovation.",
+          "highlights": [
+            "Design and Sketch",
+            "Feasibility Studies",
+            "Applied Research"
+          ]
+        },
+        {
+          "title": "Proof of Concept",
+          "description": " Turning promising concepts into scalable, validated prototypes—laying the groundwork for future success while minimizing uncertainty and resource waste.",
+          "highlights": ["Formulation", "Prototyping", "Ingredient Selection"]
+        },
+        {
+          "title": "Product Development",
+          "description": " End-to-end process of transforming a concept into a market-ready solution.",
+          "highlights": [
+            "Product Optimization",
+            "Regulatory Compliance",
+            "Bioinformatics"
+          ]
+        },
+        {
+          "title": "Scale-up & Manufacturing Readiness ",
+          "description": " Derisking the transition from laboratory-scale to pilot to manufacturing, confirming production processes, and accelerating the path to market with confidence and consistency.",
+          "highlights": [
+            "Scale-up",
+            "Technical Support",
+            "GMP-like Environment"
+          ]
+        },
+        {
+          "title": "Technology Transfer & Regulatory Readiness",
+          "description": "Transfer from the development team to manufacturing, client and regulatory teams—ensuring that the product is ready for compliant, large-scale production.",
+          "highlights": [
+            "Certified Health Canada Partner",
+            "R&D Support",
+            "Regulatory Affairs Activities"
+          ]
+        }
+      ],
+      "footer": {
+        "title": "Why Choose CERASP?",
+        "items": [
+          {
+            "title": "Authorized Health Canada Partner",
+            "description": "Taking your idea from concept to GMP-ready, one R&D project at a time"
+          },
+          {
+            "title": "Comprehensive Expertise",
+            "description": "From R&D to Prototype Formulation, Pilot-Scale to Tech Transfer for commercial production within GMP compliance"
+          },
+          {
+            "title": "International Reach",
+            "description": "Proven knowledge and expertise in Canadian, U.S., and EU regulatory frameworks"
+          },
+          {
+            "title": "Derisking Approach",
+            "description": "We accelerate your R&D projects while you retain full ownership of your IP"
+          }
+        ]
+      }
+    },
+    "fr": {
+      "title": "Nos Secteurs",
+      "subtitle": "Une solution à chaque étape de développement",
+      "sections": [
+        {
+          "title": "Idéation",
+          "description": "Intègre rigueur scientifique, connaissance du marché et veille réglementaire afin de poser les bases de la réussite dans l’innovation de produit.",
+          "highlights": [
+            "Conception",
+            "Études de faisabilité",
+            "Recherche appliquée"
+          ]
+        },
+        {
+          "title": "Preuve de concept",
+          "description": "Transformer des concepts prometteurs en prototypes validés et évolutifs, permettant un succès futur tout en minimisant incertitudes et pertes.",
+          "highlights": ["Formulation", "Prototypage", "Choix des ingrédients"]
+        },
+        {
+          "title": "Développement de produit",
+          "description": "Processus complet de transformation d’un concept en solution prête à commercialiser.",
+          "highlights": [
+            "Optimisation de produit",
+            "Conformité réglementaire",
+            "Bioinformatique"
+          ]
+        },
+        {
+          "title": "Mise à l’échelle et préparation à la production",
+          "description": "Réduction des risques lors de la transition du laboratoire à la production pilote puis industrielle, confirmation des procédés de fabrication et accélération de la mise en marché avec assurance et contrôle.",
+          "highlights": [
+            "’Mise à l’échelle",
+            "Support technique",
+            "Environnement semblable aux BPF"
+          ]
+        },
+        {
+          "title": "Transfert technologique et préparation à la conformité réglementaire",
+          "description": "Transfert de l’équipe de développement vers les équipes de production, du client et des affaires réglementaires — assurant que le produit est prêt pour une fabrication à grande échelle et conforme aux exigences.",
+          "highlights": [
+            "Partenaire certifié de Santé Canada",
+            "Support R&D",
+            "Activités en affaires règlementaires"
+          ]
+        }
+      ],
+      "footer": {
+        "title": "Pourquoi choisir CERASP ?",
+        "items": [
+          {
+            "title": "Partenaire autorisé de Santé Canada",
+            "description": "Du concept à la conformité BPF, étape par étape"
+          },
+          {
+            "title": "Expertise complète",
+            "description": "De la R&D à la formulation de prototypes, de l'échelle pilote au transfert de technologie pour la production commerciale dans le respect des BPF"
+          },
+          {
+            "title": "Portée internationale",
+            "description": "Expertise et connaissance éprouvées des cadres réglementaires canadien, américain et européen’"
+          },
+          {
+            "title": "Réduction des Risques",
+            "description": "Nous accélérons vos projets R&D — tout en vous assurant que vous conserviez votre propriété intellectuelle"
+          }
+        ]
+      }
+    }
+  },
+  "projects": {
+    "en": {
+      "title": "Our Projects",
+      "subtitle": "Showcasing our expertise through successful project implementations",
+      "cta": "View All Projects",
+      "list": [
+        {
+          "title": "Nanoparticle-Based Drug Delivery"
+        },
+        {
+          "title": "Active Pharmaceutical Ingredient Manufacturing"
+        },
+        {
+          "title": "Advanced Wound Healing"
+        },
+        {
+          "title": "Technical Support"
+        },
+        {
+          "title": "Theranostic Nanoparticles"
+        }
+      ]
+    },
+    "fr": {
+      "title": "Nos projets",
+      "subtitle": "Une démonstration de notre expertise à travers des projets réussis",
+      "cta": "Voir tous les projets",
+      "list": [
+        {
+          "title": "Fabrication d'ingrédients pharmaceutiques actifs"
+        },
+        {
+          "title": "Cicatrisation avancée des plaies"
+        },
+        {
+          "title": "Nanoparticules théranostiques"
+        },
+        {
+          "title": "Assistance technique"
+        },
+        {
+          "title": "Administration de médicaments à base de nanoparticules"
+        }
+      ]
+    }
+  },
+  "news": {
+    "en": {
+      "sectionLabel": "News & Updates",
+      "title": "What's happening",
+      "subtitle": "Stay in the loop with our latest stories and announcements",
+      "cta": "All News →",
+      "items": [
+        {
+          "title": "Company Launches New Product Line",
+          "excerpt": " Donkey milk, known as the “white gold of cosmetics,” has long been valued for its skincare benefits. To bring this tradition back, a donkey farm in Saguenay–Lac-Saint-Jean partnered with CERASP to develop a line of creams. CERASP formulated the first product—a hand cream—balancing milk composition and cost for small-scale production, and is managing the production transfer. The cream is set to launch with more products to follow.",
+          "date": "November 19th 2024",
+          "category": "Product",
+          "stockimgname": "Blood Vial"
+        },
+        {
+          "title": "Partnership Announcement",
+          "excerpt": "CERASP and John Abbott College have received the Applied Tools and Instruments grant, of over 2M$, from Natural Sciences and Engineering Research Council of Canada (NSERC).",
+          "date": " June 6th 2025",
+          "category": "Business",
+          "stockimgname": "Handshake"
+        },
+        {
+          "title": "Award Recognition",
+          "excerpt": "To come soon.",
+          "date": "-",
+          "category": "Awards",
+          "stockimgname": "Award Trophy"
+        },
+        {
+          "title": "Technology Innovation",
+          "excerpt": "To come soon.",
+          "date": "-",
+          "category": "Technology",
+          "stockimgname": "Technology"
+        }
+      ]
+    },
+    "fr": {
+      "sectionLabel": "Nouvelles & Mises à jour",
+      "title": "Ce qui se passe",
+      "subtitle": "Restez informé de nos dernières nouvelles et annonces",
+      "cta": "Toutes les nouvelles →",
+      "items": [
+        {
+          "title": "Lancement d'une nouvelle gamme de produits",
+          "excerpt": "Le lait d’ânesse, surnommé « l’or blanc de la cosmétique », est depuis longtemps reconnu pour ses bienfaits pour la peau. Pour remettre cette tradition au goût du jour, une asinerie du Saguenay–Lac-Saint-Jean a collaboré avec le CERASP pour développer une gamme de crèmes. Le CERASP a formulé le premier produit — une crème pour les mains — en équilibrant la composition du lait et les coûts pour une production à petite échelle, et supervise le transfert de production. Le lancement est prévu prochainement, avec d'autres produits à venir.",
+          "date": "16 novembre 2024",
+          "category": "Produit",
+          "stockimgname": "Blood Vial"
+        },
+        {
+          "title": "Annonce de partenariat",
+          "excerpt": "Le CERASP et le Collège John Abbott ont reçu une subvention de plus de 2 millions de dollars du Conseil de recherches en sciences naturelles et en génie du Canada (CRSNG) dans le cadre du programme « Outils et instruments de recherche appliquée ».",
+          "date": "6 juin 2025",
+          "category": "Affaires",
+          "stockimgname": "Handshake"
+        },
+        {
+          "title": "Reconnaissance de prix",
+          "excerpt": "À venir",
+          "date": "",
+          "category": "Prix",
+          "stockimgname": "Award Trophy"
+        },
+        {
+          "title": "Innovation technologique",
+          "excerpt": "À venir",
+          "date": "",
+          "category": "Technologie",
+          "stockimgname": "Technology"
+        }
+      ]
+    }
+  }
+}

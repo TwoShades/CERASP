@@ -7,31 +7,12 @@
         "fr": "À propos"
       },
       "sub-pages": [
-        {
-          "id": "overview",
-          "en": "OVERVIEW",
-          "fr": "APERÇU"
-        },
-        {
-          "id": "facilities",
-          "en": "FACILITIES",
-          "fr": "INSTALLATIONS"
-        },
-        {
-          "id": "equipment",
-          "en": "EQUIPMENT",
-          "fr": "ÉQUIPEMENT"
-        },
-        {
-          "id": "our-team",
-          "en": "OUR TEAM",
-          "fr": "NOTRE ÉQUIPE"
-        },
-        {
-          "id": "board",
-          "en": "BOARD",
-          "fr": "CONSEIL D'ADMINISTRATION"
-        }
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
+        { "id": "facilities", "en": "Facilities", "fr": "Installations" },
+        { "id": "equipments", "en": "Equipments", "fr": "Équipements" },
+        { "id": "our-team", "en": "Our Team", "fr": "Notre équipe" },
+        { "id": "board", "en": "Board", "fr": "Conseil d'administration" },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },
     {
@@ -41,10 +22,16 @@
         "fr": "Nos Secteurs"
       },
       "sub-pages": [
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
         {
-          "id": "pharmaceutical-biopharmaceutical",
-          "en": "Pharmaceutical/Biopharmaceutical",
-          "fr": "Pharmaceutique/Biopharmaceutique"
+          "id": "pharmaceutical",
+          "en": "Pharmaceutical",
+          "fr": "Pharmaceutique"
+        },
+        {
+          "id": "biopharmaceutical",
+          "en": "Biopharmaceutical",
+          "fr": "Biopharmaceutique"
         },
         {
           "id": "animal-health",
@@ -52,36 +39,53 @@
           "fr": "Santé animale"
         },
         {
+          "id": "bioTechBioMan",
+          "en": "Biotechnology & Biomanufacturing ",
+          "fr": "Biotechnologie et biofabrication"
+        },
+        {
           "id": "natural-health-products",
           "en": "Natural Health Products",
           "fr": "Produits de santé naturels"
         },
         {
-          "id": "dermo-cosmeceuticals",
-          "en": "Dermo/Cosmeceuticals",
-          "fr": "Dermo/cosméceutiques"
+          "id": "cosmeceuticals",
+          "en": "Cosmetics & Cosmeceuticals",
+          "fr": "Cosmétiques et cosméceutiques"
         },
         {
-          "id": "medical-devices",
+          "id": "nutraceutical",
+          "en": "Nutraceutical",
+          "fr": "Nutraceutique"
+        },
+        {
+          "id": "medicalDevices",
           "en": "Medical Devices",
           "fr": "Dispositifs médicaux"
-        }
+        },
+        {
+          "id": "diagnostic-tools",
+          "en": "Diagnostic Tools",
+          "fr": "Outils de diagnostic"
+        },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },
     {
-      "page-id": "expertise",
+      "page-id": "expertises",
       "nav": {
         "en": "Expertises & Solutions",
         "fr": "Expertises & Solutions"
       },
       "sub-pages": [
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
         {
           "id": "ideation",
           "en": "Ideation: From Concept to Strategy",
           "fr": "De l’idée à la stratégie"
         },
         {
-          "id": "proof-of-concept",
+          "id": "proofConcept",
           "en": "Proof of Concept",
           "fr": "Preuve de concept"
         },
@@ -96,10 +100,11 @@
           "fr": "Mise à l’échelle & préparation à la production"
         },
         {
-          "id": "technology-transfer",
+          "id": "techTransfer",
           "en": "Technology Transfer & Regulatory Readiness",
           "fr": "Transfert Technologique & Préparation Réglementaire"
-        }
+        },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },
     {
@@ -109,16 +114,13 @@
         "fr": "Nos projets"
       },
       "sub-pages": [
-        {
-          "id": "overview",
-          "en": "Overview",
-          "fr": "Aperçu"
-        },
+        { "id": "overview", "en": "Overview", "fr": "Aperçu" },
         {
           "id": "grants",
           "en": "Grants Awarded",
           "fr": "Subventions accordées"
-        }
+        },
+        { "id": "contact-us-form", "en": "Contact Us", "fr": "Nous joindre" }
       ]
     },
     {
@@ -128,11 +130,7 @@
         "fr": "Nouvelles"
       },
       "sub-pages": [
-        {
-          "id": "overview",
-          "en": "Latest news",
-          "fr": "Dernières nouvelles"
-        }
+        { "id": "overview", "en": "Latest news", "fr": "Dernières nouvelles" }
       ]
     }
   ]

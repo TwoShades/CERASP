@@ -1,66 +1,69 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import sectorsTranslations from "./sectors-translation.json";
-import AnimateObject from "../../components/uicomponents/AnimateObject.js";
 import "./css/SectorsAnimalHealth.css";
-import "../_css/Subpage.css";
-import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const SectorsAnimalHealth = () => {
   const { language } = useContext(LanguageContext);
-  const content = sectorsTranslations.animal_health;
+  const translation = sectorsTranslations.animalHealth;
+
+  const content = {
+    title: translation.title[language],
+    subtitle: translation.content[language],
+  };
+
+  const services = [
+    {
+      icon: "🧪",
+      title: translation.vetPharma.title[language],
+      description: translation.vetPharma.content[language],
+    },
+    {
+      icon: "⚙️",
+      title: translation.supplements.title[language],
+      description: translation.supplements.content[language],
+    },
+    {
+      icon: "📋",
+      title: translation.therapies.title[language],
+      description: translation.therapies.content[language],
+    },
+    {
+      icon: "🔧",
+      title: translation.vaccines.title[language],
+      description: translation.vaccines.content[language],
+    },
+    {
+      icon: "🔬",
+      title: translation.biologics.title[language],
+      description: translation.biologics.content[language],
+    },
+    {
+      icon: "📊",
+      title: translation.topAndDerma.title[language],
+      description: translation.topAndDerma.content[language],
+    },
+  ];
 
   return (
-    <main className="subpage-overview">
-      <div className="layout-panel-5"></div>
-      <AnimateObject
-        variantsToRun={["slideLeft", "fadeIn"]}
-        className="subpage-intro-grid"
-      >
-        <h1>{content.title[language]}</h1>
-        <p>{content.contentA[language]}</p>
-      </AnimateObject>
-
-      <section className="subpage-row">
-        <AnimateObject
-          variantsToRun={["slideRight", "fadeIn"]}
-          className="subpage-col-1-3"
-        >
-          <img
-            src="/photos/FromOldSite/animal-health-scaled.jpg"
-            alt="Biotech facility"
-          />
-        </AnimateObject>
-        <AnimateObject
-          variantsToRun={["slideRight", "fadeIn"]}
-          className="subpage-col-3-5"
-          style={{ padding: "15% 0 0 0" }}
-        >
-          <p>{content.contentB[language]}</p>
-        </AnimateObject>
-      </section>
-      <section className="subpage-row">
-        <div className="subpage-col-1-5 subpage-row-flex subpage-center-all">
-          <AnimateObject
-            variantsToRun={["fadeIn"]}
-            className="animal-health-photo"
-          >
-            <img
-              src="/photos/unsplash/gemma-regalado-3O801cdcLPc-unsplash.jpg"
-              alt="Dog in Park"
-            />
-          </AnimateObject>
+    <div className="sectors-rn-tech-parent">
+      <div className="research-technical-support">
+        <div className="support-header">
+          <h1>{content.title}</h1>
+          <p>{content.subtitle}</p>
         </div>
-      </section>
-      <PageLinkCTA
-        text={
-          language === "fr"
-            ? "Pharmaceutical / Biopharmaceutical"
-            : "Pharmaceutique / Biopharmaceutique"
-        }
-        url="/sector-of-activities/pharmaceutical-biopharmaceutical"
-      />
-    </main>
+
+        <div className="services-grid">
+          {services.map((service, index) => (
+            <div key={index} className="service-card">
+              <div className="service-icon">{service.icon}</div>
+              <div className="service-title">{service.title}</div>
+              <div className="service-description">{service.description}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

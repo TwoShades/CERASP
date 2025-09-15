@@ -5,11 +5,8 @@
   "proxy": "https://loving-bird-9ef3b0470a.strapiapp.com",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@studio-freight/lenis": "^1.0.42",
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
-    "framer-motion": "^12.23.12",
-    "gsap": "^3.13.0",
     "lucide-react": "^0.476.0",
     "pexels": "^1.4.0",
     "react": "^19.0.0",

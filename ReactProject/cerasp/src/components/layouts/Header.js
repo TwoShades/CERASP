@@ -6,11 +6,8 @@ import Navigation from "./Navigation";
 import "./css/Header.css";
 
 const Header = () => {
-  const { language, setLanguage } =
-    useContext(LanguageContext);
-  const { isMobile, isTablet } = useContext(
-    ScreenSizeContext
-  );
+  const { language, setLanguage } = useContext(LanguageContext);
+  const { isMobile, isTablet } = useContext(ScreenSizeContext);
 
   return (
     <div className="layout-header">
@@ -28,18 +25,14 @@ const Header = () => {
       <Navigation />
       <div className="language-switcher">
         <button
-          className={`language-button ${
-            language === "fr" ? "active" : ""
-          }`}
+          className={`language-button ${language === "fr" ? "active" : ""}`}
           onClick={() => setLanguage("fr")}
         >
           FR
         </button>
         <div className="language-switcher-spacer">|</div>
         <button
-          className={`language-button ${
-            language === "en" ? "active" : ""
-          }`}
+          className={`language-button ${language === "en" ? "active" : ""}`}
           onClick={() => setLanguage("en")}
         >
           EN

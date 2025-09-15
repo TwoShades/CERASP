@@ -1,65 +1,132 @@
 import React, { useContext } from "react";
-import "../_css/Subpage.css";
+import { Database, Activity, BarChart2, Zap } from "lucide-react";
+import "./css/ExpertiseTechTransfer.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
-import AnimateObject from "../../components/uicomponents/AnimateObject";
-import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
-import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseTechTransfer = () => {
   const { language } = useContext(LanguageContext);
   const techTransfer = expertiseTranslations.techTransfer;
-
-  const featuresArray = Object.values(
-    techTransfer.features
-  );
+  const performanceData = [
+    {
+      name: { en: "Patient Outcomes", fr: "Résultats des patients" },
+      value: 87,
+    },
+    { name: { en: "Cost Efficiency", fr: "Efficacité des coûts" }, value: 92 },
+    { name: { en: "Data Security", fr: "Sécurité des données" }, value: 95 },
+    {
+      name: { en: "User Satisfaction", fr: "Satisfaction des utilisateurs" },
+      value: 89,
+    },
+  ];
 
   return (
-    <main className="subpage-overview">
-      <div className="layout-panel-5"></div>
+    <div className="expertise-numeric-container">
+      <div className="expertise-numeric-right">
+        <div className="content-block">
+          <h1 className="main-title">{techTransfer.title[language]}</h1>
+          <p className="main-description">{techTransfer.content[language]}</p>
 
-      <AnimateObject
-        variantsToRun={["slideLeft", "fadeIn"]}
-        className="subpage-intro-grid"
-      >
-        <h1>
-          {techTransfer.title[language].toUpperCase()}
-        </h1>
-        <p>{techTransfer.content[language]}</p>
-      </AnimateObject>
+          <div className="numeric-feature-grid">
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Database size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.training.title[language]}</h3>
+                <p>{techTransfer.features.training.description[language]}</p>
+              </div>
+            </div>
 
-      <section className="subpage-row">
-        <AnimateObject
-          direction="left"
-          className="subpage-col-1-3"
-        >
-          <img
-            src="/photos/FromOldSite/AdobeStock_316052779__-scaled-450x450.jpg"
-            alt="Technology Transfer"
-          />
-        </AnimateObject>
-      </section>
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Activity size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.rndSupport.title[language]}</h3>
+                <p>{techTransfer.features.rndSupport.description[language]}</p>
+              </div>
+            </div>
 
-      <div className="subpage-flex-column">
-        <div id="expertise-ideation-bullets">
-          {featuresArray.map((feature, i) => (
-            <InteractiveBullet
-              key={i}
-              title={feature.title[language]}
-              description={feature.description[language]}
-            />
-          ))}
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <BarChart2 size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.regAffairs.title[language]}</h3>
+                <p>{techTransfer.features.regAffairs.description[language]}</p>
+              </div>
+            </div>
+
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Zap size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.fullPackage.title[language]}</h3>
+                <p>{techTransfer.features.fullPackage.description[language]}</p>
+              </div>
+            </div>
+
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Zap size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.submission.title[language]}</h3>
+                <p>{techTransfer.features.submission.description[language]}</p>
+              </div>
+            </div>
+
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Zap size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.healthCanada.title[language]}</h3>
+                <p>
+                  {techTransfer.features.healthCanada.description[language]}
+                </p>
+              </div>
+            </div>
+
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Zap size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.gmpReady.title[language]}</h3>
+                <p>{techTransfer.features.gmpReady.description[language]}</p>
+              </div>
+            </div>
+
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Zap size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.research.title[language]}</h3>
+                <p>{techTransfer.features.research.description[language]}</p>
+              </div>
+            </div>
+
+            <div className="numeric-feature-item">
+              <div className="numeric-feature-icon">
+                <Zap size={24} />
+              </div>
+              <div className="numeric-feature-content">
+                <h3>{techTransfer.features.virtualReality.title[language]}</h3>
+                <p>
+                  {techTransfer.features.virtualReality.description[language]}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* <button className="learn-more-btn">{numeric.button[language]}</button> */}
         </div>
       </div>
-      <PageLinkCTA
-        text={
-          language === "fr"
-            ? "De l'Idée à la Stratégie"
-            : "Ideation: From Concept to Strategy"
-        }
-        url="/expertise/ideation"
-      />
-    </main>
+    </div>
   );
 };
 
