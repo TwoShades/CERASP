@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import "./css/ProjectsGrants.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
+// minor change
+
 const grantsData = [
   {
     fr: "Mobilisation (CRSNG): « Promouvoir l’innovation, faire progresser la recherche et renforcer la préparation à l’emploi dans l’industrie pharmaceutique » – 2 000 000 $ (2024)",
