@@ -1,0 +1,23 @@
+.reveal-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Entry directions */
+.from-left {
+  transform: translateX(-100px);
+}
+.from-right {
+  transform: translateX(100px);
+}
+.from-top {
+  transform: translateY(-100px);
+}
+.from-bottom {
+  transform: translateY(100px);
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}

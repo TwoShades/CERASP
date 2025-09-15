@@ -5,8 +5,8 @@
       "fr": "Aperçu"
     },
     "content": {
-      "en": "At CERASP, we are proud to support a wide range of sectors within the life sciences and healthcare ecosystem. Our deep expertise and commitment to innovation allow us to offer tailor-made solutions tailored to the specific needs of each industry.",
-      "fr": "Au CERASP, nous sommes fiers de soutenir un large éventail de secteurs dans l’écosystème des sciences de la vie et de la santé. Notre expertise approfondie et notre engagement envers l’innovation nous permettent de proposer des solutions sur mesure adaptées aux besoins spécifiques de chaque industrie."
+      "en": "We tailor solutions that support every phase of your product development journey - from research and design to production and market launch - ensuring seamless progress and success at each step.",
+      "fr": "Nous concevons des solutions sur mesure qui accompagnent chaque étape du développement de votre produit - de la recherche et la conception jusqu'à la production et le lancement sur le marché - en assurant une progression fluide et un succès à chaque phase."
     },
     "expertise": [
       {
@@ -44,74 +44,110 @@
       }
     ]
   },
+
   "ideation": {
     "title": {
       "en": "Ideation: From Concept to Strategy",
       "fr": "De l’idée à la stratégie"
     },
-    "sub1": {
-      "en": "At CERASP, we help turn ideas into viable products by providing expert support from early ideation to strategic planning, ensuring a solid foundation for successful development",
-      "fr": ""
+    "intro": {
+      "en": "At CERASP, we help turn ideas into viable products by providing expert support from early ideation to strategic planning, ensuring a solid foundation for successful development. Driven by innovation and scientific rigor, our ideation services turn concepts into actionable plans—shaping the future of your innovation. Our expertise includes:",
+      "fr": "Transformer une idée en solution viable commence par une base solide. Au CERASP, nous accompagnons vos innovations de l’idéation à la planification stratégique, en évaluant la faisabilité et en posant les bases du succès. Notre approche, centrée sur l’innovation, la rigueur scientifique et la stratégie, vous aide à passer de l’idée à l’action en toute confiance. Notre expertise comprend :"
     },
-    "sub2": {
-      "en": "Driven by innovation and scientific rigor, our ideation services turn concepts into actionable plans—shaping the future of your innovation.",
-      "fr": ""
-    },
-    "sub3": {
-      "en": "Our Expertise Includes: ",
-      "fr": ""
-    },
-    "content": {
-      "en": {
-        "overview": [
-          "Design and Sketch",
-          "We turn abstract ideas into clear visuals through initial designs and sketches, bringing your concept to life.",
-          "Feasibility Studies",
-          "We assess technical, regulatory, and commercial feasibility to validate your idea before major investment.",
-          "Consulting",
-          "Our experts offer strategic and scientific guidance to ensure your innovation is built on a solid foundation.",
-          "Applied Research",
-          "We conduct applied research to turn scientific discovery into practical solutions aligned with your goals."
-        ],
-        "capabilities": [
-          "Business Plan Development",
-          "We help shape your vision into a clear business plan with goals, strategy, resources, timelines, and financials.",
-          "Market Study and Evaluation",
-          "Our market analysis uncovers opportunities, evaluates demand, and positions your innovation competitively.",
-          "Mapping Activities",
-          "We create a clear roadmap from idea to market, aligning activities, stakeholders, and milestones."
-        ],
-        "collaboration": [
-          "Preformulation",
-          "We conduct preformulation studies to define optimal conditions and components for early product development.",
-          "Gap Analysis",
-          "We pinpoint gaps in your development and regulatory strategy to ensure compliance and success.",
-          "Literature Evaluation",
-          "We review scientific literature to support your concept with data and prevent redundancy.",
-          "Grant Search",
-          "We help identify and secure funding, including refundable SR&ED tax credits for Canadian companies, by managing the entire grant application process for projects ranging from $4K to over $10M, covering research, development, commercialization, and expansion needs."
-        ]
+    "en": [
+      {
+        "title": "Design and Sketch",
+        "description": "We turn abstract ideas into clear visuals through initial designs and sketches, bringing your concept to life."
       },
-      "fr": {
-        "overview": [
-          "Le CERASP est une installation conforme aux BPL qui opère selon des procédures alignées sur les BPF pour soutenir la préparation réglementaire.",
-          "Nous développons des procédés biopharmaceutiques prêts pour les BPF afin de faciliter un transfert technologique fluide vers les fabricants agréés.",
-          "Notre expertise couvre le développement des procédés en amont et en aval pour les produits biologiques et les thérapies avancées."
-        ],
-        "capabilities": [
-          "Optimisation des bioprocédés (fermentation et culture cellulaire)",
-          "Purification des biomolécules",
-          "Tests de bioactivité et de stabilité",
-          "Caractérisation génomique et microbienne",
-          "Développement de méthodes analytiques pour les produits biologiques"
-        ],
-        "collaboration": [
-          "Nous collaborons avec des universités et des CCTT pour soutenir l'innovation industrielle et le passage à l'échelle des thérapies avancées.",
-          "Spécialisé dans la culture de cellules microbiennes et de mammifères pour la production de protéines thérapeutiques et d'autres biologiques."
-        ]
+      {
+        "title": "Feasibility Studies",
+        "description": "We assess technical, regulatory, and commercial feasibility to validate your idea before major investment."
+      },
+      {
+        "title": "Consulting",
+        "description": "Our experts offer strategic and scientific guidance to ensure your innovation is built on a solid foundation."
+      },
+      {
+        "title": "Applied Research",
+        "description": "We conduct applied research to turn scientific discovery into practical solutions aligned with your goals."
+      },
+      {
+        "title": "Business Plan Development",
+        "description": "We help shape your vision into a clear business plan with goals, strategy, resources, timelines, and financials."
+      },
+      {
+        "title": "Market Study and Evaluation",
+        "description": "Our market analysis uncovers opportunities, evaluates demand, and positions your innovation competitively."
+      },
+      {
+        "title": "Mapping Activities",
+        "description": "We create a clear roadmap from idea to market, aligning activities, stakeholders, and milestones."
+      },
+      {
+        "title": "Preformulation",
+        "description": "We conduct preformulation studies to define optimal conditions and components for early product development."
+      },
+      {
+        "title": "Gap Analysis",
+        "description": "We pinpoint gaps in your development and regulatory strategy to ensure compliance and success."
+      },
+      {
+        "title": "Literature Evaluation",
+        "description": "We review scientific literature to support your concept with data and prevent redundancy."
+      },
+      {
+        "title": "Grant Search",
+        "description": "We help identify and secure funding, including refundable SR&ED tax credits for Canadian companies, by managing the entire grant application process for projects ranging from $4K to over $10M, covering research, development, commercialization, and expansion needs."
       }
-    }
+    ],
+    "fr": [
+      {
+        "title": "Conception et croquis",
+        "description": "Nous transformons vos idées en croquis et concepts visuels concrets, prêts à être développés."
+      },
+      {
+        "title": "Études de faisabilité",
+        "description": "Nous évaluons la faisabilité technique, réglementaire et commerciale avant tout investissement majeur."
+      },
+      {
+        "title": "Consultation",
+        "description": "Nos experts vous guident stratégiquement et scientifiquement pour structurer vos projets d’innovation."
+      },
+      {
+        "title": "Recherche appliquée",
+        "description": "Nous menons des recherches appliquées ciblées pour transformer la science en solutions concrètes."
+      },
+      {
+        "title": "Plan d’affaires",
+        "description": "Nous vous aidons à élaborer un plan d’affaires clair intégrant objectifs, stratégies, ressources, échéances et finances."
+      },
+      {
+        "title": "Étude et évaluation de marché",
+        "description": "Nos analyses de marché identifient opportunités, évaluent la demande et positionnent votre innovation efficacement."
+      },
+      {
+        "title": "Cartographie des activités",
+        "description": "Nous cartographions étapes, parties prenantes et jalons pour une feuille de route claire, de l’idée au marché."
+      },
+      {
+        "title": "Préformulation",
+        "description": "Nous réalisons des études de préformulation pour définir les conditions et composants optimaux de votre produit."
+      },
+      {
+        "title": "Analyse des écarts et de risques",
+        "description": "Nous identifions les lacunes de votre stratégie pour garantir le succès du projet."
+      },
+      {
+        "title": "Évaluation de la littérature scientifique",
+        "description": "Nos revues de littérature consolident vos idées avec des données et évitent les doublons."
+      },
+      {
+        "title": "Recherche de subventions",
+        "description": "Nous vous aidons à trouver et obtenir des financements adaptés, y compris le crédit d’impôt RS&DE pour les entreprises canadiennes, en prenant en charge l’ensemble du processus de demande. Nous ciblons des subventions non dilutives de 4 000 $ à plus de 10 millions de dollars, couvrant recherche, développement, prototypage, commercialisation et expansion (embauches, équipements, marchés, produits, services)."
+      }
+    ]
   },
+
   "formulation": {
     "title": {
       "en": "Formulation",
@@ -128,19 +164,35 @@
       "fr": "Preuve de concept"
     },
     "content": {
-      "en": "We validate your idea’s technical feasibility, reducing risk and guiding decisions before full-scale development.",
-      "fr": "Nous validons la faisabilité technique de votre idée, réduisant ainsi les risques et guidant les décisions avant le développement à grande échelle."
+      "en": "At CERASP, we combine technical expertise, scientific rigor, and industry insight to support you through early development—turning ideas into validated, scalable products. Our pragmatic approach ensures efficient progress from concept to reality, minimizing risk and maximizing success",
+      "fr": "Transformer une idée en produit testable requiert expertise technique, rigueur scientifique et connaissance du marché. Au CERASP, nous vous accompagnons dès le début pour valider et faire évoluer vos concepts, en minimisant les risques et maximisant vos chances de succès."
     },
     "steps": {
+      "proof": {
+        "title": {
+          "en": "Proof of Concept",
+          "fr": "Preuve de concept"
+        },
+        "description": {
+          "en": "We validate your idea’s technical feasibility, reducing risk and guiding decisions before full-scale development.",
+          "fr": "Nous validons la faisabilité technique pour limiter les risques et orienter vos décisions avant le développement complet"
+        }
+      },
       "formulate": {
-        "title": { "en": "Formulation", "fr": "Formulation" },
+        "title": {
+          "en": "Formulation",
+          "fr": "Formulation"
+        },
         "description": {
           "en": "Our team develops robust formulations tailored to your product goals — pharmaceuticals, biologics, nutraceuticals, cosmetics, and more—while meeting regulatory and industry standards.",
           "fr": "Notre équipe conçoit des formulations stables et efficaces, conformes aux normes, adaptées à vos objectifs (pharmaceutiques, biologiques, nutraceutiques, cosmétiques, etc.). "
         }
       },
       "support": {
-        "title": { "en": "Prototyping", "fr": "Prototypage" },
+        "title": {
+          "en": "Prototyping",
+          "fr": "Prototypage"
+        },
         "description": {
           "en": "We create early prototypes that simulate the final product, enabling thorough testing and refinement before scaling up.",
           "fr": "Nous réalisons des prototypes pour tester et affiner performance, aspect, usage et production avant la montée en échelle."
@@ -323,7 +375,10 @@
     }
   },
   "animal_health": {
-    "title": { "en": "Animal Health", "fr": "Santé animale" },
+    "title": {
+      "en": "Animal Health",
+      "fr": "Santé animale"
+    },
     "subtitle": {
       "en": "Leading innovation in health, research, and natural solutions",
       "fr": "Leader en innovation pour la santé, la recherche et les solutions naturelles"
@@ -333,8 +388,14 @@
       "fr": "Nous fournissons des services de formulation spécialisés pour les produits de santé animale, garantissant des formes posologiques efficaces, sûres et conformes, adaptées aux normes industrielles et réglementaires."
     },
     "projects": { "en": "Projects", "fr": "Projets" },
-    "success_rate": { "en": "Success Rate", "fr": "Taux de réussite" },
-    "experience": { "en": "Experience", "fr": "Expérience" },
+    "success_rate": {
+      "en": "Success Rate",
+      "fr": "Taux de réussite"
+    },
+    "experience": {
+      "en": "Experience",
+      "fr": "Expérience"
+    },
     "summary_title": {
       "en": "Comprehensive Solutions",
       "fr": "Solutions complètes"
@@ -344,18 +405,33 @@
       "fr": "Notre approche intégrée combine recherche de pointe, innovation naturelle et méthodologies éprouvées pour offrir des résultats exceptionnels dans tous les domaines."
     },
     "features": {
-      "en": ["Veterinary Research", "Pet Nutrition", "Animal Wellness"],
-      "fr": ["Recherche vétérinaire", "Nutrition animale", "Bien-être animal"]
+      "en": [
+        "Veterinary Research",
+        "Pet Nutrition",
+        "Animal Wellness"
+      ],
+      "fr": [
+        "Recherche vétérinaire",
+        "Nutrition animale",
+        "Bien-être animal"
+      ]
     }
   },
   "nhp_nutraceuticals": {
-    "title": { "en": "NHP & Nutraceuticals", "fr": "PSN & Nutraceutiques" },
+    "title": {
+      "en": "NHP & Nutraceuticals",
+      "fr": "PSN & Nutraceutiques"
+    },
     "content": {
       "en": "Our team assists in the development of natural health products (NHPs) and nutraceuticals, ensuring compliance with regulatory standards and market requirements. We provide support from concept to commercialization.",
       "fr": "Notre équipe accompagne le développement de produits de santé naturels (PSN) et de nutraceutiques, en assurant la conformité réglementaire et les exigences du marché. Nous offrons un soutien de la conception à la commercialisation."
     },
     "features": {
-      "en": ["Natural Products", "Supplement Development", "Quality Testing"],
+      "en": [
+        "Natural Products",
+        "Supplement Development",
+        "Quality Testing"
+      ],
       "fr": [
         "Produits naturels",
         "Développement de suppléments",
@@ -364,7 +440,10 @@
     }
   },
   "advanced_research": {
-    "title": { "en": "Advanced Research", "fr": "Recherche Avancée" },
+    "title": {
+      "en": "Advanced Research",
+      "fr": "Recherche Avancée"
+    },
     "content": {
       "en": "Cutting-edge research methodologies and innovative solutions for complex biological challenges.",
       "fr": "Méthodologies de recherche de pointe et solutions innovantes pour les défis biologiques complexes."
@@ -385,7 +464,10 @@
     }
   },
   "natural_solutions": {
-    "title": { "en": "Natural Solutions", "fr": "Solutions Naturelles" },
+    "title": {
+      "en": "Natural Solutions",
+      "fr": "Solutions Naturelles"
+    },
     "content": {
       "en": "Sustainable and eco-friendly approaches to health and wellness product development.",
       "fr": "Approches durables et écologiques pour le développement de produits de santé et de bien-être."
@@ -522,8 +604,14 @@
     },
     "stats": {
       "accuracy": { "en": "Accuracy", "fr": "Précision" },
-      "efficiency": { "en": "Efficiency", "fr": "Efficacité" },
-      "cost_reduction": { "en": "Cost Reduction", "fr": "Réduction des coûts" }
+      "efficiency": {
+        "en": "Efficiency",
+        "fr": "Efficacité"
+      },
+      "cost_reduction": {
+        "en": "Cost Reduction",
+        "fr": "Réduction des coûts"
+      }
     },
     "chart_label": {
       "en": "Performance Metrics",

@@ -1,0 +1,76 @@
+.contact-icon-light {
+  --icon-color: white;
+  --icon-hover-color: var(--color-button-light-blue);
+}
+
+.contact-icon-blue {
+  --icon-color: var(--color-dodger-blue);
+  --icon-hover-color: var(--color-button-blue);
+}
+
+.contact-icon-wrapper {
+  /* border: 2px dashed green; */
+  position: absolute;
+  z-index: 2;
+  bottom: 10vh;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  padding: 10px;
+}
+
+.contact-icon-border {
+  border: 3px solid var(--icon-color);
+  height: 120px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: border 0.2s ease;
+}
+
+.contact-icon-text {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-icon-text h4 {
+  transition: color 0.2s ease;
+  font-size: var(--text-m);
+  font-weight: 400;
+  color: var(--icon-color);
+  margin: 0;
+  width: 100%;
+}
+
+.contact-icon-svg {
+  fill: var(--icon-color);
+  width: 80px;
+  height: 80px;
+  margin-left: 16px;
+  transition: fill 0.2s ease;
+}
+
+.contact-icon-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.contact-icon-wrapper:hover .contact-icon-border {
+  border-color: var(--icon-hover-color);
+}
+
+.contact-icon-wrapper:hover h4 {
+  color: var(--icon-hover-color);
+}
+
+.contact-icon-wrapper:hover .contact-icon-svg {
+  fill: var(--icon-hover-color);
+}

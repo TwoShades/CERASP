@@ -1,16 +1,24 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  useContext,
+} from "react";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { Link } from "react-router-dom";
 import "./css/AboutEquipments.css";
-import SubPageHeader from "../../components/layouts/SubPageHeader";
+import "../_css/Subpage.css";
+import AnimateObject from "../../components/uicomponents/AnimateObject";
+import ContactCTA from "../../components/interactables/ContactCTA";
 
 const AboutEquipments = () => {
   const [allEquipments, setAllEquipments] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet } = useContext(ScreenSizeContext);
+  const { isMobile, isTablet } = useContext(
+    ScreenSizeContext
+  );
 
   useEffect(() => {
     const fetchEquipments = async () => {
@@ -28,9 +36,13 @@ const AboutEquipments = () => {
             photoUrl: item.Image?.url || "",
           }))
           .sort((a, b) =>
-            a.name.localeCompare(b.name, language === "fr" ? "fr" : "en", {
-              sensitivity: "base",
-            })
+            a.name.localeCompare(
+              b.name,
+              language === "fr" ? "fr" : "en",
+              {
+                sensitivity: "base",
+              }
+            )
           );
 
         setAllEquipments(cleaned);
@@ -45,10 +57,16 @@ const AboutEquipments = () => {
   const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 3;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = allEquipments.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = allEquipments.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
 
   const nextPage = () => {
-    if (currentPage < Math.ceil(allEquipments.length / itemsPerPage)) {
+    if (
+      currentPage <
+      Math.ceil(allEquipments.length / itemsPerPage)
+    ) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -60,82 +78,98 @@ const AboutEquipments = () => {
   };
 
   return (
-    <div className="about-equipments-layout">
-      <SubPageHeader
-        name={language === "fr" ? "ÉQUIPEMENT" : "EQUIPMENT"}
-        extraContent={
-          <h4>
-            {language === "fr"
-              ? "Découvrez notre équipement de pointe!"
-              : "Discover our cutting edge equipment!"}
-          </h4>
-        }
-      />
-
-      <div className="about-equipments">
-        <div className="about-equipments-images">
-          {currentItems.map((equipment) => (
-            <div
-              key={equipment.id}
-              className="equipment-card"
-              onClick={() => {
-                if (equipment.photoUrl) {
-                  window.open(equipment.photoUrl, "_blank");
-                }
-              }}
-            >
-              {equipment.photoUrl ? (
-                <img
-                  src={equipment.photoUrl}
-                  alt={equipment.name}
-                  className="equipment-image-full"
-                />
-              ) : (
-                <div className="no-image-placeholder">No image available</div>
-              )}
-              <div className="equipment-card-footer">
-                <h4>{equipment.name}</h4>
+    <main className="subpage-overview">
+      <div
+        className="layout-panel-5 narrow"
+        style={{ zIndex: 0 }}
+      ></div>
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>
+          {language === "fr"
+            ? "DÉCOUVREZ NOTRE ÉQUIPEMENT DE POINTE"
+            : "DISCOVER OUR CUTTING EDGE EQUIPMENT"}
+        </h1>
+      </AnimateObject>
+      <AnimateObject
+        variantsToRun={["slowFadeIn"]}
+        className="about-equipments-images"
+      >
+        {currentItems.map((equipment) => (
+          <div
+            key={equipment.id}
+            className="equipment-card"
+            onClick={() => {
+              if (equipment.photoUrl) {
+                window.open(equipment.photoUrl, "_blank");
+              }
+            }}
+          >
+            {equipment.photoUrl ? (
+              <img
+                src={equipment.photoUrl}
+                alt={equipment.name}
+                className="equipment-image-full"
+              />
+            ) : (
+              <div className="no-image-placeholder">
+                No image available
               </div>
+            )}
+            <div className="equipment-card-footer">
+              <h4>{equipment.name}</h4>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </AnimateObject>
 
-        <div className="pagination-controls">
-          <button
-            onClick={prevPage}
-            disabled={currentPage === 1}
-            className="pagination-arrow"
-          >
-            &lt;
-          </button>
-          <button
-            onClick={nextPage}
-            disabled={
-              currentPage >= Math.ceil(allEquipments.length / itemsPerPage)
-            }
-            className="pagination-arrow"
-          >
-            &gt;
-          </button>
-        </div>
+      {allEquipments.length > 0 && (
+        <>
+          <div className="pagination-controls">
+            <button
+              onClick={prevPage}
+              disabled={currentPage === 1}
+              className="pagination-arrow"
+            >
+              &lt;
+            </button>
+            <button
+              onClick={nextPage}
+              disabled={
+                currentPage >=
+                Math.ceil(
+                  allEquipments.length / itemsPerPage
+                )
+              }
+              className="pagination-arrow"
+            >
+              &gt;
+            </button>
+          </div>
 
-        <div className="equipment-master-list">
-          <h4 className="equipment-master-list-title">
-            {language === "fr"
-              ? "Liste complète de l'équipement"
-              : "Comprehensive List of Equipment"}
-          </h4>
-          <Link
-            to="/equipment-list"
-            className="learn-more-button"
-            style={{ textDecoration: "none" }}
-            state={{ equipments: allEquipments }}
-          >
-            {language === "fr" ? "Cliquez Ici" : "Click Here"}
-          </Link>
-        </div>
-      </div>
-    </div>
+          <div className="equipment-master-list">
+            <h4 className="equipment-master-list-title">
+              {language === "fr"
+                ? "Liste complète de l'équipement"
+                : "Comprehensive List of Equipment"}
+            </h4>
+            <Link
+              to="/equipment-list"
+              className="learn-more-button"
+              style={{ textDecoration: "none" }}
+              state={{ equipments: allEquipments }}
+            >
+              {language === "fr"
+                ? "Cliquez Ici"
+                : "Click Here"}
+            </Link>
+          </div>
+          <ContactCTA />
+        </>
+      )}
+    </main>
   );
 };
 

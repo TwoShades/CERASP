@@ -1,10 +1,9 @@
-import "./css/ProjectsOverview.css";
+// import "./css/ProjectsOverview.css";
 import { useEffect, useState, useContext } from "react";
 import ScrollPanel from "../../components/layouts/ScrollPanel.js";
 import Footer from "../../components/layouts/Footer.js";
 import useScrollToPanel from "../../hooks/useScrollToPanel.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import SubPageHeader from "../../components/layouts/SubPageHeader.js";
 
 const ProjectsOverview = () => {
   useScrollToPanel();
@@ -27,7 +26,10 @@ const ProjectsOverview = () => {
 
         setProjectsData(cleaned);
       } catch (err) {
-        console.error("Failed to fetch projects data:", err);
+        console.error(
+          "Failed to fetch projects data:",
+          err
+        );
       }
     };
 
@@ -36,16 +38,6 @@ const ProjectsOverview = () => {
 
   return (
     <div className="projects-overview-layout">
-      <SubPageHeader
-        name={language === "fr" ? "NOS PROJETS" : "OUR PROJECTS"}
-        extraContent={
-          <h4>
-            {language === "fr"
-              ? "Projets innovants et bilingues axés sur la recherche pharmaceutique et biomédicale."
-              : "Innovative bilingual projects focused on pharmaceutical and biomedical research."}
-          </h4>
-        }
-      />
       <div className="project-container">
         {projectsData.map((proj, index) => (
           <details key={index} className="project-card">

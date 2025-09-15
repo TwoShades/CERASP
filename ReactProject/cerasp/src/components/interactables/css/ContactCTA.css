@@ -1,0 +1,43 @@
+.contact-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40vw;
+  margin-left: 20vw;
+  height: 40vh;
+  background-color: var(--color-dodger-blue);
+  margin-block: var(--space-xl);
+}
+
+.contact-cta h1 {
+  color: white;
+  align-self: center;
+  padding: 1em;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 1px;
+}
+
+.contact-cta p {
+  padding-left: 4em;
+  padding-right: 4em;
+  color: white;
+  align-self: center;
+  text-align: center;
+  font-size: var(--text-m);
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-cta {
+    margin-left: 10vw;
+    width: 60vw;
+  }
+
+  .contact-cta p {
+    padding-left: 4em;
+    padding-right: 4em;
+    color: white;
+    align-self: center;
+    text-align: center;
+    font-size: var(--text-s);
+  }
+}

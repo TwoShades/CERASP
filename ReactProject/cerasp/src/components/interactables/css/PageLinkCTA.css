@@ -1,0 +1,33 @@
+.page-link-cta {
+  margin-block: var(--space-xl);
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin-left: 40vw;
+  font-size: var(--text-l2);
+  font-weight: 500;
+  width: 20vw;
+  min-height: 10vh;
+  color: rgb(226, 226, 226);
+  background-color: var(--color-dodger-blue);
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.page-link-cta:hover {
+  opacity: 1;
+}
+
+.learn-more-button:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-blue),
+    var(--primary-blue)
+  );
+  cursor: pointer;
+}

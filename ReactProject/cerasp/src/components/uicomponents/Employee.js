@@ -1,5 +1,6 @@
+import React from "react";
 import "./css/Employee.css";
-import ReactMarkdown from "react-markdown";
+import AnimateObject from "./AnimateObject";
 
 const Employee = ({ member }) => {
   const defaultMember = {
@@ -17,42 +18,35 @@ const Employee = ({ member }) => {
       : "/photos/placeholder.jpg";
 
   return (
-    <div className="employee-card">
+    <AnimateObject
+      variantsToRun={"slowFadeIn"}
+      className="employee-card"
+    >
       {/* Background image div */}
-      <a
-        href={finalMember.LinkedIn || "https://www.linkedin.com/"}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {/* Background image div */}
-        <div
-          className="employee-background"
-          style={{ backgroundImage: `url(${imageUrl})` }}
-        />
-      </a>
+      <div
+        className="employee-background"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
 
-      {/* Blue paper background div */}
-      <div className="employee-blue-paper-background" />
-
-      {/* Content */}
-      <h3>{finalMember.Name}</h3>
-      <div>
+      {/* Blue paper background div - separate bottom section */}
+      <div className="employee-blue-paper-background">
+        <h3>{finalMember.Name}</h3>
         <p>{finalMember.Title}</p>
-        <a
-          href={finalMember.LinkedIn || "https://www.linkedin.com/"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {finalMember.LinkedIn && (
+        {finalMember.LinkedIn && (
+          <a
+            href={finalMember.LinkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               className="linkedin"
               src="/logos/linkedinlogo.png"
               alt="LinkedIn Logo"
             />
-          )}
-        </a>
+          </a>
+        )}
       </div>
-    </div>
+    </AnimateObject>
   );
 };
 

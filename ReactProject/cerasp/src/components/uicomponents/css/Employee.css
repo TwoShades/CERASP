@@ -1,151 +1,149 @@
+/* Container for team cards: fixed 3 columns on desktop */
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-l);
+  width: 100%;
+  max-width: 100vw;
+  padding: var(--space-m) 0;
+  box-sizing: border-box;
+}
+
+/* Employee Card */
 .employee-card {
   position: relative;
-  width: 22%;
-  height: 280px;
-  padding: 24px;
   background-color: white;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   border: 1px solid #e6e6e6;
   color: #555555;
 
   display: flex;
-  text-align: center;
   flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  overflow: visible;
-
   cursor: pointer;
-  transition: all 0.2s ease;
-  z-index: 0; /* base layer */
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Background image container */
+/* Photo background takes most of the card height */
 .employee-background {
-  position: absolute;
-  background-color: white;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  flex: 1 1 auto; /* fill available vertical space */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1;
-  filter: brightness(0.7); /* slightly darken for contrast */
+  filter: brightness(0.7);
   transition: filter 0.3s ease;
+  z-index: 1;
 }
 
-/* Blue paper background container */
+/* Blue paper background is a distinct bottom section */
 .employee-blue-paper-background {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 100%;
-  height: 100%;
-  background-color: #0057b35d;
-  z-index: 0;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  pointer-events: none;
-  transition: all 0.2s ease;
+  position: relative; /* no longer absolute */
+  background-color: rgba(
+    0,
+    87,
+    179,
+    0.849
+  ); /* semi-transparent blue */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  /* fixed height so all cards are consistent */
+  height: 120px;
+
+  /* center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 var(--space-m); /* less vertical padding */
+  z-index: 3;
+  pointer-events: auto;
+  text-align: center;
 }
 
-/* On hover, move card up and lighten bg */
-.employee-card:hover {
-  transform: translateY(-3px);
-  border-color: #0056b3;
-  box-shadow: 0 4px 8px rgba(0, 86, 179, 0.1);
-}
-
-.employee-card:hover .employee-blue-paper-background {
-  top: 8px;
-  left: 8px;
-  background-color: #0077b5;
-  box-shadow: 0 4px 8px rgba(0, 118, 181, 0.2);
-}
-
-.employee-card:hover .employee-background {
-  filter: brightness(0.9);
-}
-
-.employee-card:hover .linkedin {
-  transform: scale(1.5);
-  transition: transform 0.2s ease;
-}
-
-.employee-card h3,
-.employee-card p,
-.linkedin {
-  position: relative;
-  z-index: 5; /* on top of backgrounds */
+/* Text inside blue background */
+.employee-blue-paper-background h3,
+.employee-blue-paper-background p {
   margin: 0;
   color: #fff;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 0;
 }
 
-.employee-card h3 {
-  margin-top: 150px;
+/* Employee name */
+.employee-blue-paper-background h3 {
   font-size: 1.4em;
   font-weight: 600;
   letter-spacing: -0.5px;
   line-height: 1.2;
 }
 
-.employee-card p {
+/* Employee title */
+.employee-blue-paper-background p {
   font-size: 1rem;
   line-height: 1.4;
 }
 
 .linkedin {
-  margin-top: auto;
-  margin-bottom: 0;
-  font-size: 0.9rem;
-  color: #0056b3;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  width: 32px;
+  height: 32px;
+  margin-top: 12px;
+  filter: brightness(1);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  display: block;
+  object-fit: contain;
+  /* keep space reserved even if no icon */
+  visibility: visible;
+}
+
+.employee-blue-paper-background a:not(:has(img)) .linkedin {
+  visibility: hidden;
 }
 
 .linkedin:hover {
-  color: #0077b5;
+  transform: scale(1.4);
+  filter: brightness(1.2);
 }
 
-@media screen and (max-width: 1200px) {
-  .employee-card {
-    width: 220px;
-  }
+/* Hover effects on card */
+.employee-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-button-blue);
+  box-shadow: 0 6px 12px rgba(0, 86, 179, 0.15);
+}
+
+.employee-card:hover .employee-blue-paper-background {
+  background-color: var(--color-button-blue);
+  box-shadow: 0 4px 8px rgba(0, 118, 181, 0.3);
+}
+
+.employee-card:hover .employee-background {
+  filter: brightness(0.9);
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 715px) {
+
+/* Tablets: 2 columns */
+@media (max-width: 900px) {
+  .team-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-s);
+  }
+}
+
+/* Phones: 1 column */
+@media (max-width: 480px) {
+  .team-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-s);
+  }
+
   .employee-card {
-    max-width: 100%;
-    width: 75%;
-    height: auto;
-    min-height: 280px;
-    padding: 16px;
-  }
-
-  .employee-background,
-  .employee-blue-paper-background {
-    border-radius: 3px;
-  }
-
-  .employee-card h3 {
-    font-size: 1.2em;
-  }
-
-  .employee-card p {
-    font-size: 0.9em;
-  }
-
-  .employee-blue-paper-background {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-  }
-
-  .employee-card:hover .employee-blue-paper-background {
-    top: 4px;
-    left: 4px;
+    aspect-ratio: auto;
+    height: 400px;
   }
 }

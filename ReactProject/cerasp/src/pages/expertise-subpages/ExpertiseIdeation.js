@@ -1,81 +1,62 @@
 import React, { useContext } from "react";
 import "./css/ExpertiseIdeation.css";
-import StockImageFetch from "../../components/placeholders/StockImageFetch";
+import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
-import SubPageHeader from "../../components/layouts/SubPageHeader";
+import InteractiveBullet from "../../components/uicomponents/InteractiveBullet"; //
+import AnimateObject from "../../components/uicomponents/AnimateObject";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseIdeation = () => {
   const { language } = useContext(LanguageContext);
   const ideation = expertiseTranslations.ideation;
-  const { overview, capabilities, collaboration } = ideation.content[language];
 
-  // Util function to group and format bullet sections
-  const renderBullets = (arr, keyPrefix) =>
-    arr.map((_, idx) => {
-      if (idx % 2 !== 0) return null;
-      return (
-        <div key={`${keyPrefix}-${idx}`} className="bullet-point">
-          <h4>{arr[idx]}</h4> {arr[idx + 1]}
-        </div>
-      );
-    });
+  const title = ideation.title[language];
+  const intro = ideation.intro[language];
+  const content = ideation[language];
 
   return (
-    <div className="expertise-gmp">
-      <div className="expertise-gmp-content">
-        <SubPageHeader
-          name={ideation.title[language]}
-          extraContent={
-            <div className="about-overview-header-text">
-              <p>
-                {ideation.sub1[language]} {ideation.sub2[language]}
-              </p>
-              <p>{ideation.sub3[language]}</p>
-            </div>
-          }
-        />
-
-        {/* Hero Section with Image */}
-        <div className="gmp-hero-section">
-          <div className="gmp-hero-image">
-            <img src="/photos/Picture-CERASP-12.jpg" alt="Preformulation" />
-          </div>
-        </div>
-
-        <div className="gmp-cards-container">
-          {/* Overview Card */}
-          <div className="gmp-card overview-card">
-            <div className="card-header">
-              <div className="card-icon"></div>
-            </div>
-            <div className="card-content">
-              {renderBullets(overview, "overview")}
-            </div>
-          </div>
-
-          {/* Capabilities Card */}
-          <div className="gmp-card overview-card">
-            <div className="card-header">
-              <div className="card-icon"></div>
-            </div>
-            <div className="card-content">
-              {renderBullets(capabilities, "capability")}
-            </div>
-          </div>
-
-          {/* Collaboration Card */}
-          <div className="gmp-card overview-card">
-            <div className="card-header">
-              <div className="card-icon"></div>
-            </div>
-            <div className="card-content">
-              {renderBullets(collaboration, "collab")}
-            </div>
-          </div>
+    <main className="subpage-overview">
+      <div className="layout-panel-5"></div>
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>{title.toUpperCase()}</h1>
+        <p>{intro}</p>
+      </AnimateObject>
+      <section className="subpage-row">
+        <AnimateObject
+          direction="left"
+          className="subpage-col-1-4"
+        >
+          <img
+            src="/photos/FromOldSite/AdobeStock_142270277__-scaled.jpg"
+            alt="Biotech facility"
+          />
+        </AnimateObject>
+      </section>
+      <div className="subpage-flex-column">
+        <div id="expertise-ideation-bullets">
+          {content.map(({ title, description }) => (
+            <InteractiveBullet
+              key={title}
+              title={title}
+              description={description}
+            />
+          ))}
+          <div className="expertise-generic-square"></div>
         </div>
       </div>
-    </div>
+      <PageLinkCTA
+        text={
+          language === "fr"
+            ? "Preuve de Concept"
+            : "Proof of Concept"
+        }
+        url="/expertise/proof-of-concept"
+      />
+    </main>
   );
 };
 

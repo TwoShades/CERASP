@@ -1,84 +1,68 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./css/ExpertiseProofConcept.css";
+import "../_css/Subpage.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import expertiseTranslations from "./expertise-translations.json";
-import SubPageHeader from "../../components/layouts/SubPageHeader";
-import {
-  FlaskConical,
-  Headphones,
-  ArrowRightLeft,
-  Settings,
-  Cog,
-} from "lucide-react";
+import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
+import AnimateObject from "../../components/uicomponents/AnimateObject";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const ExpertiseProofConcept = () => {
   const { language } = useContext(LanguageContext);
   const proofConcept = expertiseTranslations.proofConcept;
 
-  const steps = [
-    {
-      icon: FlaskConical,
-      title: proofConcept.steps.formulate.title[language],
-      description: proofConcept.steps.formulate.description[language],
-      className: "step1",
-    },
-    {
-      icon: Headphones,
-      title: proofConcept.steps.support.title[language],
-      description: proofConcept.steps.support.description[language],
-      className: "step2",
-    },
-    {
-      icon: ArrowRightLeft,
-      title: proofConcept.steps.transfer.title[language],
-      description: proofConcept.steps.transfer.description[language],
-      className: "step3",
-    },
-    {
-      icon: Settings,
-      title: proofConcept.steps.select.title[language],
-      description: proofConcept.steps.select.description[language],
-      className: "step4",
-    },
-    {
-      icon: Cog,
-      title: proofConcept.steps.develop.title[language],
-      description: proofConcept.steps.develop.description[language],
-      className: "step5",
-    },
-  ];
+  const title = proofConcept.title[language];
+  const intro = proofConcept.content[language];
+  const content = Object.values(proofConcept.steps).map(
+    (step) => ({
+      title: step.title[language],
+      description: step.description[language],
+    })
+  );
 
   return (
-    <div className="expertise-applied-layout">
-      <div className="five-steps-grid-layout">
-        <div className="proof-top-row">
-          <SubPageHeader
-            name={proofConcept.title[language]}
-            extraContent={
-              <div className="about-overview-header-text">
-                <p>{proofConcept.content[language]}</p>
-              </div>
-            }
+    <main className="subpage-overview">
+      <div className="layout-panel-5"></div>
+
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>{title.toUpperCase()}</h1>
+        <p>{intro}</p>
+      </AnimateObject>
+      <section className="subpage-row">
+        <AnimateObject
+          direction="left"
+          className="subpage-col-1-3"
+        >
+          <img
+            src="/photos/FromOldSite/AdobeStock_315975074__-scaled-450x450.jpg"
+            alt="Biotech facility"
           />
-        </div>
-
-        <div className="steps-container">
-          {steps.map((step) => (
-            <div key={step.number} className={`step ${step.className}`}>
-              {/* <div className="icon">{step.number}</div> */}
-              <div className="expertise-applied-title">{step.title}</div>
-              <div className="content">
-                <p>{step.description}</p>
-              </div>
-            </div>
+        </AnimateObject>
+      </section>
+      <div className="subpage-flex-column">
+        <div id="expertise-ideation-bullets">
+          {content.map(({ title, description }) => (
+            <InteractiveBullet
+              key={title}
+              title={title}
+              description={description}
+            />
           ))}
-        </div>
-
-        <div className="proof-bottom-row">
-          <p>{proofConcept.bottom_text[language]}</p>
+          <div className="expertise-generic-square"></div>
         </div>
       </div>
-    </div>
+      <PageLinkCTA
+        text={
+          language === "fr"
+            ? "Développement de Produits"
+            : "Product Development"
+        }
+        url="/expertise/product-development"
+      />
+    </main>
   );
 };
 
