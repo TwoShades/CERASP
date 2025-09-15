@@ -24,7 +24,6 @@
   display: block;
   color: #333;
 }
-
 .grant-fr::before,
 .grant-en::before {
   content: "▢";
