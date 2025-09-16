@@ -12,3 +12,15 @@
   top: 0;
   left: 0;
 }
+
+@media (max-width: 768px) {
+  #expertise-ideation-bullets {
+    padding: 0 5vw;
+    width: 90vw;
+    margin-top: var(--space-l);
+  }
+
+  .expertise-generic-square {
+    display: none;
+  }
+}

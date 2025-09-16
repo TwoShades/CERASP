@@ -40,12 +40,11 @@ const ExpertiseLayout = () => {
     <div className="layout-page page-content">
       {isOverview && (
         <>
-          <div className="layout-panel-5">
-            <div className="layout-page-overview">
-              <p>{overview}</p>
+          {!isMobile && (
+            <div className="layout-panel-5">
               <ContactIcon />
             </div>
-          </div>
+          )}
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/AdobeStock_240748778__-scaled.jpg"
