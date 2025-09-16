@@ -227,12 +227,21 @@
   .layout-panel-5,
   .layout-panel-5-transp,
   .layout-panel-3-4-transp,
-  .layout-bg-img,
+  /* .layout-bg-img, */
   .layout-bg-wide-img,
   .layout-bg-img-col-3-4,
   .layout-rotated-title,
   .layout-page-overview {
     display: none !important;
+  }
+
+  .layout-bg-img {
+    left: 0;
+  }
+
+  .layout-bg-img img {
+    height: 40vh;
+    padding-top: 50vh;
   }
 
   /* Sidebar also shouldn’t hog space on mobile */

@@ -1,3 +1,6 @@
+const isMobile =
+  typeof window !== "undefined" && window.innerWidth <= 768;
+
 export const containerVariants = {
   hidden: {},
   visible: {
@@ -9,7 +12,7 @@ export const containerVariants = {
 };
 
 export const childVariants = {
-  hidden: { opacity: 0, y: -50 },
+  hidden: { opacity: 0, y: isMobile ? -20 : -50 },
   visible: {
     opacity: 1,
     y: 0,
@@ -18,14 +21,14 @@ export const childVariants = {
 };
 
 export const whiteBoxVariants = {
-  hidden: { x: "100vw", opacity: 0 },
+  hidden: { x: isMobile ? "50vw" : "100vw", opacity: 0 },
   visible: {
     x: 0,
     opacity: 1,
     transition: {
       duration: 0.6,
       ease: "easeInOut",
-      delay: 4.8, // was 4.4 → +0.4
+      delay: 4.8,
     },
   },
 };
@@ -44,10 +47,10 @@ export const colContainerVariants = {
 export const colVariants = {
   hidden: { y: 0, opacity: 1, transformOrigin: "bottom" },
   slideOut: {
-    y: "100vw",
+    y: isMobile ? "50vw" : "100vw",
     opacity: 0,
-    scaleY: 0.8,
-    scaleX: 0.8,
+    scaleY: isMobile ? 0.9 : 0.8,
+    scaleX: isMobile ? 0.9 : 0.8,
     transition: { duration: 0.8, ease: "easeInOut" },
   },
 };
@@ -100,7 +103,7 @@ export const overlaySlideVariants = {
     backgroundColor: "transparent",
   },
   slideOut: {
-    x: "-100vw",
+    x: isMobile ? "-50vw" : "-100vw",
     transition: {
       duration: 0.8,
       ease: "easeInOut",

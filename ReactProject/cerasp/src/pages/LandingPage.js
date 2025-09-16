@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import "./_css/Layout.css";
 import "./_css/LandingPage.css";
 import { LanguageContext } from "../contexts/LanguageContext";
+import { ScreenSizeContext } from "../contexts/ScreenSizeContext";
 import landingTranslations from "./landing-translations.json";
 import { useContext, useState, useEffect } from "react";
 import ContactIcon from "../components/interactables/ContactIcon";
@@ -43,6 +44,7 @@ const data = [
 
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
+  const { isMobile } = useContext(ScreenSizeContext);
 
   const [showFirstLine, setShowFirstLine] = useState(false);
   const [showSecondLine, setShowSecondLine] =
@@ -181,7 +183,10 @@ const SandboxPage = () => {
               initial="hidden"
               animate="visible"
             >
-              <AboutUsIcon />
+              {!isMobile && <AboutUsIcon />}
+              {isMobile && (
+                <div className="landing-mobile-bottom-strip" />
+              )}
               <ContactIcon theme="contact-icon-light" />
             </motion.div>
 
