@@ -1,4 +1,8 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useState,
+  useEffect,
+} from "react";
 
 export const ScreenSizeContext = createContext();
 
@@ -9,8 +13,8 @@ export const ScreenSizeProvider = ({ children }) => {
 
   const checkScreenSize = () => {
     const width = window.innerWidth;
-    setIsMobile(width <= 576);
-    setIsTablet(width <= 1200 && width > 576);
+    setIsMobile(width <= 768);
+    setIsTablet(width <= 1200 && width > 768);
     setIsFullScreen(width > 1200);
   };
 
@@ -24,7 +28,9 @@ export const ScreenSizeProvider = ({ children }) => {
   }, []);
 
   return (
-    <ScreenSizeContext.Provider value={{ isMobile, isTablet, isFullScreen }}>
+    <ScreenSizeContext.Provider
+      value={{ isMobile, isTablet, isFullScreen }}
+    >
       {children}
     </ScreenSizeContext.Provider>
   );

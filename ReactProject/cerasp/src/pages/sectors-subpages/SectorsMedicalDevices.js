@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./css/SectorsMedicalDevices.css";
+// import "./css/SectorsMedicalDevices.css";
 import StockImageFetch from "../../components/placeholders/StockImageFetch";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import sectorsTranslations from "./sectors-translation.json";

@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import "../_css/Layout.css";
 import "./css/SectorsLayout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import ContactIcon from "../../components/interactables/ContactIcon";
 import sectorTranslations from "./sectors-translation.json";
 import Footer from "../../components/layouts/Footer";
@@ -23,6 +24,9 @@ const SectorsLayout = () => {
     : [];
 
   const { language } = useContext(LanguageContext);
+  const { isMobile, isTablet, isDesktop } = useContext(
+    ScreenSizeContext
+  );
   const overview =
     sectorTranslations.overview.content[language];
 
@@ -31,12 +35,11 @@ const SectorsLayout = () => {
       {/* <div className="layout-color-panel"></div> */}
       {location.pathname === "/sector-of-activities" && (
         <>
-          <div className="layout-panel-5">
-            <div className="layout-page-overview">
-              <p>{overview}</p>
+          {!isMobile && (
+            <div className="layout-panel-5">
               <ContactIcon />
             </div>
-          </div>
+          )}
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/slide_1-scaled.jpeg"
@@ -49,6 +52,12 @@ const SectorsLayout = () => {
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
+          {isMobile && (
+            <>
+              <div className="layout-panel-1-2-mobile"></div>
+              <div className="layout-panel-3-4-mobile"></div>
+            </>
+          )}
         </>
       )}
 

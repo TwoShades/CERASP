@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import ContactIcon from "../../components/interactables/ContactIcon";
 import Footer from "../../components/layouts/Footer";
 
@@ -20,15 +21,19 @@ const AboutLayout = () => {
     : [];
 
   const { language } = useContext(LanguageContext);
+  const { isMobile, isTablet, isDesktop } = useContext(
+    ScreenSizeContext
+  );
 
   return (
     <div className="layout-page page-content">
       {location.pathname === "/about" && (
         <>
-          <div className="layout-panel-5">
-            {" "}
-            <ContactIcon />
-          </div>
+          {!isMobile && (
+            <div className="layout-panel-5">
+              <ContactIcon />
+            </div>
+          )}
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/agri-food-food-production-scaled.jpg"
@@ -40,6 +45,12 @@ const AboutLayout = () => {
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
+          {isMobile && (
+            <>
+              <div className="layout-panel-1-2-mobile"></div>
+              <div className="layout-panel-3-4-mobile"></div>
+            </>
+          )}
         </>
       )}
 
