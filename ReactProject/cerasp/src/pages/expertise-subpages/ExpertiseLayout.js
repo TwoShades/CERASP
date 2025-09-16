@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import sitemap from "../../sitemap.json";
 import ContactIcon from "../../components/interactables/ContactIcon";
 import expertiseTranslations from "./expertise-translations.json";
@@ -10,6 +11,9 @@ import Footer from "../../components/layouts/Footer";
 const ExpertiseLayout = () => {
   const location = useLocation();
   const { language } = useContext(LanguageContext);
+  const { isMobile, isTablet, isDesktop } = useContext(
+    ScreenSizeContext
+  );
 
   const isOverview = location.pathname === "/expertise";
 
@@ -52,6 +56,12 @@ const ExpertiseLayout = () => {
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
+          {isMobile && (
+            <>
+              <div className="layout-panel-1-2-mobile"></div>
+              <div className="layout-panel-3-4-mobile"></div>
+            </>
+          )}
         </>
       )}
 

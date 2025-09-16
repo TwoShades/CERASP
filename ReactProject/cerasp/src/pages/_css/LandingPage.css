@@ -310,7 +310,7 @@
 
   .landing-white-box-content p {
     margin-top: -3.4em;
-    padding: 10vw;
+    padding: 5vw;
     line-height: 1.2;
     font-weight: 200;
     text-align: left;
@@ -336,7 +336,7 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin: -2em auto;
+    margin: 1em auto;
     gap: 1em;
   }
 

@@ -44,7 +44,9 @@ const data = [
 
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
-  const { isMobile } = useContext(ScreenSizeContext);
+  const { isMobile, isTablet, isDesktop } = useContext(
+    ScreenSizeContext
+  );
 
   const [showFirstLine, setShowFirstLine] = useState(false);
   const [showSecondLine, setShowSecondLine] =
@@ -183,8 +185,7 @@ const SandboxPage = () => {
               initial="hidden"
               animate="visible"
             >
-              {!isMobile && <AboutUsIcon />}
-              {isMobile && (
+              {!isDesktop && (
                 <div className="landing-mobile-bottom-strip" />
               )}
               <ContactIcon theme="contact-icon-light" />
@@ -202,8 +203,11 @@ const SandboxPage = () => {
                 ? content.en.description
                 : content.fr.description}
             </p>
-
-            <div className="layout-panel-5" />
+            {isDesktop && (
+              <div className="layout-panel-5">
+                <AboutUsIcon />
+              </div>
+            )}
 
             {/* Columns inside white box */}
             <motion.div
