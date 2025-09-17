@@ -92,14 +92,18 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: start;
+
     transition: right 0.3s ease-in-out;
     z-index: 1000;
+    gap: 1em;
     padding: 0;
+    padding-top: 20%;
     font-size: 18px;
   }
 
   .nav-list a {
-    font-size: medium;
+    font-size: var(--text-m);
     font-weight: bold;
     padding: 8px 20px;
   }
