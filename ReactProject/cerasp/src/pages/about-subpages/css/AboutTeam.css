@@ -1,7 +1,7 @@
 .team-cards {
   position: relative;
+  margin-top: -10vh;
   z-index: 10;
-  margin-top: -15vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-m);
@@ -15,17 +15,10 @@
   }
 }
 
-@media screen and (max-width: 576px) {
-  .about-team {
-    padding-top: 40px;
-    padding-bottom: 4em;
-  }
-
-  .about-team h1 {
-    margin-bottom: 1.5em;
-  }
-
+@media screen and (max-width: 768px) {
   .team-cards {
+    margin-top: 0;
+    padding-top: 3em;
     gap: 1.5em;
   }
 }

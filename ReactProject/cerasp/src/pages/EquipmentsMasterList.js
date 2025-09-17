@@ -1,9 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import "./Pages-css/EquipmentsMasterList.css";
 import SubPageHeader from "../components/layouts/SubPageHeader";
 import { LanguageContext } from "../contexts/LanguageContext";
 import scrollToTop from "../utils/scrollToTop";
 import { useLocation } from "react-router-dom";
+import "./_css/Subpage.css";
+import AnimateObject from "../components/uicomponents/AnimateObject";
 
 export default function EquipmentByLocation() {
   const { language } = useContext(LanguageContext);
@@ -11,7 +17,9 @@ export default function EquipmentByLocation() {
   const [equipmentList, setEquipmentList] = useState(
     location.state?.equipments || []
   );
-  const [loading, setLoading] = useState(!location.state?.equipments);
+  const [loading, setLoading] = useState(
+    !location.state?.equipments
+  );
 
   useEffect(() => {
     scrollToTop();
@@ -41,22 +49,35 @@ export default function EquipmentByLocation() {
   }, []);
 
   if (loading) {
-    return <div className="page-content">Loading equipment data...</div>;
+    return (
+      <div className="page-content">
+        Loading equipment data...
+      </div>
+    );
   }
 
   return (
     <div className="page-content">
       <div className="equipment-section">
-        <SubPageHeader
-          name={language === "fr" ? "LISTE DES ÉQUIPEMENTS" : "EQUIPMENT LIST"}
-          extraContent={
-            language === "fr" ? (
-              <h4>Une vue d’ensemble de tout notre équipement.</h4>
+        <AnimateObject
+          variantsToRun={["slideLeft", "fadeIn"]}
+          className="subpage-intro-grid"
+        >
+          <h1>
+            {language === "fr"
+              ? "LISTE DES ÉQUIPEMENTS"
+              : "EQUIPMENT LIST"}
+          </h1>
+          <p>
+            {language === "fr" ? (
+              <p>
+                Une vue d’ensemble de tout notre équipement.
+              </p>
             ) : (
-              <h4>An overview of all our equipment.</h4>
-            )
-          }
-        />
+              <p>An overview of all our equipment.</p>
+            )}
+          </p>
+        </AnimateObject>
         <ul className="equipment-items flat-list">
           {equipmentList.map((item) => (
             <li key={item.id} className="equipment-item">

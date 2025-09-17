@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import "./css/AboutEquipments.css";
 import "../_css/Subpage.css";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
-import ContactCTA from "../../components/interactables/ContactCTA";
 
 const AboutEquipments = () => {
   const [allEquipments, setAllEquipments] = useState([]);
@@ -79,10 +78,7 @@ const AboutEquipments = () => {
 
   return (
     <main className="subpage-overview">
-      <div
-        className="layout-panel-5 narrow"
-        style={{ zIndex: 0 }}
-      ></div>
+      <div className="layout-panel-5-transp" />
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"
@@ -166,7 +162,6 @@ const AboutEquipments = () => {
                 : "Click Here"}
             </Link>
           </div>
-          <ContactCTA />
         </>
       )}
     </main>
