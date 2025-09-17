@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1em;
-  z-index: 1000;
+  z-index: 2;
   background-color: #80121200;
   border-top: 1px solid grey;
   color: #4d4d4d;
@@ -43,6 +43,7 @@
   grid-template-columns: 1fr 1fr; /* internal 2-column grid */
   gap: 2em;
   width: 100%; /* let it fill its grid space */
+  z-index: 10;
 }
 
 /* ---------- FOOTER LINKS ---------- */
@@ -128,6 +129,66 @@
 .footer-privacy-mobile a {
   color: #4d4d4d;
   text-decoration: none;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 2em;
+    padding: 0;
+    min-height: 70vh;
+    background-color: #ffffff;
+  }
+
+  /* Links/contact stack nicely */
+  .footer-links-and-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 1.5em;
+  }
+
+  /* Partners section centered and visible */
+  .footer-partners {
+    margin-left: -15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5em;
+    padding: 2em 0;
+    width: 100%;
+  }
+
+  .footer-partners img {
+    max-width: 500px;
+    height: auto;
+  }
+
+  /* Text scaling */
+  .footer-links h2,
+  .footer-partners h2 {
+    font-size: var(--text-l);
+    text-align: center;
+  }
+
+  .footer-links a,
+  .footer-contact span {
+    font-size: var(--text-s);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Privacy link */
+  .footer-privacy {
+    text-align: center;
+    margin-top: 2em;
+  }
 }
 
 @media (max-width: 768px) {
