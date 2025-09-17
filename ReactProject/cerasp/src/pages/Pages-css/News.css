@@ -41,8 +41,13 @@
     padding-right: 0;
   }
 
-  .news-overview-layout iframe {
-    width: 60% !important;
+  #news-iframe-wrapper {
+    margin-left: 5vw;
+    margin-bottom: var(--space-s);
+    /* margin-top: var(--space-l); */
+    width: 70vw;
+    max-height: 75vh;
+    min-height: 40vh;
   }
 }
 

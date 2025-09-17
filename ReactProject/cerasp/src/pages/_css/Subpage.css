@@ -159,6 +159,22 @@
   object-fit: cover;
 }
 
+@media (max-width: 1200px) {
+  .subpage-intro-grid h1 {
+    font-size: var(--text-l3);
+  }
+
+  [class^="subpage-col-"] h2 {
+    font-size: var(--text-l2);
+    padding: 0 1em;
+  }
+
+  [class^="subpage-col-"] p {
+    font-size: var(--text-m);
+    padding: 0 1.5em;
+  }
+}
+
 @media (max-width: 768px) {
   [class^="subpage-col-"] {
     display: block;

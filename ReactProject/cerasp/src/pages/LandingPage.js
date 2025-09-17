@@ -5,7 +5,6 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import { ScreenSizeContext } from "../contexts/ScreenSizeContext";
 import landingTranslations from "./landing-translations.json";
 import { useContext, useState, useEffect } from "react";
-import ContactIcon from "../components/interactables/ContactIcon";
 import AboutUsIcon from "../components/interactables/AboutUsIcon";
 import Header from "../components/layouts/Header";
 
@@ -44,7 +43,7 @@ const data = [
 
 const SandboxPage = () => {
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet, isDesktop } = useContext(
+  const { isMobile, isTablet, isFullScreen } = useContext(
     ScreenSizeContext
   );
 
@@ -180,17 +179,6 @@ const SandboxPage = () => {
           variants={whiteBoxVariants}
         >
           <div className="landing-white-box-content">
-            <motion.div
-              variants={contactIconVariants}
-              initial="hidden"
-              animate="visible"
-            >
-              {!isDesktop && (
-                <div className="landing-mobile-bottom-strip" />
-              )}
-              <ContactIcon theme="contact-icon-light" />
-            </motion.div>
-
             <div className="landing-white-box-img"></div>
 
             <h1>
@@ -203,7 +191,7 @@ const SandboxPage = () => {
                 ? content.en.description
                 : content.fr.description}
             </p>
-            {isDesktop && (
+            {isFullScreen && (
               <div className="layout-panel-5">
                 <AboutUsIcon />
               </div>
@@ -238,12 +226,6 @@ const SandboxPage = () => {
               />
             </motion.div>
           </div>
-
-          {!isMobile && (
-            <div className="layout-panel-5">
-              <AboutUsIcon />
-            </div>
-          )}
           {/* Numbers */}
           <div className="landing-white-box-numbers">
             {data.map(({ number, info }, i) => (

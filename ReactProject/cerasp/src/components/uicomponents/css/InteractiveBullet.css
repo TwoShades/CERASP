@@ -58,7 +58,7 @@
 
 .interactive-bullet-description {
   position: relative;
-  margin-left: 3em;
+  margin-left: 0em;
   z-index: 4;
   font-weight: 200;
   text-align: justify;

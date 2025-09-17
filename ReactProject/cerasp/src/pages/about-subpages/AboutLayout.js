@@ -29,11 +29,6 @@ const AboutLayout = () => {
     <div className="layout-page page-content">
       {location.pathname === "/about" && (
         <>
-          {!isMobile && (
-            <div className="layout-panel-5">
-              <ContactIcon />
-            </div>
-          )}
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/agri-food-food-production-scaled.jpg"
@@ -50,6 +45,18 @@ const AboutLayout = () => {
               <div className="layout-panel-1-2-mobile"></div>
               <div className="layout-panel-3-4-mobile"></div>
             </>
+          )}
+        </>
+      )}
+
+      {(location.pathname === "/about" ||
+        location.pathname === "/about/facilities" ||
+        location.pathname === "/about/overview") && (
+        <>
+          {!isMobile && (
+            <div className="layout-panel-5">
+              <ContactIcon />
+            </div>
           )}
         </>
       )}
