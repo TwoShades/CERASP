@@ -12,7 +12,9 @@
   width: 100%;
 }
 
-.footer > div {
+.footer > .footer-logo,
+.footer > .footer-partners,
+.footer > .footer-privacy {
   display: flex;
   flex-direction: column;
   padding-top: 2em;
@@ -35,9 +37,19 @@
   transform: scale(1.1);
 }
 
+.footer-links-and-contact {
+  grid-column: 2 / span 2; /* spans col 2 and 3 of the footer grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* internal 2-column grid */
+  gap: 2em;
+  width: 100%; /* let it fill its grid space */
+}
+
 /* ---------- FOOTER LINKS ---------- */
 .footer-links {
-  display: flex;
+  grid-column: 1;
+  margin-top: 3.2em;
+  padding-left: 1em;
   flex-direction: column;
 }
 
@@ -59,7 +71,9 @@
 
 /* ---------- FOOTER CONTACT ---------- */
 .footer-contact {
-  margin-top: 1.2em;
+  grid-column: 2;
+  padding-left: 1em;
+  margin-top: 3.2em;
 }
 
 .footer-contact .address-lines {
@@ -109,4 +123,76 @@
 .footer-privacy a {
   color: #4d4d4d;
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+  }
+
+  .footer > .footer-logo,
+  .footer > .footer-partners,
+  .footer > .footer-privacy {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2em;
+    padding-left: 0em;
+  }
+
+  .footer-links-and-contact {
+    display: flex;
+    gap: 20%;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  .footer-contact span {
+    font-size: var(--text-s);
+  }
+
+  .footer-links h2 {
+    margin-bottom: 0.5em;
+  }
+
+  .footer-links a {
+    margin-top: 1em;
+    color: #4d4d4d;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--text-s);
+  }
+
+  .footer-partners {
+    background-color: white;
+    padding: 0 !important;
+    margin: 0;
+    width: 100%;
+  }
+
+  .footer-privacy {
+    position: relative; /* no absolute positioning */
+    bottom: auto;
+    left: auto;
+    margin-top: 2em;
+    text-align: left; /* change to center if preferred */
+    padding: 0;
+  }
+
+  .contact-sponsor-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .contact-sponsor-logos h2 {
+    padding-left: 2em;
+  }
+
+  .contact-sponsor-logos img {
+    margin-bottom: 1em;
+  }
 }
