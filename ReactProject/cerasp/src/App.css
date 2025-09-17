@@ -117,7 +117,7 @@ body {
   background-color: var(--color-dodger-blue);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   html,
   body {
     margin: 0;

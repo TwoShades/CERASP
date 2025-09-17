@@ -6,7 +6,6 @@ import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import aboutTranslations from "./about-translations.json";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
-import ContactIcon from "../../components/interactables/ContactIcon";
 
 export default function AboutOverview() {
   const { language } = useContext(LanguageContext);
@@ -17,7 +16,6 @@ export default function AboutOverview() {
   const subValues = content.subValues;
   return (
     <main className="subpage-overview">
-      <ContactIcon />
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"

@@ -239,7 +239,7 @@
   height: 100vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .layout-panel-5,
   .layout-panel-5-transp {
     display: none !important;
