@@ -1,47 +1,54 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext.js";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext.js";
 import "./css/Footer.css";
 
 const Footer = () => {
   const { language } = useContext(LanguageContext);
+  const { isMobile, isTablet, isDesktop } = useContext(
+    ScreenSizeContext
+  );
 
   return (
     <footer className="footer">
-      <div className="footer-logo">
-        <div className="logo-icon">
-          <img
-            src="/logos/cerasplogo.png"
-            alt="CERASP Logo"
-            width="200px"
-          />
+      {!isMobile && (
+        <div className="footer-logo">
+          <div className="logo-icon">
+            <img
+              src="/logos/cerasplogo.png"
+              alt="CERASP Logo"
+              width="200px"
+            />
+          </div>
         </div>
-      </div>
-
-      <div className="footer-links">
-        <a
-          href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-      </div>
-
-      <div className="footer-contact">
-        <div className="address-lines">
-          <span>7171 Rue Frederick Banting</span>
-          <span>Saint-Laurent, QC</span>
-          <span>H4S 1Z9</span>
-          <span>(263) 362-2760</span>
-          <span>info@cerasp.ca</span>
+      )}
+      <div className="footer-links-and-contact">
+        <div className="footer-links">
+          <a
+            href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
-        <div className="map-icon">
-          <img
-            src="/logos/google-maps.png"
-            height="50px"
-            width="50px"
-            alt="CERASP Location"
-          />
+
+        <div className="footer-contact">
+          <div className="address-lines">
+            <span>7171 Rue Frederick Banting</span>
+            <span>Saint-Laurent, QC</span>
+            <span>H4S 1Z9</span>
+            <span>(263) 362-2760</span>
+            <span>info@cerasp.ca</span>
+          </div>
+          <div className="map-icon">
+            <img
+              src="/logos/google-maps.png"
+              height="50px"
+              width="50px"
+              alt="CERASP Location"
+            />
+          </div>
         </div>
       </div>
 

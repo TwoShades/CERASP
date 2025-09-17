@@ -32,14 +32,13 @@ const SectorsLayout = () => {
 
   return (
     <div className="layout-page page-content">
-      {/* <div className="layout-color-panel"></div> */}
-      {location.pathname === "/sector-of-activities" && (
+      {!isMobile && (
+        <div className="layout-panel-5">
+          <ContactIcon />
+        </div>
+      )}
+      {isOverview && (
         <>
-          {!isMobile && (
-            <div className="layout-panel-5">
-              <ContactIcon />
-            </div>
-          )}
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/slide_1-scaled.jpeg"
@@ -48,7 +47,6 @@ const SectorsLayout = () => {
               className=""
             />
           </div>
-          {/* <div className="layout-rotated-title">{language === "fr" ? <h1>SECTEURS</h1> : <h1>SECTORS</h1>}</div> */}
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
@@ -58,25 +56,22 @@ const SectorsLayout = () => {
               <div className="layout-panel-3-4-mobile"></div>
             </>
           )}
+
+          <aside className="layout-sidebar">
+            <ul>
+              {sectorSubPages.map((subPage) => (
+                <li key={subPage.id}>
+                  <a
+                    href={`/sector-of-activities/${subPage.id}`}
+                  >
+                    {subPage[language].toUpperCase()}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>
         </>
       )}
-
-      {isOverview && (
-        <aside className="layout-sidebar">
-          <ul>
-            {sectorSubPages.map((subPage) => (
-              <li key={subPage.id}>
-                <a
-                  href={`/sector-of-activities/${subPage.id}`}
-                >
-                  {subPage[language].toUpperCase()}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      )}
-
       <main className="layout-main-content">
         <Outlet />
       </main>

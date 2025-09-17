@@ -1,5 +1,4 @@
 .about-equipments-images {
-  /* background-color: yellow; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,12 +68,12 @@
 }
 
 .pagination-arrow {
-  background-color: #0056b3;
+  background-color: var(--color-dodger-blue);
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 1.25rem;
-  border-radius: 6px;
+  border-radius: 1px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -85,9 +84,9 @@
   cursor: not-allowed;
 }
 
-.pagination-arrow:hover:not(:disabled) {
-  background-color: #003d80;
-}
+/* .pagination-arrow:hover:not(:disabled) {
+  background-color: #5f5fbe;
+} */
 
 /* Master List */
 .equipment-master-list {
@@ -105,19 +104,19 @@
     #f8f9fa 100%
   );
   border: 1px solid rgba(0, 86, 179, 0.1);
-  border-radius: 16px;
+  border-radius: 1px;
 }
 
 .equipment-master-list-title {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
   text-align: center;
 }
 
 .learn-more-button {
-  background-color: #0056b3;
+  background-color: var(--color-dodger-blue);
   color: white;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: 1px;
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s ease;
@@ -141,7 +140,7 @@
 
 @media screen and (max-width: 776px) {
   .equipment-card {
-    width: 45%;
+    width: 85%;
     height: 220px;
   }
 
@@ -151,11 +150,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .equipment-card {
-    width: 100%;
-    height: 200px;
-  }
-
   .equipment-card-footer h4 {
     font-size: 0.9rem;
   }

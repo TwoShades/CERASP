@@ -2,8 +2,8 @@ import "./css/AboutOverview.css";
 import "../_css/Subpage.css";
 import React, { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import aboutTranslations from "./about-translations.json";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+import aboutTranslations from "./about-translations.json";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 import InteractiveBullet from "../../components/uicomponents/InteractiveBullet";
 import ContactIcon from "../../components/interactables/ContactIcon";
@@ -39,12 +39,14 @@ export default function AboutOverview() {
       </section>
 
       <section className="subpage-row">
-        <AnimateObject className="subpage-col-1-3">
-          <img
-            src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
-            alt="Biotech facility"
-          />
-        </AnimateObject>
+        {!isMobile && (
+          <AnimateObject className="subpage-col-1-3">
+            <img
+              src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
+              alt="Biotech facility"
+            />
+          </AnimateObject>
+        )}
         <AnimateObject
           variantsToRun={["slideLeft", "fadeIn"]}
           className="subpage-col-3-5"
@@ -70,7 +72,11 @@ export default function AboutOverview() {
         <AnimateObject
           className="subpage-col-2-5"
           variantsToRun={["slideLeft", "fadeIn"]}
-          style={{ marginBottom: "var(--space-l" }}
+          style={{
+            marginBottom: !isMobile
+              ? "var(--space-l)"
+              : "var(--space-m)",
+          }}
         >
           <h2>{content.mission.title[language]}</h2>
           <p>{content.mission[language]}</p>
@@ -79,7 +85,11 @@ export default function AboutOverview() {
         <AnimateObject
           className="subpage-col-2-5"
           variantsToRun={["slideRight", "fadeIn"]}
-          style={{ marginBottom: "var(--space-l" }}
+          style={{
+            marginBottom: !isMobile
+              ? "var(--space-l)"
+              : "var(--space-m)",
+          }}
         >
           <h2>{content.vision.title[language]}</h2>
           <p>{content.vision[language]}</p>

@@ -28,14 +28,15 @@
   overflow: hidden;
 }
 
-/* Photo background takes most of the card height */
 .employee-background {
-  flex: 1 1 auto; /* fill available vertical space */
+  flex: 1 1 auto;
   background-size: cover;
-  background-position: center;
+  background-position: center top; /* keep heads visible */
+  background-repeat: no-repeat;
   filter: brightness(0.7);
   transition: filter 0.3s ease;
   z-index: 1;
+  min-height: 240px; /* prevent over-squash on narrow screens */
 }
 
 /* Blue paper background is a distinct bottom section */
@@ -143,7 +144,12 @@
   }
 
   .employee-card {
-    aspect-ratio: auto;
-    height: 400px;
+    aspect-ratio: 3 / 4; /* portrait-style */
+    height: auto; /* let aspect ratio drive height */
+  }
+
+  .employee-background {
+    min-height: 300px; /* more space for face */
+    background-position: center; /* recenter */
   }
 }

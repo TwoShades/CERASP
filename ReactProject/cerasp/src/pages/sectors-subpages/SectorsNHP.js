@@ -13,7 +13,6 @@ export default function SectorsNHP() {
   const content = sectorTranslations.natural_health_product;
   return (
     <main className="subpage-overview">
-      <div className="layout-panel-5"></div>
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"

@@ -22,8 +22,6 @@ const ExpertiseProofConcept = () => {
 
   return (
     <main className="subpage-overview">
-      <div className="layout-panel-5"></div>
-
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"

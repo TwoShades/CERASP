@@ -38,13 +38,13 @@ const ExpertiseLayout = () => {
 
   return (
     <div className="layout-page page-content">
+      {!isMobile && (
+        <div className="layout-panel-5">
+          <ContactIcon />
+        </div>
+      )}
       {isOverview && (
         <>
-          {!isMobile && (
-            <div className="layout-panel-5">
-              <ContactIcon />
-            </div>
-          )}
           <div className="layout-bg-img">
             <img
               src="/photos/FromOldSite/AdobeStock_240748778__-scaled.jpg"
@@ -61,21 +61,18 @@ const ExpertiseLayout = () => {
               <div className="layout-panel-3-4-mobile"></div>
             </>
           )}
+          <aside className="layout-sidebar">
+            <ul>
+              {expertiseSubPages.map((subPage) => (
+                <li key={subPage.id}>
+                  <a href={`/expertise/${subPage.id}`}>
+                    {subPage[language].toUpperCase()}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </aside>{" "}
         </>
-      )}
-
-      {isOverview && (
-        <aside className="layout-sidebar">
-          <ul>
-            {expertiseSubPages.map((subPage) => (
-              <li key={subPage.id}>
-                <a href={`/expertise/${subPage.id}`}>
-                  {subPage[language].toUpperCase()}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </aside>
       )}
 
       <main className="layout-main-content">

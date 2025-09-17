@@ -176,6 +176,12 @@
     padding: 0;
   }
 
+  [class^="subpage-col-"] p {
+    line-height: 1.4;
+    font-size: var(--text-m);
+    padding: 0 0.4em;
+  }
+
   .subpage-intro-grid {
     position: relative;
     display: flex;
@@ -187,7 +193,7 @@
 
   .subpage-intro-grid h1 {
     position: relative;
-    padding: 1em;
+    padding: 0.4em;
     font-size: var(--text-l2);
     color: var(--color-button-blue);
   }
@@ -195,7 +201,7 @@
   .subpage-intro-grid p {
     line-height: 1.4;
     font-size: var(--text-m);
-    padding: 0 2em;
+    padding: 0 0.4em;
   }
 
   .subpage-intro-grid::after {
@@ -206,10 +212,20 @@
     position: absolute;
     content: "";
     height: 1vh;
-    width: 80%;
-    left: 1em;
+    width: 100%;
+    left: 0;
     background-color: var(--color-dodger-blue);
     bottom: 0;
+  }
+
+  .subpage-intro-grid h1::before {
+    position: absolute;
+    content: "";
+    height: 1vh;
+    width: 100%;
+    left: 0;
+    background-color: var(--color-dodger-blue);
+    top: 0;
   }
 
   .subpage-row {

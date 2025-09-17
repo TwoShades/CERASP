@@ -4,7 +4,7 @@ import {
   useInView,
 } from "framer-motion";
 import { useEffect, useRef, useContext } from "react";
-import { ScreenSizeContext } from "../../contexts/ScreenSizeContext"; // 👈 import your context
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 
 const OFFSET = 50;
 
@@ -25,12 +25,9 @@ export default function AnimateObject({
 
   const { isMobile } = useContext(ScreenSizeContext);
 
+  // Run effect always, but do nothing if mobile
   useEffect(() => {
-    if (isMobile) {
-      // 👇 On mobile, just set everything visible instantly
-      controls.set("visible");
-      return;
-    }
+    if (isMobile) return;
 
     if (isInView) {
       controls.start("visible");
@@ -39,28 +36,42 @@ export default function AnimateObject({
     }
   }, [isInView, controls, once, isMobile]);
 
-  // If mobile, skip offsets completely
-  const initialX =
-    !isMobile && Array.isArray(variantsToRun)
-      ? variantsToRun.includes("slideLeft")
-        ? -OFFSET
-        : variantsToRun.includes("slideRight")
-        ? OFFSET
-        : 0
-      : !isMobile && variantsToRun === "slideLeft"
-      ? -OFFSET
-      : !isMobile && variantsToRun === "slideRight"
-      ? OFFSET
-      : 0;
+  // If mobile → plain <div> (no motion)
+  if (isMobile) {
+    return (
+      <div
+        ref={ref}
+        className={className}
+        style={{
+          position: "relative",
+          ...style,
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
 
-  const initialY =
-    !isMobile && Array.isArray(variantsToRun)
-      ? variantsToRun.includes("slideDown")
-        ? -OFFSET
-        : 0
-      : !isMobile && variantsToRun === "slideDown"
+  // ----- Desktop animations only -----
+  const initialX = Array.isArray(variantsToRun)
+    ? variantsToRun.includes("slideLeft")
       ? -OFFSET
-      : 0;
+      : variantsToRun.includes("slideRight")
+      ? OFFSET
+      : 0
+    : variantsToRun === "slideLeft"
+    ? -OFFSET
+    : variantsToRun === "slideRight"
+    ? OFFSET
+    : 0;
+
+  const initialY = Array.isArray(variantsToRun)
+    ? variantsToRun.includes("slideDown")
+      ? -OFFSET
+      : 0
+    : variantsToRun === "slideDown"
+    ? -OFFSET
+    : 0;
 
   const includesFade = Array.isArray(variantsToRun)
     ? variantsToRun.includes("fadeIn")
@@ -70,39 +81,22 @@ export default function AnimateObject({
     ? variantsToRun.includes("slowFadeIn")
     : variantsToRun === "slowFadeIn";
 
-  const variants = isMobile
-    ? {
-        hidden: {
-          opacity: includesFade || includesSlowFade ? 0 : 1,
-          x: 0,
-          y: 0,
-        },
-        visible: {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          transition: {
-            duration: includesSlowFade ? 1 : 0.6,
-            ease: "easeOut",
-          },
-        },
-      }
-    : {
-        hidden: {
-          opacity: includesFade || includesSlowFade ? 0 : 1,
-          x: initialX,
-          y: initialY,
-        },
-        visible: {
-          opacity: 1,
-          x: 0,
-          y: 0,
-          transition: {
-            duration: includesSlowFade ? 1 : 0.6,
-            ease: "easeOut",
-          },
-        },
-      };
+  const variants = {
+    hidden: {
+      opacity: includesFade || includesSlowFade ? 0 : 1,
+      x: initialX,
+      y: initialY,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration: includesSlowFade ? 1 : 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <motion.div

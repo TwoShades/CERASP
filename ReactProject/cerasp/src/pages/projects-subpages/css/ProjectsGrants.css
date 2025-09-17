@@ -40,7 +40,8 @@
   }
 
   .grant-item {
-    font-size: var(--text-m);
-    padding: 1rem;
+    font-size: var(--text-s);
+    padding: 0;
+    margin-bottom: 2em;
   }
 }

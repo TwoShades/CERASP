@@ -74,7 +74,7 @@ const SandboxPage = () => {
 
       {/* Header */}
       <motion.div
-        style={{ position: "relative", zIndex: 9999 }}
+        style={{ position: "relative", zIndex: 99 }}
         variants={headerVariants}
         initial="hidden"
         animate="visible"
@@ -239,6 +239,11 @@ const SandboxPage = () => {
             </motion.div>
           </div>
 
+          {!isMobile && (
+            <div className="layout-panel-5">
+              <AboutUsIcon />
+            </div>
+          )}
           {/* Numbers */}
           <div className="landing-white-box-numbers">
             {data.map(({ number, info }, i) => (
