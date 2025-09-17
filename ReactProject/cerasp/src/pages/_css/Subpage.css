@@ -176,6 +176,12 @@
     padding: 0;
   }
 
+  [class^="subpage-col-"] p {
+    line-height: 1.4;
+    font-size: var(--text-m);
+    padding: 0 0.4em;
+  }
+
   .subpage-intro-grid {
     position: relative;
     display: flex;

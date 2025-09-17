@@ -1,3 +1,14 @@
 .animal-health-photo {
   width: 40vw;
 }
+
+@media screen and (max-width: 768px) {
+  .animal-health-photo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    margin-top: 1.2em;
+    padding: 0;
+  }
+}
