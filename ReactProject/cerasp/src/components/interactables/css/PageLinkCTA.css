@@ -32,6 +32,16 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1200px) {
+  .page-link-cta {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    font-size: var(--text-l2);
+    padding: 0.8em;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .page-link-cta {
     margin-left: auto;

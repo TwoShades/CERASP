@@ -5,7 +5,6 @@ import React, {
 } from "react";
 import "./Pages-css/News.css";
 import AnimateObject from "../components/uicomponents/AnimateObject";
-import ContactCTA from "../components/interactables/ContactCTA";
 import { LanguageContext } from "../contexts/LanguageContext.js";
 import { PropagateLoader } from "react-spinners";
 import scrollToTop from "../utils/scrollToTop.js";
@@ -44,8 +43,10 @@ const News = () => {
     <main className="subpage-overview">
       {isOverviewReady && (
         <>
-          <div className="layout-panel-5"></div>
-          <ContactIcon />
+          <div className="layout-panel-5">
+            {" "}
+            <ContactIcon />
+          </div>
         </>
       )}
 

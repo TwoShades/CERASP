@@ -9,10 +9,8 @@
 }
 
 .contact-icon-wrapper {
-  /* border: 2px dashed green; */
-  position: absolute;
+  margin-top: 600px;
   z-index: 2;
-  bottom: 10vh;
   width: 200px;
   height: 200px;
   display: flex;
@@ -73,4 +71,26 @@
 
 .contact-icon-wrapper:hover .contact-icon-svg {
   fill: var(--icon-hover-color);
+}
+
+@media (max-width: 1200px) {
+  .contact-icon-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-icon-border {
+    height: 90px;
+    width: 90px;
+  }
+
+  .contact-icon-svg {
+    width: 60px;
+    height: 60px;
+    margin-left: 12px;
+  }
+
+  .contact-icon-text h4 {
+    font-size: var(--text-s);
+  }
 }
