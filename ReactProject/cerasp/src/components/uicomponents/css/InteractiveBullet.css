@@ -139,4 +139,12 @@
     letter-spacing: 1px;
     line-height: 1.2;
   }
+
+  .interactive-bullet.hero
+    summary
+    .interactive-bullet-title {
+    font-size: var(--text-m);
+    font-weight: 200;
+    line-height: 1.3;
+  }
 }

@@ -2,3 +2,10 @@
   margin-left: 10vw;
   width: 60vw;
 }
+
+@media screen and (max-width: 768px) {
+  #projects-bullets {
+    margin-left: 5vw;
+    width: 90vw;
+  }
+}
