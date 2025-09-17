@@ -72,7 +72,11 @@ export default function AboutOverview() {
         <AnimateObject
           className="subpage-col-2-5"
           variantsToRun={["slideLeft", "fadeIn"]}
-          style={{ marginBottom: "var(--space-l" }}
+          style={{
+            marginBottom: !isMobile
+              ? "var(--space-l)"
+              : "var(--space-m)",
+          }}
         >
           <h2>{content.mission.title[language]}</h2>
           <p>{content.mission[language]}</p>
@@ -81,7 +85,11 @@ export default function AboutOverview() {
         <AnimateObject
           className="subpage-col-2-5"
           variantsToRun={["slideRight", "fadeIn"]}
-          style={{ marginBottom: "var(--space-l" }}
+          style={{
+            marginBottom: !isMobile
+              ? "var(--space-l)"
+              : "var(--space-m)",
+          }}
         >
           <h2>{content.vision.title[language]}</h2>
           <p>{content.vision[language]}</p>
