@@ -23,8 +23,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease,
     border-color 0.2s ease;
 
-  aspect-ratio: 4 / 5;
-  width: 100%;
+  aspect-ratio: 4 / 6;
   overflow: hidden;
 }
 
@@ -36,7 +35,7 @@
   filter: brightness(0.7);
   transition: filter 0.3s ease;
   z-index: 1;
-  min-height: 240px; /* prevent over-squash on narrow screens */
+  height: 500px; /* prevent over-squash on narrow screens */
 }
 
 /* Blue paper background is a distinct bottom section */
