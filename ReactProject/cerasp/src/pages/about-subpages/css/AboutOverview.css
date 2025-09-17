@@ -19,3 +19,15 @@
   left: 0vw;
   background-color: rgb(193, 232, 255);
 }
+
+@media screen and (max-width: 768px) {
+  #about-overview-secondary-content::after {
+    display: none;
+  }
+
+  #about-overview-bullets {
+    padding: 0;
+    width: 100vw;
+    margin-top: 2em;
+  }
+}

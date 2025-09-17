@@ -17,6 +17,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.5em;
   font-size: var(--text-l2);
 }
@@ -28,11 +29,14 @@
 .interactive-bullet-icon {
   font-weight: 200;
   font-size: 1.2em;
-  width: 1em;
+  width: 32px;
   display: inline-block;
   text-align: center;
   user-select: none;
   position: relative;
+  flex-shrink: 0; /* don’t let it compress */
+  min-width: 32px; /* force the column width */
+  text-align: center;
 }
 
 .interactive-bullet-icon::before {
@@ -115,12 +119,13 @@
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
   .interactive-bullet-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    padding-right: 1vw;
   }
 
   .interactive-bullet-icon {
-    font-size: 1em;
-    padding-right: 0;
+    padding-right: 0.2em;
+    padding-left: 1em;
   }
 
   .interactive-bullet-description {
