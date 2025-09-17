@@ -54,7 +54,7 @@ const SectorsAnimalHealth = () => {
       </section>
       <PageLinkCTA
         text={
-          language === "fr"
+          language === "en"
             ? "Pharmaceutical / Biopharmaceutical"
             : "Pharmaceutique / Biopharmaceutique"
         }
