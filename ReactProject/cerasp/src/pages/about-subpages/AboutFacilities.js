@@ -13,7 +13,6 @@ export default function AboutFacilities() {
   );
   return (
     <main className="subpage-overview">
-      <ContactIcon />
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"

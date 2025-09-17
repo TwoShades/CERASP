@@ -20,6 +20,17 @@ const Footer = () => {
               width="200px"
             />
           </div>
+          <div className="footer-privacy">
+            <a
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {language === "fr"
+                ? "Politique de confidentialité"
+                : "Privacy Policy"}
+            </a>
+          </div>
         </div>
       )}
       <div className="footer-links-and-contact">
@@ -77,20 +88,21 @@ const Footer = () => {
               src="/logos/partners/cerasp-member.jpg"
               alt="Members"
             />
+            {isMobile && (
+              <div className="footer-privacy-mobile">
+                <a
+                  href="/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {language === "fr"
+                    ? "Politique de confidentialité"
+                    : "Privacy Policy"}
+                </a>
+              </div>
+            )}
           </div>
         </div>
-      </div>
-
-      <div className="footer-privacy">
-        <a
-          href="/privacy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {language === "fr"
-            ? "Politique de confidentialité"
-            : "Privacy Policy"}
-        </a>
       </div>
     </footer>
   );

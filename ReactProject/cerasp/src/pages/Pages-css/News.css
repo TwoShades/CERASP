@@ -12,14 +12,14 @@
   z-index: 1;
 }
 
-#news-iframe-wrapper {
+.news-iframe-wrapper {
   margin-left: 20vw;
   margin-bottom: var(--space-l);
   width: 50%;
   height: 75vh;
 }
 
-#news-iframe-wrapper iframe {
+.news-iframe-wrapper iframe {
   border: none !important;
 }
 
@@ -41,10 +41,9 @@
     padding-right: 0;
   }
 
-  #news-iframe-wrapper {
+  .news-iframe-wrapper {
     margin-left: 5vw;
     margin-bottom: var(--space-s);
-    /* margin-top: var(--space-l); */
     width: 70vw;
     max-height: 75vh;
     min-height: 40vh;
@@ -52,10 +51,10 @@
 }
 
 @media (max-width: 768px) {
-  #news-iframe-wrapper {
+  .news-iframe-wrapper {
     margin-left: 5vw;
     margin-bottom: var(--space-s);
-    margin-top: var(--space-l);
+    margin-top: var(--space-m);
     width: 90vw;
     max-height: 75vh;
     min-height: 40vh;

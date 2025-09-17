@@ -63,7 +63,7 @@ const ProjectsLayout = () => {
         {" "}
         <ContactIcon />
       </div>
-      {projectsData && (
+      {projectsData !== null && (
         <>
           <div className="subpage-flex-column">
             <div id="projects-bullets">

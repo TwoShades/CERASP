@@ -195,7 +195,7 @@
   [class^="subpage-col-"] p {
     line-height: 1.4;
     font-size: var(--text-m);
-    padding: 0 0.4em;
+    padding: 0 0.8em;
   }
 
   .subpage-intro-grid {

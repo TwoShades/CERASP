@@ -17,3 +17,20 @@
   margin-left: 10vw;
   font-size: var(--text-l2);
 }
+
+@media screen and (max-width: 768px) {
+  .pharma-biopharma-bullets h2 {
+    margin-top: 2em;
+    font-size: var(--text-m);
+    font-weight: 400;
+  }
+
+  .pharma-biopharma-bullets ul::after {
+    width: 4vw;
+  }
+
+  .pharma-biopharma-bullets li {
+    margin-left: 4vw;
+    font-size: var(--text-m);
+  }
+}
