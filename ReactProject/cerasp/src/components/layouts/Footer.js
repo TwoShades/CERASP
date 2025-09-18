@@ -53,12 +53,18 @@ const Footer = () => {
             <span>info@cerasp.ca</span>
           </div>
           <div className="map-icon">
-            <img
-              src="/logos/google-maps.png"
-              height="50px"
-              width="50px"
-              alt="CERASP Location"
-            />
+            <a
+              href="https://maps.app.goo.gl/RT5mEJW8QHzFsext5"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/logos/google-maps.png"
+                height="50px"
+                width="50px"
+                alt="CERASP Location"
+              />
+            </a>
           </div>
         </div>
       </div>
