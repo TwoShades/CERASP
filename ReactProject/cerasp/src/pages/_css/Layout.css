@@ -196,6 +196,15 @@
   padding: 0;
 }
 
+.layout-align-icons {
+  padding: 10em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 .layout-panel-5-transp {
   position: fixed;
   z-index: 1;

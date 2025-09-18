@@ -6,6 +6,7 @@ import { ScreenSizeContext } from "../contexts/ScreenSizeContext";
 import landingTranslations from "./landing-translations.json";
 import { useContext, useState, useEffect } from "react";
 import AboutUsIcon from "../components/interactables/AboutUsIcon";
+import ContactIcon from "../components/interactables/ContactIcon";
 import Header from "../components/layouts/Header";
 
 import {
@@ -192,8 +193,9 @@ const SandboxPage = () => {
                 : content.fr.description}
             </p>
             {isFullScreen && (
-              <div className="layout-panel-5">
+              <div className="layout-panel-5 layout-align-icons">
                 <AboutUsIcon />
+                <ContactIcon className="layout-contact-icon-margin" />
               </div>
             )}
 

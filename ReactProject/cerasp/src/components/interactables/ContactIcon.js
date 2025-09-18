@@ -6,7 +6,10 @@ import useLenis from "../../hooks/useLenis";
 import { useNavigate } from "react-router-dom";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 
-const ContactIcon = ({ theme = "contact-icon-light" }) => {
+const ContactIcon = ({
+  theme = "contact-icon-light",
+  className = "",
+}) => {
   const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
   const { scrollToTopWithLenis } = useLenis();
@@ -16,10 +19,11 @@ const ContactIcon = ({ theme = "contact-icon-light" }) => {
     scrollToTopWithLenis();
     navigate("/contact-us");
   };
+
   return (
     !isMobile && (
       <div
-        className={`contact-icon-wrapper ${theme}`}
+        className={`contact-icon-wrapper ${theme} ${className}`}
         onClick={handleClick}
       >
         <div className="contact-icon-border">
@@ -36,5 +40,4 @@ const ContactIcon = ({ theme = "contact-icon-light" }) => {
     )
   );
 };
-
 export default ContactIcon;

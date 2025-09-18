@@ -152,7 +152,7 @@
   position: absolute;
   text-align: center;
   color: white;
-  top: 40%;
+  top: 60%;
   left: 50%;
 }
 
@@ -163,7 +163,7 @@
 
 .landing-subtext {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -312,6 +312,22 @@
     font-size: var(--text-s);
     text-align: left;
     font-weight: 200;
+  }
+
+  .landing-content-alignment {
+    top: 40%;
+    left: 50%;
+  }
+
+  .landing-logo img {
+    transform: translate(-50%, -125%);
+    width: 600px;
+  }
+
+  .landing-subtext {
+    position: absolute;
+    top: 40%;
+    left: 50%;
   }
 }
 
