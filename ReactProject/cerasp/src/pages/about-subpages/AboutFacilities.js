@@ -28,7 +28,7 @@ export default function AboutFacilities() {
             : "CERASP has three platforms available across Montreal."}
         </p>
       </AnimateObject>
-      <section className="subpage-row">
+      <section className="subpage-row-no-margin">
         <div className="subpage-col-2-4 about-facilities-map-container">
           <h2 id="about-facilities-map-title">
             {language === "fr"
@@ -50,7 +50,7 @@ export default function AboutFacilities() {
           )}
         </div>
       </section>
-      <section className="subpage-row">
+      <section className="subpage-row-no-margin">
         <div className="subpage-col-1-3 about-facilities-image">
           <img
             src={`/photos/facilities/${
@@ -75,7 +75,7 @@ export default function AboutFacilities() {
           </p>
         </div>
       </section>
-      <section className="subpage-row">
+      <section className="subpage-row-no-margin">
         <div className="subpage-col-1-3 about-facilities-names">
           <h2>Cégep Gérald-Godin</h2>
           <p>

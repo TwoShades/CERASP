@@ -27,15 +27,6 @@ export default function AboutOverview() {
       </AnimateObject>
 
       <section className="subpage-row">
-        <div className="subpage-col-1-5">
-          <img
-            src="/photos/FromOldSite/biotech-scaled.jpg"
-            alt="Biotech facility"
-          />
-        </div>
-      </section>
-
-      <section className="subpage-row">
         {!isMobile && (
           <AnimateObject className="subpage-col-1-3">
             <img
@@ -50,14 +41,7 @@ export default function AboutOverview() {
           style={{ padding: "30% 0 0 0" }}
         >
           <p>{content.overviewB[language]}</p>
-        </AnimateObject>
-      </section>
-
-      <section className="subpage-row">
-        <AnimateObject
-          direction="right"
-          className="subpage-col-1-5"
-        >
+          <br></br>
           <p>{content.overviewC[language]}</p>
         </AnimateObject>
       </section>
@@ -67,11 +51,11 @@ export default function AboutOverview() {
         id="about-overview-secondary-content"
       >
         <AnimateObject
-          className="subpage-col-2-5"
+          className="subpage-col-1-4 overview-secondary-item"
           variantsToRun={["slideLeft", "fadeIn"]}
           style={{
             marginBottom: !isMobile
-              ? "var(--space-l)"
+              ? "var(--space-m)"
               : "var(--space-m)",
           }}
         >
@@ -80,7 +64,7 @@ export default function AboutOverview() {
         </AnimateObject>
 
         <AnimateObject
-          className="subpage-col-2-5"
+          className="subpage-col-1-4 overview-secondary-item"
           variantsToRun={["slideRight", "fadeIn"]}
           style={{
             marginBottom: !isMobile
@@ -92,7 +76,7 @@ export default function AboutOverview() {
           <p>{content.vision[language]}</p>
         </AnimateObject>
         <AnimateObject
-          className="subpage-col-2-5"
+          className="subpage-col-1-4 overview-secondary-item"
           variantsToRun={["slideLeft", "fadeIn"]}
         >
           <h2>{content.values.title[language]}</h2>
