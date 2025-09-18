@@ -53,7 +53,7 @@ const AboutEquipments = () => {
     fetchEquipments();
   }, [language]);
 
-  const itemsPerPage = isMobile ? 2 : isTablet ? 2 : 3;
+  const itemsPerPage = 2;
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = allEquipments.slice(
@@ -78,7 +78,6 @@ const AboutEquipments = () => {
 
   return (
     <main className="subpage-overview">
-      <div className="layout-panel-5-transp" />
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"

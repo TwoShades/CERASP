@@ -54,10 +54,10 @@ const SectorsAnimalHealth = () => {
       <PageLinkCTA
         text={
           language === "en"
-            ? "Pharmaceutical / Biopharmaceutical"
-            : "Pharmaceutique / Biopharmaceutique"
+            ? "Pharmaceuticals / Biopharmaceuticals"
+            : "Pharmaceutiques / Biopharmaceutiques"
         }
-        url="/sector-of-activities/pharmaceutical-biopharmaceutical"
+        url="/sector-of-activities/pharmaceuticals-biopharmaceuticals"
       />
     </main>
   );

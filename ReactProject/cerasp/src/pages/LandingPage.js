@@ -167,7 +167,7 @@ const SandboxPage = () => {
                 exit={{ opacity: 0 }}
               >
                 {language === "en"
-                  ? "Versatile. Expert. Aware."
+                  ? "Versatile. Expert. Informed."
                   : "Versatile. Expert. Avisé."}
               </motion.p>
             )}

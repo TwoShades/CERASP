@@ -42,9 +42,9 @@
       },
       "sub-pages": [
         {
-          "id": "pharmaceutical-biopharmaceutical",
-          "en": "Pharmaceutical / Biopharmaceutical",
-          "fr": "Pharmaceutique / Biopharmaceutique"
+          "id": "pharmaceuticals-biopharmaceuticals",
+          "en": "Pharmaceuticals / Biopharmaceuticals",
+          "fr": "Pharmaceutiques / Biopharmaceutiques"
         },
         {
           "id": "animal-health",
@@ -71,8 +71,8 @@
     {
       "page-id": "expertise",
       "nav": {
-        "en": "Expertises & Solutions",
-        "fr": "Expertises & Solutions"
+        "en": "Expertise & Solutions",
+        "fr": "Expertise & Solutions"
       },
       "sub-pages": [
         {

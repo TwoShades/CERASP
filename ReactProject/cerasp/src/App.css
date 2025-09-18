@@ -60,13 +60,13 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: repeating-linear-gradient(
+  /* background: repeating-linear-gradient(
     to right,
     transparent 0,
     transparent calc(20vw - 1px),
     var(--gridline-light-blue) calc(20vw - 2px),
     var(--gridline-light-blue) 20vw
-  );
+  ); */
 }
 
 .background-triangles {

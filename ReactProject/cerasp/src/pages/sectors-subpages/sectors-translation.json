@@ -11,16 +11,16 @@
   },
   "pharmaceutical_biopharmaceutical": {
     "title": {
-      "en": "PHARMACEUTICAL / BIOPHARMACEUTICAL",
-      "fr": "PHARMACEUTIQUE / BIOPHARMACEUTIQUE"
+      "en": "PHARMACEUTICALS / BIOPHARMACEUTICALS",
+      "fr": "PHARMACEUTIQUES / BIOPHARMACEUTIQUES"
     },
     "contentA": {
       "en": "We support pharmaceutical and biomanufacturing companies in developing and commercializing safe, effective medicines. Our expertise ensures regulatory compliance, quality assurance, operational efficiency, and GMP readiness.",
       "fr": "Nous guidons des entreprises pharmaceutiques et de biofabrication dans le développement et la commercialisation de médicaments sûrs et efficaces. Notre expertise assure la conformité réglementaire, l’assurance qualité, l’efficacité opérationnelle et la préparation aux exigences des BPF (Bonnes Pratiques de Fabrication)."
     },
     "contentB": {
-      "en": "In the fast-evolving biopharmaceutical sector, we bring deep scientific and regulatory knowledge to accelerate the development of a wide range of products — from small molecules and traditional biologics to advanced therapies, specialty biopolymers, and drug delivery systems. Biotech innovation is at the core of modern healthcare, and we deliver solutions that drive both scientific advancement and operational scalability.",
-      "fr": "Le secteur biopharmaceutique étant en constante évolution, nous apportons une connaissance scientifique et réglementaire de pointe aidant à accélérer le développement d’une large gamme de produits — allant des petites molécules et des biologiques traditionnels aux thérapies avancées, biopolymères spécialisés et systèmes d’administration de médicaments. L’innovation en biotechnologie est au cœur des soins en santé auxquels nous proposons des solutions qui favorisent à la fois le progrès scientifique et la mise à l’échelle opérationnelle."
+      "en": " In the fast-evolving biopharmaceutical sector, we bring deep scientific and regulatory knowledge to accelerate the development of a wide range of products, from small molecules and traditional biologics to advanced therapies, specialty biopolymers, and drug delivery systems. Biotech innovation is at the core of modern healthcare, and we deliver solutions that drive both scientific advancement and operational scalability.",
+      "fr": " Le secteur biopharmaceutique étant en constante évolution, nous apportons une connaissance scientifique et réglementaire de pointe aidant à accélérer le développement d’une large gamme de produits, allant des petites molécules et des biologiques traditionnels aux thérapies avancées, biopolymères spécialisés et systèmes d’administration de médicaments. L’innovation en biotechnologie est au cœur des soins en santé auxquels nous proposons des solutions qui favorisent à la fois le progrès scientifique et la mise à l’échelle opérationnelle."
     },
     "bulletTitle": {
       "en": "At CERASP, we support innovation through:",
@@ -55,11 +55,11 @@
   },
   "natural_health_product": {
     "title": {
-      "en": "NATURAL HEALTH PRODUCT",
-      "fr": "PRODUIT DE SANTÉ NATUREL"
+      "en": "NATURAL HEALTH PRODUCTS",
+      "fr": "PRODUITS DE SANTÉ NATURELS"
     },
     "contentA": {
-      "en": "We support the development and market readiness of natural health products, ensuring regulatory compliance while preserving the integrity of natural ingredients.",
+      "en": "We support the development and market-readiness of natural health products, ensuring regulatory compliance while preserving the integrity of natural ingredients.",
       "fr": "Nous soutenons le développement, la formulation et la mise sur le marché des produits de santé naturels, en garantissant la conformité réglementaire tout en préservant l’intégrité des ingrédients naturels. "
     },
     "contentB": {
