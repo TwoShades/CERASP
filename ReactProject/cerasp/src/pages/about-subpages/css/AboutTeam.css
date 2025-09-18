@@ -11,7 +11,9 @@
 @media screen and (max-width: 1200px) {
   .team-cards {
     width: 100%;
-    gap: 2em;
+    gap: 1em;
+    margin-top: 0;
+    padding-top: 3em;
   }
 }
 

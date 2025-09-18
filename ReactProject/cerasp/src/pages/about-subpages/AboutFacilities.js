@@ -25,10 +25,31 @@ export default function AboutFacilities() {
         <p>
           {language === "fr"
             ? "Le CERASP compte trois sites répartis à travers Montréal."
-            : "The CERASP has three platforms available across Montreal."}
+            : "CERASP has three platforms available across Montreal."}
         </p>
       </AnimateObject>
-
+      <section className="subpage-row">
+        <div className="subpage-col-2-4 about-facilities-map-container">
+          <h2 id="about-facilities-map-title">
+            {language === "fr"
+              ? "Où nous trouver"
+              : "Where to find us"}
+          </h2>
+          {language === "fr" ? (
+            <img
+              src="/photos/facilities/cerasp-map-fr.jpg"
+              alt="CERASP Map"
+              id="about-facilities-map"
+            />
+          ) : (
+            <img
+              src="/photos/facilities/cerasp-map-en.jpg"
+              alt="CERASP Map"
+              id="about-facilities-map"
+            />
+          )}
+        </div>
+      </section>
       <section className="subpage-row">
         <div className="subpage-col-1-3 about-facilities-image">
           <img
@@ -94,28 +115,6 @@ export default function AboutFacilities() {
               ? "Laboratoire de recherche et développement"
               : "Research laboratory and development"}
           </p>
-        </div>
-      </section>
-      <section className="subpage-row">
-        <div className="subpage-col-2-4 about-facilities-map-container">
-          <h2 id="about-facilities-map-title">
-            {language === "fr"
-              ? "Où nous trouver"
-              : "Where to find us"}
-          </h2>
-          {language === "fr" ? (
-            <img
-              src="/photos/facilities/cerasp-map-fr.jpg"
-              alt="CERASP Map"
-              id="about-facilities-map"
-            />
-          ) : (
-            <img
-              src="/photos/facilities/cerasp-map-en.jpg"
-              alt="CERASP Map"
-              id="about-facilities-map"
-            />
-          )}
         </div>
       </section>
     </main>

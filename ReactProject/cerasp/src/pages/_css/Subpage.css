@@ -30,6 +30,13 @@
   justify-content: center;
 }
 
+.subpage-left-all {
+  padding-left: 10vw;
+  width: 60vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .subpage-col-flex {
   display: flex;
   flex-direction: column;

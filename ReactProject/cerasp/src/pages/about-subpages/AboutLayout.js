@@ -49,16 +49,10 @@ const AboutLayout = () => {
         </>
       )}
 
-      {(location.pathname === "/about" ||
-        location.pathname === "/about/facilities" ||
-        location.pathname === "/about/overview") && (
-        <>
-          {!isMobile && (
-            <div className="layout-panel-5">
-              <ContactIcon />
-            </div>
-          )}
-        </>
+      {!isMobile && (
+        <div className="layout-panel-5">
+          <ContactIcon />
+        </div>
       )}
 
       {isOverview && (

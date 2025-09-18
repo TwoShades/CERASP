@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/Employee.css"; // reuse the same styles
+import "./css/BoardMember.css";
 import AnimateObject from "./AnimateObject";
 
 const BoardMember = ({ member }) => {
@@ -20,22 +20,21 @@ const BoardMember = ({ member }) => {
   return (
     <AnimateObject
       variantsToRun={"slowFadeIn"}
-      className="employee-card" // same styling as Employee
+      className="board-member-card"
     >
       {/* Background image div */}
       <div
-        className="employee-background"
+        className="board-member-background"
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
 
-      {/* Blue paper background div - separate bottom section */}
-      <div className="employee-blue-paper-background">
+      {/* Blue paper background div */}
+      <div className="board-member-blue-paper-background">
         <h3>{finalMember.Name}</h3>
         <p>{finalMember.Title}</p>
         <p
           style={{
             marginTop: "0.5em",
-            // fontStyle: "italic",
             fontWeight: "600",
           }}
         >

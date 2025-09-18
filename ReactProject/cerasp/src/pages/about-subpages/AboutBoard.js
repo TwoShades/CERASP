@@ -7,10 +7,12 @@ import "./css/AboutTeam.css";
 import "../_css/Subpage.css";
 import BoardMember from "../../components/uicomponents/BoardMember";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
 
 export default function AboutBoard() {
   const { language } = useContext(LanguageContext);
+  const { isMobile } = useContext(ScreenSizeContext); // <--- use this
   const [boardMembers, setBoardMembers] = useState([]);
 
   useEffect(() => {
@@ -48,9 +50,7 @@ export default function AboutBoard() {
           const indexA = customOrder.indexOf(a.Name);
           const indexB = customOrder.indexOf(b.Name);
 
-          if (indexA === -1 && indexB === -1) {
-            return 0;
-          }
+          if (indexA === -1 && indexB === -1) return 0;
           if (indexA === -1) return 1;
           if (indexB === -1) return -1;
           return indexA - indexB;
@@ -69,34 +69,30 @@ export default function AboutBoard() {
   }, [language]);
 
   return (
-    <>
-      <main className="subpage-overview subpage-center-all">
-        <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-intro-grid"
-        >
-          <h1>
-            {language === "fr"
-              ? "MEMBRES DU CONSEIL"
-              : "BOARD MEMBERS"}
-          </h1>
-        </AnimateObject>
-        <section className="subpage-center-all">
-          <div className="team-cards">
-            {boardMembers.map((member) => (
-              <BoardMember
-                key={member.id}
-                member={member}
-              />
-            ))}
-          </div>
-        </section>
-      </main>
-      {boardMembers.length > 0 && (
-        <>
-          <div className="layout-panel-5-transp" />
-        </>
-      )}
-    </>
+    <main className="subpage-overview">
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>
+          {language === "fr"
+            ? "MEMBRES DU CONSEIL"
+            : "BOARD MEMBERS"}
+        </h1>
+      </AnimateObject>
+      <section
+        className={
+          isMobile
+            ? "subpage-center-all"
+            : "subpage-left-all"
+        }
+      >
+        <div className="team-cards">
+          {boardMembers.map((member) => (
+            <BoardMember key={member.id} member={member} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
