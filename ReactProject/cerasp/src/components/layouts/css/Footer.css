@@ -197,6 +197,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2em;
+    background-color: white;
   }
 
   .footer > .footer-logo,
