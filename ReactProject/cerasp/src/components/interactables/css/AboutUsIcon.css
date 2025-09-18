@@ -9,10 +9,8 @@
 }
 
 .about-us-icon-wrapper {
-  position: fixed;
+  /* position: fixed; */
   z-index: 2;
-  right: 4vw;
-  top: 24vh;
   width: 200px;
   height: 200px;
   display: flex;

@@ -9,8 +9,8 @@
 }
 
 .contact-icon-wrapper {
-  margin-top: 600px;
   z-index: 2;
+  margin-top: 600px;
   width: 200px;
   height: 200px;
   display: flex;
@@ -20,6 +20,11 @@
   cursor: pointer;
   transition: border-color 0.2s ease, transform 0.2s ease;
   padding: 10px;
+}
+
+.layout-contact-icon-margin {
+  margin-top: 0 !important;
+  margin-bottom: 90px;
 }
 
 .contact-icon-border {

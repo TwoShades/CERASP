@@ -3,7 +3,7 @@ import "./ContactUs.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import contactTranslations from "./contact-translations.json";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
-import "../_css/Subpage.css";
+// import "../_css/Subpage.css";
 import emailjs from "@emailjs/browser";
 import axios from "axios";
 import Footer from "../../components/layouts/Footer";
