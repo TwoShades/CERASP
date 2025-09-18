@@ -40,7 +40,10 @@ const ExpertiseLayout = () => {
     <div className="layout-page page-content">
       {!isMobile && (
         <div className="layout-panel-5">
-          <ContactIcon />
+          <div className="subpage-panel-5-text">
+            {location.pathname === "/expertise" && overview}
+          </div>
+          <ContactIcon className="ex-sec-contact-icon" />
         </div>
       )}
       {isOverview && (
