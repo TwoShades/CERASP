@@ -79,8 +79,8 @@ const AboutLayout = () => {
 
       <main className="layout-main-content">
         <Outlet />
+        {location.pathname !== "/about" && <Footer />}
       </main>
-      {location.pathname !== "/about" && <Footer />}
     </div>
   );
 };
