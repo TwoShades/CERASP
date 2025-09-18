@@ -443,4 +443,12 @@
   .landing-subtext-larger {
     font-size: 2.5rem !important;
   }
+
+  .landing-content-alignment {
+    top: 40%;
+  }
+
+  .landing-subtext {
+    top: 40%;
+  }
 }
