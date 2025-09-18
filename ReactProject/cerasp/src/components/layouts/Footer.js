@@ -68,7 +68,7 @@ const Footer = () => {
           <h2 className="partner-with">
             {language === "fr"
               ? "CERASP est partenaire de :"
-              : "CERASP is partnering with:"}
+              : "CERASP is a partner of:"}
           </h2>
           <div className="partner-logos">
             <img
