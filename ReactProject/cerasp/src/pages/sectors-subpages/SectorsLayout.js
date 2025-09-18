@@ -35,7 +35,8 @@ const SectorsLayout = () => {
       {!isMobile && (
         <div className="layout-panel-5">
           <div className="subpage-panel-5-text">
-            {overview}
+            {location.pathname ===
+              "/sector-of-activities" && overview}
           </div>
           <ContactIcon className="ex-sec-contact-icon" />
         </div>
