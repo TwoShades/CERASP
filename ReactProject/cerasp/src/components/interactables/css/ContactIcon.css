@@ -27,6 +27,11 @@
   margin-bottom: 90px;
 }
 
+.ex-sec-contact-icon {
+  margin-top: 40px !important;
+  margin-bottom: 0 !important;
+}
+
 .contact-icon-border {
   border: 3px solid var(--icon-color);
   height: 120px;

@@ -99,7 +99,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 14vw;
+  width: 10vw;
   aspect-ratio: 1 / 1;
   border: 1px solid rgba(24, 135, 226, 0.356);
   border-radius: 2px;
@@ -110,13 +110,13 @@
 }
 
 .landing-white-box-item .number {
-  font-size: var(--text-l4);
+  font-size: var(--text-l3);
   color: var(--color-button-blue);
 }
 
 .landing-white-box-item .info {
   text-align: center;
-  font-size: var(--text-m);
+  font-size: var(--text-s);
   font-weight: 200;
 }
 
