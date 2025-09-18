@@ -83,7 +83,7 @@ function App() {
           element={<SectorsLayout />}
         >
           <Route
-            path="pharmaceutical-biopharmaceutical"
+            path="pharmaceuticals-biopharmaceuticals"
             element={<SectorsPharmaBiopharma />}
           />
           <Route
