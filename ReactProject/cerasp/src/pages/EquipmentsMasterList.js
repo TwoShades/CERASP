@@ -10,6 +10,8 @@ import scrollToTop from "../utils/scrollToTop";
 import { useLocation } from "react-router-dom";
 import "./_css/Subpage.css";
 import AnimateObject from "../components/uicomponents/AnimateObject";
+import ContactIcon from "../components/interactables/ContactIcon";
+import Footer from "../components/layouts/Footer";
 
 export default function EquipmentByLocation() {
   const { language } = useContext(LanguageContext);
@@ -58,27 +60,30 @@ export default function EquipmentByLocation() {
 
   return (
     <div className="page-content">
+      <div className="layout-panel-5">
+        <ContactIcon />
+      </div>
+      <AnimateObject
+        variantsToRun={["slideLeft", "fadeIn"]}
+        className="subpage-intro-grid"
+      >
+        <h1>
+          {language === "fr"
+            ? "LISTE DES ÉQUIPEMENTS"
+            : "EQUIPMENT LIST"}
+        </h1>
+        <p>
+          {language === "fr" ? (
+            <p>
+              Une vue d’ensemble de tout notre équipement.
+            </p>
+          ) : (
+            <p>An overview of all our equipment.</p>
+          )}
+        </p>
+      </AnimateObject>
       <div className="equipment-section">
-        <AnimateObject
-          variantsToRun={["slideLeft", "fadeIn"]}
-          className="subpage-intro-grid"
-        >
-          <h1>
-            {language === "fr"
-              ? "LISTE DES ÉQUIPEMENTS"
-              : "EQUIPMENT LIST"}
-          </h1>
-          <p>
-            {language === "fr" ? (
-              <p>
-                Une vue d’ensemble de tout notre équipement.
-              </p>
-            ) : (
-              <p>An overview of all our equipment.</p>
-            )}
-          </p>
-        </AnimateObject>
-        <ul className="equipment-items flat-list">
+        <ul className="equipment-list-items flat-list">
           {equipmentList.map((item) => (
             <li key={item.id} className="equipment-item">
               {item.name}
@@ -86,6 +91,7 @@ export default function EquipmentByLocation() {
           ))}
         </ul>
       </div>
+      <Footer />
     </div>
   );
 }
