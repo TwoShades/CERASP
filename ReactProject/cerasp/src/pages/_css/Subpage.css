@@ -181,7 +181,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   [class^="subpage-col-"] {
     display: block;
     font-size: var(--text-l3);
