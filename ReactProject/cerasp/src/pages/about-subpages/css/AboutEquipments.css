@@ -160,6 +160,27 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .about-equipments-images {
+    display: flex;
+    flex-direction: column; /* stack everything vertically */
+    align-items: center;
+    width: 90vw;
+    padding: 0;
+    gap: 1em;
+    margin: 2em auto 0 auto;
+  }
+
+  .equipment-card {
+    width: 40%;
+    height: 240px;
+  }
+
+  .equipment-card-footer h4 {
+    font-size: 0.95rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .about-equipments-images {
     display: flex;
@@ -173,12 +194,8 @@
   }
 
   .equipment-card {
-    width: 85%;
+    width: 80%;
     height: 200px;
-  }
-
-  .equipment-card-footer h4 {
-    font-size: 0.95rem;
   }
 }
 

@@ -31,7 +31,7 @@
   transform: scale(1.01);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .subpage-row {
     display: flex;
     flex-direction: column; /* Stack instead of grid */
