@@ -54,13 +54,26 @@ const Navigation = () => {
 
       <nav className="nav" ref={navRef}>
         {(isMobile || isTablet) && (
-          <button
-            className="hamburger"
-            onClick={() => setMenuOpen((prev) => !prev)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? "✖" : "☰"}
-          </button>
+          <>
+            <a
+              href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/logos/linkedinlogo.png"
+                alt="LinkedIn Logo"
+                className="nav-linkedin"
+              />
+            </a>
+            <button
+              className="hamburger"
+              onClick={() => setMenuOpen((prev) => !prev)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? "✖" : "☰"}
+            </button>
+          </>
         )}
 
         <ul
