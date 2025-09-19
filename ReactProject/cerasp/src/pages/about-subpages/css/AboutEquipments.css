@@ -139,6 +139,17 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 1200px) {
+  .about-equipments-images {
+    display: flex;
+    flex-direction: column; /* stack everything vertically */
+    align-items: center;
+    width: 80vw;
+    padding: 0;
+    gap: 3em;
+    margin-top: 0vh;
+    margin-bottom: 0em;
+  }
+
   .equipment-card {
     width: 36%;
     height: 250px;
@@ -149,10 +160,21 @@
   }
 }
 
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 768px) {
+  .about-equipments-images {
+    display: flex;
+    flex-direction: column; /* stack everything vertically */
+    align-items: center;
+    width: 100vw;
+    padding: 0;
+    gap: 1em;
+    margin-top: 0vh;
+    margin-bottom: 0em;
+  }
+
   .equipment-card {
     width: 85%;
-    height: 220px;
+    height: 200px;
   }
 
   .equipment-card-footer h4 {

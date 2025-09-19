@@ -50,7 +50,11 @@ export default function AboutFacilities() {
           )}
         </div>
       </section>
-      <section className="subpage-row-no-margin">
+      <section
+        className={
+          isMobile ? "subpage-row" : "subpage-row-no-margin"
+        }
+      >
         <div className="subpage-col-1-3 about-facilities-image">
           <img
             src={`/photos/facilities/${
@@ -75,7 +79,11 @@ export default function AboutFacilities() {
           </p>
         </div>
       </section>
-      <section className="subpage-row-no-margin">
+      <section
+        className={
+          isMobile ? "subpage-row" : "subpage-row-no-margin"
+        }
+      >
         <div className="subpage-col-1-3 about-facilities-names">
           <h2>Cégep Gérald-Godin</h2>
           <p>
@@ -84,7 +92,7 @@ export default function AboutFacilities() {
               : "Prototyping, small-scale manufacturing and testing"}
           </p>
         </div>
-        <div className="subpage-col-3-5 about-facilities-image">
+        <div className="subpage-col-1-5 about-facilities-image">
           <img
             src={`/photos/facilities/${
               isFullScreen
@@ -95,7 +103,11 @@ export default function AboutFacilities() {
           />{" "}
         </div>
       </section>
-      <section className="subpage-row">
+      <section
+        className={
+          isMobile ? "subpage-row" : "subpage-row-no-margin"
+        }
+      >
         <div className="subpage-col-1-3 about-facilities-image">
           <img
             src={`/photos/facilities/${
