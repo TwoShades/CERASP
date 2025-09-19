@@ -13,8 +13,8 @@ export const ScreenSizeProvider = ({ children }) => {
 
   const checkScreenSize = () => {
     const width = window.innerWidth;
-    setIsMobile(width <= 768);
-    setIsTablet(width <= 1200 && width > 768);
+    setIsMobile(width <= 900);
+    setIsTablet(width <= 1200 && width > 900);
     setIsFullScreen(width > 1200);
   };
 
