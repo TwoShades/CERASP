@@ -1,57 +1,66 @@
+/* Section wrapper */
 .equipment-section {
-  padding-top: 90px;
   margin-bottom: 60px;
+  text-align: center;
 }
 
-.equipment-list {
-  padding: 1em 4em;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
+/* The UL wrapper */
+.equipment-list-items {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 2em 15vw;
+  max-width: 800px;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(55vw, 1fr)
+  );
+  gap: 0em;
 }
 
-.equipment-location {
-  background: linear-gradient(135deg, #f9fafb, #e2e8f0);
-  border-left: 6px solid #0056b3;
-  padding: 1.5em;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
-}
-
-.location-title {
-  margin-bottom: 0.8em;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #1f2937;
-}
-
-.equipment-items {
-  list-style-type: none;
-  padding-left: 2em;
-  margin: 0;
+.equipment-list-items::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -5em;
+  width: 2vw;
+  height: 100%;
+  background-color: var(--color-dodger-blue);
 }
 
 .equipment-item {
-  font-size: 1rem;
-  color: #374151;
-  margin-bottom: 0.4em;
+  position: relative;
+  background: #ffffff;
+  border: none; /* remove border */
+  border-radius: 0;
+  padding: 1em 1em 1em 2em; /* add left padding for bullet */
+  text-align: left;
+
+  font-size: var(--text-m);
+  font-weight: 200;
+  color: #000000;
+
+  box-shadow: none; /* remove shadow */
+  transition: color 0.2s ease;
+  cursor: default;
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .equipment-list {
-    padding: 1em;
-  }
+/* Dodger blue bullet */
+.equipment-item::before {
+  content: "▢"; /* same style as your grant items */
+  color: var(--color-dodger-blue, dodgerblue);
+  font-weight: 200;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  .equipment-location {
-    padding: 1.2em;
-  }
-
-  .location-title {
-    font-size: 1.1rem;
-  }
-
-  .equipment-item {
-    font-size: 0.95rem;
+/* Responsive: single column on small screens */
+@media screen and (max-width: 600px) {
+  .equipment-list-items {
+    grid-template-columns: 1fr;
   }
 }

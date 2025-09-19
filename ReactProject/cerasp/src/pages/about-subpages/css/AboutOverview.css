@@ -1,9 +1,9 @@
 /* #id only */
 
 #about-overview-bullets {
-  padding-left: 25vw;
+  margin-top: 5vh;
+  padding-left: 15vw;
   width: 50vw;
-  margin-top: -5vw;
 }
 
 #about-overview-secondary-content {
@@ -17,7 +17,11 @@
   width: 4vw;
   top: 0;
   left: 0vw;
-  background-color: rgb(193, 232, 255);
+  background-color: var(--color-dodger-blue);
+}
+
+.overview-secondary-item {
+  padding: 0 10vw;
 }
 
 @media screen and (max-width: 768px) {
@@ -29,5 +33,9 @@
     padding: 0;
     width: 100vw;
     margin-top: 2em;
+  }
+
+  .overview-secondary-item {
+    padding: 0;
   }
 }

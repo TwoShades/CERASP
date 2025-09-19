@@ -14,6 +14,7 @@
   --text-l4: 4rem;
   --text-l3: 3rem;
   --text-l2: 2rem;
+  --text-l1: 1.6rem;
   --text-m: 1.6rem;
   --text-s: 1.2rem;
   --gridline-light-blue: #f0f0f0;
@@ -25,7 +26,7 @@
   /* Margins, used for animating scrolling elements */
   --space-xs: 0.5rem;
   --space-s: 1rem;
-  --space-m: 2rem;
+  --space-m: 1rem;
   --space-l: 4rem;
   --space-xl: 8rem;
   --space-xxl: 12rem;
@@ -123,12 +124,5 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: repeating-linear-gradient(
-      to right,
-      transparent 0,
-      transparent calc(25vw - 1px),
-      var(--gridline-light-blue) calc(25vw - 2px),
-      var(--gridline-light-blue) 25vw
-    );
   }
 }

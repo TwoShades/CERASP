@@ -19,6 +19,11 @@
   transition: all 0.25s ease-in-out;
 }
 
+.grant-value {
+  font-weight: 800;
+  color: var(--color-dodger-blue);
+}
+
 .grant-fr,
 .grant-en {
   display: block;

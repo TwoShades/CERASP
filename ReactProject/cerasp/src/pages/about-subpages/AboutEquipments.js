@@ -92,77 +92,79 @@ const AboutEquipments = () => {
         variantsToRun={["slowFadeIn"]}
         className="about-equipments-images"
       >
-        {currentItems.map((equipment) => (
-          <div
-            key={equipment.id}
-            className="equipment-card"
-            onClick={() => {
-              if (equipment.photoUrl) {
-                window.open(equipment.photoUrl, "_blank");
-              }
-            }}
-          >
-            {equipment.photoUrl ? (
-              <img
-                src={equipment.photoUrl}
-                alt={equipment.name}
-                className="equipment-image-full"
-              />
-            ) : (
-              <div className="no-image-placeholder">
-                No image available
+        <div className="equipment-items">
+          {currentItems.map((equipment) => (
+            <div
+              key={equipment.id}
+              className="equipment-card"
+              onClick={() => {
+                if (equipment.photoUrl) {
+                  window.open(equipment.photoUrl, "_blank");
+                }
+              }}
+            >
+              {equipment.photoUrl ? (
+                <img
+                  src={equipment.photoUrl}
+                  alt={equipment.name}
+                  className="equipment-image-full"
+                />
+              ) : (
+                <div className="no-image-placeholder">
+                  No image available
+                </div>
+              )}
+              <div className="equipment-card-footer">
+                <h4>{equipment.name}</h4>
               </div>
-            )}
-            <div className="equipment-card-footer">
-              <h4>{equipment.name}</h4>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {allEquipments.length > 0 && (
+          <>
+            <div className="pagination-controls">
+              <button
+                onClick={prevPage}
+                disabled={currentPage === 1}
+                className="pagination-arrow"
+              >
+                &lt;
+              </button>
+              <button
+                onClick={nextPage}
+                disabled={
+                  currentPage >=
+                  Math.ceil(
+                    allEquipments.length / itemsPerPage
+                  )
+                }
+                className="pagination-arrow"
+              >
+                &gt;
+              </button>
+            </div>
+
+            <div className="equipment-master-list">
+              <h4 className="equipment-master-list-title">
+                {language === "fr"
+                  ? "Liste complète de l'équipement"
+                  : "Comprehensive List of Equipment"}
+              </h4>
+              <Link
+                to="/equipment-list"
+                className="learn-more-button"
+                style={{ textDecoration: "none" }}
+                state={{ equipments: allEquipments }}
+              >
+                {language === "fr"
+                  ? "Cliquez Ici"
+                  : "Click Here"}
+              </Link>
+            </div>
+          </>
+        )}
       </AnimateObject>
-
-      {allEquipments.length > 0 && (
-        <>
-          <div className="pagination-controls">
-            <button
-              onClick={prevPage}
-              disabled={currentPage === 1}
-              className="pagination-arrow"
-            >
-              &lt;
-            </button>
-            <button
-              onClick={nextPage}
-              disabled={
-                currentPage >=
-                Math.ceil(
-                  allEquipments.length / itemsPerPage
-                )
-              }
-              className="pagination-arrow"
-            >
-              &gt;
-            </button>
-          </div>
-
-          <div className="equipment-master-list">
-            <h4 className="equipment-master-list-title">
-              {language === "fr"
-                ? "Liste complète de l'équipement"
-                : "Comprehensive List of Equipment"}
-            </h4>
-            <Link
-              to="/equipment-list"
-              className="learn-more-button"
-              style={{ textDecoration: "none" }}
-              state={{ equipments: allEquipments }}
-            >
-              {language === "fr"
-                ? "Cliquez Ici"
-                : "Click Here"}
-            </Link>
-          </div>
-        </>
-      )}
     </main>
   );
 };

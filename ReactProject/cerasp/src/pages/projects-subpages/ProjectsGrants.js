@@ -2,52 +2,116 @@ import React, { useContext } from "react";
 import "./css/ProjectsGrants.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 
-// minor change
-
 const grantsData = [
   {
-    fr: "Mobilisation (CRSNG): « Promouvoir l’innovation, faire progresser la recherche et renforcer la préparation à l’emploi dans l’industrie pharmaceutique » – 2 000 000 $ (2024)",
-    en: "Mobilisation (NSERC): Promoting innovation, advancing research, and enhancing job readiness for the pharmaceutical industry – $2,000,000 (2024)",
+    name: {
+      fr: "Mobilisation (CRSNG): « Promouvoir l’innovation, faire progresser la recherche et renforcer la préparation à l’emploi dans l’industrie pharmaceutique »",
+      en: "Mobilisation (NSERC): Promoting innovation, advancing research, and enhancing job readiness for the pharmaceutical industry",
+    },
+    value: {
+      fr: "2 000 000 $ (2024)",
+      en: "$2,000,000 (2024)",
+    },
   },
   {
-    fr: "Développement économique Canada (DEC) : Installation d’une salle blanche biopharmaceutique – 760 000 $ (2024)",
-    en: "Canada Economic Development (CED): Installation of a biopharmaceutical cleanroom – $760,000 (2024)",
+    name: {
+      fr: "Développement économique Canada (DEC) : Installation d’une salle blanche biopharmaceutique",
+      en: "Canada Economic Development (CED): Installation of a biopharmaceutical cleanroom",
+    },
+    value: {
+      fr: "760 000 $ (2024)",
+      en: "$760,000 (2024)",
+    },
   },
   {
-    fr: "CRSNG – Partenariat en recherche appliquée et en technologie (PRAT) – 440 000 $ (2022)",
-    en: "NSERC – Applied Research and Technology Partnership (ARTP) – $440,000 (2022)",
+    name: {
+      fr: "CRSNG – Partenariat en recherche appliquée et en technologie (PRAT)",
+      en: "NSERC – Applied Research and Technology Partnership (ARTP)",
+    },
+    value: {
+      fr: "440 000 $ (2022)",
+      en: "$440,000 (2022)",
+    },
   },
   {
-    fr: "CRSNG – PARI – 55 000 $ (2022)",
-    en: "NSERC – IRAP – $55,000 (2022)",
+    name: {
+      fr: "CRSNG – PARI",
+      en: "NSERC – IRAP",
+    },
+    value: {
+      fr: "55 000 $ (2022)",
+      en: "$55,000 (2022)",
+    },
   },
   {
-    fr: "CI-CAN – Développement de la recherche appliquée au Kenya – 160 000 $ (2022)",
-    en: "CI-CAN – Applied Research Development in Kenya – $160,000 (2022)",
+    name: {
+      fr: "CI-CAN – Développement de la recherche appliquée au Kenya",
+      en: "CI-CAN – Applied Research Development in Kenya",
+    },
+    value: {
+      fr: "160 000 $ (2022)",
+      en: "$160,000 (2022)",
+    },
   },
   {
-    fr: "MITACS/FRQNT (Stagiaires) – 35 000 $ (2022)",
-    en: "MITACS/FRQNT (Internships) – $35,000 (2022)",
+    name: {
+      fr: "MITACS/FRQNT (Stagiaires)",
+      en: "MITACS/FRQNT (Internships)",
+    },
+    value: {
+      fr: "35 000 $ (2022)",
+      en: "$35,000 (2022)",
+    },
   },
   {
-    fr: "MEI Québec – Volet 4 – Subvention d’équipements – 1 300 000 $ (2021)",
-    en: "MEI Quebec – Stream 4 – Equipment Grant – $1,300,000 (2021)",
+    name: {
+      fr: "MEI Québec – Volet 4 – Subvention d’équipements",
+      en: "MEI Quebec – Stream 4 – Equipment Grant",
+    },
+    value: {
+      fr: "1 300 000 $ (2021)",
+      en: "$1,300,000 (2021)",
+    },
   },
   {
-    fr: "DEC – Subvention d'équipement spécifique à un projet – 250 000 $ (2021)",
-    en: "DEC – Project-Specific Equipment Grant – $250,000 (2021)",
+    name: {
+      fr: "DEC – Subvention d'équipement spécifique à un projet",
+      en: "DEC – Project-Specific Equipment Grant",
+    },
+    value: {
+      fr: "250 000 $ (2021)",
+      en: "$250,000 (2021)",
+    },
   },
   {
-    fr: "Ville de Mtl – Agir pour les talents (Subvention pour le développement de la main-d'œuvre) – 250 000 $ (2021)",
-    en: "City of Montreal – Talent in Action (Workforce Development Grant) – $250,000 (2021)",
+    name: {
+      fr: "Ville de Mtl – Agir pour les talents (Subvention pour le développement de la main-d'œuvre)",
+      en: "City of Montreal – Talent in Action (Workforce Development Grant)",
+    },
+    value: {
+      fr: "250 000 $ (2021)",
+      en: "$250,000 (2021)",
+    },
   },
   {
-    fr: "MITACS/FRQNT (Stagiaires) – 20 000 $ (2021)",
-    en: "MITACS/FRQNT (Internships) – $20,000 (2021)",
+    name: {
+      fr: "MITACS/FRQNT (Stagiaires)",
+      en: "MITACS/FRQNT (Internships)",
+    },
+    value: {
+      fr: "20 000 $ (2021)",
+      en: "$20,000 (2021)",
+    },
   },
   {
-    fr: "MITACS/FRQNT (Stagiaires) – 33 000 $ (2020)",
-    en: "MITACS/FRQNT (Internships) – $33,000 (2020)",
+    name: {
+      fr: "MITACS/FRQNT (Stagiaires)",
+      en: "MITACS/FRQNT (Internships)",
+    },
+    value: {
+      fr: "33 000 $ (2020)",
+      en: "$33,000 (2020)",
+    },
   },
 ];
 
@@ -58,11 +122,12 @@ export default function ProjectsGrants() {
       <ul className="grants-list">
         {grantsData.map((grant, index) => (
           <li key={index} className="grant-item">
-            {language === "fr" ? (
-              <span className="grant-fr">{grant.fr}</span>
-            ) : (
-              <span className="grant-en">{grant.en}</span>
-            )}
+            <span className="grant-name">
+              {grant.name[language]}
+            </span>{" "}
+            <span className="grant-value">
+              {grant.value[language]}
+            </span>
           </li>
         ))}
       </ul>
