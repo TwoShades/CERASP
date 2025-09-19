@@ -75,6 +75,7 @@
   grid-column: 2 / 5;
   font-size: var(--text-l4);
   color: var(--color-button-blue);
+  margin-bottom: 0;
 }
 
 .subpage-intro-grid p {
@@ -185,7 +186,7 @@
     display: block;
     font-size: var(--text-l3);
     line-height: 1.4;
-    /* padding: 0 !important; */
+    padding-top: 0 !important;
     margin: 0;
   }
 
@@ -199,7 +200,7 @@
 
   [class^="subpage-col-"] p {
     line-height: 1.4;
-    font-size: var(--text-m);
+    font-size: var(--text-s);
     padding: 0 0.8em;
   }
 
@@ -221,7 +222,7 @@
 
   .subpage-intro-grid p {
     line-height: 1.4;
-    font-size: var(--text-m);
+    font-size: var(--text-s);
     padding: 0 0.4em;
   }
 

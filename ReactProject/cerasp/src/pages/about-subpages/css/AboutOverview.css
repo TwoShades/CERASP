@@ -17,7 +17,7 @@
   width: 4vw;
   top: 0;
   left: 0vw;
-  background-color: rgb(193, 232, 255);
+  background-color: var(--color-dodger-blue);
 }
 
 .overview-secondary-item {
@@ -33,5 +33,9 @@
     padding: 0;
     width: 100vw;
     margin-top: 2em;
+  }
+
+  .overview-secondary-item {
+    padding: 0;
   }
 }

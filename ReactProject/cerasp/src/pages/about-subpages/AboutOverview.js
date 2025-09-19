@@ -27,21 +27,19 @@ export default function AboutOverview() {
       </AnimateObject>
 
       <section className="subpage-row">
-        {!isMobile && (
-          <AnimateObject className="subpage-col-1-3">
-            <img
-              src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
-              alt="Biotech facility"
-            />
-          </AnimateObject>
-        )}
+        <AnimateObject className="subpage-col-1-3">
+          <img
+            src="/photos/FromOldSite/AdobeStock_315999267_-scaled-450x450.jpg"
+            alt="Biotech facility"
+          />
+        </AnimateObject>
         <AnimateObject
           variantsToRun={["slideLeft", "fadeIn"]}
           className="subpage-col-3-5"
           style={{ padding: "30% 0 0 0" }}
         >
           <p>{content.overviewB[language]}</p>
-          <br></br>
+          {!isMobile && <br></br>}
           <p>{content.overviewC[language]}</p>
         </AnimateObject>
       </section>
@@ -53,11 +51,6 @@ export default function AboutOverview() {
         <AnimateObject
           className="subpage-col-1-4 overview-secondary-item"
           variantsToRun={["slideLeft", "fadeIn"]}
-          style={{
-            marginBottom: !isMobile
-              ? "var(--space-m)"
-              : "var(--space-m)",
-          }}
         >
           <h2>{content.mission.title[language]}</h2>
           <p>{content.mission[language]}</p>
@@ -66,11 +59,6 @@ export default function AboutOverview() {
         <AnimateObject
           className="subpage-col-1-4 overview-secondary-item"
           variantsToRun={["slideRight", "fadeIn"]}
-          style={{
-            marginBottom: !isMobile
-              ? "var(--space-l)"
-              : "var(--space-m)",
-          }}
         >
           <h2>{content.vision.title[language]}</h2>
           <p>{content.vision[language]}</p>

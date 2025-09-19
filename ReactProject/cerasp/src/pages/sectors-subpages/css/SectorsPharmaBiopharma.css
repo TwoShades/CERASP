@@ -9,7 +9,7 @@
   content: "";
   width: 2vw;
   height: 100%;
-  background-color: rgb(150, 213, 255);
+  background-color: var(--color-dodger-blue);
 }
 
 .pharma-biopharma-bullets li {
@@ -23,14 +23,15 @@
     margin-top: 2em;
     font-size: var(--text-m);
     font-weight: 400;
+    margin-bottom: -2vh;
   }
 
   .pharma-biopharma-bullets ul::after {
-    width: 4vw;
+    width: 3vw;
   }
 
   .pharma-biopharma-bullets li {
-    margin-left: 4vw;
-    font-size: var(--text-m);
+    margin-left: 0vw;
+    font-size: var(--text-s);
   }
 }
