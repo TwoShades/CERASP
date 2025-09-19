@@ -30,6 +30,11 @@
   z-index: 6;
 }
 
+.header-linkedin {
+  margin-right: 0;
+  margin-left: 5vw;
+}
+
 .header-logo-centered {
   z-index: 100;
 }
@@ -58,6 +63,9 @@
 }
 
 @media (max-width: 1200px) {
+  .header-linkedin {
+    display: none;
+  }
   .bg-test {
     display: block;
     position: fixed;

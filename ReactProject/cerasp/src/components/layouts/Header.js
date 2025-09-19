@@ -26,6 +26,17 @@ const Header = () => {
       )}
 
       <Navigation />
+      <a
+        href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/logos/linkedinlogo.png"
+          alt="LinkedIn Logo"
+          className="header-linkedin"
+        />
+      </a>
       <div className="language-switcher">
         <button
           className={`language-button ${
