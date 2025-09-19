@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { LanguageContext } from "../../contexts/LanguageContext.js";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext.js";
 import "./css/Footer.css";
@@ -14,11 +15,13 @@ const Footer = () => {
       {!isMobile && (
         <div className="footer-logo">
           <div className="logo-icon">
-            <img
-              src="/logos/cerasplogo.png"
-              alt="CERASP Logo"
-              width="200px"
-            />
+            <Link to="/">
+              <img
+                src="/logos/cerasplogo.png"
+                alt="CERASP Logo"
+                width="200px"
+              />
+            </Link>
           </div>
           <div className="footer-privacy">
             <a
