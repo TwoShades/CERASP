@@ -1,5 +1,6 @@
 .page-link-cta {
-  margin-block: var(--space-xl);
+  margin-top: 2em;
+  margin-bottom: 3em;
   box-sizing: border-box;
   display: flex;
   text-align: center;

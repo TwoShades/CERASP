@@ -161,6 +161,10 @@
     font-size: var(--text-l3);
   }
 
+  .subpage-intro-grid p {
+    margin: 1em 2em 1em 0;
+  }
+
   [class^="subpage-col-"] h2 {
     font-size: var(--text-l2);
     padding: 0 1em;
@@ -168,7 +172,8 @@
 
   [class^="subpage-col-"] p {
     font-size: var(--text-m);
-    padding: 0 1.5em;
+    margin: 1em 2em 1em 0;
+    padding: 0 1em;
   }
 
   .subpage-panel-5-text {

@@ -7,6 +7,7 @@ import "./css/PageLinkCTA.css";
 export default function PageLinkCTA({
   text = "Click Here",
   url,
+  className,
 }) {
   const { language } = useContext(LanguageContext);
   const navigate = useNavigate();

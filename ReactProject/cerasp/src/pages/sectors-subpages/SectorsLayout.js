@@ -76,9 +76,9 @@ const SectorsLayout = () => {
           </aside>
         </>
       )}
-      <main className="layout-main-content">
+      <div className="layout-main-content">
         <Outlet />
-      </main>
+      </div>
       {location.pathname !== "/sector-of-activities" && (
         <Footer />
       )}

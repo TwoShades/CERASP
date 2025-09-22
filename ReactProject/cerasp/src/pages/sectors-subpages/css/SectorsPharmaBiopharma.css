@@ -27,7 +27,7 @@
   }
 
   .pharma-biopharma-bullets ul::after {
-    width: 3vw;
+    display: none;
   }
 
   .pharma-biopharma-bullets li {

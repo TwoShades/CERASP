@@ -42,87 +42,19 @@
   }
 }
 
-/* GLOBAL PADDING TABLET/MOBILE */
-
-@media (max-width: 1200px) {
-  :root {
-    --global-page-padding: 0 4em 0 4em;
-  }
-}
-
-@media (max-width: 576px) {
-  :root {
-    --global-page-padding: 0 2em 0 2em;
-  }
-}
-
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  /* background: repeating-linear-gradient(
-    to right,
-    transparent 0,
-    transparent calc(20vw - 1px),
-    var(--gridline-light-blue) calc(20vw - 2px),
-    var(--gridline-light-blue) 20vw
-  ); */
 }
 
-.background-triangles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-      to bottom left,
-      transparent 50%,
-      #3498db 50%
-    )
-    center/200% 200%;
-  z-index: -1;
-}
-
-.background-triangles::before,
-.background-triangles::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-}
-
-.background-triangles::before {
-  border-bottom: 87px solid #3498db;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.background-triangles::after {
-  border-top: 87px solid #e74c3c;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Generic Shapes */
-
-.circle-medium {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  background-color: var(--color-dodger-blue);
-}
-
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   html,
-  body {
+  body,
+  main {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
-}
+} */

@@ -73,7 +73,7 @@
 
 .landing-white-box-content h1 {
   margin-top: 1em;
-  padding-right: 25vw;
+  padding-right: 15vw;
   font-size: var(--text-l5);
   color: var(--color-button-blue);
   font-weight: 400;
@@ -234,24 +234,8 @@
    Media Queries
    ========================== */
 
-/* Full Desktop >1200px */
-@media (min-width: 1201px) {
-  .landing-white-box-content h1 {
-    font-size: calc(var(--text-l5) * 1.1);
-  }
-  .landing-white-box-content p {
-    font-size: calc(var(--text-m) * 1.1);
-  }
-  .landing-subtext {
-    font-size: calc(3rem * 1.1);
-  }
-  .landing-subtext-larger {
-    font-size: calc(var(--text-l4) * 1.1) !important;
-  }
-}
-
 /* Desktop / Tablet 1200–769px */
-@media (max-width: 1200px) and (min-width: 769px) {
+@media (max-width: 1200px) {
   .landing-white-box {
     width: 100%;
     position: relative;
@@ -266,7 +250,7 @@
   }
 
   .landing-white-box-content h1 {
-    font-size: var(--text-l3);
+    font-size: var(--text-l5);
     padding: 0.4em 5vw;
   }
   .landing-white-box-content p {
@@ -332,13 +316,7 @@
 }
 
 /* Mobile ≤768px */
-@media (max-width: 768px) {
-  .landing-white-box-content h1 {
-    font-size: var(--text-m);
-  }
-  .landing-white-box-content p {
-    font-size: var(--text-s);
-  }
+@media (max-width: 900px) {
   .landing-subtext {
     font-size: 2rem;
     width: 80vw;
@@ -362,7 +340,7 @@
   }
 
   .landing-white-box-content h1 {
-    margin-top: 0.8em;
+    margin-top: 2em;
     margin-bottom: 0;
     padding: 5vw;
     font-size: var(--text-m);
@@ -373,10 +351,10 @@
 
   .landing-white-box-content p {
     padding: 5vw;
-    line-height: 1.2;
+    line-height: 1.4;
     font-weight: 200;
     text-align: left;
-    font-size: var(--text-s);
+    font-size: 16px;
   }
 
   .landing-white-box-numbers {
@@ -384,8 +362,9 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
-    margin: 1em auto;
-    gap: 0.6em;
+    margin: 0.4em auto;
+    margin-bottom: -2em;
+    gap: 0em;
   }
 
   .landing-white-box-item {

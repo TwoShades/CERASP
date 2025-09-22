@@ -92,7 +92,7 @@ export default function AboutFacilities() {
               : "Prototyping, small-scale manufacturing and testing"}
           </p>
         </div>
-        <div className="subpage-col-1-5 about-facilities-image">
+        <div className="subpage-col-3-5 about-facilities-image">
           <img
             src={`/photos/facilities/${
               isFullScreen

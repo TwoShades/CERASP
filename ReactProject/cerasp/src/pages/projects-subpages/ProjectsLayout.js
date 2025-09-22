@@ -89,6 +89,11 @@ const ProjectsLayout = () => {
             ? "NOS PROJETS"
             : "OUR PROJECTS"}
         </h1>
+        <p>
+          {language === "fr"
+            ? "Voici quelques exemples de projets que nous avons réalisés auparavant:"
+            : "Some examples of projects we have previously undertaken include:"}
+        </p>
       </AnimateObject>
       <div className="layout-panel-5">
         <ContactIcon />
@@ -117,11 +122,6 @@ const ProjectsLayout = () => {
                   ? "SUBVENTIONS ATTRIBUÉES"
                   : "GRANTS AWARDED"}
               </h1>
-              <p>
-                {language === "fr"
-                  ? "Voici quelques exemples de projets que nous avons réalisés auparavant:"
-                  : "Some examples of projects we have previously undertaken include:"}
-              </p>
             </AnimateObject>
             <AnimateObject
               variantsToRun={["fadeIn"]}

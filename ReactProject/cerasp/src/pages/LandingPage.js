@@ -8,6 +8,7 @@ import { useContext, useState, useEffect } from "react";
 import AboutUsIcon from "../components/interactables/AboutUsIcon";
 import ContactIcon from "../components/interactables/ContactIcon";
 import Header from "../components/layouts/Header";
+import PageLinkCTA from "./../components/interactables/PageLinkCTA";
 
 import {
   containerVariants,
@@ -71,7 +72,6 @@ const SandboxPage = () => {
   return (
     <div className="landing-page-overlay">
       <div className="landing-gridlines-thin" />
-
       {/* Header */}
       <motion.div
         style={{ position: "relative", zIndex: 99 }}
@@ -81,15 +81,14 @@ const SandboxPage = () => {
       >
         <Header />
       </motion.div>
-
       {/* Overlay */}
       <motion.div
         className="overlay"
         variants={overlaySlideVariants}
         initial="visible"
         animate="slideOut"
+        style={{ zIndex: 0 }}
       />
-
       {/* Gradients */}
       <motion.div
         className="landing-gradient-bg"
@@ -103,7 +102,6 @@ const SandboxPage = () => {
         initial="visible"
         animate="fadeOut"
       />
-
       {/* Black overlay */}
       <motion.div
         className="landing-black-overlay"
@@ -111,7 +109,6 @@ const SandboxPage = () => {
         animate={{ opacity: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       />
-
       <motion.div
         className="landing-layout"
         variants={containerVariants}
@@ -242,8 +239,17 @@ const SandboxPage = () => {
               </div>
             ))}
           </div>
+          {!isFullScreen && (
+            <PageLinkCTA
+              text={
+                language === "fr" ? "À Propos" : "About Us"
+              }
+              url="/about"
+              className="landing-about-cta"
+            />
+          )}
         </motion.div>
-      </motion.div>
+      </motion.div>{" "}
     </div>
   );
 };
