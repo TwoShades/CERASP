@@ -101,7 +101,7 @@
 /* Master List */
 .equipment-master-list {
   width: 240px;
-  margin: 0 auto;
+  margin: 0 auto 2em auto;
   display: flex;
   flex-direction: column;
   align-items: center;

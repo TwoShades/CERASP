@@ -1,6 +1,7 @@
 .layout-page {
   color: #424242;
   position: relative;
+  min-height: 100dvh;
 }
 
 .layout-bg-img {

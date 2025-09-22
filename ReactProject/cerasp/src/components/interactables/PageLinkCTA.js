@@ -7,6 +7,7 @@ import "./css/PageLinkCTA.css";
 export default function PageLinkCTA({
   text = "Click Here",
   url,
+  className,
 }) {
   const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ export default function PageLinkCTA({
 
   return (
     <div
-      className="page-link-cta"
+      className={`page-link-cta ${className || ""}`}
       onClick={handleClick}
       style={{ cursor: "pointer", textDecoration: "none" }}
     >

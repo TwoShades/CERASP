@@ -1,86 +1,43 @@
 /* ---------- FOOTER BASE ---------- */
 .footer {
-  margin-top: 15vh;
+  display: flex;
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1em;
   z-index: 2;
-  background-color: #80121200;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 3em;
   border-top: 1px solid grey;
   color: #4d4d4d;
   width: 100%;
+  background-color: white;
 }
 
-.footer > .footer-logo,
-.footer > .footer-partners,
-.footer > .footer-privacy {
+/* ---------- LEFT SIDE ---------- */
+.footer-left {
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
-  padding-left: 4em;
+  gap: 2em;
 }
 
-/* ---------- FOOTER LOGO ---------- */
-.footer-logo {
-  display: flex;
-}
-
-.footer-logo .logo-icon {
-  display: flex;
-  margin-top: 1em;
+.footer-logo img {
   transition: transform 0.3s ease;
 }
 
-.footer-logo .logo-icon:hover {
+.footer-logo img:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
-.footer-links-and-contact {
-  grid-column: 2 / span 2; /* spans col 2 and 3 of the footer grid */
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* internal 2-column grid */
-  gap: 2em;
-  width: 100%; /* let it fill its grid space */
-  z-index: 10;
-}
-
-/* ---------- FOOTER LINKS ---------- */
-.footer-links {
-  grid-column: 1;
-  margin-top: 3.2em;
-  padding-left: 1em;
-  flex-direction: column;
-}
-
-.footer-links h2 {
-  margin-bottom: 0.5em;
-}
-
-.footer-links a {
-  margin-top: 1em;
-  color: #4d4d4d;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: var(--text-m);
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- FOOTER CONTACT ---------- */
 .footer-contact {
-  grid-column: 2;
-  padding-left: 1em;
-  margin-top: 3.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .footer-contact .address-lines {
   display: flex;
   flex-direction: column;
-  gap: 1.2em;
+  gap: 0.5em;
 }
 
 .footer-contact span {
@@ -89,177 +46,91 @@
 
 .footer-contact .map-icon {
   margin-top: 1em;
-  display: flex;
-  align-items: center;
   transition: transform 0.3s ease;
 }
 
-/* This is just because the map png image isn't center on itself */
 .footer-contact .map-icon:hover {
   cursor: pointer;
   transform: scale(1.1) translateX(10px);
 }
 
-/* ---------- FOOTER PARTNERS ---------- */
-.footer-partners {
-  padding: 2em;
-  grid-column: 4 / span 2;
-  align-items: flex-start;
-  background-color: white;
-}
-
-.footer-partners h2 {
-  margin-block-end: 0em !important;
-}
-
-/* ---------- FOOTER PRIVACY ---------- */
-.footer-privacy {
-  text-align: left;
-  margin: 3em 0;
-  padding: 0 0;
-}
-
-.footer-privacy-mobile {
-  text-align: left;
-  margin: 3em 2em;
-  padding: 0 0;
-}
-
-.footer-privacy a,
-.footer-privacy-mobile a {
+.footer-privacy a {
   color: #4d4d4d;
   text-decoration: none;
 }
 
-@media (min-width: 769px) and (max-width: 1200px) {
+.footer-privacy a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 800px;
+}
+
+.footer-right h2 {
+  margin: 0;
+}
+
+.partner-logos,
+.member-logos {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.partner-card-img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 1200px) {
   .footer {
-    display: flex;
+    /* keep row layout */
     flex-direction: row;
-    align-items: start;
-    justify-content: start;
-    gap: 2em;
-    padding: 0;
-    min-height: 70vh;
-    background-color: #ffffff;
-  }
-
-  /* Links/contact stack nicely */
-  .footer-links-and-contact {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: flex-start;
-    justify-content: start;
-    gap: 1.5em;
+    gap: 2em; /* optional: slightly smaller than desktop */
+    padding: 2em; /* reduce padding slightly */
   }
 
-  /* Partners section centered and visible */
-  .footer-partners {
-    margin-left: -15em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5em;
-    padding: 2em 0;
-    width: 100%;
+  .footer-left,
+  .footer-right {
+    max-width: 45%; /* keep them in a row, don’t make full width */
   }
 
-  .footer-partners img {
-    max-width: 500px;
-    height: auto;
-  }
-
-  /* Text scaling */
-  .footer-links h2,
-  .footer-partners h2 {
-    font-size: var(--text-l);
-    text-align: center;
-  }
-
-  .footer-links a,
   .footer-contact span {
-    font-size: var(--text-s);
-    text-align: left;
-    margin: 0;
-    padding: 0;
+    font-size: var(--text-m); /* keep normal size */
   }
 
-  /* Privacy link */
-  .footer-privacy {
-    text-align: center;
-    margin-top: 2em;
+  .partner-logos,
+  .member-logos {
+    margin-bottom: 1.5em;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .footer {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2em;
-    background-color: white;
-  }
-
-  .footer > .footer-logo,
-  .footer > .footer-partners,
-  .footer > .footer-privacy {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2em;
-    padding-left: 0em;
-  }
-
-  .footer-links-and-contact {
-    display: flex;
-    gap: 20%;
-    align-items: baseline;
-    justify-content: center;
+    padding: 1em;
   }
 
   .footer-contact span {
     font-size: var(--text-s);
   }
 
-  .footer-links h2 {
-    margin-bottom: 0.5em;
+  .footer-left,
+  .footer-right {
+    max-width: 100%;
   }
 
-  .footer-links a {
-    margin-top: 1em;
-    color: #4d4d4d;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: var(--text-s);
-  }
-
-  .footer-partners {
-    background-color: white;
-    padding: 0 !important;
-    margin: 0;
-    width: 100%;
-  }
-
-  .footer-privacy {
-    position: relative; /* no absolute positioning */
-    bottom: auto;
-    left: auto;
-    margin-top: 2em;
-    text-align: left; /* change to center if preferred */
-    padding: 0;
-  }
-
-  .contact-sponsor-logos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
-  }
-
-  .contact-sponsor-logos h2 {
-    padding-left: 2em;
-  }
-
-  .contact-sponsor-logos img {
-    margin-bottom: 1em;
+  .partner-logos,
+  .member-logos {
+    margin-bottom: 2em;
   }
 }

@@ -6,45 +6,20 @@ import "./css/Footer.css";
 
 const Footer = () => {
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet, isDesktop } = useContext(
-    ScreenSizeContext
-  );
+  const { isMobile } = useContext(ScreenSizeContext);
 
   return (
     <footer className="footer">
-      {!isMobile && (
+      {/* LEFT SIDE */}
+      <div className="footer-left">
         <div className="footer-logo">
-          <div className="logo-icon">
-            <Link to="/">
-              <img
-                src="/logos/cerasplogo.png"
-                alt="CERASP Logo"
-                width="200px"
-              />
-            </Link>
-          </div>
-          <div className="footer-privacy">
-            <a
-              href="/privacy"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {language === "fr"
-                ? "Politique de confidentialité"
-                : "Privacy Policy"}
-            </a>
-          </div>
-        </div>
-      )}
-      <div className="footer-links-and-contact">
-        <div className="footer-links">
-          <a
-            href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+          <Link to="/">
+            <img
+              src="/logos/cerasplogo.png"
+              alt="CERASP Logo"
+              width="200px"
+            />
+          </Link>
         </div>
 
         <div className="footer-contact">
@@ -70,49 +45,63 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        {!isMobile && (
+          <div className="footer-privacy">
+            <a
+              href="/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {language === "fr"
+                ? "Politique de confidentialité"
+                : "Privacy Policy"}
+            </a>
+          </div>
+        )}
       </div>
 
-      <div className="footer-partners">
-        <div className="contact-sponsor-logos">
-          <h2 className="partner-with">
-            {language === "fr"
-              ? "CERASP est partenaire de :"
-              : "CERASP is a partner of:"}
-          </h2>
-          <div className="partner-logos">
-            <img
-              className="partner-card-img"
-              src="/logos/partners/cerasp-partner.jpg"
-              alt="Partners"
-            />
-          </div>
-          <h2 className="member-of">
-            {language === "fr"
-              ? "CERASP est un fier membre de :"
-              : "CERASP is a proud member of:"}
-          </h2>
-          <div className="member-logos">
-            <img
-              className="partner-card-img"
-              src="/logos/partners/cerasp-member.jpg"
-              alt="Members"
-            />
-            {isMobile && (
-              <div className="footer-privacy-mobile">
-                <a
-                  href="/privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {language === "fr"
-                    ? "Politique de confidentialité"
-                    : "Privacy Policy"}
-                </a>
-              </div>
-            )}
-          </div>
+      {/* RIGHT SIDE */}
+      <div className="footer-right">
+        <h2>
+          {language === "fr"
+            ? "CERASP est partenaire de :"
+            : "CERASP is a partner of:"}
+        </h2>
+        <div className="partner-logos">
+          <img
+            className="partner-card-img"
+            src="/logos/partners/cerasp-partner.jpg"
+            alt="Partners"
+          />
+        </div>
+
+        <h2>
+          {language === "fr"
+            ? "CERASP est un fier membre de :"
+            : "CERASP is a proud member of:"}
+        </h2>
+        <div className="member-logos">
+          <img
+            className="partner-card-img"
+            src="/logos/partners/cerasp-member.jpg"
+            alt="Members"
+          />
         </div>
       </div>
+      {isMobile && (
+        <div className="footer-privacy">
+          <a
+            href="/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {language === "fr"
+              ? "Politique de confidentialité"
+              : "Privacy Policy"}
+          </a>
+        </div>
+      )}
     </footer>
   );
 };
