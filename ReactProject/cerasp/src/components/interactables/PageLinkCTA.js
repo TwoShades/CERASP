@@ -20,7 +20,7 @@ export default function PageLinkCTA({
 
   return (
     <div
-      className="page-link-cta"
+      className={`page-link-cta ${className || ""}`}
       onClick={handleClick}
       style={{ cursor: "pointer", textDecoration: "none" }}
     >

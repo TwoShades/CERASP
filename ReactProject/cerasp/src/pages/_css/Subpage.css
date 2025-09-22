@@ -45,6 +45,10 @@
   justify-content: flex-start;
 }
 
+.subpage-flex-column {
+  margin-bottom: 2em;
+}
+
 .subpage-col-flex {
   display: flex;
   flex-direction: column;

@@ -1,13 +1,12 @@
 .page-link-cta {
-  margin-top: 2em;
-  margin-bottom: 3em;
+  margin: 2em auto 3em auto;
   box-sizing: border-box;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   padding: 1em;
-  margin-left: 40vw;
+
   font-size: var(--text-l2);
   font-weight: 500;
   width: 20vw;
