@@ -56,6 +56,17 @@ const Navigation = () => {
         {(isMobile || isTablet) && (
           <>
             <a
+              href="https://www.instagram.com/cctt.cerasp/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/logos/instagramlogo.png"
+                alt="LinkedIn Logo"
+                className="nav-instagram"
+              />
+            </a>
+            <a
               href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
@@ -97,7 +108,7 @@ const Navigation = () => {
                   key={pageId}
                   className={`nav-item ${
                     isActive ? "active" : ""
-                  }`}
+                  } ${pageId === "about" ? "nowrap" : ""}`}
                 >
                   <a
                     href={linkPath}
