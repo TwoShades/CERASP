@@ -4,8 +4,8 @@ import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import sitemap from "../../sitemap.json";
-import ContactIcon from "../../components/interactables/ContactIcon";
 import expertiseTranslations from "./expertise-translations.json";
+import ContactIcon from "../../components/interactables/ContactIcon";
 import Footer from "../../components/layouts/Footer";
 
 const ExpertiseLayout = () => {
@@ -28,24 +28,8 @@ const ExpertiseLayout = () => {
   const overview =
     expertiseTranslations.overview.content[language];
 
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      document.documentElement.style.scrollBehavior =
-        "auto";
-      window.scrollTo(0, 0);
-    });
-  }, [location.pathname]);
-
   return (
     <div className="layout-page page-content">
-      {!isMobile && (
-        <div className="layout-panel-5">
-          <div className="subpage-panel-5-text">
-            {location.pathname === "/expertise" && overview}
-          </div>
-          <ContactIcon className="ex-sec-contact-icon" />
-        </div>
-      )}
       {isOverview && (
         <>
           <div className="layout-bg-img">
@@ -64,20 +48,28 @@ const ExpertiseLayout = () => {
               <div className="layout-panel-3-4-mobile"></div>
             </>
           )}
-          <aside className="layout-sidebar">
-            <ul>
-              {expertiseSubPages.map((subPage) => (
-                <li key={subPage.id}>
-                  <a href={`/expertise/${subPage.id}`}>
-                    {subPage[language].toUpperCase()}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </aside>{" "}
         </>
       )}
-
+      {!isMobile && (
+        <div className="layout-panel-5">
+          <div className="subpage-panel-5-text">
+            {location.pathname === "/expertise" && overview}
+          </div>
+          <ContactIcon />
+        </div>
+      )}
+      <aside className="layout-sidebar">
+        <ul>
+          {expertiseSubPages.map((subPage) => (
+            <li key={subPage.id}>
+              <a href={`/expertise/${subPage.id}`}>
+                {subPage[language].toUpperCase()}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </aside>{" "}
+      )}
       <main className="layout-main-content">
         <Outlet />
       </main>

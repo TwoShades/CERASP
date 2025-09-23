@@ -38,7 +38,7 @@ const SectorsLayout = () => {
             {location.pathname ===
               "/sector-of-activities" && overview}
           </div>
-          <ContactIcon className="ex-sec-contact-icon" />
+          <ContactIcon />
         </div>
       )}
       {isOverview && (

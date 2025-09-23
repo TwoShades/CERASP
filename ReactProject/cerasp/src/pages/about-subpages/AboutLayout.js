@@ -1,14 +1,19 @@
-import sitemap from "../../sitemap.json";
-import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+import sitemap from "../../sitemap.json";
+// no about translations
 import ContactIcon from "../../components/interactables/ContactIcon";
 import Footer from "../../components/layouts/Footer";
 
 const AboutLayout = () => {
   const location = useLocation();
+  const { language } = useContext(LanguageContext);
+  const { isMobile, isTablet, isDesktop } = useContext(
+    ScreenSizeContext
+  );
 
   const isOverview = location.pathname === "/about";
 
@@ -20,14 +25,9 @@ const AboutLayout = () => {
     ? aboutPage["sub-pages"]
     : [];
 
-  const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet, isDesktop } = useContext(
-    ScreenSizeContext
-  );
-
   return (
     <div className="layout-page page-content">
-      {location.pathname === "/about" && (
+      {isOverview && (
         <>
           <div className="layout-bg-img">
             <img
@@ -36,7 +36,6 @@ const AboutLayout = () => {
               className="history-img"
             />
           </div>
-          {/* <div className="layout-rotated-title">{language === "fr" ? <h1>À PROPOS</h1> : <h1>ABOUT</h1>}</div> */}
           <div className="layout-panel-1"></div>
           <div className="layout-panel-2"></div>
           <div className="layout-panel-3"></div>
@@ -48,9 +47,11 @@ const AboutLayout = () => {
           )}
         </>
       )}
-
       {!isMobile && (
         <div className="layout-panel-5">
+          <div className="subpage-panel-5-text">
+            {/* no text */}
+          </div>
           <ContactIcon />
         </div>
       )}
