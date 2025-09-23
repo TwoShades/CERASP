@@ -207,10 +207,10 @@
   gap: 20px;
 }
 
-.layout-panel-5-transp {
+.layout-panel-5-narrow {
   position: fixed;
   z-index: 1;
-  background-color: rgba(30, 143, 255, 0.438);
+  background-color: var(--color-dodger-blue);
   top: 0;
   right: 0;
   width: 10vw;

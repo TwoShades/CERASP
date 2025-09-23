@@ -8,14 +8,23 @@ export default function PageLinkCTA({
   text = "Click Here",
   url,
   className,
+  onClick, // new optional prop
 }) {
   const { language } = useContext(LanguageContext);
   const navigate = useNavigate();
   const { scrollToTopWithLenis } = useLenis();
 
   const handleClick = () => {
-    scrollToTopWithLenis();
-    navigate(url);
+    // Run custom handler first (if provided)
+    if (onClick) {
+      onClick();
+    }
+
+    // Then do the default behavior (scroll + navigate)
+    if (url) {
+      scrollToTopWithLenis();
+      navigate(url);
+    }
   };
 
   return (

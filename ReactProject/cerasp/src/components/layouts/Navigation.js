@@ -9,6 +9,7 @@ import "./css/Navigation.css";
 
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import PageLinkCTA from "../interactables/PageLinkCTA";
 import scrollToTop from "../../utils/scrollToTop";
 
 const Navigation = () => {
@@ -17,7 +18,7 @@ const Navigation = () => {
   const navRef = useRef(null);
 
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet } = useContext(
+  const { isMobile, isTablet, isFullScreen } = useContext(
     ScreenSizeContext
   );
 
@@ -122,6 +123,17 @@ const Navigation = () => {
                 </li>
               );
             }
+          )}
+          {!isFullScreen && (
+            <PageLinkCTA
+              text={
+                language === "fr"
+                  ? "Contactez-nous"
+                  : "Contact Us"
+              }
+              url="/contact-us"
+              onClick={() => setMenuOpen(false)}
+            />
           )}
         </ul>
       </nav>
