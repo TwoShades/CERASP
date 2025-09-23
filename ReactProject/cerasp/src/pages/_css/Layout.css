@@ -252,7 +252,7 @@
 
 @media (max-width: 900px) {
   .layout-panel-5,
-  .layout-panel-5-transp {
+  .layout-panel-5-narrow {
     display: none !important;
   }
 
