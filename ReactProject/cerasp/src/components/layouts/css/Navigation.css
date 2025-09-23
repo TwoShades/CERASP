@@ -183,3 +183,23 @@
     border-top: none;
   }
 }
+
+@media (max-width: 480px) {
+  .nav-instagram {
+    width: 29px;
+    height: auto;
+    position: fixed;
+    top: 28px;
+    right: 90px;
+    z-index: 1001;
+  }
+
+  .nav-linkedin {
+    position: fixed;
+    width: 40px;
+    height: auto;
+    top: 23px;
+    right: 45px;
+    z-index: 1001;
+  }
+}
