@@ -4,10 +4,12 @@
 }
 
 .subpage-panel-5-text {
-  border: 2px dashed yellow;
+  /* border: 2px dashed yellow; */
   height: 500px;
   color: white;
   padding: 0 0.4em;
+  display: flex;
+  align-items: center;
   text-align: center;
   font-size: var(--text-m);
   line-height: 1.3;

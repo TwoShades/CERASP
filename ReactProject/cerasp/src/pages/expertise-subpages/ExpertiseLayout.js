@@ -58,17 +58,19 @@ const ExpertiseLayout = () => {
           <ContactIcon />
         </div>
       )}
-      <aside className="layout-sidebar">
-        <ul>
-          {expertiseSubPages.map((subPage) => (
-            <li key={subPage.id}>
-              <a href={`/expertise/${subPage.id}`}>
-                {subPage[language].toUpperCase()}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </aside>{" "}
+
+      {isOverview && (
+        <aside className="layout-sidebar">
+          <ul>
+            {expertiseSubPages.map((subPage) => (
+              <li key={subPage.id}>
+                <a href={`/expertise/${subPage.id}`}>
+                  {subPage[language].toUpperCase()}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
       )}
       <main className="layout-main-content">
         <Outlet />

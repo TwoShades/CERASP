@@ -1,12 +1,12 @@
-import sitemap from "../../sitemap.json";
 import { Outlet, useLocation } from "react-router-dom";
 import React, { useContext } from "react";
 import "../_css/Layout.css";
 import "./css/SectorsLayout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
-import ContactIcon from "../../components/interactables/ContactIcon";
+import sitemap from "../../sitemap.json";
 import sectorTranslations from "./sectors-translation.json";
+import ContactIcon from "../../components/interactables/ContactIcon";
 import Footer from "../../components/layouts/Footer";
 
 const SectorsLayout = () => {
