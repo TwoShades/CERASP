@@ -30,9 +30,28 @@
   z-index: 6;
 }
 
+.header-linkedin-insta-container {
+  padding-left: 5vw;
+  display: flex;
+  align-items: center;
+}
+
 .header-linkedin {
   margin-right: 0;
-  margin-left: 5vw;
+  margin-left: 0;
+  width: 50px;
+  height: auto;
+}
+
+.header-instagram {
+  width: 39px;
+  padding-bottom: 1px;
+  height: auto;
+}
+
+.header-linkedin:hover,
+.header-instagram:hover {
+  scale: calc(1.05);
 }
 
 .header-logo-centered {
@@ -63,7 +82,8 @@
 }
 
 @media (max-width: 1200px) {
-  .header-linkedin {
+  .header-linkedin,
+  .header-instagram {
     display: none;
   }
   .bg-test {

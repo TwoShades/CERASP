@@ -26,17 +26,30 @@ const Header = () => {
       )}
 
       <Navigation />
-      <a
-        href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/logos/linkedinlogo.png"
-          alt="LinkedIn Logo"
-          className="header-linkedin"
-        />
-      </a>
+      <div className="header-linkedin-insta-container">
+        <a
+          href="https://www.instagram.com/cctt.cerasp/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/logos/instagramlogo.png"
+            alt="LinkedIn Logo"
+            className="header-instagram"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/logos/linkedinlogo.png"
+            alt="LinkedIn Logo"
+            className="header-linkedin"
+          />
+        </a>
+      </div>
       <div className="language-switcher">
         <button
           className={`language-button ${

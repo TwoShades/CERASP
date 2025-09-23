@@ -142,7 +142,7 @@ const ContactUs = () => {
 
   return (
     <main className="subpage-overview">
-      <div className="layout-panel-5-transp"></div>
+      <div className="layout-panel-5-narrow"></div>
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"

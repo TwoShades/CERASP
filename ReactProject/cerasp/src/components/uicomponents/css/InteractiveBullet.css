@@ -118,6 +118,9 @@
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
+  .interactive-bullet {
+    margin-bottom: 2em;
+  }
   .interactive-bullet-title {
     font-size: 1.6rem;
     padding-right: 1vw;

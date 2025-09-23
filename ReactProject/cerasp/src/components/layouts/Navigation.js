@@ -9,6 +9,7 @@ import "./css/Navigation.css";
 
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import PageLinkCTA from "../interactables/PageLinkCTA";
 import scrollToTop from "../../utils/scrollToTop";
 
 const Navigation = () => {
@@ -17,7 +18,7 @@ const Navigation = () => {
   const navRef = useRef(null);
 
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet } = useContext(
+  const { isMobile, isTablet, isFullScreen } = useContext(
     ScreenSizeContext
   );
 
@@ -55,6 +56,17 @@ const Navigation = () => {
       <nav className="nav" ref={navRef}>
         {(isMobile || isTablet) && (
           <>
+            <a
+              href="https://www.instagram.com/cctt.cerasp/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/logos/instagramlogo.png"
+                alt="LinkedIn Logo"
+                className="nav-instagram"
+              />
+            </a>
             <a
               href="https://www.linkedin.com/company/cerasp/posts/?feedView=all"
               target="_blank"
@@ -97,7 +109,7 @@ const Navigation = () => {
                   key={pageId}
                   className={`nav-item ${
                     isActive ? "active" : ""
-                  }`}
+                  } ${pageId === "about" ? "nowrap" : ""}`}
                 >
                   <a
                     href={linkPath}
@@ -111,6 +123,17 @@ const Navigation = () => {
                 </li>
               );
             }
+          )}
+          {!isFullScreen && (
+            <PageLinkCTA
+              text={
+                language === "fr"
+                  ? "Contactez-nous"
+                  : "Contact Us"
+              }
+              url="/contact-us"
+              onClick={() => setMenuOpen(false)}
+            />
           )}
         </ul>
       </nav>

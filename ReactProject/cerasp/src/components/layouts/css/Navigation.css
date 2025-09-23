@@ -40,6 +40,11 @@
   position: relative;
 }
 
+.nav-item.nowrap a {
+  white-space: nowrap !important;
+  color: black;
+}
+
 .nav-item a {
   font-weight: 400;
   font-size: 1.4em;
@@ -68,9 +73,27 @@
   width: 100%;
 }
 
+@media screen and (max-width: 1600px) {
+  .nav-item a {
+    font-size: 20px;
+    letter-spacing: 0.03em;
+  }
+}
+
 @media (max-width: 1200px) {
+  .nav-instagram {
+    width: 39px;
+    height: auto;
+    position: fixed;
+    top: 25px;
+    right: 120px;
+    z-index: 1001;
+  }
+
   .nav-linkedin {
     position: fixed;
+    width: 50px;
+    height: auto;
     top: 20px;
     right: 60px;
     z-index: 1001;
@@ -158,5 +181,25 @@
 
   .nav-list > li:first-child {
     border-top: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-instagram {
+    width: 29px;
+    height: auto;
+    position: fixed;
+    top: 28px;
+    right: 90px;
+    z-index: 1001;
+  }
+
+  .nav-linkedin {
+    position: fixed;
+    width: 40px;
+    height: auto;
+    top: 23px;
+    right: 45px;
+    z-index: 1001;
   }
 }
