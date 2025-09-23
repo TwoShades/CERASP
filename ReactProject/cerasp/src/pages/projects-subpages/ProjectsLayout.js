@@ -96,6 +96,9 @@ const ProjectsLayout = () => {
         </p>
       </AnimateObject>
       <div className="layout-panel-5">
+        <div className="subpage-panel-5-text">
+          {/* no text, used as spacer */}
+        </div>
         <ContactIcon />
       </div>
       {projectsData !== null && (
