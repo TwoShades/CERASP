@@ -61,6 +61,9 @@ export default function EquipmentByLocation() {
   return (
     <div className="page-content">
       <div className="layout-panel-5">
+        <div className="subpage-panel-5-text">
+          {/* no text */}
+        </div>
         <ContactIcon />
       </div>
       <AnimateObject
