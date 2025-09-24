@@ -9,14 +9,19 @@ import Employee from "../../components/uicomponents/Employee.js";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
+import { LoadingContext } from "../../contexts/LoadingContext";
 
 export default function AboutTeam() {
   const { language } = useContext(LanguageContext);
   const { isMobile } = useContext(ScreenSizeContext);
+  const { setLoading } = useContext(LoadingContext);
+
   const [teamData, setTeamData] = useState([]);
 
   useEffect(() => {
     async function fetchTeam() {
+      setLoading(true); // start loading
+
       try {
         const res = await fetch(
           `https://loving-bird-9ef3b0470a.strapiapp.com/api/employees?locale=${language}&populate=Picture`
@@ -48,7 +53,6 @@ export default function AboutTeam() {
           "Anupam Poudel, BSc",
         ];
 
-        // Separate the last employees and the rest
         const lastEmployees = [];
         const others = [];
 
@@ -60,22 +64,22 @@ export default function AboutTeam() {
           }
         });
 
-        // Order last employees according to customLastOrder
         const orderedLastEmployees = customLastOrder
           .map((name) =>
             lastEmployees.find((m) => m.Name === name)
           )
           .filter(Boolean);
 
-        // Combine
         setTeamData([...others, ...orderedLastEmployees]);
       } catch (err) {
         console.error("Failed to fetch team data:", err);
+      } finally {
+        setLoading(false); // stop loading regardless of success/error
       }
     }
 
     fetchTeam();
-  }, [language]);
+  }, [language, setLoading]);
 
   return (
     <main className="subpage-overview">

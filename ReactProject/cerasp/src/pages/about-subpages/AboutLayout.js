@@ -3,15 +3,18 @@ import { Outlet, useLocation } from "react-router-dom";
 import "../_css/Layout.css";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
+import {
+  LoadingProvider,
+  LoadingContext,
+} from "../../contexts/LoadingContext";
 import sitemap from "../../sitemap.json";
-// no about translations
 import ContactIcon from "../../components/interactables/ContactIcon";
 import Footer from "../../components/layouts/Footer";
 
 const AboutLayout = () => {
   const location = useLocation();
   const { language } = useContext(LanguageContext);
-  const { isMobile, isTablet, isDesktop } = useContext(
+  const { isMobile, isTablet } = useContext(
     ScreenSizeContext
   );
 
@@ -20,7 +23,6 @@ const AboutLayout = () => {
   const aboutPage = sitemap.pages.find(
     (page) => page["page-id"] === "about"
   );
-
   const aboutSubPages = aboutPage
     ? aboutPage["sub-pages"]
     : [];
@@ -47,6 +49,7 @@ const AboutLayout = () => {
           )}
         </>
       )}
+
       {!isMobile && (
         <div className="layout-panel-5">
           <div className="subpage-panel-5-text">
@@ -67,15 +70,21 @@ const AboutLayout = () => {
               </li>
             ))}
           </ul>
-          {/* <div>====LAYOUT ADJUSTMENTS IN EACH PAGE====</div>
-          <div>====TEAM/BOARD MORE ELEMENTS====</div> */}
         </aside>
       )}
 
-      <main className="layout-main-content">
-        <Outlet />
-        {location.pathname !== "/about" && <Footer />}
-      </main>
+      {/* Wrap only main content and footer in LoadingProvider */}
+      <LoadingProvider>
+        <main className="layout-main-content">
+          <Outlet />
+          <LoadingContext.Consumer>
+            {({ loading }) =>
+              !loading &&
+              location.pathname !== "/about" && <Footer />
+            }
+          </LoadingContext.Consumer>
+        </main>
+      </LoadingProvider>
     </div>
   );
 };

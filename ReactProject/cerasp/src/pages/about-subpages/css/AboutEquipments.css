@@ -9,6 +9,10 @@
   margin-bottom: 3em;
 }
 
+.equipment-list-cta {
+  margin-top: 0em !important;
+}
+
 .equipment-items {
   display: flex;
   flex-wrap: wrap;
