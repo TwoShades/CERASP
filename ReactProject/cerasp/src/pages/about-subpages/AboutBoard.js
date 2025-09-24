@@ -3,20 +3,25 @@ import React, {
   useState,
   useContext,
 } from "react";
-import "./css/AboutTeam.css";
+import "./css/AboutBoard.css";
 import "../_css/Subpage.css";
 import BoardMember from "../../components/uicomponents/BoardMember";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
+import { LoadingContext } from "../../contexts/LoadingContext";
 
 export default function AboutBoard() {
   const { language } = useContext(LanguageContext);
-  const { isMobile } = useContext(ScreenSizeContext); // <--- use this
+  const { isMobile } = useContext(ScreenSizeContext);
+  const { setLoading } = useContext(LoadingContext);
+
   const [boardMembers, setBoardMembers] = useState([]);
 
   useEffect(() => {
     async function fetchBoard() {
+      setLoading(true); // start loading
+
       try {
         const res = await fetch(
           `https://loving-bird-9ef3b0470a.strapiapp.com/api/board-members?locale=${language}&populate=Picture`
@@ -62,11 +67,13 @@ export default function AboutBoard() {
           "Failed to fetch board members:",
           err
         );
+      } finally {
+        setLoading(false); // stop loading regardless
       }
     }
 
     fetchBoard();
-  }, [language]);
+  }, [language, setLoading]);
 
   return (
     <main className="subpage-overview">

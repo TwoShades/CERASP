@@ -5,10 +5,12 @@ import React, {
 } from "react";
 import { ScreenSizeContext } from "../../contexts/ScreenSizeContext";
 import { LanguageContext } from "../../contexts/LanguageContext";
+import { LoadingContext } from "../../contexts/LoadingContext";
 import { Link } from "react-router-dom";
 import "./css/AboutEquipments.css";
 import "../_css/Subpage.css";
 import AnimateObject from "../../components/uicomponents/AnimateObject";
+import PageLinkCTA from "../../components/interactables/PageLinkCTA";
 
 const AboutEquipments = () => {
   const [allEquipments, setAllEquipments] = useState([]);
@@ -18,9 +20,12 @@ const AboutEquipments = () => {
   const { isMobile, isTablet } = useContext(
     ScreenSizeContext
   );
+  const { setLoading } = useContext(LoadingContext); // <--- context here
 
   useEffect(() => {
     const fetchEquipments = async () => {
+      setLoading(true); // start loading
+
       try {
         const res = await fetch(
           `https://loving-bird-9ef3b0470a.strapiapp.com/api/equipments?&populate=PDF&populate=Image&pagination[page]=1&pagination[pageSize]=100`
@@ -38,20 +43,20 @@ const AboutEquipments = () => {
             a.name.localeCompare(
               b.name,
               language === "fr" ? "fr" : "en",
-              {
-                sensitivity: "base",
-              }
+              { sensitivity: "base" }
             )
           );
 
         setAllEquipments(cleaned);
       } catch (err) {
         console.error("Failed to fetch equipments:", err);
+      } finally {
+        setLoading(false); // stop loading regardless
       }
     };
 
     fetchEquipments();
-  }, [language]);
+  }, [language, setLoading]);
 
   const itemsPerPage = 2;
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -71,9 +76,7 @@ const AboutEquipments = () => {
   };
 
   const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
   return (
@@ -98,9 +101,8 @@ const AboutEquipments = () => {
               key={equipment.id}
               className="equipment-card"
               onClick={() => {
-                if (equipment.photoUrl) {
+                if (equipment.photoUrl)
                   window.open(equipment.photoUrl, "_blank");
-                }
               }}
             >
               {equipment.photoUrl ? (
@@ -144,24 +146,15 @@ const AboutEquipments = () => {
                 &gt;
               </button>
             </div>
-
-            <div className="equipment-master-list">
-              <h4 className="equipment-master-list-title">
-                {language === "fr"
+            <PageLinkCTA
+              text={
+                language === "fr"
                   ? "Liste complète de l'équipement"
-                  : "Comprehensive List of Equipment"}
-              </h4>
-              <Link
-                to="/equipment-list"
-                className="learn-more-button"
-                style={{ textDecoration: "none" }}
-                state={{ equipments: allEquipments }}
-              >
-                {language === "fr"
-                  ? "Cliquez Ici"
-                  : "Click Here"}
-              </Link>
-            </div>
+                  : "Comprehensive List of Equipment"
+              }
+              url="/equipment-list"
+              className="equipment-list-cta"
+            />
           </>
         )}
       </AnimateObject>

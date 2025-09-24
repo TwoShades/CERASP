@@ -15,12 +15,10 @@ export default function PageLinkCTA({
   const { scrollToTopWithLenis } = useLenis();
 
   const handleClick = () => {
-    // Run custom handler first (if provided)
     if (onClick) {
       onClick();
     }
 
-    // Then do the default behavior (scroll + navigate)
     if (url) {
       scrollToTopWithLenis();
       navigate(url);
