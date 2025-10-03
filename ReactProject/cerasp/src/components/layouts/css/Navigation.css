@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -73,9 +74,12 @@
 }
 
 @media screen and (max-width: 1600px) {
+  .nav-item {
+    padding: 1.1em;
+  }
   .nav-item a {
     font-size: 20px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0em;
   }
 }
 

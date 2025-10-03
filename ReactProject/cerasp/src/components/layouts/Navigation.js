@@ -107,9 +107,9 @@ const Navigation = () => {
               return (
                 <li
                   key={pageId}
-                  className={`nav-item ${
+                  className={`nav-item nowrap ${
                     isActive ? "active" : ""
-                  } ${pageId === "about" ? "nowrap" : ""}`}
+                  }`}
                 >
                   <a
                     href={linkPath}

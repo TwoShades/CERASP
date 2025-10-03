@@ -78,7 +78,10 @@
   display: none;
 }
 
-@media (max-width: 1495px) {
+@media (max-width: 1600px) {
+  .header-linkedin-insta-container {
+    padding-left: 1vw;
+  }
 }
 
 @media (max-width: 1200px) {
