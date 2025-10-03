@@ -58,7 +58,7 @@ export default function AboutFacilities() {
         <div className="subpage-col-1-3 about-facilities-image">
           <img
             src={`/photos/facilities/${
-              isFullScreen
+              !isMobile
                 ? "john-abbott-college.jpg"
                 : "john-abbott-college-landscape.jpg"
             }`}
@@ -95,7 +95,7 @@ export default function AboutFacilities() {
         <div className="subpage-col-3-5 about-facilities-image">
           <img
             src={`/photos/facilities/${
-              isFullScreen
+              !isMobile
                 ? "cegep-gerald-godin.jpg"
                 : "cegep-gerald-godin-landscape.jpg"
             }`}
@@ -111,7 +111,7 @@ export default function AboutFacilities() {
         <div className="subpage-col-1-3 about-facilities-image">
           <img
             src={`/photos/facilities/${
-              isFullScreen
+              !isMobile
                 ? "admare.jpg"
                 : "admare-landscape.jpg"
             }`}
