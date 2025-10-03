@@ -77,7 +77,7 @@
 /* Responsive adjustments */
 
 /* Tablets: 3 per row */
-@media (max-width: 1200px) {
+@media (max-width: 1276px) {
   .board-member-cards {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-s);

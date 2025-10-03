@@ -242,7 +242,7 @@
    ========================== */
 
 /* Desktop / Tablet 1200–769px */
-@media (max-width: 1200px) {
+@media (max-width: 1276px) {
   .landing-white-box {
     width: 100%;
     position: relative;
