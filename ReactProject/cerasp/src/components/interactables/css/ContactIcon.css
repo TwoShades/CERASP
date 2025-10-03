@@ -83,7 +83,7 @@
   fill: var(--icon-hover-color);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1276px) {
   .contact-icon-wrapper {
     width: 150px;
     height: 150px;

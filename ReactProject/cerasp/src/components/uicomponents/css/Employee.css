@@ -128,7 +128,7 @@
 /* Responsive adjustments */
 
 /* Tablets: 2 columns */
-@media (max-width: 1200px) {
+@media (max-width: 1276px) {
   .team-cards {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-s);
