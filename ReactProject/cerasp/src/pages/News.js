@@ -25,11 +25,19 @@ const News = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        const posts = data.data.map((item) => ({
-          id: item.id,
-          src:
-            item.LinkedIn.match(/src="(.*?)"/)?.[1] || "",
-        }));
+        const posts = data.data
+          .map((item) => ({
+            id: item.id,
+            src:
+              item.LinkedIn.match(/src="(.*?)"/)?.[1] || "",
+            publishedAt: item.publishedAt,
+          }))
+          .sort(
+            (a, b) =>
+              new Date(b.publishedAt) -
+              new Date(a.publishedAt)
+          );
+
         setNewsPosts(posts);
       })
       .catch((err) =>
