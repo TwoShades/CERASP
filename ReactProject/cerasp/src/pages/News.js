@@ -65,9 +65,7 @@ const News = () => {
     <main className="subpage-overview">
       {isOverviewReady && (
         <div className="layout-panel-5">
-          <div className="subpage-panel-5-text">
-            {/* no text, used as spacer */}
-          </div>
+          <div className="subpage-panel-5-text"></div>
           <ContactIcon />
         </div>
       )}
