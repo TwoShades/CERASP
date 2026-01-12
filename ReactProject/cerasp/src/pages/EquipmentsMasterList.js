@@ -16,9 +16,16 @@ import Footer from "../components/layouts/Footer";
 export default function EquipmentByLocation() {
   const { language } = useContext(LanguageContext);
   const location = useLocation();
-  const [equipmentList, setEquipmentList] = useState(
-    location.state?.equipments || []
-  );
+
+  const [equipmentList, setEquipmentList] = useState(() => {
+    const list = location.state?.equipments || [];
+    return [...list].sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, {
+        sensitivity: "base",
+      })
+    );
+  });
+
   const [loading, setLoading] = useState(
     !location.state?.equipments
   );
@@ -34,10 +41,16 @@ export default function EquipmentByLocation() {
           );
           const json = await res.json();
 
-          const cleaned = json.data.map((item) => ({
-            id: item.id,
-            name: item.Name || "",
-          }));
+          const cleaned = json.data
+            .map((item) => ({
+              id: item.id,
+              name: item.Name || "",
+            }))
+            .sort((a, b) =>
+              a.name.localeCompare(b.name, undefined, {
+                sensitivity: "base",
+              })
+            );
 
           setEquipmentList(cleaned);
           setLoading(false);
@@ -66,6 +79,7 @@ export default function EquipmentByLocation() {
         </div>
         <ContactIcon />
       </div>
+
       <AnimateObject
         variantsToRun={["slideLeft", "fadeIn"]}
         className="subpage-intro-grid"
@@ -76,15 +90,12 @@ export default function EquipmentByLocation() {
             : "EQUIPMENT LIST"}
         </h1>
         <p>
-          {language === "fr" ? (
-            <p>
-              Une vue d’ensemble de tout notre équipement.
-            </p>
-          ) : (
-            <p>An overview of all our equipment.</p>
-          )}
+          {language === "fr"
+            ? "Une vue d’ensemble de tout notre équipement."
+            : "An overview of all our equipment."}
         </p>
       </AnimateObject>
+
       <div className="equipment-section">
         <ul className="equipment-list-items flat-list">
           {equipmentList.map((item) => (
@@ -94,6 +105,7 @@ export default function EquipmentByLocation() {
           ))}
         </ul>
       </div>
+
       <Footer />
     </div>
   );
