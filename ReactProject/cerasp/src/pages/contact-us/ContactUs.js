@@ -100,7 +100,7 @@ const ContactUs = () => {
 
     try {
       await emailjs.sendForm(
-        "service_qahust4",
+        "service_l0jqxfk",
         "template_jnlaadq",
         form.current,
         "qqVYpUXwpvqGKOkgx"
