@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="address-lines">
             <span>7171 Rue Frederick Banting</span>
             <span>Saint-Laurent, QC</span>
-            <span>H4S 1Z9</span>
+            <span>H4S1Z9</span>
             <span>(438) 923-9257</span>
             <span>info@cerasp.ca</span>
           </div>
