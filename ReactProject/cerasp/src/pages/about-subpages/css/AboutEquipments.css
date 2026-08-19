@@ -33,9 +33,13 @@
   height: 400px;
   width: 35%;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
+
+/* Test comment */
 
 .equipment-image-full {
   width: 100%;
