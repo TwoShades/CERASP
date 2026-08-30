@@ -11,6 +11,7 @@ import useLenis from "./hooks/useLenis";
 
 // LANDING PAGE
 import LandingPage from "./pages/LandingPage.js";
+import TestPage from "./pages/TestPage.js";
 
 // ABOUT AND ITS SUBPAGES
 import AboutLayout from "./pages/about-subpages/AboutLayout";
@@ -156,6 +157,7 @@ function App() {
           path="/landing-page"
           element={<LandingPage />}
         />
+        <Route path="/test-page" element={<TestPage />} />
       </Routes>
     </ScreenSizeProvider>
   );

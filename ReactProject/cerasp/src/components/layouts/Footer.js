@@ -29,6 +29,13 @@ const Footer = () => {
             <span>H4S1Z9</span>
             <span>(438) 923-9257</span>
             <span>info@cerasp.ca</span>
+            <a
+              href="/test-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Test Page
+            </a>
           </div>
           <div className="map-icon">
             <a
